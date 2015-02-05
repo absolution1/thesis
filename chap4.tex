@@ -244,7 +244,21 @@ This process can be repeated until some threshold is reached.  This threshold is
 Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is acheived by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D tracks are left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
 As should be expected, a vertex with one visible track will have different characteristics to a vertex with three visible tracks.  So, to maximise the ability of the matcher, a different set of probability density distributions are used for the 1, 2 and 3 track cases.  If the number of tracks in each view is not identical, the higher number of tracks is used to find the correct probability density distributions.  Seperately, due to their geometrical differences, the reconstructed shape of vertices in the DS ECal will differ to those in the barrel ECals.  This leads to a separate set of probability density distributions for the barrel and DS ECal modules.
 The first input to the likelihood is the ratio of the total deposited charge on each track $Q_{\textrm{ratio}}$.  The denominator is taken as the track which comes from the view with the most hits.
+\begin{figure}
+  \centering
+  \parbox{7cm}{
+    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps}
+    \caption{$Q_{\textrm{ratio}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.}
+    \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
+    \qquad
+    \begin{minipage}{7cm}
+      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps}
+      \caption{$_{\textrm{ratio}}$ probability density distribution in the barrel ECal for the two track case.}
+      \label{fig:3DMatchingBarrel2TrackQRatioPDF}
+    \end{minipage}
+\end{figure}
 
+%
 %To build the probability density distributions, the output of the 2D reconstruction was used to form every possible matching pair (as described above) and the results were separated into two distinct catagories: correctly matched and incorrectly matched.
 \section{Validation of the reconstruction}
 \label{sec:ReconstructionValidation}
