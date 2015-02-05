@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{Phys.Rev.Lett.19.1264}
+S.~Weinberg,
+\newblock Phys. Rev. Lett. {\bf 19}, 1264 (1967).
+
+\bibitem{Phys.Rev.D2.1285}
+S.~L. Glashow, J.~Iliopoulos, and L.~Maiani,
+\newblock Phys. Rev. {\bf D2}, 1285 (1970).
+
+\bibitem{hep-ph/0410370}
+S.~Willenbrock,
+\newblock (2004), hep-ph/0410370.
+
+\bibitem{Hough:1959qva}
+P.~a. Hough,
+\newblock Conf.Proc. {\bf C590914}, 554 (1959).
+
+\bibitem{Duda:1972:UHT:361237.361242}
+R.~O. Duda and P.~E. Hart,
+\newblock Commun. ACM {\bf 15}, 11 (1972).
+
+\bibitem{331821}
+J.~Vuillemin,
+\newblock Fast linear hough transform,
+\newblock in {\em Application Specific Array Processors, 1994. Proceedings.
+  International Conference on}, pp. 1--9, 1994.
+
+\end{thebibliography}
