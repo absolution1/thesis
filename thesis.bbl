@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Phys.Rev.Lett.19.1264}
 S.~Weinberg,
@@ -11,6 +11,24 @@ S.~L. Glashow, J.~Iliopoulos, and L.~Maiani,
 \bibitem{hep-ph/0410370}
 S.~Willenbrock,
 \newblock (2004), hep-ph/0410370.
+
+\bibitem{Abe2011106}
+K.~Abe {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 659},
+  106  (2011).
+
+\bibitem{PhysRevLett.112.061802}
+(T2K Collaboration), K.~Abe {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 112}, 061802 (2014).
+
+\bibitem{PhysRevLett.113.241803}
+(T2K Collaboration), K.~Abe {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 113}, 241803 (2014).
+
+\bibitem{PhysRevD.87.092003}
+K.~Abe {\em et~al.},
+\newblock Phys. Rev. D {\bf 87}, 092003 (2013).
 
 \bibitem{Hough:1959qva}
 P.~a. Hough,
