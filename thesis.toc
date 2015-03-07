@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {2.1.3}Off-axis beam}{7}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Near detector complex}{7}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Multi-Pixel Photon Counter}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}INGRID}{7}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}ND280}{7}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.2}INGRID}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}ND280}{8}{subsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.3.1}The fine grain detectors}{8}{subsubsection.2.2.3.1}
 \contentsline {subsubsection}{\numberline {2.2.3.2}The time projection chambers}{8}{subsubsection.2.2.3.2}
 \contentsline {subsubsection}{\numberline {2.2.3.3}The $\mymath {\@Oldpi }\xspace ^0$ detector}{8}{subsubsection.2.2.3.3}
@@ -18,18 +18,18 @@
 \contentsline {subsubsection}{\numberline {2.2.3.5}The side muon range detector}{8}{subsubsection.2.2.3.5}
 \contentsline {subsection}{\numberline {2.2.4}The far detector}{8}{subsection.2.2.4}
 \contentsline {chapter}{\numberline {3}ND280 ECal event reconstruction and software}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Real data processing}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Monte Carlo event simulation}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Neutrino flux prediction}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Neutrino interaction simulation}{9}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}ND280 detector simulation}{10}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Detector response simulation}{10}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Detector calibration}{10}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Event reconstruction}{10}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.1}Monte Carlo production software}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Neutrino flux prediction}{10}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Neutrino interaction simulation}{10}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}ND280 detector simulation}{10}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Detector response simulation}{10}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Detector calibration}{10}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}Event reconstruction}{10}{subsection.3.1.6}
+\contentsline {section}{\numberline {3.2}Real data processing software}{10}{section.3.2}
 \contentsline {section}{\numberline {3.3}ECal event reconstruction}{10}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hit preparation}{10}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Basic clustering}{10}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Cluster combination}{10}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Hit preparation}{11}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Basic clustering}{11}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Cluster combination}{11}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Cluster expansion}{11}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}3D cluster formation}{11}{subsection.3.3.5}
 \contentsline {subsection}{\numberline {3.3.6}3D hit reconstruction}{11}{subsection.3.3.6}
