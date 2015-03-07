@@ -37,6 +37,49 @@ R.~Brun and F.~Rademakers,
    (1997),
 \newblock New Computing Techniques in Physics Research V.
 
+\bibitem{Ferrari_fluka:a}
+A.~Ferrari {\em et~al.},
+\newblock Fluka: a multi-particle transport code,
+\newblock in {\em CERN 2005-10 (2005), INFN/TC 05/11, SLAC-R-773}.
+
+\bibitem{Brun:1987ma}
+R.~Brun, F.~Bruyant, M.~Maire, A.~McPherson, and P.~Zanarini,
+\newblock (1987).
+
+\bibitem{PhysRevC.84.034604}
+N.~Abgrall {\em et~al.},
+\newblock Phys. Rev. C {\bf 84}, 034604 (2011).
+
+\bibitem{Hayato2002171}
+Y.~Hayato,
+\newblock Nuclear Physics B - Proceedings Supplements {\bf 112}, 171  (2002).
+
+\bibitem{Miller2002223}
+G.~A. Miller,
+\newblock Nuclear Physics B - Proceedings Supplements {\bf 112}, 223  (2002).
+
+\bibitem{Benhar1994493}
+O.~Benhar, A.~Fabrocini, S.~Fantoni, and I.~Sick,
+\newblock Nuclear Physics A {\bf 579}, 493  (1994).
+
+\bibitem{LlewellynSmith1972261}
+C.~L. Smith,
+\newblock Physics Reports {\bf 3}, 261  (1972).
+
+\bibitem{Rein198179}
+D.~Rein and L.~M. Sehgal,
+\newblock Annals of Physics {\bf 133}, 79  (1981).
+
+\bibitem{1126-6708-2006-05-026}
+T.~Sjöstrand, S.~Mrenna, and P.~Skands,
+\newblock Journal of High Energy Physics {\bf 2006}, 026 (2006).
+
+\bibitem{Agostinelli2003250}
+S.~Agostinelli {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 506},
+  250  (2003).
+
 \bibitem{Hough:1959qva}
 P.~a. Hough,
 \newblock Conf.Proc. {\bf C590914}, 554 (1959).

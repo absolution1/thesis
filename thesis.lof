@@ -8,24 +8,24 @@
 \contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces The POT recorded by CT5 as a function of time (blue line) and the recorded beam power in $\mymath {\@Oldnu }\xspace $ running mode (red dot) and $\mathaccentV {bar}416{\mymath {\@Oldnu }\xspace }$ running mode (purple dot).\relax }}{6}{figure.caption.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Line in 2D cartesian space.\relax }}{14}{figure.caption.6}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Point in 2D parameter space.\relax }}{14}{figure.caption.6}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Point in 2D cartesian space.\relax }}{15}{figure.caption.7}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Line in 2D parameter space.\relax }}{15}{figure.caption.7}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces The three cartesian points defined in equation~\ref {eq:HTExampleCartesianPoints}. The colour coding matches that of Fig.~\ref {fig:HTExampleParameterSpace}.\relax }}{16}{figure.caption.8}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces The three parameter lines defined in equation~\ref {eq:HTExampleParameterLines}. The same colour coding as Fig.~\ref {fig:HTExampleCartesianSpace} is used.\relax }}{16}{figure.caption.8}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces The line represented by the intersection in Fig.~\ref {fig:HTExampleParameterSpace} with the cartesian points it intercepts.\relax }}{17}{figure.caption.9}
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces $\mymath {\@Oldtheta }\xspace -\mymath {\@Oldrho }\xspace $ parameterisation of a 2D line.\relax }}{18}{figure.caption.10}
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces The discrete $\mymath {\@Oldtheta }\xspace -\mymath {\@Oldrho }\xspace $ space. The plotted lines are those defined in equation~\ref {eq:HTExampleParameterLines} and reparameterised using equation~\ref {eq:ParameterLineReparameterisation}.\relax }}{19}{figure.caption.11}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Simulated neutrino interaction with 3 final states in the side-right ECal. The green line entering from the left is the $\mymath {\@Oldnu }\xspace _\mymath {\@Oldmu }\xspace $. The green line exiting to the right is a $\mymath {\@Oldmu }\xspace ^{-}$, the brown line is a $\mymath {\@Oldpi }\xspace ^+$ and the blue line is a proton. The purple rectangles represent the hit ECal bars.\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Grid representation of an ECal bar.\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Single ECal bar Hough transform using the point configuration shown in Fig.~\ref {fig:ECalBarGridRepresentation}.\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Cross representation of an ECal bar.\relax }}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Single ECal bar Hough transform using the point configuration shown in Fig.~\ref {fig:ECalBarCrossRepresentation}.\relax }}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces The full parameter space of the 2D cluster shown in Fig.~\ref {fig:3StateInteractionNoReconstruction}.\relax }}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces The reduced parameter space of the 2D cluster shown in Fig.~\ref {fig:3StateInteractionNoReconstruction}.\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces $Q_{\textrm {ratio}}$ distribution in the barrel ECal for the two track case. The blue distribution refers to matching pairs which were matched to the same true particle. Both distributions are unit normalised.\relax }}{26}{figure.caption.17}
-\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces $Q_{\textrm {ratio}}$ probability density distribution in the barrel ECal for the two track case.\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Line in 2D cartesian space.\relax }}{16}{figure.caption.6}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Point in 2D parameter space.\relax }}{16}{figure.caption.6}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Point in 2D cartesian space.\relax }}{17}{figure.caption.7}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Line in 2D parameter space.\relax }}{17}{figure.caption.7}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces The three cartesian points defined in equation~\ref {eq:HTExampleCartesianPoints}. The colour coding matches that of Fig.~\ref {fig:HTExampleParameterSpace}.\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces The three parameter lines defined in equation~\ref {eq:HTExampleParameterLines}. The same colour coding as Fig.~\ref {fig:HTExampleCartesianSpace} is used.\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces The line represented by the intersection in Fig.~\ref {fig:HTExampleParameterSpace} with the cartesian points it intercepts.\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces $\mymath {\@Oldtheta }\xspace -\mymath {\@Oldrho }\xspace $ parameterisation of a 2D line.\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces The discrete $\mymath {\@Oldtheta }\xspace -\mymath {\@Oldrho }\xspace $ space. The plotted lines are those defined in equation~\ref {eq:HTExampleParameterLines} and reparameterised using equation~\ref {eq:ParameterLineReparameterisation}.\relax }}{21}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Simulated neutrino interaction with 3 final states in the side-right ECal. The green line entering from the left is the $\mymath {\@Oldnu }\xspace _\mymath {\@Oldmu }\xspace $. The green line exiting to the right is a $\mymath {\@Oldmu }\xspace ^{-}$, the brown line is a $\mymath {\@Oldpi }\xspace ^+$ and the blue line is a proton. The purple rectangles represent the hit ECal bars.\relax }}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Grid representation of an ECal bar.\relax }}{23}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Single ECal bar Hough transform using the point configuration shown in Fig.~\ref {fig:ECalBarGridRepresentation}.\relax }}{23}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Cross representation of an ECal bar.\relax }}{24}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Single ECal bar Hough transform using the point configuration shown in Fig.~\ref {fig:ECalBarCrossRepresentation}.\relax }}{24}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 4.15}{\ignorespaces The full parameter space of the 2D cluster shown in Fig.~\ref {fig:3StateInteractionNoReconstruction}.\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 4.16}{\ignorespaces The reduced parameter space of the 2D cluster shown in Fig.~\ref {fig:3StateInteractionNoReconstruction}.\relax }}{27}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 4.17}{\ignorespaces $Q_{\textrm {ratio}}$ distribution in the barrel ECal for the two track case. The blue distribution refers to matching pairs which were matched to the same true particle. Both distributions are unit normalised.\relax }}{28}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.18}{\ignorespaces $Q_{\textrm {ratio}}$ probability density distribution in the barrel ECal for the two track case.\relax }}{28}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
