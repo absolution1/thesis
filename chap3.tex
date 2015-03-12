@@ -11,9 +11,9 @@
 
 \chapter{ND280 software and existing ECal event reconstruction}
 \label{chap:ND280Software}
-The T2K experiment uses a bespoke software suite for simulation and analysis of ND280 data which is based on the ROOT framework~\cite{Brun199781}.  The vast majority of the ND280 software suite utilies these oaEvent library which provides a unified framework for information manipulation and was specifically designed for this purpose.
+The T2K experiment uses a bespoke software suite for simulation and analysis of ND280 data which is based on the ROOT framework~\cite{Brun199781}.  The vast majority of the ND280 software suite utilies the oaEvent library which provides a unified framework for information manipulation and was specifically designed for this purpose.
 As ND280 consists of many subdetectors each providing a specific function, the ND280 software suite is designed to reflect this.  Not only are there specific software modules for individual subdetectors, there are specific modules for each phase of the subdetector information processing e.g. trip-T calibration, TPC reconstruction etc.  \newline
-As the software suite handles both production of simulated data and the processing of collected data, there are sections of the processing chain which are specific to type of data being processed.  While the Monte Carlo simulation and real data do see different areas of the software chain, the general philosophy is to maniuplate the Monte Carlo or the real data to a point where they can be treated as equals and them process them in the same manner.  So, the description of the software will follow the same path: the Monte Carlo and real data specifics will be discussed first and then the unified treatment will follow. 
+As the software suite handles both production of simulated data and the processing of collected data, there are sections of the software chain which are specific to type of data being processed.  While the Monte Carlo simulation and real data do see different areas of the software chain, the general philosophy is to maniuplate the Monte Carlo or the real data to a point where they can be treated as equals and them process them in the same manner.  So, the description of the software will follow the same path: the Monte Carlo and real data specifics will be discussed first and then the unified treatment will follow. 
 \section{Monte Carlo production software}
 \label{sec:MCchain}
 As described above, parts of the software chain are unique to simulated data processing.  Specifically, the simulation of the beam and the detector response need to be modelled before the Monte Carlo can be treated on equal footing with the real data.  This special processing is split into several steps, all of which are described below.
@@ -40,20 +40,26 @@ nd280mc constructs a ROOT geometry of ND280 based on the design specifications o
 
 \subsection{Detector response simulation}
 \label{subsec:DetectorResponseSimulation}
-Is elecSim there?
+The next and final stage of the MC-only software chain is to model how the detector responds to the simulated particles propagating through it.  The detector response software, named elecSim, takes the output of nd280mc and models how the active regions of the detector would respond given an energy deposition in that region of the detector.  In the case of the calorimeters, elecSim handles the production of light produced by the constituent scintillator bars, how the light is propagated along the wavelength-shifting fibres and how the MPPCs would respond to the incident photons.  For the TPCs, the drift of the ionisation electrons through the gas and the subsequent response of the MicroMEGAS which recieve them.  In all cases, the readout electronics response is simulated to produce a data-like output format.  This step concludes the section of the software chain which is specific to the MC.
+
+\section{Real data processing software}
+\label{sec:datachain}
+The real data specific section of the software chain is very short.  Physics events deemed worth saving by any of the ND280 triggers are recorded by the detector and the saved for processing.  The MIDAS file format is used for storing the saved ND280 events.  All of the relevant information needed to process the event is stored in the MIDAS file, so the only unique step to the data processing is the conversion of the MIDAS file to the oaEvent format.  After the step, the oaEvent data files are exposed to the same software as MC files outputted by elecSim (see section~\ref{subsec:DetectorResponseSimulation}).
+
+
+\section{Main software chain}
+\label{sec:mainchain}
+The aim of the rest of the software chain is process the readout from the detector, be it simulated or collected signal, and process it so essential information about the physics of the event can be extracted.  This is separated into three steps: calibration, reconstruction and data reduction/summarising.
+
 
 \subsection{Detector calibration}
 \label{subsec:DetectorCalibration}
-oaCalib calibrates
+The software package responsible for overseeing all aspects of the calibration stage is called oaCalib.  This controlling package passes the digitised signal from ND280 to dedicated calibration packages for the various kinds of readout electronics.
 
 \subsection{Event reconstruction}
 \label{subsec:EventReconstruction}
 oaRecon yo!
 
-
-\section{Real data processing software}
-\label{sec:datachain}
-Process the data.  MAY NOT INCLUDE THIS
 
 
 \section{ECal event reconstruction}
