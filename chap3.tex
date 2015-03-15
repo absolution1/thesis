@@ -54,25 +54,40 @@ The aim of the rest of the software chain is process the readout from the detect
 
 \subsection{Detector calibration}
 \label{subsec:DetectorCalibration}
-The software package responsible for overseeing all aspects of the calibration stage is called oaCalib.  This controlling package passes the digitised signal from ND280 to dedicated calibration packages for the various kinds of readout electronics.
-
+The software package responsible for overseeing all aspects of the calibration stage is called oaCalib.  This controlling package passes the digitised signal from ND280 to dedicated calibration packages for the various kinds of readout electronics.  All of the information which can be extracted from an ECal event relies on the charge read by the MPPCs.  Thus, for the Trip-T detectors, like the ECals, the main aim of the calibration is to remove all electronic effects so that an accurate estimation of the charge read by the MPPCs can be made.  
+\newline
+Firstly, every MPPC is held at a bias in the absense of any signal to remove the non-linear dependence of the detector response on the lowest ADC channels.  This zero signal output is called the pedestal and must be subtracted from the charge readout by the MPPC.  
+\newline
+To estimate the number of photo-electrons produced in an MPPC, The readout charge is divided by the MPPC gain.  The breakdown voltage of an MPPC linearly varies with temperature (approximately 50 mV/$^\circ$C).  This translates to a percent level variation in the MPPC gain per degree.  This means small variations in temperature can cause a significant variation in the MPPC gain.  So, the gains for each channel are calculated and stored individually.
+\newline
+The time of the signal read by the MPPC is charge dependent so it relies on the above corrections.  However, the are extra steps needed to get an accurate estimate of the timestamp.  The MPPC signal is given a timestamp once the charging capacitor exceeds a threshold value.  The time it takes to reach this threshold depends on the final collected charge of the MPPC.  This means that a lower charge signal would receive a later timestamp than a higher charge signal even if the signals occurred at the same time.  This effect is known as the electronic timewalk and is corrected for.
+\newline
+\newline
+The light emission rate of the WLS fibres follows an exponential decay function which means that the emission rate depends on the total number of photo-electrons.  As described above, the Trip-T electronics only assign a timestamp once the collected charge passes a threshold.  So, the fibre decay causes a separate timewalk effect, called the fibre timewalk effect which is also corrected for.  
 \subsection{Event reconstruction}
 \label{subsec:EventReconstruction}
-oaRecon yo!
-
+Once the information has been calibrated it is passed to the ND280 reconstruction software.  The reconstruction algorithms are separated into two phases: the local reconstruction and the global reconstruction.  The local reconstruction, which is run first, is separated into a set of algorithms specific to each subdetector.  Each subdetector reconstruction attempts to form its own picture of the event which passed through it.  After this, all of the local reconstruction information is passed to the global reconstruction which attempts to match and refit the subdetector results to maximise the amount of extractable information.
 
 
 \section{ECal event reconstruction}
 \label{sec:ECalEventReconstruction}
-All about ecalRecon
+As mentioned in section~\ref{subsec:EventReconstruction}, part of the reconstruction process is to run algorithms specific to the ND280 subdetectors.  The ECal is no exception and is equipped with an extensive suite of reconstruction algorithms designed to reconstruct events originating from the tracker region of ND280.  The inputs to the reconstruction are the calibrated scintillators bar hits which are used to form 3D objects and attach a topology hypothesis.
 
 \subsection{Hit preparation}
 \label{subsec:ECalHitPerparation}
-Hit prep
+The initial ECal reconstruction stage takes the hits outputted by the calibration stage and prepares them for the downstream algorithms.  The ECal hits arrive with timestamps but are not separated according to the bunch structure.  So, the hits are ordered in time and then grouped into buckets where a new bucket starts when a greater than 50 ns gap appears between two time-adjacent hits.  A second filter is then applied to arrange the hits according to the sensor they occurred on.  For double ended bars with both sensors activated, the time of the hit is re-estimated by averaging the timestamp of the two sensors.  The two hits are then merged to form a single hit.
+\newline
+It is then necessary to apply extra calibrations to the charges of the hits.  The effect of light attenuation along the WLS fibre is corrected for and a scaling is applied to convert the charge into MIP equivalent units (MEU).
 
 \subsection{Basic clustering}
 \label{subsec:ECalBasicClustering}
-Baaasic
+The time ordered hits are then passed to a set of clustering algorithms which attempts to form an object out of the ECal hits.  The first stage of this is called basic clustering which is a nearest neighbour algorithm designed to form 2D clusters of hits for both views of an ECal module.  This is initiated by forming a 30 ns window and searching for the highest charge hit contained within it to form a seed.  The seed cluster is expanded by searching for and adding candidate hits which pass the following criteria:
+\begin{itemize}
+  \item Is located in the 30 ns time window
+  \item Is at most one bar away from a hit in the cluster
+  \item Is at most two layers away from a hit in the cluster
+\end{itemize}
+To qualify as a basic cluster, any formed cluster must contain at least three hits.  The successfully formed clusters in both views of the ECal modules are then passed to the next stage of the clustering algorithms. 
 
 \subsection{Cluster combination}
 \label{subsec:ECalCombineClusters}
