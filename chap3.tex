@@ -91,11 +91,36 @@ To qualify as a basic cluster, any formed cluster must contain at least three hi
 
 \subsection{Cluster combination}
 \label{subsec:ECalCombineClusters}
-Combine dem clusters
+The second stage of the clustering algorithm takes the basic clusters in a given view and attempts to form merged clusters if a set of conditions are passed.  The cluster with the highest number of hits is taken as a seed and compared with all other clusters in the same view.  A Principal Components Analysis (PCA) is applied to all 2D clusters as the primary axis is used in one of the merging criteria.  A candidate cluster is merged with the seed cluster if:
+\begin{itemize}
+  \item The distance of closest approach, taken from the primary axes, of the candidate and seed cluster is less than 80 mm
+  \item The charge weighted average hit times of the candidate cluster is within 40 ns of the seed cluster
+  \item The charge weighted average distance of the candidate cluster to the seed cluster is less than 400 mm
+\end{itemize}
+All candidate clusters which pass the conditions are merged with the seed cluster.  After all comparisons have been made, a new seed cluster is found and the process is repeated until no more merges take place.  All clusters in each ECal view are then passed into the next clustering algorithm.
+
+
 
 \subsection{Cluster expansion}
 \label{subsec:ECalExpandClusters}
-Expand dem clusters
+The next and final stage of the 2D clustering attempts to merge any unmatched hits with the already formed clusters if the comparison passes a set of conditions.  As before, a PCA is applied to all 2D clusters to calculate the primary and secondary axes as these are used in one of the matching conditions.  Let $\vec{n}_{\mathrm{pri}}$ and $\vec{n}_{\mathrm{sec}}$ be the primary and secondary axes of a cluster found by the PCA.  The squared spread of the cluster along the primary or secondary axis is then defined as
+\begin{equation}
+  \sigma_A^2 = \sum_{\alpha = x,y,z} \sigma_\alpha^2n_{A,\alpha}^2,
+\end{equation}
+where $A$ refers to either the primary or secondary axis and $\sigma_\alpha$ refers to the cluster's spread along the cartesean axes.  A metric for defining well the hit matches to the cluster can then be defined as 
+\begin{equation}
+  w = \sqrt{\Bigg(\frac{\vec{H}\cdot \vec{n}_{\mathrm{pri}}}{\sigma_{\mathrm{pri}}}\Bigg)^2 +  \Bigg(\frac{\vec{H}\cdot \vec{n}_{\mathrm{sec}}}{\sigma_{\mathrm{sec}}}\Bigg)^2},
+\end{equation}
+where $H$ is the vector joining the charge-weighted centre of the cluster and the centre of the hit.  The unmatched hit is merged with the 2D cluster if:
+\begin{itemize}
+  \item The unmatched hit is within 6 ns of one of the constituent hits of the 2D cluster
+  \item The difference in bar number of the unmatched hit and at least one of the constituents hits in the 2D cluster is less than 11
+  \item The difference in layer number of the unmatched hit and at least one of the constituents hits in the 2D cluster is less than 21
+  \item The calculate value of $w$ is less than 50
+\end{itemize}
+Unlike the previous stage where it is possible to merge every cluster in a view, an unmatched hit can be matched with one, and only one, 2D cluster. So, not only does the hit-cluster comparison have to pass the relevant criteria, the comparison has to be a better match than all other comparisons.  In cases where the unmatched hit passes all of the conditions with more than one cluster, the comparison which provides the lowest $w$ is selected as the best match.
+\newline
+The 2D clusters in each view are then passed onto the final stage of the clustering algorithms.
 
 \subsection{3D cluster formation}
 \label{subsec:ECal3DMatching}
