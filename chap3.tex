@@ -68,6 +68,10 @@ The light emission rate of the WLS fibres follows an exponential decay function 
 \label{subsec:EventReconstruction}
 Once the information has been calibrated it is passed to the ND280 reconstruction software.  The reconstruction algorithms are separated into two phases: the local reconstruction and the global reconstruction.  The local reconstruction, which is run first, is separated into a set of algorithms specific to each subdetector.  Each subdetector reconstruction attempts to form its own picture of the event which passed through it.  After this, all of the local reconstruction information is passed to the global reconstruction which attempts to match and refit the subdetector results to maximise the amount of extractable information.
 
+\subsection{Data reduction and summarising}
+\label{subsec:DataReduction}
+The final stage of the processing chain is to reduce and summarise all of the previous steps in the chain such that they are in a suitable format for the analyser.  A lot of the information, particularly from the reconstruction stage, is stripped out and the physics related objects are extracted.  Most importantly, all of the information is summarised in a pure ROOT format, meaning the analyser does not rely on the oaEvent library to analyse ND280 data.
+
 
 \section{ECal event reconstruction}
 \label{sec:ECalEventReconstruction}
@@ -124,16 +128,33 @@ The 2D clusters in each view are then passed onto the final stage of the cluster
 
 \subsection{3D cluster formation}
 \label{subsec:ECal3DMatching}
-Match the clusters
+The final stage of the clustering algorithm attempts to form full 3D clusters information from both view of an ECal module.  To do this, the algorithm takes the 2D clusters from one view and matches them with the 2D clusters in the other view.  All 2D clusters from one view are compared to all 2D clusters in the other view and the two that are the best match form a 3D cluster.  The metric used for the matching is a simple likelihood based on three input variables.  The first variable is the ratio of the total charge in 2D matching candidate clusters, $Q_{\textrm{ratio}}$.  Assuming the two 2D clusters come from the same particle, the amount of charge deposited in each view should be similar, so $Q_{\textrm{ratio}}$ should be \sim1.  The $Q_{\textrm{ratio}}$ value is then compared with a probability density function generated using ND280 MC to retrieve $\mathcal{L}_{Q_{\textrm{ratio}}}$.  The second input variable to the likelihood compares the first layer used by the two matching candidate clusters which is closest to the ND280 tracker region, $\Delta_{\textrm{layer, first}}$.  If the two candidate clusters are created from the same particle, the difference in starting layer number should ideally be one.  As with with $Q_{\textrm{ratio}}$, the $\Delta_{\textrm{layer, first}}$ found for the matching candidates is compared to a probability density function to retrieve $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$.  The final input to the likelihood is almost identical to the second input.  The variable, called $\Delta_{\textrm{layer, last}}$ compares the difference in layer number furthest away from the ND280 tracker region.  Besides this difference, $\Delta_{\textrm{layer, last}}$ is treated in exactly the same manner as $\Delta_{\textrm{layer, first}}$ and so will not be described in any more detail.
+\newline
+Once the three inputs for the matching candidates have been calculated, the value of the matching likelihood is then
+\begin{equation}
+  \mathcal{L} = \mathcal{L}_{Q_{\textrm{ratio}}} \times \mathcal{L}_{\Delta_{\textrm{layer, first}}} \times \mathcal{L}_{\Delta_{\textrm{layer, last}}}.
+\end{equation}
+As mentioned above, all 2D clusters in one view are compared with all 2D clusters in the other view.  The matching pair which produce the highest value of $\mathcal{L}$ are counted as a match.  The matched pair are then removed from the pool and the process is repeated until no more matches can be made or the value of $\mathcal{L}$ falls below $e^{-5}$.  All matched clusters are now counted as 3D objects and are passed onto the rest of the ECal reconstruction algorithms.
 
 \subsection{3D hit reconstruction}
 \label{subsec:ECal3DHitReconstruction}
-Least square those fits
+So far in the ECal reconstruction, it has only been possible to reconstruct 2/3 of the hit coordinates have been estimated.  However, now that full 3D clusters have been formed, the information from both ECal views can be used to estimate the 3rd hit coordinate which is the coordinate along the length of the bar.
+\newline
+The hits are separated into their respective 2D view and then the charge-weighted average position of each view is calculated.  Then, to calculate the final hit coordinate, the nearest four layers from the other view are found and a linear least-squares fit is applied to their 2D coordinates.  The line found is then extrapolated into the layer of interest which provides the unknown hit coordinate.
 
 \subsection{Energy reconstruction}
 \label{subsec:ECalEnergyReconstruction}
-blah
+The ECal was designed to catch electromagnetic particles originating from the tracker region of ND280, particularly photons from $\pi^0$ decays.  An integral part of particle shower reconstruction is estimation of the total energy of the incoming particle.  So, the next phase of the reconstruction is particle energy estimation under the assumption that the incident particle created a full contained particle shower upon entering the ECal module.  The range of the energy fitter is 25 MeV to 20 GeV which almost fully covers the range of energies seen in the ND280 ECals.  The energy fitter works by minimising a likelihood function which takes the total charge, charge RMS and charge skew of the 3D cluster as inputs.  For each of the three input variables, splines were generated using simple photon particle gun MC which relates the input variables to the true particle energy.  The minimizer generates an estimate of the true energy and, via the splines, retrieves the expected values of the input variables.  By minimising the distance between the measured input variables and those taken from the splines an accurate estimate of the particle energy is found.  This energy estimate, along with the 3D cluster itself is then passed onto the final section of the ECal reconstruction.
 
 \subsection{Event classification}
 \label{subsec:ECalParticleIdentification}
-Track or shower?
+The final section of the ECal reconstruction is to attach a topology hypthosis to the 3D cluster.  The routines currently separate the clusters into two catagories: those that are shower-like and those that are track-like using an Artifical Neural Network.  This multi-variate analysis object takes multiple pieces of information about the 3D cluster which attempts to measure the energy deposition and shape of the cluster and returns a single number.  The value of the returned number suggests whether the reconstructed object is track-like or shower-like. The discriminator was tested using ND280 electron and muon control samples, the results of which are shown for the DS-ECal in Fig.~\ref{fig:ECalTrShVal}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8.5cm]{images/software/ecal_trshval.pdf}
+  \caption{The track-like/shower-like discriminator for the DS-ECal.  Solid lines show the control sample Monte Carlo and the point show the control sample data.}
+  \label{fig:ECalTrShVal}
+\end{figure}
+
+
