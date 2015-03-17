@@ -41,25 +41,27 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Parameter space generation}{section.4.2}% 41
 \BOOKMARK [2][-]{subsection.4.2.3}{Parameter space analysis}{section.4.2}% 42
 \BOOKMARK [2][-]{subsection.4.2.4}{3D track reconstruction}{section.4.2}% 43
-\BOOKMARK [1][-]{section.4.3}{Validation of the reconstruction}{chapter.4}% 44
-\BOOKMARK [0][-]{chapter.5}{Magnetic field simulation in ND280}{}% 45
-\BOOKMARK [1][-]{section.5.1}{Magnetic field model in the ND280 flux return}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.2}{Effect of magnetic field on the ECal}{chapter.5}% 47
-\BOOKMARK [0][-]{chapter.6}{Selection of neutrino interactions in the ECal}{}% 48
-\BOOKMARK [1][-]{section.6.1}{Data selection}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.2}{Monte Carlo selection}{chapter.6}% 50
-\BOOKMARK [1][-]{section.6.3}{Properties of events in selection}{chapter.6}% 51
-\BOOKMARK [0][-]{chapter.7}{Evaluation of systematic uncertainties}{}% 52
-\BOOKMARK [1][-]{section.7.1}{Flux systematics}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.2}{Cross-section systematics}{chapter.7}% 54
-\BOOKMARK [1][-]{section.7.3}{Detector systematics}{chapter.7}% 55
-\BOOKMARK [0][-]{chapter.8}{Cross-section measurement}{}% 56
-\BOOKMARK [1][-]{section.8.1}{Measurement method}{chapter.8}% 57
-\BOOKMARK [1][-]{section.8.2}{Validation of method}{chapter.8}% 58
-\BOOKMARK [1][-]{section.8.3}{Applying the fit to ND280 data}{chapter.8}% 59
-\BOOKMARK [0][-]{chapter.9}{Discussion and conclusions}{}% 60
-\BOOKMARK [1][-]{section.9.1}{Discussion}{chapter.9}% 61
-\BOOKMARK [1][-]{section.9.2}{Conclusions}{chapter.9}% 62
-\BOOKMARK [0][-]{appendix*.19}{Bibliography}{}% 63
-\BOOKMARK [0][-]{appendix*.20}{List of Figures}{}% 64
-\BOOKMARK [0][-]{appendix*.21}{List of Tables}{}% 65
+\BOOKMARK [2][-]{subsection.4.2.5}{Track pairwise crossing reconstruction}{section.4.2}% 44
+\BOOKMARK [1][-]{section.4.3}{Output of the reconstruction}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.4}{Validation of the reconstruction}{chapter.4}% 46
+\BOOKMARK [0][-]{chapter.5}{Magnetic field simulation in ND280}{}% 47
+\BOOKMARK [1][-]{section.5.1}{Magnetic field model in the ND280 flux return}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{Effect of magnetic field on the ECal}{chapter.5}% 49
+\BOOKMARK [0][-]{chapter.6}{Selection of neutrino interactions in the ECal}{}% 50
+\BOOKMARK [1][-]{section.6.1}{Data selection}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.2}{Monte Carlo selection}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.3}{Properties of events in selection}{chapter.6}% 53
+\BOOKMARK [0][-]{chapter.7}{Evaluation of systematic uncertainties}{}% 54
+\BOOKMARK [1][-]{section.7.1}{Flux systematics}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.2}{Cross-section systematics}{chapter.7}% 56
+\BOOKMARK [1][-]{section.7.3}{Detector systematics}{chapter.7}% 57
+\BOOKMARK [0][-]{chapter.8}{Cross-section measurement}{}% 58
+\BOOKMARK [1][-]{section.8.1}{Measurement method}{chapter.8}% 59
+\BOOKMARK [1][-]{section.8.2}{Validation of method}{chapter.8}% 60
+\BOOKMARK [1][-]{section.8.3}{Applying the fit to ND280 data}{chapter.8}% 61
+\BOOKMARK [0][-]{chapter.9}{Discussion and conclusions}{}% 62
+\BOOKMARK [1][-]{section.9.1}{Discussion}{chapter.9}% 63
+\BOOKMARK [1][-]{section.9.2}{Conclusions}{chapter.9}% 64
+\BOOKMARK [0][-]{appendix*.21}{Bibliography}{}% 65
+\BOOKMARK [0][-]{appendix*.22}{List of Figures}{}% 66
+\BOOKMARK [0][-]{appendix*.23}{List of Tables}{}% 67
