@@ -34,6 +34,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Graphical display of the X--Y ND280 cross-section.\relax }}{40}{figure.caption.21}
 \contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Simple model of the magnetic field in the basket and flux return region. The flux return yoke has been separated into ten sections: four vertical B field sections, four corner B field sections and two horizontal B field sections. The height of the basket region, $h$, is also shown.\relax }}{41}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Comparisons of data and Monte Carlo in the bottom-left barrel ECal for previous software productions. The red and pink histograms are Monte Carlo simulation of T2K beam neutrinos incident on ND280 and the surrounding pit respectively. The blue data points are collected data from run 3C. Both of the plots are POT normalized.\relax }}{42}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of hits in the reconstructed cluster.}}}{42}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The truncated max ratio of the reconstructed cluster.}}}{42}{subfigure.3.2}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Comparisons of data and Monte Carlo in the bottom-left barrel ECal with the magnetic field model described in section~\ref {sec:MagneticFieldModel} implemented. The red and pink histograms are Monte Carlo simulation of T2K beam neutrinos incident on ND280 and the surrounding pit respectively. The blue data points are collected data from run 3C. Both of the plots are POT normalized.\relax }}{44}{figure.caption.24}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of hits in the reconstructed cluster.}}}{44}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The truncated max ratio of the reconstructed cluster.}}}{44}{subfigure.4.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
