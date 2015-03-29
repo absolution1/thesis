@@ -41,6 +41,13 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of hits in the reconstructed cluster.}}}{44}{subfigure.4.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {The truncated max ratio of the reconstructed cluster.}}}{44}{subfigure.4.2}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Angular separation of the reconstructed tracks in an ECal cluster with the beam-simulated particle that created them. The black, red and green histograms are the tracks that were reconstructed first, second and third respectively. All histograms are area normalized.\relax }}{46}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No track rejection.}}}{46}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {With track rejection.}}}{46}{subfigure.1.2}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Values of $\mymath {\@Oldphi }\xspace ^{\textrm {vertices}}$ in ($d_q$,$d_c$) space. The colour corresponds to the magnitude of $\mymath {\@Oldphi }\xspace ^{\textrm {vertices}}$.\relax }}{48}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces $\mymath {\@Oldphi }\xspace ^{\textrm {vertices}}$ vs the marginalized vertex reconstruction parameters.\relax }}{49}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$d_q$}}}{49}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$d_c$}}}{49}{subfigure.3.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

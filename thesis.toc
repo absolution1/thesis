@@ -55,19 +55,20 @@
 \contentsline {section}{\numberline {5.1}Magnetic field model in the ND280 flux return}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Effect of magnetic field on the ECal}{42}{section.5.2}
 \contentsline {chapter}{\numberline {6}Selection of neutrino interactions in the ECal}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Monte Carlo selection}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Properties of events in selection}{45}{section.6.2}
-\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{47}{chapter.7}
-\contentsline {section}{\numberline {7.1}Flux systematics}{47}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cross-section systematics}{47}{section.7.2}
-\contentsline {section}{\numberline {7.3}Detector systematics}{47}{section.7.3}
-\contentsline {chapter}{\numberline {8}Cross-section measurement}{49}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurement method}{49}{section.8.1}
-\contentsline {section}{\numberline {8.2}Validation of method}{49}{section.8.2}
-\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{49}{section.8.3}
-\contentsline {chapter}{\numberline {9}Discussion and conclusions}{51}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discussion}{51}{section.9.1}
-\contentsline {section}{\numberline {9.2}Conclusions}{51}{section.9.2}
-\contentsline {chapter}{Bibliography}{55}{appendix*.25}
-\contentsline {chapter}{List of Figures}{57}{appendix*.26}
-\contentsline {chapter}{List of Tables}{61}{appendix*.27}
+\contentsline {section}{\numberline {6.1}Vertex reconstruction}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Monte Carlo selection}{48}{section.6.2}
+\contentsline {section}{\numberline {6.3}Properties of events in selection}{49}{section.6.3}
+\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{51}{chapter.7}
+\contentsline {section}{\numberline {7.1}Flux systematics}{51}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cross-section systematics}{51}{section.7.2}
+\contentsline {section}{\numberline {7.3}Detector systematics}{51}{section.7.3}
+\contentsline {chapter}{\numberline {8}Cross-section measurement}{53}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measurement method}{53}{section.8.1}
+\contentsline {section}{\numberline {8.2}Validation of method}{53}{section.8.2}
+\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{53}{section.8.3}
+\contentsline {chapter}{\numberline {9}Discussion and conclusions}{55}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discussion}{55}{section.9.1}
+\contentsline {section}{\numberline {9.2}Conclusions}{55}{section.9.2}
+\contentsline {chapter}{Bibliography}{59}{appendix*.28}
+\contentsline {chapter}{List of Figures}{61}{appendix*.29}
+\contentsline {chapter}{List of Tables}{65}{appendix*.30}
