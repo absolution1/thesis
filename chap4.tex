@@ -308,6 +308,7 @@ As described above, $\mathcal{L}$ is calculated for every matching candidate pai
 The final step of the reconstruction is to estimate where each of the 3D track's paths cross.  As each track is reconstructed as a straight line in 3D, the final step is fairly simple.  Using the track direction and position information calculated at the end of section~\ref{subsec:3DHoughTrackReconstruction}, the position at closest approach for every pairwise combination of 3D tracks is calulated analytically.  The distance of closest approach is also calculated.  Six hits, the closest three from each 3D track, are then associated to the pairwise crossing. 
 
 \section{Output of the reconstruction}
+\label{sec:ReconOutput}
 The reconstruction is run over every 3D cluster found in the ECal.  By applying the steps outlined above, for each 3D cluster the following output is given:
 \begin{itemize}
   \item A set of 3D tracks

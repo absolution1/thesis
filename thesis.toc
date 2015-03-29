@@ -55,9 +55,8 @@
 \contentsline {section}{\numberline {5.1}Magnetic field model in the ND280 flux return}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Effect of magnetic field on the ECal}{42}{section.5.2}
 \contentsline {chapter}{\numberline {6}Selection of neutrino interactions in the ECal}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data selection}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Monte Carlo selection}{45}{section.6.2}
-\contentsline {section}{\numberline {6.3}Properties of events in selection}{45}{section.6.3}
+\contentsline {section}{\numberline {6.1}Monte Carlo selection}{45}{section.6.1}
+\contentsline {section}{\numberline {6.2}Properties of events in selection}{45}{section.6.2}
 \contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{47}{chapter.7}
 \contentsline {section}{\numberline {7.1}Flux systematics}{47}{section.7.1}
 \contentsline {section}{\numberline {7.2}Cross-section systematics}{47}{section.7.2}
