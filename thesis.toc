@@ -56,8 +56,8 @@
 \contentsline {section}{\numberline {5.2}Effect of magnetic field on the ECal}{42}{section.5.2}
 \contentsline {chapter}{\numberline {6}Selection of neutrino interactions in the ECal}{45}{chapter.6}
 \contentsline {section}{\numberline {6.1}Vertex reconstruction}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Monte Carlo selection}{48}{section.6.2}
-\contentsline {section}{\numberline {6.3}Properties of events in selection}{49}{section.6.3}
+\contentsline {section}{\numberline {6.2}Monte Carlo selection}{50}{section.6.2}
+\contentsline {section}{\numberline {6.3}Properties of events in selection}{50}{section.6.3}
 \contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{51}{chapter.7}
 \contentsline {section}{\numberline {7.1}Flux systematics}{51}{section.7.1}
 \contentsline {section}{\numberline {7.2}Cross-section systematics}{51}{section.7.2}
@@ -69,6 +69,6 @@
 \contentsline {chapter}{\numberline {9}Discussion and conclusions}{55}{chapter.9}
 \contentsline {section}{\numberline {9.1}Discussion}{55}{section.9.1}
 \contentsline {section}{\numberline {9.2}Conclusions}{55}{section.9.2}
-\contentsline {chapter}{Bibliography}{59}{appendix*.28}
-\contentsline {chapter}{List of Figures}{61}{appendix*.29}
-\contentsline {chapter}{List of Tables}{65}{appendix*.30}
+\contentsline {chapter}{Bibliography}{59}{appendix*.30}
+\contentsline {chapter}{List of Figures}{61}{appendix*.31}
+\contentsline {chapter}{List of Tables}{65}{appendix*.32}

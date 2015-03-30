@@ -41,9 +41,8 @@ As with the 3D tracks, the reconstruction does not perform any quality checks on
 \newline
 The above discussion promotes two parameters which will govern the vertex reconstruction: the required proximity of two crossings to be clustered together, $d_c$, and the distance of a crossing from its constituents tracks to be classified as bad quality, $d_q$.  To quantify these values, a sample of reconstructed events matched to interactions in the ECals are used which are taken from beam Monte Carlo.  The reconstruction (the pairwise crossing rejection and clustering) is repeatedly run over the sample for different values of the $d_c$ and $d_q$ to find the optimum values.  To define the optimum value, a figure of merit is necessary.  After running the reconstruction for a given $d_c$ and $d_q$, the number vertices are separated into one, two and three track vertices and the true neutrino interactions which created the reconstructed vertices are associated.  A reconstructed vertex is tagged as correctly reconstructed if it contains the same number of reconstructed tracks as the number of charged final states in the associated neutrino interaction.  By defining the number of correctly reconstructed one, two and three track vertices as $N_1$, $N_2$ and $N_3$ respectively, the figure of merit, $\phi^{\textrm{vertices}}$, is
 \begin{equation}
-  \phi^{\textrm{vertices}} = N_1N_2N_3
+  \phi^{\textrm{vertices}} = N_1N_2N_3.
 \end{equation}
-By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, the preferred values of $d_q$ and $d_c$ can be found.  This space is shown in Fig.~\ref{fig:VertexReconFOM}.  It is clear from Fig.~\ref{fig:VertexReconFOM} that there is no clear maximum, but rather a plateau of  $\phi^{\textrm{vertices}}$ for $d_q$ and $d_c$ greater than 140 mm.  So, marginalized distributions of $d_q$ and $d_c$ can be produced to find where $\phi^{\textrm{vertices}}$ approaches zero.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/vertex_recon/FOM_2D}
@@ -57,8 +56,38 @@ By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, the preferred 
   \caption{$\phi^{\textrm{vertices}}$ vs the marginalized vertex reconstruction parameters.}
   \label{fig:VertexReconMarginalizedDistributions}
 \end{figure}
+By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, information about the preferred values of $d_q$ and $d_c$ can be found.  This space is shown in Fig.~\ref{fig:VertexReconFOM}.  It is clear from Fig.~\ref{fig:VertexReconFOM} that there is no clear maximum, but rather a plateau of  $\phi^{\textrm{vertices}}$ for $d_q$ and $d_c$ greater than 140 mm.  So, marginalized distributions of $d_q$ and $d_c$ can be produced to find where $\phi^{\textrm{vertices}}$ approaches zero which are shown in Fig.~\ref{fig:dqMarginalize} and Fig.~\ref{fig:dcMarginalize} respectively.  The values chosen are shown in table~\ref{table:VertexReconParameters}. 
+\begin{table}[b!]
+  \begin{tabular}{ c c }
+    $\phi_d$ & $\phi_c$ \\ \hline \hline
+    140 mm &  200 mm \\
+  \end{tabular}
+  \caption{Parameters for the vertex reconstruction in the ECal.}
+  \label{table:VertexReconParameters}
+\end{table}
+The reconstruction now assesses the quality the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was proposed by X. Lu.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
+\begin{equation}
+  D = \sum_i |\vec{r}_i|^2.
+  \label{eqn:SumOfSquares}
+\end{equation}
+$\vec{P}$ is then defined as the point in space which satisfies
+\begin{equation}
+  \frac{\partial D}{\partial x} = \frac{\partial D}{\partial y} = \frac{\partial D}{\partial z} = 0.
+  \label{eqn:SumOfSquaresMinCondition}
+\end{equation}
+The value of $|\vec{r}_i|$ is trivially defined by simple vector properties as 
+\begin{equation}
+  |\vec{r}_i| = \frac{|(\vec{P} - \vec{a}_i) \cross \vec{v}_i|}{|\vec{v}_i|} = |(\vec{P} - \vec{a}_i) \cross \hat{v}_i|,
+  \label{eqn:DistanceOfPointToLine}
+\end{equation}
+where $\vec{v}_i$ is the direction vector of $\vec{l}_i$ and $\vec{a}_i$ is a point along $\vec{l}_i$.
 
-
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{images/selection/vertex_recon/vertex_vector_diagram}
+  \caption{Example of the vertex position, $\vec{P}$ for three lines: $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$. $|\vec{r}_1|$, $|\vec{r}_2|$ and $|\vec{r}_3|$ are the perpendicular distances of $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$ to $\vec{P}$ respectively.}
+  \label{fig:VertexVectorDiagram}
+\end{figure}
 
 
 %\section{Data selection}
