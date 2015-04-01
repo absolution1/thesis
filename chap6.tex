@@ -66,6 +66,12 @@ By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, information ab
   \label{table:VertexReconParameters}
 \end{table}
 The reconstruction now assesses the quality the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was proposed by X. Lu.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=8cm]{images/selection/vertex_recon/vertex_vector_diagram}
+  \caption{Example of the vertex position, $\vec{P}$ for three lines: $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$. $|\vec{r}_1|$, $|\vec{r}_2|$ and $|\vec{r}_3|$ are the perpendicular distances of $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$ to $\vec{P}$ respectively.}
+  \label{fig:VertexVectorDiagram}
+\end{figure}
 \begin{equation}
   D = \sum_i |\vec{r}_i|^2.
   \label{eqn:SumOfSquares}
@@ -80,14 +86,89 @@ The value of $|\vec{r}_i|$ is trivially defined by simple vector properties as
   |\vec{r}_i| = \frac{|(\vec{P} - \vec{a}_i) \cross \vec{v}_i|}{|\vec{v}_i|} = |(\vec{P} - \vec{a}_i) \cross \hat{v}_i|,
   \label{eqn:DistanceOfPointToLine}
 \end{equation}
-where $\vec{v}_i$ is the direction vector of $\vec{l}_i$ and $\vec{a}_i$ is a point along $\vec{l}_i$.
-
+where $\vec{v}_i$ is the direction vector of $\vec{l}_i$ and $\vec{a}_i$ is a point along $\vec{l}_i$.  By defining $\vec{P}$ mathematically as
+\begin{equation}
+  \vec{P} = x\hat{\imath} + y\hat{\jmath} + z\hat{k},
+  \label{eqn:PDefinition}
+\end{equation}
+equation~\ref{eqn:SumOfSquaresMinCondition} can be solved.  The following derivation is only for $\partial D/\partial x$ as the method is identical for $\partial D/\partial x$, $\partial D/\partial y$ and $\partial D/\partial z$.
+\begin{eqnarray}
+  \frac{\partial D}{\partial x} & = & \sum_i 2\vec{r}_i \cdot \frac{\partial \vec{r}_i}{\partial x} \\
+  & = & 2\sum_i \big[(\vec{P} - \vec{a}_i) \cross \hat{v}_i\big] \cdot \big[\hat{\imath} \cross \hat{v}_i\big] \nonumber \\
+  & = & 2x \sum_i (\hat{\imath} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) + 2y \sum_i (\hat{\jmath} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) + 2z \sum_i (\hat{k} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) \nonumber \\
+  &\qquad & - 2(\vec{a}_i \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i). \nonumber
+  \label{eqn:dDdxDerivation}
+\end{eqnarray}
+By applying the same steps for $\partial D/\partial y$ and $\partial D/\partial z$, the matrix equation
+\begin{equation}
+%  \[ \left( \begin{array}{ccc}
+%      0 & 0 & 0 \\
+%      0 & 0 & 0 \\
+%    0 & 0 & 0 \end{array} \right)\]
+%  \label{eqn:VertexReconMatrix}
+  \begin{pmatrix}
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) \\
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) \\ 
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) 
+  \end{pmatrix}
+  \begin{pmatrix}
+   x \\
+   y \\
+   z
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) \\
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) \\
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{k} \cross \hat{v})
+  \end{pmatrix}
+  \label{eqn:VertexReconMatrix}
+\end{equation}
+can be built up.  By defining the equation~\ref{eqn:VertexReconMatrix} as
+\begin{equation}
+  \underline{\underline{A}} \vec{P} = \vec{B},
+  \label{eqn:VertexReconMatrixSimple}
+\end{equation}
+where $\underline{\underline{A}}$ is the matrix on the left hand side of equation~\ref{eqn:VertexReconMatrix} and $\vec{B}$ is the vector on the right hand side of equation~\ref{eqn:VertexReconMatrix}.  $\vec{P}$ is finally
+\begin{equation}
+  \vec{P} = \underline{\underline{A}}^{-1} \vec{B}.
+  \label{eqn:VertexReconMatrixSolution}
+\end{equation}
+While the inversion of $\underline{\underline{A}}$ is in principle analytically solvable, it was decided that the inversion would be handled numerically.  So, to find $\vec{P}$, the vertex reconstruction builds $\underline{\underline{A}}^{-1}$ (by building and inverting $\underline{\underline{A}})$ and $\vec{B}$ and then applies equation~\ref{eqn:VertexReconMatrixSolution}.
+\newline
+\newline
+By applying the steps outlined above to every reconstructed ECal cluster, a set of candidate vertices are formed.  As the enhanced reconstruction is only capable of reconstructing straight tracks, bending trajectories tend to be reconstructed as two or more tracks.  The crossings associated with such tracks can, and do, pass the vertex reconstruction criteria defined in table~\ref{table:VertexReconParameters}.  An extreme example of this topology is shown in Fig.~\ref{fig:TrackMergingEventDisplay} in which a curving $\mu^-$ is reconstructed as four tracks.  So, the final step on the reconstruction is to attempt to merge tracks to model the curving trajectory topology.  Firstly, the reconstructed crossings associated with a clean curving trajectory should pass the crossing quality cut but should be sufficiently far away from any other crossing that it is not clustered during the vertex clustering stage.  Therefore, track merging candidates can be initially identified by searching for reconstructed vertices with exactly two track constituents.  As an example, all three of the crossings shown in Fig.~\ref{fig:TrackMergingEventDisplay} are correctly identified by this check.  The two constituent tracks of the identified vertex will form the merged track, so the reconstruction checks the shape that the merged track would make against a set of conditions to decide if the merging should be performed. 
 \begin{figure}
   \centering
-  \includegraphics[width=8cm]{images/selection/vertex_recon/vertex_vector_diagram}
-  \caption{Example of the vertex position, $\vec{P}$ for three lines: $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$. $|\vec{r}_1|$, $|\vec{r}_2|$ and $|\vec{r}_3|$ are the perpendicular distances of $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$ to $\vec{P}$ respectively.}
-  \label{fig:VertexVectorDiagram}
+  \includegraphics[width=12cm]{images/selection/vertex_recon/track_merging_event_display.eps}
+  \caption{Example event display showing a track merging candidate.  The final state $\mu^-$ (in green) curves in a complicated way and is reconstructed as four tracks (in light blue).  The pairwise crossings of the reconstructed tracks are the red squares.  The muon is produced by a charged current interaction in the top left barrel ECal producing two $\pi^+$ (in brown) and the curving $\mu^-$. }
+  \label{fig:TrackMergingEventDisplay}
 \end{figure}
+To identify and tune the condtitions for merging tracks, two metrics are used.  The first metric is used for identification of the merging conditions and uses the truth information provided by the geant4 simulation.  For every two track vertex that was formed by the vertex clustering, the simulated particle that produced each of the two constituent tracks was checked.  If the sample particle is matched to both tracks, then the merging candidate is tagged as a correct match, otherwise it is tagged as an incorrect match.  The second metric is used for tuning the identified merging conditions.  As part of this analysis is a search for neutrino intercations using vertex-based reconstruction, there will be an expected loss of signal by track merging which must be minimised.  So, the track merging condition tuning should be based on ECal signal interactions.  As described above, the only tracks that are proposed as merging candidates are those which are constituents of a two track vertex.  So, the track merging tuning attempts to separate signal and background events which are reconstructed as a vertex with two track constituents.  It is preferrable that the merging choses quality over quality so the tuning figure of merit is defined as 
+\begin{equation}
+  \phi = \epsilon \eta^2
+\end{equation}
+where $\epsilon$ is the efficiency of the track merging to keep signal events reconstructed as two track vertices and $\eta$ is the purity of the events that remain as two track vertices after merging has taken place.
+\newline
+\newline
+The first merging condition identified is the cosine of the opening angle, $\cos\theta$, subtended by the two constituent tracks bounded between 0 and 1 which is shown in Fig.~\ref{fig:TrackMergingConditionCosTheta}.  The opening angle is clearly a powerful discriminator.  The distribution for incorrect matches is very flat across the full angular range whereas there is a clear build up correct matches as $\cos\theta \rightarrow 1$.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=11cm]{images/selection/vertex_recon/merging_candidates_cos_theta}
+  \caption{The cosine of the angle subtended by the merging candidates, bounded between 0 and 1. The correct matches and incorrect matches are the blue and red histograms respectively.}
+  \label{fig:TrackMergingConditionCosTheta}
+\end{figure}
+\newline
+\newline
+The second merging condition identified, called 'distance ratio', measures the ratio of the distance between the two constituent tracks' closest points, $d^{\textrm{small}}$ to the distance between their furthest points, $d^{\textrm{large}}$.  An example of how $d^{\textrm{small}}$ and $d^{\textrm{large}}$ are calculated is shown in Fig.~\ref{fig:DistanceRatioEventDisplay}.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=11cm]{images/selection/vertex_recon/distance_ratio_event_display}
+  \caption{Example event display showing how the distance ratio is calculated.  The distance ratio is defined as $d^{\textrm{small}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
+  \label{fig:DistanceRatioEventDisplay}
+\end{figure}
+
+%To identify which merging candidates should actually be matched together, the truth information from the simulation was used.  Specfically, merging candidates which should be matched together are found by checking which particle produced the two tracks.  If a single particle produced both tracks, then the merging candidate is tagged as signal, otherwise it is background.
 
 
 %\section{Data selection}
