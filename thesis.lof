@@ -51,7 +51,17 @@
 \contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Example of the vertex position, $\mathaccentV {vec}17E{P}$ for three lines: $\mathaccentV {vec}17E{l}_1$, $\mathaccentV {vec}17E{l}_2$ and $\mathaccentV {vec}17E{l}_3$. $|\mathaccentV {vec}17E{r}_1|$, $|\mathaccentV {vec}17E{r}_2|$ and $|\mathaccentV {vec}17E{r}_3|$ are the perpendicular distances of $\mathaccentV {vec}17E{l}_1$, $\mathaccentV {vec}17E{l}_2$ and $\mathaccentV {vec}17E{l}_3$ to $\mathaccentV {vec}17E{P}$ respectively.\relax }}{49}{figure.caption.29}
 \contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Example event display showing a track merging candidate. The final state $\mymath {\@Oldmu }\xspace ^-$ (in green) curves in a complicated way and is reconstructed as four tracks (in light blue). The pairwise crossings of the reconstructed tracks are the red squares. The muon is produced by a charged current interaction in the top left barrel ECal producing two $\mymath {\@Oldpi }\xspace ^+$ (in brown) and the curving $\mymath {\@Oldmu }\xspace ^-$. \relax }}{52}{figure.caption.30}
 \contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces The cosine of the angle subtended by the merging candidates, bounded between 0 and 1. The correct matches and incorrect matches are the blue and red histograms respectively.\relax }}{53}{figure.caption.31}
-\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Example event display showing how the distance ratio is calculated. The distance ratio is defined as $d^{\textrm {small}}/d^{\textrm {large}}$. The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.\relax }}{53}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Example event display showing how the parameters of the distance ratio are calculated. The distance ratio is defined as $d^{\textrm {small}}/d^{\textrm {large}}$. The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.\relax }}{53}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 6.8}{\ignorespaces The distance ratio of the merging candidates. The correct and incorrect matches are the blue and red histograms respectively.\relax }}{54}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No cuts applied.}}}{54}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {For $\qopname \relax o{cos}\mymath {\@Oldtheta }\xspace > 0.8$.}}}{54}{subfigure.8.2}
+\contentsline {figure}{\numberline {\relax 6.9}{\ignorespaces The distance ratio vs the cosine of the opening angle for track merging candidates.\relax }}{55}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Correct matches only}}}{55}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Incorrect matches only}}}{55}{subfigure.9.2}
+\contentsline {figure}{\numberline {\relax 6.10}{\ignorespaces Values of the tuning metric, as described in equation~\ref {eqn:TrackMergingTuningMetric}, in distance ratio cut vs $\qopname \relax o{cos}\mymath {\@Oldtheta }\xspace $ cut space.\relax }}{55}{figure.caption.35}
+\contentsline {figure}{\numberline {\relax 6.11}{\ignorespaces $\mymath {\@Oldphi }\xspace ^{\textrm {merge}}$ vs the track merging conditions.\relax }}{56}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$d_q$}}}{56}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$d_c$}}}{56}{subfigure.11.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

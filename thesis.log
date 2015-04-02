@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  1 APR 2015 22:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.2)  2 APR 2015 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,7 +934,15 @@ LaTeX Info: Redefining \CERN on input line 53.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./thesis.aux)
+ (./thesis.aux
+
+LaTeX Warning: Label `fig:TrackMergingConditionDistanceRatio' multiply defined.
+
+
+
+LaTeX Warning: Label `table:VertexReconParameters' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -953,7 +961,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 47.
@@ -2210,7 +2218,7 @@ con/track_merging_event_display.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/selection/vertex_recon/track_merging_event_display-eps-converted-to.pdf
-, id=1205, 887.315pt x 420.57124pt>
+, id=1206, 887.315pt x 420.57124pt>
 File: images/selection/vertex_recon/track_merging_event_display-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -2239,19 +2247,19 @@ idates_cos_theta-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
 con/merging_candidates_cos_theta-eps-converted-to.pdf images/selection/vertex_r
 econ/merging_candidates_cos_theta.eps>
-(epstopdf)             \includegraphics on input line 157.
+(epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-to.pd
-f, id=1215, 569.12625pt x 387.4475pt>
+f, id=1216, 569.12625pt x 387.4475pt>
 File: images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-
 to.pdf Graphic file (type pdf)
 
 <use images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-t
 o.pdf>
 Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_cos_t
-heta-eps-converted-to.pdf used on input line 157.
-(pdftex.def)             Requested size: 312.9803pt x 213.07904pt.
+heta-eps-converted-to.pdf used on input line 158.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
 Package epstopdf Info: Source file: <images/selection/vertex_recon/distance_rat
 io_event_display.eps>
 (epstopdf)                    date: 2015-04-01 22:31:16
@@ -2263,51 +2271,246 @@ io_event_display-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
 con/distance_ratio_event_display-eps-converted-to.pdf images/selection/vertex_r
 econ/distance_ratio_event_display.eps>
-(epstopdf)             \includegraphics on input line 166.
+(epstopdf)             \includegraphics on input line 167.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/selection/vertex_recon/distance_ratio_event_display-eps-converted-to.pd
-f, id=1217, 612.2875pt x 418.56375pt>
+f, id=1218, 612.2875pt x 418.56375pt>
 File: images/selection/vertex_recon/distance_ratio_event_display-eps-converted-
 to.pdf Graphic file (type pdf)
 
 <use images/selection/vertex_recon/distance_ratio_event_display-eps-converted-t
 o.pdf>
 Package pdftex.def Info: images/selection/vertex_recon/distance_ratio_event_dis
-play-eps-converted-to.pdf used on input line 166.
-(pdftex.def)             Requested size: 312.9803pt x 213.95645pt.
+play-eps-converted-to.pdf used on input line 167.
+(pdftex.def)             Requested size: 284.52756pt x 194.50238pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio.eps>
+(epstopdf)                    date: 2015-04-02 11:20:35
+(epstopdf)                    size: 10595 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 11:23:17
+(epstopdf)                    size: 9116 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_distance_ratio-eps-converted-to.pdf images/selection/ver
+tex_recon/merging_candidates_distance_ratio.eps>
+(epstopdf)             \includegraphics on input line 174.
+Package epstopdf Info: Output file is already uptodate.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--170
+<images/selection/vertex_recon/merging_candidates_distance_ratio-eps-converted-
+to.pdf, id=1220, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_distance_ratio-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_distance_ratio-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_dista
+nce_ratio-eps-converted-to.pdf used on input line 174.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio_CosThetaGuessCut.eps>
+(epstopdf)                    date: 2015-04-02 13:53:42
+(epstopdf)                    size: 10054 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio_CosThetaGuessCut-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 13:55:38
+(epstopdf)                    size: 8892 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_distance_ratio_CosThetaGuessCut-eps-converted-to.pdf ima
+ges/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.e
+ps>
+(epstopdf)             \includegraphics on input line 175.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessC
+ut-eps-converted-to.pdf, id=1221, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaG
+uessCut-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGu
+essCut-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_dista
+nce_ratio_CosThetaGuessCut-eps-converted-to.pdf used on input line 175.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 174--176
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/correct_merg
+ing_candidates_distance_ratio_vs_cos_theta.eps>
+(epstopdf)                    date: 2015-04-02 11:47:14
+(epstopdf)                    size: 236981 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/correct_merg
+ing_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 13:36:28
+(epstopdf)                    size: 46674 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/correct_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf
+ images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos
+_theta.eps>
+(epstopdf)             \includegraphics on input line 182.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos
+_theta-eps-converted-to.pdf, id=1230, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/correct_merging_candidates_distance_ratio_v
+s_cos_theta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs
+_cos_theta-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/correct_merging_candidat
+es_distance_ratio_vs_cos_theta-eps-converted-to.pdf used on input line 182.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/incorrect_me
+rging_candidates_distance_ratio_vs_cos_theta.eps>
+(epstopdf)                    date: 2015-04-02 11:47:15
+(epstopdf)                    size: 407001 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/incorrect_me
+rging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 13:36:30
+(epstopdf)                    size: 62197 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/incorrect_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.p
+df images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs
+_cos_theta.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_c
+os_theta-eps-converted-to.pdf, id=1231, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio
+_vs_cos_theta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_
+vs_cos_theta-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/incorrect_merging_candid
+ates_distance_ratio_vs_cos_theta-eps-converted-to.pdf used on input line 183.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 182--184
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+TuningFOM.eps>
+(epstopdf)                    date: 2015-04-02 14:48:46
+(epstopdf)                    size: 125140 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+TuningFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 15:24:13
+(epstopdf)                    size: 25352 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingTuningFOM-eps-converted-to.pdf images/selection/vertex_recon/Tr
+ackMergingTuningFOM.eps>
+(epstopdf)             \includegraphics on input line 192.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf, id=1
+236, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingTuningFOM-ep
+s-converted-to.pdf used on input line 192.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+MarginalisedCosThetaFOM.eps>
+(epstopdf)                    date: 2015-04-02 14:48:46
+(epstopdf)                    size: 7651 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+MarginalisedCosThetaFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 15:24:14
+(epstopdf)                    size: 9269 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingMarginalisedCosThetaFOM-eps-converted-to.pdf images/selection/v
+ertex_recon/TrackMergingMarginalisedCosThetaFOM.eps>
+(epstopdf)             \includegraphics on input line 199.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-converte
+d-to.pdf, id=1240, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingMarginalised
+CosThetaFOM-eps-converted-to.pdf used on input line 199.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+MarginalisedDistanceRatioFOM.eps>
+(epstopdf)                    date: 2015-04-02 14:48:46
+(epstopdf)                    size: 7448 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+MarginalisedDistanceRatioFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-04-02 15:24:15
+(epstopdf)                    size: 9497 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingMarginalisedDistanceRatioFOM-eps-converted-to.pdf images/select
+ion/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps>
+(epstopdf)             \includegraphics on input line 200.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-eps-con
+verted-to.pdf, id=1241, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-eps
+-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingMarginalised
+DistanceRatioFOM-eps-converted-to.pdf used on input line 200.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 199--201
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--170
+Underfull \hbox (badness 10000) in paragraph at lines 151--213
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 151--213
+
+ []
+
+[52 <./images/selection/vertex_recon/track_merging_event_display-eps-converted-
+to.pdf>] [53 <./images/selection/vertex_recon/merging_candidates_cos_theta-eps-
+converted-to.pdf> <./images/selection/vertex_recon/distance_ratio_event_display
+-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52 <./images/selection/vertex_recon/track_merging_event_display-eps-converted
--to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53 <./images/selection/vertex_recon/merging_candidates_cos_theta-eps-converte
-d-to.pdf> <./images/selection/vertex_recon/distance_ratio_event_display-eps-con
-verted-to.pdf>]) (./chap7.tex [54]
+ [54 <./images/selection/vertex_recon/merging_candidates_distance_ratio-eps-con
+verted-to.pdf> <./images/selection/vertex_recon/merging_candidates_distance_rat
+io_CosThetaGuessCut-eps-converted-to.pdf>] [55 <./images/selection/vertex_recon
+/correct_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf> <
+./images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_
+cos_theta-eps-converted-to.pdf> <./images/selection/vertex_recon/TrackMergingTu
+ningFOM-eps-converted-to.pdf>]) (./chap7.tex [56 <./images/selection/vertex_rec
+on/TrackMergingMarginalisedCosThetaFOM-eps-converted-to.pdf> <./images/selectio
+n/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-eps-converted-to.pdf>]
 Chapter 7.
-) (./chap8.tex [55
+) (./chap8.tex [57
 
-] [56
+] [58
 
 ]
 Chapter 8.
-) (./chap9.tex [57] [58
+) (./chap9.tex [59] [60
 
 ]
 Chapter 9.
-)) Processing 'backmatter' comment. [59] [60
+)) Processing 'backmatter' comment. [61] [62
 
 
 ]
@@ -2315,7 +2518,7 @@ Chapter 9.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [61] [62
+(./comment.cut (./backmatter.tex (./thesis.bbl [63] [64
 
 ]
 
@@ -2516,7 +2719,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 75.
 
-[63]
+[65]
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -2559,29 +2762,29 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 89.
 
-) [64] (./thesis.lof
+) [66] (./thesis.lof
 Underfull \vbox (badness 8056) has occurred while \output is active []
 
- [65
+ [67
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66]
+ [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
+ [69])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
 
-[68] (./thesis.lot)
+[70] (./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
 ))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
- [69
+ [71
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
@@ -2589,15 +2792,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 594D3C2BD88F51A06C1C7915C905E408;4795.
+(rerunfilecheck)             Checksum: A19DA6863B38B65AF08748D96A6C2ECC;4795.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 24515 strings out of 495028
- 409664 string characters out of 6181497
- 562379 words of memory out of 5000000
- 26635 multiletter control sequences out of 15000+600000
- 88117 words of font info for 354 fonts, out of 8000000 for 9000
+ 24588 strings out of 495028
+ 413805 string characters out of 6181497
+ 566582 words of memory out of 5000000
+ 26679 multiletter control sequences out of 15000+600000
+ 88564 words of font info for 360 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  68i,21n,71p,1898b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2613,10 +2820,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr
 ve/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (85 pages, 1962427 bytes).
+Output written on thesis.pdf (87 pages, 2119022 bytes).
 PDF statistics:
- 1516 PDF objects out of 1728 (max. 8388607)
- 1272 compressed objects within 13 object streams
- 246 named destinations out of 1000 (max. 500000)
- 49394 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1635 PDF objects out of 1728 (max. 8388607)
+ 1366 compressed objects within 14 object streams
+ 259 named destinations out of 1000 (max. 500000)
+ 49429 words of extra memory for PDF output out of 51595 (max. 10000000)
 
