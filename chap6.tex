@@ -202,15 +202,41 @@ The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are sho
   \label{fig:TrackMergingMarginalizedDistributions}
 \end{figure}
 The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be as close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
+\newline
+\newline
+While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shownin Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situtations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specficially, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated are shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the toplogy on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bimodal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
+  \caption{Schematic showing the degeneracy of two merging candidate topologies which would pass the $\cos\theta$ cut.  The arrows represent reconstructed tracks and $\theta$ is the opening angle measured between the tracks.}
+  \label{fig:TrackMergingCosThetaDegeneracySchematic}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/vertex_recon/track_merging_event_display_swing.eps}
+  \caption{Example event display showing how the swing parameters are calculated.  Swing is defined as $l^{\textrm{long}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
+  \label{fig:TrackMergingEventDisplaySwing}
+\end{figure}
+\begin{figure}
+  \centering
+  \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
+  \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
+  \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.}
+  \label{fig:TrackMergingSwing}
+\end{figure}
 \begin{table}[b!]
-  \begin{tabular}{ c c }
-    $\cos\theta$ & Distance ratio \\ \hline \hline
-    $>$ 0.82 & $<$ 0.32 \\
+  \begin{tabular}{ c c c }
+    $\cos\theta$ & Distance ratio & swing \\ \hline \hline
+    $>$ 0.82 & $<$ 0.32 & $<$ 1 \\
   \end{tabular}
   \caption{Cut values for the track merging in the ECal.}
-  \label{table:VertexReconParameters}
+  \label{table:TrackMergingParameters}
 \end{table}
-The final identfied merging condition, called 'swing', measures 
+\newline
+\newline
+All of the merging conditions have now been identified and the associated cut values are summarised in table~\ref{table:TrackMergingParameters}.
+
+
 
 
 

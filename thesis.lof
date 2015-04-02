@@ -62,6 +62,11 @@
 \contentsline {figure}{\numberline {\relax 6.11}{\ignorespaces $\mymath {\@Oldphi }\xspace ^{\textrm {merge}}$ vs the track merging conditions.\relax }}{56}{figure.caption.36}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$d_q$}}}{56}{subfigure.11.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$d_c$}}}{56}{subfigure.11.2}
+\contentsline {figure}{\numberline {\relax 6.12}{\ignorespaces Schematic showing the degeneracy of two merging candidate topologies which would pass the $\qopname \relax o{cos}\mymath {\@Oldtheta }\xspace $ cut. The arrows represent reconstructed tracks and $\mymath {\@Oldtheta }\xspace $ is the opening angle measured between the tracks.\relax }}{57}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 6.13}{\ignorespaces Example event display showing how the swing parameters are calculated. Swing is defined as $l^{\textrm {long}}/d^{\textrm {large}}$. The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.\relax }}{58}{figure.caption.38}
+\contentsline {figure}{\numberline {\relax 6.14}{\ignorespaces The number of merging candidates as a function of the swing parameter. The correct matches and incorrect matches are the blue and red histograms respectively.\relax }}{58}{figure.caption.39}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No cuts applied.}}}{58}{subfigure.14.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {For $\qopname \relax o{cos}\mymath {\@Oldtheta }\xspace > 0.82$ and distance ratio $< 0.32$.}}}{58}{subfigure.14.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
