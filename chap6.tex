@@ -11,8 +11,59 @@
 
 \chapter{Selection of neutrino interactions in the ECal}
 \label{chap:NeutrinoInteractionSelection}
-This analysis presents a measurement of the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  To make such a measurement, a sample of neutrino interaction vertices within the ECal must be found.  The selection of events is based on the enhanced reconstruction outlined in chapter~\ref{chap:EnhancedECalReconstruction}.  However, as described in section~\ref{sec:ReconOutput}, the output of the enhanced reconstruction has been kept generic and isn't specifically tailored to this task.  The reconstruction's outputs a set of clusters which contain a set of 3D tracks and every pairwise crossing that said tracks make.  While it is true that in some situations the reconstruction will accurately represent a vertex out of the box, e.g. when only two tracks are reconstructed in the cluster, there will be many situations where extra reconstruction steps are needed before any further selection can take place.  After the final reconstruction steps have been discussed, a full discussion of the neutrino selection follows.
+This analysis presents a measurement of the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  To make such a measurement, a sample of neutrino interaction vertices within the ECal must be found.  The selection of events is based on the enhanced reconstruction outlined in chapter~\ref{chap:EnhancedECalReconstruction}, which was specifically designed to introduce track multiplicity.  As a result of this method, vertices in the ECal are naturally separated into topologies defined by the number of reconstructed tracks.  Any selection development should take advantage of this situation and tailor cuts to be specific to each topology which should result in a higher overall sample purity.  The 3D track matching aspect of the reconstruction was only tuned to handle up to 3 tracks simultaneously.  However, this analysis aims to measure a CC-inclusive cross-section so should not be biased against any neutrino energy range.  Baring this information in mind, the selection should separate out the events into the following topologies:
+\begin{itemize}
+  \item 1 prong topology
+  \item 2 prong topology
+  \item 3 prong topology
+  \item 4+ prong topology
+\end{itemize}
+The definition of a prong is a reconstructed track associated with a reconstructed vertex.
+\newline
+\newline
+However, as described in section~\ref{sec:ReconOutput}, the output of the enhanced reconstruction has been kept generic and is not specifically tailored to this task.  The reconstruction outputs a set of clusters which contain a set of 3D tracks and every pairwise crossing that said tracks make.  While it is true that in some situations the reconstruction will accurately represent a vertex out of the box, e.g. when only two tracks are reconstructed in the cluster, there will be many situations where extra reconstruction steps are needed before any further selection can take place.  So, the structure of this chapter is as follows: the definition of signal is described first along with the sample to develop the selection, followed by a discussion of the vertex reconstruction.  After the final reconstruction steps have been discussed, a full discussion of the neutrino selection follows.
 
+\section{Signal definition}
+\label{sec:SignalDefinition}
+The measurement of this analysis is the CC inclusive interation cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  The active volume of the ECal consists of layers of plastic scintillator and lead absorbers.  Neutrino interactions that occur in the lead aborbers are indistinguisable from those that occur in the plastic scintillator.  Because of this fact, the selection does not attempt to separate the two cases out.  So, the strict signal definition used by this selection  is as follows:
+\begin{itemize}
+  \item Interacting neutrino is $\nu_\mu$ flavour
+  \item Interaction type is charged current
+  \item Interaction occurs within the active volumes of either the barrel ECal or DS ECal
+\end{itemize}
+The active volume is defined by the ROOT geometry used in the simulation.  Specifically, it is a rectangular box which encompases all of the lead and scintillator layers for each ECal module.  Any target element contained within this volume is a signal target.
+
+\section{Monte Carlo sample}
+\label{sec:MonteCarloSample}
+NEUT was used to generate a neutrino beam sample of Monte Carlo which corresponds to $3.949\times10^{20}$ POT.  All of this sample was generated using a simulated beam power of 178 kW which is the average beam power used for Run III.  At this intensity, there are an expected 9.46 neutrino interactions per eight bunch spill in ND280.  So, there will be approximately one interaction per bunch across the entire of ND280 meaning the chance of pileup is small. 
+\newline
+\newline
+The sample above only simulated neutrino interactions within ND280 (including the surrounding magnet).  However, we expect many interactions in the surrounding pit (referred to as sand interactions from now on) to have final states which enter ND280.  So, NEUT was used to generate an additional sample of sand interactions which corresponds to $3.708\times10^{20}$.  There is roughly a 6$\%$ difference in the POT of the beam and sand Monte Carlo.  As the sand Monte Carlo has a sufficiently high level of statistics, scaling the smaller sample to match the larger is acceptable.
+\newline
+\newline
+\begin{table}
+  \begin{tabular}{ l r }
+    ECal module & No. signal events \\ \hline \hline
+    Bottom-right & 223042 \\
+    Side-right & 231955 \\
+    Top-right & 135476 \\
+    Bottom-left & 262500 \\
+    Side-left & 293065 \\
+    Top-left & 140539 \\
+    Downstream & 134100 \\
+    \hline
+    Total & 1420677 \\
+  \end{tabular}
+  \caption{The number of signal events in the Monte Carlo sample separated by ECal module.}
+  \label{table:NSignalEventsTruth}
+\end{table}
+The number of signal interactions from the Monte Carlo sample is shown in table~\ref{table:NSignalEventsTruth}, separated into the ECal module they occurred in.  The number of signal interactions is also shown as a function of neutrino energy for the bottom-left, top-right and DS ECals in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy}.  Clearly, there are an extremely high number of signal events in the sample, which means this analysis is in no way statistically limited.  As an example, consider a selection with a 1$\%$ signal efficiency in the DS ECal.  Assuming $100\%$ selected sample purity, the number of selected events would be 1341 which correspond to a statistical error of 2.73$\%$.  Even in this extreme situation, the statistical error is borderline negligable.  It should be clear that any statistical error is this analysis is approximately $0\%$.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/signal_definition/NSignalEventsNeutrinoEnergy.eps}
+  \caption{The number of signal events as a function of neutrino energy in the bottom-left (red), top-right (blue) and DS (black) ECals.}
+  \label{fig:NSignalEventsTruthNeutrinoEnergy}
+\end{figure}
 \section{Vertex reconstruction}
 \label{sec:VertexReconstruction}
 The output of the enhanced reconstruction already supplies most of the necessary information to reconstruct vertices in the ECal.  As a reminder, the reconstruction outputs a set of ECal clusters which contain the following:
@@ -107,9 +158,9 @@ By applying the same steps for $\partial D/\partial y$ and $\partial D/\partial 
 %    0 & 0 & 0 \end{array} \right)\]
 %  \label{eqn:VertexReconMatrix}
   \begin{pmatrix}
-    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) \\
-    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) \\ 
-    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) & \displaystyle\sum_i [\hat{k} \cross \hat{v}] \cdot (\hat{k} \cross \hat{v}) 
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) \\
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) \\ 
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) 
   \end{pmatrix}
   \begin{pmatrix}
    x \\
@@ -141,10 +192,10 @@ By applying the steps outlined above to every reconstructed ECal cluster, a set 
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/vertex_recon/track_merging_event_display.eps}
-  \caption{Example event display showing a track merging candidate.  The final state $\mu^-$ (in green) curves in a complicated way and is reconstructed as four tracks (in light blue).  The pairwise crossings of the reconstructed tracks are the red squares.  The muon is produced by a charged current interaction in the top left barrel ECal producing two $\pi^+$ (in brown) and the curving $\mu^-$. }
+  \caption{Example event display showing a set of track merging candidates.  The final state $\mu^-$ (in green) curves in a complicated way and is reconstructed as four tracks (in light blue).  The pairwise crossings of the reconstructed tracks are the red squares.  The muon is produced by a charged current interaction in the top left barrel ECal producing two $\pi^+$ (in brown) and the curving $\mu^-$. }
   \label{fig:TrackMergingEventDisplay}
 \end{figure}
-To identify and tune the condtitions for merging tracks, two metrics are used.  The first metric is used for identification of the merging conditions and uses the truth information provided by the geant4 simulation.  For every two track vertex that was formed by the vertex clustering, the simulated particle that produced each of the two constituent tracks was checked.  If the sample particle is matched to both tracks, then the merging candidate is tagged as a correct match, otherwise it is tagged as an incorrect match.  The second metric is used for tuning the identified merging conditions.  As part of this analysis is a search for neutrino intercations using vertex-based reconstruction, there will be an expected loss of signal by track merging which must be minimised.  So, the track merging condition tuning should be based on ECal signal interactions.  As described above, the only tracks that are proposed as merging candidates are those which are constituents of a two track vertex.  So, the track merging tuning attempts to separate signal and background events which are reconstructed as a vertex with two track constituents.  It is preferrable that the merging choses quality over quality so the tuning figure of merit is defined as 
+To identify and tune the condtitions for merging tracks, two metrics are used.  The first metric is used for identification of the merging conditions and uses the truth information provided by the geant4 simulation.  For every two track vertex that was formed by the vertex clustering, the simulated particle that produced each of the two constituent tracks was checked.  If the sample particle is matched to both tracks, then the merging candidate is tagged as a correct match, otherwise it is tagged as an incorrect match.  The second metric is used for tuning the identified merging conditions.  As part of this analysis is a search for neutrino intercations using vertex-based reconstruction, there will be an expected loss of signal by track merging which must be minimised.  So, the track merging condition tuning should be based on ECal signal interactions.  As described above, the only tracks that are proposed as merging candidates are those which are constituents of a two track vertex.  So, the track merging tuning attempts to separate signal and background events which are reconstructed as a vertex with two track constituents.  It is preferrable that the merging chooses quality over quantity so the tuning figure of merit is defined as 
 \begin{equation}
   \phi^{\textrm{merge}} = \epsilon \eta^2
   \label{eqn:TrackMergingTuningMetric}
@@ -176,7 +227,7 @@ The distance ratio distribution is shown Fig.~\ref{fig:TrackMergingConditionDist
   \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.}
   \label{fig:TrackMergingConditionDistanceRatio}
 \end{figure}
-To illustrate this dependency two distributions are shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} which both show the distance ratio vs the cosine of the opening angle.  Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch} only shows the correct matches and Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch} only shows the incorrect matches.  While it is true that there is a pileup of both correct matches and incorrect matches for low values of the distance ratio, the opening angle separates the two catagories out.  Specifically, the correct matches pileup occurs as $\cos\theta \rightarrow 1$ and the incorrect matches pileup occurs as $\cos\theta \rightarrow 0$.  To further illustrate this point, a new distance ratio distribution is shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, but with a $\cos\theta > 0.8$ guess cut applied.  Comparing the distributions shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, the effect of the $\cos\theta$ cut can clearly be seen.  The original pileup of incorrect matches seen in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} is now gone, leaving an essentially flat incorrect matches distribution in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} while leaving the correct matches structure intact.  
+To illustrate this dependency, two distributions are shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} which both show the distance ratio vs the cosine of the opening angle.  Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch} only shows the correct matches and Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch} only shows the incorrect matches.  While it is true that there is a pileup of both correct matches and incorrect matches for low values of the distance ratio, the opening angle separates the two catagories out.  Specifically, the correct matches pileup occurs as $\cos\theta \rightarrow 1$ and the incorrect matches pileup occurs as $\cos\theta \rightarrow 0$.  To further illustrate this point, a new distance ratio distribution is shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, but with a $\cos\theta > 0.8$ guess cut applied.  Comparing the distributions shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, the effect of the $\cos\theta$ cut can clearly be seen.  The original pileup of incorrect matches seen in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} is now gone, leaving an essentially flat incorrect matches distribution in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} while leaving the correct matches structure intact.  
 \begin{figure}
   \centering
   \subfloat[Correct matches only]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
@@ -201,10 +252,10 @@ The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are sho
   \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.}
   \label{fig:TrackMergingMarginalizedDistributions}
 \end{figure}
-The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be as close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
+The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be fairly close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
 \newline
 \newline
-While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shownin Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situtations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specficially, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated are shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the toplogy on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bimodal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
+While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situtations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specficially, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated are shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the toplogy on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bimodal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
 \begin{figure}[!b]
   \centering
   \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
@@ -236,10 +287,6 @@ While the $\cos\theta$ condition is clearly a powerful discriminator, there is a
 \newline
 All of the merging conditions have now been identified and the associated cut values are summarised in table~\ref{table:TrackMergingParameters}.
 
-
-
-
-
 %To identify which merging candidates should actually be matched together, the truth information from the simulation was used.  Specfically, merging candidates which should be matched together are found by checking which particle produced the two tracks.  If a single particle produced both tracks, then the merging candidate is tagged as signal, otherwise it is background.
 
 
@@ -247,7 +294,27 @@ All of the merging conditions have now been identified and the associated cut va
 %Data flags
 
 \section{Monte Carlo selection}
-Make the cuts
+As briefly described at the start of this chapter, the selection separates the reconstructed ECal events into a set of topologies, where each topology is defined by a number of associated prongs.  In addition to this separation, the geometrical differences between the barrel and DS ECals suggest a further event separation.  The DS ECal lies perpendicular to the beam face.  So, particles from neutrino interactions will typically travel at right angles to the DS ECal face.  Conversely, all of the barrel ECals like parallel to the beam axis which means neutrino interaction products will generally pass along the barrel scintillator planes.  This motivates a separate selection for the barrel and DS ECals.  This essentially means that there are eight individual selections to be made and tuned (1,2,3 and 4+ prong topologies in the barrel and 1,2,3 and 4+ prong topologies in the DS ECal).  Clearly, this approach can very quickly become complicated.  To mitigate this, similar discriminators are used for each topology.  As the reconstruction was only tuned for three reconstructed tracks, the 4+ prong topology will use exactly the same cuts as the 3 prong topology.
+\newline
+\newline
+The definition of signal has already been described in section~\ref{sec:SignalDefinition}.  However, how the reconstructed events map to the signal interactions also needs discussion.  The selection takes place at the reconstructed vertex level but there is not a clear 1:1 map of a reconstructed vertex to a signal interaction.  Consider a signal interaction in an ECal module in which the final state particles are involved in one or more secondary interactions.  The most likely outcome of this is the reconstruction of two or more vertices: one for the neutrino interaction and one or more for the secondary interactions.  By interrogating the associated truth information, each vertex will be matched to the same signal neutrino.  It is wholly incorrect to classify each vertex as a reconstruction of a signal event as this will lead to a gross overestimate of the signal rate.  To alleviate this,  a reconstructed vertex is only tagged as coming from a signal interaction if it obeys the following conditions:
+\begin{itemize}
+  \item The reconstructed vertex is matched to a signal interaction
+  \item The reconstructed vertex is the one closest in space to the matched signal interation
+\end{itemize}
+Any reconstructed vertices which pass the first condition but fail the second are tagged as a special case of background events (hereafter referred to as the 'split signal' background).
+\newline
+\newline
+To illustrate the benefit of separating events into specific vertex topologies, Fig.~\ref{fig:ProngStackAll} shows the truth makeup of events seen in the ECal after applying the reconstruction separation.  It is important to note that only the vertex reconstruction and track merging has been applied to the sample at this point.  There is a clear difference in the level of backgrounds seen in each topology e.g. the ECal OOFV background is almost exclusively contained in the one prong topology.  By applying such a separation and then focusing cuts on each topology, the overall event purity should be higher. 
+\begin{figure}
+  \centering
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
+  \caption{The number of reconstructed events in the Monte Carlo sample, separated out into the vertex topologies.  Each event is catagorised by the associated truth information from the simulation.}
+  \label{fig:ProngStackAll}
+\end{figure}
+
+
 
 \section{Properties of events in selection}
 

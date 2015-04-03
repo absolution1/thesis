@@ -46,29 +46,31 @@
 \contentsline {section}{\numberline {4.2}ECal application of the Hough transform}{27}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Modelling the ECal bar}{28}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Parameter space generation}{30}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Parameter space analysis}{31}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}3D track reconstruction}{32}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Track pairwise crossing reconstruction}{36}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.3}Parameter space analysis}{32}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}3D track reconstruction}{33}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Track pairwise crossing reconstruction}{37}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Output of the reconstruction}{37}{section.4.3}
 \contentsline {section}{\numberline {4.4}Validation of the reconstruction}{37}{section.4.4}
 \contentsline {chapter}{\numberline {5}Magnetic field simulation in ND280}{39}{chapter.5}
 \contentsline {section}{\numberline {5.1}Magnetic field model in the ND280 flux return}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Effect of magnetic field on the ECal}{42}{section.5.2}
 \contentsline {chapter}{\numberline {6}Selection of neutrino interactions in the ECal}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Vertex reconstruction}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Monte Carlo selection}{57}{section.6.2}
-\contentsline {section}{\numberline {6.3}Properties of events in selection}{57}{section.6.3}
-\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{59}{chapter.7}
-\contentsline {section}{\numberline {7.1}Flux systematics}{59}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cross-section systematics}{59}{section.7.2}
-\contentsline {section}{\numberline {7.3}Detector systematics}{59}{section.7.3}
-\contentsline {chapter}{\numberline {8}Cross-section measurement}{61}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurement method}{61}{section.8.1}
-\contentsline {section}{\numberline {8.2}Validation of method}{61}{section.8.2}
-\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{61}{section.8.3}
-\contentsline {chapter}{\numberline {9}Discussion and conclusions}{63}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discussion}{63}{section.9.1}
-\contentsline {section}{\numberline {9.2}Conclusions}{63}{section.9.2}
-\contentsline {chapter}{Bibliography}{67}{appendix*.41}
-\contentsline {chapter}{List of Figures}{69}{appendix*.42}
-\contentsline {chapter}{List of Tables}{73}{appendix*.43}
+\contentsline {section}{\numberline {6.1}Signal definition}{46}{section.6.1}
+\contentsline {section}{\numberline {6.2}Monte Carlo sample}{46}{section.6.2}
+\contentsline {section}{\numberline {6.3}Vertex reconstruction}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}Monte Carlo selection}{60}{section.6.4}
+\contentsline {section}{\numberline {6.5}Properties of events in selection}{62}{section.6.5}
+\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}Flux systematics}{65}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cross-section systematics}{65}{section.7.2}
+\contentsline {section}{\numberline {7.3}Detector systematics}{65}{section.7.3}
+\contentsline {chapter}{\numberline {8}Cross-section measurement}{67}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measurement method}{67}{section.8.1}
+\contentsline {section}{\numberline {8.2}Validation of method}{67}{section.8.2}
+\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{67}{section.8.3}
+\contentsline {chapter}{\numberline {9}Discussion and conclusions}{69}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discussion}{69}{section.9.1}
+\contentsline {section}{\numberline {9.2}Conclusions}{69}{section.9.2}
+\contentsline {chapter}{Bibliography}{73}{appendix*.44}
+\contentsline {chapter}{List of Figures}{75}{appendix*.45}
+\contentsline {chapter}{List of Tables}{81}{appendix*.46}
