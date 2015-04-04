@@ -297,6 +297,9 @@ All of the merging conditions have now been identified and the associated cut va
 As briefly described at the start of this chapter, the selection separates the reconstructed ECal events into a set of topologies, where each topology is defined by a number of associated prongs.  In addition to this separation, the geometrical differences between the barrel and DS ECals suggest a further event separation.  The DS ECal lies perpendicular to the beam face.  So, particles from neutrino interactions will typically travel at right angles to the DS ECal face.  Conversely, all of the barrel ECals like parallel to the beam axis which means neutrino interaction products will generally pass along the barrel scintillator planes.  This motivates a separate selection for the barrel and DS ECals.  This essentially means that there are eight individual selections to be made and tuned (1,2,3 and 4+ prong topologies in the barrel and 1,2,3 and 4+ prong topologies in the DS ECal).  Clearly, this approach can very quickly become complicated.  To mitigate this, similar discriminators are used for each topology.  As the reconstruction was only tuned for three reconstructed tracks, the 4+ prong topology will use exactly the same cuts as the 3 prong topology.
 \newline
 \newline
+Care must be taken when defining what a reconstructed vertex is.  For the 2,3 and 4+ prong topologies, it is fairly simple, the reconstructed vertex is as described in section~\ref{sec:VertexReconstruction}, but it is not possible to fit for a vertex position when dealing with a single prong.  In fact, there is actually little that can be done about this.  So, beam kinematics are assumed and the 'vertex' for a single prong is the most upstream end of said prong.
+\newline
+\newline
 The definition of signal has already been described in section~\ref{sec:SignalDefinition}.  However, how the reconstructed events map to the signal interactions also needs discussion.  The selection takes place at the reconstructed vertex level but there is not a clear 1:1 map of a reconstructed vertex to a signal interaction.  Consider a signal interaction in an ECal module in which the final state particles are involved in one or more secondary interactions.  The most likely outcome of this is the reconstruction of two or more vertices: one for the neutrino interaction and one or more for the secondary interactions.  By interrogating the associated truth information, each vertex will be matched to the same signal neutrino.  It is wholly incorrect to classify each vertex as a reconstruction of a signal event as this will lead to a gross overestimate of the signal rate.  To alleviate this,  a reconstructed vertex is only tagged as coming from a signal interaction if it obeys the following conditions:
 \begin{itemize}
   \item The reconstructed vertex is matched to a signal interaction
@@ -313,6 +316,122 @@ To illustrate the benefit of separating events into specific vertex topologies, 
   \caption{The number of reconstructed events in the Monte Carlo sample, separated out into the vertex topologies.  Each event is catagorised by the associated truth information from the simulation.}
   \label{fig:ProngStackAll}
 \end{figure}
+\subsection{Selection cuts}
+\label{subsec:SelectionCuts}
+The enhanced reconstruction was developed with an ECal cross-section analysis in mind.  So, most of complex work should already have been handled by the reconstruction aspect of the analysis.  In addition, the selection method discussed involves separating events into prong topologies and focusing individual selections on each.  These points motivate a simple, cut-based, selection.  Some cuts will inevitably require some tuning and a metric is often useful for this purpose.  As demonstrated in section~\ref{sec:MonteCarloSample}, a high level of stats is seen in each ECal module which means the selection can safely strive for quality over quantity without inflating the final uncertainty.  Baring this in mind, the metric used for tuning for prong topology $i$ is
+\begin{equation}
+  \phi_i^{\textrm{selection}} = \epsilon_i\eta^2_i,
+  \label{eqn:SelectionMetric}
+\end{equation}
+where $\epsilon_i$ and $\eta_i$ are the selection efficiency and purity of prong topology $i$.  Six selection cuts have been identified which will now be discussed. 
+
+\subsubsection{Fiducial volume cut}
+\label{subsubsec:FVCut}
+The first cut, the fiducial volume cut, removes most of the ECal OOFV backgrounds in the Monte Carlo sample.  This is achieved by defining some outer veto region in which occurring vertices are rejected.  There are two items to bare in mind when defining what the fiducial volumes are.  Firstly, the off-axis configuration causes each ECal to be exposed to a different energy and particle rate.  A good example of this was shown in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} which shows a higher event rate, but also a higher peak energy of interactions, in the bottom-left ECal than in the top-right ECal.  So, the optimised fiducial volume of one ECal need not be the same as another ECal module.  Separately to this, Fig.~\ref{fig:ProngStackAll} shows that the ECal OOFV is almost completely contained in the 1 prong topology bin.  This means that a separate fiducial volume definition should be used for the 1 prong topology (it is sufficient for the 2,3 and 4+ prong topologies to use the same fiducial volume definition).
+\newline
+\newline
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/mc_selection/FV_BLB_1Prong_NegY.eps}
+  \caption{$\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.}
+  \label{fig:FVBLB1ProngNegY}
+\end{figure}
+The fiducial volume for a prong toplogy/ECal module is defined in terms of the distance from each face of the module.  So, there are six numbers which define the fiducial volume:  the distance from the $\pm x$,$\pm y$ and $\pm z$ faces of a module.  If the distance of a vertex from each ECal face is further than what the fiducial volume defines, the event passes the cut, otherwise it is rejected.  To tune these values,  each fiducial volume value was systematically increased from 0 mm to 600 mm in mm increments.  At each increment the number of passing/rejected events was recorded and $\phi_i^{\textrm{selection}}$ calculated.  The fiducial volume value which maximises $\phi_i^{\textrm{selection}}$ is accepted as the optimised value.  An example of the variation in $\phi_i^{\textrm{selection}}$ is shown in Fig.~\ref{fig:FVBLB1ProngNegY} which shows $\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.  There is a clear maximum found which shows the process is effective in finding an optimum distance from the ECal face.
+\newline
+\newline
+The found fiducial volumes for each ECal module for the 1 prong topology are shown in table~\ref{table:FV1Prong}.  While all of the ECal face cuts have some discriminatory power, those which cut out according to layer number reject the most background events.  Those cuts are the $\pm y$ cuts for the bottom/top barrel ECals, the $\pm x$ cuts for the side ECals and the $\pm z$ cuts for the DS ECal.  In the barrel ECals, the inner and outer two layers are removed by the fiducial volume cut and in the DS ECal, the inner and outer three layers are removed.
+\begin{table}
+  \begin{tabular}{ c c c c c c c }
+     & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
+    Bottom-right & 36 & 36 & 31 & 29 & 206 & 28 \\
+    Side-right & 31 & 29 & 46 & 44 & 206 & 28 \\
+    Top-right & 39 & 27 & 29 & 31 & 172 & 28 \\
+    Bottom-left & 25 & 50 & 31 & 29 & 205 & 28 \\
+    Side-left & 29 & 31 & 50 & 25 & 207 & 28 \\
+    Top-left & 21 & 34 & 29 & 31 & 207 & 28 \\
+    Downstream & 29 & 29 & 29 & 30 & 41 & 43  \\
+  \end{tabular}
+  \caption{The fiducial volume definitions for each ECal module for the 1 prong topology.}
+  \label{table:FV1Prong}
+\end{table}
+As described above the same fiducial volumes are used for the 2,3 and 4+ prong topologies.  So, to tune the fiducial volume cuts, the topologies are temporarily combined and the combined sample is used to tune the cuts.  Those fiducial volume cuts are shown in table~\ref{table:FV2+Prong}.  There are clear differences between the fiducial volumes shown in table~\ref{table:FV1Prong} and table~\ref{table:FV2+Prong}.  The cuts suggested by the 2,3 and 4+ prong topology tunings are not as strict as those suggested by the 1 prong toplogy.  This should be expected, as ECal OOFV backgrounds reconstructed as 2,3 or 4+ prong vertices will most likely not have their vertex reconstructed near the faces of an ECal module.  The one exception to this is the downstream face of each ECal module.  It is clear from table~\ref{table:FV1Prong}, that the 2,3 and 4+ prong topologies suggest a stricter downstream face cut ($+z$ cut) than the 1 prong topology.  The reason for this strict cut is due to the nature of the neutrino beam.  J-PARC's neutrino beam is (almost) parallel with the $+z$ axis defined by the ND280 coordinate system.  Because of the very forward nature of the beam, any final state particles from ECal neutrino interactions are most likely to travel downstream.  So, any subsequent secondary interactions, which are tagged as background, will also occur downstream.  The $+z$ face cut attempts to remove these.
+\begin{table}
+  \begin{tabular}{ c c c c c c c }
+     & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
+    Bottom-right & 19 & 9 & 16 & 0 & 3 & 39 \\
+    Side-right & 20 & 0 & 6 & 9 & 7 & 65 \\
+    Top-right & 15 & 9 & 4 & 3 & 5 & 38 \\
+    Bottom-left & 11 & 1 & 34 & 0 & 9 & 69 \\
+    Side-left & 1 & 4 & 13 & 1 & 3 & 67 \\
+    Top-left & 11 & 0 & 0 & 7 & 4 & 45 \\
+    Downstream & 13 & 9 & 13 & 4 & 0 & 64  \\
+  \end{tabular}
+  \caption{The fiducial volume definitions for each ECal module for the 2,3 and 4+ prong topologies.}
+  \label{table:FV2+Prong}
+\end{table}
+\subsubsection{Visible energy cut}
+The second cut removes background based on the amount of deposited charge is associated to the constituent prongs. The focus of this cut is to remove particle showers (typically $e^\pm$ and $\gamma$) which have been reconstructed as a vertex.  For the one prong topology, this information is trivial to evaluate: find which scintillator hits are associated to the single prong and sum their respective charge deposit.  The situation is not as clear for a vertex with multiple prongs associated.  The variable chosen in this case is the total charge associated to all of the constituent prongs.  To further increase the power of this variable as a discriminator, the total prong charge is compared to the total number of scintillator hits associated to the prongs.  The aim is to find a 2 dimensional cut which rejects events based on their associated charge and hit information.
+\newline
+\newline
+The signal and background distributions for the 1 prong topology are shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsSignal} and Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsBackground} respectively.  To illuminate the separation power, the background/signal ratio is shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, with the ratio truncated at 2.  By applying the truncation, areas where the background contamination is at least two times as large as the signal population is easily found.  To develop the 2 dimensional cuts, a test line is drawn which appears to roughly cut out the highly contaminated (red) areas in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.  Then, to tune the cut line, the parameters of said line are varied in a grid search.  At each point in the grid, $\phi_i^{\textrm{selection}}$ is recorded.  The maximum value in this grid corresponds to the optimised parameters of the cut line.  As is evident from Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, there are two areas of high background contamination which motivated the development two cut lines which are both overlayed on Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel1ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel1ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black lines portray the cut lines and the attached arrows show which side of the cut is selected.]{\label{fig:Sel1ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for events in the 1 prong topology.}
+\label{fig:Sel1ProngChargeVsProngNHits}
+\end{figure}
+\newline
+\newline
+Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsProngNHits} show similar distributions for the 2 and 3 prong topology in the barrel ECal.  The ratio distributions also have the cut lines overlayed.  An identical process was used to generate and tune the cut lines.  By using a definition for the total number of scintillator hits associated to all constituent prongs in a vertex, $N$, the definition of the cut lines are shown in table~\ref{table:ProngChargeVsProngNHitsCuts}.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel2ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel2ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for events in the 2 prong topology.}
+\label{fig:Sel2ProngChargeVsProngNHits}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel3ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel3ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for events in the 3 prong topology.}
+\label{fig:Sel3ProngChargeVsProngNHits}
+\end{figure}
+\begin{table}
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (MEU) & DS cuts (MEU) \\ \hline \hline
+    1 & $>-4.5N + 75$ & $>-3.4N + 62$ \\
+     &  $<N + 205$ &  \\
+    2 & $>-0.5N + 67$ & $>0.2N + 51$ \\
+    3 & $>0.7N + 103$ & $>-1.1N + 117$ \\
+  \end{tabular}
+  \caption{The definitions of the 2 dimensional cut lines involving the total prong charge and the number of associated scintillator hits. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.}
+  \label{table:ProngChargeVsProngNHitsCuts}
+\end{table}
+
 
 
 

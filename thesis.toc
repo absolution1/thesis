@@ -59,18 +59,21 @@
 \contentsline {section}{\numberline {6.2}Monte Carlo sample}{46}{section.6.2}
 \contentsline {section}{\numberline {6.3}Vertex reconstruction}{48}{section.6.3}
 \contentsline {section}{\numberline {6.4}Monte Carlo selection}{60}{section.6.4}
-\contentsline {section}{\numberline {6.5}Properties of events in selection}{62}{section.6.5}
-\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{65}{chapter.7}
-\contentsline {section}{\numberline {7.1}Flux systematics}{65}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cross-section systematics}{65}{section.7.2}
-\contentsline {section}{\numberline {7.3}Detector systematics}{65}{section.7.3}
-\contentsline {chapter}{\numberline {8}Cross-section measurement}{67}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurement method}{67}{section.8.1}
-\contentsline {section}{\numberline {8.2}Validation of method}{67}{section.8.2}
-\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{67}{section.8.3}
-\contentsline {chapter}{\numberline {9}Discussion and conclusions}{69}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discussion}{69}{section.9.1}
-\contentsline {section}{\numberline {9.2}Conclusions}{69}{section.9.2}
-\contentsline {chapter}{Bibliography}{73}{appendix*.44}
-\contentsline {chapter}{List of Figures}{75}{appendix*.45}
-\contentsline {chapter}{List of Tables}{81}{appendix*.46}
+\contentsline {subsection}{\numberline {6.4.1}Selection cuts}{63}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Fiducial volume cut}{64}{subsubsection.6.4.1.1}
+\contentsline {subsubsection}{\numberline {6.4.1.2}Visible energy cut}{66}{subsubsection.6.4.1.2}
+\contentsline {section}{\numberline {6.5}Properties of events in selection}{70}{section.6.5}
+\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}Flux systematics}{71}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cross-section systematics}{71}{section.7.2}
+\contentsline {section}{\numberline {7.3}Detector systematics}{71}{section.7.3}
+\contentsline {chapter}{\numberline {8}Cross-section measurement}{73}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measurement method}{73}{section.8.1}
+\contentsline {section}{\numberline {8.2}Validation of method}{73}{section.8.2}
+\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{73}{section.8.3}
+\contentsline {chapter}{\numberline {9}Discussion and conclusions}{75}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discussion}{75}{section.9.1}
+\contentsline {section}{\numberline {9.2}Conclusions}{75}{section.9.2}
+\contentsline {chapter}{Bibliography}{79}{appendix*.51}
+\contentsline {chapter}{List of Figures}{81}{appendix*.52}
+\contentsline {chapter}{List of Tables}{87}{appendix*.53}

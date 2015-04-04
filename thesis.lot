@@ -9,6 +9,9 @@
 \contentsline {table}{\numberline {\relax 6.1}{\ignorespaces The number of signal events in the Monte Carlo sample separated by ECal module.\relax }}{47}{table.caption.25}
 \contentsline {table}{\numberline {\relax 6.2}{\ignorespaces Parameters for the vertex reconstruction in the ECal.\relax }}{52}{table.caption.30}
 \contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Cut values for the track merging in the ECal.\relax }}{59}{table.caption.42}
+\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces The fiducial volume definitions for each ECal module for the 1 prong topology.\relax }}{65}{table.caption.45}
+\contentsline {table}{\numberline {\relax 6.5}{\ignorespaces The fiducial volume definitions for each ECal module for the 2,3 and 4+ prong topologies.\relax }}{66}{table.caption.46}
+\contentsline {table}{\numberline {\relax 6.6}{\ignorespaces The definitions of the 2 dimensional cut lines involving the total prong charge and the number of associated scintillator hits. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.\relax }}{68}{table.caption.50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

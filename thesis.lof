@@ -71,6 +71,19 @@
 \contentsline {figure}{\numberline {\relax 6.16}{\ignorespaces The number of reconstructed events in the Monte Carlo sample, separated out into the vertex topologies. Each event is catagorised by the associated truth information from the simulation.\relax }}{63}{figure.caption.43}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{63}{subfigure.16.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{63}{subfigure.16.2}
+\contentsline {figure}{\numberline {\relax 6.17}{\ignorespaces $\mymath {\@Oldphi }\xspace _i^{\textrm {selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.\relax }}{64}{figure.caption.44}
+\contentsline {figure}{\numberline {\relax 6.18}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 1 prong topology.\relax }}{67}{figure.caption.47}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{67}{subfigure.18.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{67}{subfigure.18.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black lines portray the cut lines and the attached arrows show which side of the cut is selected.}}}{67}{subfigure.18.3}
+\contentsline {figure}{\numberline {\relax 6.19}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 2 prong topology.\relax }}{68}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{68}{subfigure.19.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{68}{subfigure.19.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{68}{subfigure.19.3}
+\contentsline {figure}{\numberline {\relax 6.20}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 3 prong topology.\relax }}{69}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{69}{subfigure.20.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{69}{subfigure.20.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{69}{subfigure.20.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
