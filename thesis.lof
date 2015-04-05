@@ -72,18 +72,37 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{63}{subfigure.16.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{63}{subfigure.16.2}
 \contentsline {figure}{\numberline {\relax 6.17}{\ignorespaces $\mymath {\@Oldphi }\xspace _i^{\textrm {selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.\relax }}{64}{figure.caption.44}
-\contentsline {figure}{\numberline {\relax 6.18}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 1 prong topology.\relax }}{67}{figure.caption.47}
+\contentsline {figure}{\numberline {\relax 6.18}{\ignorespaces Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.\relax }}{67}{figure.caption.47}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{67}{subfigure.18.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{67}{subfigure.18.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black lines portray the cut lines and the attached arrows show which side of the cut is selected.}}}{67}{subfigure.18.3}
-\contentsline {figure}{\numberline {\relax 6.19}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 2 prong topology.\relax }}{68}{figure.caption.48}
+\contentsline {figure}{\numberline {\relax 6.19}{\ignorespaces Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.\relax }}{68}{figure.caption.48}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{68}{subfigure.19.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{68}{subfigure.19.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{68}{subfigure.19.3}
-\contentsline {figure}{\numberline {\relax 6.20}{\ignorespaces Total prong charge vs the number of prong scintillators hits for events in the 3 prong topology.\relax }}{69}{figure.caption.49}
+\contentsline {figure}{\numberline {\relax 6.20}{\ignorespaces Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.\relax }}{69}{figure.caption.49}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{69}{subfigure.20.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{69}{subfigure.20.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{69}{subfigure.20.3}
+\contentsline {figure}{\numberline {\relax 6.21}{\ignorespaces $\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.\relax }}{71}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{71}{subfigure.21.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{71}{subfigure.21.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{71}{subfigure.21.3}
+\contentsline {figure}{\numberline {\relax 6.22}{\ignorespaces $\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.\relax }}{72}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{72}{subfigure.22.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{72}{subfigure.22.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{72}{subfigure.22.3}
+\contentsline {figure}{\numberline {\relax 6.23}{\ignorespaces $\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.\relax }}{73}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Signal events only.}}}{73}{subfigure.23.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Background events only.}}}{73}{subfigure.23.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Background/Signal ratio, truncated at 2. The black line portrays the cut line and the attached arrow shows which side of the cut is selected.}}}{73}{subfigure.23.3}
+\contentsline {figure}{\numberline {\relax 6.24}{\ignorespaces The opening angle subtended by the constituents prongs for the 2 prong topology. Signal and background events are the blue and red histograms respectively.\relax }}{74}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{74}{subfigure.24.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECals.}}}{74}{subfigure.24.2}
+\contentsline {figure}{\numberline {\relax 6.25}{\ignorespaces $\mymath {\@Oldphi }\xspace _2^{\textrm {selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.\relax }}{75}{figure.caption.56}
+\contentsline {figure}{\numberline {\relax 6.26}{\ignorespaces The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology. Signal and background events are the blue and red histograms respectively.\relax }}{76}{figure.caption.57}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{76}{subfigure.26.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECals.}}}{76}{subfigure.26.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

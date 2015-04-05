@@ -370,10 +370,11 @@ As described above the same fiducial volumes are used for the 2,3 and 4+ prong t
   \label{table:FV2+Prong}
 \end{table}
 \subsubsection{Visible energy cut}
+\label{subsubsec:VisibleEnergyCut}
 The second cut removes background based on the amount of deposited charge is associated to the constituent prongs. The focus of this cut is to remove particle showers (typically $e^\pm$ and $\gamma$) which have been reconstructed as a vertex.  For the one prong topology, this information is trivial to evaluate: find which scintillator hits are associated to the single prong and sum their respective charge deposit.  The situation is not as clear for a vertex with multiple prongs associated.  The variable chosen in this case is the total charge associated to all of the constituent prongs.  To further increase the power of this variable as a discriminator, the total prong charge is compared to the total number of scintillator hits associated to the prongs.  The aim is to find a 2 dimensional cut which rejects events based on their associated charge and hit information.
 \newline
 \newline
-The signal and background distributions for the 1 prong topology are shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsSignal} and Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsBackground} respectively.  To illuminate the separation power, the background/signal ratio is shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, with the ratio truncated at 2.  By applying the truncation, areas where the background contamination is at least two times as large as the signal population is easily found.  To develop the 2 dimensional cuts, a test line is drawn which appears to roughly cut out the highly contaminated (red) areas in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.  Then, to tune the cut line, the parameters of said line are varied in a grid search.  At each point in the grid, $\phi_i^{\textrm{selection}}$ is recorded.  The maximum value in this grid corresponds to the optimised parameters of the cut line.  As is evident from Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, there are two areas of high background contamination which motivated the development two cut lines which are both overlayed on Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.
+The signal and background distributions for the barrel ECal, 1 prong topology are shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsSignal} and Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsBackground} respectively.  To illuminate the separation power, the background/signal ratio is shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, with the ratio truncated at 2.  By applying the truncation, areas where the background contamination is at least two times as large as the signal population is easily found.  To develop the 2 dimensional cuts, a test line is drawn which appears to roughly cut out the highly contaminated (red) areas in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.  Then, to tune the cut line, the parameters of said line are varied in a grid search.  At each point in the grid, $\phi_i^{\textrm{selection}}$ is recorded.  The maximum value in this grid corresponds to the optimised parameters of the cut line.  As is evident from Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, there are two areas of high background contamination which motivated the development two cut lines which are both overlayed on Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
@@ -385,7 +386,7 @@ The signal and background distributions for the 1 prong topology are shown in Fi
 \end{minipage}\par\medskip
 \centering
 \subfloat[Background/Signal ratio, truncated at 2.  The black lines portray the cut lines and the attached arrows show which side of the cut is selected.]{\label{fig:Sel1ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps}}
-\caption{Total prong charge vs the number of prong scintillators hits for events in the 1 prong topology.}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.}
 \label{fig:Sel1ProngChargeVsProngNHits}
 \end{figure}
 \newline
@@ -402,7 +403,7 @@ Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsPr
 \end{minipage}\par\medskip
 \centering
 \subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps}}
-\caption{Total prong charge vs the number of prong scintillators hits for events in the 2 prong topology.}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.}
 \label{fig:Sel2ProngChargeVsProngNHits}
 \end{figure}
 
@@ -417,7 +418,7 @@ Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsPr
 \end{minipage}\par\medskip
 \centering
 \subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps}}
-\caption{Total prong charge vs the number of prong scintillators hits for events in the 3 prong topology.}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.}
 \label{fig:Sel3ProngChargeVsProngNHits}
 \end{figure}
 \begin{table}
@@ -430,6 +431,110 @@ Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsPr
   \end{tabular}
   \caption{The definitions of the 2 dimensional cut lines involving the total prong charge and the number of associated scintillator hits. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.}
   \label{table:ProngChargeVsProngNHitsCuts}
+\end{table}
+\subsubsection{Unused hits cut}
+\label{subsubsec:UnusedHitsCuts}
+The output of the enhanced reconstruction is a set of reconstructed clusters.  Within those clusters are a set of tracks and their pairwise crossings which are used to recontruct the ECal vertices used by this analysis.  The clusters which contain the tracks and crossing can also be utilised as a discriminator.  Particle showers should generally produce a lot of hits and those hits are not necessarily arranged in a linear fashion  So, the third cut implemented assesses how many hits are associated with a cluster but not associated with the vertex.  The vertex is defined by its prong constituents so this is really a measure of how many scintillators hits were not associated with the reconstructed prongs.  By defining the number of hits in the cluster as $N^{\textrm{Cluster}}$ and the number of hits associated with the $i^{\textrm{th}}$ constituent prong as $N^{\textrm{prong}}_i$, the discriminator is
+\begin{equation}
+  \Delta N = N^{\textrm{cluster}} - \sum_i N^{\textrm{prong}}_i.
+  \label{eqn:DeltaNHits}
+\end{equation}
+The cut value really should depend on how many hits are associated to the constituent prongs.  So, as was done in section~\ref{subsubsec:VisibleEnergyCut}, the $\Delta N$ cut should be 2 dimensional.  Specifically, the $\Delta N$ cut should depend on the number of scintillator hits associated to the constituent prongs.
+\newline
+\newline
+So, an identical approach is used to define and tune the cut lines as was used in section~\ref{subsubsec:VisibleEnergyCut}.  The signal, background and background/signal ratio distributions for the 1, 2 and 3 prong topologies in the barrel ECal are shown in Fig.~\ref{fig:Sel1DeltaNHitsVsProngNHits}, Fig.~\ref{fig:Sel2DeltaNHitsVsProngNHits} and Fig.~\ref{fig:Sel3DeltaNHitsVsProngNHits} respectively.  The layout of the figures is the same as was shown for the visible energy cut.  In a similar manner to table~\ref{table:ProngChargeVsProngNHitsCuts}, the $\Delta N$ cut definitions are shown in table
+\begin{table}
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (no units) & DS cuts (no units) \\ \hline \hline
+    1 & $<-0.2N + 16$ & $<1.2N + 3$ \\
+    2 & $<1.5N - 16$ & $<0.7N - 4$ \\
+    3 & $<1.7N + 7$ & $<0.8N + 1$ \\
+  \end{tabular}
+  \caption{The definitions of the 2 dimensional cut lines involving $\Delta N$ and the number of scintillator hits associated with the constituent prongs. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.}
+  \label{table:DeltaNHitsVsProngNHitsCuts}
+\end{table}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel1DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.}
+\label{fig:Sel1DeltaNHitsVsProngNHits}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.}
+\label{fig:Sel2DeltaNHitsVsProngNHits}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.}
+\label{fig:Sel3DeltaNHitsVsProngNHits}
+\end{figure}
+
+\subsubsection{Opening angle}
+\label{subsubsec:OpeningAngle}
+Despite the best efforts of the track merging, not all curving trajectories have reconstructed tracks which are successfully merged.  So, there will be an inherent ECal OOFV contamination of the 2,3 and 4+ prong topologies where the reconstruction has failed.  While future iterations of the analysis should revisit the reconstruction to combat this, it is sufficient to cut these background events out in the selection.  As was described in section~\ref{sec:VertexReconstruction}, a key signiture of a curving trajectory is two prongs with a small opening angle.  This means that the opening angle can be used as a cut to remove such background events.  To define an opening angle, at least two tracks are required so, unfortunately, such a method can not be implemented for the 1 prong topology.
+\newline
+\newline
+\begin{figure}%
+  \centering
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
+  \subfloat[DS ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
+  \caption{The opening angle subtended by the constituents prongs for the 2 prong topology.  Signal and background events are the blue and red histograms respectively.}
+  \label{fig:Sel2OpeningAngle}
+\end{figure}
+The signal and background separation provided by the subtended opening angle for the 2 prong topology is shown in Fig.~\ref{fig:Sel2OpeningAngle}.  While the barrel ECal sees more separation power in the opening angle, it should be clear from Fig.~\ref{fig:Sel2OpeningAngleBarrel} and Fig.~\ref{fig:Sel2OpeningAngleDS} that events should only be selected if their opening angle is bigger than some threshold.  To find this threshold, a test cut was systematically varied between 0$^\circ$ and 90$^\circ$ in 1$^\circ$ increments.  At each increment, the number of events with an opening angle larger than the test cut was recorded and $\phi_2^{\textrm{selection}}$ subsequently calculated.  An example of the variation in $\phi_2^{\textrm{selection}}$ is shown in Fig.~\ref{fig:Sel2OpeningAngleBarrelFOM} for the barrel ECal.  A maximum in $\phi_2^{\textrm{selection}}$ is clearly found which shows that the opening angle is a good discriminator and that the method works.  By applying this method to 2 prong events, events are only selected if the subtended opening angle is greater than 34$^\circ$ for the barrel ECal or greater than 21$^\circ$ for the DS ECal.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel.eps}
+  \caption{$\phi_2^{\textrm{selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.}
+  \label{fig:Sel2OpeningAngleBarrelFOM}
+\end{figure}
+Similar information should be available for the higher prong topologies.  However it is not as trivial to define an opening angle in such situations.  The chosen variable in for the 3 prong topology is the summed opening angle for every pairwise combination of the constituent prongs.  The signal and background separation for this summed opening angle is shown in Fig.~\ref{fig:Sel3OpeningAngleDS}.  The cut development process used here was indentical to the one used for the 2 prong topology.  The study suggested that events should only be selected if their summed opening angle is greater than 81$^\circ$ for the barrel ECal and 49$^\circ$ for the DS ECal. 
+\begin{figure}%
+  \centering
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
+  \subfloat[DS ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
+  \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
+  \label{fig:Sel3OpeningAngle}
+\end{figure}
+The cuts found by this study are summarised in table
+\begin{table}
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (degrees) & DS cuts (degrees) \\ \hline \hline
+    2 & $>34$ & $>21$ \\
+    3 & $>81$ & $>49$ \\
+  \end{tabular}
+  \caption{The definitions of the opening angle cuts.}
+  \label{table:SelOpeningAngle}
 \end{table}
 
 
