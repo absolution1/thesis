@@ -102,7 +102,37 @@
 \contentsline {figure}{\numberline {\relax 6.25}{\ignorespaces $\mymath {\@Oldphi }\xspace _2^{\textrm {selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.\relax }}{75}{figure.caption.56}
 \contentsline {figure}{\numberline {\relax 6.26}{\ignorespaces The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology. Signal and background events are the blue and red histograms respectively.\relax }}{76}{figure.caption.57}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{76}{subfigure.26.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECals.}}}{76}{subfigure.26.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{76}{subfigure.26.2}
+\contentsline {figure}{\numberline {\relax 6.27}{\ignorespaces Event survival as a function of the cuts for all topologies in the barrel ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{78}{figure.caption.59}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{78}{subfigure.27.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{78}{subfigure.27.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{78}{subfigure.27.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{78}{subfigure.27.4}
+\contentsline {figure}{\numberline {\relax 6.28}{\ignorespaces Event survival as a function of the cuts for all topologies in the DS ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{79}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{79}{subfigure.28.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{79}{subfigure.28.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{79}{subfigure.28.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{79}{subfigure.28.4}
+\contentsline {figure}{\numberline {\relax 6.29}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the barrel ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{81}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{81}{subfigure.29.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{81}{subfigure.29.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{81}{subfigure.29.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{81}{subfigure.29.4}
+\contentsline {figure}{\numberline {\relax 6.30}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{82}{figure.caption.62}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{82}{subfigure.30.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{82}{subfigure.30.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{82}{subfigure.30.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{82}{subfigure.30.4}
+\contentsline {figure}{\numberline {\relax 6.31}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the Barrel ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{83}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{83}{subfigure.31.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{83}{subfigure.31.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{83}{subfigure.31.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{83}{subfigure.31.4}
+\contentsline {figure}{\numberline {\relax 6.32}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{84}{figure.caption.64}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{84}{subfigure.32.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{84}{subfigure.32.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{84}{subfigure.32.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{84}{subfigure.32.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

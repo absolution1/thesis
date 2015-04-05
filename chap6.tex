@@ -522,7 +522,7 @@ Similar information should be available for the higher prong topologies.  Howeve
 \begin{figure}%
   \centering
   \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
-  \subfloat[DS ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
   \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel3OpeningAngle}
 \end{figure}
@@ -536,6 +536,144 @@ The cuts found by this study are summarised in table
   \caption{The definitions of the opening angle cuts.}
   \label{table:SelOpeningAngle}
 \end{table}
+\subsubsection{Entering background cut}
+\label{subsubsec:EnteringBackgroundCut}
+The fifth cut, simply called the 'entering background' cut, uses the prong multiplicity aspect of a vertex to reject events that enter the ECal and then mimic a signal vertex.  The cut requires at least two constituent prongs to work, so the 1 prong topology is unaffected by this.  The idea is fairly simple, for each vertex, check if any of the prongs have an end which is upstream of the reconstructed vertex position.  If so, it may be an entering background and could need rejecting.  The position of the upstream prong end is key, as the cut should not reject every event which has an apparent backwards going track.  So, the cut checks whether the upstream prong end is outside of the host ECal fiducial volume.  As described in section~\ref{subsubsec:FVCut}, each ECal module uses two fiducial volumes.  The 2+ prong fiducial volume would be of little use in this situation as the only strict face definition is for the downstream end of each ECal module.  This motivates the use of the 1 prong fiducial volume for this cut.  This cut is physically motivated and relies on parameters which have already been tuned.  So, this cut requires no tuning to operate.
+
+\subsubsection{Most upstream vertex}
+\label{subsubsec:MostUpstreamCut}
+The sixth, and final, cut implemented is motivated by the beam kinematics.  As discussed in section~\ref{sec:MonteCarloSample}, the expected pileup per beam bunch is small.  As the reconstruction outputs events in buckets, the same philosophy can be used here: there should only be one signal events per bucket.  The assumption used for this cut is any secondary interactions are likely to happen downstream of the interaction.  So, the cut selects the most upstream remaining vertex in the beam bucket.  As with the 'entering background' cut, the selection of the most upstream vertex requires no tuning to operate.
+
+\subsection{Performance of selection}
+\label{subsec:SelectionPerformance}
+Now that the cuts have been identified, their performance can be assessed.  To do this, the Monte Carlo sample was processed through the selection and the event composition assessed at each stage.  As each cut was focused on a specific topology, it is important to check the effect of the cuts on each topology.  The first check it to see the event survival as a function of the cuts for each topology.  These checks are shown in Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} for the barrel and DS ECals respectively.  Each bin in both figures shows how many events survive after the cut has been supplied.  For example, the FV bin in all of the figures shows how many events remain after applying the fiducial volume cut.  As the 'most upstream' cut is the final cut in the selection, the final bin shows how many events remain after the full selection has been applied.  The main piece of information shown is that the backgrounds are being rejected at a much higher rate than the signal, resulting in a sample that is mostly signal.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{Event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEventSurvivalBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{Event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEventSurvivalDS}
+\end{figure}
+\newline
+\newline
+While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} shows that the cuts are successfully rejecting background while retaining signal, it is not clear what particle species are rejected.  It is important to check this so that the developed selection is understood.  The background type which is rejected at the highest rate is the ECal OOFV background so it is sufficient to study the particle composition of this to understand the selection's ability to reject particles.  The particle type is defined by looking at which simulated particles contributed to the ECal cluster as whole.  The particle which deposited the highest amount of energy is accepted as the one which created the ECal cluster.  The ECal OOFV event survival as a function of the cuts is shown in Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} for the barrel and DS ECal respectively.  For each prong topology, the ECal OOFV events are separated into the main particle types which constitute the ECal OOFV background.  It is clear that the cuts are rejecting the particle species that one would expect them to reject.  For example, the fiducial volume cut in the 1 prong topology almost exclusively rejects entering MIPs.  The visible energy and $\Delta N$ cuts worth together as an effective particle shower tagger to reject $e^\pm$ and $\gamma$ particles.  The opening angle and entering background cuts work as an additional MIP rejectory in cases where the track merging was unsuccessful.  The composition of the ECal OOFV background has interesting features, regardless of the cuts applied.  Specifically, the particle species varies to a great degree between each prong topology.  For example, the 1 prong and 2 prong topologies in the barrel ECals (Fig.~\ref{fig:Sel1OOFVEventSurvivalBarrel} and Fig.~\ref{fig:Sel2OOFVEventSurvivalBarrel}) see a muon dominated ECal OOFV background.  Whereas, the 3 prong and 4+ prong topologies see a very different background which is $\pi^\pm$ dominated.  The natural separation provided by the topologies should allow investigation of a specific particle species if required by any future analyser.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelOOFVEventSurvivalBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelOOFVEventSurvivalDS}
+\end{figure}
+\newline
+\newline
+BLAH BLAH BLAh SELECTION STATS
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the Barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEffPurCutLevelBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEffPurCutLevelDS}
+\end{figure}
+
 
 
 
