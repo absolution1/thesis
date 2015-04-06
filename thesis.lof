@@ -68,7 +68,7 @@
 \contentsline {figure}{\numberline {\relax 6.15}{\ignorespaces The number of merging candidates as a function of the swing parameter. The correct matches and incorrect matches are the blue and red histograms respectively.\relax }}{61}{figure.caption.41}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No cuts applied.}}}{61}{subfigure.15.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {For $\qopname \relax o{cos}\mymath {\@Oldtheta }\xspace > 0.82$ and distance ratio $< 0.32$.}}}{61}{subfigure.15.2}
-\contentsline {figure}{\numberline {\relax 6.16}{\ignorespaces The number of reconstructed events in the Monte Carlo sample, separated out into the vertex topologies. Each event is catagorised by the associated truth information from the simulation.\relax }}{63}{figure.caption.43}
+\contentsline {figure}{\numberline {\relax 6.16}{\ignorespaces The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies. Each event is catagorised by the associated truth information from the simulation.\relax }}{63}{figure.caption.43}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{63}{subfigure.16.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{63}{subfigure.16.2}
 \contentsline {figure}{\numberline {\relax 6.17}{\ignorespaces $\mymath {\@Oldphi }\xspace _i^{\textrm {selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.\relax }}{64}{figure.caption.44}
@@ -123,16 +123,32 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{82}{subfigure.30.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{82}{subfigure.30.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{82}{subfigure.30.4}
-\contentsline {figure}{\numberline {\relax 6.31}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the Barrel ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{83}{figure.caption.63}
+\contentsline {figure}{\numberline {\relax 6.31}{\ignorespaces The selection efficiency (black) and purity (red) as a function of the cuts in the barrel ECal. Each bin refers to the efficiency and purity after a cut has been applied.\relax }}{83}{figure.caption.63}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{83}{subfigure.31.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{83}{subfigure.31.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{83}{subfigure.31.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{83}{subfigure.31.4}
-\contentsline {figure}{\numberline {\relax 6.32}{\ignorespaces ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal. Each bin refers to the number of events after a cut has been applied.\relax }}{84}{figure.caption.64}
+\contentsline {figure}{\numberline {\relax 6.32}{\ignorespaces The selection efficiency (black) and purity (red) as a function of the cuts in the DS ECal. Each bin refers to the efficiency and purity after a cut has been applied.\relax }}{84}{figure.caption.64}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{84}{subfigure.32.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{84}{subfigure.32.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{84}{subfigure.32.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{84}{subfigure.32.4}
+\contentsline {figure}{\numberline {\relax 6.33}{\ignorespaces $\mymath {\@Oldphi }\xspace ^{\textrm {selection}}$ as a function of the cuts in the barrel ECal. Each bin refers to the value of $\mymath {\@Oldphi }\xspace ^{\textrm {selection}}$ after a cut has been applied.\relax }}{85}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{85}{subfigure.33.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{85}{subfigure.33.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{85}{subfigure.33.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{85}{subfigure.33.4}
+\contentsline {figure}{\numberline {\relax 6.34}{\ignorespaces $\mymath {\@Oldphi }\xspace ^{\textrm {selection}}$ as a function of the cuts in the DS ECal. Each bin refers to the value of $\mymath {\@Oldphi }\xspace ^{\textrm {selection}}$ after a cut has been applied.\relax }}{86}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 prong topology.}}}{86}{subfigure.34.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 prong topology.}}}{86}{subfigure.34.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 prong topology.}}}{86}{subfigure.34.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {4+ prong topology.}}}{86}{subfigure.34.4}
+\contentsline {figure}{\numberline {\relax 6.35}{\ignorespaces The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.\relax }}{87}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{87}{subfigure.35.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{87}{subfigure.35.2}
+\contentsline {figure}{\numberline {\relax 6.36}{\ignorespaces The number of selected events in the Monte Carlo sample, separated out into the prong topologies. Each event is catagorised by the associated truth information from the simulation.\relax }}{88}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{88}{subfigure.36.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{88}{subfigure.36.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -67,18 +67,17 @@
 \contentsline {subsubsection}{\numberline {6.4.1.5}Entering background cut}{76}{subsubsection.6.4.1.5}
 \contentsline {subsubsection}{\numberline {6.4.1.6}Most upstream vertex}{77}{subsubsection.6.4.1.6}
 \contentsline {subsection}{\numberline {6.4.2}Performance of selection}{77}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Properties of events in selection}{80}{section.6.5}
-\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{85}{chapter.7}
-\contentsline {section}{\numberline {7.1}Flux systematics}{85}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cross-section systematics}{85}{section.7.2}
-\contentsline {section}{\numberline {7.3}Detector systematics}{85}{section.7.3}
-\contentsline {chapter}{\numberline {8}Cross-section measurement}{87}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurement method}{87}{section.8.1}
-\contentsline {section}{\numberline {8.2}Validation of method}{87}{section.8.2}
-\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{87}{section.8.3}
-\contentsline {chapter}{\numberline {9}Discussion and conclusions}{89}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discussion}{89}{section.9.1}
-\contentsline {section}{\numberline {9.2}Conclusions}{89}{section.9.2}
-\contentsline {chapter}{Bibliography}{93}{appendix*.65}
-\contentsline {chapter}{List of Figures}{95}{appendix*.66}
-\contentsline {chapter}{List of Tables}{101}{appendix*.67}
+\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{91}{chapter.7}
+\contentsline {section}{\numberline {7.1}Flux systematics}{91}{section.7.1}
+\contentsline {section}{\numberline {7.2}Cross-section systematics}{91}{section.7.2}
+\contentsline {section}{\numberline {7.3}Detector systematics}{91}{section.7.3}
+\contentsline {chapter}{\numberline {8}Cross-section measurement}{93}{chapter.8}
+\contentsline {section}{\numberline {8.1}Measurement method}{93}{section.8.1}
+\contentsline {section}{\numberline {8.2}Validation of method}{93}{section.8.2}
+\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{93}{section.8.3}
+\contentsline {chapter}{\numberline {9}Discussion and conclusions}{95}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discussion}{95}{section.9.1}
+\contentsline {section}{\numberline {9.2}Conclusions}{95}{section.9.2}
+\contentsline {chapter}{Bibliography}{99}{appendix*.72}
+\contentsline {chapter}{List of Figures}{101}{appendix*.73}
+\contentsline {chapter}{List of Tables}{107}{appendix*.74}
