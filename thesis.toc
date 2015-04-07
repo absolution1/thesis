@@ -67,17 +67,16 @@
 \contentsline {subsubsection}{\numberline {6.4.1.5}Entering background cut}{76}{subsubsection.6.4.1.5}
 \contentsline {subsubsection}{\numberline {6.4.1.6}Most upstream vertex}{77}{subsubsection.6.4.1.6}
 \contentsline {subsection}{\numberline {6.4.2}Performance of selection}{77}{subsection.6.4.2}
-\contentsline {chapter}{\numberline {7}Evaluation of systematic uncertainties}{91}{chapter.7}
-\contentsline {section}{\numberline {7.1}Flux systematics}{91}{section.7.1}
-\contentsline {section}{\numberline {7.2}Cross-section systematics}{91}{section.7.2}
-\contentsline {section}{\numberline {7.3}Detector systematics}{91}{section.7.3}
-\contentsline {chapter}{\numberline {8}Cross-section measurement}{93}{chapter.8}
-\contentsline {section}{\numberline {8.1}Measurement method}{93}{section.8.1}
-\contentsline {section}{\numberline {8.2}Validation of method}{93}{section.8.2}
-\contentsline {section}{\numberline {8.3}Applying the fit to ND280 data}{93}{section.8.3}
-\contentsline {chapter}{\numberline {9}Discussion and conclusions}{95}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discussion}{95}{section.9.1}
-\contentsline {section}{\numberline {9.2}Conclusions}{95}{section.9.2}
-\contentsline {chapter}{Bibliography}{99}{appendix*.72}
-\contentsline {chapter}{List of Figures}{101}{appendix*.73}
-\contentsline {chapter}{List of Tables}{107}{appendix*.74}
+\contentsline {chapter}{\numberline {7}Measurement of the $\mymath {\@Oldnu }\xspace _\mymath {\@Oldmu }\xspace $ charged current inclusive cross-section on Pb}{91}{chapter.7}
+\contentsline {section}{\numberline {7.1}Measurement method}{91}{section.7.1}
+\contentsline {section}{\numberline {7.2}Input samples to the fit}{92}{section.7.2}
+\contentsline {section}{\numberline {7.3}The ECal rate fit}{94}{section.7.3}
+\contentsline {section}{\numberline {7.4}Systematic uncertainties}{96}{section.7.4}
+\contentsline {section}{\numberline {7.5}Validation of method}{96}{section.7.5}
+\contentsline {section}{\numberline {7.6}Applying the fit to ND280 data}{96}{section.7.6}
+\contentsline {chapter}{\numberline {8}Discussion and conclusions}{97}{chapter.8}
+\contentsline {section}{\numberline {8.1}Discussion}{97}{section.8.1}
+\contentsline {section}{\numberline {8.2}Conclusions}{97}{section.8.2}
+\contentsline {chapter}{Bibliography}{101}{appendix*.74}
+\contentsline {chapter}{List of Figures}{103}{appendix*.75}
+\contentsline {chapter}{List of Tables}{109}{appendix*.76}

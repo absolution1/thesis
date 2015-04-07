@@ -150,5 +150,8 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Barrel ECals.}}}{88}{subfigure.36.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {DS ECal.}}}{88}{subfigure.36.2}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces The neutrino energy of events seen in the bottom-left ECal module broken down by the neutrino interaction mode.\relax }}{93}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Selected sample.}}}{93}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reverse sample.}}}{93}{subfigure.1.2}
+\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.\relax }}{95}{figure.caption.73}
 \addvspace {10\p@ }
