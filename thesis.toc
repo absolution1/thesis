@@ -72,11 +72,12 @@
 \contentsline {section}{\numberline {7.2}Input samples to the fit}{92}{section.7.2}
 \contentsline {section}{\numberline {7.3}The ECal rate fit}{94}{section.7.3}
 \contentsline {section}{\numberline {7.4}Systematic uncertainties}{96}{section.7.4}
-\contentsline {section}{\numberline {7.5}Validation of method}{96}{section.7.5}
-\contentsline {section}{\numberline {7.6}Applying the fit to ND280 data}{96}{section.7.6}
-\contentsline {chapter}{\numberline {8}Discussion and conclusions}{97}{chapter.8}
-\contentsline {section}{\numberline {8.1}Discussion}{97}{section.8.1}
-\contentsline {section}{\numberline {8.2}Conclusions}{97}{section.8.2}
-\contentsline {chapter}{Bibliography}{101}{appendix*.74}
-\contentsline {chapter}{List of Figures}{103}{appendix*.75}
-\contentsline {chapter}{List of Tables}{109}{appendix*.76}
+\contentsline {subsection}{\numberline {7.4.1}Flux systematic evaluation}{97}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Validation of method}{99}{section.7.5}
+\contentsline {section}{\numberline {7.6}Applying the fit to ND280 data}{99}{section.7.6}
+\contentsline {chapter}{\numberline {8}Discussion and conclusions}{101}{chapter.8}
+\contentsline {section}{\numberline {8.1}Discussion}{101}{section.8.1}
+\contentsline {section}{\numberline {8.2}Conclusions}{101}{section.8.2}
+\contentsline {chapter}{Bibliography}{105}{appendix*.75}
+\contentsline {chapter}{List of Figures}{107}{appendix*.76}
+\contentsline {chapter}{List of Tables}{113}{appendix*.77}

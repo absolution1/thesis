@@ -83,6 +83,49 @@ The underlying fit machinery uses the Minuit2 algorithm provided by the ROOT TFi
 
 \section{Systematic uncertainties}
 \label{sec:SystematicUncertainties}
+The $\chi^2$ definition shown in equation~\ref{eqn:Chi2Def} allows for systematic uncertainties to be directly included in the fit.  As the systematic uncertainty implementation takes the form of a covariance matrix for the input samples, a good understanding of not only the systematic uncertainties, but how the samples correlate with one another is needed.  
+\newline
+\newline
+As stated above, there are 12 input samples so the covariance matrix will be a 12$\times$12 symmetric matrix.  While it may be obvious that the contents of the matrix will be the covariances of each input sample, it may not be immediately clear what type of covariances are needed.  As described in section~\ref{sec:ECalRateFit}, the algorithm attempts to fit a set of predictions, separated into templates, to a set of measured data samples simultaneously.  The variation comes from the normalisations assigned to each template.  This means that the overall normilsation of the Monte Carlo prediction is free to vary without prior constraint and so it is the shape information between the prediction and data that constrains the parameters.  Therefore the covariance matrix used in the fit should only contain uncertainties which account for the differences in the shape of the samples which the systematic sources introduce.
+\newline
+\newline
+The ND280 event simulation is essentially broken down into three areas: Simulation of the neutrino flux, simulation of the neutrino interactions and simulation of the detector response.  No matter how complicated a simulation can become, it is unlikely to ever simulate reality with $100\%$ accuracy.  The differences between what is simulated (be it flux, interaction or detector) and what happens in nature causes a systematic difference to be seen between collected data and Monte Carlo which must be accounted for.  As the simulation can be broken down into three key areas, the systematic assessment can be broken down into the same key areas, each of which are presented.  The actual assessment of a systematic uncertainty can be broken down into two areas: identifaction of a systematic error source and the propagation of that systematic error source through the analysis.  The identification stage is typically handled by a respective working group or by an analyser with external sources (e.g. control samples).  The propagation of the systematic error source has no strict recipe but it typically involves variation of the identified systematic uncertainty and then either a reweighting of events is applied or the analysis chain is re-run.  The systematic treatment used in this analysis uses a mixture of the above.
+\newline
+\newline
+To propagate the systematic uncertainty effect, a Monte Carlo sample akin to the prediction sample set used in the fit is required.  So, a $2.5\times10^{19}$ POT sub sample of beam and sand Monte Carlo is used for this purpose.  All sample systematic covariance matrices are presented as fractional covariance matrices between each of the different detector samples.  For the barrel samples, the selected samples are labelled by their respective module name and the reverse barrel samples (background enriched samples) are labelled with their module name and 'reverse'.  The assessment of each systematic source is presented individually, resulting in a fractional covariance matrix for that source.  The final systematic covariance matrix is then found by summing all of the individual covariance matrices.
+\subsection{Flux systematic evaluation}
+\label{subsec:FluxSystematic}
+The neutrino flux is one of the core components of the ND280 event simulation and any uncertainties associated with the flux have a direct impact on the measured ND280 event rate.  The associated flux uncertainties can be broken down into four catagories:
+\begin{itemize}
+  \item Properties of the proton beam such as profile and alignment
+  \item Alignment of the target and focusing horns
+  \item The current in the focusing horns and the magnetic field it generates
+  \item Hadron production induced by beam interactions with the target
+\end{itemize}
+As the neutrino flux prediction is so important for all T2K analyses, the flux uncertainties are constrained using a range of measurements.  These include external measurements from the NA61/SHINE collaboration, from the proton beam monitors, measurements of a spare magnetic horn and from the INGRID detector.  Measured incertainties from each source are used to vary the flux in JNUBEAM which produces a covariance matrix for each source.  The covariance matrix then used by analyser is the sum of each covariance matrix which is shown in Fig.~\ref{FluxPredictionSyst}.  The covariance matrix is split into two detector sections: ND280 and SK.  Each detector section is then separated into two beam running modes ($\nu$ and $\bar{\nu}$ runnings) which are also separated into four neutrino flavours ($\nu_\mu$, $\bar{\nu}_\mu$, $\nu_e$ and $\bar{\nu}_e$).  Finally, each neutrino flavour is separated into a set of energy bins.  The presented analysis is a $\nu_\mu$ cross-section measurement using ND280, so only the ND280, $\nu_\mu$ section of the covariance matrix needs consideration.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_prediction_syst.eps}
+  \caption{The flux prediction covariance matrix.  The matrix is binned in detector (SK and ND280), neutrino flavour and energy.}
+  \label{fig:FluxPredictionSyst}
+\end{figure}
+The provided flux covariance matrix is a fractional covariance matrix, binned in netrino energy and flavour.  As the neutrino energy and flavour information of events seen in this analysis is readily available, the flux covariance matrix can be used to reweight the events in the Monte Carlo sample to propagate the effect of the systematic uncertainty through the analysis.  To do this, the flux covariance matrix is Cholesky decomposed and the resulting matrix multiplied by a vector filled with random throws from a Gaussian of mean 0 and width 1.  Each element in this multiplied vector constitutes a fractional change in the number of a specific neutrino flavour and energy seen in the analysis.  So, the event weightings are generated by adding 1 to each element of this vector.  Every event selected in the sample is then weighted by the correct event weight (in this case defined by the neutrino flavour and energy) and this number of reweighted events is then recorded.  The above description describes a single throw of the flux systematic propagation.  This process is repeated 1000 times to build up the covariance matrix for the sample.  The sample covariance matrix elements are calculated as
+\begin{equation}
+  V_{\textrm{ab}} = \frac{1}{N^{\textrm{throws}}}\sum^{N^{\textrm{throws}}}_{i=1}\frac{\left(N_{\textrm{a}}^{i} - N_{\textrm{a}}^{\textrm{nom}}\right)\left(N_{\textrm{b}}^{i} - N_{\textrm{b}}^{\textrm{nom}}\right)}{N_{\textrm{a}}^{\textrm{nom}}N_{\textrm{b}}^{\textrm{nom}}},
+  \label{eqn:CovarianceMatrixElementDef}
+\end{equation}
+where $N_{\textrm{a}}^{\textrm{nom}}$ is the number of events seen in the nominal Monte Carlo for sample a and $N^{\textrm{throws}}$. $N_{\textrm{a}}^{i}$ is generically the number of reweighted events seen in sample a for systematic throw $i$, but its definition depends on which kind of covariance matrix is being calculated.  For a shape+normalisation covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
+%\begin{equation}
+%  N_{\textrm{a}}^{i} = 
+%\end{equation}
+
+
+%really is just the number of in sample a for throw $i$ after applying the event weights.  For the shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
+%\begin{equation}
+%  N_{\textrm{a}}^{i} = 
+%\end{equation}
+
+
 
 \section{Validation of method}
 \label{sec:MethodValidation}

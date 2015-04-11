@@ -154,4 +154,5 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Selected sample.}}}{93}{subfigure.1.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reverse sample.}}}{93}{subfigure.1.2}
 \contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.\relax }}{95}{figure.caption.73}
+\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces The flux prediction covariance matrix. The matrix is binned in detector (SK and ND280), neutrino flavour and energy.\relax }}{98}{figure.caption.74}
 \addvspace {10\p@ }
