@@ -155,4 +155,22 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Reverse sample.}}}{93}{subfigure.1.2}
 \contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.\relax }}{95}{figure.caption.73}
 \contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces The flux prediction covariance matrix. The matrix is binned in detector (SK and ND280), neutrino flavour and energy.\relax }}{98}{figure.caption.74}
+\contentsline {figure}{\numberline {\relax 7.4}{\ignorespaces The sample covariance induced by the flux uncertainties.\relax }}{99}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shape+normalisation.}}}{99}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Shape-only.}}}{99}{subfigure.4.2}
+\contentsline {figure}{\numberline {\relax 7.5}{\ignorespaces The variation in the selection efficiency of lead interactions in the DS ECal caused by the flux systematic.\relax }}{100}{figure.caption.76}
+\contentsline {figure}{\numberline {\relax 7.6}{\ignorespaces The neutrino cross-section model covariance matrix.\relax }}{101}{figure.caption.77}
+\contentsline {figure}{\numberline {\relax 7.7}{\ignorespaces The sample covariance induced by the cross-section model uncertainties.\relax }}{102}{figure.caption.78}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shape+normalisation.}}}{102}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Shape-only.}}}{102}{subfigure.7.2}
+\contentsline {figure}{\numberline {\relax 7.8}{\ignorespaces The variation in the selection efficiency of lead interactions in the DS ECal caused by the cross-section model systematic.\relax }}{102}{figure.caption.79}
+\contentsline {figure}{\numberline {\relax 7.9}{\ignorespaces The ratio of the $\pm $$\upsigma $ cross-section to the nominal cross-section for lead as a function of neutrino energy.\relax }}{103}{figure.caption.80}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$P_{\textrm {F}}^{\textrm {Pb}}$}}}{103}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$E_{\textrm {b}}^{\textrm {Pb}}$}}}{103}{subfigure.9.2}
+\contentsline {figure}{\numberline {\relax 7.10}{\ignorespaces The sample covariance induced by variation of $P_{\textrm {F}}^{\textrm {Pb}}$.\relax }}{104}{figure.caption.81}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shape+normalisation.}}}{104}{subfigure.10.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Shape-only.}}}{104}{subfigure.10.2}
+\contentsline {figure}{\numberline {\relax 7.11}{\ignorespaces The sample covariance induced by variation of of the FSI parameters outlined in table~\ref {table:FSIErrors}.\relax }}{105}{figure.caption.83}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shape+normalisation.}}}{105}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Shape-only.}}}{105}{subfigure.11.2}
 \addvspace {10\p@ }

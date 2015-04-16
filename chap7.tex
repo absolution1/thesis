@@ -86,7 +86,7 @@ The underlying fit machinery uses the Minuit2 algorithm provided by the ROOT TFi
 The $\chi^2$ definition shown in equation~\ref{eqn:Chi2Def} allows for systematic uncertainties to be directly included in the fit.  As the systematic uncertainty implementation takes the form of a covariance matrix for the input samples, a good understanding of not only the systematic uncertainties, but how the samples correlate with one another is needed.  
 \newline
 \newline
-As stated above, there are 12 input samples so the covariance matrix will be a 12$\times$12 symmetric matrix.  While it may be obvious that the contents of the matrix will be the covariances of each input sample, it may not be immediately clear what type of covariances are needed.  As described in section~\ref{sec:ECalRateFit}, the algorithm attempts to fit a set of predictions, separated into templates, to a set of measured data samples simultaneously.  The variation comes from the normalisations assigned to each template.  This means that the overall normilsation of the Monte Carlo prediction is free to vary without prior constraint and so it is the shape information between the prediction and data that constrains the parameters.  Therefore the covariance matrix used in the fit should only contain uncertainties which account for the differences in the shape of the samples which the systematic sources introduce.
+As stated above, there are 12 input samples so the covariance matrix will be a 12$\times$12 symmetric matrix.  While it may be obvious that the contents of the matrix will be the covariances of each input sample, it may not be immediately clear what type of covariances are needed.  As described in section~\ref{sec:ECalRateFit}, the algorithm attempts to fit a set of predictions, separated into templates, to a set of measured data samples simultaneously.  The variation comes from the normalisations assigned to each template.  This means that the overall normalisation of the Monte Carlo prediction is free to vary without prior constraint and so it is the shape information between the prediction and data that constrains the parameters.  Therefore the covariance matrix used in the fit should only contain uncertainties which account for the differences in the shape of the samples which the systematic sources introduce.
 \newline
 \newline
 The ND280 event simulation is essentially broken down into three areas: Simulation of the neutrino flux, simulation of the neutrino interactions and simulation of the detector response.  No matter how complicated a simulation can become, it is unlikely to ever simulate reality with $100\%$ accuracy.  The differences between what is simulated (be it flux, interaction or detector) and what happens in nature causes a systematic difference to be seen between collected data and Monte Carlo which must be accounted for.  As the simulation can be broken down into three key areas, the systematic assessment can be broken down into the same key areas, each of which are presented.  The actual assessment of a systematic uncertainty can be broken down into two areas: identifaction of a systematic error source and the propagation of that systematic error source through the analysis.  The identification stage is typically handled by a respective working group or by an analyser with external sources (e.g. control samples).  The propagation of the systematic error source has no strict recipe but it typically involves variation of the identified systematic uncertainty and then either a reweighting of events is applied or the analysis chain is re-run.  The systematic treatment used in this analysis uses a mixture of the above.
@@ -102,7 +102,7 @@ The neutrino flux is one of the core components of the ND280 event simulation an
   \item The current in the focusing horns and the magnetic field it generates
   \item Hadron production induced by beam interactions with the target
 \end{itemize}
-As the neutrino flux prediction is so important for all T2K analyses, the flux uncertainties are constrained using a range of measurements.  These include external measurements from the NA61/SHINE collaboration, from the proton beam monitors, measurements of a spare magnetic horn and from the INGRID detector.  Measured incertainties from each source are used to vary the flux in JNUBEAM which produces a covariance matrix for each source.  The covariance matrix then used by analyser is the sum of each covariance matrix which is shown in Fig.~\ref{FluxPredictionSyst}.  The covariance matrix is split into two detector sections: ND280 and SK.  Each detector section is then separated into two beam running modes ($\nu$ and $\bar{\nu}$ runnings) which are also separated into four neutrino flavours ($\nu_\mu$, $\bar{\nu}_\mu$, $\nu_e$ and $\bar{\nu}_e$).  Finally, each neutrino flavour is separated into a set of energy bins.  The presented analysis is a $\nu_\mu$ cross-section measurement using ND280, so only the ND280, $\nu_\mu$ section of the covariance matrix needs consideration.
+As the neutrino flux prediction is so important for all T2K analyses, the flux uncertainties are constrained using a range of measurements.  These include external measurements from the NA61/SHINE collaboration, from the proton beam monitors, measurements of a spare magnetic horn and from the INGRID detector.  Measured uncertainties from each source are used to vary the flux in JNUBEAM which produces a covariance matrix for each source.  The covariance matrix then used by analyser is the sum of each covariance matrix which is shown in Fig.~\ref{fig:FluxPredictionSyst}.  The covariance matrix is split into two detector sections: ND280 and SK.  Each detector section is then separated into two beam running modes ($\nu$ and $\bar{\nu}$ runnings) which are also separated into four neutrino flavours ($\nu_\mu$, $\bar{\nu}_\mu$, $\nu_e$ and $\bar{\nu}_e$).  Finally, each neutrino flavour is separated into a set of energy bins.  The presented analysis is a $\nu_\mu$ cross-section measurement using ND280, so only the ND280, $\nu$-running mode section of the covariance matrix needs consideration.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_prediction_syst.eps}
@@ -114,10 +114,128 @@ The provided flux covariance matrix is a fractional covariance matrix, binned in
   V_{\textrm{ab}} = \frac{1}{N^{\textrm{throws}}}\sum^{N^{\textrm{throws}}}_{i=1}\frac{\left(N_{\textrm{a}}^{i} - N_{\textrm{a}}^{\textrm{nom}}\right)\left(N_{\textrm{b}}^{i} - N_{\textrm{b}}^{\textrm{nom}}\right)}{N_{\textrm{a}}^{\textrm{nom}}N_{\textrm{b}}^{\textrm{nom}}},
   \label{eqn:CovarianceMatrixElementDef}
 \end{equation}
-where $N_{\textrm{a}}^{\textrm{nom}}$ is the number of events seen in the nominal Monte Carlo for sample a and $N^{\textrm{throws}}$. $N_{\textrm{a}}^{i}$ is generically the number of reweighted events seen in sample a for systematic throw $i$, but its definition depends on which kind of covariance matrix is being calculated.  For a shape+normalisation covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
-%\begin{equation}
-%  N_{\textrm{a}}^{i} = 
-%\end{equation}
+where $N_{\textrm{a}}^{\textrm{nom}}$ is the number of events seen in the nominal Monte Carlo for sample a and $N^{\textrm{throws}}$. $N_{\textrm{a}}^{i}$ is generically the number of events seen in sample a for systematic throw $i$, but its definition depends on which kind of covariance matrix is being calculated.  For a shape+normalisation covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
+\begin{equation}
+  N_{\textrm{a}}^{i} = N^{i\prime}_{\textrm{a}}, 
+  \label{eqn:NVariedDef}
+\end{equation}
+where $N^{i\prime}_{\textrm{a}}$ is simply the number of events in sample a for throw $i$ after applying the systematic variation.  In the above example, this after applying the event reweighting based on the flux covariance matrix.  When considering a shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is 
+\begin{equation}
+  N_{\textrm{a}}^{i} = N^{i\prime}_{\textrm{a}}\frac{\displaystyle\sum_{j=1}^{12}N_{\textrm{j}}^{\textrm{nom}}}{\displaystyle\sum_{j=1}^{12}N^{i\prime}_{\textrm{j}}}. 
+  \label{eqn:NVariedShapeOnlyDef}
+\end{equation}
+The extra factor on the RHS of equation~\ref{eqn:NVariedShapeOnlyDef} convserves the total number of events seen such that there are an equal total number of events before and after applying the systematic variation.  The sample covariance matrices found by applying the above process are shown in Fig.~\ref{fig:FluxCovarianceMatrices}.
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/flux/flux_covariance_matrix.eps} \label{fig:FluxShapeNormCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/flux/flux_shape_covariance_matrix.eps} \label{fig:FluxShapeOnlyCovarianceMatrix}}
+  \caption{The sample covariance induced by the flux uncertainties.}
+  \label{fig:FluxCovarianceMatrices}
+\end{figure}
+\newline
+\newline
+The effect of the flux systematic on the selection efficiency of lead interactions was also evaluated.  As the main target used in this analysis is the DS ECal, the efficiency variation was evaluated for this detector only.  For each systematic throw described above, the selection efficiency was calculated and recorded.  By plotting the efficiency for each throw, the width of the efficiency distribution can be found which gives the efficiency uncertainty induced by the flux systematic.  This efficiency uncertainty was found to be 0.00097.  The lead selection efficiency in the DS ECal is nominally 0.539, which implies a fractional change of 0.18$\%$, which is essentially negligable.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_efficiency_variation.eps}
+  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the flux systematic.}
+  \label{fig:FluxEfficiencyVariation}
+\end{figure}
+\subsection{Cross-section systematic evaluation}
+\label{subsec:CrossSectionSystematic}
+The neutrino cross-section picture is still a very much open area of research.  The interaction model used by current neutrino interaction generaters use a set of empirical parameters which are tuned on experimental results.  Uncertainties on any one of these empirical parameters will alter the simulated cross-section and thus the event rate seen in the ND280 simulation.  A dedicated working group handles the assessment of the empirical parameters and their corresponding uncertainties.  The parameter uncertainties are given as a covariance matrix along with the known correlations which is shown in Fig.~\ref{fig:XSecPredictionSyst}.  The interaction parameter assessment is chiefly undertaken with the T2K oscillation analyses in mind which means that the nuclear model parameters are only considered for carbon and oxygen.  In the presented analysis, iron and aluminium are two major sources of background interactions which must also be treated in the systematic assessment.  The chosen treatment is to assign a data-motivated, normalisation uncertainty to such backgrounds.  The iron uncertainty is taken from the iron cross-section measurement using INGRID.  The aluminium uncertainity is taken from [INSERT DETAILS HERE].  As element specific parameters for lead do not appear in Fig.~\ref{fig:XSecPredictionSyst}, such parameters are additionally assessed separately using NEUT.
+\begin{figure}
+  \centering
+  %INSERT XSEC COVARIANCE MATRIX
+  \includegraphics[width=12cm]{images/measurement/systematics/xsec/xsec_prediction_syst.eps}
+  \caption{The neutrino cross-section model covariance matrix.}
+  \label{fig:XSecPredictionSyst}
+\end{figure}
+\newline
+\newline
+To propagate the effect of the cross-section systematic through the analysis, the covariance matrix shown in Fig.~\ref{fig:XSecPredictionSyst} was Cholesky decomposed and the resultant matrix multiplied by a vector of random numbers thrown from a gaussian (the same approach as described in section~\ref{subsec:FluxSystematic}).  However, the re-weighting in this case is more complicated.  The T2KReWeight [INSERT REFERECE] software takes the parameters errors from the throw along with the simulated NEUT vertex which is matched to the event.  T2KReWeight then calculates a weight based on the inputted errors and the NEUT vertex in question.  Using the T2KReWeight machinery, 1000 systematic throws from the covariance matrix shown in Fig.~\ref{fig:XSecPredictionSyst} were made and sample covariance matrices were calculated, which are shown in Fig.~\ref{fig:XSecCovarianceMatrices}.
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/xsec_covariance_matrix.eps} \label{fig:XSecShapeNormCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/xsec_shape_covariance_matrix.eps} \label{fig:XSecShapeOnlyCovarianceMatrix}}
+  \caption{The sample covariance induced by the cross-section model uncertainties.}
+  \label{fig:XSecCovarianceMatrices}
+\end{figure}
+\newline
+\newline
+As with the flux systematic, the uncertainty in the selection efficiency for lead interactions in the DS ECal due to the cross-section model systematic was found by recording the efficiency for each throw.  The variation in the efficiency is shown in Fig.~\ref{fig:XSecEfficiencyVariation}.  The efficiency uncertainty was found to be 0.001 which corresponds to a 0.2$\%$ error which is, again, negligable.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/measurement/systematics/xsec/xsec_efficiency_variation.eps}
+  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the cross-section model systematic.}
+  \label{fig:XSecEfficiencyVariation}
+\end{figure}
+\newline
+\newline
+As discussed above, the re-weighting of element specific parameters for events matched to a lead interactions was not possible using T2KReWeight.  As meson-exchange current interactions for lead interactions are not implemented in NEUT, the only parameters necessary to vary are $P_{\textrm{F}}^{\textrm{Pb}}$ and $E_{\textrm{b}}^{\textrm{Pb}}$ which are the Fermi-momentum and binding energy for lead respectively.  So, NEUT was used to produce 10,000 neutrino interactions on lead with uniform energy between 0~GeV and 10~GeV for the nominal parameters and $\pm\upsigma$ variations of the parameters.  The associated uncertainties were not readily available in the literature so $1.5\times$ the carbon parameters uncertainties were used as a conservative estimate.  The NEUT events were used to plot the ratio of the varied cross-section to the nominal cross-section as a function of energy.  The ratios for $P_{\textrm{F}}^{\textrm{Pb}}$ and $E_{\textrm{b}}^{\textrm{Pb}}$ are shown in Fig.~\ref{fig:PbXSecPfRatio} and Fig.~\ref{fig:PbXSecEbRatio} respectively.  The variation in the cross-section caused by variation in $E_{\textrm{b}}^{\textrm{Pb}}$ is sub-percent so there should be a negligable variation in the event rate which means this can be ignored.  However, there is significant variation in the cross-section at low energy due to variations in $P_{\textrm{F}}^{\textrm{Pb}}$ so this effect must be propgated through the analysis.  To do this, the ratio distributions shown in Fig.~\ref{fig:PbXSecPfRatio} were treated as a set of events weights.  The $+\upsigma$ and $-\upsigma$ weights were applied to the sample separately, creating two systematics throws.  The results of the systematic throws were used to generate the sample covariances, which are shown in Fig.~\ref{fig:PbXSecCovarianceMatrices}.
+\begin{figure}%
+  \centering
+  \subfloat[$P_{\textrm{F}}^{\textrm{Pb}}$]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pbxsec_pf_ratio.eps} \label{fig:PbXSecPfRatio}}
+  \subfloat[$E_{\textrm{b}}^{\textrm{Pb}}$]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pbxsec_eb_ratio.eps} \label{fig:PbXSecEbRatio}}
+  \caption{The ratio of the $\pm$$\upsigma$ cross-section to the nominal cross-section for lead as a function of neutrino energy.}
+  \label{fig:PbXSecRatios}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pb_xsec_covariance_matrix.eps} \label{fig:PbXSecShapeNormCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix.eps} \label{fig:PbXSecShapeOnlyCovarianceMatrix}}
+  \caption{The sample covariance induced by variation of $P_{\textrm{F}}^{\textrm{Pb}}$.}
+  \label{fig:PbXSecCovarianceMatrices}
+\end{figure}
+\newline
+\newline
+Final state interactions (FSI) within the nucleus after a neutrino interaction has occurred could also cause a variation in the event rate.  While the selection used in this analysis is CC inclusive, the method used separates events out into prong topologies.  Any uncertainty in the FSI could cause migration of events from one prong topology to another.  The Neutrino Interaction Working Group (NIWG) assesses these uncertainties and provides a set of parameters for an analyser to vary, all of which are associated with $\pi^{\pm}$ interactions.  There are six parameters associated with FSI:
+\begin{itemize}
+  \item Low energy quasi-elastic scattering (FSIQEL)
+  \item High energy quasi-elastic scattering (FSIQEH)
+  \item Pion production (FSIINEL)
+  \item Pion absorption (FSIABS)
+  \item Low energy single charge exchange (FSICXL)
+  \item High energy single charge exchange (FSICXH)
+\end{itemize}
+The NIWG provides combinations of the $1\upsigma$ errors for the parameters highlighted above which span the whole FSI parameter space.  The errors are provided in 16 parameters sets which represent the $1\upsigma$ contour for the FSI parameter space and are shown in table~\ref{table:FSIErrors}.  Each parameter set can be used to generate one systematic throw, by passing the parameters to T2KReWeight and subsequently re-weighting the events.  As with the cross-section model systematics described above, the parameter variations only affect carbon and oxygen.  The FSI systematic throws were used to generate the sample covariance matrices which are shown in Fig.~\ref{fig:FSICovarianceMatrices}.
+%\newline
+%\newline
+%It is not trivial how to assess how the FSI uncertainties affect the lead interactions as the T2KReWeight machinery can not be used.  FSI should cause a mixing between the different CC interaction final states which means that there will be migration from one prong topology to another.  Based on the efficiencies in table~\ref{table:SelEfficiency}, the main concern would be from 2 prong topology events migrating to 1 prong topology events in the barrel where such events would be exposed to a stream of cuts which are 12$\%$ less efficient.  Assuming that the variation in event rate induced by the FSI variation for carbon/oxygen is similar for lead, the change in events seen would be 
+\begin{table}
+  \begin{tabular}{ c c c c c c c }
+    Parameter set & FSIQEL & FSIQEH & FSIINEL & FSIABS & FSICXL & FSICXH \\ \hline \hline
+    Nominal & 1.0 & 1.8 & 1.0 & 1.1 & 1.0 & 1.8 \\
+    15 & 0.6 & 1.1 & 1.5 & 0.7 & 0.5 & 2.3 \\
+    16 & 0.6 & 1.1 & 1.5 & 0.7 & 1.6 & 2.3 \\
+    17 & 0.7 & 1.1 & 1.5 & 1.6 & 0.4 & 2.3 \\
+    18 & 0.7 & 1.1 & 1.5 & 1.6 & 1.6 & 2.3 \\
+    19 & 1.4 & 1.1 & 1.5 & 0.6 & 0.6 & 2.3 \\
+    20 & 1.3 & 1.1 & 1.5 & 0.7 & 1.6 & 2.3 \\
+    21 & 1.5 & 1.1 & 1.5 & 1.5 & 0.4 & 2.3 \\
+    22 & 1.6 & 1.1 & 1.5 & 1.6 & 1.6 & 2.3 \\
+    23 & 0.6 & 2.3 & 0.5 & 0.7 & 0.5 & 1.3 \\
+    24 & 0.6 & 2.3 & 0.5 & 0.7 & 1.6 & 1.3 \\
+    25 & 0.7 & 2.3 & 0.5 & 1.6 & 0.4 & 1.3 \\
+    26 & 0.7 & 2.3 & 0.5 & 1.6 & 1.6 & 1.3 \\
+    27 & 1.4 & 2.3 & 0.5 & 0.6 & 0.6 & 1.3 \\
+    28 & 1.3 & 2.3 & 0.5 & 0.7 & 1.6 & 1.3 \\
+    29 & 1.5 & 2.3 & 0.5 & 1.5 & 0.4 & 1.3 \\
+    30 & 1.6 & 2.3 & 0.5 & 1.6 & 1.6 & 1.3 \\
+  \end{tabular}
+  \caption{FSI parameters, provided by the NIWG, representing the $1\upsigma$ contour in the FSI parameter space.  Taken from [INSERT REFERECE].}
+  \label{table:FSIErrors}
+\end{table}
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/fsi_covariance_matrix.eps} \label{fig:FSIShapeNormCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/fsi_shape_covariance_matrix.eps} \label{fig:FSIShapeOnlyCovarianceMatrix}}
+  \caption{The sample covariance induced by variation of of the FSI parameters outlined in table~\ref{table:FSIErrors}.}
+  \label{fig:FSICovarianceMatrices}
+\end{figure}
+
+
+
 
 
 %really is just the number of in sample a for throw $i$ after applying the event weights.  For the shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
