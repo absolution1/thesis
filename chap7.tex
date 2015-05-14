@@ -233,20 +233,76 @@ The NIWG provides combinations of the $1\upsigma$ errors for the parameters high
   \caption{The sample covariance induced by variation of of the FSI parameters outlined in table~\ref{table:FSIErrors}.}
   \label{fig:FSICovarianceMatrices}
 \end{figure}
-
-
-
-
-
 %really is just the number of in sample a for throw $i$ after applying the event weights.  For the shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
 %\begin{equation}
 %  N_{\textrm{a}}^{i} = 
 %\end{equation}
+\subsection{ECal detector systematic evaluation}
+\label{subsec:ECalDetectorSystematic}
+The analysis presented makes heavy use of a computational model of the ND280 ECal.  Any differences between this model and the real ND280 ECal could cause a systematic difference between the analysed Monte Carlo and the collected data used in this study.  So, several key areas have been identified which could cause such a systematic discrepancy, under the assumption that the differences exist.
+\newline
+\newline
+The implemented selections uses the enhanced reconstruction, outlined in chapter~\ref{chap:EnhancedECalReconstruction}.  The enhanced reconstruction, depends on a set of clustering algorithms which are outlined in section~\ref{sec:ECalEventReconstruction} and the clustering algorithms depend on the hit scintillator bars themselves.  Following this trail back, it can be argued that the vast majority of the ECal detector systematics can be covered by assessing the ability of the ECal to reconstruct individual hits.  
+\begin{equation}
+  \textrm{DISCUSS THE HIT EFFICIENCY SYSTEAMTIC}
+\end{equation}
+The ECal model used in the simulation was based on the as built drawings and so should be an accurate model.  However, the components of each ECal module do have associated uncertainties which are not, and can not easily be, taken into account in the simulation, but could easily cause a systematic difference between data and Monte Carlo.  For example, if the DS ECal lead absorbers were thicker in the simulated model, one should expect to see a relative deficit of beam triggered events in the DS ECal collected data.  Provided that the component dimensions, compositions and uncertainties are known, toy Monte Carlo can be used to construct a set of toy ECal modules which model the variation in the module mass.  This can be expanded further, to construct a covariance matrix for the mass of each contributing element.  This covariance matrix can then be used to re-weight the events, based on target element, in the Monte Carlo sample to model the effect of the ECal mass systematic.  The ECal module designs are split into three types: side, top/bottom and DS.  It is only necessary to generate a mass covariance matrix for each of the three types.  All values used for the component dimensions/uncertainties are taken from [INSERT JINST REFERENCE].  Precise component dimensions are only quoted for the components in the active regions of each module, namely the lead absorbers, the scintillator bars and the wavelength-shifting fibres, so only these components are considered in the toy Monte Carlo study.  A summary of the components are shown in table~\ref{table:SideECalComponents}, table~\ref{table:TopBottomECalComponents} and table~\ref{table:DSECalComponents} for the side, top/bottom and DS ECal designs respectively.
+\begin{table}
+  \begin{tabular}{ c c c c }
+     & Top/Bottom & Side & DS \\ \hline \hline
+  No. per layer & 2 & 4 & 2 \\
+  Length (mm) & $3858\pm4$ & $964.5\pm4$ & $2016\pm1$ \\
+  Width (mm) & $765\pm4$ & $2330\pm4$ & $1008\pm4$ \\
+  Height (mm) & $1.75\pm0.1$ & $1.75\pm0.1$ & $1.75\pm0.1$ \\
+  Sb doping & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ \\
+  \end{tabular}
+  \caption{Summary of the lead aborbers for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \label{table:LeadAbsorberDimensions}
+\end{table}
+\begin{table}
+  \begin{tabular}{ c c c c }
+     & Top/Bottom & Side & DS \\ \hline \hline
+  No. per layer (para) & 38 & 57 & - \\
+  No. per layer (perp) & 96 & 96 & 50 \\
+  Length (para) (mm) & $3840\pm0.1$ & $3840\pm0.1$ & - \\
+  Length (perp) (mm) & $1520\pm0.1$ & $2280\pm0.1$ & $2000\pm0.1$ \\
+  Width (mm) & $40^{+0.0}_{-0.4}$ & $40^{+0.0}_{-0.4}$& $40^{+0.0}_{-0.4}$ \\
+  Height (mm) & $10^{+0.0}_{-0.4}$ & $10^{+0.0}_{-0.4}$& $10^{+0.0}_{-0.4}$ \\
+  Hole diameter (mm) & $1.75\pm0.1$ & $1.75\pm0.1$ & $1.75\pm0.1$ \\
+  Composition (CH:PPO) & 99:1 & 99:1 & 99:1 \\
+  Coating thickness (mm) & $0.25\pm0.13$ & $0.25\pm0.13$ & $0.25\pm0.13$ \\
+  Coating composition (CH:TiO$_2$) & 85:15 & 85:15 & 85:15 \\
+
+  \end{tabular}
+  \caption{Summary of the scintillator bars for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \label{table:ScintillatorBarDimensions}
+\end{table}
+
+
+\begin{table}
+  \begin{tabular}{ c c c c c c c }
+    Parameter set & FSIQEL & FSIQEH & FSIINEL & FSIABS & FSICXL & FSICXH \\ \hline \hline
+  \end{tabular}
+  \caption{Summary of the DS ECal components.}
+  \label{table:DSECalComponents}
+\end{table}
+%The following discusses the construction of the side toy ECal modules.  The choices made and the process followed were the same for all three designs.  
+\subsubsection{The lead absorbers}
+\label{subsubsec:ECalMassLeadAbsorbers}
+Reference~\cite{1748-0221-8-10-P10019} provided a clear description of the composition of the lead absorbers for the ECal module designs, which are summarised in table~\ref{table:LeadAbsorberDimensions}.  All component uncertainties (both dimension and composition) were given as symmetric errors.  To construct an ECal lead layer, each layer dimension was systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  After the layer volume was defined, the Sb contamination was calculated, also using a gaussian throw, but using a width of the Sb contamination uncertainty.  The described information could then be used to retrieve the mass of the Pb and Sb in anECal lead layer.
+
+\subsubsection{The scintillator bars}
+\label{subsubsec:ECalMassSctintillatorBars}
+The information used to construct the toy scintillator bars is summarised in table~\ref{table:ScintillatorBarDimensions}, most of which was found in reference~\cite{1748-0221-8-10-P10019}.  The dimensions of the bars were quoted with symmetric uncertainties (like the lead absorbers), so the dimensions were also systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  The hole and coating dimensions were also treated in the same manner.  The bar composition was reported as polystyrene doped with $1\%$~PPO (C$_{15}$H$_{11}$NO) and $0.03\%$~POPOP.  For the toy bar construction, the POPOP was considered negligable and so was not included.  The result is that the toy bar composition (excluding the coating) is 99$\%$~CH and 1$\%$~C$_{15}$H$_{11}$NO by mass.  Unfortunately, the full composition of the TiO$_2$ coating was extensively described.  However, a similar systematic study has already been undertaken for the FGD [FGD TN NOTE REFERENCE HERE] which included an investigation of the coating composition.  A representative for the Fermilab facility which extruded the scintillator bars reported that the final composition of the coating was 15$\%$ rutile-form TiO$_2$ and 85$\%$ CH with other contributing compounds considered negligable.  The collected information could then be used to retrieve the contributing mass of each element in a scintillator bar.
+
+
+
 
 
 
 \section{Validation of method}
 \label{sec:MethodValidation}
+TESTTESTTEST
 Does it work?
 
 \section{Applying the fit to ND280 data}
