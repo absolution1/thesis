@@ -278,14 +278,23 @@ The ECal model used in the simulation was based on the as built drawings and so 
   \label{table:ScintillatorBarDimensions}
 \end{table}
 
-
 \begin{table}
-  \begin{tabular}{ c c c c c c c }
-    Parameter set & FSIQEL & FSIQEH & FSIINEL & FSIABS & FSICXL & FSICXH \\ \hline \hline
+  \begin{tabular}{ c c c c }
+     & Top/Bottom & Side & DS \\ \hline \hline
+  No. per layer (para) & 38 & 57 & - \\
+  No. per layer (perp) & 96 & 96 & 50 \\
+  Length (para) (mm) & $3840\pm0.05$ & $3840\pm0.05$ & - \\
+  Length (perp) (mm) & $1520\pm0.05$ & $2280\pm0.05$ & $2000\pm0.05$ \\
+  Diameter (mm) & $1^{+0.02}_{-0.03}$ & $1^{+0.02}_{-0.03}$ & $1^{+0.02}_{-0.03}$\\
+  Composition & CH & CH & CH \\
+
   \end{tabular}
-  \caption{Summary of the DS ECal components.}
-  \label{table:DSECalComponents}
+  \caption{Summary of the WLSfibres for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \label{table:WLSFibreDimensions}
 \end{table}
+
+
+
 %The following discusses the construction of the side toy ECal modules.  The choices made and the process followed were the same for all three designs.  
 \subsubsection{The lead absorbers}
 \label{subsubsec:ECalMassLeadAbsorbers}
@@ -293,7 +302,62 @@ Reference~\cite{1748-0221-8-10-P10019} provided a clear description of the compo
 
 \subsubsection{The scintillator bars}
 \label{subsubsec:ECalMassSctintillatorBars}
-The information used to construct the toy scintillator bars is summarised in table~\ref{table:ScintillatorBarDimensions}, most of which was found in reference~\cite{1748-0221-8-10-P10019}.  The dimensions of the bars were quoted with symmetric uncertainties (like the lead absorbers), so the dimensions were also systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  The hole and coating dimensions were also treated in the same manner.  The bar composition was reported as polystyrene doped with $1\%$~PPO (C$_{15}$H$_{11}$NO) and $0.03\%$~POPOP.  For the toy bar construction, the POPOP was considered negligable and so was not included.  The result is that the toy bar composition (excluding the coating) is 99$\%$~CH and 1$\%$~C$_{15}$H$_{11}$NO by mass.  Unfortunately, the full composition of the TiO$_2$ coating was extensively described.  However, a similar systematic study has already been undertaken for the FGD [FGD TN NOTE REFERENCE HERE] which included an investigation of the coating composition.  A representative for the Fermilab facility which extruded the scintillator bars reported that the final composition of the coating was 15$\%$ rutile-form TiO$_2$ and 85$\%$ CH with other contributing compounds considered negligable.  The collected information could then be used to retrieve the contributing mass of each element in a scintillator bar.
+The information used to construct the toy scintillator bars is summarised in table~\ref{table:ScintillatorBarDimensions}, most of which was found in reference~\cite{1748-0221-8-10-P10019}.  The length of the bars were quoted with symmetric uncertainties (like the lead absorbers), so the length was also systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  The hole and coating dimensions were also treated in the same manner.  However, the width and height were quoted with asymmetric errors and so could not be treated in the same way.  Fortunately, only a negative uncertainty was quoted, which meant the width and height uncertainties could be treated in a somewhat similar manner, but with randoms numbers being drawn from a half-gaussian.  The bar composition was reported as polystyrene doped with $1\%$~PPO (C$_{15}$H$_{11}$NO) and $0.03\%$~POPOP.  For the toy bar construction, the POPOP was considered negligable and so was not included.  The result is that the toy bar composition (excluding the coating) is 99$\%$~CH and 1$\%$~C$_{15}$H$_{11}$NO by mass.  Unfortunately, the full composition of the TiO$_2$ coating was extensively described.  However, a similar systematic study has already been undertaken for the FGD [FGD TN NOTE REFERENCE HERE] which included an investigation of the coating composition.  A representative for the Fermilab facility which extruded the scintillator bars reported that the final composition of the coating was 15$\%$ rutile-form TiO$_2$ and 85$\%$ CH with other contributing compounds considered negligable.  The collected information could then be used to retrieve the contributing mass of each element in a scintillator bar.
+
+\subsubsection{The WLS fibres}
+\label{subsubsec:ECalMassWLSFibres}
+As with the other toy components, reference~\cite{1748-0221-8-10-P10019} provided most of the necessary information for the construction and could be largely treated in the same way.  The major difference is that the WLS fibre diameter had an asymmetric error in which both components were not zero.  So, two toy gaussians were constructed to draw from (one representing each uncertainty) and a random number was first drawn from a uniform distribution to decide which gaussian would be used.  Very little information was provided about the composition of the WLS fibre, however the mass study in the FGD [REFERENCE SCOTT OSER TECHNOTE] assumed the WLS fibre was composed entirely of scintillator, so the same assumption was used for this study.  As with the other components, the provided information could then be used to retrieve the contributing mass of the elements in the WLS fibres.
+
+\subsubsection{ECal mass covariance}
+\label{subsubsec:ECalMassCovariance}
+Toy simulation was used to construct each component described in the above sections.  Each component was repeatedely built and was subsequently used to construct an ECal module.  The constributing mass of each element to the toy ECal module was then recorded.  10,000 toy ECal modules were constructed for each type, totalling 30,000 constructed modules.  The recorded contributing elemental mass for each construction was used to build up a mass covariance matrix using eqn.~\ref{eqn:CovarianceMatrixElementDef} and eqn.~\ref{eqn:NVariedDef}, an example of which is shown in Fig.~\ref{fig:MassCovDSECalAllElements} for the DS ECal.  Unfortunately, it was found that the covariance matrices for all three module types were singular, which is of immediate concern as the matrices need to be Cholesky decomposed as part of the systematic uncertainty evaluation.  It was found that the singular nature of the convariance matrices was caused by the contributing elements which have small covariance values (both on and off diagonal) and the problem could be solved by not considering some of them in the covariance matrix.  The three problematic elements are carbon, nitrogen and hydrogen.  Both nitrogen and hydgrogen only constitute a relatively small amount of the mass.  An example of this is shown in Fig.~\ref{fig:TotalMassDSECal} which shows the mass of the 10,000 toy DS ECal modules, with and without nitrogen and hydrogen.  There is a 2.45$\%$ difference between the two constructions which is borderline negligable.  While, ideally, the hydrogen and nitrogen should be included in the systematic evaluation, due to time constraints, they were excluded.  With the extra elements excluded, a non-singular covariance matrix for each module type could be constructed, all of which are shown in Fig.~\ref{fig:MassCovECalReducedElements}.
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements.eps}
+  \caption{The covariance matrix for the mass of the contributing elements in the DS ECal, with all contributing elements considered.}
+  \label{fig:MassCovDSECalAllElements}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/TotalMass_DSECal.eps}
+  \caption{The total mass of the DS ECal active volume with (black) and without (blue) nitrogen and hydrogen as contributing elements.  The smooth lines are the Gaussian fits to the distributions.  Using the Gaussian mean and width as the mass central value and uncertainty respectively, the DS ECal active mass with (without) hydrogen and nitrogen is $4060\pm20$~kg ($3960\pm20$~kg).}
+  \label{fig:TotalMassDSECal}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Top/bottom ECal.]{\label{fig:MassCovTopBottomECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElements.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+ \subfloat[Side ECal.]{\label{fig:MassCovSideECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements.eps}}
+
+\end{minipage}\par\medskip
+\centering
+ \subfloat[DS ECal.]{\label{fig:MassCovDSECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps}}
+
+\caption{The fractional covariance matrix for the mass of each contributing element to an ECal module (hydrogen and nitrogen omitted).}
+\label{fig:MassCovECalReducedElements}
+\end{figure}
+\subsubsection{Propagation of the mass systematic uncertainty}
+\label{subsubsec:ECalMassSystematicPropagation}
+The covariance matrices shown in Fig.~\ref{fig:MassCovECalReducedElements} were then used to generate systematic throws, in the same manner as the flux systematic uncertainty evaluation.  For the input into each systematic throw i.e. one run through of the selected Monte Carlo events, a set of event weights were generated for each of the seven ECal modules using the above mass covariance matrices.  Every neutrino interaction in the ECal active volume was weighted according to its target element.  As with the other systematic uncertainty evaluations, 1,000 systematic throws were generated and the subsequent covariance matrices were constructed which are shown in Fig.~\ref{fig:ECalMassCovarianceMatrices}.  The maximum uncertainty, which was for the DS ECal events, was found to be $0.39\%$. 
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix.eps} \label{fig:ECalMassShapeNormCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix.eps} \label{fig:ECalMassShapeOnlyCovarianceMatrix}}
+  \caption{The sample covariance induced by the ECal mass uncertainties.}
+  \label{fig:ECalMassCovarianceMatrices}
+\end{figure}
+\newline
+\newline
+An additional source of systeamtic uncertainty could come from the ECal's ability to reject OOFV backgrounds. As fig.~\ref{fig:ProngStackSelected} shows, the dominant background selected, particularly for the barrel ECals, is the OOFV background.  If the simulation of the ECal had a different OOFV background rejection capability to that of the actual ECal, the selected event composition between data and MC simulation would differ, resulting in a systematic difference.  The only feasable way to assess this systematic uncertainty is to use control samples.  Unfortunately, only $\mu$ based control samples were available during the analysis.  However, fig,~\ref{fig:ProngStackSelected} shows that the one prong topology, which contains the largest number of selected events, has the biggest OOFV background contamination and as Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} show, $\mu$s are the dominant particle species in the surviving OOFV background.  To assess the systematic uncertainty, the $\mu$ based control samples, both data and MC, are passed through the selection and the number of reconstructed events which pass the fiducial volume cut are recorded, $N_{\textrm{CS}}^{\textrm{pass}}$.  The efficiency of the fiducial volume cut is then defined as
+\begin{equation}
+\epsilon_{\textrm{CS}} = \frac{N_{\textrm{CS}}^{\textrm{pass}}}{N_{\textrm{CS}}},
+\label{eqn:OOFVCSEfficiency}
+\end{equation}
+where $N_{\textrm{CS}}$ is the number of reconstructed control sample events which enter the selection.  It is important to note why $N_{\textrm{CS}}^{\textrm{pass}}$ counts the number of events which pass the fiducial volume cut, rather than as the number of events which pass all of the selection cuts.  The reason for this is the inclusion of the reverse sample (background enriched sample) in the rate fit which includes any event which passes the fiducial volume cut, but fails the most upstream cut.  By calculating $\epsilon{\textrm{CS}}$ separately for data and MC, the systematic uncertainty can then be defined as the difference between the two.
+
 
 
 
