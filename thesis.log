@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  18 MAY 2015 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  22 MAY 2015 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5133,7 +5133,18 @@ Overfull \hbox (13.1703pt too wide) in paragraph at lines 231--233
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--246
+<images/measurement/systematics/detector/threshold/layer_efficiency_cosmics_dat
+a.pdf, id=2579, 290.17308pt x 207.07172pt>
+File: images/measurement/systematics/detector/threshold/layer_efficiency_cosmic
+s_data.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/layer_efficiency_cosmics
+_data.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/laye
+r_efficiency_cosmics_data.pdf used on input line 248.
+(pdftex.def)             Requested size: 284.52756pt x 203.05211pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--252
 
  []
 
@@ -5142,26 +5153,116 @@ rted-to.pdf> <./images/measurement/systematics/xsec/pb_xsec_shape_covariance_ma
 trix-eps-converted-to.pdf>] [105 <./images/measurement/systematics/xsec/fsi_cov
 ariance_matrix-eps-converted-to.pdf> <./images/measurement/systematics/xsec/fsi
 _shape_covariance_matrix-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/hit_charge_cosmic_MC_PEU.eps>
+(epstopdf)                    date: 2015-05-22 17:50:12
+(epstopdf)                    size: 8749 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/hit_charge_cosmic_MC_PEU-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:27:42
+(epstopdf)                    size: 8736 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/hit_charge_cosmic_MC_PEU-eps-converted-to.pdf images/me
+asurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU.eps>
+(epstopdf)             \includegraphics on input line 259.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU-eps
+-converted-to.pdf, id=2636, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PE
+U-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/hit_
+charge_cosmic_MC_PEU-eps-converted-to.pdf used on input line 259.
+(pdftex.def)             Requested size: 284.52756pt x 192.70187pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 19:51:52
+(epstopdf)                    size: 29321 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:56:46
+(epstopdf)                    size: 15037 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/ecal_threshold_covariance_matrix-eps-converted-to.pdf i
+mages/measurement/systematics/detector/threshold/ecal_threshold_covariance_matr
+ix.eps>
+(epstopdf)             \includegraphics on input line 266.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/ecal_threshold_covariance_ma
+trix-eps-converted-to.pdf, id=2638, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/threshold/ecal_threshold_covarian
+ce_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/ecal_threshold_covarianc
+e_matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/ecal
+_threshold_covariance_matrix-eps-converted-to.pdf used on input line 266.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 19:52:53
+(epstopdf)                    size: 29848 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:56:48
+(epstopdf)                    size: 15755 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/ecal_threshold_shape_covariance_matrix-eps-converted-to
+.pdf images/measurement/systematics/detector/threshold/ecal_threshold_shape_cov
+ariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 267.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/ecal_threshold_shape_covaria
+nce_matrix-eps-converted-to.pdf, id=2639, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/threshold/ecal_threshold_shape_co
+variance_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/ecal_threshold_shape_cov
+ariance_matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/ecal
+_threshold_shape_covariance_matrix-eps-converted-to.pdf used on input line 267.
+
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 266--268
+ [][][] 
+ []
+
 
 LaTeX Warning: Reference `table:SideECalComponents' on page 106 undefined on in
-put line 249.
+put line 273.
 
 
 LaTeX Warning: Reference `table:TopBottomECalComponents' on page 106 undefined 
-on input line 249.
+on input line 273.
 
 
 LaTeX Warning: Reference `table:DSECalComponents' on page 106 undefined on inpu
-t line 249.
+t line 273.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--304
+
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [106]
-[107]
+[107 <./images/measurement/systematics/detector/threshold/layer_efficiency_cosm
+ics_data.pdf> <./images/measurement/systematics/detector/threshold/hit_charge_c
+osmic_MC_PEU-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108]
+ [108 <./images/measurement/systematics/detector/threshold/ecal_threshold_covar
+iance_matrix-eps-converted-to.pdf> <./images/measurement/systematics/detector/t
+hreshold/ecal_threshold_shape_covariance_matrix-eps-converted-to.pdf>] [109] [1
+10]
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/MassCov_DSECal_AllElements.eps>
 (epstopdf)                    date: 2015-05-15 08:41:51
@@ -5173,18 +5274,18 @@ ss/MassCov_DSECal_AllElements-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/MassCov_DSECal_AllElements-eps-converted-to.pdf images/measu
 rement/systematics/detector/mass/MassCov_DSECal_AllElements.eps>
-(epstopdf)             \includegraphics on input line 316.
+(epstopdf)             \includegraphics on input line 340.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-eps-co
-nverted-to.pdf, id=2662, 569.12625pt x 386.44376pt>
+nverted-to.pdf, id=2749, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-e
 ps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-ep
 s-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_D
-SECal_AllElements-eps-converted-to.pdf used on input line 316.
+SECal_AllElements-eps-converted-to.pdf used on input line 340.
 (pdftex.def)             Requested size: 284.52756pt x 193.2037pt.
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/TotalMass_DSECal.eps>
@@ -5197,18 +5298,18 @@ ss/TotalMass_DSECal-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/TotalMass_DSECal-eps-converted-to.pdf images/measurement/sys
 tematics/detector/mass/TotalMass_DSECal.eps>
-(epstopdf)             \includegraphics on input line 322.
+(epstopdf)             \includegraphics on input line 346.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-converted-to
-.pdf, id=2663, 569.12625pt x 386.44376pt>
+.pdf, id=2750, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-converte
 d-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/TotalMass
-_DSECal-eps-converted-to.pdf used on input line 322.
+_DSECal-eps-converted-to.pdf used on input line 346.
 (pdftex.def)             Requested size: 284.52756pt x 193.2037pt.
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/MassCov_TopBottomECal_ReducedElements.eps>
@@ -5222,18 +5323,18 @@ ss/MassCov_TopBottomECal_ReducedElements-eps-converted-to.pdf>
 tics/detector/mass/MassCov_TopBottomECal_ReducedElements-eps-converted-to.pdf i
 mages/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElemen
 ts.eps>
-(epstopdf)             \includegraphics on input line 329.
+(epstopdf)             \includegraphics on input line 353.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElem
-ents-eps-converted-to.pdf, id=2664, 569.12625pt x 386.44376pt>
+ents-eps-converted-to.pdf, id=2751, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_TopBottomECal_Reduce
 dElements-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/MassCov_TopBottomECal_Reduced
 Elements-eps-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_T
-opBottomECal_ReducedElements-eps-converted-to.pdf used on input line 329.
+opBottomECal_ReducedElements-eps-converted-to.pdf used on input line 353.
 (pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/MassCov_SideECal_ReducedElements.eps>
@@ -5246,18 +5347,18 @@ ss/MassCov_SideECal_ReducedElements-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/MassCov_SideECal_ReducedElements-eps-converted-to.pdf images
 /measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements.eps>
-(epstopdf)             \includegraphics on input line 333.
+(epstopdf)             \includegraphics on input line 357.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements-
-eps-converted-to.pdf, id=2665, 569.12625pt x 386.44376pt>
+eps-converted-to.pdf, id=2752, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElem
 ents-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedEleme
 nts-eps-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_S
-ideECal_ReducedElements-eps-converted-to.pdf used on input line 333.
+ideECal_ReducedElements-eps-converted-to.pdf used on input line 357.
 (pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/MassCov_DSECal_ReducedElements.eps>
@@ -5270,23 +5371,20 @@ ss/MassCov_DSECal_ReducedElements-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/MassCov_DSECal_ReducedElements-eps-converted-to.pdf images/m
 easurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps>
-(epstopdf)             \includegraphics on input line 337.
+(epstopdf)             \includegraphics on input line 361.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements-ep
-s-converted-to.pdf, id=2666, 569.12625pt x 386.44376pt>
+s-converted-to.pdf, id=2753, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElemen
 ts-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElement
 s-eps-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_D
-SECal_ReducedElements-eps-converted-to.pdf used on input line 337.
+SECal_ReducedElements-eps-converted-to.pdf used on input line 361.
 (pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
-
-Underfull \vbox (badness 1590) has occurred while \output is active []
-
- [109]
+ [111]
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/ecal_mass_covariance_matrix.eps>
 (epstopdf)                    date: 2015-05-15 20:26:25
@@ -5298,18 +5396,18 @@ ss/ecal_mass_covariance_matrix-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/ecal_mass_covariance_matrix-eps-converted-to.pdf images/meas
 urement/systematics/detector/mass/ecal_mass_covariance_matrix.eps>
-(epstopdf)             \includegraphics on input line 347.
+(epstopdf)             \includegraphics on input line 371.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-eps-c
-onverted-to.pdf, id=2677, 569.12625pt x 386.44376pt>
+onverted-to.pdf, id=2764, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-
 eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-e
 ps-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/ecal_mass
-_covariance_matrix-eps-converted-to.pdf used on input line 347.
+_covariance_matrix-eps-converted-to.pdf used on input line 371.
 (pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
 Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
 ss/ecal_mass_shape_covariance_matrix.eps>
@@ -5322,48 +5420,110 @@ ss/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
 tics/detector/mass/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf image
 s/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix.eps>
-(epstopdf)             \includegraphics on input line 348.
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix
--eps-converted-to.pdf, id=2678, 569.12625pt x 386.44376pt>
+-eps-converted-to.pdf, id=2765, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_m
 atrix-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_ma
 trix-eps-converted-to.pdf>
 Package pdftex.def Info: images/measurement/systematics/detector/mass/ecal_mass
-_shape_covariance_matrix-eps-converted-to.pdf used on input line 348.
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 372.
 (pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
 
-Overfull \hbox (13.1703pt too wide) in paragraph at lines 347--349
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 371--373
  [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--355
+Underfull \hbox (badness 10000) in paragraph at lines 368--379
 
  []
 
-
+[112 <./images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements
+-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [110 <./images/measurement/systematics/detector/mass/MassCov_DSECal_AllElement
-s-eps-converted-to.pdf> <./images/measurement/systematics/detector/mass/TotalMa
-ss_DSECal-eps-converted-to.pdf>] [111 <./images/measurement/systematics/detecto
-r/mass/MassCov_TopBottomECal_ReducedElements-eps-converted-to.pdf> <./images/me
-asurement/systematics/detector/mass/MassCov_SideECal_ReducedElements-eps-conver
-ted-to.pdf> <./images/measurement/systematics/detector/mass/MassCov_DSECal_Redu
-cedElements-eps-converted-to.pdf>]
+ [113 <./images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-conv
+erted-to.pdf>] [114 <./images/measurement/systematics/detector/mass/MassCov_Top
+BottomECal_ReducedElements-eps-converted-to.pdf> <./images/measurement/systemat
+ics/detector/mass/MassCov_SideECal_ReducedElements-eps-converted-to.pdf> <./ima
+ges/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements-eps-co
+nverted-to.pdf> <./images/measurement/systematics/detector/mass/ecal_mass_covar
+iance_matrix-eps-converted-to.pdf> <./images/measurement/systematics/detector/m
+ass/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 16:12:03
+(epstopdf)                    size: 28158 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 16:18:19
+(epstopdf)                    size: 15086 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/oofv/ecal_oofv_covariance_matrix-eps-converted-to.pdf images/meas
+urement/systematics/detector/oofv/ecal_oofv_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 403.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-eps-c
+onverted-to.pdf, id=2854, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/oofv/ecal_oofv
+_covariance_matrix-eps-converted-to.pdf used on input line 403.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 16:13:13
+(epstopdf)                    size: 29235 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 16:18:22
+(epstopdf)                    size: 15429 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/oofv/ecal_oofv_shape_covariance_matrix-eps-converted-to.pdf image
+s/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 404.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix
+-eps-converted-to.pdf, id=2855, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_m
+atrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_ma
+trix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/oofv/ecal_oofv
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 404.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 403--405
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--408
+
+ []
+
+) (./chap8.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [112 <./images/measurement/systematics/detector/mass/ecal_mass_covariance_matr
-ix-eps-converted-to.pdf> <./images/measurement/systematics/detector/mass/ecal_m
-ass_shape_covariance_matrix-eps-converted-to.pdf>]) (./chap8.tex [113] [114
-
-]
+ [115]
+[116 <./images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matri
+x-eps-converted-to.pdf> <./images/measurement/systematics/detector/oofv/ecal_oo
+fv_shape_covariance_matrix-eps-converted-to.pdf>]
 Chapter 8.
-)) Processing 'backmatter' comment. [115] [116
+)) Processing 'backmatter' comment. [117
+
+] [118
 
 
 ]
@@ -5371,7 +5531,7 @@ Chapter 8.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [117] [118
+(./comment.cut (./backmatter.tex (./thesis.bbl [119] [120
 
 ]
 
@@ -5572,7 +5732,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 75.
 
-[119]
+[121]
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -5657,42 +5817,42 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 107.
 
-) [120] (./thesis.lof
+) [122] (./thesis.lof
 Underfull \vbox (badness 8056) has occurred while \output is active []
 
- [121
+ [123
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [122]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [123]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [124]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [125]
-[126])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+[128])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [127] [128
+ [129] [130
 
-] (./thesis.lot [129])
+] (./thesis.lot [131])
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-)) [130]
+)) [132]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4B41C8BA3239AE854C7A388896D5BD9A;5221.
+(rerunfilecheck)             Checksum: B1AE358D255680BBD8343E91488D05AC;5221.
 
 
 LaTeX Warning: There were undefined references.
@@ -5703,13 +5863,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
- 27541 strings out of 493117
- 514376 string characters out of 6135433
- 754467 words of memory out of 5000000
- 29498 multiletter control sequences out of 15000+600000
+ 27598 strings out of 493117
+ 517851 string characters out of 6135433
+ 755560 words of memory out of 5000000
+ 29536 multiletter control sequences out of 15000+600000
  96537 words of font info for 396 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,22n,61p,2836b,781s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,22n,61p,2836b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -5724,11 +5884,13 @@ mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/texmf-d
 ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/p
-alatino/uplri8a.pfb>
-Output written on thesis.pdf (146 pages, 3124842 bytes).
+alatino/uplri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (148 pages, 3389627 bytes).
 PDF statistics:
- 3226 PDF objects out of 3580 (max. 8388607)
- 2613 compressed objects within 27 object streams
- 480 named destinations out of 1000 (max. 500000)
- 49924 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 3353 PDF objects out of 3580 (max. 8388607)
+ 2713 compressed objects within 28 object streams
+ 491 named destinations out of 1000 (max. 500000)
+ 49954 words of extra memory for PDF output out of 51595 (max. 10000000)
 
