@@ -511,6 +511,80 @@ Because this problem was found after significant progress had been made on the M
   \caption{The sample covariance induced by the bug fix to the reconstruction.}
   \label{fig:ECalHoughBugCovarianceMatrices}
 \end{figure}
+\subsection{FGD detector uncertainty evaluation}
+\label{subsec:FGDDetectorSystematics}
+The systematic uncertainties associated with the FGD are described extensively [INSERT TECHNOTE REFERECE].  In recent times, there has been a significant push to develop a framework in which to analyse and propagate systematic uncertainties associated with ND280 analyses, which is called the PSYCHE framework.  Even though outer detector analyses have not been incorporated into PSYCHE, this is not true for tracker analyses and so PSYCHE could be partly utilised in this analysis.  The design of PSYCHE allows the user to enable/disable relevant systematic uncertanties and then simutaneously propagate them through an analysis.  PSYCHE was set up to apply the FGD detector systematics and produce 1000 throughs, in which every systematic was simutaneously applied.  The ouput, in the form of a distribution of a varied number of selected CC events in the FGD, was the used to define the systematic uncertainty.  The distribution is shown in Fig.~\ref{fig:FGDSystematicsNEvents}.  The Gaussian fit to the thrown number of events implies that the number of FGD events is $(1.069\pm0.022)\times10^5$ events i.e. a $2.01\%$ uncertainty.  However, the number of nominal selected events is $1.054\times10^5$ and so the shift in the number of events suggests an additional $1.41\%$ error.  Combining these in quadrature, the FGD detector systematic uncertainty was found to be $2.51\%$.  This error purely relates to the number of CC events in the FGD and so does not correlate with any of the events in the ECal.
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{images/measurement/systematics/detector/fgd/fgd_systematics_nevents.eps}
+  \caption{The number of selected FGD events for each systematic throw using PSYCHE.  The smooth line is a Gaussian fit to the number of events.}
+  \label{fig:FGDSystematicsNEvents}
+\end{figure}
+\newline
+\newline
+The total detector covariance matrices are shown in Fig.~\ref{fig:DetectorCovarianceMatrices}.  These matrices were found by summing all of the detector related covariance matrices.  The exception to this is the FGD detector uncertainties in which the single variance was added to the FGD on-diagonal bin.  The largest uncertainty was found to be $5.04\%$.
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/total/detector_covariance_matrix.eps} \label{fig:DetectorCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/total/detector_shape_covariance_matrix.eps} \label{fig:DetectorShapeCovarianceMatrix}}
+  \caption{The sample covariance induced by all of the detector related uncertainties.}
+  \label{fig:DetectorCovarianceMatrices}
+\end{figure}
+The total covariance matrices, combining all of the covariance matrices discussed above, are shown in Fig.~\ref{fig:TotalCovarianceMatrices}.  The largest uncertainty is $13.8\%$.
+\begin{figure}%
+  \centering
+  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/total/total_covariance_matrix.eps} \label{fig:TotalCovarianceMatrix}}
+  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/total/total_shape_covariance_matrix.eps} \label{fig:TotalShapeCovarianceMatrix}}
+  \caption{The sample covariance induced by all of the systematic uncertainties.}
+  \label{fig:TotalCovarianceMatrices}
+\end{figure}
+\newline
+\newline
+The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} heavily used Monte Carlo simulation of neutrino interations to estimate the efficiency of the selection.  At the core of the simulation, NEUT was used to initally generate the simulated neutrino interactions.  Ideally, the selection efficiency should be a property of the selection itself.  However, because of the use of a neutrino generator in the simulation, it is possible that the selection could contain an element of generator dependency.  It is non-trivial to use a data control sample to assess a systematic uncertainty on the selection efficiency.  In fact, the only feasable way to address this analysis issue would be to use multiple neutrino generators as inputs to the same ND280 simulation and compare the differences.  Unfortunately, a large set of generators were not available for use in the time frame of the analysis.  In ND280 software productions, a large amount of neutrino events based on the GENIE [insert reference] generator are produced, separately to the NEUT events.  So $2.5\times 10^{19}$~POT worth of GENIE events were passed through the ND280 software chain (including the enhanced reconstruction) and the selection presented in chapter~\ref{chap:NeutrinoInteractionSelection}.  No GENIE-based sand MC has ever been produced in ND280 software productions.  However, as this check only concerns changes to the selection efficiency, an absense of sand MC should not be a problem.  The selected events, separated into the prong topologies, is shown in Fig.~\ref{fig:ProngStackSelectedGENIE}.
+\begin{figure}
+  \centering
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE.eps} \label{fig:ProngStackBarrelSelectedGENIE}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE.eps} \label{fig:ProngStackDSSelectedGENIE}}
+  \caption{The number of selected events in the GENIE-based Monte Carlo sample, separated out into the prong topologies.  Each event is catagorised by the associated truth information from the simulation.}
+  \label{fig:ProngStackSelectedGENIE}
+\end{figure}
+The selection efficiencies for each prong topology are shown in Fig.~\ref{table:SelEfficiencyGENIE}.
+\begin{table}
+  \begin{tabular}{ c c c c c }
+    ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
+    module & efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$) \\ \hline \hline
+    Barrel & 46.3 & 54.2 & 66.0 & 65.4 \\
+    DS & 55.9 & 58.3 & 59.5 & 59.9\\
+  \end{tabular}
+  \caption{The selection efficiencies from the GENIE-based Monte Carlo sample for each prong topology and ECal module.}
+  \label{table:SelEfficiencyGENIE}
+\end{table}
+As described in section~\ref{subsec:SelectionPerformance}, the selection efficiencies do not include neutrino events which were not reconstructed.  So, the topology combined efficiencies which do include said events are shown in table~\ref{table:FinalEffGENIE}.
+\begin{table}
+  \begin{tabular}{ c c }
+    ECal module & Efficiency ($\%$) \\ \hline \hline
+    Barrel & 40.7 \\
+    DS & 49.9  \\
+  \end{tabular}
+  \caption{The topology combined efficiency for the GENIE-based Monte Carlo sample.  The efficiency values include simulated events which were not reconstructed.}
+  \label{table:FinalEffGENIE}
+\end{table}
+Overall, there are differences in the selection efficienies between NEUT and GENIE, particularly for the DS ECal.  However, when combining the topologies and including the events below reconstruction threshold, the efficiency differences are somewhat minor.  As described at the start of this chapter, the DS ECal will form the primary target and so it is the DS ECal efficiency which is the most important.  The DS ECal efficiency uncertainty is simply defined as the difference between the NEUT and GENIE efficiencies, which is $53.0\% - 49.9\% = 3.1\%$.  This error as a fraction of the nominal uncertainty is $5.85\%$.
+\subsection{The measured cross-section uncertainty}
+Using all of the information described in chapter~\ref{chap:NeutrinoInteractionSelection} and chapter~\ref{chap:CrossSectionMeasurement}, the $\nu_\mu$ CC-inclusive cross-section on lead will be calculated as
+\begin{equation}
+\label{eq:CrossSection}
+\sigma^{\textrm{CC}}_{\textrm{Pb}} = \frac{R_{\textrm{Pb}}N^{\textrm{MC}}_{\textrm{Pb}}\eta_{\textrm{Pb}}}{T_{\textrm{Pb}}\Phi^{\textrm{MC}}\epsilon_{\textrm{Pb}}},
+\end{equation}
+where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS ECal selection.  The shape covariance matrix (shown in Fig.~\ref{TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertanties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quated as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
+\begin{equation}
+\label{eq:CrossSectionUncertainty}
+\sigma_{\sigma^{\textrm{CC}}_{\textrm{Pb}}} = \sigma_{R_{\textrm{Pb}}} \pm 12.5\%,
+\end{equation}
+where $\sigma_{R_{\textrm{Pb}}}$ is the error on $R_{\textrm{Pb}}$ returned from the rate fit.
+
+
+
 
 
 
