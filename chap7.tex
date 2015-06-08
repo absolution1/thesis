@@ -583,20 +583,41 @@ where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{
 \end{equation}
 where $\sigma_{R_{\textrm{Pb}}}$ is the error on $R_{\textrm{Pb}}$ returned from the rate fit.
 
-
-
-
-
-
-
-
-
-
-
 \section{Validation of method}
 \label{sec:MethodValidation}
-TESTTESTTEST
-Does it work?
+The ECal rate fit described in section~\ref{sec:ECalRateFit} requires validation to ensure that not only the machinery works as intended, but also to check that the fit is suitable for such an analysis.  The first set of validation checks performed deals with the former case.
+
+\subsection{Validation of the fit machinery}
+\label{subsec:FitMachineryValidation}
+The initial validation method used the same Monte Carlo described in section~\ref{sec:InputSamples} to create toy datasets which were passed through the fitter.  To create said datasets, new normalisation parameters, $R^{\textrm{Val}}$, were defined, all of which are shown in table~\ref{table:ValidationNormalizationSets}.  
+\begin{table}
+  \begin{tabular}{c | c c c }
+    Normalisation set & $R^{\textrm{Pb}}$ & $R^{\textrm{C}}$ & $R^{\textrm{Other}}$\\ \hline \hline
+    1 & 1.0 & 1.0 & 1.0 \\
+    2 & 3.0 & 1.0 & 1.0 \\
+    3 & 0.7 & 1.5 & 0.8 \\
+    4 & -1.2 & 1.0 & 1.0 \\
+    5 & 1.0 & 1.0 & *0.1* \\
+  \end{tabular}
+  \caption{The normalisation sets used in validation of the ECal rate fit.  For normalisation set 5, the new normalisation for $R^{\textrm{Other}}$ is only applied to the neutral current events in the Other population.}
+  \label{table:ValidationNormalizationSets}
+\end{table}
+These new normalisation parameters scale the relevant Monte Carlo templates.  For the MC population $\textrm{X}$ in each sub-detector sample $\imath$, the normlisation parameter is applied to create the new population as
+\begin{equation}
+n^{\textrm{X Val}}_{\imath} = R^{\textrm{X Val}}_{\imath} n^{\textrm{X Nom}}_{\imath},
+\label{eq:ValidationScaledPopulation}
+\end{equation}
+where $n^{\textrm{X Nom}}_{\imath}$ is the number of events in population $\textrm{X}$ of sub-detector sample $\imath$ for the nominal MC.  The total number of events in each sub-detector sample is then constructed as 
+\begin{equation}
+N^{\textrm{Val}}_{\imath} = \sum^{\textrm{X}} n^{\textrm{X Val}}_{\imath}.
+\label{eq:ValidationNEventsDetector}
+\end{equation}
+The final step in creation of the toy datasets was to vary the total number of events in the sub-detector samples.  The method chosen was the same as that used to generate event weights for the systematic uncertainty studies described in section~\ref{sec:SystematicUncertainties}.  The covariance matrix shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix} was cholesky decomposed and multiplied by a vector of random numbers, all drawn from a Gaussian of mean 0 and width 1.  The sub-detector sample weights were then created by adding 1 to each element of the multiplied vector.  Each scaled sub-detector sample, $N^{\textrm{Val}}_{\imath}$, was then reweighted by the relevant sample weight.  This toy dataset was then passed to the fitter and its output recorded.  The steps outlined above describe one pass of the fitter.  This process was repeated 1,000 times for each validation normalisation set.
+\newline
+\newline
+dfdf
+
+
 
 \section{Applying the fit to ND280 data}
 \label{sec:ND280DataFit}
