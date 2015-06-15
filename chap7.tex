@@ -576,7 +576,7 @@ Using all of the information described in chapter~\ref{chap:NeutrinoInteractionS
 \label{eq:CrossSection}
 \sigma^{\textrm{CC}}_{\textrm{Pb}} = \frac{R_{\textrm{Pb}}N^{\textrm{MC}}_{\textrm{Pb}}\eta_{\textrm{Pb}}}{T_{\textrm{Pb}}\Phi^{\textrm{MC}}\epsilon_{\textrm{Pb}}},
 \end{equation}
-where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS ECal selection.  The shape covariance matrix (shown in Fig.~\ref{TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertanties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quated as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
+where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS ECal selection.  The shape covariance matrix (shown in Fig.~\ref{TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertanties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quoted as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
 \begin{equation}
 \label{eq:CrossSectionUncertainty}
 \sigma_{\sigma^{\textrm{CC}}_{\textrm{Pb}}} = \sigma_{R_{\textrm{Pb}}} \pm 12.5\%,
@@ -596,8 +596,8 @@ The initial validation method used the same Monte Carlo described in section~\re
     1 & 1.0 & 1.0 & 1.0 \\
     2 & 3.0 & 1.0 & 1.0 \\
     3 & 0.7 & 1.5 & 0.8 \\
-    4 & -1.2 & 1.0 & 1.0 \\
-    5 & 1.0 & 1.0 & *0.1* \\
+    4 & 1.0 & 0 & 1.0 \\
+    5 & -0.3 & 1.0 & 1.0 \\
   \end{tabular}
   \caption{The normalisation sets used in validation of the ECal rate fit.  For normalisation set 5, the new normalisation for $R^{\textrm{Other}}$ is only applied to the neutral current events in the Other population.}
   \label{table:ValidationNormalizationSets}
@@ -612,15 +612,180 @@ where $n^{\textrm{X Nom}}_{\imath}$ is the number of events in population $\text
 N^{\textrm{Val}}_{\imath} = \sum^{\textrm{X}} n^{\textrm{X Val}}_{\imath}.
 \label{eq:ValidationNEventsDetector}
 \end{equation}
-The final step in creation of the toy datasets was to vary the total number of events in the sub-detector samples.  The method chosen was the same as that used to generate event weights for the systematic uncertainty studies described in section~\ref{sec:SystematicUncertainties}.  The covariance matrix shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix} was cholesky decomposed and multiplied by a vector of random numbers, all drawn from a Gaussian of mean 0 and width 1.  The sub-detector sample weights were then created by adding 1 to each element of the multiplied vector.  Each scaled sub-detector sample, $N^{\textrm{Val}}_{\imath}$, was then reweighted by the relevant sample weight.  This toy dataset was then passed to the fitter and its output recorded.  The steps outlined above describe one pass of the fitter.  This process was repeated 1,000 times for each validation normalisation set.
+The final step in creation of the toy datasets was to vary the total number of events in the sub-detector samples.  The method chosen was the same as that used to generate event weights for the systematic uncertainty studies described in section~\ref{sec:SystematicUncertainties}.  The covariance matrix shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix} was cholesky decomposed and multiplied by a vector of random numbers, all drawn from a Gaussian of mean 0 and width 1.  The sub-detector sample weights were then created by adding 1 to each element of the multiplied vector.  Each scaled sub-detector sample, $N^{\textrm{Val}}_{\imath}$, was then reweighted by the relevant sample weight.  This toy dataset was then passed to the fitter and its output recorded.  The steps outlined above describe one pass of the fitter.  This process was repeated 10,000 times for each validation normalisation set.
 \newline
 \newline
-dfdf
+The value of $R^{\textrm{Pb}}$ returned for each throw in parameter set 1 is shown in Fig.~\ref{fig:RateFitValParamSet1RPbFit}.  The Gaussian fit quantifies the performance of the fit: the mean specifies the final value and the width specifies a pseudo-error.  To further quantify how well the machinery works, the parameter pull, $P^{\textrm{X}}_{\imath}$, is defined as  
+\begin{equation}
+P^{\textrm{X}}_{\imath} = \frac{R^{\textrm{X Fit}}_{\imath} - R^{\textrm{X Val}}_{\imath}}{\sigma^{\textrm{X Fit}}_{\imath}},
+\label{eq:FitParameterPull}
+\end{equation}
+where $R^{\textrm{X Fit}}_{\imath}$ and $\sigma^{\textrm{X Fit}}_{\imath}$ are the value and error of parameter $\textrm{X}$ returned from the fit for throw $\imath$ respectively.  The MINOS routine used in the fitter returns asymmetric errors and so care must be taken when deciding which error to use in equation~\ref{eq:FitParameterPull}.  It was decided that the positive error would be used when the fitter returned a value higher than the input.  $P^{\textrm{Pb}}$ for parameter set 1 is shown in Fig.~\ref{fig:RateFitValParamSet1RPbPull}.  The Gaussian fit to this distribution has a width close to, but slightly below, 1.  This suggests that the errors returned by the MINOS routine very slightly overestimate the error, but are still a very good representation of the uncertainty.
+\begin{figure}%
+  \centering
+  \subfloat[The returned parameter for each throw.  The fitted Gaussian has a mean of 1.00 and a width of 0.04.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbFit}}
+  \subfloat[The parameter pull for each throw.  The fitted Gaussian has a mean of 0.01 and a width of 0.96.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbPull}}
+  \caption{Distributions of $R^{\textrm{Pb}}$ related information returned from the fitter for the 10,000 fake data throws.  The red dashed lines are Gaussian fits to the distributions.}
+  \label{fig:RateFitValParamSet1RPb}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1.eps} \label{fig:RateFitValsParamSet1}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1.eps} \label{fig:RateFitPullsParamSet1}}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 1.}
+  \label{fig:RateFitValParamSet1}
+\end{figure}
+The performance of the fit for all of the normalisations in normalisation set 1 are shown in Fig.~\ref{fig:RateFitValParamSet1}.  In each case, the fitter returns the correct normalisation and the pull characteristics suggest the fit returns the correct error and is unbiased.  The performance of the fit for normalisation sets 2, 3, 4 and 5 are shown in Fig.~\ref{fig:RateFitValParamSet2}, Fig.~\ref{fig:RateFitValParamSet3}, Fig.~\ref{fig:RateFitValParamSet4} and Fig.~\ref{fig:RateFitValParamSet5} respectively.  Generally speaking, the fitter performs well for all of the situations.  It is clear that the output is sensible even when extreme situations are presented (normalisation set 2) as well as when minor shifts are applied to all three parameters (hormalisation set 3).  Even in un-physical situations the fitter returns the input correctly (normalisation set 5).  It is only when a template is removed (normalisation set 4) that the fitter runs into becomes biased.  However, as Fig.~\ref{fig:RateFitPullsParamSet4} shows, the bias is minor.
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2.eps} \label{fig:RateFitValsParamSet2}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2.eps} \label{fig:RateFitPullsParamSet2}}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 2.}
+  \label{fig:RateFitValParamSet2}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3.eps} \label{fig:RateFitValsParamSet3}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3.eps} \label{fig:RateFitPullsParamSet3}}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 3.}
+  \label{fig:RateFitValParamSet3}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4.eps} \label{fig:RateFitValsParamSet4}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4.eps} \label{fig:RateFitPullsParamSet4}}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 4.}
+  \label{fig:RateFitValParamSet4}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5.eps} \label{fig:RateFitValsParamSet5}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5.eps} \label{fig:RateFitPullsParamSet5}}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 5.}
+  \label{fig:RateFitValParamSet5}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse.eps} \label{fig:RateFitValsParamSet1NoReverse}}
+  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoReverse.eps} \label{fig:RateFitPullsParamSet1NoReverse}}
+  \caption{Performance of the fit with the reverse ECal samples removed for the 10,000 fake data sets when using normalisation set 1.}
+  \label{fig:RateFitValParamSet1NoReverse}
+\end{figure}
+\newline
+\newline
+As discussed in section~\ref{sec:InputSamples}, a set of barrel ECal samples which contain events that failed the selection cuts is included.  To test that the inclusion of this sample is not degrading the performance, an extra set of 10,000 fake data throws were performed for normalisation set 1.  However, the reverse ECal samples were not included in the fitter.  The results of this test are shown in Fig.~\ref{fig:RateFitValParamSet1NoReverse}.  Comparing this with the performance of the fitter with the reverse sample included (Fig.~\ref{fig:RateFitValParamSet1}), it is clear that the absense of the reverse sample causes a wider range of normalisation values to be returned from the fitter.  Additionally, a small bias is introduced to all three normalisations.  While the issues present in the reverse-absent fitter are minor, It should be clear that the inclusion of the reverse ECal samples leads to more accurate and precise results.
 
-
+\subsection{Physics validation of the fitter}
+\label{subsec:PhysicsFitterValidation}
+If the fitter truly works as intended, then it should be able to successfully fit one cross-section model to another.  As described in section~\ref{sec:SystematicUncertainties}, T2K produces a set of GENIE-based ND280 events during software production in addition to the NEUT based events.  As the NEUT events are being used for the MC templates in the fitter, the GENIE samples make an excellent candidate for a fata data test.
+\newline
+\newline 
+The same GENIE sampled used in section~\ref{sec:SystematicUncertainties} was passed through the selection and binned into the ECal samples.  Unfortunately, no GENIE-based sand Monte Carlo or FGD sample was availble for this study.  So, the same NEUT-based sand MC and FGD sample used in the MC template generation was used to fill this gap.  The MC templates were normalised to the same POT as the fake data.  The pre-fit samples are shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit}.
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFit.eps}
+  \caption{The prefit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \label{fig:MCTemplatesWithSystematicsGenieDataPreFit}
+\end{figure}
+\newline
+\newline
+Before the NEUT MC templates were actually fit to the genie fake data, it was necessary to calculate what the fit should be predicting.  To calculate what the true GENIE to NEUT cross-section ratios are, the truth information provided by the MC simulation was used.  For both the GENIE and NEUT samples, the number of true interactions in the DS ECal were recorded, including the target element.  These numbers were weighted to the POT and the ratio taken.  These values are shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}.  
+\begin{table}
+  \begin{tabular}{c c }
+    $\frac{\sigma^{\textrm{Pb}}_{\textrm{GENIE}}}{\sigma^{\textrm{Pb}}_{\textrm{NEUT}}}$ &$\frac{\sigma^{\textrm{C}}_{\textrm{GENIE}}}{\sigma^{\textrm{C}}_{\textrm{NEUT}}}$\\ \hline \hline
+    0.908 & 0.926  \\
+  \end{tabular}
+  \caption{The GENIE to NEUT cross-section ratios, calculated from the truth information provided by the ND280 simulation.}
+  \label{table:GENIEToNEUTTrueCrossSectioRatio}
+\end{table}
+\newline
+\newline
+The MC templates and fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit} were then passed to the fitter, with the fitted normalisations shown in table~\ref{table:NEUTMCTemplatesGENIEDataPostFit} and a comparison of the post-fit MC templates with the GENIE fake data shown in Fig.~\ref{fig:NEUTMCTemplatesGENIEDataPostFit}.  The reduced $\chi^2$ of the fit was found to be 1.71.  
+\begin{table}
+  \begin{tabular}{c c }
+    Normalisation parameter & Fitted value \\ \hline \hline
+    $R^{\textrm{Pb}}$ & $0.79^{+0.08}_{-0.08}$  \\
+    $R^{\textrm{C}}$ & $1.19^{+0.15}_{-0.13}$  \\
+    $R^{\textrm{Other}}$ & $0.94^{+0.08}_{-0.08}$  \\
+  \end{tabular}
+  \caption{The values returned from the fitter when passing the NEUT MC templates and GENIE fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit}.}
+  \label{table:NEUTMCTemplatesGENIEDataPostFit}
+\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostFit.eps}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \label{fig:MCTemplatesWithSystematicsGenieDataPostFit}
+\end{figure}
+The values returned from the fit do not agree with the true values when considering only the errors returned from the fit.  If the extra $12.5\%$ uncertainty defined in equation~\ref{eq:CrossSectionUncertainty} is added in quadrature with the positive error on $R^{\textrm{Pb}}$, the fitted normalisation is in agreement with its corresponding true value.  It should be noted at this point that both the sand muon component and the FGD sample in the fake data are in fact NEUT, rather than GENIE.  So, this test is itself somewhat unrealistic.  While it is not trivial to produce a GENIE-based sand muon Monte Carlo, the FGD sample in the genie fake data can be re-weighted to better represent what the FGD sampel should be.  Using the carbon cross-section ratio shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}, the carbon component of the FGD sample in the GENIE fake data was scaled.  This modified set of fake data was then fit with the NEUT MC templates.  The returned normalisations are shown in table~\ref{table:NEUTMCTemplatesGENIEDataReweightFGDPostFit} and the comparison of the fitted MC templates with the fake data is shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}.  It is clear that the situation is much improved as both the lead and carbon normalisation have moved towards their true values.  The carbon normalisation still disagrees with the simulated value, however it has already been mentioned that the sand muon of the GENIE fake data is actually NEUT.  Ideally, a GENIE-based sand muon MC would be used in the fake data but due to time constraints this was not possible.  As the lead normalisation agrees with the generator prediction, this test can be considered a success.
+\begin{table}
+  \begin{tabular}{c c }
+    Normalisation parameter & Fitted value \\ \hline \hline
+    $R^{\textrm{Pb}}$ & $0.83^{+0.08}_{-0.08}$  \\
+    $R^{\textrm{C}}$ & $1.09^{+0.14}_{-0.12}$  \\
+    $R^{\textrm{Other}}$ & $0.95^{+0.08}_{-0.09}$  \\
+  \end{tabular}
+  \caption{The values returned from the fitter when passing the NEUT MC templates and GENIE fake data which contained a re-weighted FGD sample.}
+  \label{table:NEUTMCTemplatesGENIEDataReweightFGDPostFit}
+\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeighted_PostFit.eps}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \label{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}
+\end{figure}
 
 \section{Applying the fit to ND280 data}
 \label{sec:ND280DataFit}
-Run it
+The event selection described in chapter~\ref{chap:NeutrinoInteractionSelection} was applied to [INSERT POT]~POT of neutrino beam data collected from T2K run 3C.  The FGD sample was also taken from run 3C, corresponding to [INSERT POT]~POT.  The number of selected events in each sample is summarised in table~\ref{table:NSelectedEventsMCDataAllSamples}.
+\begin{table}
+  \begin{tabular}{c c c}
+    Sample & No. Selected (MC) & No. Selected (data) \\ \hline \hline
+   Bottom right ECal & 55749 & 54396 \\
+   Side right ECal & 54011 & 56583 \\
+   Top right ECal & 32006 & 32233 \\
+   Bottom left ECal & 65169 & 65448 \\
+   Side left ECal & 68031 & 66095 \\
+   Top left ECal & 32760 & 33470 \\
+   DS ECal & 35420 & 34372 \\
+   Bottom right ECal (Reverse) & 72112 & 70885 \\
+   Side right ECal (Reverse) & 61159 & 64445 \\
+   Top right ECal (Reverse) & 35997 & 36191 \\
+   Bottom left ECal (Reverse) & 83059 & 80967 \\
+   Side left ECal (Reverse) & 81240 & 84145 \\
+   Top left ECal (Reverse) & 38282 & 40293 \\
+   FGD & 5857 & 5992 \\
+  \end{tabular}
+  \caption{The number of selected events in each sample.}
+  \label{table:NSelectedEventsMCDataAllSamples}
+\end{table}
+\newline
+\newline
+The samples were then passed to the fitter described in section~\ref{sec:ECalRateFit} and the parameters found are shown in table~\ref{table:NEUTMCTemplatesT2KDataFitParameters}.  The minimum $\chi^2$ per degree of freedom was found to be 13.4.  The MC template comparison with the data before and after the $\chi^2$ fit are shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} and Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} respectively.
+\begin{table}
+  \begin{tabular}{c c }
+    Normalisation parameter & Fitted value \\ \hline \hline
+    $R^{\textrm{Pb}}$ & $1.58^{+0.10}_{-0.11}$  \\
+    $R^{\textrm{C}}$ & $1.87^{+0.21}_{-0.18}$  \\
+    $R^{\textrm{Other}}$ & $0.26^{+0.06}_{-0.05}$  \\
+  \end{tabular}
+  \caption{The values returned from the fitter when processing the NEUT MC templates with T2K data.}
+  \label{table:NEUTMCTemplatesT2KDataFitParameters}
+\end{table}
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit.eps}
+  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \label{fig:MCTemplatesWithSystematicsT2KDataPreFit}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit.eps}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \label{fig:MCTemplatesWithSystematicsT2KDataPostFit}
+\end{figure}
+
+
+
 
 
