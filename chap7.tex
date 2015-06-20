@@ -714,7 +714,7 @@ The MC templates and fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematics
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
   \label{fig:MCTemplatesWithSystematicsGenieDataPostFit}
 \end{figure}
 The values returned from the fit do not agree with the true values when considering only the errors returned from the fit.  If the extra $12.5\%$ uncertainty defined in equation~\ref{eq:CrossSectionUncertainty} is added in quadrature with the positive error on $R^{\textrm{Pb}}$, the fitted normalisation is in agreement with its corresponding true value.  It should be noted at this point that both the sand muon component and the FGD sample in the fake data are in fact NEUT, rather than GENIE.  So, this test is itself somewhat unrealistic.  While it is not trivial to produce a GENIE-based sand muon Monte Carlo, the FGD sample in the genie fake data can be re-weighted to better represent what the FGD sampel should be.  Using the carbon cross-section ratio shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}, the carbon component of the FGD sample in the GENIE fake data was scaled.  This modified set of fake data was then fit with the NEUT MC templates.  The returned normalisations are shown in table~\ref{table:NEUTMCTemplatesGENIEDataReweightFGDPostFit} and the comparison of the fitted MC templates with the fake data is shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}.  It is clear that the situation is much improved as both the lead and carbon normalisation have moved towards their true values.  The carbon normalisation still disagrees with the simulated value, however it has already been mentioned that the sand muon of the GENIE fake data is actually NEUT.  Ideally, a GENIE-based sand muon MC would be used in the fake data but due to time constraints this was not possible.  As the lead normalisation agrees with the generator prediction, this test can be considered a success.
@@ -731,7 +731,7 @@ The values returned from the fit do not agree with the true values when consider
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeighted_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
   \label{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}
 \end{figure}
 
@@ -775,16 +775,154 @@ The samples were then passed to the fitter described in section~\ref{sec:ECalRat
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit.eps}
-  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
   \label{fig:MCTemplatesWithSystematicsT2KDataPreFit}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars repostsent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
   \label{fig:MCTemplatesWithSystematicsT2KDataPostFit}
 \end{figure}
+After the normalisation parameters had been returned from the fit, the $\chi^2/$NDOF as a function of the normalisation parameters could be found.  This was achieved by varying a single normalisation parameter whilst keeping all other normalisation parameters fixed at their $\chi^2$ minimum value.  At each step in the single normalisation parameter variation, the $\chi^2/NDOF$ was calculated.  The $chi^2$/NDOF as a function of each parameter is shown in Fig.~\ref{fig:Chi2FunctionOfParameter}.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[$R^{\textrm{Pb}}$.]{\label{fig:Chi2FunctionOfParameterPb}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par0.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[$R^{\textrm{C}}$.]{\label{fig:Chi2FunctionOfParameterC}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par1.eps}}
+\end{minipage}\par\medskip
+\centering
+ \subfloat[$R^{\textrm{Other}}$.]{\label{fig:Chi2FunctionOfParameterOther}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par2.eps}}
+\caption{The $\chi^2$/NDOF as a function of the normalisation parameters.}
+\label{fig:Chi2FunctionOfParameter}
+\end{figure}
+\newline
+\newline
+It should be clear from Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} that the Monte Carlo is not a good fit to the data.  Before the fitting, it is clear that there are shape differences between the data and Monte Carlo templates.  For example, there is a minor data deficit in the bottom-right ECal module and a larger data excess in the side-right ECal.  A similar situtation occurs between the bottom-left reverse and side-left reverse samples.  Fig.~\ref{fig:ShapeCorrelationMatrix} shows the shape-only correlation matrix for the samples used in the fit.  The correlation matrix shows that all of the barrel samples are highly correlated with each other, as are all of the barrel-reverse samples.  This suggests that the fit has little freedom to easily resolve the shape differences.  This fact is enforced by the pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit}, where the only way to resolve such shape differences with highly correlated constraints is to dramatically alter the normalisation of the templates. 
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/data/ShapeCorrelationMatrix.eps}
+  \caption{The shape-only correlation matrix for the samples used in the fit.}
+  \label{fig:ShapeCorrelationMatrix}
+\end{figure}
+The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} can help to illuminate the underlying issue.  An area normalised comparison of a sub-set of the MC templates with the run3C data is shown in Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm} for the barrel samples and Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm} for the barrel-reverse samples.  
+\begin{figure}%
+  \centering
+  \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm}}
+  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm}}
+  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.}
+  \label{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm}
+\end{figure}
+\begin{figure}%
+  \centering
+  \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
+  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
+  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel-reverse ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.}
+  \label{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm}
+\end{figure}
+As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction samples in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the other template.  This finding suggests that it is the composition of the other template that is the cause of the fit failure.  The other template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background.  The number of events in the other template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively.  
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Bottom left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Bottom right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Side left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[Side right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Top left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB.eps}}
+\end{minipage}\par\medskip
+\caption{The number of events the other template as a function of true neutrino energy for the barrel ECal samples.  The distributions are broken down by true neutrino interaction location.}
+\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Bottom left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Bottom right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Side left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[Side right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Top left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse.eps}}
+\end{minipage}\par\medskip
+\caption{The number of events the other template as a function of true neutrino energy for the barrel reverse ECal samples.  The distributions are broken down by true neutrino interaction location.}
+\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse}
+\end{figure}
+The distributions have been separated into true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 tracker which is the only place where the neutrino flux has been studied in great detail. 
+\newline
+\newline
+Under normal circumstances, the background modelling needs extra study.  However, due to time constraints, it is sufficient to introduce an adhoc uncertainty which encompasses the lack of background understanding.  The background modelling has already been discussed as a possible cause of the fit failure.  The barrel-reverse samples, which contain the largest background, can be used to quantify this lack of understanding.  Table~\ref{table:NSelToNRevRatio} shows the ratio of the number of events in each barrel sample to the number of events in each barrel-reverse sample for both data and MC.  Also included in table~\ref{table:NSelToNRevRatio} is the percentage difference between the data and MC ratio.
+\begin{table}
+  \begin{tabular}{c c c c }
+    Barrel module & NSel/NRev (MC) & NSel/NRev (data) & \% diff \\ \hline \hline
+    Bottom right & 0.773 & 0.767 & 0.7\% \\
+    Side right & 0.883 & 0.878 & 0.6\% \\
+    Top right & 0.889 & 0.891 & 0.2\% \\
+    Bottom left & 0.785 & 0.808 & 2.9\% \\
+    Side left & 0.837 & 0.785 & 6.2\% \\
+    Top left & 0.856 & 0.831 & 2.9\% \\
+  \end{tabular}
+  \caption{Comparison of the number of events between the barrel and barrel-reverse samples.  The second and thrid column show the ratio of the number of events in the barrel samples to the number of events in the barrel-reverse samples for Monte Carlo and data respectively.  The fourth column shows the percentage difference between the Monte Carlo and data ratios.}
+  \label{table:NSelToNRevRatio}
+\end{table}
+The percentage difference between the data and Monte Carlo has a geometric dependence.  This strong dependence provides an extra hint that this background uncertainty is perhaps due to the neutrino beam flux.  Regardless of the provenance of the underlying issue, the ratios presented in table~\ref{table:NSelToNRevRatio} provide a good candidate to describe this adhoc uncertainty.  The ratio itself essentially describes a size comparison of signal to background.  By quantiying this data and Monte Carlo difference, the uncertainty on the signal to background ratio is crudely assessed.  To include this extra information in the fit, the percentage difference shown in the fourth column of table~\ref{table:NSelToNRevRatio} needs to be included in the shape-only covariance matrix.  Specfically, for each barrel sample and its reverse counterpart, the corresponding percentage difference is added to the diagonal element of the covariance matrix.  Using the modified covariance matrix as an input, the fit was then re-run using the NEUT MC templates and run3C data.  The number of events (post-fit) is shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFitWithFudge} and the normalisation parameters found by the fit is shown in table~\ref{table:NEUTMCTemplatesT2KDataFitParametersWithFudge}.  The minimum $\chi^2$/NDOF returned by the fit was 2.54.
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFudge.eps}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data when including the adhoc uncertainty shown in table~\ref{table:NSelToNRevRatio}.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic and adhoc uncertainties on the number of NEUT MC events.  The black points are the T2K data.}
+  \label{fig:MCTemplatesWithSystematicsT2KDataPostFitWithFudge}
+\end{figure}
+\begin{table}
+  \begin{tabular}{c c }
+    Normalisation parameter & Fitted value \\ \hline \hline
+    $R^{\textrm{Pb}}$ & $1.10^{+0.11}_{-0.10}$  \\
+    $R^{\textrm{C}}$ & $1.10^{+0.14}_{-0.12}$  \\
+    $R^{\textrm{Other}}$ & $0.90^{+0.10}_{-0.11}$  \\
+  \end{tabular}
+  \caption{The values returned from the fitter modified with the adhoc uncertainty  when processing the NEUT MC templates with T2K data.}
+  \label{table:NEUTMCTemplatesT2KDataFitParametersWithFudge}
+\end{table}
+The output of the fitter is more reassuring.  The reduced $\chi^2$, while still a little high, suggests that the Monte Carlo is a much better fit to the data.  Notably, all of the fitted normalisation parameters agree with the NEUT prediction within their shape-only error.
 
+\section{The $\nu_\mu$ charged current inclusive cross-section on lead}
+\label{sec:PbCrossSection}
+Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainity, which is the same uncertainty for the CC inclusive cross-section, was found to be
+\begin{equation}
+R^{\textrm{Pb}} = 1.10^{+16.4\%}_{-15.5\%}.
+\label{eq:RPbWithFullPercentageError}
+\end{equation}
 
 
 
