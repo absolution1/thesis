@@ -918,11 +918,32 @@ The output of the fitter is more reassuring.  The reduced $\chi^2$, while still 
 
 \section{The $\nu_\mu$ charged current inclusive cross-section on lead}
 \label{sec:PbCrossSection}
-Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainity, which is the same uncertainty for the CC inclusive cross-section, was found to be
+Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainty, which is the same uncertainty value as for the CC inclusive cross-section, was found to be
 \begin{equation}
 R^{\textrm{Pb}} = 1.10^{+16.4\%}_{-15.5\%}.
 \label{eq:RPbWithFullPercentageError}
 \end{equation}
+The dimensions and quantity of the lead absorbers in the DS ECal is described in chapter~\ref{chap:T2KExperiment} and section~\ref{sec:SystematicUncertainties}.  Taking the density of lead to be 11.34~g/cm$^{3}$, the total mass of lead in the DS ECal is 2661~kg.  The atomic mass of lead is $207.2\pm0.1$ atomic units [REFERENCE], which infers there are $7.74\times10^{27}$ lead nuclei present in the Monte Carlo simulation of the DS ECal.  The lack of antimony in the simulation has already been quantified in the final uncertainty above.
+\newline
+\newline
+The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} had a $53.0\%$ efficiency and $72.4\%$ purity for selecting charged-current neutrino interactions in the active volume of the DS ECal.  Considering interactions on lead alone, the efficiency and purity are $53.8\%$ and $49.7\%$ respectively with 32427 reconstructed events selected when scaled to the collected data POT.
+\newline
+\newline
+Fig.~\ref{fig:Run3CFlux} shows the simulated neutrino flux (per $10^{21}$~POT) for T2K run3C.  
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/measurement/xsec/run3c_flux.eps}
+  \caption{The simulated flux for T2K run3C as a function of neutrino energy.}
+  \label{fig:Run3CFlux}
+\end{figure}
+The POT-scaled integral of this distribution provides the total neutrino flux used in this study.  As the analysis ran over $1.31\times10^{20}$~POT, the integral of Fig.~\ref{fig:Run3CFlux} multiplied by the collected POT gives a total neutrino flux of $1.22\times10^{12}$~cm$^{-2}$.
+\newline
+\newline
+Collating all of this information together and applying equation~\ref{eq:CrossSection}, the T2K flux-averaged $\nu_\mu$ charged current cross-section on lead is measured as 
+\begin{equation}
+\langle \sigma^{\textrm{CC}}_{\textrm{Pb}} \rangle_{\phi} = 1.68^{+0.28}_{-0.26} \times 10^{-38} \textrm{ cm}^2 \textrm{ nucleon}^{-1}.
+\end{equation}
+
 
 
 
