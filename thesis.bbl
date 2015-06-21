@@ -1,35 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Phys.Rev.Lett.19.1264}
-S.~Weinberg,
-\newblock Phys. Rev. Lett. {\bf 19}, 1264 (1967).
-
-\bibitem{Phys.Rev.D2.1285}
-S.~L. Glashow, J.~Iliopoulos, and L.~Maiani,
-\newblock Phys. Rev. {\bf D2}, 1285 (1970).
-
-\bibitem{hep-ph/0410370}
-S.~Willenbrock,
-\newblock (2004), hep-ph/0410370.
-
-\bibitem{Abe2011106}
-K.~Abe {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 659},
-  106  (2011).
-
-\bibitem{PhysRevLett.112.061802}
-(T2K Collaboration), K.~Abe {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 112}, 061802 (2014).
-
-\bibitem{PhysRevLett.113.241803}
-(T2K Collaboration), K.~Abe {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 113}, 241803 (2014).
-
-\bibitem{PhysRevD.87.092003}
-K.~Abe {\em et~al.},
-\newblock Phys. Rev. D {\bf 87}, 092003 (2013).
-
 \bibitem{Brun199781}
 R.~Brun and F.~Rademakers,
 \newblock Nuclear Instruments and Methods in Physics Research Section A:
@@ -79,28 +49,6 @@ S.~Agostinelli {\em et~al.},
 \newblock Nuclear Instruments and Methods in Physics Research Section A:
   Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 506},
   250  (2003).
-
-\bibitem{Hough:1959qva}
-P.~a. Hough,
-\newblock Conf.Proc. {\bf C590914}, 554 (1959).
-
-\bibitem{Duda:1972:UHT:361237.361242}
-R.~O. Duda and P.~E. Hart,
-\newblock Commun. ACM {\bf 15}, 11 (1972).
-
-\bibitem{331821}
-J.~Vuillemin,
-\newblock Fast linear hough transform,
-\newblock in {\em Application Specific Array Processors, 1994. Proceedings.
-  International Conference on}, pp. 1--9, 1994.
-
-\bibitem{PhysRevD.78.032003}
-A.~Rodriguez {\em et~al.},
-\newblock Phys. Rev. D {\bf 78}, 032003 (2008).
-
-\bibitem{PhysRevD.83.012005}
-Y.~Nakajima {\em et~al.},
-\newblock Phys. Rev. D {\bf 83}, 012005 (2011).
 
 \bibitem{1748-0221-8-10-P10019}
 D.~Allan {\em et~al.},
