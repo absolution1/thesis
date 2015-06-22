@@ -1,23 +1,77 @@
-\BOOKMARK [0][-]{chapter.1}{ND280 software and existing ECal event reconstruction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Monte Carlo production software}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Neutrino flux simulation}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Neutrino interaction simulation}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{ND280 detector simulation}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{Detector response simulation}{section.1.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Real data processing software}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.3}{Main software chain}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.3.1}{Detector calibration}{section.1.3}% 9
-\BOOKMARK [2][-]{subsection.1.3.2}{Event reconstruction}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.3}{Data reduction and summarising}{section.1.3}% 11
-\BOOKMARK [1][-]{section.1.4}{ECal event reconstruction}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.4.1}{Hit preparation}{section.1.4}% 13
-\BOOKMARK [2][-]{subsection.1.4.2}{Basic clustering}{section.1.4}% 14
-\BOOKMARK [2][-]{subsection.1.4.3}{Cluster combination}{section.1.4}% 15
-\BOOKMARK [2][-]{subsection.1.4.4}{Cluster expansion}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.5}{3D cluster formation}{section.1.4}% 17
-\BOOKMARK [2][-]{subsection.1.4.6}{3D hit reconstruction}{section.1.4}% 18
-\BOOKMARK [2][-]{subsection.1.4.7}{Energy reconstruction}{section.1.4}% 19
-\BOOKMARK [2][-]{subsection.1.4.8}{Event classification}{section.1.4}% 20
-\BOOKMARK [0][-]{appendix*.3}{Bibliography}{}% 21
-\BOOKMARK [0][-]{appendix*.4}{List of Figures}{}% 22
-\BOOKMARK [0][-]{appendix*.5}{List of Tables}{}% 23
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{The state of the field}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{The T2K Experiment}{}% 3
+\BOOKMARK [1][-]{section.2.1}{T2K beam}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.1.1}{Accelerator complex}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.2}{Neutrino beamline}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.3}{Off-axis beam}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Near detector complex}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Multi-Pixel Photon Counter}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{INGRID}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{ND280}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{The far detector}{section.2.2}% 12
+\BOOKMARK [0][-]{chapter.3}{ND280 software and existing ECal event reconstruction}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Monte Carlo production software}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Neutrino flux simulation}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Neutrino interaction simulation}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.3}{ND280 detector simulation}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.4}{Detector response simulation}{section.3.1}% 18
+\BOOKMARK [1][-]{section.3.2}{Real data processing software}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Main software chain}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Detector calibration}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Event reconstruction}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.3}{Data reduction and summarising}{section.3.3}% 23
+\BOOKMARK [1][-]{section.3.4}{ECal event reconstruction}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.4.1}{Hit preparation}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.2}{Basic clustering}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.3}{Cluster combination}{section.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.4.4}{Cluster expansion}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.5}{3D cluster formation}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.6}{3D hit reconstruction}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.7}{Energy reconstruction}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.8}{Event classification}{section.3.4}% 32
+\BOOKMARK [0][-]{chapter.4}{Enhanced ECal reconstruction}{}% 33
+\BOOKMARK [1][-]{section.4.1}{The Hough transform}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.1.1}{Line-point duality}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.2}{The parameter space}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.3}{Redefinition of parameters}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.4}{Discretisation of the parameter space}{section.4.1}% 38
+\BOOKMARK [1][-]{section.4.2}{ECal application of the Hough transform}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.2.1}{Modelling the ECal bar}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.2}{Parameter space generation}{section.4.2}% 41
+\BOOKMARK [2][-]{subsection.4.2.3}{Parameter space analysis}{section.4.2}% 42
+\BOOKMARK [2][-]{subsection.4.2.4}{3D track reconstruction}{section.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.2.5}{Track pairwise crossing reconstruction}{section.4.2}% 44
+\BOOKMARK [1][-]{section.4.3}{Output of the reconstruction}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.4}{Validation of the reconstruction}{chapter.4}% 46
+\BOOKMARK [0][-]{chapter.5}{Magnetic field simulation in ND280}{}% 47
+\BOOKMARK [1][-]{section.5.1}{Magnetic field model in the ND280 flux return}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{Effect of magnetic field on the ECal}{chapter.5}% 49
+\BOOKMARK [0][-]{chapter.6}{Selection of neutrino interactions in the ECal}{}% 50
+\BOOKMARK [1][-]{section.6.1}{Signal definition}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.2}{Monte Carlo sample}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.3}{Vertex reconstruction}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.4}{Monte Carlo selection}{chapter.6}% 54
+\BOOKMARK [2][-]{subsection.6.4.1}{Selection cuts}{section.6.4}% 55
+\BOOKMARK [2][-]{subsection.6.4.2}{Performance of selection}{section.6.4}% 56
+\BOOKMARK [0][-]{chapter.7}{Measurement of the \040charged current inclusive cross-section on Pb}{}% 57
+\BOOKMARK [1][-]{section.7.1}{Measurement method}{chapter.7}% 58
+\BOOKMARK [1][-]{section.7.2}{Input samples to the fit}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.3}{The ECal rate fit}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.4}{Systematic uncertainties}{chapter.7}% 61
+\BOOKMARK [2][-]{subsection.7.4.1}{Flux systematic evaluation}{section.7.4}% 62
+\BOOKMARK [2][-]{subsection.7.4.2}{Cross-section systematic evaluation}{section.7.4}% 63
+\BOOKMARK [2][-]{subsection.7.4.3}{ECal detector systematic evaluation}{section.7.4}% 64
+\BOOKMARK [2][-]{subsection.7.4.4}{FGD detector uncertainty evaluation}{section.7.4}% 65
+\BOOKMARK [2][-]{subsection.7.4.5}{The measured cross-section uncertainty}{section.7.4}% 66
+\BOOKMARK [1][-]{section.7.5}{Validation of method}{chapter.7}% 67
+\BOOKMARK [2][-]{subsection.7.5.1}{Validation of the fit machinery}{section.7.5}% 68
+\BOOKMARK [2][-]{subsection.7.5.2}{Physics validation of the fitter}{section.7.5}% 69
+\BOOKMARK [1][-]{section.7.6}{Applying the fit to ND280 data}{chapter.7}% 70
+\BOOKMARK [1][-]{section.7.7}{The \040charged current inclusive cross-section on lead}{chapter.7}% 71
+\BOOKMARK [0][-]{chapter.8}{Discussion and conclusions}{}% 72
+\BOOKMARK [1][-]{section.8.1}{Discussion}{chapter.8}% 73
+\BOOKMARK [1][-]{section.8.2}{Conclusions}{chapter.8}% 74
+\BOOKMARK [0][-]{appendix*.138}{Bibliography}{}% 75
+\BOOKMARK [0][-]{appendix*.139}{List of Figures}{}% 76
+\BOOKMARK [0][-]{appendix*.140}{List of Tables}{}% 77

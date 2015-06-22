@@ -1,5 +1,52 @@
 \begin{thebibliography}{10}
 
+\bibitem{PauliOpenLetter}
+W.~Pauli,
+\newblock Open letter to the {Gauverein} meeting in {Tubingen}, 1930.
+
+\bibitem{Cowan20071956}
+C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire,
+\newblock Science {\bf 124}, 103 (1956),
+  http://www.sciencemag.org/content/124/3212/103.full.pdf.
+
+\bibitem{PhysRevLett.9.36}
+G.~Danby {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 9}, 36 (1962).
+
+\bibitem{Kodama2001218}
+K.~Kodama {\em et~al.},
+\newblock Physics Letters B {\bf 504}, 218  (2001).
+
+\bibitem{PhysRevLett.81.1562}
+Y.~Fukuda {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 81}, 1562 (1998).
+
+\bibitem{PhysRevLett.87.071301}
+Q.~R. Ahmad {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 87}, 071301 (2001).
+
+\bibitem{PhysRevLett.90.021802}
+K.~Eguchi {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 90}, 021802 (2003).
+
+\bibitem{Abe2011106}
+K.~Abe {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 659},
+  106  (2011).
+
+\bibitem{PhysRevLett.112.061802}
+(T2K Collaboration), K.~Abe {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 112}, 061802 (2014).
+
+\bibitem{PhysRevLett.113.241803}
+(T2K Collaboration), K.~Abe {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 113}, 241803 (2014).
+
+\bibitem{PhysRevD.87.092003}
+K.~Abe {\em et~al.},
+\newblock Phys. Rev. D {\bf 87}, 092003 (2013).
+
 \bibitem{Brun199781}
 R.~Brun and F.~Rademakers,
 \newblock Nuclear Instruments and Methods in Physics Research Section A:
@@ -53,5 +100,27 @@ S.~Agostinelli {\em et~al.},
 \bibitem{1748-0221-8-10-P10019}
 D.~Allan {\em et~al.},
 \newblock Journal of Instrumentation {\bf 8}, P10019 (2013).
+
+\bibitem{Hough:1959qva}
+P.~a. Hough,
+\newblock Conf.Proc. {\bf C590914}, 554 (1959).
+
+\bibitem{Duda:1972:UHT:361237.361242}
+R.~O. Duda and P.~E. Hart,
+\newblock Commun. ACM {\bf 15}, 11 (1972).
+
+\bibitem{331821}
+J.~Vuillemin,
+\newblock Fast linear hough transform,
+\newblock in {\em Application Specific Array Processors, 1994. Proceedings.
+  International Conference on}, pp. 1--9, 1994.
+
+\bibitem{PhysRevD.78.032003}
+A.~Rodriguez {\em et~al.},
+\newblock Phys. Rev. D {\bf 78}, 032003 (2008).
+
+\bibitem{PhysRevD.83.012005}
+Y.~Nakajima {\em et~al.},
+\newblock Phys. Rev. D {\bf 83}, 012005 (2011).
 
 \end{thebibliography}
