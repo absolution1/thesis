@@ -4,15 +4,77 @@
 %% Restart the numbering to make sure that this is definitely page #1!
 \pagenumbering{arabic}
 
-The field of neutrino physics is currently undergoing a revolution.  With its tenuous postulation~\cite{PauliOpenLetter} acting as a future omen, the neutrino's mark on history would not become apparent from its discovery~\cite{Cowan20071956, PhysRevLett.9.36, Kodama2001218}, but rather from a spate of surprising discoveries at the end of the 20th century~\cite{PhysRevLett.81.1562, PhysRevLett.87.071301, PhysRevLett.90.021802} which conclusively proved that the Standard Model, while very successful, was incomplete.  This revelation was experimental proof of Maki, Nagakawa and Sakata's extension~\cite{Maki01111962} to Pontecorvo's theory of neutrino oscillation ~\cite{Pontecorvo} with the inclusion of the Mikheyev-Smirnov-Wolfenstein (MSW) effect~\cite{PhysRevD.17.2369,Mikheev:1986gs}.  The findings were groundbreaking as the underlying theory requires massive neutrinos, which is in direct contradiction to the Standard Model.  The, now, standard theory of neutrino oscillation defines three neutrino flavours and three neutrino masses.  However, the map between flavour and mass is not one-to-one, but rather a rotation of mass space onto flavour space as
+The field of neutrino physics is currently undergoing a revolution.  With its tenuous postulation~\cite{PauliOpenLetter} acting as a future omen, the neutrino's mark on history would not become apparent from its discovery~\cite{Cowan20071956, PhysRevLett.9.36, Kodama2001218}, but rather from a spate of surprising discoveries at the end of the 20th century~\cite{PhysRevLett.81.1562, PhysRevLett.87.071301, PhysRevLett.90.021802} which conclusively proved that the Standard Model, while very successful, was incomplete.  This revelation was experimental proof of Maki, Nagakawa and Sakata's extension~\cite{Maki01111962} to Pontecorvo's theory of neutrino oscillation ~\cite{Pontecorvo} with the inclusion of the Mikheyev-Smirnov-Wolfenstein (MSW) effect~\cite{PhysRevD.17.2369,Mikheev:1986gs}.  The findings were groundbreaking as the underlying theory requires massive neutrinos, which is in direct contradiction to the Standard Model.  The, now, standard theory of neutrino oscillation defines three neutrino flavours and three neutrino masses.  However, the map between flavour and mass is not one-to-one, but rather a rotation of mass space onto flavour space.  The main consequence of this rotation is that the flavour eigenstates are a superposition of mass eigenstates, namely
 \begin{equation}
-\begin{pmatrix}
-\nu_e \\
-    \nu_\mu \\
-    \nu_\tau
-\end{pmatrix}
+\ket{\nu_\alpha} = \sum^{3}_{i=k}U^{\ast}_{\alpha k}\ket{\nu_k},
+\label{eq:NeutrinoEigenstates}
 \end{equation}
+where $\alpha \in \{e,\mu, \tau\}$, $\nu_k$ are the neutrino mass eigenstates and $U^{\ast}_{\alpha k}$ is an element of a unitary rotation matrix which is known as the PMNS mixing matrix.  As there are 3 mass and flavour eigenstates, the PMNS matrix is a $3\times3$ matrix and is often parameterised as 
+\begin{equation}
+U \equiv
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & c_{23} & s_{23} \\
+3 & -s_{23} & c_{23}
+\end{pmatrix}
+\begin{pmatrix}
+c_{13} & 0 & s_{13}e^{-i\delta} \\
+0 & 1 & 0 \\
+-s_{13}e^{i\delta} & 0 & c_{13} 
+\end{pmatrix}
+\begin{pmatrix}
+c_{12} & s_{12} & 0 \\
+-s_{12} & c_{12} & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+,
+\label{eq:PMNSMatrix}
+\end{equation}
+where $c_{ij} \equiv \cos\theta_{ij}$ and $s_{ij} \equiv \sin\theta_{ij}$. $\theta_{ij}$ are known as the mixing angles which parameterise how strong mixings between the flavour and mass eigenstates are and $\delta$ is a CP violating phase.  The most surprising observable feature of this mechanism is the non-zero probability to detect a neutrino of specific flavour which was created at source in a different flavour state.  By propagating the mass eigenstates through time, one can arrive at this probability which has the following form 
+\begin{equation}
+P(\nu_\alpha \rightarrow \nu_\beta) = |\braket{\nu_\beta|\nu\left(t\right)}|^2 = |U_{\beta k} e^{-iE_{k}t}  U^{\ast}_{\alpha k}|^2,
+\label{eq:NeutrinoOscillationProbability}
+\end{equation}
+where $\nu\left(t\right)$ is the time-dependent neutrino mass eigenstate and $E_k$ is the energy of the $\nu_k$.  For an accelerator-based neutrino oscillation experiment, the beam will be $\nu_\mu$ dominated.  So, the $\nu_\mu$ survival probability, $P(\nu_\mu \rightarrow \nu_\mu)$, and $\nu_e$ appearance probability, $P(\nu_\mu \rightarrow \nu_e)$, have are typically of interest and can be approximated in the following forms
+\begin{equation}
+P(\nu_\mu \rightarrow \nu_\mu) \approx 1 - \cos^{4}\theta_{13}\sin^{2}2\theta_{23}\sin^2\left(1.27\frac{\Delta m^{2}_{23}}{\left(\textrm{eV}^2\right)}\frac{L}{\left(\textrm{km}\right)}\frac{\left(\textrm{GeV}\right)}{E}\right)
+  \label{eq:MuonNeutrinoSurvivalProbability}
+\end{equation}
+\begin{equation}
+P(\nu_\mu \rightarrow \nu_\mu) \approx \sin^{2}2\theta_{13}\sin^{2}\theta_{23}\sin^2\left(1.27\frac{\Delta m^{2}_{23}}{\left(\textrm{eV}^2\right)}\frac{L}{\left(\textrm{km}\right)}\frac{\left(\textrm{GeV}\right)}{E}\right),
+  \label{eq:ElectronNeutrinoAppearanceProbability}
+\end{equation}
+where $\Delta m^{2}_{ij} \equiv m^{2}_{i} - m^{2}_{j}$, $L$ is the distance the neutrino propagates and $E$ is the energy of the neutrino.
 
 \section{The state of the field}
 \label{sec:StateOfTheField}
-Neutrino oscillations are really kool
+Data provided from a wide range of experiments show excellent agreement with the theory of neutrino oscillation and with a 3 flavour neutrino picture.  Global fits applied to the data provided by these experiments gives best fit values for the oscillation parameters, which are summarised in table~\ref{table:NeutrinoOscillationParameterValues}~\cite{Agashe:2014kda}.
+\begin{table}
+  \begin{tabular}{l c }
+    Parameter & best-fit $(\pm1\sigma)$ \\ \hline \hline
+    $\Delta m^2_{12}$ [$10^{-5}\textrm{eV}^2$] & $7.54^{+0.26}_{-0.22}$ \\
+    $|\Delta m^2|$ [$10^{-3}\textrm{eV}^2$] & $2.43\pm0.06$ $(2.36\pm0.06)$ \\
+    $\sin^2\theta_{12}$ & $0.308\pm0.017$ \\
+    $\sin^2\theta_{23}$, $\Delta m^2 > 0$ & $0.437^{+0.033}_{-0.023}$ \\
+    $\sin^2\theta_{23}$, $\Delta m^2 < 0$ & $0.455^{+0.039}_{-0.031}$ \\
+    $\sin^2\theta_{13}$, $\Delta m^2 > 0$ & $0.0234^{+0.0020}_{-0.0019}$ \\
+    $\sin^2\theta_{13}$, $\Delta m^2 < 0$ & $0.0240^{+0.019}_{-0.022}$ \\
+    $\sin^2\theta_{13}$, $\Delta m^2 < 0$ & $0.0240^{+0.019}_{-0.022}$ \\
+    $\delta/\pi$ ($2\sigma$ range quoted) & $1.39^{+0.38}_{-0.27}$ $(1.31^{+0.29}_{-0.33})$ \\
+  \end{tabular}
+  \caption{The best-fit values of the 3-neutrino oscillation parameters. $\Delta m^2 \equiv m^2_3 - \left(m^2_2 - m^2_1\right)/2$. The values (values in brackets) correspond to $m_1 < m_2 < m_3$ ($m_3 < m_1 < m_2$)~\cite{Agashe:2014kda}.}
+  \label{table:NeutrinoOscillationParameterValues}
+\end{table}
+The experiments which provided the data inputs to the global fit generally fall into one of four catagories, with each catagory sensitive to a different subset of the neutrino oscillation parameters.
+\newline
+\newline
+Solar neutrino experiments detect neutrinos generated in the core of the Sun as a result of nuclear reaction chains.  Such experiments are primarily sensitive to $\theta_{12}$ and $\Delta m^{2}_{12}$ which are often referred to as the solar mixing parameters.  The final state neutrinos created in the Sun's core are MeV-scale $\nu_e$ but, because of propagation through the core's surrounding matter, the MSW effect results in a highly pure state of $\nu_2$ at the Sun's surface.  As $\nu_2$ is a mass eigenstate, no oscillation occurs between the surface of the Sun and the Earth.  Homestake~\cite{0004-637X-496-1-505}, SAGE~\cite{PhysRevC.80.015807} and SNO~\cite{PhysRevLett.87.071301} are examples of such experiments.
+\newline
+\newline
+Reactor neutrino experiments measure $\bar{\nu}_e$ disappearance provided by inverse $\beta$ decay in nuclear reactors with an average neutrino energy of 3~MeV.  The baseline for oscillations varies between experiments, but a baseline of around 1~km provides excellent sensitivity to $\theta_{13}$. Examples of reactor experiments are CHOOZ~\cite{CHOOZ}, Double CHOOZ~\cite{Abe201366}, Daya Bay~\cite{PhysRevLett.108.171803} and RENO~\cite{PhysRevLett.108.191802}.
+\newline
+\newline
+Atmospheric neutrino experiments detect neutrinos which are produced from $\pi$ and $K$ mesons, created bycosmic rays interactions with the upper atmosphere of the Earth, decay.  The neutrinos produced are a mixture of $\nu_\mu$, $\bar{\nu}_\mu$, $\nu_e$ and $\bar{\nu}_e$.  Because the cosmic ray flux is fairly uniform, atmospheric neutrino experiments are exposed to neutrinos from all directions, which results in a very wide range of oscillation baselines.  The oscillation parameters that such experiments are sensitive to are $\theta_23$ and $\Delta m^2_{13}$. Super-Kamiokande~\cite{PhysRevLett.81.1562} is an example of an atmospheric neutrino experiment. 
+\newline
+\newline
+Accelerator neutrino experiments produce beams of high purity $\nu_\mu$ (or $\bar{\nu_\mu}$) at GeV-scale energy with wide ranging baselines which are generally $\mathcal{O}\left(100~\textrm{km}\right)$.  The highly man-made nature of such experiments allows almost complete control over $L/E$ allowing careful tuning of parameter sensitivity.  Accelerator neutrino experiments are generally sensitive to $\theta_{13}$, $\theta_{23}$, $\Delta m^{2}_{13}$ and $\delta$. K2K~\cite{PhysRevD.74.072003}, MINOS~\cite{PhysRevLett.97.191801}, T2K~\cite{PhysRevLett.112.061802} and NO$\nu$A~\cite{Ayres:2004js}are examples of such experiments.
