@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: h-physrev.bst
 Database file #1: mythesis.bib
-You've used 22 entries,
+You've used 33 entries,
             1946 wiz_defined-function locations,
-            764 strings with 37527 characters,
-and the built_in function-call counts, 4555 in all, are:
-= -- 309
-> -- 220
+            839 strings with 40523 characters,
+and the built_in function-call counts, 6556 in all, are:
+= -- 451
+> -- 318
 < -- 0
-+ -- 83
-- -- 45
-* -- 354
-:= -- 590
-add.period$ -- 22
-call.type$ -- 22
++ -- 119
+- -- 64
+* -- 496
+:= -- 858
+add.period$ -- 33
+call.type$ -- 33
 change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 238
-empty$ -- 458
-format.name$ -- 67
-if$ -- 1069
+cite$ -- 33
+duplicate$ -- 353
+empty$ -- 661
+format.name$ -- 97
+if$ -- 1534
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 21
-newline$ -- 91
-num.names$ -- 22
-pop$ -- 99
+int.to.str$ -- 33
+missing$ -- 32
+newline$ -- 135
+num.names$ -- 33
+pop$ -- 152
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 222
+skip$ -- 308
 stack$ -- 0
-substring$ -- 287
-swap$ -- 63
+substring$ -- 376
+swap$ -- 91
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 42
-width$ -- 24
-write$ -- 161
+while$ -- 58
+width$ -- 35
+write$ -- 251
