@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  26 JUN 2015 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  3 JUL 2015 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,40 +1211,44 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.81 
-      [2] [3]))
-Underfull \hbox (badness 10000) in paragraph at lines 84--73
+      [2] [3]) (./chap2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 84--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--73
+Underfull \hbox (badness 10000) in paragraph at lines 84--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--73
+Underfull \hbox (badness 10000) in paragraph at lines 84--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--73
+Underfull \hbox (badness 10000) in paragraph at lines 84--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--73
+Underfull \hbox (badness 10000) in paragraph at lines 84--9
 
  []
 
-[4] Processing 'backmatter' comment. [5] [6
-
+[4] [5] [6
 
 ]
+Chapter 2.
+[7])) Processing 'backmatter' comment. [8]
 \openout3 = `comment.cut'.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [7] [8
+(./comment.cut (./backmatter.tex (./thesis.bbl [9
+
+
+] [10
 
 ]
 
@@ -1488,7 +1492,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [11]
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -1615,33 +1619,33 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 126.
 
-) [10] (./thesis.lof)
+) [12] (./thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [11
+ [13
 
-] [12
+] [14
 
 ] (./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-)) [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+)) [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C85D79D9F82399F213C77CBCFD6B226D;323.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
+(rerunfilecheck)             Checksum: 30897B90EE442337BEF7E68AD7BCC1DD;482.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
- 25629 strings out of 493117
- 438902 string characters out of 6135433
- 686237 words of memory out of 5000000
- 28355 multiletter control sequences out of 15000+600000
+ 25649 strings out of 493117
+ 439222 string characters out of 6135433
+ 686572 words of memory out of 5000000
+ 28365 multiletter control sequences out of 15000+600000
  65376 words of font info for 243 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,18n,61p,1351b,677s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1656,10 +1660,10 @@ xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dis
 t/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (27 pages, 136790 bytes).
+Output written on thesis.pdf (29 pages, 141701 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 38973 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 38989 words of extra memory for PDF output out of 42996 (max. 10000000)
 

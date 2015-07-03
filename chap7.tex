@@ -9,942 +9,768 @@
 
 
 
-\chapter{Measurement of the $\nu_\mu$ charged current inclusive cross-section on Pb}
-\label{chap:CrossSectionMeasurement}
-This chapter presents the measurement of the $\nu_\mu$ CC inclusive cross-section on Pb using the ND280 ECals.  This chapter details the measurement method, the samples used in the measurement, the assessment of the systematic uncertainties, validation of the measurement method and finally the measurement itself.
+\chapter{Selection of neutrino interactions in the ECal}
+\label{chap:NeutrinoInteractionSelection}
+This analysis presents a measurement of the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  To make such a measurement, a sample of neutrino interaction vertices within the ECal must be found.  The selection of events is based on the enhanced reconstruction outlined in chapter~\ref{chap:EnhancedECalReconstruction}, which was specifically designed to introduce track multiplicity.  As a result of this method, vertices in the ECal are naturally separated into topologies defined by the number of reconstructed tracks.  Any selection development should take advantage of this situation and tailor cuts to be specific to each topology which should result in a higher overall sample purity.  The 3D track matching aspect of the reconstruction was only tuned to handle up to 3 tracks simultaneously.  However, this analysis aims to measure a CC-inclusive cross-section so should not be biased against any neutrino energy range.  Baring this information in mind, the selection should separate out the events into the following topologies:
+\begin{itemize}
+  \item 1 prong topology
+  \item 2 prong topology
+  \item 3 prong topology
+  \item 4+ prong topology
+\end{itemize}
+The definition of a prong is a reconstructed track associated with a reconstructed vertex.
+\newline
+\newline
+However, as described in section~\ref{sec:ReconOutput}, the output of the enhanced reconstruction has been kept generic and is not specifically tailored to this task.  The reconstruction outputs a set of clusters which contain a set of 3D tracks and every pairwise crossing that said tracks make.  While it is true that in some situations the reconstruction will accurately represent a vertex out of the box, e.g. when only two tracks are reconstructed in the cluster, there will be many situations where extra reconstruction steps are needed before any further selection can take place.  So, the structure of this chapter is as follows: the definition of signal is described first along with the sample to develop the selection, followed by a discussion of the vertex reconstruction.  After the final reconstruction steps have been discussed, a full discussion of the neutrino selection follows.
 
-\section{Measurement method}
-\label{sec:MeasurementMethod}
-The chosen method~\cite{PhysRevD.78.032003, PhysRevD.83.012005} fits a prediction to measured data using multiple data samples.  The core of the analysis method is a $\chi^2$ fit which tries to minimise the difference between the prediction and the data.  The $\chi^2$ is defined as 
+\section{Signal definition}
+\label{sec:SignalDefinition}
+The measurement of this analysis is the CC inclusive interation cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  The active volume of the ECal consists of layers of plastic scintillator and lead absorbers.  Neutrino interactions that occur in the lead aborbers are indistinguisable from those that occur in the plastic scintillator.  Because of this fact, the selection does not attempt to separate the two cases out.  So, the strict signal definition used by this selection  is as follows:
+\begin{itemize}
+  \item Interacting neutrino is $\nu_\mu$ flavour
+  \item Interaction type is charged current
+  \item Interaction occurs within the active volumes of either the barrel ECal or DS ECal
+\end{itemize}
+The active volume is defined by the ROOT geometry used in the simulation.  Specifically, it is a rectangular box which encompases all of the lead and scintillator layers for each ECal module.  Any target element contained within this volume is a signal target.
+
+\section{Monte Carlo sample}
+\label{sec:MonteCarloSample}
+NEUT was used to generate a neutrino beam sample of Monte Carlo which corresponds to $3.949\times10^{20}$ POT.  All of this sample was generated using a simulated beam power of 178 kW which is the average beam power used for Run III.  At this intensity, there are an expected 9.46 neutrino interactions per eight bunch spill in ND280.  So, there will be approximately one interaction per bunch across the entire of ND280 meaning the chance of pileup is small. 
+\newline
+\newline
+The sample above only simulated neutrino interactions within ND280 (including the surrounding magnet).  However, we expect many interactions in the surrounding pit (referred to as sand interactions from now on) to have final states which enter ND280.  So, NEUT was used to generate an additional sample of sand interactions which corresponds to $3.708\times10^{20}$.  There is roughly a 6$\%$ difference in the POT of the beam and sand Monte Carlo.  As the sand Monte Carlo has a sufficiently high level of statistics, scaling the smaller sample to match the larger is acceptable.
+\newline
+\newline
+\begin{table}
+  \begin{tabular}{ l r }
+    ECal module & No. signal events \\ \hline \hline
+    Bottom-right & 223042 \\
+    Side-right & 231955 \\
+    Top-right & 135476 \\
+    Bottom-left & 262500 \\
+    Side-left & 293065 \\
+    Top-left & 140539 \\
+    Downstream & 134100 \\
+    \hline
+    Total & 1420677 \\
+  \end{tabular}
+  \caption{The number of signal events in the Monte Carlo sample separated by ECal module.}
+  \label{table:NSignalEventsTruth}
+\end{table}
+The number of signal interactions from the Monte Carlo sample is shown in table~\ref{table:NSignalEventsTruth}, separated into the ECal module they occurred in.  The number of signal interactions is also shown as a function of neutrino energy for the bottom-left, top-right and DS ECals in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy}.  Clearly, there are an extremely high number of signal events in the sample, which means this analysis is in no way statistically limited.  As an example, consider a selection with a 1$\%$ signal efficiency in the DS ECal.  Assuming $100\%$ selected sample purity, the number of selected events would be 1341 which correspond to a statistical error of 2.73$\%$.  Even in this extreme situation, the statistical error is borderline negligable.  It should be clear that any statistical error is this analysis is approximately $0\%$.
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/signal_definition/NSignalEventsNeutrinoEnergy.eps}
+  \caption{The number of signal events as a function of neutrino energy in the bottom-left (red), top-right (blue) and DS (black) ECals.}
+  \label{fig:NSignalEventsTruthNeutrinoEnergy}
+\end{figure}
+\section{Vertex reconstruction}
+\label{sec:VertexReconstruction}
+The output of the enhanced reconstruction already supplies most of the necessary information to reconstruct vertices in the ECal.  As a reminder, the reconstruction outputs a set of ECal clusters which contain the following:
+\begin{itemize}
+  \item A set of 3D reconstructed tracks
+  \item The position at which every pairwise combination of 3D tracks most closely cross (pairwise crossings)
+\end{itemize}
+The reconstruction makes no quality checks on the 3D tracks in each cluster.  So, the first step is to remove any poorly reconstructed tracks from the cluster.  The need for this step is shown in Fig.~\ref{fig:AngularSeparationNoRejection} which shows the angular separation of reconstructed tracks with the simulated particle which created them, taken from beam Monte Carlo.  While the majority of tracks generally have a small angular separation, Fig.~\ref{fig:AngularSeparationNoRejection} clearly shows a build up of tracks which are offset by 90$^\circ$ to the simulated particles.
+\newline
+\newline
+\begin{figure}%
+  \centering
+  \subfloat[No track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
+  \subfloat[With track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationWithRejection}\label{fig:AngularSeparationWithRejection}}
+  \caption{Angular separation of the reconstructed tracks in an ECal cluster with the beam-simulated particle that created them.  The black, red and green histograms are the tracks that were reconstructed first, second and third respectively.  All histograms are area normalized.}
+  \label{fig:TrackRejectionAngularSeparation}
+\end{figure}
+There are two catagories of bad track reconstruction.  The first is where the 3D matching matches two 2D tracks which do not have sufficient information to fully model a 3D track.  Specifically, one of the 2D tracks involved in the matching only uses one ECal layer.  As the 3D track reconstruction requires information from both ECal views, tracks which fall into this catagory do not supply enough information to reconstruct a good quality track.  The second catagory is where the 3D matching produces a grossly incorrect match.  The matcher is designed to continually match 2D tracks together until no more 2D tracks are left in the matching pool.  So, there are situations where the last possible match made is in no way suitable.  This situation is easily indentified by matched 2D tracks which do not overlap.  For example, one of the 2D tracks uses layers 16, 18 and 20 and the other 2D track uses layers 1 and 3.  By removing these two types of tracks from the cluster, the 90$^\circ$ build up in the angular separation distribution is suppressed, as shown in Fig.~\ref{fig:AngularSeparationWithRejection}.  By removing these catagories of tracks, approximately 22$\%$ of tracks are rejected.
+\newline
+\newline
+The final states of a neutrino interaction originate from the same point in space.  So, assuming that the reconstructed tracks represent the final states, the reconstructed tracks should most closely cross at the point of interaction.  As stated above, one of the outputs of the reconstruction are the pairwise crossings of the constituent tracks in the ECal cluster.  Using the above assumptions,  the pairwise crossings should be in close proximity to one another when the reconstructed tracks represent the final states of an interaction.  This idea promotes a relatively simple method of vertex reconstruction: attempt to cluster the pairwise crossings together if the pairwise crossings are in close proximity.  To quantatively define this proximity, the quality of the pairwise crossing also has to be considered.
+\newline 
+\newline
+As with the 3D tracks, the reconstruction does not perform any quality checks on the pairwise crossings of the tracks.  As the reconstruction will always find a crossing location for a pair of 3D tracks, some of the pairwise crossings will not represent anything physical.  The quality definition chosen is simple: pairwise crossings are defined as bad if the crossing location is far away from either of the tracks it is associated with.  However, the distance definition is not trivial to define and should be closely correlated with the vertex reconstruction method.  For example, a two track vertex would provide very little constraint on the distance which defines a bad crossing, whereas a three track vertex may provide a bad crossing distance constraint which is too strict and destroys the majority two track vertices. 
+\newline
+\newline
+The above discussion promotes two parameters which will govern the vertex reconstruction: the required proximity of two crossings to be clustered together, $d_c$, and the distance of a crossing from its constituents tracks to be classified as bad quality, $d_q$.  To quantify these values, a sample of reconstructed events matched to interactions in the ECals are used which are taken from beam Monte Carlo.  The reconstruction (the pairwise crossing rejection and clustering) is repeatedly run over the sample for different values of the $d_c$ and $d_q$ to find the optimum values.  To define the optimum value, a figure of merit is necessary.  After running the reconstruction for a given $d_c$ and $d_q$, the number vertices are separated into one, two and three track vertices and the true neutrino interactions which created the reconstructed vertices are associated.  A reconstructed vertex is tagged as correctly reconstructed if it contains the same number of reconstructed tracks as the number of charged final states in the associated neutrino interaction.  By defining the number of correctly reconstructed one, two and three track vertices as $N_1$, $N_2$ and $N_3$ respectively, the figure of merit, $\phi^{\textrm{vertices}}$, is
 \begin{equation}
-  \chi^2 = \Delta \vec{N}^{\textrm{T}} \left(\underline{\underline{V}}^{\textrm{syst}} + \underline{\underline{V}}^{\textrm{stat}} \right)^{-1} \Delta \vec{N},
-  \label{eqn:Chi2Def}
+  \phi^{\textrm{vertices}} = N_1N_2N_3.
 \end{equation}
-where $\underline{\underline{V^{\textrm{syst}}}}$ and $\underline{\underline{V^{\textrm{stat}}}}$ are the systematic and statistical covariance matrices for the sample and $\Delta\vec{N}$ contains the difference between the data and the prediction for each sample.  If the number of samples used is $M$, $\Delta\vec{N}$ is defined as 
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/vertex_recon/FOM_2D}
+  \caption{Values of $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space.  The colour corresponds to the magnitude of $\phi^{\textrm{vertices}}$.}
+  \label{fig:VertexReconFOM}
+\end{figure}
+\begin{figure}
+  \centering
+  \subfloat[$d_q$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dq_marginalize} \label{fig:dqMarginalize}}
+  \subfloat[$d_c$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dc_marginalize} \label{fig:dcMarginalize}}
+  \caption{$\phi^{\textrm{vertices}}$ vs the marginalized vertex reconstruction parameters.}
+  \label{fig:VertexReconMarginalizedDistributions}
+\end{figure}
+By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, information about the preferred values of $d_q$ and $d_c$ can be found.  This space is shown in Fig.~\ref{fig:VertexReconFOM}.  It is clear from Fig.~\ref{fig:VertexReconFOM} that there is no clear maximum, but rather a plateau of  $\phi^{\textrm{vertices}}$ for $d_q$ and $d_c$ greater than 140 mm.  So, marginalized distributions of $d_q$ and $d_c$ can be produced to find where $\phi^{\textrm{vertices}}$ approaches zero which are shown in Fig.~\ref{fig:dqMarginalize} and Fig.~\ref{fig:dcMarginalize} respectively.  The values chosen are shown in table~\ref{table:VertexReconParameters}. 
+\begin{table}[b!]
+  \begin{tabular}{ c c }
+    $\phi_d$ & $\phi_c$ \\ \hline \hline
+    $<$ 140 mm & $<$ 200 mm \\
+  \end{tabular}
+  \caption{Parameters for the vertex reconstruction in the ECal.}
+  \label{table:VertexReconParameters}
+\end{table}
+The reconstruction now assesses the quality the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was proposed by X. Lu.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=8cm]{images/selection/vertex_recon/vertex_vector_diagram}
+  \caption{Example of the vertex position, $\vec{P}$ for three lines: $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$. $|\vec{r}_1|$, $|\vec{r}_2|$ and $|\vec{r}_3|$ are the perpendicular distances of $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$ to $\vec{P}$ respectively.}
+  \label{fig:VertexVectorDiagram}
+\end{figure}
 \begin{equation}
-  \Delta\vec{N} = 
+  D = \sum_i |\vec{r}_i|^2.
+  \label{eqn:SumOfSquares}
+\end{equation}
+$\vec{P}$ is then defined as the point in space which satisfies
+\begin{equation}
+  \frac{\partial D}{\partial x} = \frac{\partial D}{\partial y} = \frac{\partial D}{\partial z} = 0.
+  \label{eqn:SumOfSquaresMinCondition}
+\end{equation}
+The value of $|\vec{r}_i|$ is trivially defined by simple vector properties as 
+\begin{equation}
+  |\vec{r}_i| = \frac{|(\vec{P} - \vec{a}_i) \cross \vec{v}_i|}{|\vec{v}_i|} = |(\vec{P} - \vec{a}_i) \cross \hat{v}_i|,
+  \label{eqn:DistanceOfPointToLine}
+\end{equation}
+where $\vec{v}_i$ is the direction vector of $\vec{l}_i$ and $\vec{a}_i$ is a point along $\vec{l}_i$.  By defining $\vec{P}$ mathematically as
+\begin{equation}
+  \vec{P} = x\hat{\imath} + y\hat{\jmath} + z\hat{k},
+  \label{eqn:PDefinition}
+\end{equation}
+equation~\ref{eqn:SumOfSquaresMinCondition} can be solved.  The following derivation is only for $\partial D/\partial x$ as the method is identical for $\partial D/\partial x$, $\partial D/\partial y$ and $\partial D/\partial z$.
+\begin{eqnarray}
+  \frac{\partial D}{\partial x} & = & \sum_i 2\vec{r}_i \cdot \frac{\partial \vec{r}_i}{\partial x} \\
+  & = & 2\sum_i \big[(\vec{P} - \vec{a}_i) \cross \hat{v}_i\big] \cdot \big[\hat{\imath} \cross \hat{v}_i\big] \nonumber \\
+  & = & 2x \sum_i (\hat{\imath} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) + 2y \sum_i (\hat{\jmath} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) + 2z \sum_i (\hat{k} \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i) \nonumber \\
+  &\qquad & - 2(\vec{a}_i \cross \hat{v}_i) \cdot ( \hat{\imath} \cross \hat{v}_i). \nonumber
+  \label{eqn:dDdxDerivation}
+\end{eqnarray}
+By applying the same steps for $\partial D/\partial y$ and $\partial D/\partial z$, the matrix equation
+\begin{equation}
+%  \[ \left( \begin{array}{ccc}
+%      0 & 0 & 0 \\
+%      0 & 0 & 0 \\
+%    0 & 0 & 0 \end{array} \right)\]
+%  \label{eqn:VertexReconMatrix}
   \begin{pmatrix}
-    N^{\textrm{data}}_1 - N^{\textrm{pred}}_1 \\
-    \vdots \\
-    N^{\textrm{data}}_M - N^{\textrm{pred}}_M
-  \end{pmatrix}.
-  \label{eqn:VecNDef}
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{\imath} \cross \hat{v}_i) \\
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{\jmath} \cross \hat{v}_i) \\ 
+    \displaystyle\sum_i [\hat{\imath} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{\jmath} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) & \displaystyle\sum_i [\hat{k} \cross \hat{v}_i] \cdot (\hat{k} \cross \hat{v}_i) 
+  \end{pmatrix}
+  \begin{pmatrix}
+   x \\
+   y \\
+   z
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{\imath} \cross \hat{v}) \\
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{\jmath} \cross \hat{v}) \\
+    \displaystyle\sum_i [\vec{a}_i \cross \hat{v}] \cdot (\hat{k} \cross \hat{v})
+  \end{pmatrix}
+  \label{eqn:VertexReconMatrix}
 \end{equation}
-For sample $j$ of the sample set $M$, $N^{\textrm{data}}_j$ and $N^{\textrm{pred}}_j$ are the number of measured data events and number of predicted events.  The extractable information from the fit is located in $N^{\textrm{pred}}_j$ which can be subdivided into a set of templates, each of which are assigned a normalisation parameter, namely
+can be built up.  By defining the equation~\ref{eqn:VertexReconMatrix} as
 \begin{equation}
-  N^{\textrm{pred}}_j = \sum_j R_{i}n_{ij},
-  \label{eqn:NPredDef}
+  \underline{\underline{A}} \vec{P} = \vec{B},
+  \label{eqn:VertexReconMatrixSimple}
 \end{equation}
-where $n_{ij}$ is the number of events in template $i$ of sample $j$ and $R_{i}$ is the normalisation assigned to that template.  The normalisation parameters are free to float in the fit and so it  is in the normisation parameters that the desired physical information is located.
-\section{Input samples to the fit}
-\label{sec:InputSamples}
-The DS ECal provides the main signal sample which will be used to extract the cross-section.  As shown in table~\ref{table:FinalEffPur}, the selected sample in the DS ECal has the highest purity and efficiency in the whole selection making the sample the natural choice to extract the cross-section.
-\newline
-\newline
-The method outlined above allows for the simultaneous constraint of a physical parameter and the background contamination of a set of input samples.  The method works particularly well when the input samples do not share the same sensitivity to a particular background type.  For example, in ND280, each ECal module is exposed to a different beam intensity and energy spectrum and so is exposed to a unique amount of beam induced background.  Each ECal module can be thought of as a separate input sample which fits well with the method outlined above.  So, while the DS ECal will provide the target in which the cross-section will be extracted, the barrel ECals are to also be included in the fit as a background constraint.  To further allow the barrel ECals to achieve this, an additional sample of barrel ECal events are to be included.  This additional sample set, called the 'reverse' sample set,  comes from the same data set as the selected sample described in chapter~\ref{chap:NeutrinoInteractionSelection}.  However, the events in the reverse sample set are events which pass the fiducial volume cuts but fail any other cut.  An example of a selected sample compared with a reverse sample is shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeft}.  There are clear differences in the shape of the energy spectrum between Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal} and Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftReverse} which suggests that the selection is biased towards lower energy neutrino interactions, despite the flat efficiency curves shown in Fig.~\ref{fig:EffPurSummedTopologiesBarrel}. The apparent bias is actually an effect of higher energy interactions creating a surplus of reconstructed events, most of which are cut away by the selection.  The shape of the true neutrino energy spectrum (see Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} for an example) is actually more like the selected sample shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal}.
-\begin{figure}%
-  \centering
-  \subfloat[Selected sample.]{\includegraphics[width=8cm]{images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal.eps} \label{fig:NuEnergyReactionCodeBottomLeftSignal}}
-  \subfloat[Reverse sample.]{\includegraphics[width=8cm]{images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse.eps} \label{fig:NuEnergyReactionCodeBottomLeftReverse}}
-  \caption{The neutrino energy of events seen in the bottom-left ECal module broken down by the neutrino interaction mode.}
-  \label{fig:NuEnergyReactionCodeBottomLeft}
-\end{figure}
-\newline
-\newline
-As described in chapter~\ref{chap:NeutrinoInteractionSelection}, the developed selection does not distinguish between lead and carbon interactions, partly because such events are indistinguishable from one another.  It is however desirable to separate the two catagories out as the presented measurement purely involves lead.  As the ECal is not capable of separating the events by itself, an additional constraint is needed.  So, a sample of CC interactions on carbon occurring in the FGD are also included, which are taken from the official ND280 oscillation input analysis [INSERT TECHNOET REFERENCE!!!!!].
-\newline
-\newline
-To summarise, there are many inputs samples to the measurement.  Specifically, there are 12 barrel ECal samples (6 selected and 6 reverse), the DS ECal sample and the FGD sample which totals to 12 input samples.
-
-\section{The ECal rate fit}
-\label{sec:ECalRateFit}
-Now that the general method and the input samples have been introduced, the fit used by the analysis can be introduced.  The fit itself is a data-driven constraint of the event rate in each ECal module where the Monte Carlo prediction is separated into templates whose normalisation is allowed to vary.  The machinery outlined in section~\ref{sec:MeasurementMethod} almost completely decribes what is required to understand the fit, however two specific definitions are needed.  The first is that there are 12 input samples to the fit.  The second is the definition of $N^{\textrm{pred}}_i$.  To constrain the lead event rate, three Monte Carlo templates are needed: a lead template which contains any reconstructed event associated with a $\nu_\mu$ CC interaction on lead, a carbon template which contains any reconstructed event associated with a $\nu\mu$ CC interaction on carbon and an 'other' template which contains any reconstructed event which does not fall into the above two catagories.  $N^{\textrm{pred}}_i$ is then defined as 
+where $\underline{\underline{A}}$ is the matrix on the left hand side of equation~\ref{eqn:VertexReconMatrix} and $\vec{B}$ is the vector on the right hand side of equation~\ref{eqn:VertexReconMatrix}.  $\vec{P}$ is finally
 \begin{equation}
-  N^{\textrm{pred}}_i = R^{\textrm{Pb}}n^{\textrm{Pb}}_i + R^{\textrm{C}}n^{\textrm{C}}_i + R^{\textrm{other}}n^{\textrm{other}}_i,
-  \label{eqn:ECalFitPredDef}
+  \vec{P} = \underline{\underline{A}}^{-1} \vec{B}.
+  \label{eqn:VertexReconMatrixSolution}
 \end{equation}
-where $n^{\textrm{X}}_i$ is the number of events in template X of sample $i$ and $R^{\textrm{X}}_i$ is the variable normalisation of that template.
+While the inversion of $\underline{\underline{A}}$ is in principle analytically solvable, it was decided that the inversion would be handled numerically.  So, to find $\vec{P}$, the vertex reconstruction builds $\underline{\underline{A}}^{-1}$ (by building and inverting $\underline{\underline{A}})$ and $\vec{B}$ and then applies equation~\ref{eqn:VertexReconMatrixSolution}.
 \newline
 \newline
-The rate fit allows $R^{\textrm{Pb}}_i$, $R^{\textrm{C}}_i$ and $R^{\textrm{oth}}_i$ to vary with no prior constraint in an attempt to minimise the $chi^{2}$ as defined in equation~\ref{eqn:Chi2Def}.  Once the minimum has been found, the fitted $R^{\textrm{Pb}}_i$ can then be used to extract the cross-section using the selected events in the DS ECal.  
-\newline
-\newline
-The number of events in each input sample, broken down by the template contribution, is shown in Fig.~\ref{fig:NominalMCTemplates}.  As should be expected, the relative backround contribution varies between each ECal module.
+By applying the steps outlined above to every reconstructed ECal cluster, a set of candidate vertices are formed.  As the enhanced reconstruction is only capable of reconstructing straight tracks, bending trajectories tend to be reconstructed as two or more tracks.  The crossings associated with such tracks can, and do, pass the vertex reconstruction criteria defined in table~\ref{table:VertexReconParameters}.  An extreme example of this topology is shown in Fig.~\ref{fig:TrackMergingEventDisplay} in which a curving $\mu^-$ is reconstructed as four tracks.  So, the final step on the reconstruction is to attempt to merge tracks to model the curving trajectory topology.  Firstly, the reconstructed crossings associated with a clean curving trajectory should pass the crossing quality cut but should be sufficiently far away from any other crossing that it is not clustered during the vertex clustering stage.  Therefore, track merging candidates can be initially identified by searching for reconstructed vertices with exactly two track constituents.  As an example, all three of the crossings shown in Fig.~\ref{fig:TrackMergingEventDisplay} are correctly identified by this check.  The two constituent tracks of the identified vertex will form the merged track, so the reconstruction checks the shape that the merged track would make against a set of conditions to decide if the merging should be performed. 
 \begin{figure}
   \centering
-  \includegraphics[width=15cm]{images/measurement/rate_fit/MC_Templates_Nominal.eps}
-  \caption{The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.}
-  \label{fig:NominalMCTemplates}
+  \includegraphics[width=12cm]{images/selection/vertex_recon/track_merging_event_display.eps}
+  \caption{Example event display showing a set of track merging candidates.  The final state $\mu^-$ (in green) curves in a complicated way and is reconstructed as four tracks (in light blue).  The pairwise crossings of the reconstructed tracks are the red squares.  The muon is produced by a charged current interaction in the top left barrel ECal producing two $\pi^+$ (in brown) and the curving $\mu^-$. }
+  \label{fig:TrackMergingEventDisplay}
+\end{figure}
+To identify and tune the condtitions for merging tracks, two metrics are used.  The first metric is used for identification of the merging conditions and uses the truth information provided by the geant4 simulation.  For every two track vertex that was formed by the vertex clustering, the simulated particle that produced each of the two constituent tracks was checked.  If the sample particle is matched to both tracks, then the merging candidate is tagged as a correct match, otherwise it is tagged as an incorrect match.  The second metric is used for tuning the identified merging conditions.  As part of this analysis is a search for neutrino intercations using vertex-based reconstruction, there will be an expected loss of signal by track merging which must be minimised.  So, the track merging condition tuning should be based on ECal signal interactions.  As described above, the only tracks that are proposed as merging candidates are those which are constituents of a two track vertex.  So, the track merging tuning attempts to separate signal and background events which are reconstructed as a vertex with two track constituents.  It is preferrable that the merging chooses quality over quantity so the tuning figure of merit is defined as 
+\begin{equation}
+  \phi^{\textrm{merge}} = \epsilon \eta^2
+  \label{eqn:TrackMergingTuningMetric}
+\end{equation}
+where $\epsilon$ is the efficiency of the track merging to keep signal events reconstructed as two track vertices and $\eta$ is the purity of the events that remain as two track vertices after merging has taken place.
+\newline
+\newline
+The first merging condition identified is the cosine of the opening angle, $\cos\theta$, subtended by the two constituent tracks bounded between 0 and 1 which is shown in Fig.~\ref{fig:TrackMergingConditionCosTheta}.  The opening angle is clearly a powerful discriminator.  The distribution for incorrect matches is very flat across the full angular range whereas there is a clear build up correct matches as $\cos\theta \rightarrow 1$.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=10cm]{images/selection/vertex_recon/merging_candidates_cos_theta}
+  \caption{The cosine of the angle subtended by the merging candidates, bounded between 0 and 1. The correct matches and incorrect matches are the blue and red histograms respectively.}
+  \label{fig:TrackMergingConditionCosTheta}
 \end{figure}
 \newline
 \newline
-The underlying fit machinery uses the Minuit2 algorithm provided by the ROOT TFitter framework, chosen primarily because of its ease of use.
+The second merging condition identified, called 'distance ratio', measures the ratio of the distance between the two constituent tracks' closest points, $d^{\textrm{small}}$ to the distance between their furthest points, $d^{\textrm{large}}$.  An example of how $d^{\textrm{small}}$ and $d^{\textrm{large}}$ are calculated is shown in Fig.~\ref{fig:DistanceRatioEventDisplay}.    
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=10cm]{images/selection/vertex_recon/distance_ratio_event_display}
+  \caption{Example event display showing how the parameters of the distance ratio are calculated.  The distance ratio is defined as $d^{\textrm{small}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
+  \label{fig:DistanceRatioEventDisplay}
+\end{figure}
+The distance ratio distribution is shown Fig.~\ref{fig:TrackMergingConditionDistanceRatio}.  While it may seem that there is very little discrimination power present in the distance ratio distribution, there is an underlying dependency between the distance ratio and the opening angle subtended by the constituent tracks, which has already been identified as a merging condition.
+\begin{figure}
+  \centering
+  \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio.eps} \label{fig:TrackMergingConditionDistanceRatio}}
+  \subfloat[For $\cos\theta > 0.8$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.eps} \label{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}}
+  \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.}
+  \label{fig:TrackMergingConditionDistanceRatio}
+\end{figure}
+To illustrate this dependency, two distributions are shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} which both show the distance ratio vs the cosine of the opening angle.  Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch} only shows the correct matches and Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch} only shows the incorrect matches.  While it is true that there is a pileup of both correct matches and incorrect matches for low values of the distance ratio, the opening angle separates the two catagories out.  Specifically, the correct matches pileup occurs as $\cos\theta \rightarrow 1$ and the incorrect matches pileup occurs as $\cos\theta \rightarrow 0$.  To further illustrate this point, a new distance ratio distribution is shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, but with a $\cos\theta > 0.8$ guess cut applied.  Comparing the distributions shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, the effect of the $\cos\theta$ cut can clearly be seen.  The original pileup of incorrect matches seen in Fig.~\ref{fig:TrackMergingConditionDistanceRatio} is now gone, leaving an essentially flat incorrect matches distribution in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} while leaving the correct matches structure intact.  
+\begin{figure}
+  \centering
+  \subfloat[Correct matches only]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
+  \subfloat[Incorrect matches only]{\includegraphics[width=9cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
+  \caption{The distance ratio vs the cosine of the opening angle for track merging candidates.}
+  \label{fig:TrackMergingConditionDistanceRatioVsCosTheta}
+\end{figure}
+\newline
+\newline
+By utilising both the distance ratio and $\cos\theta$ simultaneously, a better degree of separation can be found.  However care must be taken when tuning the distance ratio and $\cos\theta$ cuts to ensure optimal separation of signal and background is acheived.  It is clear from Fig.~\ref{fig:TrackMergingConditionCosTheta} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} that the correct matches pileup for low values of the distance ratio and high values of $\cos\theta$.  So events should only be tagged for merging when they have a distance ratio value lower than some threshold and a $\cos\theta$ value higher than some other threshold. To find these cut values, the track merging reconstruction was run multiple times, using different values of the thresolds for each run.  To take the dependency shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} into account, a square grid search in distance ratio and $\cos\theta$ space was used to find optimum cut values.  The tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, was used to find the optimum cut values.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingTuningFOM}
+  \caption{Values of the tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, in distance ratio cut vs $\cos\theta$ cut space.}
+  \label{fig:TrackMergingTuningFOM}
+\end{figure}
+The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are shown in Fig.~\ref{fig:TrackMergingTuningFOM}.  As was found in the tuning of the vertex clustering parameters, there is no clear maximum value of the tuning metric, but rather a plateau.  So, as was done in the vertex clustering tuning, marginalised distributions of tuning metric in distance ratio cut space and $\cos\theta$ cut space can be produced to find the optimum cut values. 
+\begin{figure}
+  \centering
+  \subfloat[$d_q$]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM.eps} \label{fig:TrackMergingCosThetaMarginalize}}
+  \subfloat[$d_c$]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps} \label{fig:TrackMergingDistanceRatioMarginalize}}
+  \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.}
+  \label{fig:TrackMergingMarginalizedDistributions}
+\end{figure}
+The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be fairly close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
+\newline
+\newline
+While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situtations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specficially, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated are shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the toplogy on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bimodal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
+\begin{figure}[!b]
+  \centering
+  \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
+  \caption{Schematic showing the degeneracy of two merging candidate topologies which would pass the $\cos\theta$ cut.  The arrows represent reconstructed tracks and $\theta$ is the opening angle measured between the tracks.}
+  \label{fig:TrackMergingCosThetaDegeneracySchematic}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=12cm]{images/selection/vertex_recon/track_merging_event_display_swing.eps}
+  \caption{Example event display showing how the swing parameters are calculated.  Swing is defined as $l^{\textrm{long}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
+  \label{fig:TrackMergingEventDisplaySwing}
+\end{figure}
+\begin{figure}
+  \centering
+  \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
+  \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
+  \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.}
+  \label{fig:TrackMergingSwing}
+\end{figure}
+\begin{table}[b!]
+  \begin{tabular}{ c c c }
+    $\cos\theta$ & Distance ratio & swing \\ \hline \hline
+    $>$ 0.82 & $<$ 0.32 & $<$ 1 \\
+  \end{tabular}
+  \caption{Cut values for the track merging in the ECal.}
+  \label{table:TrackMergingParameters}
+\end{table}
+\newline
+\newline
+All of the merging conditions have now been identified and the associated cut values are summarised in table~\ref{table:TrackMergingParameters}.
+
+%To identify which merging candidates should actually be matched together, the truth information from the simulation was used.  Specfically, merging candidates which should be matched together are found by checking which particle produced the two tracks.  If a single particle produced both tracks, then the merging candidate is tagged as signal, otherwise it is background.
 
 
-\section{Systematic uncertainties}
-\label{sec:SystematicUncertainties}
-The $\chi^2$ definition shown in equation~\ref{eqn:Chi2Def} allows for systematic uncertainties to be directly included in the fit.  As the systematic uncertainty implementation takes the form of a covariance matrix for the input samples, a good understanding of not only the systematic uncertainties, but how the samples correlate with one another is needed.  
+%\section{Data selection}
+%Data flags
+
+\section{Monte Carlo selection}
+As briefly described at the start of this chapter, the selection separates the reconstructed ECal events into a set of topologies, where each topology is defined by a number of associated prongs.  In addition to this separation, the geometrical differences between the barrel and DS ECals suggest a further event separation.  The DS ECal lies perpendicular to the beam face.  So, particles from neutrino interactions will typically travel at right angles to the DS ECal face.  Conversely, all of the barrel ECals like parallel to the beam axis which means neutrino interaction products will generally pass along the barrel scintillator planes.  This motivates a separate selection for the barrel and DS ECals.  This essentially means that there are eight individual selections to be made and tuned (1,2,3 and 4+ prong topologies in the barrel and 1,2,3 and 4+ prong topologies in the DS ECal).  Clearly, this approach can very quickly become complicated.  To mitigate this, similar discriminators are used for each topology.  As the reconstruction was only tuned for three reconstructed tracks, the 4+ prong topology will use exactly the same cuts as the 3 prong topology.
 \newline
 \newline
-As stated above, there are 12 input samples so the covariance matrix will be a 12$\times$12 symmetric matrix.  While it may be obvious that the contents of the matrix will be the covariances of each input sample, it may not be immediately clear what type of covariances are needed.  As described in section~\ref{sec:ECalRateFit}, the algorithm attempts to fit a set of predictions, separated into templates, to a set of measured data samples simultaneously.  The variation comes from the normalisations assigned to each template.  This means that the overall normalisation of the Monte Carlo prediction is free to vary without prior constraint and so it is the shape information between the prediction and data that constrains the parameters.  Therefore the covariance matrix used in the fit should only contain uncertainties which account for the differences in the shape of the samples which the systematic sources introduce.
+Care must be taken when defining what a reconstructed vertex is.  For the 2,3 and 4+ prong topologies, it is fairly simple, the reconstructed vertex is as described in section~\ref{sec:VertexReconstruction}, but it is not possible to fit for a vertex position when dealing with a single prong.  In fact, there is actually little that can be done about this.  So, beam kinematics are assumed and the 'vertex' for a single prong is the most upstream end of said prong.
 \newline
 \newline
-The ND280 event simulation is essentially broken down into three areas: Simulation of the neutrino flux, simulation of the neutrino interactions and simulation of the detector response.  No matter how complicated a simulation can become, it is unlikely to ever simulate reality with $100\%$ accuracy.  The differences between what is simulated (be it flux, interaction or detector) and what happens in nature causes a systematic difference to be seen between collected data and Monte Carlo which must be accounted for.  As the simulation can be broken down into three key areas, the systematic assessment can be broken down into the same key areas, each of which are presented.  The actual assessment of a systematic uncertainty can be broken down into two areas: identifaction of a systematic error source and the propagation of that systematic error source through the analysis.  The identification stage is typically handled by a respective working group or by an analyser with external sources (e.g. control samples).  The propagation of the systematic error source has no strict recipe but it typically involves variation of the identified systematic uncertainty and then either a reweighting of events is applied or the analysis chain is re-run.  The systematic treatment used in this analysis uses a mixture of the above.
-\newline
-\newline
-To propagate the systematic uncertainty effect, a Monte Carlo sample akin to the prediction sample set used in the fit is required.  So, a $2.5\times10^{19}$ POT sub sample of beam and sand Monte Carlo is used for this purpose.  All sample systematic covariance matrices are presented as fractional covariance matrices between each of the different detector samples.  For the barrel samples, the selected samples are labelled by their respective module name and the reverse barrel samples (background enriched samples) are labelled with their module name and 'reverse'.  The assessment of each systematic source is presented individually, resulting in a fractional covariance matrix for that source.  The final systematic covariance matrix is then found by summing all of the individual covariance matrices.
-\subsection{Flux systematic evaluation}
-\label{subsec:FluxSystematic}
-The neutrino flux is one of the core components of the ND280 event simulation and any uncertainties associated with the flux have a direct impact on the measured ND280 event rate.  The associated flux uncertainties can be broken down into four catagories:
+The definition of signal has already been described in section~\ref{sec:SignalDefinition}.  However, how the reconstructed events map to the signal interactions also needs discussion.  The selection takes place at the reconstructed vertex level but there is not a clear 1:1 map of a reconstructed vertex to a signal interaction.  Consider a signal interaction in an ECal module in which the final state particles are involved in one or more secondary interactions.  The most likely outcome of this is the reconstruction of two or more vertices: one for the neutrino interaction and one or more for the secondary interactions.  By interrogating the associated truth information, each vertex will be matched to the same signal neutrino.  It is wholly incorrect to classify each vertex as a reconstruction of a signal event as this will lead to a gross overestimate of the signal rate.  To alleviate this,  a reconstructed vertex is only tagged as coming from a signal interaction if it obeys the following conditions:
 \begin{itemize}
-  \item Properties of the proton beam such as profile and alignment
-  \item Alignment of the target and focusing horns
-  \item The current in the focusing horns and the magnetic field it generates
-  \item Hadron production induced by beam interactions with the target
+  \item The reconstructed vertex is matched to a signal interaction
+  \item The reconstructed vertex is the one closest in space to the matched signal interation
 \end{itemize}
-As the neutrino flux prediction is so important for all T2K analyses, the flux uncertainties are constrained using a range of measurements.  These include external measurements from the NA61/SHINE collaboration, from the proton beam monitors, measurements of a spare magnetic horn and from the INGRID detector.  Measured uncertainties from each source are used to vary the flux in JNUBEAM which produces a covariance matrix for each source.  The covariance matrix then used by analyser is the sum of each covariance matrix which is shown in Fig.~\ref{fig:FluxPredictionSyst}.  The covariance matrix is split into two detector sections: ND280 and SK.  Each detector section is then separated into two beam running modes ($\nu$ and $\bar{\nu}$ runnings) which are also separated into four neutrino flavours ($\nu_\mu$, $\bar{\nu}_\mu$, $\nu_e$ and $\bar{\nu}_e$).  Finally, each neutrino flavour is separated into a set of energy bins.  The presented analysis is a $\nu_\mu$ cross-section measurement using ND280, so only the ND280, $\nu$-running mode section of the covariance matrix needs consideration.
+Any reconstructed vertices which pass the first condition but fail the second are tagged as a special case of background events (hereafter referred to as the 'split signal' background).
+\newline
+\newline
+To illustrate the benefit of separating events into specific prong topologies, Fig.~\ref{fig:ProngStackAll} shows the truth makeup of events seen in the ECal after applying the reconstruction separation.  It is important to note that only the vertex reconstruction and track merging has been applied to the sample at this point.  There is a clear difference in the level of backgrounds seen in each topology e.g. the ECal OOFV background is almost exclusively contained in the one prong topology.  By applying such a separation and then focusing cuts on each topology, the overall event purity should be higher. 
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_prediction_syst.eps}
-  \caption{The flux prediction covariance matrix.  The matrix is binned in detector (SK and ND280), neutrino flavour and energy.}
-  \label{fig:FluxPredictionSyst}
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
+  \caption{The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies.  Each event is catagorised by the associated truth information from the simulation.}
+  \label{fig:ProngStackAll}
 \end{figure}
-The provided flux covariance matrix is a fractional covariance matrix, binned in netrino energy and flavour.  As the neutrino energy and flavour information of events seen in this analysis is readily available, the flux covariance matrix can be used to reweight the events in the Monte Carlo sample to propagate the effect of the systematic uncertainty through the analysis.  To do this, the flux covariance matrix is Cholesky decomposed and the resulting matrix multiplied by a vector filled with random throws from a Gaussian of mean 0 and width 1.  Each element in this multiplied vector constitutes a fractional change in the number of a specific neutrino flavour and energy seen in the analysis.  So, the event weightings are generated by adding 1 to each element of this vector.  Every event selected in the sample is then weighted by the correct event weight (in this case defined by the neutrino flavour and energy) and this number of reweighted events is then recorded.  The above description describes a single throw of the flux systematic propagation.  This process is repeated 1000 times to build up the covariance matrix for the sample.  The sample covariance matrix elements are calculated as
+\subsection{Selection cuts}
+\label{subsec:SelectionCuts}
+The enhanced reconstruction was developed with an ECal cross-section analysis in mind.  So, most of complex work should already have been handled by the reconstruction aspect of the analysis.  In addition, the selection method discussed involves separating events into prong topologies and focusing individual selections on each.  These points motivate a simple, cut-based, selection.  Some cuts will inevitably require some tuning and a metric is often useful for this purpose.  As demonstrated in section~\ref{sec:MonteCarloSample}, a high level of stats is seen in each ECal module which means the selection can safely strive for quality over quantity without inflating the final uncertainty.  Baring this in mind, the metric used for tuning for prong topology $i$ is
 \begin{equation}
-  V_{\textrm{ab}} = \frac{1}{N^{\textrm{throws}}}\sum^{N^{\textrm{throws}}}_{i=1}\frac{\left(N_{\textrm{a}}^{i} - N_{\textrm{a}}^{\textrm{nom}}\right)\left(N_{\textrm{b}}^{i} - N_{\textrm{b}}^{\textrm{nom}}\right)}{N_{\textrm{a}}^{\textrm{nom}}N_{\textrm{b}}^{\textrm{nom}}},
-  \label{eqn:CovarianceMatrixElementDef}
+  \phi_i^{\textrm{selection}} = \epsilon_i\eta^2_i,
+  \label{eqn:SelectionMetric}
 \end{equation}
-where $N_{\textrm{a}}^{\textrm{nom}}$ is the number of events seen in the nominal Monte Carlo for sample a and $N^{\textrm{throws}}$. $N_{\textrm{a}}^{i}$ is generically the number of events seen in sample a for systematic throw $i$, but its definition depends on which kind of covariance matrix is being calculated.  For a shape+normalisation covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
-\begin{equation}
-  N_{\textrm{a}}^{i} = N^{i\prime}_{\textrm{a}}, 
-  \label{eqn:NVariedDef}
-\end{equation}
-where $N^{i\prime}_{\textrm{a}}$ is simply the number of events in sample a for throw $i$ after applying the systematic variation.  In the above example, this after applying the event reweighting based on the flux covariance matrix.  When considering a shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is 
-\begin{equation}
-  N_{\textrm{a}}^{i} = N^{i\prime}_{\textrm{a}}\frac{\displaystyle\sum_{j=1}^{12}N_{\textrm{j}}^{\textrm{nom}}}{\displaystyle\sum_{j=1}^{12}N^{i\prime}_{\textrm{j}}}. 
-  \label{eqn:NVariedShapeOnlyDef}
-\end{equation}
-The extra factor on the RHS of equation~\ref{eqn:NVariedShapeOnlyDef} convserves the total number of events seen such that there are an equal total number of events before and after applying the systematic variation.  The sample covariance matrices found by applying the above process are shown in Fig.~\ref{fig:FluxCovarianceMatrices}.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/flux/flux_covariance_matrix.eps} \label{fig:FluxShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/flux/flux_shape_covariance_matrix.eps} \label{fig:FluxShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the flux uncertainties.}
-  \label{fig:FluxCovarianceMatrices}
-\end{figure}
+where $\epsilon_i$ and $\eta_i$ are the selection efficiency and purity of prong topology $i$.  Six selection cuts have been identified which will now be discussed. 
+
+\subsubsection{Fiducial volume cut}
+\label{subsubsec:FVCut}
+The first cut, the fiducial volume cut, removes most of the ECal OOFV backgrounds in the Monte Carlo sample.  This is achieved by defining some outer veto region in which occurring vertices are rejected.  There are two items to bare in mind when defining what the fiducial volumes are.  Firstly, the off-axis configuration causes each ECal to be exposed to a different energy and particle rate.  A good example of this was shown in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} which shows a higher event rate, but also a higher peak energy of interactions, in the bottom-left ECal than in the top-right ECal.  So, the optimised fiducial volume of one ECal need not be the same as another ECal module.  Separately to this, Fig.~\ref{fig:ProngStackAll} shows that the ECal OOFV is almost completely contained in the 1 prong topology bin.  This means that a separate fiducial volume definition should be used for the 1 prong topology (it is sufficient for the 2,3 and 4+ prong topologies to use the same fiducial volume definition).
 \newline
 \newline
-The effect of the flux systematic on the selection efficiency of lead interactions was also evaluated.  As the main target used in this analysis is the DS ECal, the efficiency variation was evaluated for this detector only.  For each systematic throw described above, the selection efficiency was calculated and recorded.  By plotting the efficiency for each throw, the width of the efficiency distribution can be found which gives the efficiency uncertainty induced by the flux systematic.  This efficiency uncertainty was found to be 0.00097.  The lead selection efficiency in the DS ECal is nominally 0.539, which implies a fractional change of 0.18$\%$, which is essentially negligable.
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the flux systematic.}
-  \label{fig:FluxEfficiencyVariation}
+  \includegraphics[width=12cm]{images/selection/mc_selection/FV_BLB_1Prong_NegY.eps}
+  \caption{$\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.}
+  \label{fig:FVBLB1ProngNegY}
 \end{figure}
-\subsection{Cross-section systematic evaluation}
-\label{subsec:CrossSectionSystematic}
-The neutrino cross-section picture is still a very much open area of research.  The interaction model used by current neutrino interaction generaters use a set of empirical parameters which are tuned on experimental results.  Uncertainties on any one of these empirical parameters will alter the simulated cross-section and thus the event rate seen in the ND280 simulation.  A dedicated working group handles the assessment of the empirical parameters and their corresponding uncertainties.  The parameter uncertainties are given as a covariance matrix along with the known correlations which is shown in Fig.~\ref{fig:XSecPredictionSyst}.  The interaction parameter assessment is chiefly undertaken with the T2K oscillation analyses in mind which means that the nuclear model parameters are only considered for carbon and oxygen.  In the presented analysis, iron and aluminium are two major sources of background interactions which must also be treated in the systematic assessment.  The chosen treatment is to assign a data-motivated, normalisation uncertainty to such backgrounds.  The iron uncertainty is taken from the iron cross-section measurement using INGRID.  The aluminium uncertainity is taken from [INSERT DETAILS HERE].  As element specific parameters for lead do not appear in Fig.~\ref{fig:XSecPredictionSyst}, such parameters are additionally assessed separately using NEUT.
-\begin{figure}
-  \centering
-  %INSERT XSEC COVARIANCE MATRIX
-  \includegraphics[width=12cm]{images/measurement/systematics/xsec/xsec_prediction_syst.eps}
-  \caption{The neutrino cross-section model covariance matrix.}
-  \label{fig:XSecPredictionSyst}
-\end{figure}
+The fiducial volume for a prong toplogy/ECal module is defined in terms of the distance from each face of the module.  So, there are six numbers which define the fiducial volume:  the distance from the $\pm x$,$\pm y$ and $\pm z$ faces of a module.  If the distance of a vertex from each ECal face is further than what the fiducial volume defines, the event passes the cut, otherwise it is rejected.  To tune these values,  each fiducial volume value was systematically increased from 0 mm to 600 mm in mm increments.  At each increment the number of passing/rejected events was recorded and $\phi_i^{\textrm{selection}}$ calculated.  The fiducial volume value which maximises $\phi_i^{\textrm{selection}}$ is accepted as the optimised value.  An example of the variation in $\phi_i^{\textrm{selection}}$ is shown in Fig.~\ref{fig:FVBLB1ProngNegY} which shows $\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.  There is a clear maximum found which shows the process is effective in finding an optimum distance from the ECal face.
 \newline
 \newline
-To propagate the effect of the cross-section systematic through the analysis, the covariance matrix shown in Fig.~\ref{fig:XSecPredictionSyst} was Cholesky decomposed and the resultant matrix multiplied by a vector of random numbers thrown from a gaussian (the same approach as described in section~\ref{subsec:FluxSystematic}).  However, the re-weighting in this case is more complicated.  The T2KReWeight [INSERT REFERECE] software takes the parameters errors from the throw along with the simulated NEUT vertex which is matched to the event.  T2KReWeight then calculates a weight based on the inputted errors and the NEUT vertex in question.  Using the T2KReWeight machinery, 1000 systematic throws from the covariance matrix shown in Fig.~\ref{fig:XSecPredictionSyst} were made and sample covariance matrices were calculated, which are shown in Fig.~\ref{fig:XSecCovarianceMatrices}.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/xsec_covariance_matrix.eps} \label{fig:XSecShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/xsec_shape_covariance_matrix.eps} \label{fig:XSecShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the cross-section model uncertainties.}
-  \label{fig:XSecCovarianceMatrices}
-\end{figure}
-\newline
-\newline
-As with the flux systematic, the uncertainty in the selection efficiency for lead interactions in the DS ECal due to the cross-section model systematic was found by recording the efficiency for each throw.  The variation in the efficiency is shown in Fig.~\ref{fig:XSecEfficiencyVariation}.  The efficiency uncertainty was found to be 0.001 which corresponds to a 0.2$\%$ error which is, again, negligable.
-\begin{figure}
-  \centering
-  \includegraphics[width=12cm]{images/measurement/systematics/xsec/xsec_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the cross-section model systematic.}
-  \label{fig:XSecEfficiencyVariation}
-\end{figure}
-\newline
-\newline
-As discussed above, the re-weighting of element specific parameters for events matched to a lead interactions was not possible using T2KReWeight.  As meson-exchange current interactions for lead interactions are not implemented in NEUT, the only parameters necessary to vary are $P_{\textrm{F}}^{\textrm{Pb}}$ and $E_{\textrm{b}}^{\textrm{Pb}}$ which are the Fermi-momentum and binding energy for lead respectively.  So, NEUT was used to produce 10,000 neutrino interactions on lead with uniform energy between 0~GeV and 10~GeV for the nominal parameters and $\pm\upsigma$ variations of the parameters.  The associated uncertainties were not readily available in the literature so $1.5\times$ the carbon parameters uncertainties were used as a conservative estimate.  The NEUT events were used to plot the ratio of the varied cross-section to the nominal cross-section as a function of energy.  The ratios for $P_{\textrm{F}}^{\textrm{Pb}}$ and $E_{\textrm{b}}^{\textrm{Pb}}$ are shown in Fig.~\ref{fig:PbXSecPfRatio} and Fig.~\ref{fig:PbXSecEbRatio} respectively.  The variation in the cross-section caused by variation in $E_{\textrm{b}}^{\textrm{Pb}}$ is sub-percent so there should be a negligable variation in the event rate which means this can be ignored.  However, there is significant variation in the cross-section at low energy due to variations in $P_{\textrm{F}}^{\textrm{Pb}}$ so this effect must be propgated through the analysis.  To do this, the ratio distributions shown in Fig.~\ref{fig:PbXSecPfRatio} were treated as a set of events weights.  The $+\upsigma$ and $-\upsigma$ weights were applied to the sample separately, creating two systematics throws.  The results of the systematic throws were used to generate the sample covariances, which are shown in Fig.~\ref{fig:PbXSecCovarianceMatrices}.
-\begin{figure}%
-  \centering
-  \subfloat[$P_{\textrm{F}}^{\textrm{Pb}}$]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pbxsec_pf_ratio.eps} \label{fig:PbXSecPfRatio}}
-  \subfloat[$E_{\textrm{b}}^{\textrm{Pb}}$]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pbxsec_eb_ratio.eps} \label{fig:PbXSecEbRatio}}
-  \caption{The ratio of the $\pm$$\upsigma$ cross-section to the nominal cross-section for lead as a function of neutrino energy.}
-  \label{fig:PbXSecRatios}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pb_xsec_covariance_matrix.eps} \label{fig:PbXSecShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix.eps} \label{fig:PbXSecShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by variation of $P_{\textrm{F}}^{\textrm{Pb}}$.}
-  \label{fig:PbXSecCovarianceMatrices}
-\end{figure}
-\newline
-\newline
-Final state interactions (FSI) within the nucleus after a neutrino interaction has occurred could also cause a variation in the event rate.  While the selection used in this analysis is CC inclusive, the method used separates events out into prong topologies.  Any uncertainty in the FSI could cause migration of events from one prong topology to another.  The Neutrino Interaction Working Group (NIWG) assesses these uncertainties and provides a set of parameters for an analyser to vary, all of which are associated with $\pi^{\pm}$ interactions.  There are six parameters associated with FSI:
-\begin{itemize}
-  \item Low energy quasi-elastic scattering (FSIQEL)
-  \item High energy quasi-elastic scattering (FSIQEH)
-  \item Pion production (FSIINEL)
-  \item Pion absorption (FSIABS)
-  \item Low energy single charge exchange (FSICXL)
-  \item High energy single charge exchange (FSICXH)
-\end{itemize}
-The NIWG provides combinations of the $1\upsigma$ errors for the parameters highlighted above which span the whole FSI parameter space.  The errors are provided in 16 parameters sets which represent the $1\upsigma$ contour for the FSI parameter space and are shown in table~\ref{table:FSIErrors}.  Each parameter set can be used to generate one systematic throw, by passing the parameters to T2KReWeight and subsequently re-weighting the events.  As with the cross-section model systematics described above, the parameter variations only affect carbon and oxygen.  The FSI systematic throws were used to generate the sample covariance matrices which are shown in Fig.~\ref{fig:FSICovarianceMatrices}.
-%\newline
-%\newline
-%It is not trivial how to assess how the FSI uncertainties affect the lead interactions as the T2KReWeight machinery can not be used.  FSI should cause a mixing between the different CC interaction final states which means that there will be migration from one prong topology to another.  Based on the efficiencies in table~\ref{table:SelEfficiency}, the main concern would be from 2 prong topology events migrating to 1 prong topology events in the barrel where such events would be exposed to a stream of cuts which are 12$\%$ less efficient.  Assuming that the variation in event rate induced by the FSI variation for carbon/oxygen is similar for lead, the change in events seen would be 
+The found fiducial volumes for each ECal module for the 1 prong topology are shown in table~\ref{table:FV1Prong}.  While all of the ECal face cuts have some discriminatory power, those which cut out according to layer number reject the most background events.  Those cuts are the $\pm y$ cuts for the bottom/top barrel ECals, the $\pm x$ cuts for the side ECals and the $\pm z$ cuts for the DS ECal.  In the barrel ECals, the inner and outer two layers are removed by the fiducial volume cut and in the DS ECal, the inner and outer three layers are removed.
 \begin{table}
   \begin{tabular}{ c c c c c c c }
-    Parameter set & FSIQEL & FSIQEH & FSIINEL & FSIABS & FSICXL & FSICXH \\ \hline \hline
-    Nominal & 1.0 & 1.8 & 1.0 & 1.1 & 1.0 & 1.8 \\
-    15 & 0.6 & 1.1 & 1.5 & 0.7 & 0.5 & 2.3 \\
-    16 & 0.6 & 1.1 & 1.5 & 0.7 & 1.6 & 2.3 \\
-    17 & 0.7 & 1.1 & 1.5 & 1.6 & 0.4 & 2.3 \\
-    18 & 0.7 & 1.1 & 1.5 & 1.6 & 1.6 & 2.3 \\
-    19 & 1.4 & 1.1 & 1.5 & 0.6 & 0.6 & 2.3 \\
-    20 & 1.3 & 1.1 & 1.5 & 0.7 & 1.6 & 2.3 \\
-    21 & 1.5 & 1.1 & 1.5 & 1.5 & 0.4 & 2.3 \\
-    22 & 1.6 & 1.1 & 1.5 & 1.6 & 1.6 & 2.3 \\
-    23 & 0.6 & 2.3 & 0.5 & 0.7 & 0.5 & 1.3 \\
-    24 & 0.6 & 2.3 & 0.5 & 0.7 & 1.6 & 1.3 \\
-    25 & 0.7 & 2.3 & 0.5 & 1.6 & 0.4 & 1.3 \\
-    26 & 0.7 & 2.3 & 0.5 & 1.6 & 1.6 & 1.3 \\
-    27 & 1.4 & 2.3 & 0.5 & 0.6 & 0.6 & 1.3 \\
-    28 & 1.3 & 2.3 & 0.5 & 0.7 & 1.6 & 1.3 \\
-    29 & 1.5 & 2.3 & 0.5 & 1.5 & 0.4 & 1.3 \\
-    30 & 1.6 & 2.3 & 0.5 & 1.6 & 1.6 & 1.3 \\
+     & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
+    Bottom-right & 36 & 36 & 31 & 29 & 206 & 28 \\
+    Side-right & 31 & 29 & 46 & 44 & 206 & 28 \\
+    Top-right & 39 & 27 & 29 & 31 & 172 & 28 \\
+    Bottom-left & 25 & 50 & 31 & 29 & 205 & 28 \\
+    Side-left & 29 & 31 & 50 & 25 & 207 & 28 \\
+    Top-left & 21 & 34 & 29 & 31 & 207 & 28 \\
+    Downstream & 29 & 29 & 29 & 30 & 41 & 43  \\
   \end{tabular}
-  \caption{FSI parameters, provided by the NIWG, representing the $1\upsigma$ contour in the FSI parameter space.  Taken from [INSERT REFERECE].}
-  \label{table:FSIErrors}
+  \caption{The fiducial volume definitions for each ECal module for the 1 prong topology.}
+  \label{table:FV1Prong}
 \end{table}
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/fsi_covariance_matrix.eps} \label{fig:FSIShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/xsec/fsi_shape_covariance_matrix.eps} \label{fig:FSIShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by variation of of the FSI parameters outlined in table~\ref{table:FSIErrors}.}
-  \label{fig:FSICovarianceMatrices}
-\end{figure}
-%really is just the number of in sample a for throw $i$ after applying the event weights.  For the shape-only covariance matrix, $N_{\textrm{a}}^{i}$ is defined as 
-%\begin{equation}
-%  N_{\textrm{a}}^{i} = 
-%\end{equation}
-\subsection{ECal detector systematic evaluation}
-\label{subsec:ECalDetectorSystematic}
-The analysis presented makes heavy use of a computational model of the ND280 ECal.  Any differences between this model and the real ND280 ECal could cause a systematic difference between the analysed Monte Carlo and the collected data used in this study.  So, several key areas have been identified which could cause such a systematic discrepancy, under the assumption that the differences exist.
-\newline
-\newline
-The implemented selections uses the enhanced reconstruction, outlined in chapter~\ref{chap:EnhancedECalReconstruction}.  The enhanced reconstruction, depends on a set of clustering algorithms which are outlined in section~\ref{sec:ECalEventReconstruction} and the clustering algorithms depend on the hit scintillator bars themselves.  Following this trail back, it can be argued that the vast majority of the ECal detector systematics can be covered by assessing the ability of the ECal to reconstruct individual hits.  Specifically, the vast majority of the ECal's systematic uncertainty can be assessed by investigating the hit efficiency of the scintillator bars.  The aim of this study is to quantify the relative ECal hit inefficiency found from collected data and use that information to invoke a similar ECal hit inefficiency in the MC.  The effect of the hit inefficiency can then be propagated through the reconstruction and analysis to study its effect on the number of selected events.  Fig.~\ref{fig:LayerEfficiencyCosmicData} shows the layer-by-layer efficiency of the ND280 ECals, measured using cosmic data~\cite{1748-0221-8-10-P10019}.  Cosmic rays, which are largely composed of MIPs, are typically through going and only hit one bar per layer.  So, the efficiencies shown in Fig.~\ref{fig:LayerEfficiencyCosmicData}, can be used as a proxy for the hit efficiency of the scintillator bars.  Fig.~\ref{fig:LayerEfficiencyCosmicData} contains almost all of the necessary information required to study this systematic uncertainty with the only missing information being the hit efficiency of the MC ECal.  Due to time constraints, it was necessary to make a couple of conservative assumptions:
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{images/measurement/systematics/detector/threshold/layer_efficiency_cosmics_data.pdf}
-  \caption{The layer-by-layer efficiency for the ND280 ECals, measured using cosmic data~\cite{1748-0221-8-10-P10019}.}
-  \label{fig:LayerEfficiencyCosmicData}
-\end{figure}
-\begin{itemize}
-\item The MC hit efficiency is 100$\%$.
-\item The data hit efficiency for all bars is the lowest efficiency shown in Fig.~\ref{fig:LayerEfficiencyCosmicData}, which is 96.2$\%$.
-\end{itemize}
-Bearing the assumptions in mind, the hit inefficiency which must be applied to the MC is 3.8$\%$.  Care must be taken when attempting to apply the hit inefficiency to the MC.  Naivelly, one might attempt to randomly remove 3.8$\%$ of hits from the reconstruction, however this would not best represent the hit inefficiency.  There are many reasons why a scintillator bar would not be $100\%$ efficient, however the efficiency should correlate with the deposited charge.  So, to best model this systematic effect, the lowest 3.8$\%$ of hits should be removed from the MIP peak in charge space.  Fig.~\ref{fig:HitChargeCosmicMCPEU} shows the deposited charge for each hit created by MC cosmic rays.
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU.eps}
-  \caption{The charge distribution of scintillator bar hits created by MC cosmics rays.}
-  \label{fig:HitChargeCosmicMCPEU}
-\end{figure}
-The distribution is cut off at 5.5 PEU, as this is a minimum threshold for output hits in the calibration stage of the ND280 software.  The clealy visible MIP peak is very close to this threshold and is actually partially cut off by this limit.  So, to apply the hit inefficiency, a new threshold needs to be calculated which removes an extra 3.8$\%$ of hits.  By calculating the lowest 3.8$\%$ of the hit charges created by the MC cosmic events, the new threshold hold was calculated to be 7.55 PEU.  This new threshold was applied as an initial stage of the reconstruction.  The recontruction and selection was then reapplied to the sample.  This new sample was then compared to the nominal sample to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalThresholdCovarianceMatrices}.  The largest uncertainty for the samples was found to be 3.74$\%$.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/threshold/ecal_threshold_covariance_matrix.eps} \label{fig:ECalThresholdShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/threshold/ecal_threshold_shape_covariance_matrix.eps} \label{fig:ECalThresholdShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the ECal hit inefficiency.}
-  \label{fig:ECalThresholdCovarianceMatrices}
-\end{figure}
-\newline
-\newline
-The hit efficiency systematic uncertainty actually covers several areas of uncertainty.  Firstly, it addresses how a change in the core input to the reconstruction changes its output and so, by extension, addresses the efficiency of the reconstruction.  However, because the inefficiency is invoked by removing low charge hits, it also addresses how low charge hits, which could migrate below the minimum reconstruction threshold, could affect the analysis.  Because treatment of the charge by the hit efficiency systematic is partially covered, it is only necessary to additionally address how variation in the charge of the already reconstructed objects could alter the number of objects which pass the selection cuts.  To assess this, a well understood sideband sample is needed such that the hit charge in MC and data can be compared.  Any shift or smearing of the charge in data, relative to Monte Carlo must then be added to the reconstructed objects, which can then be passed through the selection, allowing the covariance matrix to be constructed.  To study the variation in the hit charge, a sample of cosmic MC and data was used.  The two samples were passed through the enhanced reconstruction and the charge of the hits associated to the reconstructed events were then analysed.  An example of the reconstructed hit charges is shown in Fig.~\ref{fig:HitChargeNominalCosmicsTLB}.  
-\begin{figure}%
-  \centering
-  \subfloat[Data and nominal MC.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf} \label{fig:HitChargeNominalCosmicsTLB}}
-  \subfloat[Data and shifted+smeared MC.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics_TLB.pdf} \label{fig:HitChargeCorrectedCosmicsTLB}}
-  \caption{The charge of ECal hits after applying the enhanced reconstruction to run 3C cosmic events.  The distributions only show information for reconstructed objects in the top-left barrel ECal module.  The blue and black histograms are Monte Carlo and data respectively.}
-  \label{fig:ECalThresholdCovarianceMatrices}
-\end{figure}
-There are clear differences in the shape of the two distributions; the data charge peak is wider than the MC peak.  To quantify this difference in the peak of the distributions, a gaussian was fit to the top 66$\%$ of the two peaks which were then compared.  The relevant parameters for the comparison are the width of the data and MC fits, $\sigma_{\textrm{Data}}^{Q}$ and $\sigma_{\textrm{MC}}^{Q}$ respectively, and 
-\begin{equation}
-\Delta^Q = \mu_{\textrm{Data}}^Q - \mu_{\textrm{MC}}^Q,
-\end{equation}
-where $\mu_{\textrm{Data}}^Q$ and $\mu_{\textrm{MC}}^Q$ are the mean of the data and MC fits respectively.  $\Delta^Q$ measures the shift of the MC peak relative to data, while $\sigma_{\textrm{Data}}^{Q}$ and $\sigma_{\textrm{MC}}^{Q}$ can be used to quantify the relative width.  These values are shown in table~\ref{table:HitChargeFitValues}.  To truly quantify the difference in the charge distributions, not only is a well understood sample required, but also a clean set of reconstructed events to remove any additional effects which may mask the charge difference.  As the cosmic events will generally be be almost parallel to the vertical axis, only the top and bottom ECal modules will be able to cleanly reconstruct the cosmics events, so only those events should be considered.  Ideally, the values shown in table~\ref{table:HitChargeFitValues}, would be used to correct and smear the MC peak to match data.  
+As described above the same fiducial volumes are used for the 2,3 and 4+ prong topologies.  So, to tune the fiducial volume cuts, the topologies are temporarily combined and the combined sample is used to tune the cuts.  Those fiducial volume cuts are shown in table~\ref{table:FV2+Prong}.  There are clear differences between the fiducial volumes shown in table~\ref{table:FV1Prong} and table~\ref{table:FV2+Prong}.  The cuts suggested by the 2,3 and 4+ prong topology tunings are not as strict as those suggested by the 1 prong toplogy.  This should be expected, as ECal OOFV backgrounds reconstructed as 2,3 or 4+ prong vertices will most likely not have their vertex reconstructed near the faces of an ECal module.  The one exception to this is the downstream face of each ECal module.  It is clear from table~\ref{table:FV1Prong}, that the 2,3 and 4+ prong topologies suggest a stricter downstream face cut ($+z$ cut) than the 1 prong topology.  The reason for this strict cut is due to the nature of the neutrino beam.  J-PARC's neutrino beam is (almost) parallel with the $+z$ axis defined by the ND280 coordinate system.  Because of the very forward nature of the beam, any final state particles from ECal neutrino interactions are most likely to travel downstream.  So, any subsequent secondary interactions, which are tagged as background, will also occur downstream.  The $+z$ face cut attempts to remove these.
 \begin{table}
-  \begin{tabular}{ c c c c }
-   ECal module & $\Delta^{Q}$ (MEU) & $\sigma_{\textrm{Data}}^Q$ (MEU) & $\sigma_{\textrm{MC}}^Q$ (MEU) \\ \hline \hline
-   Bottom-right & -0.095 & 0.37 & 0.51 \\
-   Bottom-left & +0.045 & 0.37 & 0.61 \\
-   Top-right & -0.003 & 0.38 & 0.58 \\
-   Top-left & -0.099 & 0.38 & 0.50 \\ \hline
-   Side-right & -0.225 & 0.83 & 0.64 \\
-   Side-left & -0.315 & 0.85 & 0.55 \\
-   DS & -0.472 & 0.87 & 0.46 \\
+  \begin{tabular}{ c c c c c c c }
+     & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
+    Bottom-right & 19 & 9 & 16 & 0 & 3 & 39 \\
+    Side-right & 20 & 0 & 6 & 9 & 7 & 65 \\
+    Top-right & 15 & 9 & 4 & 3 & 5 & 38 \\
+    Bottom-left & 11 & 1 & 34 & 0 & 9 & 69 \\
+    Side-left & 1 & 4 & 13 & 1 & 3 & 67 \\
+    Top-left & 11 & 0 & 0 & 7 & 4 & 45 \\
+    Downstream & 13 & 9 & 13 & 4 & 0 & 64  \\
   \end{tabular}
-  \caption{Summary of the lead aborbers for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
-  \label{table:HitChargeFitValues}
+  \caption{The fiducial volume definitions for each ECal module for the 2,3 and 4+ prong topologies.}
+  \label{table:FV2+Prong}
 \end{table}
-However, due to time constraints, it was only possible to use said values to over-correct and over-smear the MC.  In terms of the individual hits, this meant using $\Delta^{Q}$ and $\sigma_{\textrm{Data}}^Q$ for the top-left ECal to apply a correction and smearing to the hit charge, regardless of which module the hit occurred in.  This is because the top-left ECal module has the largest value of $\Delta^{Q}$.  The adjusted hit charge is
-\begin{equation}
-Q' = Q + X
-\label{eqn:HitChargeCorrection}
-\end{equation}
-where $Q$ is the nominal hit charge and $X$ is a random variable which is defined as 
-\begin{equation}
-X \sim N(\Delta^{Q},\sigma_{\textrm{Data}}^Q).
-\label{eqn:HitChargeRandomVariable}
-\end{equation}
-It is important to note here that the width of the Gaussian distribution in which the adjustment is drawn from is $\sigma_{\textrm{Data}}^Q$.  By using this width, the MC hit charge is over-smeared relative to data.  An example application of equation~\ref{eqn:HitChargeCorrection} is shown in Fig.~\ref{fig:HitChargeCorrectedCosmicsTLB} which uses the same hit information as that in Fig.~\ref{fig:HitChargeNominalCosmicsTLB}, but with the correction applied to the MC hit charge.  As can be seen by comparing the two figures, the application of the over-smearing has caused the MC charge peak to be wider than the data peak.  To propagate the effect of this systematic, this smearing and correction needs to be applied to the reconstructed prongs before any selection takes place.  Unfortunately, hit level information is not available at the level where the selection is applied.  So, a slightly modified charge adjustment is needed.  If the total charge contained on a prong is $Q_{\textrm{prong}}$, then the total adjusted charge is
-\begin{equation}
-Q'_{\textrm{prong}} = Q_{\textrm{prong}} + X_{\textrm{prong}}
-\label{eqn:ProngChargeRandomVariable}
-\end{equation}
-where $X_{\textrm{prong}}$ is a random variable and is defined as
-\begin{equation}
-X \sim N(\Delta^{Q}N_{\textrm{prong}},\sigma_{\textrm{Data}}^Q),
-\label{eqn:HitChargeRandomVariable}
-\end{equation}
-where $N_{\textrm{prong}}$ is the number of hits contained on the prong.  Following the above description, the prong charge variation was applied to every reconstructed prong in the systematic sample and the selection was then applied.  This process was repeated 1000 times to build up the covariance matrices, which are shown in Fig.~\ref{fig:ECalChargeCovarianceMatrices}.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/charge/ecal_charge_covariance_matrix.eps} \label{fig:ECalChargeShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/charge/ecal_charge_shape_covariance_matrix.eps} \label{fig:ECalChargeShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the ECal charge uncertainties.}
-  \label{fig:ECalChargeCovarianceMatrices}
-\end{figure}
+\subsubsection{Visible energy cut}
+\label{subsubsec:VisibleEnergyCut}
+The second cut removes background based on the amount of deposited charge is associated to the constituent prongs. The focus of this cut is to remove particle showers (typically $e^\pm$ and $\gamma$) which have been reconstructed as a vertex.  For the one prong topology, this information is trivial to evaluate: find which scintillator hits are associated to the single prong and sum their respective charge deposit.  The situation is not as clear for a vertex with multiple prongs associated.  The variable chosen in this case is the total charge associated to all of the constituent prongs.  To further increase the power of this variable as a discriminator, the total prong charge is compared to the total number of scintillator hits associated to the prongs.  The aim is to find a 2 dimensional cut which rejects events based on their associated charge and hit information.
 \newline
 \newline
-While the hit efficiency and charge systematic assessments are fairly all-encompassing in terms of ECal detector uncertainties, they can not address how the inherent noise in the ECal can affect the reconstruction and, by extension, the selected number of events in this analysis.  There is only a need to address a noise systematic uncertainty if the simulated noise rate in the Monte Carlo is different to what actually happens in the ECal.  To measure the noise rate, a control sample  of cosmics rays (for the barrel) and through-going muons (for the DS ECal) were passed through the reconstruction.  Before the clustering stages were initiated, the number of hits in the relevant ECal module were recorded.  Then, after the reconstruction chain was completed, the number of hits which formed the final reconstructed objects were also counted.  The difference between these two numbers forms the hit estimate.  To test this estimator, the true number of noise hits in the Monte Carlo were also counted.
-\begin{figure}%
-  \centering
-  \subfloat[Cosmic control sample in the barrel ECals.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel.eps} \label{fig:ECalNoiseMCEstimateMCTrueBarrel}}
-  \subfloat[Through-going muon control sample in the DS ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds.eps} \label{fig:ECalNoiseMCEstimateMCTrueDS}}
-  \caption{The estimation of the number of noise hits (solid blue line) and the number of true noise hits (solid red line) per event in Monte Carlo.  The coloured dashed lines are the Gaussian fits to the respective distributions.}
-  \label{fig:ECalNoiseMCEstimateMCTrue}
-\end{figure}
-The results of this test are shown in Fig.~\ref{fig:ECalNoiseMCEstimateMCTrue}.  The Gaussian fits to the distribution are used to quantify the noise levels per event (by using the mean and width of the fits).  These values are shown in table~\ref{table:NoiseRateSummary}.  The estimate is clealy in good agreement with the true noise levels in the Monte Carlo.  So, it was decided to apply this method to estimate the noise levels in the data samples, the results of which are shown in Fig.~\ref{fig:ECalNoiseMCEstimateDataEstimate} and also shown in table~\ref{table:NoiseRateSummary}.
-\begin{figure}%
-  \centering
-  \subfloat[Cosmic control sample in the barrel ECals.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_barrel.eps} \label{fig:ECalNoiseMCEstimateDataEstimateBarrel}}
-  \subfloat[Through-going muon control sample in the DS ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_ds.eps} \label{fig:ECalNoiseMCEstimateDataEstimateDS}}
-  \caption{The estimation of the number of noise hits in Monte Carlo (solid blue line) and data (solid black line) per event.  The coloured dashed lines are the Gaussian fits to the respective distributions.}
-  \label{fig:ECalNoiseMCEstimateDataEstimate}
-\end{figure}
-\begin{table}
-  \begin{tabular}{ c c c c}
-  ECal module(s) & True (MC) & Estimated (MC) & Estimated (data)  \\ \hline \hline
-  Barrel & $107\pm10$ & $108\pm11$ & $169\pm16$ \\
-  DS & $104\pm10$ & $106\pm11$ & $122\pm18$ \\
-  \end{tabular}
-  \caption{Summary of the study to estimate the number of noise hits per event in the ECals.}
-  \label{table:NoiseRateSummary}
-\end{table}
-It is clear that there are differences between the noise levels in data and Monte Carlo.  So, to propagate the effect of this systematic uncertainty, elecSim was retuned to produce the data-like noise levels in both the barrel and DS ECal.  The systematic sample was then passed through the modified elecSim and all pieces of the software chain downstream.  After this, the selection was applied to the modified sample.  This sample was then compared to nominal and the difference was used to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalNoiseCovarianceMatrices}.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/ecal_noise_covariance_matrix.eps} \label{fig:ECalNoiseShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/ecal_noise_shape_covariance_matrix.eps} \label{fig:ECalNoiseShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the ECal noise uncertainties.}
-  \label{fig:ECalNoiseCovarianceMatrices}
-\end{figure}
-\newline
-\newline
-The ECal model used in the simulation was based on the as built drawings and so should be an accurate model.  However, the components of each ECal module do have associated uncertainties which are not, and can not easily be, taken into account in the simulation, but could easily cause a systematic difference between data and Monte Carlo.  For example, if the DS ECal lead absorbers were thicker in the simulated model, one should expect to see a relative deficit of beam triggered events in the DS ECal collected data.  Provided that the component dimensions, compositions and uncertainties are known, toy Monte Carlo can be used to construct a set of toy ECal modules which model the variation in the module mass.  This can be expanded further, to construct a covariance matrix for the mass of each contributing element.  This covariance matrix can then be used to re-weight the events, based on target element, in the Monte Carlo sample to model the effect of the ECal mass systematic.  The ECal module designs are split into three types: side, top/bottom and DS.  It is only necessary to generate a mass covariance matrix for each of the three types.  All values used for the component dimensions/uncertainties are taken from [INSERT JINST REFERENCE].  Precise component dimensions are only quoted for the components in the active regions of each module, namely the lead absorbers, the scintillator bars and the wavelength-shifting fibres, so only these components are considered in the toy Monte Carlo study.  A summary of the components are shown in table~\ref{table:SideECalComponents}, table~\ref{table:TopBottomECalComponents} and table~\ref{table:DSECalComponents} for the side, top/bottom and DS ECal designs respectively.
-\begin{table}
-  \begin{tabular}{ c c c c }
-     & Top/Bottom & Side & DS \\ \hline \hline
-  No. per layer & 2 & 4 & 2 \\
-  Length (mm) & $3858\pm4$ & $964.5\pm4$ & $2016\pm1$ \\
-  Width (mm) & $765\pm4$ & $2330\pm4$ & $1008\pm4$ \\
-  Height (mm) & $1.75\pm0.1$ & $1.75\pm0.1$ & $1.75\pm0.1$ \\
-  Sb doping & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ \\
-  \end{tabular}
-  \caption{Summary of the lead aborbers for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
-  \label{table:LeadAbsorberDimensions}
-\end{table}
-\begin{table}
-  \begin{tabular}{ c c c c }
-     & Top/Bottom & Side & DS \\ \hline \hline
-  No. per layer (para) & 38 & 57 & - \\
-  No. per layer (perp) & 96 & 96 & 50 \\
-  Length (para) (mm) & $3840\pm0.1$ & $3840\pm0.1$ & - \\
-  Length (perp) (mm) & $1520\pm0.1$ & $2280\pm0.1$ & $2000\pm0.1$ \\
-  Width (mm) & $40^{+0.0}_{-0.4}$ & $40^{+0.0}_{-0.4}$& $40^{+0.0}_{-0.4}$ \\
-  Height (mm) & $10^{+0.0}_{-0.4}$ & $10^{+0.0}_{-0.4}$& $10^{+0.0}_{-0.4}$ \\
-  Hole diameter (mm) & $1.75\pm0.1$ & $1.75\pm0.1$ & $1.75\pm0.1$ \\
-  Composition (CH:PPO) & 99:1 & 99:1 & 99:1 \\
-  Coating thickness (mm) & $0.25\pm0.13$ & $0.25\pm0.13$ & $0.25\pm0.13$ \\
-  Coating composition (CH:TiO$_2$) & 85:15 & 85:15 & 85:15 \\
-
-  \end{tabular}
-  \caption{Summary of the scintillator bars for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
-  \label{table:ScintillatorBarDimensions}
-\end{table}
-
-\begin{table}
-  \begin{tabular}{ c c c c }
-     & Top/Bottom & Side & DS \\ \hline \hline
-  No. per layer (para) & 38 & 57 & - \\
-  No. per layer (perp) & 96 & 96 & 50 \\
-  Length (para) (mm) & $3840\pm0.05$ & $3840\pm0.05$ & - \\
-  Length (perp) (mm) & $1520\pm0.05$ & $2280\pm0.05$ & $2000\pm0.05$ \\
-  Diameter (mm) & $1^{+0.02}_{-0.03}$ & $1^{+0.02}_{-0.03}$ & $1^{+0.02}_{-0.03}$\\
-  Composition & CH & CH & CH \\
-
-  \end{tabular}
-  \caption{Summary of the WLSfibres for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
-  \label{table:WLSFibreDimensions}
-\end{table}
-
-
-
-%The following discusses the construction of the side toy ECal modules.  The choices made and the process followed were the same for all three designs.  
-\subsubsection{The lead absorbers}
-\label{subsubsec:ECalMassLeadAbsorbers}
-Reference~\cite{1748-0221-8-10-P10019} provided a clear description of the composition of the lead absorbers for the ECal module designs, which are summarised in table~\ref{table:LeadAbsorberDimensions}.  All component uncertainties (both dimension and composition) were given as symmetric errors.  To construct an ECal lead layer, each layer dimension was systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  After the layer volume was defined, the Sb contamination was calculated, also using a gaussian throw, but using a width of the Sb contamination uncertainty.  The described information could then be used to retrieve the mass of the Pb and Sb in anECal lead layer.
-
-\subsubsection{The scintillator bars}
-\label{subsubsec:ECalMassSctintillatorBars}
-The information used to construct the toy scintillator bars is summarised in table~\ref{table:ScintillatorBarDimensions}, most of which was found in reference~\cite{1748-0221-8-10-P10019}.  The length of the bars were quoted with symmetric uncertainties (like the lead absorbers), so the length was also systematically varied using a throw from a gaussian of mean 0 and a width of the dimension uncertainty.  The hole and coating dimensions were also treated in the same manner.  However, the width and height were quoted with asymmetric errors and so could not be treated in the same way.  Fortunately, only a negative uncertainty was quoted, which meant the width and height uncertainties could be treated in a somewhat similar manner, but with randoms numbers being drawn from a half-gaussian.  The bar composition was reported as polystyrene doped with $1\%$~PPO (C$_{15}$H$_{11}$NO) and $0.03\%$~POPOP.  For the toy bar construction, the POPOP was considered negligable and so was not included.  The result is that the toy bar composition (excluding the coating) is 99$\%$~CH and 1$\%$~C$_{15}$H$_{11}$NO by mass.  Unfortunately, the full composition of the TiO$_2$ coating was extensively described.  However, a similar systematic study has already been undertaken for the FGD [FGD TN NOTE REFERENCE HERE] which included an investigation of the coating composition.  A representative for the Fermilab facility which extruded the scintillator bars reported that the final composition of the coating was 15$\%$ rutile-form TiO$_2$ and 85$\%$ CH with other contributing compounds considered negligable.  The collected information could then be used to retrieve the contributing mass of each element in a scintillator bar.
-
-\subsubsection{The WLS fibres}
-\label{subsubsec:ECalMassWLSFibres}
-As with the other toy components, reference~\cite{1748-0221-8-10-P10019} provided most of the necessary information for the construction and could be largely treated in the same way.  The major difference is that the WLS fibre diameter had an asymmetric error in which both components were not zero.  So, two toy gaussians were constructed to draw from (one representing each uncertainty) and a random number was first drawn from a uniform distribution to decide which gaussian would be used.  Very little information was provided about the composition of the WLS fibre, however the mass study in the FGD [REFERENCE SCOTT OSER TECHNOTE] assumed the WLS fibre was composed entirely of scintillator, so the same assumption was used for this study.  As with the other components, the provided information could then be used to retrieve the contributing mass of the elements in the WLS fibres.
-
-\subsubsection{ECal mass covariance}
-\label{subsubsec:ECalMassCovariance}
-Toy simulation was used to construct each component described in the above sections.  Each component was repeatedely built and was subsequently used to construct an ECal module.  The constributing mass of each element to the toy ECal module was then recorded.  10,000 toy ECal modules were constructed for each type, totalling 30,000 constructed modules.  The recorded contributing elemental mass for each construction was used to build up a mass covariance matrix using eqn.~\ref{eqn:CovarianceMatrixElementDef} and eqn.~\ref{eqn:NVariedDef}, an example of which is shown in Fig.~\ref{fig:MassCovDSECalAllElements} for the DS ECal.  Unfortunately, it was found that the covariance matrices for all three module types were singular, which is of immediate concern as the matrices need to be Cholesky decomposed as part of the systematic uncertainty evaluation.  It was found that the singular nature of the convariance matrices was caused by the contributing elements which have small covariance values (both on and off diagonal) and the problem could be solved by not considering some of them in the covariance matrix.  The three problematic elements are carbon, nitrogen and hydrogen.  Both nitrogen and hydgrogen only constitute a relatively small amount of the mass.  An example of this is shown in Fig.~\ref{fig:TotalMassDSECal} which shows the mass of the 10,000 toy DS ECal modules, with and without nitrogen and hydrogen.  There is a 2.45$\%$ difference between the two constructions which is borderline negligable.  While, ideally, the hydrogen and nitrogen should be included in the systematic evaluation, due to time constraints, they were excluded.  With the extra elements excluded, a non-singular covariance matrix for each module type could be constructed, all of which are shown in Fig.~\ref{fig:MassCovECalReducedElements}.
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements.eps}
-  \caption{The covariance matrix for the mass of the contributing elements in the DS ECal, with all contributing elements considered.}
-  \label{fig:MassCovDSECalAllElements}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/TotalMass_DSECal.eps}
-  \caption{The total mass of the DS ECal active volume with (black) and without (blue) nitrogen and hydrogen as contributing elements.  The smooth lines are the Gaussian fits to the distributions.  Using the Gaussian mean and width as the mass central value and uncertainty respectively, the DS ECal active mass with (without) hydrogen and nitrogen is $4060\pm20$~kg ($3960\pm20$~kg).}
-  \label{fig:TotalMassDSECal}
-\end{figure}
+The signal and background distributions for the barrel ECal, 1 prong topology are shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsSignal} and Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsBackground} respectively.  To illuminate the separation power, the background/signal ratio is shown in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, with the ratio truncated at 2.  By applying the truncation, areas where the background contamination is at least two times as large as the signal population is easily found.  To develop the 2 dimensional cuts, a test line is drawn which appears to roughly cut out the highly contaminated (red) areas in Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.  Then, to tune the cut line, the parameters of said line are varied in a grid search.  At each point in the grid, $\phi_i^{\textrm{selection}}$ is recorded.  The maximum value in this grid corresponds to the optimised parameters of the cut line.  As is evident from Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}, there are two areas of high background contamination which motivated the development two cut lines which are both overlayed on Fig.~\ref{fig:Sel1ProngChargeVsProngNHitsRatio}.
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Top/bottom ECal.]{\label{fig:MassCovTopBottomECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElements.eps}}
+  \subfloat[Signal events only.]{\label{fig:Sel1ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal.eps}}
 \end{minipage}%
 \begin{minipage}{.5\linewidth}
 \centering
- \subfloat[Side ECal.]{\label{fig:MassCovSideECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements.eps}}
-
+\subfloat[Background events only.]{\label{fig:Sel1ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background.eps}}
 \end{minipage}\par\medskip
 \centering
- \subfloat[DS ECal.]{\label{fig:MassCovDSECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps}}
+\subfloat[Background/Signal ratio, truncated at 2.  The black lines portray the cut lines and the attached arrows show which side of the cut is selected.]{\label{fig:Sel1ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.}
+\label{fig:Sel1ProngChargeVsProngNHits}
+\end{figure}
+\newline
+\newline
+Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsProngNHits} show similar distributions for the 2 and 3 prong topology in the barrel ECal.  The ratio distributions also have the cut lines overlayed.  An identical process was used to generate and tune the cut lines.  By using a definition for the total number of scintillator hits associated to all constituent prongs in a vertex, $N$, the definition of the cut lines are shown in table~\ref{table:ProngChargeVsProngNHitsCuts}.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel2ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel2ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.}
+\label{fig:Sel2ProngChargeVsProngNHits}
+\end{figure}
 
-\caption{The fractional covariance matrix for the mass of each contributing element to an ECal module (hydrogen and nitrogen omitted).}
-\label{fig:MassCovECalReducedElements}
-\end{figure}
-\subsubsection{Propagation of the mass systematic uncertainty}
-\label{subsubsec:ECalMassSystematicPropagation}
-The covariance matrices shown in Fig.~\ref{fig:MassCovECalReducedElements} were then used to generate systematic throws, in the same manner as the flux systematic uncertainty evaluation.  For the input into each systematic throw i.e. one run through of the selected Monte Carlo events, a set of event weights were generated for each of the seven ECal modules using the above mass covariance matrices.  Every neutrino interaction in the ECal active volume was weighted according to its target element.  As with the other systematic uncertainty evaluations, 1,000 systematic throws were generated and the subsequent covariance matrices were constructed which are shown in Fig.~\ref{fig:ECalMassCovarianceMatrices}.  The maximum uncertainty, which was for the DS ECal events, was found to be $0.39\%$. 
-\begin{figure}%
+\begin{figure}
+\begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix.eps} \label{fig:ECalMassShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix.eps} \label{fig:ECalMassShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the ECal mass uncertainties.}
-  \label{fig:ECalMassCovarianceMatrices}
+  \subfloat[Signal events only.]{\label{fig:Sel3ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel3ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps}}
+\caption{Total prong charge vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.}
+\label{fig:Sel3ProngChargeVsProngNHits}
 \end{figure}
-\newline
-\newline
-An additional source of systeamtic uncertainty could come from the ECal's ability to reject OOFV backgrounds. As fig.~\ref{fig:ProngStackSelected} shows, the dominant background selected, particularly for the barrel ECals, is the OOFV background.  If the simulation of the ECal had a different OOFV background rejection capability to that of the actual ECal, the selected event composition between data and MC simulation would differ, resulting in a systematic difference.  The only feasable way to assess this systematic uncertainty is to use control samples.  Unfortunately, only $\mu$ based control samples were available during the analysis.  However, fig,~\ref{fig:ProngStackSelected} shows that the one prong topology, which contains the largest number of selected events, has the biggest OOFV background contamination and as Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} show, $\mu$s are the dominant particle species in the surviving OOFV background.  To assess the systematic uncertainty, the $\mu$ based control samples, both data and MC, are passed through the selection and the number of reconstructed events which pass the fiducial volume cut are recorded, $N_{\textrm{CS}}^{\textrm{pass}}$.  The efficiency of the fiducial volume cut is then defined as
-\begin{equation}
-\epsilon_{\textrm{CS}} = \frac{N_{\textrm{CS}}^{\textrm{pass}}}{N_{\textrm{CS}}},
-\label{eqn:OOFVCSEfficiency}
-\end{equation}
-where $N_{\textrm{CS}}$ is the number of reconstructed control sample events which enter the selection.  It is important to note why $N_{\textrm{CS}}^{\textrm{pass}}$ counts the number of events which pass the fiducial volume cut, rather than as the number of events which pass all of the selection cuts.  The reason for this is the inclusion of the reverse sample (background enriched sample) in the rate fit which includes any event which passes the fiducial volume cut, but fails the most upstream cut.  By calculating $\epsilon_{\textrm{CS}}$ separately for data and MC, the systematic uncertainty can then be defined as
-\begin{equation}
-\alpha_{\textrm{OOFV}} = \epsilon_{\textrm{CS}}^{\textrm{data}} - \epsilon_{\textrm{CS}}^{\textrm{MC}}.
-\label{eqn:OOFVSystematic}
-\end{equation}
-The FGD cosmic control samples were used for this study, which are events with coincident reconstructed tracks in both FGDs and which occur outside of a beam spill window.  A summary of the information relevant for systematic uncertainty is located in table~\ref{table:OOFVSystematicSummary}.  
 \begin{table}
-  \begin{tabular}{ c c c c c c }
-    ECal module(s) & $N_{\textrm{CS}}$ (MC) & $N_{\textrm{CS}}$ (data) & $\epsilon_{\textrm{CS}}$ (MC) & $\epsilon_{\textrm{CS}}$ (data) & $\alpha_{\textrm{OOFV}}$ \\ \hline \hline
-    Barrel & 26560 & 42961 & 2.12$\%$ & 5.92$\%$ & 3.80$\%$ \\
-    DS & 6225 & 22555 & 2.27$\%$ & 5.97$\%$ & 3.70$\%$ \\
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (MEU) & DS cuts (MEU) \\ \hline \hline
+    1 & $>-4.5N + 75$ & $>-3.4N + 62$ \\
+     &  $<N + 205$ &  \\
+    2 & $>-0.5N + 67$ & $>0.2N + 51$ \\
+    3 & $>0.7N + 103$ & $>-1.1N + 117$ \\
   \end{tabular}
-  \caption{Summary of the ECal OOFV systematic study when using the FGD cosmic control sample.}
-  \label{table:OOFVSystematicSummary}
+  \caption{The definitions of the 2 dimensional cut lines involving the total prong charge and the number of associated scintillator hits. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.}
+  \label{table:ProngChargeVsProngNHitsCuts}
 \end{table}
-\newline
-\newline
-To propagate the effect of the systematic uncertainty, a similar approach to the flux systematic uncertainty propagation.  However, as the OOFV systematic uncertainty is a pair of single numbers rather than a covariance matrix, only two event weights (one for the barrel ECal and one for the DS ECal) were generated per systematic throw.  The event weights were used to reweight only the OOFV events in the sample and the subsequent sample covarince matrices were constructed, which are shown in Fig.~\ref{fig:ECalOOFVCovarianceMatrices}.  The largest uncertainty is in the bottom-left reverse sample and is 1.82$\%$.
-\begin{figure}%
-  \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix.eps} \label{fig:ECalOOFVShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix.eps} \label{fig:ECalOOFVShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the uncertainty in the ECal OOFV events.}
-  \label{fig:ECalOOFVCovarianceMatrices}
-\end{figure}
-\newline
-\newline
-As described in section~\ref{sec:ReconstructionValidation}, a significant data/MC difference was found in the DS ECal reconstructed events when looking at the through-going muon control sample.  The 2D reconstructed track quality check required that tracks contained no layer gaps.  There was an unforseen hit inefficiency in the DS ECal which was not modelled in MC, which would cause tracks to be rejected because of the quality check.  This effect is shown in Fig [INSERT FIGURE].
+\subsubsection{Unused hits cut}
+\label{subsubsec:UnusedHitsCuts}
+The output of the enhanced reconstruction is a set of reconstructed clusters.  Within those clusters are a set of tracks and their pairwise crossings which are used to recontruct the ECal vertices used by this analysis.  The clusters which contain the tracks and crossing can also be utilised as a discriminator.  Particle showers should generally produce a lot of hits and those hits are not necessarily arranged in a linear fashion  So, the third cut implemented assesses how many hits are associated with a cluster but not associated with the vertex.  The vertex is defined by its prong constituents so this is really a measure of how many scintillators hits were not associated with the reconstructed prongs.  By defining the number of hits in the cluster as $N^{\textrm{Cluster}}$ and the number of hits associated with the $i^{\textrm{th}}$ constituent prong as $N^{\textrm{prong}}_i$, the discriminator is
 \begin{equation}
-INSERT FIGURE
+  \Delta N = N^{\textrm{cluster}} - \sum_i N^{\textrm{prong}}_i.
+  \label{eqn:DeltaNHits}
 \end{equation}
-Because this problem was found after significant progress had been made on the MC selection, it was decided that this bug would be treated as a systematic uncertainty in the analysis.  To assess this adhoc systematic uncertainty, the quality check was relaxed to allow 2D tracks to skip one layer in a given view.  The reconstrution and selection was then applied to the sample and was compared to the nominal sample to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalHoughBugCovarianceMatrices}.
+The cut value really should depend on how many hits are associated to the constituent prongs.  So, as was done in section~\ref{subsubsec:VisibleEnergyCut}, the $\Delta N$ cut should be 2 dimensional.  Specifically, the $\Delta N$ cut should depend on the number of scintillator hits associated to the constituent prongs.
+\newline
+\newline
+So, an identical approach is used to define and tune the cut lines as was used in section~\ref{subsubsec:VisibleEnergyCut}.  The signal, background and background/signal ratio distributions for the 1, 2 and 3 prong topologies in the barrel ECal are shown in Fig.~\ref{fig:Sel1DeltaNHitsVsProngNHits}, Fig.~\ref{fig:Sel2DeltaNHitsVsProngNHits} and Fig.~\ref{fig:Sel3DeltaNHitsVsProngNHits} respectively.  The layout of the figures is the same as was shown for the visible energy cut.  In a similar manner to table~\ref{table:ProngChargeVsProngNHitsCuts}, the $\Delta N$ cut definitions are shown in table
+\begin{table}
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (no units) & DS cuts (no units) \\ \hline \hline
+    1 & $<-0.2N + 16$ & $<1.2N + 3$ \\
+    2 & $<1.5N - 16$ & $<0.7N - 4$ \\
+    3 & $<1.7N + 7$ & $<0.8N + 1$ \\
+  \end{tabular}
+  \caption{The definitions of the 2 dimensional cut lines involving $\Delta N$ and the number of scintillator hits associated with the constituent prongs. $N$ refers to the total number of scintillator hits associated to the constituent prongs in the vertex.}
+  \label{table:DeltaNHitsVsProngNHitsCuts}
+\end{table}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel1DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 1 prong topology.}
+\label{fig:Sel1DeltaNHitsVsProngNHits}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 2 prong topology.}
+\label{fig:Sel2DeltaNHitsVsProngNHits}
+\end{figure}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong scintillators hits for barrel ECal events in the 3 prong topology.}
+\label{fig:Sel3DeltaNHitsVsProngNHits}
+\end{figure}
+
+\subsubsection{Opening angle}
+\label{subsubsec:OpeningAngle}
+Despite the best efforts of the track merging, not all curving trajectories have reconstructed tracks which are successfully merged.  So, there will be an inherent ECal OOFV contamination of the 2,3 and 4+ prong topologies where the reconstruction has failed.  While future iterations of the analysis should revisit the reconstruction to combat this, it is sufficient to cut these background events out in the selection.  As was described in section~\ref{sec:VertexReconstruction}, a key signiture of a curving trajectory is two prongs with a small opening angle.  This means that the opening angle can be used as a cut to remove such background events.  To define an opening angle, at least two tracks are required so, unfortunately, such a method can not be implemented for the 1 prong topology.
+\newline
+\newline
 \begin{figure}%
   \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix.eps} \label{fig:ECalHoughBugShapeNormCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix.eps} \label{fig:ECalHoughBugShapeOnlyCovarianceMatrix}}
-  \caption{The sample covariance induced by the bug fix to the reconstruction.}
-  \label{fig:ECalHoughBugCovarianceMatrices}
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
+  \subfloat[DS ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
+  \caption{The opening angle subtended by the constituents prongs for the 2 prong topology.  Signal and background events are the blue and red histograms respectively.}
+  \label{fig:Sel2OpeningAngle}
 \end{figure}
-\subsection{FGD detector uncertainty evaluation}
-\label{subsec:FGDDetectorSystematics}
-The systematic uncertainties associated with the FGD are described extensively [INSERT TECHNOTE REFERECE].  In recent times, there has been a significant push to develop a framework in which to analyse and propagate systematic uncertainties associated with ND280 analyses, which is called the PSYCHE framework.  Even though outer detector analyses have not been incorporated into PSYCHE, this is not true for tracker analyses and so PSYCHE could be partly utilised in this analysis.  The design of PSYCHE allows the user to enable/disable relevant systematic uncertanties and then simutaneously propagate them through an analysis.  PSYCHE was set up to apply the FGD detector systematics and produce 1000 throughs, in which every systematic was simutaneously applied.  The ouput, in the form of a distribution of a varied number of selected CC events in the FGD, was the used to define the systematic uncertainty.  The distribution is shown in Fig.~\ref{fig:FGDSystematicsNEvents}.  The Gaussian fit to the thrown number of events implies that the number of FGD events is $(1.069\pm0.022)\times10^5$ events i.e. a $2.01\%$ uncertainty.  However, the number of nominal selected events is $1.054\times10^5$ and so the shift in the number of events suggests an additional $1.41\%$ error.  Combining these in quadrature, the FGD detector systematic uncertainty was found to be $2.51\%$.  This error purely relates to the number of CC events in the FGD and so does not correlate with any of the events in the ECal.
+The signal and background separation provided by the subtended opening angle for the 2 prong topology is shown in Fig.~\ref{fig:Sel2OpeningAngle}.  While the barrel ECal sees more separation power in the opening angle, it should be clear from Fig.~\ref{fig:Sel2OpeningAngleBarrel} and Fig.~\ref{fig:Sel2OpeningAngleDS} that events should only be selected if their opening angle is bigger than some threshold.  To find this threshold, a test cut was systematically varied between 0$^\circ$ and 90$^\circ$ in 1$^\circ$ increments.  At each increment, the number of events with an opening angle larger than the test cut was recorded and $\phi_2^{\textrm{selection}}$ subsequently calculated.  An example of the variation in $\phi_2^{\textrm{selection}}$ is shown in Fig.~\ref{fig:Sel2OpeningAngleBarrelFOM} for the barrel ECal.  A maximum in $\phi_2^{\textrm{selection}}$ is clearly found which shows that the opening angle is a good discriminator and that the method works.  By applying this method to 2 prong events, events are only selected if the subtended opening angle is greater than 34$^\circ$ for the barrel ECal or greater than 21$^\circ$ for the DS ECal.
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{images/measurement/systematics/detector/fgd/fgd_systematics_nevents.eps}
-  \caption{The number of selected FGD events for each systematic throw using PSYCHE.  The smooth line is a Gaussian fit to the number of events.}
-  \label{fig:FGDSystematicsNEvents}
+  \includegraphics[width=12cm]{images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel.eps}
+  \caption{$\phi_2^{\textrm{selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.}
+  \label{fig:Sel2OpeningAngleBarrelFOM}
 \end{figure}
-\newline
-\newline
-The total detector covariance matrices are shown in Fig.~\ref{fig:DetectorCovarianceMatrices}.  These matrices were found by summing all of the detector related covariance matrices.  The exception to this is the FGD detector uncertainties in which the single variance was added to the FGD on-diagonal bin.  The largest uncertainty was found to be $5.04\%$.
+Similar information should be available for the higher prong topologies.  However it is not as trivial to define an opening angle in such situations.  The chosen variable in for the 3 prong topology is the summed opening angle for every pairwise combination of the constituent prongs.  The signal and background separation for this summed opening angle is shown in Fig.~\ref{fig:Sel3OpeningAngleDS}.  The cut development process used here was indentical to the one used for the 2 prong topology.  The study suggested that events should only be selected if their summed opening angle is greater than 81$^\circ$ for the barrel ECal and 49$^\circ$ for the DS ECal. 
 \begin{figure}%
   \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/total/detector_covariance_matrix.eps} \label{fig:DetectorCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/total/detector_shape_covariance_matrix.eps} \label{fig:DetectorShapeCovarianceMatrix}}
-  \caption{The sample covariance induced by all of the detector related uncertainties.}
-  \label{fig:DetectorCovarianceMatrices}
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
+  \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
+  \label{fig:Sel3OpeningAngle}
 \end{figure}
-The total covariance matrices, combining all of the covariance matrices discussed above, are shown in Fig.~\ref{fig:TotalCovarianceMatrices}.  The largest uncertainty is $13.8\%$.
-\begin{figure}%
+The cuts found by this study are summarised in table
+\begin{table}
+  \begin{tabular}{ c l l }
+    Prong topology & Barrel cuts (degrees) & DS cuts (degrees) \\ \hline \hline
+    2 & $>34$ & $>21$ \\
+    3 & $>81$ & $>49$ \\
+  \end{tabular}
+  \caption{The definitions of the opening angle cuts.}
+  \label{table:SelOpeningAngle}
+\end{table}
+\subsubsection{Entering background cut}
+\label{subsubsec:EnteringBackgroundCut}
+The fifth cut, simply called the 'entering background' cut, uses the prong multiplicity aspect of a vertex to reject events that enter the ECal and then mimic a signal vertex.  The cut requires at least two constituent prongs to work, so the 1 prong topology is unaffected by this.  The idea is fairly simple, for each vertex, check if any of the prongs have an end which is upstream of the reconstructed vertex position.  If so, it may be an entering background and could need rejecting.  The position of the upstream prong end is key, as the cut should not reject every event which has an apparent backwards going track.  So, the cut checks whether the upstream prong end is outside of the host ECal fiducial volume.  As described in section~\ref{subsubsec:FVCut}, each ECal module uses two fiducial volumes.  The 2+ prong fiducial volume would be of little use in this situation as the only strict face definition is for the downstream end of each ECal module.  This motivates the use of the 1 prong fiducial volume for this cut.  This cut is physically motivated and relies on parameters which have already been tuned.  So, this cut requires no tuning to operate.
+
+\subsubsection{Most upstream vertex}
+\label{subsubsec:MostUpstreamCut}
+The sixth, and final, cut implemented is motivated by the beam kinematics.  As discussed in section~\ref{sec:MonteCarloSample}, the expected pileup per beam bunch is small.  As the reconstruction outputs events in buckets, the same philosophy can be used here: there should only be one signal events per bucket.  The assumption used for this cut is any secondary interactions are likely to happen downstream of the interaction.  So, the cut selects the most upstream remaining vertex in the beam bucket.  As with the 'entering background' cut, the selection of the most upstream vertex requires no tuning to operate.
+
+\subsection{Performance of selection}
+\label{subsec:SelectionPerformance}
+Now that the cuts have been identified, their performance can be assessed.  To do this, the Monte Carlo sample was processed through the selection and the event composition assessed at each stage.  As each cut was focused on a specific topology, it is important to check the effect of the cuts on each topology.  The first check it to see the event survival as a function of the cuts for each topology.  These checks are shown in Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} for the barrel and DS ECals respectively.  Each bin in both figures shows how many events survive after the cut has been supplied.  For example, the FV bin in all of the figures shows how many events remain after applying the fiducial volume cut.  As the 'most upstream' cut is the final cut in the selection, the final bin shows how many events remain after the full selection has been applied.  The main piece of information shown is that the backgrounds are being rejected at a much higher rate than the signal, resulting in a sample that is mostly signal.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/total/total_covariance_matrix.eps} \label{fig:TotalCovarianceMatrix}}
-  \subfloat[Shape-only.]{\includegraphics[width=8cm]{images/measurement/systematics/total/total_shape_covariance_matrix.eps} \label{fig:TotalShapeCovarianceMatrix}}
-  \caption{The sample covariance induced by all of the systematic uncertainties.}
-  \label{fig:TotalCovarianceMatrices}
+  \subfloat[1 prong topology.]{\label{fig:Sel1EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{Event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEventSurvivalBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{Event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelEventSurvivalDS}
 \end{figure}
 \newline
 \newline
-The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} heavily used Monte Carlo simulation of neutrino interations to estimate the efficiency of the selection.  At the core of the simulation, NEUT was used to initally generate the simulated neutrino interactions.  Ideally, the selection efficiency should be a property of the selection itself.  However, because of the use of a neutrino generator in the simulation, it is possible that the selection could contain an element of generator dependency.  It is non-trivial to use a data control sample to assess a systematic uncertainty on the selection efficiency.  In fact, the only feasable way to address this analysis issue would be to use multiple neutrino generators as inputs to the same ND280 simulation and compare the differences.  Unfortunately, a large set of generators were not available for use in the time frame of the analysis.  In ND280 software productions, a large amount of neutrino events based on the GENIE [insert reference] generator are produced, separately to the NEUT events.  So $2.5\times 10^{19}$~POT worth of GENIE events were passed through the ND280 software chain (including the enhanced reconstruction) and the selection presented in chapter~\ref{chap:NeutrinoInteractionSelection}.  No GENIE-based sand MC has ever been produced in ND280 software productions.  However, as this check only concerns changes to the selection efficiency, an absense of sand MC should not be a problem.  The selected events, separated into the prong topologies, is shown in Fig.~\ref{fig:ProngStackSelectedGENIE}.
+While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} shows that the cuts are successfully rejecting background while retaining signal, it is not clear what particle species are rejected.  It is important to check this so that the developed selection is understood.  The background type which is rejected at the highest rate is the ECal OOFV background so it is sufficient to study the particle composition of this to understand the selection's ability to reject particles.  The particle type is defined by looking at which simulated particles contributed to the ECal cluster as whole.  The particle which deposited the highest amount of energy is accepted as the one which created the ECal cluster.  The ECal OOFV event survival as a function of the cuts is shown in Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} for the barrel and DS ECal respectively.  For each prong topology, the ECal OOFV events are separated into the main particle types which constitute the ECal OOFV background.  It is clear that the cuts are rejecting the particle species that one would expect them to reject.  For example, the fiducial volume cut in the 1 prong topology almost exclusively rejects entering MIPs.  The visible energy and $\Delta N$ cuts worth together as an effective particle shower tagger to reject $e^\pm$ and $\gamma$ particles.  The opening angle and entering background cuts work as an additional MIP rejectory in cases where the track merging was unsuccessful.  The composition of the ECal OOFV background has interesting features, regardless of the cuts applied.  Specifically, the particle species varies to a great degree between each prong topology.  For example, the 1 prong and 2 prong topologies in the barrel ECals (Fig.~\ref{fig:Sel1OOFVEventSurvivalBarrel} and Fig.~\ref{fig:Sel2OOFVEventSurvivalBarrel}) see a muon dominated ECal OOFV background.  Whereas, the 3 prong and 4+ prong topologies see a very different background which is $\pi^\pm$ dominated.  The natural separation provided by the topologies should allow investigation of a specific particle species if required by any future analyser.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelOOFVEventSurvivalBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
+\label{fig:SelOOFVEventSurvivalDS}
+\end{figure}
+\newline
+\newline
+The selection efficiency and purity as a function of the cuts are shown for the barrel ECal and DS ECal in Fig.~\ref{fig:SelEffPurCutLevelBarrel} and Fig.~\ref{fig:SelEffPurCutLevelDS} respectively.  Every cut which is relevant to a prong topology has an expected effect, the purity of the sample increases while the efficiency drecreases.  What is not so clear from the distributions is whether the tuning metric, $\phi^{\textrm{selection}}$, increases as a function of the cuts.  So, $\phi^{\textrm{selection}}$ is shown in a similar manner for the barrel and DS ECal in Fig.~\ref{fig:SelFOMCutLevelBarrel} and Fig.~\ref{fig:SelFOMCutLevelDS} respectively.  The tuning metric optimisation in both the barrel and DS ECal shows some interesting features.  Firstly, in the barrel, it is clear that for the 1 prong and 2 prong topologies, every applied cut shows a clearly increasing $\phi^{\textrm{selection}}$.  Unfortunately, this is not the case for the 3 prong and 4+ prong topologies.  Specifically, the entering background cut degrades the value of $\phi^{\textrm{selection}}$.  This is most obvious in the 4+ prong topology, however it has already been stated that this topology is effectively an overflow bin and is being includes more for completeness.  What is perhaps more concerning is the degredation of $\phi^{\textrm{selection}}$ in the 3 prong topology.  Fortunately, the decrease in $\phi^{\textrm{selection}}$ is small when the entering background cut is appliedi and the change is well within error.  It is important to bare in mind that $\phi^{\textrm{selection}}$ is used as a tuning guide and small deviations from the optimisation process are allowed.  It was decided that the entering background cut would remain in place for both the 3 prong and 4+ prong topologies.  The $\phi^{\textrm{selection}}$ distribution in the DS ECal shows some similar and different features to that of the barrel.  As with the barrel ECal case, $\phi^{\textrm{selection}}$ clearly increases as a function of the cuts for the 1 prong and 2 prong topologies.  Unlike the barrel ECal, there is also an increase in $\phi^{\textrm{selection}}$ when applying the entering background cut.  However, there is a minor decrease in $\phi^{\textrm{selection}}$ when selecting the most upstream vertex.  It is not wholly surprising that this is the case as the DS ECal is the most downstream detector in ND280.  Such a cut can easily cause a bias where events in the barrel are generally preferred because of their extent in the global $Z$ direction.  Fortunately, this effect is very minor and also well within error.  
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the barrel ECal.  Each bin refers to the efficiency and purity after a cut has been applied.}
+\label{fig:SelEffPurCutLevelBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the DS ECal.  Each bin refers to the efficiency and purity after a cut has been applied.}
+\label{fig:SelEffPurCutLevelDS}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1FOMCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_1Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2FOMCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_2Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3FOMCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_3Prong_Barrel.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4FOMCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel.eps}}
+\end{minipage}\par\medskip
+\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the barrel ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.}
+\label{fig:SelFOMCutLevelBarrel}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[1 prong topology.]{\label{fig:Sel1FOMCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_1Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[2 prong topology.]{\label{fig:Sel2FOMCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_2Prong_DS.eps}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[3 prong topology.]{\label{fig:Sel3FOMCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_3Prong_DS.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[4+ prong topology.]{\label{fig:Sel4FOMCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_4Prong_DS.eps}}
+\end{minipage}\par\medskip
+\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the DS ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.}
+\label{fig:SelFOMCutLevelDS}
+\end{figure}
+\newline
+\newline
+The cross-section measurement presented in this analysis in an inclusive measurement.  This means that the neutrino interaction cross-section needs to be measured without bias across the J-PARC beam energy range.  All of the performance checks presented so far have only assessed each prong topology individually.  So, the final check is to assess how the selection performs after combining the topologies together.  The selection efficiency and purity after combining the topologies is shown in Fig.~\ref{fig:EffPurSummedTopologies}.  For both the barrel ECal and DS ECal, there is a clear dependence of the purity on the neutrino energy.  However, this should be expected.  It is clear that the purity decreases as the neutrino energy increases which can be explained by the self-shielding effect of the ECal.  In the low energy regime, the ECal OOFV background is suppressed because there is insufficient energy to either penetrate the ECal or deposit enough energy to allow cluster reconstruction.  As the background energy increases, the suppression is lifted, resulting in a decrease in the selection purity.  The key piece of information shown in Fig.~\ref{fig:EffPurSummedTopologies} is the selection efficiency.  As described above, it is of vital importance that the selection does not introduce a bias which measures one energy regime more than another.  The flatness of the efficiency distributions for both the barrel ECal and DS ECal shows this is not the case which means the selection presented here would be suitable for a CC-inclusive measurement.
 \begin{figure}
   \centering
-  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE.eps} \label{fig:ProngStackBarrelSelectedGENIE}}
-  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE.eps} \label{fig:ProngStackDSSelectedGENIE}}
-  \caption{The number of selected events in the GENIE-based Monte Carlo sample, separated out into the prong topologies.  Each event is catagorised by the associated truth information from the simulation.}
-  \label{fig:ProngStackSelectedGENIE}
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/selection_performance/EffPur_SummedTopologies_DS.eps} \label{fig:EffPurSummedTopologiesDS}}
+  \caption{The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.}
+  \label{fig:EffPurSummedTopologies}
 \end{figure}
-The selection efficiencies for each prong topology are shown in Fig.~\ref{table:SelEfficiencyGENIE}.
+\newline
+\newline
+\begin{figure}
+  \centering
+  \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/selection/mc_selection/ProngStack_DS_Selected.eps} \label{fig:ProngStackDSSelected}}
+  \caption{The number of selected events in the Monte Carlo sample, separated out into the prong topologies.  Each event is catagorised by the associated truth information from the simulation.}
+  \label{fig:ProngStackSelected}
+\end{figure}
+The number of selected events for each prong topology is shown in Fig.\ref{fig:ProngStackSelected}, with each topology broken down by event catagories.  For both the barrel and DS, signal events dominate each prong topology.  The most impure topology for both detectors is the 1 prong topology.  This is primarily due to having an insufficient number of prongs to really benefit from what the reconstruction can provide.  Despite this, it is clear that the selection results in a pure sample of events.  
+\newline
+\newline
+The selection and efficiencies for each prong topology are shown in table~\ref{table:SelEfficiency} and table~\ref{table:SelPurity} respectively.  The final purities and efficiencies are generally very good.  The only concern is the 1 prong topology efficiency in the barrel ECal which is notably lower than all other efficiencies.  The main reason for the low efficiency is the strict fiducial volumes defined for each ECal module.  Generally speaking, this low efficiency may cause a problem if there is a significant amount of signal migration from the 2 prong topology which is more efficient.  It is important to address this when assessing systematic uncertainties for the analysis.
 \begin{table}
   \begin{tabular}{ c c c c c }
     ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
     module & efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$) \\ \hline \hline
-    Barrel & 46.3 & 54.2 & 66.0 & 65.4 \\
-    DS & 55.9 & 58.3 & 59.5 & 59.9\\
+    Barrel & 46.8 & 58.7 & 66.5 & 66.3 \\
+    DS & 59.0 & 64.2 & 62.3 & 60.4\\
   \end{tabular}
-  \caption{The selection efficiencies from the GENIE-based Monte Carlo sample for each prong topology and ECal module.}
-  \label{table:SelEfficiencyGENIE}
+  \caption{The selection efficiencies for each prong topology and ECal module.}
+  \label{table:SelEfficiency}
 \end{table}
-As described in section~\ref{subsec:SelectionPerformance}, the selection efficiencies do not include neutrino events which were not reconstructed.  So, the topology combined efficiencies which do include said events are shown in table~\ref{table:FinalEffGENIE}.
 \begin{table}
-  \begin{tabular}{ c c }
-    ECal module & Efficiency ($\%$) \\ \hline \hline
-    Barrel & 40.7 \\
-    DS & 49.9  \\
+  \begin{tabular}{ c c c c c }
+    ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
+    module & purity ($\%$)& purity ($\%$)& purity ($\%$)& purity ($\%$) \\ \hline \hline
+    Barrel & 60.3 & 85.0 & 68.5 & 63.0\\
+    DS & 69.6 & 87.2 & 72.0 & 67.3\\
   \end{tabular}
-  \caption{The topology combined efficiency for the GENIE-based Monte Carlo sample.  The efficiency values include simulated events which were not reconstructed.}
-  \label{table:FinalEffGENIE}
+  \caption{The selection purities for each prong topology and ECal module.}
+  \label{table:SelPurity}
 \end{table}
-Overall, there are differences in the selection efficienies between NEUT and GENIE, particularly for the DS ECal.  However, when combining the topologies and including the events below reconstruction threshold, the efficiency differences are somewhat minor.  As described at the start of this chapter, the DS ECal will form the primary target and so it is the DS ECal efficiency which is the most important.  The DS ECal efficiency uncertainty is simply defined as the difference between the NEUT and GENIE efficiencies, which is $53.0\% - 49.9\% = 3.1\%$.  This error as a fraction of the nominal uncertainty is $5.85\%$.
-\subsection{The measured cross-section uncertainty}
-Using all of the information described in chapter~\ref{chap:NeutrinoInteractionSelection} and chapter~\ref{chap:CrossSectionMeasurement}, the $\nu_\mu$ CC-inclusive cross-section on lead will be calculated as
-\begin{equation}
-\label{eq:CrossSection}
-\sigma^{\textrm{CC}}_{\textrm{Pb}} = \frac{R_{\textrm{Pb}}N^{\textrm{MC}}_{\textrm{Pb}}\eta_{\textrm{Pb}}}{T_{\textrm{Pb}}\Phi^{\textrm{MC}}\epsilon_{\textrm{Pb}}},
-\end{equation}
-where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS ECal selection.  The shape covariance matrix (shown in Fig.~\ref{TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertanties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quoted as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
-\begin{equation}
-\label{eq:CrossSectionUncertainty}
-\sigma_{\sigma^{\textrm{CC}}_{\textrm{Pb}}} = \sigma_{R_{\textrm{Pb}}} \pm 12.5\%,
-\end{equation}
-where $\sigma_{R_{\textrm{Pb}}}$ is the error on $R_{\textrm{Pb}}$ returned from the rate fit.
-
-\section{Validation of method}
-\label{sec:MethodValidation}
-The ECal rate fit described in section~\ref{sec:ECalRateFit} requires validation to ensure that not only the machinery works as intended, but also to check that the fit is suitable for such an analysis.  The first set of validation checks performed deals with the former case.
-
-\subsection{Validation of the fit machinery}
-\label{subsec:FitMachineryValidation}
-The initial validation method used the same Monte Carlo described in section~\ref{sec:InputSamples} to create toy datasets which were passed through the fitter.  To create said datasets, new normalisation parameters, $R^{\textrm{Val}}$, were defined, all of which are shown in table~\ref{table:ValidationNormalizationSets}.  
+\newline
+\newline
+The selection efficiency is defined to be 100$\%$ when no cuts have been made.  There are inevitably signal events which are not reconstructed, primarily because the energy is below reconstruction threshold.  It is non-trivial to include these events in specific prong topology calcuation, but it is also unnecessary to do this as the prong topologies are to be summed for the CC-inclusive cross-section measurement.  So, the topology combined efficiency and purity are presented in table~\ref{table:FinalEffPur}.  It is these numbers, along with the sample itself, which are the final output of the Monte Carlo selection.
 \begin{table}
-  \begin{tabular}{c | c c c }
-    Normalisation set & $R^{\textrm{Pb}}$ & $R^{\textrm{C}}$ & $R^{\textrm{Other}}$\\ \hline \hline
-    1 & 1.0 & 1.0 & 1.0 \\
-    2 & 3.0 & 1.0 & 1.0 \\
-    3 & 0.7 & 1.5 & 0.8 \\
-    4 & 1.0 & 0 & 1.0 \\
-    5 & -0.3 & 1.0 & 1.0 \\
+  \begin{tabular}{ c c c}
+    ECal module & Efficiency ($\%$) & Purity ($\%$) \\ \hline \hline
+    Barrel & 42.4 & 64.4 \\
+    DS & 53.0  & 72.4 \\
   \end{tabular}
-  \caption{The normalisation sets used in validation of the ECal rate fit.  For normalisation set 5, the new normalisation for $R^{\textrm{Other}}$ is only applied to the neutral current events in the Other population.}
-  \label{table:ValidationNormalizationSets}
+  \caption{The topology combined efficiency and purity.}
+  \label{table:FinalEffPur}
 \end{table}
-These new normalisation parameters scale the relevant Monte Carlo templates.  For the MC population $\textrm{X}$ in each sub-detector sample $\imath$, the normlisation parameter is applied to create the new population as
-\begin{equation}
-n^{\textrm{X Val}}_{\imath} = R^{\textrm{X Val}}_{\imath} n^{\textrm{X Nom}}_{\imath},
-\label{eq:ValidationScaledPopulation}
-\end{equation}
-where $n^{\textrm{X Nom}}_{\imath}$ is the number of events in population $\textrm{X}$ of sub-detector sample $\imath$ for the nominal MC.  The total number of events in each sub-detector sample is then constructed as 
-\begin{equation}
-N^{\textrm{Val}}_{\imath} = \sum^{\textrm{X}} n^{\textrm{X Val}}_{\imath}.
-\label{eq:ValidationNEventsDetector}
-\end{equation}
-The final step in creation of the toy datasets was to vary the total number of events in the sub-detector samples.  The method chosen was the same as that used to generate event weights for the systematic uncertainty studies described in section~\ref{sec:SystematicUncertainties}.  The covariance matrix shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix} was cholesky decomposed and multiplied by a vector of random numbers, all drawn from a Gaussian of mean 0 and width 1.  The sub-detector sample weights were then created by adding 1 to each element of the multiplied vector.  Each scaled sub-detector sample, $N^{\textrm{Val}}_{\imath}$, was then reweighted by the relevant sample weight.  This toy dataset was then passed to the fitter and its output recorded.  The steps outlined above describe one pass of the fitter.  This process was repeated 10,000 times for each validation normalisation set.
-\newline
-\newline
-The value of $R^{\textrm{Pb}}$ returned for each throw in parameter set 1 is shown in Fig.~\ref{fig:RateFitValParamSet1RPbFit}.  The Gaussian fit quantifies the performance of the fit: the mean specifies the final value and the width specifies a pseudo-error.  To further quantify how well the machinery works, the parameter pull, $P^{\textrm{X}}_{\imath}$, is defined as  
-\begin{equation}
-P^{\textrm{X}}_{\imath} = \frac{R^{\textrm{X Fit}}_{\imath} - R^{\textrm{X Val}}_{\imath}}{\sigma^{\textrm{X Fit}}_{\imath}},
-\label{eq:FitParameterPull}
-\end{equation}
-where $R^{\textrm{X Fit}}_{\imath}$ and $\sigma^{\textrm{X Fit}}_{\imath}$ are the value and error of parameter $\textrm{X}$ returned from the fit for throw $\imath$ respectively.  The MINOS routine used in the fitter returns asymmetric errors and so care must be taken when deciding which error to use in equation~\ref{eq:FitParameterPull}.  It was decided that the positive error would be used when the fitter returned a value higher than the input.  $P^{\textrm{Pb}}$ for parameter set 1 is shown in Fig.~\ref{fig:RateFitValParamSet1RPbPull}.  The Gaussian fit to this distribution has a width close to, but slightly below, 1.  This suggests that the errors returned by the MINOS routine very slightly overestimate the error, but are still a very good representation of the uncertainty.
-\begin{figure}%
-  \centering
-  \subfloat[The returned parameter for each throw.  The fitted Gaussian has a mean of 1.00 and a width of 0.04.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbFit}}
-  \subfloat[The parameter pull for each throw.  The fitted Gaussian has a mean of 0.01 and a width of 0.96.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbPull}}
-  \caption{Distributions of $R^{\textrm{Pb}}$ related information returned from the fitter for the 10,000 fake data throws.  The red dashed lines are Gaussian fits to the distributions.}
-  \label{fig:RateFitValParamSet1RPb}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1.eps} \label{fig:RateFitValsParamSet1}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1.eps} \label{fig:RateFitPullsParamSet1}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 1.}
-  \label{fig:RateFitValParamSet1}
-\end{figure}
-The performance of the fit for all of the normalisations in normalisation set 1 are shown in Fig.~\ref{fig:RateFitValParamSet1}.  In each case, the fitter returns the correct normalisation and the pull characteristics suggest the fit returns the correct error and is unbiased.  The performance of the fit for normalisation sets 2, 3, 4 and 5 are shown in Fig.~\ref{fig:RateFitValParamSet2}, Fig.~\ref{fig:RateFitValParamSet3}, Fig.~\ref{fig:RateFitValParamSet4} and Fig.~\ref{fig:RateFitValParamSet5} respectively.  Generally speaking, the fitter performs well for all of the situations.  It is clear that the output is sensible even when extreme situations are presented (normalisation set 2) as well as when minor shifts are applied to all three parameters (hormalisation set 3).  Even in un-physical situations the fitter returns the input correctly (normalisation set 5).  It is only when a template is removed (normalisation set 4) that the fitter runs into becomes biased.  However, as Fig.~\ref{fig:RateFitPullsParamSet4} shows, the bias is minor.
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2.eps} \label{fig:RateFitValsParamSet2}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2.eps} \label{fig:RateFitPullsParamSet2}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 2.}
-  \label{fig:RateFitValParamSet2}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3.eps} \label{fig:RateFitValsParamSet3}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3.eps} \label{fig:RateFitPullsParamSet3}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 3.}
-  \label{fig:RateFitValParamSet3}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4.eps} \label{fig:RateFitValsParamSet4}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4.eps} \label{fig:RateFitPullsParamSet4}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 4.}
-  \label{fig:RateFitValParamSet4}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5.eps} \label{fig:RateFitValsParamSet5}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5.eps} \label{fig:RateFitPullsParamSet5}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 5.}
-  \label{fig:RateFitValParamSet5}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse.eps} \label{fig:RateFitValsParamSet1NoReverse}}
-  \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoReverse.eps} \label{fig:RateFitPullsParamSet1NoReverse}}
-  \caption{Performance of the fit with the reverse ECal samples removed for the 10,000 fake data sets when using normalisation set 1.}
-  \label{fig:RateFitValParamSet1NoReverse}
-\end{figure}
-\newline
-\newline
-As discussed in section~\ref{sec:InputSamples}, a set of barrel ECal samples which contain events that failed the selection cuts is included.  To test that the inclusion of this sample is not degrading the performance, an extra set of 10,000 fake data throws were performed for normalisation set 1.  However, the reverse ECal samples were not included in the fitter.  The results of this test are shown in Fig.~\ref{fig:RateFitValParamSet1NoReverse}.  Comparing this with the performance of the fitter with the reverse sample included (Fig.~\ref{fig:RateFitValParamSet1}), it is clear that the absense of the reverse sample causes a wider range of normalisation values to be returned from the fitter.  Additionally, a small bias is introduced to all three normalisations.  While the issues present in the reverse-absent fitter are minor, It should be clear that the inclusion of the reverse ECal samples leads to more accurate and precise results.
-
-\subsection{Physics validation of the fitter}
-\label{subsec:PhysicsFitterValidation}
-If the fitter truly works as intended, then it should be able to successfully fit one cross-section model to another.  As described in section~\ref{sec:SystematicUncertainties}, T2K produces a set of GENIE-based ND280 events during software production in addition to the NEUT based events.  As the NEUT events are being used for the MC templates in the fitter, the GENIE samples make an excellent candidate for a fata data test.
-\newline
-\newline 
-The same GENIE sampled used in section~\ref{sec:SystematicUncertainties} was passed through the selection and binned into the ECal samples.  Unfortunately, no GENIE-based sand Monte Carlo or FGD sample was availble for this study.  So, the same NEUT-based sand MC and FGD sample used in the MC template generation was used to fill this gap.  The MC templates were normalised to the same POT as the fake data.  The pre-fit samples are shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit}.
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFit.eps}
-  \caption{The prefit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
-  \label{fig:MCTemplatesWithSystematicsGenieDataPreFit}
-\end{figure}
-\newline
-\newline
-Before the NEUT MC templates were actually fit to the genie fake data, it was necessary to calculate what the fit should be predicting.  To calculate what the true GENIE to NEUT cross-section ratios are, the truth information provided by the MC simulation was used.  For both the GENIE and NEUT samples, the number of true interactions in the DS ECal were recorded, including the target element.  These numbers were weighted to the POT and the ratio taken.  These values are shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}.  
-\begin{table}
-  \begin{tabular}{c c }
-    $\frac{\sigma^{\textrm{Pb}}_{\textrm{GENIE}}}{\sigma^{\textrm{Pb}}_{\textrm{NEUT}}}$ &$\frac{\sigma^{\textrm{C}}_{\textrm{GENIE}}}{\sigma^{\textrm{C}}_{\textrm{NEUT}}}$\\ \hline \hline
-    0.908 & 0.926  \\
-  \end{tabular}
-  \caption{The GENIE to NEUT cross-section ratios, calculated from the truth information provided by the ND280 simulation.}
-  \label{table:GENIEToNEUTTrueCrossSectioRatio}
-\end{table}
-\newline
-\newline
-The MC templates and fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit} were then passed to the fitter, with the fitted normalisations shown in table~\ref{table:NEUTMCTemplatesGENIEDataPostFit} and a comparison of the post-fit MC templates with the GENIE fake data shown in Fig.~\ref{fig:NEUTMCTemplatesGENIEDataPostFit}.  The reduced $\chi^2$ of the fit was found to be 1.71.  
-\begin{table}
-  \begin{tabular}{c c }
-    Normalisation parameter & Fitted value \\ \hline \hline
-    $R^{\textrm{Pb}}$ & $0.79^{+0.08}_{-0.08}$  \\
-    $R^{\textrm{C}}$ & $1.19^{+0.15}_{-0.13}$  \\
-    $R^{\textrm{Other}}$ & $0.94^{+0.08}_{-0.08}$  \\
-  \end{tabular}
-  \caption{The values returned from the fitter when passing the NEUT MC templates and GENIE fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPreFit}.}
-  \label{table:NEUTMCTemplatesGENIEDataPostFit}
-\end{table}
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
-  \label{fig:MCTemplatesWithSystematicsGenieDataPostFit}
-\end{figure}
-The values returned from the fit do not agree with the true values when considering only the errors returned from the fit.  If the extra $12.5\%$ uncertainty defined in equation~\ref{eq:CrossSectionUncertainty} is added in quadrature with the positive error on $R^{\textrm{Pb}}$, the fitted normalisation is in agreement with its corresponding true value.  It should be noted at this point that both the sand muon component and the FGD sample in the fake data are in fact NEUT, rather than GENIE.  So, this test is itself somewhat unrealistic.  While it is not trivial to produce a GENIE-based sand muon Monte Carlo, the FGD sample in the genie fake data can be re-weighted to better represent what the FGD sampel should be.  Using the carbon cross-section ratio shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}, the carbon component of the FGD sample in the GENIE fake data was scaled.  This modified set of fake data was then fit with the NEUT MC templates.  The returned normalisations are shown in table~\ref{table:NEUTMCTemplatesGENIEDataReweightFGDPostFit} and the comparison of the fitted MC templates with the fake data is shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}.  It is clear that the situation is much improved as both the lead and carbon normalisation have moved towards their true values.  The carbon normalisation still disagrees with the simulated value, however it has already been mentioned that the sand muon of the GENIE fake data is actually NEUT.  Ideally, a GENIE-based sand muon MC would be used in the fake data but due to time constraints this was not possible.  As the lead normalisation agrees with the generator prediction, this test can be considered a success.
-\begin{table}
-  \begin{tabular}{c c }
-    Normalisation parameter & Fitted value \\ \hline \hline
-    $R^{\textrm{Pb}}$ & $0.83^{+0.08}_{-0.08}$  \\
-    $R^{\textrm{C}}$ & $1.09^{+0.14}_{-0.12}$  \\
-    $R^{\textrm{Other}}$ & $0.95^{+0.08}_{-0.09}$  \\
-  \end{tabular}
-  \caption{The values returned from the fitter when passing the NEUT MC templates and GENIE fake data which contained a re-weighted FGD sample.}
-  \label{table:NEUTMCTemplatesGENIEDataReweightFGDPostFit}
-\end{table}
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeighted_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
-  \label{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}
-\end{figure}
-
-\section{Applying the fit to ND280 data}
-\label{sec:ND280DataFit}
-The event selection described in chapter~\ref{chap:NeutrinoInteractionSelection} was applied to [INSERT POT]~POT of neutrino beam data collected from T2K run 3C.  The FGD sample was also taken from run 3C, corresponding to [INSERT POT]~POT.  The number of selected events in each sample is summarised in table~\ref{table:NSelectedEventsMCDataAllSamples}.
-\begin{table}
-  \begin{tabular}{c c c}
-    Sample & No. Selected (MC) & No. Selected (data) \\ \hline \hline
-   Bottom right ECal & 55749 & 54396 \\
-   Side right ECal & 54011 & 56583 \\
-   Top right ECal & 32006 & 32233 \\
-   Bottom left ECal & 65169 & 65448 \\
-   Side left ECal & 68031 & 66095 \\
-   Top left ECal & 32760 & 33470 \\
-   DS ECal & 35420 & 34372 \\
-   Bottom right ECal (Reverse) & 72112 & 70885 \\
-   Side right ECal (Reverse) & 61159 & 64445 \\
-   Top right ECal (Reverse) & 35997 & 36191 \\
-   Bottom left ECal (Reverse) & 83059 & 80967 \\
-   Side left ECal (Reverse) & 81240 & 84145 \\
-   Top left ECal (Reverse) & 38282 & 40293 \\
-   FGD & 5857 & 5992 \\
-  \end{tabular}
-  \caption{The number of selected events in each sample.}
-  \label{table:NSelectedEventsMCDataAllSamples}
-\end{table}
-\newline
-\newline
-The samples were then passed to the fitter described in section~\ref{sec:ECalRateFit} and the parameters found are shown in table~\ref{table:NEUTMCTemplatesT2KDataFitParameters}.  The minimum $\chi^2$ per degree of freedom was found to be 13.4.  The MC template comparison with the data before and after the $\chi^2$ fit are shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} and Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} respectively.
-\begin{table}
-  \begin{tabular}{c c }
-    Normalisation parameter & Fitted value \\ \hline \hline
-    $R^{\textrm{Pb}}$ & $1.58^{+0.10}_{-0.11}$  \\
-    $R^{\textrm{C}}$ & $1.87^{+0.21}_{-0.18}$  \\
-    $R^{\textrm{Other}}$ & $0.26^{+0.06}_{-0.05}$  \\
-  \end{tabular}
-  \caption{The values returned from the fitter when processing the NEUT MC templates with T2K data.}
-  \label{table:NEUTMCTemplatesT2KDataFitParameters}
-\end{table}
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit.eps}
-  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
-  \label{fig:MCTemplatesWithSystematicsT2KDataPreFit}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
-  \label{fig:MCTemplatesWithSystematicsT2KDataPostFit}
-\end{figure}
-After the normalisation parameters had been returned from the fit, the $\chi^2/$NDOF as a function of the normalisation parameters could be found.  This was achieved by varying a single normalisation parameter whilst keeping all other normalisation parameters fixed at their $\chi^2$ minimum value.  At each step in the single normalisation parameter variation, the $\chi^2/NDOF$ was calculated.  The $chi^2$/NDOF as a function of each parameter is shown in Fig.~\ref{fig:Chi2FunctionOfParameter}.
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[$R^{\textrm{Pb}}$.]{\label{fig:Chi2FunctionOfParameterPb}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par0.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-  \subfloat[$R^{\textrm{C}}$.]{\label{fig:Chi2FunctionOfParameterC}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par1.eps}}
-\end{minipage}\par\medskip
-\centering
- \subfloat[$R^{\textrm{Other}}$.]{\label{fig:Chi2FunctionOfParameterOther}\includegraphics[width=7.5cm]{images/measurement/data/Chi2_par2.eps}}
-\caption{The $\chi^2$/NDOF as a function of the normalisation parameters.}
-\label{fig:Chi2FunctionOfParameter}
-\end{figure}
-\newline
-\newline
-It should be clear from Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} that the Monte Carlo is not a good fit to the data.  Before the fitting, it is clear that there are shape differences between the data and Monte Carlo templates.  For example, there is a minor data deficit in the bottom-right ECal module and a larger data excess in the side-right ECal.  A similar situtation occurs between the bottom-left reverse and side-left reverse samples.  Fig.~\ref{fig:ShapeCorrelationMatrix} shows the shape-only correlation matrix for the samples used in the fit.  The correlation matrix shows that all of the barrel samples are highly correlated with each other, as are all of the barrel-reverse samples.  This suggests that the fit has little freedom to easily resolve the shape differences.  This fact is enforced by the pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit}, where the only way to resolve such shape differences with highly correlated constraints is to dramatically alter the normalisation of the templates. 
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/data/ShapeCorrelationMatrix.eps}
-  \caption{The shape-only correlation matrix for the samples used in the fit.}
-  \label{fig:ShapeCorrelationMatrix}
-\end{figure}
-The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} can help to illuminate the underlying issue.  An area normalised comparison of a sub-set of the MC templates with the run3C data is shown in Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm} for the barrel samples and Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm} for the barrel-reverse samples.  
-\begin{figure}%
-  \centering
-  \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm}}
-  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm}}
-  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.}
-  \label{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm}
-\end{figure}
-\begin{figure}%
-  \centering
-  \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
-  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
-  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel-reverse ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.}
-  \label{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm}
-\end{figure}
-As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction samples in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the other template.  This finding suggests that it is the composition of the other template that is the cause of the fit failure.  The other template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background.  The number of events in the other template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively.  
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Bottom left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Bottom right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB.eps}}
-\end{minipage}\par\medskip
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Side left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-  \subfloat[Side right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB.eps}}
-\end{minipage}\par\medskip
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Top left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTLB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-  \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB.eps}}
-\end{minipage}\par\medskip
-\caption{The number of events the other template as a function of true neutrino energy for the barrel ECal samples.  The distributions are broken down by true neutrino interaction location.}
-\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel}
-\end{figure}
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Bottom left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Bottom right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse.eps}}
-\end{minipage}\par\medskip
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Side left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-  \subfloat[Side right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateSRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse.eps}}
-\end{minipage}\par\medskip
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Top left ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTLBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-  \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse.eps}}
-\end{minipage}\par\medskip
-\caption{The number of events the other template as a function of true neutrino energy for the barrel reverse ECal samples.  The distributions are broken down by true neutrino interaction location.}
-\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse}
-\end{figure}
-The distributions have been separated into true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 tracker which is the only place where the neutrino flux has been studied in great detail. 
-\newline
-\newline
-Under normal circumstances, the background modelling needs extra study.  However, due to time constraints, it is sufficient to introduce an adhoc uncertainty which encompasses the lack of background understanding.  The background modelling has already been discussed as a possible cause of the fit failure.  The barrel-reverse samples, which contain the largest background, can be used to quantify this lack of understanding.  Table~\ref{table:NSelToNRevRatio} shows the ratio of the number of events in each barrel sample to the number of events in each barrel-reverse sample for both data and MC.  Also included in table~\ref{table:NSelToNRevRatio} is the percentage difference between the data and MC ratio.
-\begin{table}
-  \begin{tabular}{c c c c }
-    Barrel module & NSel/NRev (MC) & NSel/NRev (data) & \% diff \\ \hline \hline
-    Bottom right & 0.773 & 0.767 & 0.7\% \\
-    Side right & 0.883 & 0.878 & 0.6\% \\
-    Top right & 0.889 & 0.891 & 0.2\% \\
-    Bottom left & 0.785 & 0.808 & 2.9\% \\
-    Side left & 0.837 & 0.785 & 6.2\% \\
-    Top left & 0.856 & 0.831 & 2.9\% \\
-  \end{tabular}
-  \caption{Comparison of the number of events between the barrel and barrel-reverse samples.  The second and thrid column show the ratio of the number of events in the barrel samples to the number of events in the barrel-reverse samples for Monte Carlo and data respectively.  The fourth column shows the percentage difference between the Monte Carlo and data ratios.}
-  \label{table:NSelToNRevRatio}
-\end{table}
-The percentage difference between the data and Monte Carlo has a geometric dependence.  This strong dependence provides an extra hint that this background uncertainty is perhaps due to the neutrino beam flux.  Regardless of the provenance of the underlying issue, the ratios presented in table~\ref{table:NSelToNRevRatio} provide a good candidate to describe this adhoc uncertainty.  The ratio itself essentially describes a size comparison of signal to background.  By quantiying this data and Monte Carlo difference, the uncertainty on the signal to background ratio is crudely assessed.  To include this extra information in the fit, the percentage difference shown in the fourth column of table~\ref{table:NSelToNRevRatio} needs to be included in the shape-only covariance matrix.  Specfically, for each barrel sample and its reverse counterpart, the corresponding percentage difference is added to the diagonal element of the covariance matrix.  Using the modified covariance matrix as an input, the fit was then re-run using the NEUT MC templates and run3C data.  The number of events (post-fit) is shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFitWithFudge} and the normalisation parameters found by the fit is shown in table~\ref{table:NEUTMCTemplatesT2KDataFitParametersWithFudge}.  The minimum $\chi^2$/NDOF returned by the fit was 2.54.
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFudge.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data when including the adhoc uncertainty shown in table~\ref{table:NSelToNRevRatio}.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic and adhoc uncertainties on the number of NEUT MC events.  The black points are the T2K data.}
-  \label{fig:MCTemplatesWithSystematicsT2KDataPostFitWithFudge}
-\end{figure}
-\begin{table}
-  \begin{tabular}{c c }
-    Normalisation parameter & Fitted value \\ \hline \hline
-    $R^{\textrm{Pb}}$ & $1.10^{+0.11}_{-0.10}$  \\
-    $R^{\textrm{C}}$ & $1.10^{+0.14}_{-0.12}$  \\
-    $R^{\textrm{Other}}$ & $0.90^{+0.10}_{-0.11}$  \\
-  \end{tabular}
-  \caption{The values returned from the fitter modified with the adhoc uncertainty  when processing the NEUT MC templates with T2K data.}
-  \label{table:NEUTMCTemplatesT2KDataFitParametersWithFudge}
-\end{table}
-The output of the fitter is more reassuring.  The reduced $\chi^2$, while still a little high, suggests that the Monte Carlo is a much better fit to the data.  Notably, all of the fitted normalisation parameters agree with the NEUT prediction within their shape-only error.
-
-\section{The $\nu_\mu$ charged current inclusive cross-section on lead}
-\label{sec:PbCrossSection}
-Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainty, which is the same uncertainty value as for the CC inclusive cross-section, was found to be
-\begin{equation}
-R^{\textrm{Pb}} = 1.10^{+16.4\%}_{-15.5\%}.
-\label{eq:RPbWithFullPercentageError}
-\end{equation}
-The dimensions and quantity of the lead absorbers in the DS ECal is described in chapter~\ref{chap:T2KExperiment} and section~\ref{sec:SystematicUncertainties}.  Taking the density of lead to be 11.34~g/cm$^{3}$, the total mass of lead in the DS ECal is 2661~kg.  The atomic mass of lead is $207.2\pm0.1$ atomic units [REFERENCE], which infers there are $7.74\times10^{27}$ lead nuclei present in the Monte Carlo simulation of the DS ECal.  The lack of antimony in the simulation has already been quantified in the final uncertainty above.
-\newline
-\newline
-The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} had a $53.0\%$ efficiency and $72.4\%$ purity for selecting charged-current neutrino interactions in the active volume of the DS ECal.  Considering interactions on lead alone, the efficiency and purity are $53.8\%$ and $49.7\%$ respectively with 32427 reconstructed events selected when scaled to the collected data POT.
-\newline
-\newline
-Fig.~\ref{fig:Run3CFlux} shows the simulated neutrino flux (per $10^{21}$~POT) for T2K run3C.  
-\begin{figure}
-  \centering
-  \includegraphics[width=15cm]{images/measurement/xsec/run3c_flux.eps}
-  \caption{The simulated flux for T2K run3C as a function of neutrino energy.}
-  \label{fig:Run3CFlux}
-\end{figure}
-The POT-scaled integral of this distribution provides the total neutrino flux used in this study.  As the analysis ran over $1.31\times10^{20}$~POT, the integral of Fig.~\ref{fig:Run3CFlux} multiplied by the collected POT gives a total neutrino flux of $2.53\times10^{12}$~cm$^{-2}$.
-\newline
-\newline
-Collating all of this information together and applying equation~\ref{eq:CrossSection}, the T2K flux-averaged $\nu_\mu$ charged current cross-section on lead is measured as 
-\begin{equation}
-\langle \sigma^{\textrm{CC}}_{\textrm{Pb}} \rangle_{\phi} = 8.13^{+1.33}_{-1.26} \times 10^{-39} \textrm{ cm}^2 \textrm{ nucleon}^{-1}.
-\end{equation}
 
 
 
 
+%\section{Properties of events in selection}
 
