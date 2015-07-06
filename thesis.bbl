@@ -150,4 +150,15 @@ A.~A. Aguilar-Arevalo {\em et~al.},
 V.~Lyubushkin {\em et~al.},
 \newblock The European Physical Journal C {\bf 63}, 355 (2009).
 
+\bibitem{Smith:1972xh}
+R.~Smith and E.~Moniz,
+\newblock Nucl.Phys. {\bf B43}, 605 (1972).
+
+\bibitem{CHORUS_XSEC}
+The European Physical Journal C - Particles and Fields {\bf 30}, 159 (2003).
+
+\bibitem{PhysRevLett.112.231801}
+(MINERvA Collaboration), B.~G. Tice {\em et~al.},
+\newblock Phys. Rev. Lett. {\bf 112}, 231801 (2014).
+
 \end{thebibliography}
