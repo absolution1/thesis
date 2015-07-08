@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Abe2011106}
 K.~Abe {\em et~al.},
@@ -21,5 +21,33 @@ K.~Abe {\em et~al.},
 \bibitem{1748-0221-4-04-P04004}
 D.~Renker and E.~Lorenz,
 \newblock Journal of Instrumentation {\bf 4}, P04004 (2009).
+
+\bibitem{Amaudruz20121}
+P.-A. Amaudruz {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 696}, 1
+  (2012).
+
+\bibitem{Abgrall201125}
+N.~Abgrall {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 637}, 25
+   (2011).
+
+\bibitem{Assylbekov201248}
+S.~Assylbekov {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 686}, 48
+   (2012).
+
+\bibitem{1748-0221-8-10-P10019}
+D.~Allan {\em et~al.},
+\newblock Journal of Instrumentation {\bf 8}, P10019 (2013).
+
+\bibitem{Aoki2013135}
+S.~Aoki {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 698},
+  135  (2013).
 
 \end{thebibliography}
