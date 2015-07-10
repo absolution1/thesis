@@ -110,7 +110,65 @@ Fig.~\ref{fig:ND280Schematic} shows an exploded view of the detector, which reve
 
 \subsubsection{The electromagnetic calorimeters}
 \label{subsubsec:ecal}
-The beasts
+The ND280 ECal is a lead-scintillator sampling calorimeter which conists of 13 modules separated into three distinct regions: the P$\O$D ECal which consists of six modules surrounding the P$\O$D, the barrel-ECal which is separated into six modules surrounding the tracker region and the DownStream-ECal (DS-ECal) which is a single module located downstream of the inner detectors.  Motivated by their physics goals, the barrel-ECal and DS-ECal are often considered together and will be referred to as the tracker ECal, while the P$\O$D ECal is considered a separate detector which is not used in this analysis and so will not be discussed further.  The primary physics goal of the ECal is to aide particle identification for final-states originating in the central region of ND280.  This is particularly important for interactions with $\pi^0$ in the final-state as the decay photons are difficult to identify using the tracker alone.
+\newline
+\newline
+%All modules in the tracker ECal consist of layers of scintillating polystyrene bars with a 40~mm $\times$ 10~mm cross-section bonded to 1.75~mm lead sheets.
+The barrel-ECals are separated into six modules: two modules above the tracker, two either side of the tracker and two below the tracker.  Each barrel-ECal module consists of layers of scintillating polystyrene bars with a 40~mm $\times$ 10~mm cross-section bonded to 1.75~mm lead sheets.  The scintillator bar provide a means of tracking the final-states while lead sheets act as a radiator to produce electromagnetic showers and additionally provide a heavy mass neutrino target.  To measure the light readout, each scintillator bar has a 2~mm hole running through the centre in which a WLS fibre is inserted.  The fibre carries the light to the end of the bar where it can be collected by an MPPC.  The size of the gap between the tracker and the magnet placed a strong constraint on the size of barrel modules and so a scintillator bar thickness of 10~mm was chosen to minimise the ECal depth while maintaining a bar thickness which could provide sufficient light for signal capture.  The other key features of the active barrel-ECal volume, bar thickness, lead thickness and number of layers) was chosen to optimise particle identification and tracking.  A smaller bar width results in a detector with a higher resolution and studies investigating this found that the $\pi^0$ reconstruction efficiency was greatly compromised for $>$50~mm bar widths.  So, to facilitate costings, a compromise bar width of 40~mm was chosen.  The thickness of the lead absorber says was also optimised based on the $\pi^0$ reconstruction efficiency.  The number of scintillator-lead layers was chosen such that electromagnetic showers of energy up to 3~GeV were adequately contained.  It was found that 10 electron radiation lengths ($X_0$) were required to ensure at least 50$\%$ of $\pi_0$ decay photon showers were contained.  So, this motivated a choice of 31 layers for all barrel-ECal modules which is equivalent to 9.7$X_0$.  For the purpose of 3D reconstruction, each ECal layer is oriented at 90$^\circ$ to the previous layer.  This means that in all barrel modules, there are 16 layers perpendicular and 15 layers parallel to the beam direction.  The perpendicular and parallel layers are slightly different, in that the scintillator bars are a different length.  In all barrel modules, the parallel bars are 3840~mm and are read out at both ends by separate MPPCs.  Because of the geometry, this is not the case for the perpendicular bars; the top and bottom module bar lengths are 1520~mm whereas the side module bar lengths are 2280~mm.  For all perpendicular bars, the signal is read out at one end only with the other end mirrored with aluminimum to reflect the light.  Each barrel module is sandwiched between two carbon fibre plates and held in an aluminium frame which provides secure, structural support.
+\newline
+\newline
+The DS-ECal has almost identical features to that of the barrel in that it has scintillator bars with an identical chemical composition and cross-section while the lead absorbers are equally thick.  However, unlike the barrel-ECals, the DS-ECal consists of 34 lead-scintillator layers which are, again, orientated at 90$^\circ$ to the previous layer.  Because of this, the DS-ECal has a radiation length of 10.6$X_0$.  Additionally, every scintillator bar is 2000~mm and is read out at both ends by MPPCs.  Also, because of its position in the geometry, all layers are perpendicular to the beam direction.  The carbon fibre plates and aluminium frame are identical to those used in the barrel-ECal.
+\newline
+\newline
+A summary of the tracker-ECal design is shown in table.~\ref{table:ECalDesign}.
+\begin{table}
+\begin{center}
+\begin{tabular}{l|l|l}
+\hline
+        & DS-ECal  &Barrel ECal  \\ \hline
+Length (mm)& 2300      & 4140   \\ 
+Width (mm)  & 2300      & 1676  top/bottom \\ 
+        &          & 2500 side  \\ 
+Depth (mm)  & 500     & 462    \\
+Weight (kg) & 6500 & 8000 top/bottom  \\
+            &      & 10000 side        \\ \hline
+Num. of layers &  34      &  31  \\ \hline
+Bar orientation & $x/y$ &Para. and Perp \\ \hline
+Num. of bars    & 1700     & 2280 Para. top/bottom  \\ 
+        &          & 1710 Para. sides \\     
+        &          & 6144 Perp top/bottom   \\ 
+        &          & 3072 Perp sides       \\ \hline  
+Bars per layer & 50 & 38 Para. top/bottom\\
+               &    & 57 Para. side\\
+               &    & 96 Perp top/bottom/sides  \\  \hline
+Bar length (mm) & 2000  & 3840  Para. \\ 
+           &      & 1520 Perp top/bottom \\ 
+           &      & 2280 Perp sides      \\ \hline
+Pb thickness (mm) & 1.75  & 1.75    \\ \hline 
+\end{tabular}
+\caption{Summary of the ECal design showing the overall dimensions, numbers of layers, length and orientation ofscintillator bars, numbers of bars, and lead thickness for each module~\cite{1748-0221-8-10-P10019}.}
+\label{table:ECalDesign} 
+\end{center}
+\end{table}
+\newline
+\newline
+The scintillator bars consist of polystyrene doped with 1$\%$~PPO and 0.03$\%$~POPOP and were extruded at a dedicated Fermilab facility.  During charge deposition, the PPO works as the primary scintillator and its output photons result in secondary scintillation of the POPOP.  This process acts as a wavelength shifter to produce an emission peak of 420~nm which matches the absorption peak of the 1~mm dimaeter WLS fibre threaded through the centre of the bar.  Every tracker-ECal bar contains a 0.25~mm coating of polystyrene co-extruded with TiO$_2$ which provides reflection of the scintillation light.
+\newline
+\newline
+The lead aborber layers consist of naturally occurring lead and stiffened with 2$\%$ antimony.  Traces of other metals are present but are below 0.15$\%$.  During construction, each lead layer was coated with a black, quick drying metal-conditioning primer to protect personnel from the toxic effects of the lead and to prevent leaching into the scintillator bars.  The lead layers themselves are actually constructed from multiple sheets rather than a single sheet largely due to ease of transportation.  In the case of the DS-ECal, each layer consists of two 1008~mm $\times$ 2016~mm sheets.  For the top and bottom ECal modules, each layer consists of two 765~mm $\times$ 3858~mm sheets and the side module aborbers are constructed from four 2330~mm $\times$ 964.5~mm sheets.
+\newline
+\newline
+The tracker-ECal electronics system consists of several different readout boards.  All MPPCs are connected to a set of bespoke Trip-T Frontend Boards (TFBs).  Each TFB comes with 64 channels to read out MPPCs which means that there are multiple TFBs associated with each ECal module.  All TFBs subsequently connected to Readout Merger Modules (RMMs) which act as the interface between the Data AQuisition system (DAQ) and its associated TFBs.
+
+\subsubsection{Data aquisition system}
+\label{subsubsec:DAQ}
+ND280 comes equipped with a DAQ which is responsible for triggering the readout of information from the subdetectors and subsequent storage.  Because of the low frequency of neutrino events, there are no strict trigger requirements which is in start contrast to collider experiments.  So, there are only three triggers which are:
+\begin{itemize}
+\item \textbf{Beam trigger:} When a beam spill occurs, a signal is timing signal is set to the DAQ which issues a command to record ND280 data. 
+\item \textbf{TRIP-t cosmic trigger:} If hits are seen on opposite sides of the outer detector (allowed combinations are top and bottom SMRD, left and right SMRD, P$\O$D and DS-ECal) which are outside of the beam time window, then the DAQ records data as the hits were likely caused by a cosmic ray muon.
+\item \textbf{FGD cosmic trigger:} If hits are seen in both FGDs which are outisde of the beam time window, then data is recorded as this was also likely to be caused by a cosmic ray muon.
+\end{itemize}
+The data is initially stored at KEK in Japan but is then replicated to TRIUMF in Canada and RAL in the UK for maximum redundancy and ease of access.
 
 \subsection{The far detector}
 I mean SK
