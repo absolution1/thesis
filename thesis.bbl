@@ -18,6 +18,10 @@ K.~Abe {\em et~al.},
 K.~Abe {\em et~al.},
 \newblock Phys. Rev. D {\bf 87}, 092003 (2013).
 
+\bibitem{PhysRevD.87.012001}
+T2K Collaboration, K.~Abe {\em et~al.},
+\newblock Phys. Rev. D {\bf 87}, 012001 (2013).
+
 \bibitem{1748-0221-4-04-P04004}
 D.~Renker and E.~Lorenz,
 \newblock Journal of Instrumentation {\bf 4}, P04004 (2009).
@@ -49,5 +53,11 @@ S.~Aoki {\em et~al.},
 \newblock Nuclear Instruments and Methods in Physics Research Section A:
   Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 698},
   135  (2013).
+
+\bibitem{Fukuda2003418}
+S.~Fukuda {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 501},
+  418  (2003).
 
 \end{thebibliography}

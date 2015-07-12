@@ -9,164 +9,190 @@
 
 
 
-\chapter{ND280 software and existing ECal event reconstruction}
-\label{chap:ND280Software}
-The T2K experiment uses a bespoke software suite for simulation and analysis of ND280 data which is based on the ROOT framework~\cite{Brun199781}.  The vast majority of the ND280 software suite utilises the oaEvent library which provides a unified framework for information manipulation and was specifically designed for this purpose.
-As ND280 consists of many detector's each providing a specific function, the ND280 software suite is designed to reflect this.  Not only are there specific software modules for individual sub-detectors, there are specific modules for each phase of the sub-detector information processing e.g. trip-T calibration, TPC reconstruction etc.  
-\newline
-\newline
-As the software suite handles both production of simulated data and the processing of collected data, there are sections of the software chain which are specific to type of data being processed.  While the Monte Carlo simulation and real data do see different areas of the software chain, the general philosophy is to maniuplate the Monte Carlo or the real data to a point where they can be treated as equals and them process them as such.  So, the description of the software will follow the same path: the Monte Carlo and real data specifics will be discussed first and then the unified treatment will follow. 
-\section{Monte Carlo production software}
-\label{sec:MCchain}
-As described above, parts of the software chain are unique to simulated data processing.  Specifically, the simulation of the beam and the detector response need to be modelled before the Monte Carlo can be treated on equal footing with the real data.  This special processing is split into several steps, all of which are described below.
-
-\subsection{Neutrino flux simulation}
-\label{subsec:NeutrinoFluxSimulation}
-The neutrino flux simulation uses Fluka2011~\cite{Ferrari_fluka:a} and a software set called JNUBEAM to model the J-PARC neutrino beam.  The process begins by using Fluka2011 to simulate the 30 GeV protons incident on the graphite target and their subsequent secondary interactions which produce the neutrinos parent mesons.  The kinematic information of the hadrons is then passed to the JNUBEAM simulation.  JNUBEAM is based on GEANT3~\cite{Brun:1987ma} and models the J-PARC secondary beamline.  The hadrons are tracked through the decay volume and are allowed to interact or decay to produce the simulated neutrino beam.  Importantly, all information associated with the daughter neutrinos and their parents are saved at this point.  By storing this information, the neutrino flux can be readily re-weighted to include new information associated with beam profile measurements or external data.
-\newline
-\newline
-The main external tuning source is NA61/SHINE which is a hadron interaction experiment that uses a 31 GeV/c proton beam colliding with changable targets~\cite{PhysRevC.84.034604}.  For use in the T2K flux simulation, NA61/SHINE has collected data using two graphite targets: one with a 4$\%$ nuclear interaction length thickness and a full T2K replica target.  The flux simulation used for this analysis is tuned using full replica target data.  Observed differences between the fluka2011 simulation and NA61/SHINE data are used to re-weight the simulated neutrino flux.
-\newline
-\newline
-Additionally to the external data, tuning measurements of the T2K beam profile are also used to re-weight the flux.  By making such measurements on a run-by-run basis, the simulated flux can be re-weighted to better model variations of the neutrino beam in each data run.
-\subsection{Neutrino interaction simulation}
-\label{subsec:NeutrinoInteractionSimulation}
-After the neutrino flux has been modelled, simulation of the neutrino interactions with the T2K detectors follows.  The NEUT~\cite{Hayato2002171} event generator is used to simulate interactions with ND280.  The inputs to the interaction simulation are a neutrino vector file produced by the beam simulation and a ROOT based ND280 geometry.  The used geometry includes the magnetic field return yoke and everything contained within.  Using the inputs, NEUT tracks the neutrino and calculates the probability of interaction for every material it crosses.  To calculate the interation probability, the potential interaction nucleus must be modelled.  For this, NEUT uses two models; the Moniz-Smith Relativistic Fermi Gas (RFG)~\cite{Miller2002223} and the O. Benhar spectral function models~\cite{Benhar1994493}.  The spectral functions are only implemented for carbon, oxygen and iron so the model used depends on the atomic number of the interaction candidate nucleus.  It is important to note at this point that this thesis deals with neutrino interactions on lead, so it is the RFG model that is used for signal interactions.
-\newline 
-\newline
-The main interactions modes at T2K energies are quasi-elastic scattering (CCQE), single pion production  (CC1$\pi$) and Deep Inelastic Scattering (DIS) all of which have models in NEUT~\cite{LlewellynSmith1972261,Rein198179,1126-6708-2006-05-026}.
-\newline
-\newline
-After the initial interactions, the final step is to simulate the final state interactions within the nucleus.  Each particle involved in the interaction is pushed through the nucleus in discreet steps with the probability of a final state interaction being calculated at each step.  If an interaction occurs, the final states of that interaction are also included in the subsequent steps.  This interative procedure models the particle cascade until all the final states have reached the nucleus boundary.  At this point, all final state particles are recorded along with all of the information that created those particles.  This information is stored in a vector file and passed on to the ND280 detector MC package which handles the detector's response to these final state particles.
-\subsection{ND280 detector simulation}
-\label{subsec:ND280DetectorSimulation}
-The simulation of the final state particles in ND280 is handled by nd280mc which is based on Geant4~\cite{Agostinelli2003250} and ROOT.  The neutrino interaction vector files are taken as input and used as seeds in the detector simulation.  The neutrino vector inputs are not organised according to the J-PARC beam bunch structure so the detector simulation first groups the interactions into spills.  The beam intensity to be simulated is used to define how many interactions occur in a spill with Poisson fluctuations applied to that number.  The timing of the beam bunch structure is then used to group the interactions into bunches. 
-\newline
-\newline
-nd280mc constructs a ROOT geometry of ND280 based on the design specifications of its subdetectors and then propagates the particles given to it by the neutrino generator through the geometry, simulating energy deposition, scattering and particle decay during propagation.
-
-\subsection{Detector response simulation}
-\label{subsec:DetectorResponseSimulation}
-The next and final stage of the MC-only software chain is to model how the detector responds to the simulated particles propagating through it.  The detector response software, named elecSim, takes the output of nd280mc and models how the active regions of the detector would respond given an energy deposition in that region of the detector.  In the case of the calorimeters, elecSim handles the production of light produced by the constituent scintillator bars, how the light is propagated along the wavelength-shifting fibres and how the MPPCs would respond to the incident photons.  For the TPCs, the drift of the ionisation electrons through the gas and the subsequent response of the MicroMEGAS which recieve them.  In all cases, the readout electronics response is simulated to produce a data-like output format.  This step concludes the section of the software chain which is specific to the MC.
-
-\section{Real data processing software}
-\label{sec:datachain}
-The real data specific section of the software chain is very short.  Physics events deemed worth saving by any of the ND280 triggers are recorded by the detector and then saved for processing.  The MIDAS file format is used for storing the saved ND280 events.  All of the relevant information needed to process the event is stored in the MIDAS file, so the only unique step to the data processing is the conversion of the MIDAS file to the oaEvent format.  After the step, the oaEvent data files are exposed to the same software as MC files outputted by elecSim (see section~\ref{subsec:DetectorResponseSimulation}).
+\chapter{The T2K Experiment}
+\label{chap:T2KExperiment}
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{images/t2k/t2k_schematic.pdf}
+  \caption{The T2K experiment.}
+  \label{fig:T2KSchematic}
+\end{figure}
 
 
-\section{Main software chain}
-\label{sec:mainchain}
-The aim of the rest of the software chain is to process the readout from the detector, be it simulated or collected data, and process it so essential information about the physics of the event can be extracted.  This is separated into three steps: calibration, reconstruction and data reduction/summarising.
-
-
-\subsection{Detector calibration}
-\label{subsec:DetectorCalibration}
-The software package responsible for overseeing all aspects of the calibration stage is called oaCalib.  This controlling package passes the digitised signal from ND280 to dedicated calibration packages for the various kinds of readout electronics.  All of the information which can be extracted from an ECal event relies on the charge read by the MPPCs.  Thus, for the Trip-T detectors, like the ECals, the main aim of the calibration is to remove all electronic effects so that an accurate estimation of the charge read by the MPPCs can be made.  
+The Tokai-to-Kamioka (T2K) experiment~\cite{Abe2011106} is a long baseline neutrino oscillation experiment located in two sites across Japan and is designed to study the parameters governing the PMNS matrix.  The first site is the J-PARC facility in Tokai-mura on Japan's east cost which houses a 30 GeV proton accelerator complex that is used to generate a highly pure $\nu_\mu$ beam.  J-PARC also contains a suite of detectors designed to measure the neutrino beam's unoscillated characteristics.  Super-Kamiokande (SK) is located 295 km (see Fig.~\ref{fig:T2KSchematic}) and measures the contents of the neutrino beam post-oscillation.
 \newline
-\newline
-Firstly, every MPPC is held at a bias in the absense of any signal to remove the non-linear dependence of the detector response on the lowest ADC channels.  This zero signal output is called the pedestal and must be subtracted from the charge readout by the MPPC.  
-\newline
-\newline
-To estimate the number of photo-electrons produced in an MPPC, The readout charge is divided by the MPPC gain.  The breakdown voltage of an MPPC linearly varies with temperature (approximately 50 mV/$^\circ$C).  This translates to a percent level variation in the MPPC gain per degree.  This means small variations in temperature can cause a significant variation in the MPPC gain.  So, the gains for each channel are calculated and stored individually.
-\newline
-\newline
-The time of the signal read by the MPPC is charge dependent and so it relies on the above corrections.  However, there are extra steps needed to get an accurate estimate of the timestamp.  The MPPC signal is given a timestamp once the charging capacitor exceeds a threshold value.  The time it takes to reach this threshold depends on the final collected charge of the MPPC.  This means that a lower charge signal would receive a later timestamp than a higher charge signal even if the signals occurred at the same time.  This effect is known as the electronic timewalk and is corrected for.
-\newline
-\newline
-The light emission rate of the WLS fibres follows an exponential decay function which means that the emission rate depends on the total number of photo-electrons.  As described above, the Trip-T electronics only assign a timestamp once the collected charge passes a threshold.  So, the fibre decay causes a separate timewalk effect, called the fibre timewalk effect which is also corrected for.  
-\subsection{Event reconstruction}
-\label{subsec:EventReconstruction}
-Once the information has been calibrated it is passed to the ND280 reconstruction software.  The reconstruction algorithms are separated into two phases: the local reconstruction and the global reconstruction.  The local reconstruction, which is run first, is separated into a set of algorithms specific to each subdetector.  Each subdetector reconstruction attempts to form its own picture of the event which passed through it.  After this, all of the local reconstruction information is passed to the global reconstruction which attempt to match and refit the subdetector results to maximise the amount of extractable information.
-
-\subsection{Data reduction and summarising}
-\label{subsec:DataReduction}
-The final stage of the processing chain is to reduce and summarise all of the previous steps in the chain such that they are in a suitable format for the analyser.  A lot of the information, particularly from the reconstruction stage, is stripped out and the physics related objects are extracted.  Most importantly, all of the information is summarised in a pure ROOT format, meaning the analyser does not rely on the oaEvent library to analyse ND280 data.
-
-
-\section{ECal event reconstruction}
-\label{sec:ECalEventReconstruction}
-As mentioned in section~\ref{subsec:EventReconstruction}, part of the reconstruction process is to run algorithms specific to the ND280 subdetectors.  The ECal is no exception and is equipped with an extensive suite of reconstruction algorithms designed to reconstruct events originating from the tracker region of ND280.  The inputs to the reconstruction are the calibrated scintillators bar hits which are used to form 3D objects and attach a topology hypothesis.
-
-\subsection{Hit preparation}
-\label{subsec:ECalHitPerparation}
-The initial ECal reconstruction stage takes the hits outputted by the calibration stage and prepares them for the downstream algorithms.  The ECal hits arrive with timestamps but are not separated according to the bunch structure.  So, the hits are ordered in time and then grouped into buckets where a new bucket starts when a greater than 50 ns gap appears between two time-adjacent hits.  A second filter is then applied to arrange the hits according to the sensor they occurred on.  For double ended bars with both sensors activated, the time of the hit is re-estimated by averaging the timestamp of the two sensors.  The two hits are then merged to form a single hit.
-\newline
-It is then necessary to apply extra calibrations to the charges of the hits.  The effect of light attenuation along the WLS fibre is corrected for and a scaling is applied to convert the charge into MIP equivalent units (MEU).
-
-\subsection{Basic clustering}
-\label{subsec:ECalBasicClustering}
-The time ordered hits are then passed to a set of clustering algorithms which attempts to form an object out of the ECal hits.  The first stage of this is called basic clustering which is a nearest neighbour algorithm designed to form 2D clusters of hits for both views of an ECal module.  This is initiated by forming a 30 ns window and searching for the highest charge hit contained within it to form a seed.  The seed cluster is expanded by searching for and adding candidate hits which pass the following criteria:
-\begin{itemize}
-  \item Is located in the 30 ns time window
-  \item Is at most one bar away from a hit in the cluster
-  \item Is at most two layers away from a hit in the cluster
-\end{itemize}
-To qualify as a basic cluster, any formed candidate must contain at least three hits.  The successfully formed clusters in both views of the ECal modules are then passed to the next stage of the clustering algorithms. 
-
-\subsection{Cluster combination}
-\label{subsec:ECalCombineClusters}
-The second stage of the clustering algorithm takes the basic clusters in a given view and attempts to form merged clusters if a set of conditions are passed.  The cluster with the highest number of hits is taken as a seed and compared with all other clusters in the same view.  A Principal Components Analysis (PCA) is applied to all 2D clusters as the primary axis is used in one of the merging criteria.  A candidate cluster is merged with the seed cluster if:
-\begin{itemize}
-  \item The distance of closest approach, taken from the primary axes, of the candidate and seed cluster is less than 80 mm
-  \item The charge weighted average hit times of the candidate cluster is within 40 ns of the seed cluster
-  \item The charge weighted average distance of the candidate cluster to the seed cluster is less than 400 mm
-\end{itemize}
-All candidate clusters which pass the conditions are merged with the seed cluster.  After all comparisons have been made, a new seed cluster is found and the process is repeated until no more merges take place.  All clusters in each ECal view are then passed into the next clustering algorithm.
-
-
-
-\subsection{Cluster expansion}
-\label{subsec:ECalExpandClusters}
-The next and final stage of the 2D clustering attempts to merge any unmatched hits with the already formed clusters if the comparison passes a set of conditions.  As before, a PCA is applied to all 2D clusters to calculate the primary and secondary axes as, again,  these are used in one of the matching conditions.  Let $\vec{n}_{\mathrm{pri}}$ and $\vec{n}_{\mathrm{sec}}$ be the primary and secondary axes of a cluster found by the PCA.  The squared spread of the cluster along the primary or secondary axis is then defined as
-\begin{equation}
-  \sigma_A^2 = \sum_{\alpha = x,y,z} \sigma_\alpha^2n_{A,\alpha}^2,
-\end{equation}
-where $A$ refers to either the primary or secondary axis and $\sigma_\alpha$ refers to the cluster's spread along the cartesean axes.  A metric for defining how well the hit matches to the cluster can then be defined as 
-\begin{equation}
-  w = \sqrt{\Bigg(\frac{\vec{H}\cdot \vec{n}_{\mathrm{pri}}}{\sigma_{\mathrm{pri}}}\Bigg)^2 +  \Bigg(\frac{\vec{H}\cdot \vec{n}_{\mathrm{sec}}}{\sigma_{\mathrm{sec}}}\Bigg)^2},
-\end{equation}
-where $H$ is the vector joining the charge-weighted centre of the cluster and the centre of the hit.  The unmatched hit is merged with the 2D cluster if:
-\begin{itemize}
-  \item The unmatched hit is within 6 ns of one of the constituent hits of the 2D cluster
-  \item The difference in bar number of the unmatched hit and at least one of the constituents hits in the 2D cluster is less than 11
-  \item The difference in layer number of the unmatched hit and at least one of the constituents hits in the 2D cluster is less than 21
-  \item The calculated value of $w$ is less than 50
-\end{itemize}
-Unlike the previous stage where it is possible to merge every cluster in a view, an unmatched hit can be matched with one, and only one, 2D cluster. So, not only does the hit-cluster comparison have to pass the relevant criteria, the comparison has to be a better match than all other comparisons.  In cases where the unmatched hit passes all of the conditions with more than one cluster, the comparison which provides the lowest $w$ is selected as the best match.
-\newline
-\newline
-The 2D clusters in each view are then passed on to the final stage of the clustering algorithms.
-
-\subsection{3D cluster formation}
-\label{subsec:ECal3DMatching}
-The final stage of the clustering algorithm attempts to form full 3D clusters using information from both view of an ECal module.  To do this, the algorithm takes the 2D clusters from one view and matches them with the 2D clusters in the other view.  All 2D clusters from one view are compared to all 2D clusters in the other view and the two that are the best match form a 3D cluster.  The metric used for the matching is a simple likelihood based on three input variables.  The first variable is the ratio of the total charge of the 2D matching candidate clusters, $Q_{\textrm{ratio}}$.  Assuming the two 2D clusters come from the same particle, the amount of charge deposited in each view should be similar, so $Q_{\textrm{ratio}}$ should be \sim1.  The $Q_{\textrm{ratio}}$ value is then compared with a probability density function generated using ND280 MC to retrieve $\mathcal{L}_{Q_{\textrm{ratio}}}$.  The second input variable to the likelihood compares the first layer used by the two matching candidate clusters which is closest to the ND280 tracker region, $\Delta_{\textrm{layer, first}}$.  If the two candidate clusters are created from the same particle, the difference in starting layer number should ideally be one.  As with with $Q_{\textrm{ratio}}$, the $\Delta_{\textrm{layer, first}}$ found for the matching candidates is compared to a probability density function to retrieve $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$.  The final input to the likelihood is almost identical to the second input.  The variable, called $\Delta_{\textrm{layer, last}}$ compares the difference in layer number furthest away from the ND280 tracker region.  Besides this difference, $\Delta_{\textrm{layer, last}}$ is treated in exactly the same manner as $\Delta_{\textrm{layer, first}}$ and so will not be described in any more detail.
-\newline
-Once the three inputs for the matching candidates have been calculated, the value of the matching likelihood is then
-\begin{equation}
-  \mathcal{L} = \mathcal{L}_{Q_{\textrm{ratio}}} \times \mathcal{L}_{\Delta_{\textrm{layer, first}}} \times \mathcal{L}_{\Delta_{\textrm{layer, last}}}.
-\end{equation}
-As mentioned above, all 2D clusters in one view are compared with all 2D clusters in the other view.  The matching pair which produce the highest value of $\mathcal{L}$ are counted as a match.  The matched pair are then removed from the pool and the process is repeated until no more matches can be made or the value of $\mathcal{L}$ falls below $e^{-5}$.  All matched clusters are now counted as 3D objects and are passed on to the rest of the ECal reconstruction algorithms.
-
-\subsection{3D hit reconstruction}
-\label{subsec:ECal3DHitReconstruction}
-So far in the ECal reconstruction, it has only been possible to reconstruct 2/3 of the hit coordinates.  However, now that full 3D clusters have been formed, the information from both ECal views can be used to estimate the 3rd hit coordinate which is the coordinate along the length of the bar.
-\newline
-\newline
-The hits are separated into their respective 2D view and then the charge-weighted average position of each layer is calculated.  Then, to calculate the final hit coordinate, the nearest four layers from the other view are found and a linear least-squares fit is applied to their 2D coordinates.  The line found is then extrapolated into the layer of interest which provides the unknown hit coordinate.
-
-\subsection{Energy reconstruction}
-\label{subsec:ECalEnergyReconstruction}
-The ECal was designed to catch electromagnetic particles originating from the tracker region of ND280, particularly photons from $\pi^0$ decays.  An integral part of particle shower reconstruction is estimation of the total energy of the incoming particle.  So, the next phase of the reconstruction is particle energy estimation under the assumption that the incident particle created a full contained particle shower upon entering the ECal module.  The range of the energy fitter is 25 MeV to 20 GeV which almost fully covers the range of energies seen in the ND280 ECals.  The energy fitter works by minimising a likelihood function which takes the total charge, charge RMS and charge skew of the 3D cluster as inputs.  For each of the three input variables, splines were generated using simple photon particle gun MC which relates the input variables to the true particle energy.  The minimizer generates an estimate of the true energy and, via the splines, retrieves the expected values of the input variables.  By minimising the distance between the measured input variables and those taken from the splines an accurate estimate of the particle energy is found.  This energy estimate, along with the 3D cluster itself, is then passed on to the final section of the ECal reconstruction.
-
-\subsection{Event classification}
-\label{subsec:ECalParticleIdentification}
-The final section of the ECal reconstruction is to attach a topology hypothesis to the 3D cluster.  The routines currently separate the clusters into two catagories: those that are shower-like and those that are track-like using an Artifical Neural Network (ANN).  This multi-variate analysis object takes multiple pieces of information about the 3D cluster which attempts to measure the energy deposition and shape of the cluster and returns a single number.  The value of the returned number suggests whether the reconstructed object is track-like or shower-like. The discriminator was tested using ND280 electron and muon control samples, the results of which are shown for the DS-ECal in Fig.~\ref{fig:ECalTrShVal}.
+T2K was the first experiment to observe the $\nu_\mu\rightarrow\nu_e$ appearance channel~\cite{PhysRevLett.112.061802} which excluded $\theta_{13} = 0$ at 7.3$\textrm{\sigma}$ significance.  By comparing this result with precise $\theta_{13}$ measurements from reactor experiments, $\textrm{\delta}_{\textrm{CP}}$ regions can be excluded at 90$\%$ confidence level (see Fig.~\ref{fig:NueAppearanceContour}).  T2K's precision analysis of the $\nu_\mu$ disappearance channel provide world leading measurements of $\textrm{\theta}_{23}$ and $\Delta m^2_{23}$.  Independently of the oscillation analyses performed by the experiment, T2K's near detectors, ND280 and INGRID, are used to measure a range of neutrino cross-sections~\cite{PhysRevLett.113.241803, PhysRevD.87.092003}.  While this is not the primary aim of T2K, such measurements are still extremely important as T2K systematic uncertainties can be constrained with additional cross-section knowledge as well as helping to understand the general neutrino interaction picture.
 
 \begin{figure}
   \centering
-  \includegraphics[width=8.5cm]{images/software/ecal_trshval.pdf}
-  \caption{The track-like/shower-like discriminator for the DS-ECal.  Solid lines show the control sample Monte Carlo and the point show the control sample data~\cite{1748-0221-8-10-P10019}.}
-  \label{fig:ECalTrShVal}
+  \includegraphics[width=7.5cm]{images/t2k/nue_appearance_Theta13Delta_contour.eps}
+  \caption{The 68$\%$ and 90$\%$ confidence level allowed regions for $\sin^22\theta_{13}$ as a function of $\textrm{\delta}_{\textrm{CP}}$ for normal hierachy (top) and inverted hierarchy (bottom)  The solid line represents the best fit $\sin^22\theta_{13}$ for a given $\textrm{\delta}_{\textrm{CP}}$.  The shaded region shows the average $\theta_{13}$ provided by the reactor constraint~\cite{PhysRevLett.112.061802}.}
+  \label{fig:NueAppearanceContour}
 \end{figure}
+
+
+\section{T2K beam}
+\label{sec:T2KBeam}
+The T2K neutrino beam is generated by J-PARC's accelerator complex which produces a 30 GeV proton beam which is fired at a fixed graphite target.  The final-state particles of interactions with the target are predominately charged pions which decay to produce the neutrino beam.  Surrounding and behind the graphite target are a set of magnetic horns which focus the pions into a beam, resulting in a focused neutrino beam after the hadrons have decayed.
+
+\subsection{Accelerator complex}
+\label{subsec:AcceleratorComplex}
+The J-PARC acclerator complex consists of three sections: the LINnear ACcelerator (LINAC), the Rapid-Cycling Synchotron (RCS) and the Main Ring synchotron (MR).  Production of the proton beam starts at the LINAC where H$^-$ anions are accelerated to 181 MeV which are subsequently converted to H$^+$ ions via charge-stripping foils at the RCS injection point.  With a 25 Hz cycle, the ions are further accelerated by the RCS to 3 GeV with two bunches per cycle.  Roughly 5$\%$ of the proton bunches are fed into the MR where the final acceleration to 30 GeV occurs in bunches of eight.  Extraction of the bunches occurs at two points for different experiments.  For T2K, all eight bunches are extracted in a single turn by five kicker magnets and aimed down the neutrino beamline to the graphite target.  The extraction of all eight bunches forms a single beam spill with a width of 5 $\mu$sec.  The tight structure of the beam spills is vital for background discrimination in the downstream detectors.
+
+\subsection{Neutrino beamline}
+\label{subsec:NeutrinoBeamline}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/t2k/neutrino_beamline.pdf}
+  \caption{A schematic of the T2K neutrino beamline (left) and a side view of the secondary beamline (right)~\cite{Abe2011106}.}
+  \label{fig:NeutrinoBeamline}
+\end{figure}
+
+The neutrino beamline (NU) is split into a primary and secondary beamline, a schematic of which is shown in Fig.~\ref{fig:NeutrinoBeamline}.  The primary beamline consists of a preparation section, an arc section and a focussing section.  The preparation section uses 11 normal conducting magnets to tune the proton beam for entry into the arc section where the proton beam is bent to its intended direction.  As will be discussed in more detail in section~\ref{subsec:OffAxisBeam}, the axis of the beam is 2.5$^\circ$ away from SK.  The final focussing sections then guides the proton beam into the secondary beamline and the graphite target.
+\newline
+\newline
+Sound performance of the proton beam is vital for stability of the T2K neutrino beam.  To ensure such performance, the primary beamline is equipped with a suite of monitors to measure the position, profile, loss and intensity of the proton beam.  The beam position is measured by 21 ElectroStatic Monitors (ESMs) which consists of four cylindrical electrodes surrounding the beam.  The asymmetry of the beam is measured by the induced current in the electrodes which is used to infer the position in a non-destructive manner.  Segmented Secondary Emission Monitors (SSEMs) are used to measure the beam loss.  Each SSEM has an anode foil sandwiched between two titanium foil strips.  Protons interact with the strips causing an emission of electrons which electrically drift inducing a current in the strips.  The charge distribution is used to reconstruct the profile.  The Beam Loss Monitors (BLMs) are Ar-CO$_2$ filled wire proportional counters and are used to quantify the beam loss.  The intensity of the beam is measured by five Current Transformers (CTs) which consist of a 50-turn toroidal coil around a ferromagnetic coil.  Passage of the beam induces a current in the coil which is used to infer the number of protons in the spill.  The final CT (CT5) is positioned at the end of the focussing section of the primary beamline and is used to count the number of protons incident on the graphite target.  The accumulated number of protons on target (POT) is used as a metric for the data collected by T2K.  The total POT accumulated so far by T2K is shown in Fig.~\ref{fig:POTHistory}.
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{images/t2k/pot_history.png}
+  \caption{The POT recorded by CT5 as a function of time (blue line) and the recorded beam power in $\nu$ running mode (red dot) and $\bar{\nu}$ running mode (purple dot).}
+  \label{fig:POTHistory}
+\end{figure}
+\newline
+The secondary beamline consists of the graphite target, a set of magnetic focusing horns, a decay pipe and a beam dump.  A schematic for the secondary beamline is shown in Fig.~\ref{fig:NeutrinoBeamline}.  The graphite target is a 2.6 cm diameter and 91.4 cm long rod which is surrounded by a 2 mm thick graphite tube and a 0.3 mm titanium case.  The proton-graphite interactions produce charged pions and kaons which are focussed by three magnetic horns, one of which surrounds the target.  The magnetic horns consist of two coaxial conductors which generate a magnetic field with a strength inversely proportional to the distance from the beam axis.  The current direction in the magnetic horns causes the induced field to focus or deflect particles depending on their charge sign.  This simple control allows T2K to operatre in $\nu$ or $\bar{\nu}$ beam mode.  The focused mesons then travel down a decay pipe filled with Helium to reduce pion absorption.  It is here that the mesons decay to produce the neutrinos which form the T2K beam.  To stop measurement contamination, other decay products must be stopped before reaching the downstream detectors.  So, a 75 ton graphite beam dump is positioned at the end of the decay volume.  The beam dump stops almost all non-wanted decay products, with only 5 GeV or above muons successfully propagating through.  As the muons are generally simultaneously produced with the beam neutrinos, measurements of the muons can be used to monitor the direction of the neutrino beam.  To do this, a MUon MONitor (MUMON) is installed at the downstream end of the beam dump.
+
+\subsection{Off-axis beam}
+\label{subsec:OffAxisBeam}
+The kinematics of the pion decays dictate the energy spectrum shape of the neutrinos.  Specifically, the peak width of the neutrino energy narrows and shifts as an observer moves off-axis from the pions trajectory.  As the pions are the neutrino parents in the T2K beam, the same effect can be seen by moving off-axis from the neutrino beam.  This effect is illustrated in Fig.~\cite{fig:OAEffectFlux}.  By positioning T2K's baseline detectors at 2.5$^\circ$ off-axis, it is possible to align the neutrino beam's peak energy with the first oscillation maximum for the $\nu_\mu$ disappearance channel.  Separately, an off-axis configuration reduces the beam's unwanted high energy tail, improving sensitivity to $\nu_e$ appearance and $\nu_\mu$ disappearance.
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{images/t2k/oaeffect_flux.pdf}
+  \caption{Muon neutrino survival probability at 295~km (top) and neutrino fluxes for different off-axis angles (bottom)~\cite{PhysRevD.87.012001}.}
+  \label{fig:OAEffectFlux}
+\end{figure}
+
+
+
+\section{Near detector complex}
+\label{sec:NearDetectorComplex}
+Located 280~m downstream of the beam target is the near detector complex which houses a pair of detectors which measure the unoscillated characteristics of the beam.  The two detectors, named INGRID and ND280, sit in a 37~m deep, open air pit lined with concrete which is surrounded by sand.
+
+\subsection{Multi-Pixel Photon Counter}
+\label{subsec:MPPC}
+Multi-Pixel Photon Counters (MPPCs)~\cite{1748-0221-4-04-P04004} are used extensively in both INGRID and ND280 for detection of scintillation light during particle energy deposition in plastic scintillator.  The choice of MPPCs, rather than more traditional photomultiplier tubes, was largely due to their ability to operate in a magnetic field.  A MPPC is a multi-pixel avalanche photodiode which consists of 667 pixels over an area of $1.3\times1.3$~mm$^2$.  In terms of operation, each MPPC is held at 0.8-1.5~V above their breakdown voltage, resulting in a gain of $1\times10^6$, which is consistient with the gain of a vacuum photomultiplier~\cite{Abe2011106}.  When light is incident on a MPPC, each pixel acts as a detector for a single photon which means the total signal collected is simply the sum of the MPPC's fired pixels.
+\newline
+\newline
+The scintillator bars, which the MPPCs collect the light from, consist of plastic scintillator bars with a wavelength shifting (WLS) fibre threaded through the centre.  During energy deposition, the plastic scintillator emits photons which are collected and transported by the WLS fibre to the bar's end where the MPPC is located.  The WLS fibre has a twofold purpose: carry the light to the MPPC and shift the spectrum of the light to a region where MPPC detection is optimised.
+
+\subsection{INGRID}
+\label{subsec:INGRID}
+INGRID (Interactive Neutrino GRID) is one of T2K's near detectors.  With its centre positioned on the beam axis, INGRID is designed to directly monitor the beam's direction and intensity.  INGRID consists of 14 identical modules arranged in a cross formation with two additional modules positioned off the cross axis towards the end of each horizontal arm (see Fig.~\ref{fig:INGRIDSchematic}).  The cross arrangement allows INGRID to sample the beam in a 10~m $\times$ 10~m transverse section.
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/t2k/INGRID.pdf}
+  \caption{A schematic of INGRID~\cite{Abe2011106}.}
+  \label{fig:INGRIDSchematic}
+\end{figure}
+\newline
+\newline
+Each module consists of nine iron plates and 11 tracking scintillator planes in a sandwich structure.  The iron plates are 124~cm $\times$ 124~cm $\times$ 6.5~cm and provide 7.1~tons of target per module for the neutrino beam.  The scintillator planes provide tracking for the neutrino final-states and consist of scintillator bars threaded by WLS fibres and readout by MPPCs (see section~\ref{subsec:MPPC}).
+\newline
+\newline
+This overall design allows INGRID to measure the beam centre to a 10~cm precision which corresponds to 0.4~mrad precision at the near detector complex~\cite{Abe2011106}.
+
+
+\subsection{ND280}
+\label{subsec:ND280}
+ND280 (Near Detector at 280~m) is T2K's other near detector.  However, unlike INGRID, ND280 is positioned 2.5$^\circ$ off-axis to the neutrino beam.  ND280 is a heavy, fine-grained detector  which characterises the flux, energy spectrum and $\nu_e$ contamination of the $\nu_\mu$ beam and additionally makes neutrino cross-section measurements.  Because ND280 sits at the same off-axis angle as T2K's far detector, ND280's beam characterisation can be used to make signal and background predictions at the far detector.
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm]{images/t2k/ND280Schematic.pdf}
+  \caption{An exploded view of ND280~\cite{Abe2011106}.}
+  \label{fig:ND280Schematic}
+\end{figure}
+\newline
+\newline
+Fig.~\ref{fig:ND280Schematic} shows an exploded view of the detector, which reveals the many subdetectors that form ND280.  The central tracking region comprises two Fine-Grained Detectors (FGDs~\cite{Amaudruz20121}) sandwiched between three Time Projection Chambers (TPCs~\cite{Abgrall201125}). The FGDs, which are composed of layers of plastic scintillator bars, provide the primary target for the neutrinos to interact with and the TPCs, filled with a gaseous mixture, allow for tracking of the charged final-states.  Essentially, the detectors in this region are complimentary and their combined information is used to reconstruct the majority of beam events relevant for oscillation analyses.  Upstream of the tracker region lies the $\pi^0$ detector (P$\O$D~\cite{Assylbekov201248}), whose design is optimised for studying neutrino interactions with $\pi^0$ in the final-state and consists of layers of scintillator, water and brass.  Surrounding the tracker and P$\O$D are a set of Electromagnetic Calorimeters (ECals~\cite{1748-0221-8-10-P10019}), primarily designed to detect particles originating from ND280's inner region.  Because particle identification is paramount to ND280's physics goals, all of the above detectors sit in a constant 0.2~T magnetic field, which is aligned with the $x$-axis in Fig.~\ref{fig:ND280Schematic}.  The magnetic return yoke and coils used to generate this field emcompass the entire detector, allowing a constant field to be maintained within the detector, but greatly minimising the field's outside extent.  To maximise ND280's physics capability, the magnetic return yoke is instrumanted with layers of plastic scintillator, which form the Side Muon Range Detectors (SMRDs~\cite{Aoki2013135}).
+
+
+\subsubsection{The electromagnetic calorimeters}
+\label{subsubsec:ecal}
+The ND280 ECal is a lead-scintillator sampling calorimeter which conists of 13 modules separated into three distinct regions: the P$\O$D ECal which consists of six modules surrounding the P$\O$D, the barrel-ECal which is separated into six modules surrounding the tracker region and the DownStream-ECal (DS-ECal) which is a single module located downstream of the inner detectors.  Motivated by their physics goals, the barrel-ECal and DS-ECal are often considered together and will be referred to as the tracker ECal, while the P$\O$D ECal is considered a separate detector which is not used in this analysis and so will not be discussed further.  The primary physics goal of the ECal is to aide particle identification for final-states originating in the central region of ND280.  This is particularly important for interactions with $\pi^0$ in the final-state as the decay photons are difficult to identify using the tracker alone.
+\newline
+\newline
+%All modules in the tracker ECal consist of layers of scintillating polystyrene bars with a 40~mm $\times$ 10~mm cross-section bonded to 1.75~mm lead sheets.
+The barrel-ECals are separated into six modules: two modules above the tracker, two either side of the tracker and two below the tracker.  Each barrel-ECal module consists of layers of scintillating polystyrene bars with a 40~mm $\times$ 10~mm cross-section bonded to 1.75~mm lead sheets.  The scintillator bars provide a means of tracking the final-states while the lead sheets act as a radiator to produce electromagnetic showers and additionally provide a heavy mass neutrino target.  To measure the light readout, each scintillator bar has a 2~mm hole running through the centre in which a WLS fibre is inserted.  The fibre carries the light to the end of the bar where it can be collected by an MPPC.  The size of the gap between the tracker and the magnet placed a strong constraint on the size of barrel modules and so a scintillator bar thickness of 10~mm was chosen to minimise the ECal depth while maintaining a bar thickness which could provide sufficient light for signal capture.  The other key features of the active barrel-ECal volume (bar thickness, lead thickness and number of layers) were chosen to optimise particle identification and tracking.  A smaller bar width results in a detector with a higher resolution and studies investigating this found that the $\pi^0$ reconstruction efficiency was greatly compromised for $>$50~mm bar widths.  So, to facilitate costings, a compromise bar width of 40~mm was chosen.  The thickness of the lead absorber was also optimised based on the $\pi^0$ reconstruction efficiency.  The number of scintillator-lead layers was chosen such that electromagnetic showers of energy up to 3~GeV were adequately contained.  It was found that 10 electron radiation lengths ($X_0$) were required to ensure containment of at least 50$\%$ of $\pi_0$ decay photon showers.  So, this motivated a choice of 31 layers for all barrel-ECal modules which is equivalent to 9.7$X_0$.  For the purpose of 3D reconstruction, each ECal layer is oriented at 90$^\circ$ to the previous layer.  This means that in all barrel modules, there are 16 layers perpendicular and 15 layers parallel to the beam direction.  The perpendicular and parallel layers are slightly different, in that the scintillator bars are a different length.  In all barrel modules, the parallel bars are 3840~mm and are read out at both ends by separate MPPCs.  Because of the geometry, this is not the case for the perpendicular bars; the top and bottom module bar lengths are 1520~mm whereas the side module bar lengths are 2280~mm.  For all perpendicular bars, the signal is read out at one end only with the other end mirrored with aluminimum to reflect the light.  Each barrel module is sandwiched between two carbon fibre plates and held in an aluminium frame which provides secure, structural support.
+\newline
+\newline
+The DS-ECal has almost identical features to that of the barrel in that it has scintillator bars with an identical chemical composition and cross-section while the lead absorbers are equally thick.  However, unlike the barrel-ECals, the DS-ECal consists of 34 lead-scintillator layers which are, again, orientated at 90$^\circ$ to the previous layer.  Because of this, the DS-ECal has a radiation length of 10.6$X_0$.  Additionally, every scintillator bar is 2000~mm and is read out at both ends by MPPCs.  Also, because of its position in the geometry, all layers are perpendicular to the beam direction.  The carbon fibre plates and aluminium frame are identical to those used in the barrel-ECal.
+\newline
+\newline
+A summary of the tracker ECal design is shown in table.~\ref{table:ECalDesign}.
+\begin{table}
+\begin{center}
+\begin{tabular}{l|l|l}
+\hline
+        & DS-ECal  &Barrel ECal  \\ \hline
+Length (mm)& 2300      & 4140   \\ 
+Width (mm)  & 2300      & 1676  top/bottom \\ 
+        &          & 2500 side  \\ 
+Depth (mm)  & 500     & 462    \\
+Weight (kg) & 6500 & 8000 top/bottom  \\
+            &      & 10000 side        \\ \hline
+Num. of layers &  34      &  31  \\ \hline
+Bar orientation & $x/y$ &Para. and Perp \\ \hline
+Num. of bars    & 1700     & 2280 Para. top/bottom  \\ 
+        &          & 1710 Para. sides \\     
+        &          & 6144 Perp top/bottom   \\ 
+        &          & 3072 Perp sides       \\ \hline  
+Bars per layer & 50 & 38 Para. top/bottom\\
+               &    & 57 Para. side\\
+               &    & 96 Perp top/bottom/sides  \\  \hline
+Bar length (mm) & 2000  & 3840  Para. \\ 
+           &      & 1520 Perp top/bottom \\ 
+           &      & 2280 Perp sides      \\ \hline
+Pb thickness (mm) & 1.75  & 1.75    \\ \hline 
+\end{tabular}
+\caption{Summary of the ECal design showing the overall dimensions, numbers of layers, length and orientation of the scintillator bars, numbers of bars, and lead thickness for each module~\cite{1748-0221-8-10-P10019}.}
+\label{table:ECalDesign} 
+\end{center}
+\end{table}
+\newline
+\newline
+The scintillator bars consist of polystyrene doped with 1$\%$~PPO and 0.03$\%$~POPOP and were extruded at a dedicated Fermilab facility.  During charge deposition, the PPO works as the primary scintillator and its output photons result in secondary scintillation of the POPOP.  This process acts as a wavelength shifter to produce an emission peak of 420~nm which matches the absorption peak of the 1~mm dimaeter WLS fibre threaded through the centre of the bar.  Every tracker ECal bar contains a 0.25~mm coating of polystyrene co-extruded with TiO$_2$ which provides reflection of the scintillation light.
+\newline
+\newline
+The lead aborber layers consist of naturally occurring lead and stiffened with 2$\%$ antimony.  Traces of other metals are present but are below 0.15$\%$.  During construction, each lead layer was coated with a black, quick drying metal-conditioning primer to protect personnel from the toxic effects of the lead and to prevent leaching into the scintillator bars.  The lead layers themselves are actually constructed from multiple sheets rather than a single sheet largely due to ease of transportation.  In the case of the DS-ECal, each layer consists of two 1008~mm $\times$ 2016~mm sheets.  For the top and bottom ECal modules, each layer consists of two 765~mm $\times$ 3858~mm sheets and the side module aborbers are constructed from four 2330~mm $\times$ 964.5~mm sheets.
+\newline
+\newline
+The tracker ECal electronics system consists of several different readout boards.  All MPPCs are connected to a set of bespoke Trip-T Frontend Boards (TFBs).  Each TFB comes with 64 channels to read out MPPCs which means that there are multiple TFBs associated with each ECal module.  All TFBs subsequently connect to Readout Merger Modules (RMMs) which act as the interface between the Data AQuisition system (DAQ) and its associated TFBs.
+
+\subsubsection{Data aquisition system}
+\label{subsubsec:DAQ}
+ND280 comes equipped with a DAQ which is responsible for triggering the readout of information from the subdetectors and subsequent storage.  Because of the low frequency of neutrino events, there are no strict trigger requirements which is in stark contrast to collider experiments.  So, there are only three triggers which are:
+\begin{itemize}
+\item \textbf{Beam trigger:} When a beam spill occurs, a timing signal is sent to the DAQ which issues a command to record ND280 data. 
+\item \textbf{TRIP-t cosmic trigger:} If hits are seen on opposite sides of the outer detectors (allowed combinations are top and bottom SMRD, left and right SMRD, P$\O$D and DS-ECal) which are outside of the beam time window, then the DAQ records data as the hits were likely caused by a cosmic ray muon.
+\item \textbf{FGD cosmic trigger:} If hits are seen in both FGDs which are outisde of the beam time window, then data is recorded as this was also likely to be caused by a cosmic ray muon.
+\end{itemize}
+The data is initially stored at KEK in Japan but is then replicated to TRIUMF in Canada and RAL in the UK for maximum redundancy and ease of access.
+
+\subsection{The far detector}
+The T2K experiment's far detector is Super-Kamiokande~\cite{Fukuda2003418}, which is a very large water Cherenkov detector containing 50~kton of ultra-pure water.  Positioned 295~km away from the J-PARC neutrino beam, SK is located under Mt.~Ikenoyama with an overburden of 1~km.  SK consists of two detectors; the inner detector consists of 11,146 inward facing 20'' PMTs which surround 35,000~ton of water while the outer detector consists of 1,885 outward facing 8'' PMTs and acts as a veto for entering backgrounds.
+\newline
+\newline
+SK detects particles via Cherenkov radiation which is produced as a result of charged particles travelling in excess of the speed of light in the local medium.  This radiation is emitted at an angle of $\cos \theta = c/nv$, where $n$ is the refractive index of the material and $v$ is the speed of the particle.  For water this equates to an angle of 42$^\circ$.  The medium imposes a damping effect on the velocity of the particle, which results in energy loss and there comes a point where the Cherenkov emission condition is no longer met.  So, SK detects a ring of light emitted by the particles propagating through it.
+\newline
+\newline
+The features of the Cherenkov ring are utilised for particle identification.  An electron, which showers upon creation in the water, creates a fuzzy ring of light while a muon, which cleanly propagates through the water, creates a sharp ring of light.  Examples of this are shown in Fig.~\ref{fig:SKPID} where the difference between muon and electron events can be clearly seen.
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm]{images/t2k/SK_PID.pdf}
+  \caption{Example of reconstructed T2K events in SK for a muon-like ring (left) and an electron-like ring (right)~\cite{Abe2011106}.}
+  \label{fig:SKPID}
+\end{figure}
+
+
 
 
