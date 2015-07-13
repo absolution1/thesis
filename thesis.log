@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  12 JUL 2015 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  13 JUL 2015 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,7 +1021,12 @@ LaTeX Info: Redefining \CERN on input line 53.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `fig:TrackMergingConditionDistanceRatio' multiply defined.
+
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -1173,7 +1178,7 @@ Straight input of comment.cut. (./comment.cut (./chap3.tex [1] [2
 
 ]
 Chapter 1.
-<images/t2k/t2k_schematic.pdf, id=136, 350.10799pt x 85.921pt>
+<images/t2k/t2k_schematic.pdf, id=172, 350.10799pt x 85.921pt>
 File: images/t2k/t2k_schematic.pdf Graphic file (type pdf)
 
 <use images/t2k/t2k_schematic.pdf>
@@ -1195,7 +1200,7 @@ a_contour.eps>
 (epstopdf)             \includegraphics on input line 28.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf, id=143, 5
+<images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf, id=179, 5
 69.12625pt x 670.505pt>
 File: images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -1211,7 +1216,7 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 38.
  [4 <./images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf>]
-<images/t2k/neutrino_beamline.pdf, id=180, 838.33202pt x 301.928pt>
+<images/t2k/neutrino_beamline.pdf, id=215, 838.33202pt x 301.928pt>
 File: images/t2k/neutrino_beamline.pdf Graphic file (type pdf)
 
 <use images/t2k/neutrino_beamline.pdf>
@@ -1219,7 +1224,7 @@ Package pdftex.def Info: images/t2k/neutrino_beamline.pdf used on input line 47
 .
 (pdftex.def)             Requested size: 426.79134pt x 153.70941pt.
 
-<images/t2k/pot_history.png, id=186, 1401.235pt x 775.89874pt>
+<images/t2k/pot_history.png, id=221, 1401.235pt x 775.89874pt>
 File: images/t2k/pot_history.png Graphic file (type png)
 
 <use images/t2k/pot_history.png>
@@ -1241,7 +1246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--64
 LaTeX Warning: Citation `fig:OAEffectFlux' on page 7 undefined on input line 67
 .
 
-<images/t2k/oaeffect_flux.pdf, id=202, 569.12625pt x 594.22pt>
+<images/t2k/oaeffect_flux.pdf, id=237, 569.12625pt x 594.22pt>
 File: images/t2k/oaeffect_flux.pdf Graphic file (type pdf)
 
 <use images/t2k/oaeffect_flux.pdf>
@@ -1252,7 +1257,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--87
 
  []
 
-[7] <images/t2k/INGRID.pdf, id=213, 176.6941pt x 187.29855pt>
+[7] <images/t2k/INGRID.pdf, id=248, 176.6941pt x 187.29855pt>
 File: images/t2k/INGRID.pdf Graphic file (type pdf)
 
 <use images/t2k/INGRID.pdf>
@@ -1272,7 +1277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--103
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./images/t2k/oaeffect_flux.pdf>]
-<images/t2k/ND280Schematic.pdf, id=268, 244.94102pt x 220.31871pt>
+<images/t2k/ND280Schematic.pdf, id=303, 244.94102pt x 220.31871pt>
 File: images/t2k/ND280Schematic.pdf Graphic file (type pdf)
 
 <use images/t2k/ND280Schematic.pdf>
@@ -1346,7 +1351,7 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
 
 LaTeX Warning: Command \O invalid in math mode on input line 176.
 
-<images/t2k/SK_PID.pdf, id=387, 477.1087pt x 185.38731pt>
+<images/t2k/SK_PID.pdf, id=422, 477.1087pt x 185.38731pt>
 File: images/t2k/SK_PID.pdf Graphic file (type pdf)
 
 <use images/t2k/SK_PID.pdf>
@@ -1362,7 +1367,2382 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
-[14])) Processing 'backmatter' comment. [15 <./images/t2k/SK_PID.pdf>] [16
+[14]) (./chap7.tex [15 <./images/t2k/SK_PID.pdf>] [16
+
+]
+Chapter 2.
+
+LaTeX Warning: Reference `chap:EnhancedECalReconstruction' on page 17 undefined
+ on input line 14.
+
+
+LaTeX Warning: Reference `sec:ReconOutput' on page 17 undefined on input line 2
+4.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
+
+ []
+
+
+Underfull \vbox (badness 4792) has occurred while \output is active []
+
+ [17]
+Package epstopdf Info: Source file: <images/selection/signal_definition/NSignal
+EventsNeutrinoEnergy.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 9545 bytes
+(epstopdf)             Output file: <images/selection/signal_definition/NSignal
+EventsNeutrinoEnergy-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 8496 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/signal_de
+finition/NSignalEventsNeutrinoEnergy-eps-converted-to.pdf images/selection/sign
+al_definition/NSignalEventsNeutrinoEnergy.eps>
+(epstopdf)             \includegraphics on input line 63.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/signal_definition/NSignalEventsNeutrinoEnergy-eps-converted-t
+o.pdf, id=514, 569.12625pt x 387.4475pt>
+File: images/selection/signal_definition/NSignalEventsNeutrinoEnergy-eps-conver
+ted-to.pdf Graphic file (type pdf)
+
+<use images/selection/signal_definition/NSignalEventsNeutrinoEnergy-eps-convert
+ed-to.pdf>
+Package pdftex.def Info: images/selection/signal_definition/NSignalEventsNeutri
+noEnergy-eps-converted-to.pdf used on input line 63.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--67
+
+ []
+
+[18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Package epstopdf Info: Source file: <images/selection/track_rejection/AngularSe
+parationNoRejection.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 10195 bytes
+(epstopdf)             Output file: <images/selection/track_rejection/AngularSe
+parationNoRejection-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 10153 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/track_rej
+ection/AngularSeparationNoRejection-eps-converted-to.pdf images/selection/track
+_rejection/AngularSeparationNoRejection.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/track_rejection/AngularSeparationNoRejection-eps-converted-to
+.pdf, id=528, 569.12625pt x 387.4475pt>
+File: images/selection/track_rejection/AngularSeparationNoRejection-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/selection/track_rejection/AngularSeparationNoRejection-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/selection/track_rejection/AngularSeparationNoRe
+jection-eps-converted-to.pdf used on input line 79.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 79.
+Package epstopdf Info: Source file: <images/selection/track_rejection/AngularSe
+parationWithRejection.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 10887 bytes
+(epstopdf)             Output file: <images/selection/track_rejection/AngularSe
+parationWithRejection-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:00
+(epstopdf)                    size: 10119 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/track_rej
+ection/AngularSeparationWithRejection-eps-converted-to.pdf images/selection/tra
+ck_rejection/AngularSeparationWithRejection.eps>
+(epstopdf)             \includegraphics on input line 80.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/track_rejection/AngularSeparationWithRejection-eps-converted-
+to.pdf, id=529, 569.12625pt x 387.4475pt>
+File: images/selection/track_rejection/AngularSeparationWithRejection-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use images/selection/track_rejection/AngularSeparationWithRejection-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: images/selection/track_rejection/AngularSeparationWith
+Rejection-eps-converted-to.pdf used on input line 80.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (67.07582pt too wide) in paragraph at lines 79--81
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--94
+
+ []
+
+
+Underfull \vbox (badness 3977) has occurred while \output is active []
+
+ [20 <./images/selection/signal_definition/NSignalEventsNeutrinoEnergy-eps-conv
+erted-to.pdf>]
+Underfull \vbox (badness 5908) has occurred while \output is active []
+
+ [21 <./images/selection/track_rejection/AngularSeparationNoRejection-eps-conve
+rted-to.pdf> <./images/selection/track_rejection/AngularSeparationWithRejection
+-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/selection/vertex_recon/FOM_2D.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 52981 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/FOM_2D-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 16561 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/FOM_2D-eps-converted-to.pdf images/selection/vertex_recon/FOM_2D.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/FOM_2D-eps-converted-to.pdf, id=563, 569.12625pt
+ x 387.4475pt>
+File: images/selection/vertex_recon/FOM_2D-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/selection/vertex_recon/FOM_2D-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/FOM_2D-eps-converted-to.
+pdf used on input line 99.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/dq_marginali
+ze.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 8415 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/dq_marginali
+ze-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:02
+(epstopdf)                    size: 10178 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/dq_marginalize-eps-converted-to.pdf images/selection/vertex_recon/dq_margin
+alize.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/dq_marginalize-eps-converted-to.pdf, id=564, 569
+.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/dq_marginalize-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use images/selection/vertex_recon/dq_marginalize-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/dq_marginalize-eps-conve
+rted-to.pdf used on input line 105.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/dc_marginali
+ze.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 7733 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/dc_marginali
+ze-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 10436 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/dc_marginalize-eps-converted-to.pdf images/selection/vertex_recon/dc_margin
+alize.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/dc_marginalize-eps-converted-to.pdf, id=565, 569
+.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/dc_marginalize-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use images/selection/vertex_recon/dc_marginalize-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/dc_marginalize-eps-conve
+rted-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 105--107
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/vertex_vecto
+r_diagram.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 50294 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/vertex_vecto
+r_diagram-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 6790 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/vertex_vector_diagram-eps-converted-to.pdf images/selection/vertex_recon/ve
+rtex_vector_diagram.eps>
+(epstopdf)             \includegraphics on input line 122.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/vertex_vector_diagram-eps-converted-to.pdf, id=5
+72, 364.36125pt x 302.12875pt>
+File: images/selection/vertex_recon/vertex_vector_diagram-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/selection/vertex_recon/vertex_vector_diagram-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/vertex_vector_diagram-ep
+s-converted-to.pdf used on input line 122.
+(pdftex.def)             Requested size: 227.62204pt x 188.7424pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+[23 <./images/selection/vertex_recon/FOM_2D-eps-converted-to.pdf> <./images/sel
+ection/vertex_recon/dq_marginalize-eps-converted-to.pdf> <./images/selection/ve
+rtex_recon/dc_marginalize-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./images/selection/vertex_recon/vertex_vector_diagram-eps-converted-to.pd
+f>]
+Overfull \hbox (42.45183pt too wide) in paragraph at lines 177--177
+[] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/track_mergin
+g_event_display.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 18231 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/track_mergin
+g_event_display-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 19407 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/track_merging_event_display-eps-converted-to.pdf images/selection/vertex_re
+con/track_merging_event_display.eps>
+(epstopdf)             \includegraphics on input line 194.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/track_merging_event_display-eps-converted-to.pdf
+, id=660, 887.315pt x 420.57124pt>
+File: images/selection/vertex_recon/track_merging_event_display-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/track_merging_event_display-eps-converted-to
+.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/track_merging_event_disp
+lay-eps-converted-to.pdf used on input line 194.
+(pdftex.def)             Requested size: 341.43306pt x 161.82738pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--199
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26 <./images/selection/vertex_recon/track_merging_event_display-eps-converted
+-to.pdf>]
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_cos_theta.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 10109 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_cos_theta-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 9524 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_cos_theta-eps-converted-to.pdf images/selection/vertex_r
+econ/merging_candidates_cos_theta.eps>
+(epstopdf)             \includegraphics on input line 209.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-to.pd
+f, id=682, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted-t
+o.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_cos_t
+heta-eps-converted-to.pdf used on input line 209.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/distance_rat
+io_event_display.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 28346 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/distance_rat
+io_event_display-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 18622 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/distance_ratio_event_display-eps-converted-to.pdf images/selection/vertex_r
+econ/distance_ratio_event_display.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/distance_ratio_event_display-eps-converted-to.pd
+f, id=684, 612.2875pt x 418.56375pt>
+File: images/selection/vertex_recon/distance_ratio_event_display-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/distance_ratio_event_display-eps-converted-t
+o.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/distance_ratio_event_dis
+play-eps-converted-to.pdf used on input line 218.
+(pdftex.def)             Requested size: 284.52756pt x 194.50238pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 10595 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 9116 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_distance_ratio-eps-converted-to.pdf images/selection/ver
+tex_recon/merging_candidates_distance_ratio.eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_distance_ratio-eps-converted-
+to.pdf, id=686, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_distance_ratio-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_distance_ratio-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_dista
+nce_ratio-eps-converted-to.pdf used on input line 225.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio_CosThetaGuessCut.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 10054 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_distance_ratio_CosThetaGuessCut-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 8892 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_distance_ratio_CosThetaGuessCut-eps-converted-to.pdf ima
+ges/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.e
+ps>
+(epstopdf)             \includegraphics on input line 226.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessC
+ut-eps-converted-to.pdf, id=687, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaG
+uessCut-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGu
+essCut-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_dista
+nce_ratio_CosThetaGuessCut-eps-converted-to.pdf used on input line 226.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 225--227
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/correct_merg
+ing_candidates_distance_ratio_vs_cos_theta.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 236981 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/correct_merg
+ing_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 46674 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/correct_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf
+ images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos
+_theta.eps>
+(epstopdf)             \includegraphics on input line 233.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos
+_theta-eps-converted-to.pdf, id=696, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/correct_merging_candidates_distance_ratio_v
+s_cos_theta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs
+_cos_theta-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/correct_merging_candidat
+es_distance_ratio_vs_cos_theta-eps-converted-to.pdf used on input line 233.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/incorrect_me
+rging_candidates_distance_ratio_vs_cos_theta.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 407001 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/incorrect_me
+rging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 62197 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/incorrect_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.p
+df images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs
+_cos_theta.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_c
+os_theta-eps-converted-to.pdf, id=697, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio
+_vs_cos_theta-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_
+vs_cos_theta-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/incorrect_merging_candid
+ates_distance_ratio_vs_cos_theta-eps-converted-to.pdf used on input line 234.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 233--235
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+TuningFOM.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 125140 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+TuningFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 25352 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingTuningFOM-eps-converted-to.pdf images/selection/vertex_recon/Tr
+ackMergingTuningFOM.eps>
+(epstopdf)             \includegraphics on input line 243.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf, id=7
+02, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingTuningFOM-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingTuningFOM-ep
+s-converted-to.pdf used on input line 243.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+MarginalisedCosThetaFOM.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 7651 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+MarginalisedCosThetaFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 9269 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingMarginalisedCosThetaFOM-eps-converted-to.pdf images/selection/v
+ertex_recon/TrackMergingMarginalisedCosThetaFOM.eps>
+(epstopdf)             \includegraphics on input line 250.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-converte
+d-to.pdf, id=706, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingMarginalised
+CosThetaFOM-eps-converted-to.pdf used on input line 250.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+MarginalisedDistanceRatioFOM.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 7448 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+MarginalisedDistanceRatioFOM-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 9497 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingMarginalisedDistanceRatioFOM-eps-converted-to.pdf images/select
+ion/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps>
+(epstopdf)             \includegraphics on input line 251.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-eps-con
+verted-to.pdf, id=707, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM-eps
+-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingMarginalised
+DistanceRatioFOM-eps-converted-to.pdf used on input line 251.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 250--252
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/vertex_recon/TrackMerging
+CosThetaDegeneracySchematic.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 6554 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/TrackMerging
+CosThetaDegeneracySchematic-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:04
+(epstopdf)                    size: 3882 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/TrackMergingCosThetaDegeneracySchematic-eps-converted-to.pdf images/selecti
+on/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps>
+(epstopdf)             \includegraphics on input line 261.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic-eps-conv
+erted-to.pdf, id=718, 290.08376pt x 225.84375pt>
+File: images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/TrackMergingCosThetaDege
+neracySchematic-eps-converted-to.pdf used on input line 261.
+(pdftex.def)             Requested size: 284.52756pt x 221.53212pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/track_mergin
+g_event_display_swing.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 27032 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/track_mergin
+g_event_display_swing-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 18350 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/track_merging_event_display_swing-eps-converted-to.pdf images/selection/ver
+tex_recon/track_merging_event_display_swing.eps>
+(epstopdf)             \includegraphics on input line 267.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/track_merging_event_display_swing-eps-converted-
+to.pdf, id=719, 612.2875pt x 418.56375pt>
+File: images/selection/vertex_recon/track_merging_event_display_swing-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/track_merging_event_display_swing-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/track_merging_event_disp
+lay_swing-eps-converted-to.pdf used on input line 267.
+(pdftex.def)             Requested size: 341.43306pt x 233.40414pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_swing.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 9572 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_swing-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 8560 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_swing-eps-converted-to.pdf images/selection/vertex_recon
+/merging_candidates_swing.eps>
+(epstopdf)             \includegraphics on input line 273.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_swing-eps-converted-to.pdf, i
+d=720, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_swing-eps-converted-to.p
+df Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_swing-eps-converted-to.pd
+f>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_swing
+-eps-converted-to.pdf used on input line 273.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/vertex_recon/merging_cand
+idates_swing_OtherCutsApplied.eps>
+(epstopdf)                    date: 2015-05-13 21:23:10
+(epstopdf)                    size: 8630 bytes
+(epstopdf)             Output file: <images/selection/vertex_recon/merging_cand
+idates_swing_OtherCutsApplied-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:07
+(epstopdf)                    size: 8111 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/vertex_re
+con/merging_candidates_swing_OtherCutsApplied-eps-converted-to.pdf images/selec
+tion/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps>
+(epstopdf)             \includegraphics on input line 274.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied-eps-co
+nverted-to.pdf, id=721, 569.12625pt x 387.4475pt>
+File: images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied-ep
+s-converted-to.pdf>
+Package pdftex.def Info: images/selection/vertex_recon/merging_candidates_swing
+_OtherCutsApplied-eps-converted-to.pdf used on input line 274.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 273--275
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--289
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+[28 <./images/selection/vertex_recon/merging_candidates_cos_theta-eps-converted
+-to.pdf> <./images/selection/vertex_recon/distance_ratio_event_display-eps-conv
+erted-to.pdf>]
+Underfull \vbox (badness 2073) has occurred while \output is active []
+
+ [29 <./images/selection/vertex_recon/merging_candidates_distance_ratio-eps-con
+verted-to.pdf> <./images/selection/vertex_recon/merging_candidates_distance_rat
+io_CosThetaGuessCut-eps-converted-to.pdf> <./images/selection/vertex_recon/corr
+ect_merging_candidates_distance_ratio_vs_cos_theta-eps-converted-to.pdf> <./ima
+ges/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_t
+heta-eps-converted-to.pdf>] [30 <./images/selection/vertex_recon/TrackMergingTu
+ningFOM-eps-converted-to.pdf>]
+Underfull \vbox (badness 3635) has occurred while \output is active []
+
+ [31 <./images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM-eps-c
+onverted-to.pdf> <./images/selection/vertex_recon/TrackMergingMarginalisedDista
+nceRatioFOM-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 297--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--304
+
+ []
+
+[32 <./images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic-ep
+s-converted-to.pdf>] [33 <./images/selection/vertex_recon/track_merging_event_d
+isplay_swing-eps-converted-to.pdf> <./images/selection/vertex_recon/merging_can
+didates_swing-eps-converted-to.pdf> <./images/selection/vertex_recon/merging_ca
+ndidates_swing_OtherCutsApplied-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngStack_B
+arrel_All.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 17885 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngStack_B
+arrel_All-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:09
+(epstopdf)                    size: 11365 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngStack_Barrel_All-eps-converted-to.pdf images/selection/mc_selection/Pr
+ongStack_Barrel_All.eps>
+(epstopdf)             \includegraphics on input line 314.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngStack_Barrel_All-eps-converted-to.pdf, id=8
+63, 569.12625pt x 451.6875pt>
+File: images/selection/mc_selection/ProngStack_Barrel_All-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngStack_Barrel_All-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngStack_Barrel_All-ep
+s-converted-to.pdf used on input line 314.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngStack_D
+S_All.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 17765 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngStack_D
+S_All-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 12028 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngStack_DS_All-eps-converted-to.pdf images/selection/mc_selection/ProngS
+tack_DS_All.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngStack_DS_All-eps-converted-to.pdf, id=864, 
+569.12625pt x 451.6875pt>
+File: images/selection/mc_selection/ProngStack_DS_All-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use images/selection/mc_selection/ProngStack_DS_All-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngStack_DS_All-eps-co
+nverted-to.pdf used on input line 315.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 314--316
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+Package epstopdf Info: Source file: <images/selection/mc_selection/FV_BLB_1Pron
+g_NegY.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 8317 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/FV_BLB_1Pron
+g_NegY-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 8634 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/FV_BLB_1Prong_NegY-eps-converted-to.pdf images/selection/mc_selection/FV_BL
+B_1Prong_NegY.eps>
+(epstopdf)             \includegraphics on input line 335.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/FV_BLB_1Prong_NegY-eps-converted-to.pdf, id=874,
+ 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/FV_BLB_1Prong_NegY-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use images/selection/mc_selection/FV_BLB_1Prong_NegY-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/FV_BLB_1Prong_NegY-eps-c
+onverted-to.pdf used on input line 335.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--372
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35 <./images/selection/mc_selection/ProngStack_Barrel_All-eps-converted-to.pd
+f> <./images/selection/mc_selection/ProngStack_DS_All-eps-converted-to.pdf>] [3
+6 <./images/selection/mc_selection/FV_BLB_1Prong_NegY-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 68433 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:12
+(epstopdf)                    size: 20019 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_1prong_barrel_signal-eps-converted-to.pdf images/selecti
+on/mc_selection/ProngChargeVsNHits_1prong_barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 381.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal-eps-conv
+erted-to.pdf, id=940, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_1pron
+g_barrel_signal-eps-converted-to.pdf used on input line 381.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 65668 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 19933 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_1prong_barrel_background-eps-converted-to.pdf images/sel
+ection/mc_selection/ProngChargeVsNHits_1prong_barrel_background.eps>
+(epstopdf)             \includegraphics on input line 385.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background-eps-
+converted-to.pdf, id=941, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background-
+eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_1pron
+g_barrel_background-eps-converted-to.pdf used on input line 385.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 123785 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_1prong_barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:13
+(epstopdf)                    size: 21377 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_1prong_barrel_ratio-eps-converted-to.pdf images/selectio
+n/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 388.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio-eps-conve
+rted-to.pdf, id=942, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_1pron
+g_barrel_ratio-eps-converted-to.pdf used on input line 388.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 60685 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 18510 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_2prong_barrel_signal-eps-converted-to.pdf images/selecti
+on/mc_selection/ProngChargeVsNHits_2prong_barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal-eps-conv
+erted-to.pdf, id=946, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_2pron
+g_barrel_signal-eps-converted-to.pdf used on input line 398.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 62211 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 19158 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_2prong_barrel_background-eps-converted-to.pdf images/sel
+ection/mc_selection/ProngChargeVsNHits_2prong_barrel_background.eps>
+(epstopdf)             \includegraphics on input line 402.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background-eps-
+converted-to.pdf, id=947, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background-
+eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_2pron
+g_barrel_background-eps-converted-to.pdf used on input line 402.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 106754 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_2prong_barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 18334 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_2prong_barrel_ratio-eps-converted-to.pdf images/selectio
+n/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio-eps-conve
+rted-to.pdf, id=948, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_2pron
+g_barrel_ratio-eps-converted-to.pdf used on input line 405.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--409
+
+ []
+
+[38]
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [39 <./images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal-e
+ps-converted-to.pdf> <./images/selection/mc_selection/ProngChargeVsNHits_1prong
+_barrel_background-eps-converted-to.pdf> <./images/selection/mc_selection/Prong
+ChargeVsNHits_1prong_barrel_ratio-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 49382 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 16310 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_3prong_barrel_signal-eps-converted-to.pdf images/selecti
+on/mc_selection/ProngChargeVsNHits_3prong_barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 413.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal-eps-conv
+erted-to.pdf, id=979, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_3pron
+g_barrel_signal-eps-converted-to.pdf used on input line 413.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 49086 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 16689 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_3prong_barrel_background-eps-converted-to.pdf images/sel
+ection/mc_selection/ProngChargeVsNHits_3prong_barrel_background.eps>
+(epstopdf)             \includegraphics on input line 417.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background-eps-
+converted-to.pdf, id=980, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background-
+eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_3pron
+g_barrel_background-eps-converted-to.pdf used on input line 417.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 90063 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngChargeV
+sNHits_3prong_barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:15
+(epstopdf)                    size: 16334 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngChargeVsNHits_3prong_barrel_ratio-eps-converted-to.pdf images/selectio
+n/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 420.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio-eps-conve
+rted-to.pdf, id=981, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngChargeVsNHits_3pron
+g_barrel_ratio-eps-converted-to.pdf used on input line 420.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+ [40 <./images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal-e
+ps-converted-to.pdf> <./images/selection/mc_selection/ProngChargeVsNHits_2prong
+_barrel_background-eps-converted-to.pdf> <./images/selection/mc_selection/Prong
+ChargeVsNHits_2prong_barrel_ratio-eps-converted-to.pdf>]
+[41 <./images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal-ep
+s-converted-to.pdf> <./images/selection/mc_selection/ProngChargeVsNHits_3prong_
+barrel_background-eps-converted-to.pdf> <./images/selection/mc_selection/ProngC
+hargeVsNHits_3prong_barrel_ratio-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 441--456
+
+ []
+
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 42202 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 15477 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_1Prong_Barrel_signal-eps-converted-to.pdf images/selectio
+n/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 460.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal-eps-conve
+rted-to.pdf, id=1034, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong
+_Barrel_signal-eps-converted-to.pdf used on input line 460.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 45350 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 16180 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_1Prong_Barrel_background-eps-converted-to.pdf images/sele
+ction/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background.eps>
+(epstopdf)             \includegraphics on input line 464.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background-eps-c
+onverted-to.pdf, id=1035, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong
+_Barrel_background-eps-converted-to.pdf used on input line 464.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 94516 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_1Prong_Barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:16
+(epstopdf)                    size: 15632 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_1Prong_Barrel_ratio-eps-converted-to.pdf images/selection
+/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 467.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio-eps-conver
+ted-to.pdf, id=1036, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_1Prong
+_Barrel_ratio-eps-converted-to.pdf used on input line 467.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 46367 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:21
+(epstopdf)                    size: 16252 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_2Prong_Barrel_signal-eps-converted-to.pdf images/selectio
+n/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 475.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal-eps-conve
+rted-to.pdf, id=1037, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong
+_Barrel_signal-eps-converted-to.pdf used on input line 475.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 55428 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:24
+(epstopdf)                    size: 17808 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_2Prong_Barrel_background-eps-converted-to.pdf images/sele
+ction/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background.eps>
+(epstopdf)             \includegraphics on input line 479.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background-eps-c
+onverted-to.pdf, id=1038, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong
+_Barrel_background-eps-converted-to.pdf used on input line 479.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 106291 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_2Prong_Barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 17746 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_2Prong_Barrel_ratio-eps-converted-to.pdf images/selection
+/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 482.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio-eps-conver
+ted-to.pdf, id=1039, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_2Prong
+_Barrel_ratio-eps-converted-to.pdf used on input line 482.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 34882 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 14319 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_3Prong_Barrel_signal-eps-converted-to.pdf images/selectio
+n/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal.eps>
+(epstopdf)             \includegraphics on input line 490.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal-eps-conve
+rted-to.pdf, id=1040, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong
+_Barrel_signal-eps-converted-to.pdf used on input line 490.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_background.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 36796 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_background-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 15009 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_3Prong_Barrel_background-eps-converted-to.pdf images/sele
+ction/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background.eps>
+(epstopdf)             \includegraphics on input line 494.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background-eps-c
+onverted-to.pdf, id=1041, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong
+_Barrel_background-eps-converted-to.pdf used on input line 494.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 85183 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/DeltaNHitsVs
+NHits_3Prong_Barrel_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 14347 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/DeltaNHitsVsNHits_3Prong_Barrel_ratio-eps-converted-to.pdf images/selection
+/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio.eps>
+(epstopdf)             \includegraphics on input line 497.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio-eps-conver
+ted-to.pdf, id=1042, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/DeltaNHitsVsNHits_3Prong
+_Barrel_ratio-eps-converted-to.pdf used on input line 497.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/OpeningAngle
+_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 9253 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/OpeningAngle
+_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 8419 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/OpeningAngle_2Prong_Barrel-eps-converted-to.pdf images/selection/mc_selecti
+on/OpeningAngle_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 509.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/OpeningAngle_2Prong_Barrel-eps-converted-to.pdf,
+ id=1044, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/OpeningAngle_2Prong_Barrel-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/OpeningAngle_2Prong_Barrel-eps-converted-to.
+pdf>
+Package pdftex.def Info: images/selection/mc_selection/OpeningAngle_2Prong_Barr
+el-eps-converted-to.pdf used on input line 509.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/OpeningAngle
+_2Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 9725 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/OpeningAngle
+_2Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 8504 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/OpeningAngle_2Prong_DS-eps-converted-to.pdf images/selection/mc_selection/O
+peningAngle_2Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 510.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/OpeningAngle_2Prong_DS-eps-converted-to.pdf, id=
+1045, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/OpeningAngle_2Prong_DS-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/selection/mc_selection/OpeningAngle_2Prong_DS-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/OpeningAngle_2Prong_DS-e
+ps-converted-to.pdf used on input line 510.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (67.07582pt too wide) in paragraph at lines 509--511
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/mc_selection/OpeningAngle
+_FOM_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 8730 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/OpeningAngle
+_FOM_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 9106 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/OpeningAngle_FOM_2Prong_Barrel-eps-converted-to.pdf images/selection/mc_sel
+ection/OpeningAngle_FOM_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 517.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel-eps-converted-to.
+pdf, id=1050, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/OpeningAngle_FOM_2Prong_
+Barrel-eps-converted-to.pdf used on input line 517.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/OpeningAngle
+_3Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:04
+(epstopdf)                    size: 12115 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/OpeningAngle
+_3Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 10466 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/OpeningAngle_3Prong_Barrel-eps-converted-to.pdf images/selection/mc_selecti
+on/OpeningAngle_3Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 524.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/OpeningAngle_3Prong_Barrel-eps-converted-to.pdf,
+ id=1052, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/OpeningAngle_3Prong_Barrel-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/OpeningAngle_3Prong_Barrel-eps-converted-to.
+pdf>
+Package pdftex.def Info: images/selection/mc_selection/OpeningAngle_3Prong_Barr
+el-eps-converted-to.pdf used on input line 524.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/OpeningAngle
+_3Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 11037 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/OpeningAngle
+_3Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 9907 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/OpeningAngle_3Prong_DS-eps-converted-to.pdf images/selection/mc_selection/O
+peningAngle_3Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 525.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/OpeningAngle_3Prong_DS-eps-converted-to.pdf, id=
+1053, 569.12625pt x 387.4475pt>
+File: images/selection/mc_selection/OpeningAngle_3Prong_DS-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/selection/mc_selection/OpeningAngle_3Prong_DS-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/OpeningAngle_3Prong_DS-e
+ps-converted-to.pdf used on input line 525.
+(pdftex.def)             Requested size: 256.0748pt x 174.33794pt.
+
+Overfull \hbox (67.07582pt too wide) in paragraph at lines 524--526
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--539
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+[43 <./images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal-eps
+-converted-to.pdf> <./images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Ba
+rrel_background-eps-converted-to.pdf> <./images/selection/mc_selection/DeltaNHi
+tsVsNHits_1Prong_Barrel_ratio-eps-converted-to.pdf>] [44 <./images/selection/mc
+_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal-eps-converted-to.pdf> <./imag
+es/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background-eps-conver
+ted-to.pdf> <./images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ra
+tio-eps-converted-to.pdf>] [45 <./images/selection/mc_selection/DeltaNHitsVsNHi
+ts_3Prong_Barrel_signal-eps-converted-to.pdf> <./images/selection/mc_selection/
+DeltaNHitsVsNHits_3Prong_Barrel_background-eps-converted-to.pdf> <./images/sele
+ction/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio-eps-converted-to.pdf>]
+[46 <./images/selection/mc_selection/OpeningAngle_2Prong_Barrel-eps-converted-t
+o.pdf> <./images/selection/mc_selection/OpeningAngle_2Prong_DS-eps-converted-to
+.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <./images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel-eps-conver
+ted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./images/selection/mc_selection/OpeningAngle_3Prong_Barrel-eps-converted-
+to.pdf> <./images/selection/mc_selection/OpeningAngle_3Prong_DS-eps-converted-t
+o.pdf>]
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_1Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 16514 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_1Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 13401 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_1Prong_Barrel-eps-converted-to.pdf images/selection/se
+lection_performance/CutSurvival_1Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 553.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_1Prong_Barrel-eps-converted
+-to.pdf, id=1223, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_1Prong_Barrel-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_1Prong_Barrel-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_1Pr
+ong_Barrel-eps-converted-to.pdf used on input line 553.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 17446 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 13431 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_2Prong_Barrel-eps-converted-to.pdf images/selection/se
+lection_performance/CutSurvival_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 557.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_2Prong_Barrel-eps-converted
+-to.pdf, id=1224, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_2Prong_Barrel-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_2Prong_Barrel-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_2Pr
+ong_Barrel-eps-converted-to.pdf used on input line 557.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_3Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 15867 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_3Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 13396 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_3Prong_Barrel-eps-converted-to.pdf images/selection/se
+lection_performance/CutSurvival_3Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 561.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_3Prong_Barrel-eps-converted
+-to.pdf, id=1225, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_3Prong_Barrel-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_3Prong_Barrel-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_3Pr
+ong_Barrel-eps-converted-to.pdf used on input line 561.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_4Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 16774 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_4Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:27
+(epstopdf)                    size: 12948 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_4Prong_Barrel-eps-converted-to.pdf images/selection/se
+lection_performance/CutSurvival_4Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 565.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_4Prong_Barrel-eps-converted
+-to.pdf, id=1226, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_4Prong_Barrel-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_4Prong_Barrel-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_4Pr
+ong_Barrel-eps-converted-to.pdf used on input line 565.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_1Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 16373 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_1Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 13740 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_1Prong_DS-eps-converted-to.pdf images/selection/select
+ion_performance/CutSurvival_1Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 573.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_1Prong_DS-eps-converted-to.
+pdf, id=1227, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_1Prong_DS-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_1Prong_DS-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_1Pr
+ong_DS-eps-converted-to.pdf used on input line 573.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_2Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 17646 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_2Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 13350 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_2Prong_DS-eps-converted-to.pdf images/selection/select
+ion_performance/CutSurvival_2Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 577.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_2Prong_DS-eps-converted-to.
+pdf, id=1228, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_2Prong_DS-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_2Prong_DS-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_2Pr
+ong_DS-eps-converted-to.pdf used on input line 577.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_3Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 15577 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_3Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 13037 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_3Prong_DS-eps-converted-to.pdf images/selection/select
+ion_performance/CutSurvival_3Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 581.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_3Prong_DS-eps-converted-to.
+pdf, id=1229, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_3Prong_DS-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_3Prong_DS-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_3Pr
+ong_DS-eps-converted-to.pdf used on input line 581.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Cut
+Survival_4Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 16812 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Cut
+Survival_4Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 13580 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/CutSurvival_4Prong_DS-eps-converted-to.pdf images/selection/select
+ion_performance/CutSurvival_4Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 585.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/CutSurvival_4Prong_DS-eps-converted-to.
+pdf, id=1230, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/CutSurvival_4Prong_DS-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/CutSurvival_4Prong_DS-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/CutSurvival_4Pr
+ong_DS-eps-converted-to.pdf used on input line 585.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_1Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12510 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_1Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12302 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_1Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/OOFVCutSurvival_1Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 596.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel-eps-conve
+rted-to.pdf, id=1237, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_1Prong_Barrel-eps-converted-to.pdf used on input line 596.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12662 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12472 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_2Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/OOFVCutSurvival_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 600.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_2Prong_Barrel-eps-conve
+rted-to.pdf, id=1238, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_2Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_2Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_2Prong_Barrel-eps-converted-to.pdf used on input line 600.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_3Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 13364 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_3Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 12390 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_3Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/OOFVCutSurvival_3Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 604.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_3Prong_Barrel-eps-conve
+rted-to.pdf, id=1239, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_3Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_3Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_3Prong_Barrel-eps-converted-to.pdf used on input line 604.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_4Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 12919 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_4Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 12468 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_4Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/OOFVCutSurvival_4Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 608.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel-eps-conve
+rted-to.pdf, id=1240, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_4Prong_Barrel-eps-converted-to.pdf used on input line 608.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_1Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 12452 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_1Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12357 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_1Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/OOFVCutSurvival_1Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 616.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_1Prong_DS-eps-converted
+-to.pdf, id=1241, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_1Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_1Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_1Prong_DS-eps-converted-to.pdf used on input line 616.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_2Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12883 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_2Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 12302 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_2Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/OOFVCutSurvival_2Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 620.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_2Prong_DS-eps-converted
+-to.pdf, id=1242, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_2Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_2Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_2Prong_DS-eps-converted-to.pdf used on input line 620.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_3Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 13920 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_3Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 12416 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_3Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/OOFVCutSurvival_3Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 624.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_3Prong_DS-eps-converted
+-to.pdf, id=1243, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_3Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_3Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_3Prong_DS-eps-converted-to.pdf used on input line 624.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/OOF
+VCutSurvival_4Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 13096 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/OOF
+VCutSurvival_4Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 12321 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/OOFVCutSurvival_4Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/OOFVCutSurvival_4Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 628.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/OOFVCutSurvival_4Prong_DS-eps-converted
+-to.pdf, id=1244, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/OOFVCutSurvival_4Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/OOFVCutSurvival_4Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/OOFVCutSurvival
+_4Prong_DS-eps-converted-to.pdf used on input line 628.
+(pdftex.def)             Requested size: 213.39566pt x 169.36171pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_1Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7213 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_1Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9831 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_1Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/EffPur_CutLevel_1Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 639.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel-eps-conve
+rted-to.pdf, id=1249, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_1Prong_Barrel-eps-converted-to.pdf used on input line 639.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 7248 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 9881 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_2Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/EffPur_CutLevel_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 643.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_2Prong_Barrel-eps-conve
+rted-to.pdf, id=1250, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_2Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_2Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_2Prong_Barrel-eps-converted-to.pdf used on input line 643.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_3Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 7236 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_3Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9858 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_3Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/EffPur_CutLevel_3Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 647.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_3Prong_Barrel-eps-conve
+rted-to.pdf, id=1251, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_3Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_3Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_3Prong_Barrel-eps-converted-to.pdf used on input line 647.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_4Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 7233 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_4Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:29
+(epstopdf)                    size: 9494 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_4Prong_Barrel-eps-converted-to.pdf images/selectio
+n/selection_performance/EffPur_CutLevel_4Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 651.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel-eps-conve
+rted-to.pdf, id=1252, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_4Prong_Barrel-eps-converted-to.pdf used on input line 651.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_1Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7232 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_1Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9828 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_1Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/EffPur_CutLevel_1Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 659.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_1Prong_DS-eps-converted
+-to.pdf, id=1253, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_1Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_1Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_1Prong_DS-eps-converted-to.pdf used on input line 659.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_2Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7253 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_2Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 9883 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_2Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/EffPur_CutLevel_2Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 663.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_2Prong_DS-eps-converted
+-to.pdf, id=1254, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_2Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_2Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_2Prong_DS-eps-converted-to.pdf used on input line 663.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_3Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7243 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_3Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9888 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_3Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/EffPur_CutLevel_3Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 667.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_3Prong_DS-eps-converted
+-to.pdf, id=1255, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_3Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_3Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_3Prong_DS-eps-converted-to.pdf used on input line 667.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_CutLevel_4Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7233 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_CutLevel_4Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9865 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_CutLevel_4Prong_DS-eps-converted-to.pdf images/selection/se
+lection_performance/EffPur_CutLevel_4Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 671.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_CutLevel_4Prong_DS-eps-converted
+-to.pdf, id=1256, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/EffPur_CutLevel_4Prong_DS-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_CutLevel_4Prong_DS-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_CutLevel
+_4Prong_DS-eps-converted-to.pdf used on input line 671.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_1Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 6840 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_1Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:32
+(epstopdf)                    size: 9057 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_1Prong_Barrel-eps-converted-to.pdf images/selection/s
+election_performance/FOM_CutLevel_1Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 679.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_1Prong_Barrel-eps-converte
+d-to.pdf, id=1257, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_1Prong_Barrel-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_1Prong_Barrel-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_1P
+rong_Barrel-eps-converted-to.pdf used on input line 679.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_2Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 7952 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_2Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:34
+(epstopdf)                    size: 9431 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_2Prong_Barrel-eps-converted-to.pdf images/selection/s
+election_performance/FOM_CutLevel_2Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 683.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_2Prong_Barrel-eps-converte
+d-to.pdf, id=1258, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_2Prong_Barrel-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_2Prong_Barrel-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_2P
+rong_Barrel-eps-converted-to.pdf used on input line 683.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_3Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 8026 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_3Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:37
+(epstopdf)                    size: 9802 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_3Prong_Barrel-eps-converted-to.pdf images/selection/s
+election_performance/FOM_CutLevel_3Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 687.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_3Prong_Barrel-eps-converte
+d-to.pdf, id=1259, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_3Prong_Barrel-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_3Prong_Barrel-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_3P
+rong_Barrel-eps-converted-to.pdf used on input line 687.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_4Prong_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 7544 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_4Prong_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 9894 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_4Prong_Barrel-eps-converted-to.pdf images/selection/s
+election_performance/FOM_CutLevel_4Prong_Barrel.eps>
+(epstopdf)             \includegraphics on input line 691.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel-eps-converte
+d-to.pdf, id=1260, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_4P
+rong_Barrel-eps-converted-to.pdf used on input line 691.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_1Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 6923 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_1Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:39
+(epstopdf)                    size: 9035 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_1Prong_DS-eps-converted-to.pdf images/selection/selec
+tion_performance/FOM_CutLevel_1Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 699.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_1Prong_DS-eps-converted-to
+.pdf, id=1261, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_1Prong_DS-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_1Prong_DS-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_1P
+rong_DS-eps-converted-to.pdf used on input line 699.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_2Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 7202 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_2Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 9455 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_2Prong_DS-eps-converted-to.pdf images/selection/selec
+tion_performance/FOM_CutLevel_2Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 703.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_2Prong_DS-eps-converted-to
+.pdf, id=1262, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_2Prong_DS-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_2Prong_DS-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_2P
+rong_DS-eps-converted-to.pdf used on input line 703.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_3Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 7976 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_3Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:42
+(epstopdf)                    size: 9494 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_3Prong_DS-eps-converted-to.pdf images/selection/selec
+tion_performance/FOM_CutLevel_3Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 707.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_3Prong_DS-eps-converted-to
+.pdf, id=1263, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_3Prong_DS-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_3Prong_DS-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_3P
+rong_DS-eps-converted-to.pdf used on input line 707.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/FOM
+_CutLevel_4Prong_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 7512 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/FOM
+_CutLevel_4Prong_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:44
+(epstopdf)                    size: 9276 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/FOM_CutLevel_4Prong_DS-eps-converted-to.pdf images/selection/selec
+tion_performance/FOM_CutLevel_4Prong_DS.eps>
+(epstopdf)             \includegraphics on input line 711.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/FOM_CutLevel_4Prong_DS-eps-converted-to
+.pdf, id=1264, 569.12625pt x 387.4475pt>
+File: images/selection/selection_performance/FOM_CutLevel_4Prong_DS-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/FOM_CutLevel_4Prong_DS-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/FOM_CutLevel_4P
+rong_DS-eps-converted-to.pdf used on input line 711.
+(pdftex.def)             Requested size: 213.39566pt x 145.27472pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_SummedTopologies_Barrel.eps>
+(epstopdf)                    date: 2015-05-13 21:23:07
+(epstopdf)                    size: 11834 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_SummedTopologies_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:08
+(epstopdf)                    size: 11129 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_SummedTopologies_Barrel-eps-converted-to.pdf images/selecti
+on/selection_performance/EffPur_SummedTopologies_Barrel.eps>
+(epstopdf)             \includegraphics on input line 721.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_SummedTopologies_Barrel-eps-conv
+erted-to.pdf, id=1267, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/EffPur_SummedTopologies_Barrel-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_SummedTopologies_Barrel-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_SummedTo
+pologies_Barrel-eps-converted-to.pdf used on input line 721.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+Package epstopdf Info: Source file: <images/selection/selection_performance/Eff
+Pur_SummedTopologies_DS.eps>
+(epstopdf)                    date: 2015-05-13 21:23:09
+(epstopdf)                    size: 14811 bytes
+(epstopdf)             Output file: <images/selection/selection_performance/Eff
+Pur_SummedTopologies_DS-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:47
+(epstopdf)                    size: 11866 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/selection
+_performance/EffPur_SummedTopologies_DS-eps-converted-to.pdf images/selection/s
+election_performance/EffPur_SummedTopologies_DS.eps>
+(epstopdf)             \includegraphics on input line 722.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/selection_performance/EffPur_SummedTopologies_DS-eps-converte
+d-to.pdf, id=1268, 569.12625pt x 451.6875pt>
+File: images/selection/selection_performance/EffPur_SummedTopologies_DS-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/selection/selection_performance/EffPur_SummedTopologies_DS-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/selection/selection_performance/EffPur_SummedTo
+pologies_DS-eps-converted-to.pdf used on input line 722.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 721--723
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngStack_B
+arrel_Selected.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 17138 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngStack_B
+arrel_Selected-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 11763 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngStack_Barrel_Selected-eps-converted-to.pdf images/selection/mc_selecti
+on/ProngStack_Barrel_Selected.eps>
+(epstopdf)             \includegraphics on input line 730.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngStack_Barrel_Selected-eps-converted-to.pdf,
+ id=1269, 569.12625pt x 451.6875pt>
+File: images/selection/mc_selection/ProngStack_Barrel_Selected-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngStack_Barrel_Selected-eps-converted-to.
+pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngStack_Barrel_Select
+ed-eps-converted-to.pdf used on input line 730.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+Package epstopdf Info: Source file: <images/selection/mc_selection/ProngStack_D
+S_Selected.eps>
+(epstopdf)                    date: 2015-05-13 21:23:05
+(epstopdf)                    size: 17456 bytes
+(epstopdf)             Output file: <images/selection/mc_selection/ProngStack_D
+S_Selected-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:06
+(epstopdf)                    size: 11667 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/selection/mc_select
+ion/ProngStack_DS_Selected-eps-converted-to.pdf images/selection/mc_selection/P
+rongStack_DS_Selected.eps>
+(epstopdf)             \includegraphics on input line 731.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/selection/mc_selection/ProngStack_DS_Selected-eps-converted-to.pdf, id=
+1270, 569.12625pt x 451.6875pt>
+File: images/selection/mc_selection/ProngStack_DS_Selected-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/selection/mc_selection/ProngStack_DS_Selected-eps-converted-to.pdf>
+Package pdftex.def Info: images/selection/mc_selection/ProngStack_DS_Selected-e
+ps-converted-to.pdf used on input line 731.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 730--732
+ [][][] 
+ []
+
+
+Overfull \hbox (14.38947pt too wide) in paragraph at lines 740--746
+ [] 
+ []
+
+
+Overfull \hbox (14.38947pt too wide) in paragraph at lines 750--756
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--771
+
+ []
+
+[49] [50 <./images/selection/selection_performance/CutSurvival_1Prong_Barrel-ep
+s-converted-to.pdf> <./images/selection/selection_performance/CutSurvival_2Pron
+g_Barrel-eps-converted-to.pdf> <./images/selection/selection_performance/CutSur
+vival_3Prong_Barrel-eps-converted-to.pdf> <./images/selection/selection_perform
+ance/CutSurvival_4Prong_Barrel-eps-converted-to.pdf>] [51 <./images/selection/s
+election_performance/CutSurvival_1Prong_DS-eps-converted-to.pdf> <./images/sele
+ction/selection_performance/CutSurvival_2Prong_DS-eps-converted-to.pdf> <./imag
+es/selection/selection_performance/CutSurvival_3Prong_DS-eps-converted-to.pdf> 
+<./images/selection/selection_performance/CutSurvival_4Prong_DS-eps-converted-t
+o.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+[53 <./images/selection/selection_performance/OOFVCutSurvival_1Prong_Barrel-eps
+-converted-to.pdf> <./images/selection/selection_performance/OOFVCutSurvival_2P
+rong_Barrel-eps-converted-to.pdf> <./images/selection/selection_performance/OOF
+VCutSurvival_3Prong_Barrel-eps-converted-to.pdf> <./images/selection/selection_
+performance/OOFVCutSurvival_4Prong_Barrel-eps-converted-to.pdf>] [54 <./images/
+selection/selection_performance/OOFVCutSurvival_1Prong_DS-eps-converted-to.pdf>
+ <./images/selection/selection_performance/OOFVCutSurvival_2Prong_DS-eps-conver
+ted-to.pdf> <./images/selection/selection_performance/OOFVCutSurvival_3Prong_DS
+-eps-converted-to.pdf> <./images/selection/selection_performance/OOFVCutSurviva
+l_4Prong_DS-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55 <./images/selection/selection_performance/EffPur_CutLevel_1Prong_Barrel-ep
+s-converted-to.pdf> <./images/selection/selection_performance/EffPur_CutLevel_2
+Prong_Barrel-eps-converted-to.pdf> <./images/selection/selection_performance/Ef
+fPur_CutLevel_3Prong_Barrel-eps-converted-to.pdf> <./images/selection/selection
+_performance/EffPur_CutLevel_4Prong_Barrel-eps-converted-to.pdf>] [56 <./images
+/selection/selection_performance/EffPur_CutLevel_1Prong_DS-eps-converted-to.pdf
+> <./images/selection/selection_performance/EffPur_CutLevel_2Prong_DS-eps-conve
+rted-to.pdf> <./images/selection/selection_performance/EffPur_CutLevel_3Prong_D
+S-eps-converted-to.pdf> <./images/selection/selection_performance/EffPur_CutLev
+el_4Prong_DS-eps-converted-to.pdf>] [57 <./images/selection/selection_performan
+ce/FOM_CutLevel_1Prong_Barrel-eps-converted-to.pdf> <./images/selection/selecti
+on_performance/FOM_CutLevel_2Prong_Barrel-eps-converted-to.pdf> <./images/selec
+tion/selection_performance/FOM_CutLevel_3Prong_Barrel-eps-converted-to.pdf> <./
+images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel-eps-converted
+-to.pdf>]
+[58 <./images/selection/selection_performance/FOM_CutLevel_1Prong_DS-eps-conver
+ted-to.pdf> <./images/selection/selection_performance/FOM_CutLevel_2Prong_DS-ep
+s-converted-to.pdf> <./images/selection/selection_performance/FOM_CutLevel_3Pro
+ng_DS-eps-converted-to.pdf> <./images/selection/selection_performance/FOM_CutLe
+vel_4Prong_DS-eps-converted-to.pdf>]
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [59 <./images/selection/selection_performance/EffPur_SummedTopologies_Barrel-e
+ps-converted-to.pdf> <./images/selection/selection_performance/EffPur_SummedTop
+ologies_DS-eps-converted-to.pdf>]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [60 <./images/selection/mc_selection/ProngStack_Barrel_Selected-eps-converted-
+to.pdf> <./images/selection/mc_selection/ProngStack_DS_Selected-eps-converted-t
+o.pdf>]))
+Processing 'backmatter' comment. [61] [62
 
 
 ]
@@ -1370,7 +3750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [17] [18
+(./comment.cut (./backmatter.tex (./thesis.bbl [63] [64
 
 ]
 
@@ -1541,61 +3921,81 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 60.
 
-) [19] [20
+) [65] [66
 
-] (./thesis.lof)
+] (./thesis.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [21] [22
 
-] (./thesis.lot)
+[70] (./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-)) [23]
+))
+Underfull \vbox (badness 1466) has occurred while \output is active []
+
+ [71
+
+]
+[72]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4CD98360EC998BD887E0BF558AAE4D34;806.
+(rerunfilecheck)             Checksum: FD29054FC0D2B8634E125F39A8BA59AD;1299.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
- 25758 strings out of 493117
- 441229 string characters out of 6135433
- 687868 words of memory out of 5000000
- 28433 multiletter control sequences out of 15000+600000
- 68398 words of font info for 274 fonts, out of 8000000 for 9000
+ 26766 strings out of 493117
+ 486321 string characters out of 6135433
+ 738812 words of memory out of 5000000
+ 29046 multiletter control sequences out of 15000+600000
+ 87634 words of font info for 366 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,61p,3038b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,21n,61p,3038b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/pal
-atino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (35 pages, 3621334 bytes).
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatin
+o/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8
+a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (84 pages, 4609085 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 73 named destinations out of 1000 (max. 500000)
- 41117 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 2044 PDF objects out of 2073 (max. 8388607)
+ 1600 compressed objects within 16 object streams
+ 266 named destinations out of 1000 (max. 500000)
+ 49268 words of extra memory for PDF output out of 51595 (max. 10000000)
 
