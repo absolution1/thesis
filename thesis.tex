@@ -22,6 +22,13 @@
 %% Put package includes etc. into preamble.tex for convenience
 \input{preamble}
 
+
+\usepackage{xcolor} % for \Yoshi command below
+%% Command to print or not print comments from Yoshi
+%\DeclareRobustCommand{\Yoshi}[2]{{{}}} % ignore me completely version
+%\DeclareRobustCommand{\Yoshi}[2]{{#1}} % believe everything I say version
+\DeclareRobustCommand{\Yoshi}[2]{{\color[RGB]{111,0,158}{{#1}\footnote{\color[RGB]{111,0,158}#2}}}} % full words of wisdom version
+
 %% You can set the line spacing this way
 %\setallspacing{double}
 %% or a section at a time like this
