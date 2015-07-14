@@ -15,6 +15,21 @@
 \BOOKMARK [1][-]{section.2.4}{Monte Carlo selection}{chapter.2}% 15
 \BOOKMARK [2][-]{subsection.2.4.1}{Selection cuts}{section.2.4}% 16
 \BOOKMARK [2][-]{subsection.2.4.2}{Performance of selection}{section.2.4}% 17
-\BOOKMARK [0][-]{appendix*.58}{Bibliography}{}% 18
-\BOOKMARK [0][-]{appendix*.59}{List of Figures}{}% 19
-\BOOKMARK [0][-]{appendix*.60}{List of Tables}{}% 20
+\BOOKMARK [0][-]{chapter.3}{Measurement of the \040charged current inclusive cross-section on Pb}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Measurement method}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Input samples to the fit}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{The ECal rate fit}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Systematic uncertainties}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.4.1}{Flux systematic evaluation}{section.3.4}% 23
+\BOOKMARK [2][-]{subsection.3.4.2}{Cross-section systematic evaluation}{section.3.4}% 24
+\BOOKMARK [2][-]{subsection.3.4.3}{ECal detector systematic evaluation}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.4}{FGD detector uncertainty evaluation}{section.3.4}% 26
+\BOOKMARK [2][-]{subsection.3.4.5}{The measured cross-section uncertainty}{section.3.4}% 27
+\BOOKMARK [1][-]{section.3.5}{Validation of method}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.5.1}{Validation of the fit machinery}{section.3.5}% 29
+\BOOKMARK [2][-]{subsection.3.5.2}{Physics validation of the fitter}{section.3.5}% 30
+\BOOKMARK [1][-]{section.3.6}{Applying the fit to ND280 data}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.7}{The \040charged current inclusive cross-section on lead}{chapter.3}% 32
+\BOOKMARK [0][-]{appendix*.124}{Bibliography}{}% 33
+\BOOKMARK [0][-]{appendix*.125}{List of Figures}{}% 34
+\BOOKMARK [0][-]{appendix*.126}{List of Tables}{}% 35
