@@ -1,63 +1,35 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
-\bibitem{Abe2011106}
-K.~Abe {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 659},
-  106  (2011).
+\bibitem{PhysRevD.78.032003}
+A.~Rodriguez {\em et~al.},
+\newblock Phys. Rev. D {\bf 78}, 032003 (2008).
 
-\bibitem{PhysRevLett.112.061802}
+\bibitem{PhysRevD.83.012005}
+Y.~Nakajima {\em et~al.},
+\newblock Phys. Rev. D {\bf 83}, 012005 (2011).
+
+\bibitem{CCIncSelFGDTN}
+M.~Ravonel, J.~Lagoda, and A.~Hillairet,
+\newblock T2K Technical note {\bf 212} (2015).
+
+\bibitem{PhysRevD.90.052010}
 (T2K Collaboration), K.~Abe {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 112}, 061802 (2014).
+\newblock Phys. Rev. D {\bf 90}, 052010 (2014).
 
-\bibitem{PhysRevLett.113.241803}
-(T2K Collaboration), K.~Abe {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 113}, 241803 (2014).
+\bibitem{Anikeev:1995dj}
+V.~B. Anikeev {\em et~al.},
+\newblock Z. Phys. {\bf C70}, 39 (1996).
 
-\bibitem{PhysRevD.87.092003}
-K.~Abe {\em et~al.},
-\newblock Phys. Rev. D {\bf 87}, 092003 (2013).
+\bibitem{T2KReWeightTN}
+C.~Andreopoulos, J.~Dobson, and S.~Dytman,
+\newblock T2K Technical note {\bf 7} (2009).
 
-\bibitem{PhysRevD.87.012001}
-T2K Collaboration, K.~Abe {\em et~al.},
-\newblock Phys. Rev. D {\bf 87}, 012001 (2013).
-
-\bibitem{1748-0221-4-04-P04004}
-D.~Renker and E.~Lorenz,
-\newblock Journal of Instrumentation {\bf 4}, P04004 (2009).
-
-\bibitem{Amaudruz20121}
-P.-A. Amaudruz {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 696}, 1
-  (2012).
-
-\bibitem{Abgrall201125}
-N.~Abgrall {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 637}, 25
-   (2011).
-
-\bibitem{Assylbekov201248}
-S.~Assylbekov {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 686}, 48
-   (2012).
+\bibitem{NIWGErrorTN}
+P.~de~Perio, K.~Mahn, and P.~Sinclair,
+\newblock T2K Technical note {\bf 113} (2012).
 
 \bibitem{1748-0221-8-10-P10019}
 D.~Allan {\em et~al.},
 \newblock Journal of Instrumentation {\bf 8}, P10019 (2013).
-
-\bibitem{Aoki2013135}
-S.~Aoki {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 698},
-  135  (2013).
-
-\bibitem{Fukuda2003418}
-S.~Fukuda {\em et~al.},
-\newblock Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 501},
-  418  (2003).
 
 \end{thebibliography}

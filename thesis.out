@@ -1,20 +1,18 @@
-\BOOKMARK [0][-]{chapter.1}{The T2K Experiment}{}% 1
-\BOOKMARK [1][-]{section.1.1}{T2K beam}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Accelerator complex}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Neutrino beamline}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Off-axis beam}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Near detector complex}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Multi-Pixel Photon Counter}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{INGRID}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.3}{ND280}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.4}{The far detector}{section.1.2}% 10
-\BOOKMARK [0][-]{chapter.2}{Selection of neutrino interactions in the ECal}{}% 11
-\BOOKMARK [1][-]{section.2.1}{Signal definition}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Monte Carlo sample}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.3}{Vertex reconstruction}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.4}{Monte Carlo selection}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.4.1}{Selection cuts}{section.2.4}% 16
-\BOOKMARK [2][-]{subsection.2.4.2}{Performance of the selection}{section.2.4}% 17
-\BOOKMARK [0][-]{appendix*.58}{Bibliography}{}% 18
-\BOOKMARK [0][-]{appendix*.59}{List of Figures}{}% 19
-\BOOKMARK [0][-]{appendix*.60}{List of Tables}{}% 20
+\BOOKMARK [0][-]{chapter.1}{Measurement of the \040charged current inclusive cross-section on Pb}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Measurement method}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Input samples to the fit}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{The ECal rate fit}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Systematic uncertainties}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.4.1}{Flux systematic evaluation}{section.1.4}% 6
+\BOOKMARK [2][-]{subsection.1.4.2}{Cross-section systematic evaluation}{section.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.4.3}{ECal detector systematic evaluation}{section.1.4}% 8
+\BOOKMARK [2][-]{subsection.1.4.4}{FGD detector uncertainty evaluation}{section.1.4}% 9
+\BOOKMARK [2][-]{subsection.1.4.5}{The measured cross-section uncertainty}{section.1.4}% 10
+\BOOKMARK [1][-]{section.1.5}{Validation of method}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.5.1}{Validation of the fit machinery}{section.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.5.2}{Physics validation of the fitter}{section.1.5}% 13
+\BOOKMARK [1][-]{section.1.6}{Applying the fit to ND280 data}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.7}{The \040charged current inclusive cross-section on lead}{chapter.1}% 15
+\BOOKMARK [0][-]{appendix*.68}{Bibliography}{}% 16
+\BOOKMARK [0][-]{appendix*.69}{List of Figures}{}% 17
+\BOOKMARK [0][-]{appendix*.70}{List of Tables}{}% 18
