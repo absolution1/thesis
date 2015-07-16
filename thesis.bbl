@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{PhysRevD.78.032003}
 A.~Rodriguez {\em et~al.},
@@ -31,5 +31,19 @@ P.~de~Perio, K.~Mahn, and P.~Sinclair,
 \bibitem{1748-0221-8-10-P10019}
 D.~Allan {\em et~al.},
 \newblock Journal of Instrumentation {\bf 8}, P10019 (2013).
+
+\bibitem{FGDMassTN}
+S.~Oser,
+\newblock T2K Technical note {\bf 91} (2011).
+
+\bibitem{Andreopoulos201087}
+C.~Andreopoulos {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 614}, 87
+   (2010).
+
+\bibitem{LeadAtomicUnits}
+J.~R. de~Laeter {\em et~al.},
+\newblock Pure and Applied Chemistry {\bf 75}, 683  (2003).
 
 \end{thebibliography}
