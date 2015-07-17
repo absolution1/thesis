@@ -296,6 +296,7 @@ While the approach outlined above is very powerful for recognising track-like sh
 \item The track can skip a maximum of 1 bar in a scintillator layer.
 \end{itemize}
 If a track fails either of the above conditions, the track is flagged as bad and rejected.  To ensure that the same bad track is not selected in the next interation of the parameter space analysis, the track also needs removing from the parameter space.  To do this, every bin in the parameter space is checked to see if the bin is filled purely from the hits contained in the bad track.  If this is the case, the bin content is set to 0.  
+
 \subsection{3D track reconstruction}
 \label{subsec:3DHoughTrackReconstruction}
 Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is acheived by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D track is left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
@@ -387,6 +388,55 @@ As described above, $\mathcal{L}$ is calculated for every matching candidate pai
 \newline
 3D tracks have now been formed, but the associated directions and positions of those tracks still need to be calculated.  The track fitting process for the newly formed 3D tracks is very similar to that described in section~\ref{subsec:ECal3DHitReconstruction}.  The tracks are briefly separated into their constituent 2D views and a charge-weighted average position of each layer is calculated using the track's constituent hits.  Then, the hits in the opposing view are used to estimate the 3rd coordinate of a given layer using a least-squares fit.  After all of the coordinates have been estimated, a full 3D least-squares fit of the positions in each layer is performed to estimate the 3D track's direction and position in that ECal layer.
 
+\subsection{Track splitting}
+\label{subsec:TrackSplitting}
+During development of the reconstruction, it became clear that a certain topology had been overlooked.  An example of this is shown in Fig.~\ref{fig:MergedTrackEventDisplay} which shows a MC neutrino interaction in the ECal with 3 charged final states.  As can be seen from Fig.~\ref{fig:MergedTrackEventDisplay}, the muon (solid green line) is emitted back-to-back with one of the final-state protons (solid blue line) in this ECal view.  Because the Hough transform implementation only concerns itself with straight lines, the result is that such back-to-back trajectories are typically reconstructed as a single track.  However, there are two views available for every ECal module and the back-to-back emittence typically only appears in the ECal view which is perpendicular to the beam direction (the XY view).  So, the correctly reconstructed tracks in the other ECal view can be used to split the tracks in the problematic view.  
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{images/hough_3d_matching/MergedTrackEventDisplay.pdf}
+  \caption{Event display of a problematic (for the reconstruction) neutrino interaction in the ECal.  The solid green track is the muon, the solid blue tracks are protons and the pink tracks are neutrons.  The neutrino is the short dashed green line.}
+  \label{fig:MergedTrackEventDisplay}
+\end{figure}
+\newline
+\newline
+Consider a neutrino interaction with two charged final-states which has been reconstructed as one track in one view (called the merged view) but reconstructed as two tracks in the other view (called the other view).  It should be expected that the single track in the merged view is not a particularly good match for either of the tracks in the other view.  However, if the two tracks in the other view were temporarily merged together and this new track was compared to the single track in the merged view, one should expect this match to return a much higher value of $\mathcal{L}$.  This feature can be used to identify a potentially merged track in a given view.
+\newline
+\newline
+This motivated an extension to the 3D matching aspect of the reconstruction.  As a reminder, the 3D matching algorithm makes every pairwise comparison of tracks from each view to find the pair which maximise $\mathcal{L}$.  This matching routine was modified to also include temporary mergings of every pairwise combination of tracks in a single view.  These temporary mergings can then be compared to every single track in the other view.  As an example, consider a situation where 3 tracks (labelled $A$, $B$ and $C$) have been reconstructed in one view and two tracks (labelled $Y$ and $Z$) have been reconstructed in the other view.  With the old method, the following comparisons would be made:
+\begin{equation}
+\begin{split}
+A &\longleftrightarrow Y \\
+A &\longleftrightarrow Z \\
+B &\longleftrightarrow Y \\
+B &\longleftrightarrow Z \\
+C &\longleftrightarrow Y \\
+C &\longleftrightarrow Z
+\end{split}
+\label{eq:TrackSplittingOldMethod}
+\end{equation}
+With the new method, which includes temporarily merged pairs of tracks in a given view, the following comparisons would be made:
+\begin{equation}
+\begin{split}
+A &\longleftrightarrow Y \\
+A &\longleftrightarrow Z \\
+B &\longleftrightarrow Y \\
+B &\longleftrightarrow Z \\
+C &\longleftrightarrow Y \\
+C &\longleftrightarrow Z \\
+A+B &\longleftrightarrow Y \\
+A+B &\longleftrightarrow Z \\
+A+C &\longleftrightarrow Y \\
+A+C &\longleftrightarrow Z \\
+B+C &\longleftrightarrow Y \\
+B+C &\longleftrightarrow Z \\
+A &\longleftrightarrow Y+Z \\
+B &\longleftrightarrow Y+Z \\
+C &\longleftrightarrow Y+Z
+\end{split}
+\label{eq:TrackSplittingNewMethod}
+\end{equation}
+In terms of the matching comparisons, the temporarily merged comparisons are treated on the same footing as the single track comparisons; $\mathcal{L}$ is calculated for each comparison and the one which maximises $\mathcal{L}$ is selected.  However, the post-matching treatment of the best match depends on whether a temporary merge is involved.  If the match which maximises $\mathcal{L}$ involves two single tracks then the treatment is as before; they are removed from the pool and the process is repeated.  If a temporarily merged pair are involved, the 2D crossing location of the temporarily merged tracks is calculated and is then used to split the single track in the other view.  The original track is removed from the pool and replaced by the two single tracks formed from the split.  The matching process is then begun again and repeated until all matches have been made.
+
 \subsection{Track pairwise crossing reconstruction}
 \label{subsec:TrackCrossingReconstruction}
 The final step of the reconstruction is to estimate where each of the 3D track's paths cross.  As each track is reconstructed as a straight line in 3D, the final step is fairly simple.  Using the track direction and position information calculated at the end of section~\ref{subsec:3DHoughTrackReconstruction}, the position at closest approach for every pairwise combination of 3D tracks is calulated analytically.  The distance of closest approach is also calculated.  Six hits, the closest three from each 3D track, are then associated to the pairwise crossing. 
@@ -405,4 +455,14 @@ Note that no vertex formation beyond the pairwise crossings is calculated at thi
 %To build the probability density distributions, the output of the 2D reconstruction was used to form every possible matching pair (as described above) and the results were separated into two distinct categories: correctly matched and incorrectly matched.
 \section{Validation of the reconstruction}
 \label{sec:ReconstructionValidation}
-Someone do this plz 
+Because of the large scope of the reconstruction and the limited time available for the presented analysis, the validation of the reconstruction was done in parallel to the rest of the analysis and is still an ongoing effort.  The validation that has been done can be split into two areas: validation of the performance of the algorithms purely using MC and comparisons of MC to data using control samples.
+\newline
+\newline
+So for, the main performance validation has investigated the angular resolution using the enhanced reconstruction (by L. Pickering).  This study calculated the angular resolution for different MC particle species fired into the side-left ECal for a range of entry angles.  For each MC event, the cosine of the angular separation between the true particle angle and the reconstructed angle was calculated, $\cos\theta^{\textrm{Sep}}$.  The values of $\cos\theta^{\textrm{Sep}}$ were then binned in a distribution.  An outward scan from the peak of the distribution was then performed to find where the height decreased to $68\%$ of the peak.  The value of $\theta^{\textrm{Sep}}$ and this point was taken as the angular resolution.  These results are shown in Fig.~\ref{fig:MuonAngularResolutionDSECal}.  Generally speaking, the found angular resolutions are very good.  For long trajectories (200~mm), the angular resolution is within 10$^\circ$.  It is only for short tracks (40~mm) that the angular resolution becomes large.
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm]{images/hough_validation/MuonAngularResolutionDSECal}
+  \caption{The angular resolution as a function of trajectory length in the DS-ECal when applying the enhanced reconstruction to muon MC.  The colour coding refers to the true entry angle range of the muons.}
+  \label{fig:MuonAngularResolutionDSECal}
+\end{figure}
+
