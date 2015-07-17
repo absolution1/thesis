@@ -11,11 +11,11 @@
 
 \chapter{Enhanced ECal reconstruction}
 \label{chap:EnhancedECalReconstruction}
-The current implementation of the ECal reconstruction software was designed to reconstruct particles which originate from the ND280 tracker and enter the ECal.  As section~\ref{sec:ECalEventReconstruction} shows, this was realised by only considering ECal hit clusters under the single track-like or shower-like hypothesis.  It should be evident that a neutrino interaction occurring within the ECal does not well fit this topology.  While it is true that there is some power in the current reconstruction to distinguish a neutrino interaction from an entering track or shower, there is little feature information available.  How many final state particles propagated from the interaction?  How much visible energy was deposited by each of the particles?  Where in the ECal did the interaction occur?  These basic questions can not be trivially answered when using the current reconstruction.  To maximise the ability of distinguishing ECal neutrino interactions from entering backgrounds, the reconstruction must be revisited.
+The current implementation of the ECal reconstruction software was designed to reconstruct particles which originate from the ND280 tracker and enter the ECal.  As section~\ref{sec:ECalEventReconstruction} shows, this was realised by only considering reconstructed ECal clusters under the single track-like or shower-like hypothesis.  It should be evident that a neutrino interaction occurring within the ECal does not well fit this topology.  While it is true that there is some power in the current reconstruction to distinguish a neutrino interaction from an entering track or shower, there is little feature information available.  How many final state particles propagated from the interaction?  How much visible energy was deposited by each of the particles?  Where in the ECal did the interaction occur?  These basic questions can not be trivially answered when using the current reconstruction.  To maximise the ability of distinguishing ECal neutrino interactions from entering backgrounds, the reconstruction must be revisited.
 
 \section{The Hough transform}
 \label{sec:HoughTransform}
-The Hough transform is a popular method of machine pattern recognition used by, but is not limited to, high energy physics experiments.  Originally designed for machine track recognition in bubble chamber pictures~\cite{Hough:1959qva}, the version most widely used throughout the world was developed in 1972~\cite{Duda:1972:UHT:361237.361242}.  The Hough transform is used to isolate specific features or shapes from a digital image.  The simplest implementation, which is of most interest in event reconstruction, allows the extraction of straight, 2D lines from a complex pattern.  This is acheived by exploitation of a very simple feature of 2D geometry.
+The Hough transform is a popular method of machine pattern recognition used by, but is not limited to, high energy physics experiments.  Originally designed for machine track recognition in bubble chamber pictures~\cite{Hough:1959qva}, the version most widely used throughout the world was developed in 1972~\cite{Duda:1972:UHT:361237.361242}.  The Hough transform is used to isolate specific features or shapes from a digital image.  The simplest implementation, which is of most interest in event reconstruction, allows the extraction of straight 2D lines from a complex pattern.  This is acheived by exploitation of a simple, but remarkable, feature of 2D geometry.
 
 \subsection{Line-point duality}
 \label{subsec:LinePointDuality}
@@ -27,19 +27,26 @@ Consider a straight line formed in a 2D cartesian space as shown in Fig.~\ref{fi
 where $y$ and $x$ are used as coordinates, $m$ is the gradient of the line and $c$ is the intercept location of the line with the $y$ axis.  While it is not necessary to analyse this simple shape in great detail, it is important to note that $m$ and $c$ are the only parameters necessary to completely describe the line.  
 \newline
 \newline
-Now consider a new 2D space where the axes are defined by $m$ and $c$ rather than $x$ and $y$ (here after referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in cartesian space is represented by a single point in parameter space. 
-\begin{figure}
+Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in cartesian space is represented by a single point in parameter space. 
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_transform/cartesian_line}
+%    \caption{Line in 2D cartesian space.}
+%    \label{fig:2DCartesianLine}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_transform/parameter_point}
+%      \caption{Point in 2D parameter space.}
+%      \label{fig:2DParameterPoint}
+%    \end{minipage}
+%\end{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_transform/cartesian_line}
-    \caption{Line in 2D cartesian space.}
-    \label{fig:2DCartesianLine}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_transform/parameter_point}
-      \caption{Point in 2D parameter space.}
-      \label{fig:2DParameterPoint}
-    \end{minipage}
+  \subfloat[Line in 2D cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
+  \subfloat[Point in 2D parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_point} \label{fig:2DParameterPoint}}
+  \caption{Representations of a 2D line in cartesian space.}
+  \label{fig:2DCartesianLineAndParameterPoint}
 \end{figure}
 \newline
 \newline
@@ -54,24 +61,31 @@ Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the 
   \label{eq:2DLineGradientParameterSpace}
 \end{equation}
 and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig:2DParameterLine}.  As before, it is important to clearly state what has been shown; a point in cartesian space is represented by a line in parameter space.
-
-\begin{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_transform/cartesian_point}
+%    \caption{Point in 2D cartesian space.}
+%    \label{fig:2DCartesianPoint}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_transform/parameter_line}
+%      \caption{Line in 2D parameter space.}
+%      \label{fig:2DParameterLine}
+%    \end{minipage}
+%\end{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_transform/cartesian_point}
-    \caption{Point in 2D cartesian space.}
-    \label{fig:2DCartesianPoint}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_transform/parameter_line}
-      \caption{Line in 2D parameter space.}
-      \label{fig:2DParameterLine}
-    \end{minipage}
+  \subfloat[Point in 2D cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_point} \label{fig:2DCartesianPoint}}
+  \subfloat[Line in 2D parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_line} \label{fig:2DParameterLine}}
+  \caption{Representations of a 2D point in cartesian space.}
+  \label{fig:2DCartesianPointAndParameterLine}
 \end{figure}
+
 
 \subsection{The parameter space}
 \label{subsec:ParameterSpace}
-As section~\ref{subsec:LinePointDuality} shows, there is a clear relationship between the cartesian space and the parameter space.  Specifically, there is a symmetry between lines and points in the two spaces.  This relationship between the cartesian and parameter spaces is not only interesting but also very powerful.  Consider again the parameter line defined by equation~\ref{eq:2DLineParameter} and shown in Fig.~\ref{fig:2DParameterLine}.  As shown in section~\ref{subsec:LinePointDuality}, equation~\ref{eq:2DLineParameter} was derived by considering the infinite set of lines which pass through a cartesian point.  As this infinite set represents the parameter line, it must also be true that the parameter line represents the infinite line set.  Using one of the results from section~\ref{subsec:LinePointDuality}, any point along the parameter line represents one of the lines from our infinite set.  This key feature of the parameter space is the central component of the Hough transform.  
+As section~\ref{subsec:LinePointDuality} shows, there is a clear relationship between the cartesian space and the parameter space.  Specifically, there is a symmetry between lines and points contained in the two spaces.  This relationship between the cartesian and parameter spaces is not only interesting but also very powerful.  Consider again the parameter line defined by equation~\ref{eq:2DLineParameter} and shown in Fig.~\ref{fig:2DParameterLine}.  As shown in section~\ref{subsec:LinePointDuality}, equation~\ref{eq:2DLineParameter} was derived by considering the infinite set of lines which pass through a cartesian point.  As this infinite set represents the parameter line, it must also be true that the parameter line represents the infinite line set.  Using one of the results from section~\ref{subsec:LinePointDuality}, any point along the parameter line represents one of the lines from our infinite set.  This key feature of the parameter space is the central component of the Hough transform.  
 \newline
 \newline
 We will now return to the cartesian space for an example of how the Hough transform works.  Let's define three points in this space,
@@ -83,20 +97,28 @@ We will now return to the cartesian space for an example of how the Hough transf
   \end{split}
   \label{eq:HTExampleCartesianPoints}
 \end{equation}
-
-\begin{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space}
+%    \caption{The three cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.  The colour coding matches that of Fig.~\ref{fig:HTExampleParameterSpace}.}
+%    \label{fig:HTExampleCartesianSpace}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space}
+%      \caption{The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The same colour coding as Fig.~\ref{fig:HTExampleCartesianSpace} is used.}
+%      \label{fig:HTExampleParameterSpace}
+%    \end{minipage}
+%\end{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space}
-    \caption{The three cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.  The colour coding matches that of Fig.~\ref{fig:HTExampleParameterSpace}.}
-    \label{fig:HTExampleCartesianSpace}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space}
-      \caption{The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The same colour coding as Fig.~\ref{fig:HTExampleCartesianSpace} is used.}
-      \label{fig:HTExampleParameterSpace}
-    \end{minipage}
+  \subfloat[The three cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}}
+  \subfloat[The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The coordinates (2,4) define the point of intersection of the three lines.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space} \label{fig:HTExampleParameterSpace}}
+  \caption{The three points defined in equation~\ref{eq:HTExampleCartesianPoints} and their representation in the parameter space.  The colour coding matches the cartesian points to their respective parameter lines.}
+  \label{fig:HTExample}
 \end{figure}
+\newline
+\newline
 The three points defined in equation~\ref{eq:HTExampleCartesianPoints} are shown in Fig.~\ref{fig:HTExampleCartesianSpace}.  Using one of the results from section~\ref{subsec:LinePointDuality} and equation~\ref{eq:2DLineParameter}, the three points can be Hough transformed into the following parameter lines:
 \begin{equation}
   \begin{split}
@@ -148,7 +170,7 @@ The disadvantage of this parameterisation is that parameter line generation now 
 
 \subsection{Discretisation of the parameter space}
 \label{subsec:ParameterSpaceDiscretisation}
-It must now be considered how the parameter space is analysed.  When a large number of parameter lines are generated, it becomes computationally expensive to analyse the resultant parameter space.  While approaches exist to analyse the parameter space with very high precision~\cite{331821}, it is often only necessary to extract parameters with finite resolution.  In such a case, it is convenient to discretise the parameter space.  Under this regime, the parameter space is split into $\theta-\rho$ bins.  Then, a parameter line is generated by incrementing the value of each $\theta-\rho$ bin it passes through.  After each line has been added to the parameter space, the crossing locations can be readily found by searching for the $\theta-\rho$ bins with content larger than unity.  An example of this discretisation is illustrated in Fig.~\ref{fig:BinnedParameterSpace}, where the parameter lines defined in equation~\ref{eq:HTExampleParameterLines} have be re-parameterised using equation~\ref{eq:ParameterLineReparameterisation} and plotted.  The content of each bin in Fig.~\ref{fig:BinnedParameterSpace} records how many of the three parameter lines pass through each bin.  The bin with value 3 is the crossing point of the three parameter lines.
+It must now be considered how the parameter space is analysed.  When a large number of parameter lines are generated, it becomes computationally expensive to analyse the resultant parameter space.  While approaches exist to analyse the parameter space with very high precision~\cite{331821}, it is often only necessary to extract parameters with finite resolution.  In such a case, it is convenient to discretise the parameter space.  Under this regime, the parameter space is split into $\theta-\rho$ bins.  Then, a parameter line is generated by incrementing the value of each $\theta-\rho$ bin it passes through.  After each line has been added to the parameter space, the crossing locations can be readily found by searching for the $\theta-\rho$ bins with content larger than unity.  An example of this discretisation is illustrated in Fig.~\ref{fig:BinnedParameterSpace}, where the parameter lines defined in equation~\ref{eq:HTExampleParameterLines} have been re-parameterised using equation~\ref{eq:ParameterLineReparameterisation}.  The content of each bin in Fig.~\ref{fig:BinnedParameterSpace} records how many of the three parameter lines pass through each bin.  The bin with value 3 is the crossing point of the three parameter lines.
 \newline
 \newline
 If a discretised approach is acceptable, which is the case in event reconstruction, construction and analysis of the parameter space is reduced to filling a 1D array $N$ times, where $N$ is the number of parameter lines, followed by a 1D grid search of the array to find the bin with the highest content.
@@ -180,38 +202,52 @@ There are now two steps to consider.  Firstly, how should the points be arranged
 \newline
 \newline
 Assuming that every bin of the parameter space will have a 1$^\circ\times$1 mm area, an obvious choice would be to use a rectangular grid of points with 1 mm spacing superimposed over the 2D cross-section of an ECal bar.  The total number of points used to model the ECal bar is 451.  To Hough transform the ECal bar, every point in the grid array can be Hough transformed individually with care taken to ensure that each $\theta-\rho$ bin is filled exactly once.  The result is illustrated in Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  The finite size of the ECal bar is evident by the finite size of the resultant parameter line.
-\begin{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps}
+%    \caption{Grid representation of an ECal bar.}
+%    \label{fig:ECalBarGridRepresentation}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
+%      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarGridRepresentation}.}
+%      \label{fig:ECalBarHoughTransformGridRepresentation}
+%    \end{minipage}
+%\end{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps}
-    \caption{Grid representation of an ECal bar.}
-    \label{fig:ECalBarGridRepresentation}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
-      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarGridRepresentation}.}
-      \label{fig:ECalBarHoughTransformGridRepresentation}
-    \end{minipage}
+  \subfloat[Grid representation of an ECal bar.]{\includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps} \label{fig:ECalBarGridRepresentation}}
+  \subfloat[Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarGridRepresentation}.]{\includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps} \label{fig:ECalBarHoughTransformGridRepresentation}}
+  \caption{The grid representation of an ECal bar and its representation in parameter space.}
+  \label{fig:ECalBarGridRepresentationAndHoughTransform}
 \end{figure}
 \newline
 \newline
-While the generated parameter line accurately represents every line which passes through the ECal bar, there are two problems with this approach.  Firstly, the large number of points to be Hough transformed is very large which results in a long CPU time.  Secondly, there is a very high number of redundant calculations involved in the parameter line generation.  Consider an exactly vertical line which passes through one of the points in the grid array.  This line also passes through 10 other points in the same column of the grid.  This means that when the parameter line is being generated, this vertical line is calculated 11 times for each column.  Barring this in mind, there are many points along the parameter line which are repeatedly calculated and provide no extra information.  This would mean that any algorithm which uses this approach would be very CPU inefficient.
+While the generated parameter line accurately represents every line which passes through the ECal bar, there are two problems with this approach.  Firstly, the large number of points to be Hough transformed is very large which results in a long CPU time.  Secondly, there is a very high number of redundant calculations involved in the parameter line generation.  Consider an exactly vertical line which passes through one of the points in the grid array.  This line also passes through 10 other points in the same column of the grid.  This means that when the parameter line is being generated, this vertical line is calculated 11 times for each column.  Bearing this in mind, there are many points along the parameter line which are repeatedly calculated and provide no extra information.  This would mean that any algorithm which uses this approach would be very CPU inefficient.
 \newline
 \newline
-An alternative is to model the ECal bar as a set of points arranged in a cross as shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.  Assuming that the spacing bettween the points on each line of the cross is infinitesimal, any line which passes through the ECal bar would also have to pass through one of the points in the configuration.  As the parameter space is discrete, the spacing between the points need not be infinitesimal but only small enough to ensure that no gaps appear in the parameter line.  Using 45 points on each line of the cross, the ECal bar can be Hough transformed by Hough transforming each point in the cross. An example of this result is shown in Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} using the same ECal bar used to generate Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  Clearly, Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation} and Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} are identical showing that the cross model achieves the same result as the grid model.  Comparing the two, the cross model uses a 90 point representation whereas the grid model uses a 451 point representation.  This should mean that an algorithm utilising the cross model would be a factor of five faster than one using a grid model.
-\begin{figure}
+An alternative is to model the ECal bar as a set of points arranged in a cross as shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.  Assuming that the spacing between the points on each line of the cross is infinitesimal, any line which passes through the ECal bar would also have to pass through one of the points in the configuration.  As the parameter space is discrete, the spacing between the points need not be infinitesimal but only small enough to ensure that no gaps appear in the parameter line.  Using 45 points on each line of the cross, the ECal bar can be Hough transformed by Hough transforming each point in the cross configuration. An example of this result is shown in Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} using the same ECal bar used to generate Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  Clearly, Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation} and Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} are identical showing that the cross model achieves the same result as the grid model.  Comparing the two, the cross model uses a 90 point representation whereas the grid model uses a 451 point representation.  This should mean that an algorithm utilising the cross model would be a factor of five faster than one using a grid model.
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_cross_array.eps}
-    \caption{Cross representation of an ECal bar.}
-    \label{fig:ECalBarCrossRepresentation}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
-      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.}
-      \label{fig:ECalBarHoughTransformCrossRepresentation}
-    \end{minipage}
+  \subfloat[Cross representation of an ECal bar.]{\includegraphics[width=7cm]{images/ecal_hough_transform/ecal_cross_array.eps} \label{fig:ECalBarCrossRepresentation}}
+  \subfloat[Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.]{\includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps} \label{fig:ECalBarHoughTransformCrossRepresentation}}
+  \caption{The cross representation of an ECal bar and its representation in parameter space.}
+  \label{fig:ECalBarCrossRepresentationAndHoughTransform}
 \end{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_cross_array.eps}
+%    \caption{Cross representation of an ECal bar.}
+%    \label{fig:ECalBarCrossRepresentation}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
+%      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.}
+%      \label{fig:ECalBarHoughTransformCrossRepresentation}
+%    \end{minipage}
+%\end{figure}
 %\subsection{ECal bar Hough transform}
 %\label{subsec:ECalBarHoughTransform}
 %Hough transform the points on the cross
@@ -235,7 +271,7 @@ We can now partly answer one of the problems raised in section~\ref{sec:ECalAppl
 
 \subsection{Parameter space analysis}
 \label{subsec:ParameterSpaceAnalysis}
-The full parameter space can look arbitarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particles trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$,$\rho$) coordinate of the found bin.
+The full parameter space can look arbitarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particle's trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$,$\rho$) coordinate of the found bin.
 \newline
 \newline
 While the preferred bin can reveal how many hits the track candidate passed through, it contains no information about which hits were contributors.  However, this full parameter space was generated by summing the $N$ parameter spaces discussed in section~\ref{subsec:ParameterSpaceGeneration}.  So, the contributing hits can be readily found by looking at the same ($\theta$,$\rho$) bin in each of the $N$ parameter spaces and recording which have a non-zero value.  We now have the track candidate's parameters and its contributing hits which is enough to describe the 2D trajectory.
@@ -252,69 +288,97 @@ This process can be repeated until some threshold is reached.  This threshold is
   \label{fig:ReducedParameterSpace3StateInteraction}
 \end{figure}
 
-
+\subsection{2D track quality checks}
+\label{subsec:2DTrackQualityChecks}
+While the approach outlined above is very powerful for recognising track-like shapes in the 2D ECal clusters, it is not capable of checking whether the selected track candidates are of sound quality.  So, external checks need to be done which validate each track as it is returned from the parameter space.  Fortunately, the objects returned from parameter space are simple in structure and so the quality checks can be designed to reflect this.  Two necessary checks were implemented in the 2D reconstruction:
+\begin{itemize}
+\item The track can not skip a scintillator layer in a given view.
+\item The track can skip a maximum of 1 bar in a scintillator layer.
+\end{itemize}
+If a track fails either of the above conditions, the track is flagged as bad and rejected.  To ensure that the same bad track is not selected in the next interation of the parameter space analysis, the track also needs removing from the parameter space.  To do this, every bin in the parameter space is checked to see if the bin is filled purely from the hits contained in the bad track.  If this is the case, the bin content is set to 0.  
 \subsection{3D track reconstruction}
 \label{subsec:3DHoughTrackReconstruction}
-Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is acheived by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D tracks are left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
+Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is acheived by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D track is left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
 \newline
 \newline
 As should be expected, a vertex with one visible track will have different characteristics to a vertex with three visible tracks.  So, to maximise the ability of the matcher, a different set of probability density distributions are used for the 1, 2 and 3 track cases.  If the number of tracks in each view is not identical, the higher number of tracks is used to find the correct probability density distributions.  Seperately, due to their geometrical differences, the reconstructed shape of vertices in the DS ECal will differ to those in the barrel ECals.  This leads to a separate set of probability density distributions for the barrel and DS ECal modules.
 \newline
 \newline
-The first input to the likelihood is the ratio of the total deposited charge on each track $Q_{\textrm{ratio}}$.  The denominator is taken as the track which comes from the view with the most hits.  Generally speaking, a particle propagating through an ECal module should deposit a similar amount of charge in each of the two views.  So, $Q_{\textrm{ratio}}$ should have a value close to 1 if the two 2D tracks are created by the same particle.  An example of the $Q_{\textrm{ratio}}$ distribution is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, taken from beam Monte Carlo in the barrel ECals for cases where the maximum number of tracks found in a given view is 2.  In Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, correctly matched (in blue) shows the $Q_{\textrm{ratio}}$ distribution for matching pairs which come from the same particle and incorrectly matched (in red) shows the the $Q_{\textrm{ratio}}$ distribution for matching pairs which were created by different particles.  As Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} shows, $Q_{\textrm{ratio}}$ well separates the two cases.  To generate a probability density distribution for $Q_{\textrm{ratio}}$, the two distributions shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} are used, but without applying any normalisation.  By comparing the bins of each distribution, the probability for correctly matching two tracks in a given bin $p_{i}$ can be formed by
+The first input to the likelihood is the ratio of the total deposited charge on each track, $Q_{\textrm{ratio}}$.  The denominator is taken as the track which comes from the view with the most hits.  Generally speaking, a particle propagating through an ECal module should deposit a similar amount of charge in each of the two views.  So, $Q_{\textrm{ratio}}$ should have a value close to 1 if the two 2D tracks are created by the same particle.  An example of the $Q_{\textrm{ratio}}$ distribution is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, taken from beam Monte Carlo in the barrel ECals for cases where the maximum number of tracks found in a given view is 2.  In Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, correctly matched (in blue) shows the $Q_{\textrm{ratio}}$ distribution for matching pairs which come from the same particle and incorrectly matched (in red) shows the the $Q_{\textrm{ratio}}$ distribution for matching pairs which were created by different particles.  As Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} shows, $Q_{\textrm{ratio}}$ well separates the two cases.  To generate a probability density distribution for $Q_{\textrm{ratio}}$, the two distributions shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} are used, but without applying any normalisation.  By comparing the bins of each distribution, the probability for correctly matching two tracks in a given bin $p_{i}$ can be formed by
 \begin{equation}
   p_i = \frac{s_i}{s_i + b_i}
   \label{eq:BinProbabilityPDF},
 \end{equation}
 where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is the number of incorrectly matched tracks in bin $i$.  A discreet probability density distribution for $Q_{\textrm{ratio}}$ can then be formed by calculating $p_i$ for every bin.  The discreet probability density distribution is then interpolated with splines to create the final probability distribution.  An example of this for the two track, barrel case is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioPDF}.  When a matching candidate pair is being considered, the value of $Q_{\textrm{ratio}}$ is calculated and used in the spline to retrieve $\mathcal{L}_{Q_{\textrm{ratio}}}$.
-\begin{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps}
-    \caption{$Q_{\textrm{ratio}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-    \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps}
-      \caption{$Q_{\textrm{ratio}}$ probability density distribution in the barrel ECal for the two track case.}
-      \label{fig:3DMatchingBarrel2TrackQRatioPDF}
-    \end{minipage}
+  \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
+  \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
+  \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \label{fig:QRatio}
 \end{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps}
+%    \caption{$Q_{\textrm{ratio}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
+%    \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps}
+%      \caption{$Q_{\textrm{ratio}}$ probability density distribution in the barrel ECal for the two track case.}
+%      \label{fig:3DMatchingBarrel2TrackQRatioPDF}
+%    \end{minipage}
+%\end{figure}
 \newline
 \newline
-The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is the difference in the starting layer of each 2D track which forms the matching candidate pair, where starting layer refers to the layer closest to the ND280 tracker.  For 2D tracks which should be matched together, $\Delta_{\textrm{layer, first}}$ should be 1.  The separation ability of this variable for the two track, barrel is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation}.  The discreet probability density function was created using eqn.~\ref{eq:BinProbabilityPDF}.  It was not necessary to interpolate using splines as $\Delta_{\textrm{layer, first}}$ is itself discreet.  The probability density function for $\Delta_{\textrm{layer, first}}$ is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLPDF} for the two track, barrel case.  For each matching candidate pair, the value of $\Delta{\textrm{layer, first}}$ is calculated and the corresponding $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$ is retrieved from the probability density function.
-\begin{figure}
+The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is the difference in the starting layer of each 2D track which forms the matching candidate pair, where starting layer refers to the layer closest to the ND280 tracker.  For 2D tracks which should be matched together, $\Delta_{\textrm{layer, first}}$ should be 1.  The separation ability of this variable for the two track, barrel is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation}.  The discreet probability density function was created using eqn.~\ref{eq:BinProbabilityPDF}.  It was not necessary to interpolate using splines as $\Delta_{\textrm{layer, first}}$ is itself discreet.  The probability density function for $\Delta_{\textrm{layer, first}}$ is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLPDF} for the two track, barrel case.  For each matching candidate pair, the value of $\Delta_{\textrm{layer, first}}$ is calculated and the corresponding $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$ is retrieved from the probability density function.
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps}
-    \caption{$\Delta_{\textrm{layer, first}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-    \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps}
-      \caption{$\Delta_{\textrm{layer,first}}$ probability density distribution in the barrel ECal for the two track case.}
-      \label{fig:3DMatchingBarrel2TrackDFLPDF}
-    \end{minipage}
+  \subfloat[$\Delta_{\textrm{layer, first}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
+  \subfloat[$\Delta_{\textrm{layer, first}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDFLPDF}}
+  \caption{$\Delta_{\textrm{layer, first}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \label{fig:DFL}
 \end{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps}
+%    \caption{$\Delta_{\textrm{layer, first}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
+%    \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps}
+%      \caption{$\Delta_{\textrm{layer,first}}$ probability density distribution in the barrel ECal for the two track case.}
+%      \label{fig:3DMatchingBarrel2TrackDFLPDF}
+%    \end{minipage}
+%\end{figure}
 \newline
 \newline
 The third and final input to the likelihood, called $\Delta_{\textrm{layer, last}}$, is the differnce in the ending layer of each 2D track which forms the matching cadidate pair, where the ending layer refers to the layer furthest from the ND280 tracker.  Functionally, how this function is used is essentially identical to $\Delta_{\textrm{layer, last}}$ so it will not be described in detail.  The separation ability of this variable and its corresponding probabilty density function for the two track, barrel case are shwon in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} and Fig.~\ref{fig:3DMatchingBarrel2TrackDLLPDF} respectively.
-\begin{figure}
+\begin{figure}%
   \centering
-  \parbox{7cm}{
-    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps}
-    \caption{$\Delta_{\textrm{layer, last}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-    \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
-    \qquad
-    \begin{minipage}{7cm}
-      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps}
-      \caption{$\Delta_{\textrm{layer,last}}$ probability density distribution in the barrel ECal for the two track case.}
-      \label{fig:3DMatchingBarrel2TrackDLLPDF}
-    \end{minipage}
+  \subfloat[$\Delta_{\textrm{layer, last}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
+  \subfloat[$\Delta_{\textrm{layer, last}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDLLPDF}}
+  \caption{$\Delta_{\textrm{layer, last}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \label{fig:DLL}
 \end{figure}
+%\begin{figure}
+%  \centering
+%  \parbox{7cm}{
+%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps}
+%    \caption{$\Delta_{\textrm{layer, last}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
+%    \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
+%    \qquad
+%    \begin{minipage}{7cm}
+%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps}
+%      \caption{$\Delta_{\textrm{layer,last}}$ probability density distribution in the barrel ECal for the two track case.}
+%      \label{fig:3DMatchingBarrel2TrackDLLPDF}
+%    \end{minipage}
+%\end{figure}
 \newline
 \newline
-The matching likelihood, $\mathcal{L}$ for a matching candidate pair is then
+The matching likelihood, $\mathcal{L}$, for a matching candidate pair is then
 \begin{equation}
   \mathcal{L} = \mathcal{L}_{Q_{\textrm{ratio}}} \times \mathcal{L}_{\Delta_{\textrm{layer, first}}} \times \mathcal{L}_{\Delta_{\textrm{layer, last}}}.
 \end{equation}
