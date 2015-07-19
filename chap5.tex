@@ -15,11 +15,11 @@ The current implementation of the ECal reconstruction software was designed to r
 
 \section{The Hough transform}
 \label{sec:HoughTransform}
-The Hough transform is a popular method of machine pattern recognition used by, but is not limited to, high energy physics experiments.  Originally designed for machine track recognition in bubble chamber pictures~\cite{Hough:1959qva}, the version most widely used throughout the world was developed in 1972~\cite{Duda:1972:UHT:361237.361242}.  The Hough transform is used to isolate specific features or shapes from a digital image.  The simplest implementation, which is of most interest in event reconstruction, allows the extraction of straight 2D lines from a complex pattern.  This is acheived by exploitation of a simple, but remarkable, feature of 2D geometry.
+The Hough transform is a popular method of machine pattern recognition used by, but is not limited to, high energy physics experiments.  Originally designed for machine track recognition in bubble chamber pictures~\cite{Hough:1959qva}, the version most widely used throughout the world was developed in 1972~\cite{Duda:1972:UHT:361237.361242}.  The Hough transform is used to isolate specific features or shapes from a digital image.  The simplest implementation, which is of most interest in event reconstruction, allows the extraction of straight 2D lines from a complex pattern.  This is achieved by exploitation of a simple, but remarkable, feature of 2D geometry.
 
 \subsection{Line-point duality}
 \label{subsec:LinePointDuality}
-Consider a straight line formed in a 2D cartesian space as shown in Fig.~\ref{fig:2DCartesianLine}.  The line is usually described by
+Consider a straight line formed in a 2D Cartesian space as shown in Fig.~\ref{fig:2DCartesianLine}.  The line is usually described by
 \begin{equation}
   y = mx + c
   \label{eq:2DLineCartesean}
@@ -27,7 +27,7 @@ Consider a straight line formed in a 2D cartesian space as shown in Fig.~\ref{fi
 where $y$ and $x$ are used as coordinates, $m$ is the gradient of the line and $c$ is the intercept location of the line with the $y$ axis.  While it is not necessary to analyse this simple shape in great detail, it is important to note that $m$ and $c$ are the only parameters necessary to completely describe the line.  
 \newline
 \newline
-Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in cartesian space is represented by a single point in parameter space. 
+Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D Cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in Cartesian space is represented by a single point in parameter space. 
 %\begin{figure}
 %  \centering
 %  \parbox{7cm}{
@@ -43,14 +43,14 @@ Now consider a new 2D space where the axes are defined by $m$ and $c$, rather th
 %\end{figure}
 \begin{figure}%
   \centering
-  \subfloat[Line in 2D cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
+  \subfloat[Line in 2D Cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
   \subfloat[Point in 2D parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_point} \label{fig:2DParameterPoint}}
-  \caption{Representations of a 2D line in cartesian space.}
+  \caption{Representations of a 2D line in Cartesian space.}
   \label{fig:2DCartesianLineAndParameterPoint}
 \end{figure}
 \newline
 \newline
-Now consider the 2D cartesian space again.  Unlike before, we will define a single point rather than a straight line. Such a point is traditionally described by a pair of coordinates ($x$,$y$).  However, an alternative description of the point is an infinite number of lines all of which pass through ($x$,$y$).  This is highlighted by Fig.~\ref{fig:2DCartesianPoint} where three lines of the infinite set are shown along with the point they represent.  As the infinite line set are used to describe a single point, all lines in the set must follow a pattern.  This relationship is revealed by simple algebraic manipulation of equation~\ref{eq:2DLineCartesean} to give
+Now consider the 2D Cartesian space again.  Unlike before, we will define a single point rather than a straight line. Such a point is traditionally described by a pair of coordinates ($x$,$y$).  However, an alternative description of the point is an infinite number of lines all of which pass through ($x$,$y$).  This is highlighted by Fig.~\ref{fig:2DCartesianPoint} where three lines of the infinite set are shown along with the point they represent.  As the infinite line set are used to describe a single point, all lines in the set must follow a pattern.  This relationship is revealed by simple algebraic manipulation of equation~\ref{eq:2DLineCartesean} to give
 \begin{equation}
   c = -xm + y.
   \label{eq:2DLineParameter}
@@ -60,7 +60,7 @@ Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the 
   x = \frac{\Delta c}{\Delta m}
   \label{eq:2DLineGradientParameterSpace}
 \end{equation}
-and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig:2DParameterLine}.  As before, it is important to clearly state what has been shown; a point in cartesian space is represented by a line in parameter space.
+and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig:2DParameterLine}.  As before, it is important to clearly state what has been shown; a point in Cartesian space is represented by a line in parameter space.
 %\begin{figure}
 %  \centering
 %  \parbox{7cm}{
@@ -76,19 +76,19 @@ and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig
 %\end{figure}
 \begin{figure}%
   \centering
-  \subfloat[Point in 2D cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_point} \label{fig:2DCartesianPoint}}
+  \subfloat[Point in 2D Cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_point} \label{fig:2DCartesianPoint}}
   \subfloat[Line in 2D parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_line} \label{fig:2DParameterLine}}
-  \caption{Representations of a 2D point in cartesian space.}
+  \caption{Representations of a 2D point in Cartesian space.}
   \label{fig:2DCartesianPointAndParameterLine}
 \end{figure}
 
 
 \subsection{The parameter space}
 \label{subsec:ParameterSpace}
-As section~\ref{subsec:LinePointDuality} shows, there is a clear relationship between the cartesian space and the parameter space.  Specifically, there is a symmetry between lines and points contained in the two spaces.  This relationship between the cartesian and parameter spaces is not only interesting but also very powerful.  Consider again the parameter line defined by equation~\ref{eq:2DLineParameter} and shown in Fig.~\ref{fig:2DParameterLine}.  As shown in section~\ref{subsec:LinePointDuality}, equation~\ref{eq:2DLineParameter} was derived by considering the infinite set of lines which pass through a cartesian point.  As this infinite set represents the parameter line, it must also be true that the parameter line represents the infinite line set.  Using one of the results from section~\ref{subsec:LinePointDuality}, any point along the parameter line represents one of the lines from our infinite set.  This key feature of the parameter space is the central component of the Hough transform.  
+As section~\ref{subsec:LinePointDuality} shows, there is a clear relationship between the Cartesian space and the parameter space.  Specifically, there is a symmetry between lines and points contained in the two spaces.  This relationship between the Cartesian and parameter spaces is not only interesting but also very powerful.  Consider again the parameter line defined by equation~\ref{eq:2DLineParameter} and shown in Fig.~\ref{fig:2DParameterLine}.  As shown in section~\ref{subsec:LinePointDuality}, equation~\ref{eq:2DLineParameter} was derived by considering the infinite set of lines which pass through a Cartesian point.  As this infinite set represents the parameter line, it must also be true that the parameter line represents the infinite line set.  Using one of the results from section~\ref{subsec:LinePointDuality}, any point along the parameter line represents one of the lines from our infinite set.  This key feature of the parameter space is the central component of the Hough transform.  
 \newline
 \newline
-We will now return to the cartesian space for an example of how the Hough transform works.  Let's define three points in this space,
+We will now return to the Cartesian space for an example of how the Hough transform works.  Let's define three points in this space,
 \begin{equation}
   \begin{split}
     &\quad p_{1}: (2,6) \\
@@ -112,9 +112,9 @@ We will now return to the cartesian space for an example of how the Hough transf
 %\end{figure}
 \begin{figure}%
   \centering
-  \subfloat[The three cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}}
+  \subfloat[The three Cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}}
   \subfloat[The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The coordinates (2,4) define the point of intersection of the three lines.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space} \label{fig:HTExampleParameterSpace}}
-  \caption{The three points defined in equation~\ref{eq:HTExampleCartesianPoints} and their representation in the parameter space.  The colour coding matches the cartesian points to their respective parameter lines.}
+  \caption{The three points defined in equation~\ref{eq:HTExampleCartesianPoints} and their representation in the parameter space.  The colour coding matches the Cartesian points to their respective parameter lines.}
   \label{fig:HTExample}
 \end{figure}
 \newline
@@ -128,7 +128,7 @@ The three points defined in equation~\ref{eq:HTExampleCartesianPoints} are shown
   \end{split}
   \label{eq:HTExampleParameterLines}
 \end{equation}
-The three parameter lines are shown in Fig.~\ref{fig:HTExampleParameterSpace}.  From Fig.~\ref{fig:HTExampleParameterSpace}, it is clear that the three parameter lines all cross at a common point with parameter space coordinates (2,4).  Using the results from section~\ref{subsec:LinePointDuality}, this common point in parameter space is represented by a line in cartesian space.  In addition, as (2,4) is common to all three parameter lines, the cartesian line represented by (2,4) must also pass through all three cartesian points defined by equation ~\ref{eq:HTExampleCartesianPoints}.  This new cartesian line is defined by
+The three parameter lines are shown in Fig.~\ref{fig:HTExampleParameterSpace}.  From Fig.~\ref{fig:HTExampleParameterSpace}, it is clear that the three parameter lines all cross at a common point with parameter space coordinates (2,4).  Using the results from section~\ref{subsec:LinePointDuality}, this common point in parameter space is represented by a line in Cartesian space.  In addition, as (2,4) is common to all three parameter lines, the Cartesian line represented by (2,4) must also pass through all three Cartesian points defined by equation ~\ref{eq:HTExampleCartesianPoints}.  This new Cartesian line is defined by
 \begin{equation}
   y = 2x + 4
   \label{eq:HTExampleCartesianLine}
@@ -138,13 +138,13 @@ and is shown in Fig.~\ref{fig:HTExampleCartesianSpaceWithLine} with the original
 \begin{figure}
   \centering
   \includegraphics[width=9cm]{images/hough_transform/HT_example_cartesian_space_with_line}
-  \caption{The line represented by the intersection in Fig.~\ref{fig:HTExampleParameterSpace} with the cartesian points it intercepts.}
+  \caption{The line represented by the intersection in Fig.~\ref{fig:HTExampleParameterSpace} with the Cartesian points it intercepts.}
   \label{fig:HTExampleCartesianSpaceWithLine}
 \end{figure}
 
 \subsection{Redefinition of parameters}
 \label{subsec:ParameterRedefinition}
-Unfortunately, a complication in computation arises when $m\rightarrow\infty$.  However, this complication can be removed by redefining the line parameters such that one is bounded.  An alternative 2D line parameterisation is to specify a line in terms of the angle it makes with the $x$ axis, $\theta$, and the perpendicular distance of the line from the origin, $\rho$, as illustrated in Fig.~\ref{fig:CartesianParameterRedefinition}.  The functional form of the cartesian line becomes 
+Unfortunately, a complication in computation arises when $m\rightarrow\infty$.  However, this complication can be removed by redefining the line parameters such that one is bounded.  An alternative 2D line parameterisation is to specify a line in terms of the angle it makes with the $x$ axis, $\theta$, and the perpendicular distance of the line from the origin, $\rho$, as illustrated in Fig.~\ref{fig:CartesianParameterRedefinition}.  The functional form of the Cartesian line becomes 
 \begin{equation}
   y = x\textrm{tan}\theta + \frac{\rho}{\textrm{cos}\theta}.
   \label{eq:CartesianLineReparameterisation}
@@ -195,7 +195,7 @@ We must now address how the Hough transform can be used as a reconstruction tool
 
 \subsection{Modelling the ECal bar}
 \label{subsec:ECalBarModel}
-To make the Hough transform viable as a reconstruction tool, the finite dimensions of the ECal bar need to be incorporated into the parameter space generation.  This feature of the ECal bars would be very problematic if the parameter space was continous.  However, it is only necessary to know the line parameters with finite resolution and a discrete parameter space can be used.  This means that the ECal bar can be modelled as a set of cartesian points and each of said points can be Hough transformed in turn to build up the parameter line representation of the ECal bar.
+To make the Hough transform viable as a reconstruction tool, the finite dimensions of the ECal bar need to be incorporated into the parameter space generation.  This feature of the ECal bars would be very problematic if the parameter space was continuous.  However, it is only necessary to know the line parameters with finite resolution and a discrete parameter space can be used.  This means that the ECal bar can be modelled as a set of Cartesian points and each of said points can be Hough transformed in turn to build up the parameter line representation of the ECal bar.
 \newline
 \newline
 There are now two steps to consider.  Firstly, how should the points be arranged?  Remember that the Hough transform of a point represents all of the lines that pass through that point.  So, the points should be arranged in such a fashion that any line which passes through the 2D cross-section of the ECal bar also has to pass through one of the points in the configuration.  Secondly, the spacings between the points should be small enough that no gaps appear in the generated parameter line.  
@@ -271,7 +271,7 @@ We can now partly answer one of the problems raised in section~\ref{sec:ECalAppl
 
 \subsection{Parameter space analysis}
 \label{subsec:ParameterSpaceAnalysis}
-The full parameter space can look arbitarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particle's trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$,$\rho$) coordinate of the found bin.
+The full parameter space can look arbitrarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particle's trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$,$\rho$) coordinate of the found bin.
 \newline
 \newline
 While the preferred bin can reveal how many hits the track candidate passed through, it contains no information about which hits were contributors.  However, this full parameter space was generated by summing the $N$ parameter spaces discussed in section~\ref{subsec:ParameterSpaceGeneration}.  So, the contributing hits can be readily found by looking at the same ($\theta$,$\rho$) bin in each of the $N$ parameter spaces and recording which have a non-zero value.  We now have the track candidate's parameters and its contributing hits which is enough to describe the 2D trajectory.
@@ -295,14 +295,14 @@ While the approach outlined above is very powerful for recognising track-like sh
 \item The track can not skip a scintillator layer in a given view.
 \item The track can skip a maximum of 1 bar in a scintillator layer.
 \end{itemize}
-If a track fails either of the above conditions, the track is flagged as bad and rejected.  To ensure that the same bad track is not selected in the next interation of the parameter space analysis, the track also needs removing from the parameter space.  To do this, every bin in the parameter space is checked to see if the bin is filled purely from the hits contained in the bad track.  If this is the case, the bin content is set to 0.  
+If a track fails either of the above conditions, the track is flagged as bad and rejected.  To ensure that the same bad track is not selected in the next interaction of the parameter space analysis, the track also needs removing from the parameter space.  To do this, every bin in the parameter space is checked to see if the bin is filled purely from the hits contained in the bad track.  If this is the case, the bin content is set to 0.  
 
 \subsection{3D track reconstruction}
 \label{subsec:3DHoughTrackReconstruction}
-Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is acheived by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D track is left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
+Section~\ref{subsec:ParameterSpaceAnalysis} describes the track reconstruction of a 2D ECal cluster.  However, a 3D cluster consists of two sets of 2D clusters.  So, the process described in section~\ref{subsec:ParameterSpaceAnalysis} must be performed on each of the 2D clusters.  The result of this process is two sets of 2D tracks.  To form full 3D tracks, the tracks from each view must now be matched together.  This is achieved by making every pairwise comparison of the tracks from each view to find the pair which are most similar to each other.  After such a pair is found, the tracks are removed from the pool and the process is repeated to find the next pair until either no tracks are left or one 2D track is left.  In the latter case the single 2D track is discarded. Every pairwise combination of tracks is used to form a likelihood $\mathcal{L}$.  The pair which produces the highest $\mathcal{L}$ is declared the best match and removed from the pool.  Three pieces of information about the matching pair are used to calculate $\mathcal{L}$, all of which make use of probability density distributions generated using beam Monte Carlo.  
 \newline
 \newline
-As should be expected, a vertex with one visible track will have different characteristics to a vertex with three visible tracks.  So, to maximise the ability of the matcher, a different set of probability density distributions are used for the 1, 2 and 3 track cases.  If the number of tracks in each view is not identical, the higher number of tracks is used to find the correct probability density distributions.  Seperately, due to their geometrical differences, the reconstructed shape of vertices in the DS ECal will differ to those in the barrel ECals.  This leads to a separate set of probability density distributions for the barrel and DS ECal modules.
+As should be expected, a vertex with one visible track will have different characteristics to a vertex with three visible tracks.  So, to maximise the ability of the matcher, a different set of probability density distributions are used for the 1, 2 and 3 track cases.  If the number of tracks in each view is not identical, the higher number of tracks is used to find the correct probability density distributions.  Separately, due to their geometrical differences, the reconstructed shape of vertices in the DS ECal will differ to those in the barrel ECals.  This leads to a separate set of probability density distributions for the barrel and DS ECal modules.
 \newline
 \newline
 The first input to the likelihood is the ratio of the total deposited charge on each track, $Q_{\textrm{ratio}}$.  The denominator is taken as the track which comes from the view with the most hits.  Generally speaking, a particle propagating through an ECal module should deposit a similar amount of charge in each of the two views.  So, $Q_{\textrm{ratio}}$ should have a value close to 1 if the two 2D tracks are created by the same particle.  An example of the $Q_{\textrm{ratio}}$ distribution is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, taken from beam Monte Carlo in the barrel ECals for cases where the maximum number of tracks found in a given view is 2.  In Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation}, correctly matched (in blue) shows the $Q_{\textrm{ratio}}$ distribution for matching pairs which come from the same particle and incorrectly matched (in red) shows the the $Q_{\textrm{ratio}}$ distribution for matching pairs which were created by different particles.  As Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} shows, $Q_{\textrm{ratio}}$ well separates the two cases.  To generate a probability density distribution for $Q_{\textrm{ratio}}$, the two distributions shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} are used, but without applying any normalisation.  By comparing the bins of each distribution, the probability for correctly matching two tracks in a given bin $p_{i}$ can be formed by
@@ -356,7 +356,7 @@ The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is 
 %\end{figure}
 \newline
 \newline
-The third and final input to the likelihood, called $\Delta_{\textrm{layer, last}}$, is the differnce in the ending layer of each 2D track which forms the matching cadidate pair, where the ending layer refers to the layer furthest from the ND280 tracker.  Functionally, how this function is used is essentially identical to $\Delta_{\textrm{layer, last}}$ so it will not be described in detail.  The separation ability of this variable and its corresponding probabilty density function for the two track, barrel case are shwon in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} and Fig.~\ref{fig:3DMatchingBarrel2TrackDLLPDF} respectively.
+The third and final input to the likelihood, called $\Delta_{\textrm{layer, last}}$, is the difference in the ending layer of each 2D track which forms the matching candidate pair, where the ending layer refers to the layer furthest from the ND280 tracker.  Functionally, how this function is used is essentially identical to $\Delta_{\textrm{layer, last}}$ so it will not be described in detail.  The separation ability of this variable and its corresponding probability density function for the two track, barrel case are shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} and Fig.~\ref{fig:3DMatchingBarrel2TrackDLLPDF} respectively.
 \begin{figure}%
   \centering
   \subfloat[$\Delta_{\textrm{layer, last}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
@@ -439,7 +439,7 @@ In terms of the matching comparisons, the temporarily merged comparisons are tre
 
 \subsection{Track pairwise crossing reconstruction}
 \label{subsec:TrackCrossingReconstruction}
-The final step of the reconstruction is to estimate where each of the 3D track's paths cross.  As each track is reconstructed as a straight line in 3D, the final step is fairly simple.  Using the track direction and position information calculated at the end of section~\ref{subsec:3DHoughTrackReconstruction}, the position at closest approach for every pairwise combination of 3D tracks is calulated analytically.  The distance of closest approach is also calculated.  Six hits, the closest three from each 3D track, are then associated to the pairwise crossing. 
+The final step of the reconstruction is to estimate where each of the 3D track's paths cross.  As each track is reconstructed as a straight line in 3D, the final step is fairly simple.  Using the track direction and position information calculated at the end of section~\ref{subsec:3DHoughTrackReconstruction}, the position at closest approach for every pairwise combination of 3D tracks is calculated analytically.  The distance of closest approach is also calculated.  Six hits, the closest three from each 3D track, are then associated to the pairwise crossing. 
 
 \section{Output of the reconstruction}
 \label{sec:ReconOutput}
@@ -467,7 +467,7 @@ The first performance validation investigated the angular resolution using the e
 \end{figure}
 \newline
 \newline
-The second performance validation studied the success of the 3D matching.  To do this, a sample of beam MC events in the ECals were processed through the enhanced reconstruction.  After completion, the 2D components of the 3D tracks were analysed and matched to the true particles which created them.  A match was counted as a success if both 2D components were matched to the same true particle.  These results are shown in table~\ref{table:PercentageCorrect3DMatching}, separated out by which track matching likelihood was used.  For the 1 and 2 track likelihood cases, the matching performs very well.  It is only in cases where the 3 track likelihood is used that the matching start to suffer slightly.  However, all of the correct matching rates are well above 50$\%$ which suggests that the 3D matching is performing adequetly. 
+The second performance validation studied the success of the 3D matching.  To do this, a sample of beam MC events in the ECals were processed through the enhanced reconstruction.  After completion, the 2D components of the 3D tracks were analysed and matched to the true particles which created them.  A match was counted as a success if both 2D components were matched to the same true particle.  These results are shown in table~\ref{table:PercentageCorrect3DMatching}, separated out by which track matching likelihood was used.  For the 1 and 2 track likelihood cases, the matching performs very well.  It is only in cases where the 3 track likelihood is used that the matching start to suffer slightly.  However, all of the correct matching rates are well above 50$\%$ which suggests that the 3D matching is performing adequately. 
 \begin{table}
   \begin{tabular}{c | c c c }
    & 1 track likelihood & 2 track likelihood & 3 track likelihood \\ \hline \hline
