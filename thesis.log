@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  19 JUL 2015 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  19 JUL 2015 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,31 +1156,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
 [3] [4
 
-] [5] [6
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
 
-] [7] [8
+ []
 
-] [9] [10
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--28
+
+ []
+
+[5] [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--55
+
+ []
+
+[7] [8
 
 ]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 44
+Package tocbasic Info: character protrusion at toc deactivated on input line 67
 .
  (./thesis.toc)
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [11] [12
+ [9] [10
 
-]))
-Processing 'mainmatter' comment.
+])) Processing 'mainmatter' comment.
 \openout3 = `comment.cut'.
 
- Comment 'mainmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./chap8.tex [1] [2
+
+Comment 'mainmatter' writing to comment.cut. Straight input of comment.cut.
+(./comment.cut (./chap8.tex [1] [2
 
 ]
 Chapter 1.
@@ -1241,7 +1284,7 @@ t/samples/NuEnergy_ReactionCode_BottomLeft_Signal.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-convert
-ed-to.pdf, id=206, 569.12625pt x 451.6875pt>
+ed-to.pdf, id=198, 569.12625pt x 451.6875pt>
 File: images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-co
 nverted-to.pdf Graphic file (type pdf)
 
@@ -1267,7 +1310,7 @@ nt/samples/NuEnergy_ReactionCode_BottomLeft_Reverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-conver
-ted-to.pdf, id=207, 569.12625pt x 451.6875pt>
+ted-to.pdf, id=199, 569.12625pt x 451.6875pt>
 File: images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -1322,7 +1365,7 @@ lates_Nominal.eps>
 (epstopdf)             \includegraphics on input line 77.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf, id=250,
+<images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf, id=242,
  569.12625pt x 387.4475pt>
 File: images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1392,7 +1435,7 @@ ics/flux/flux_prediction_syst.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/flux/flux_prediction_syst-eps-converted-to.pdf,
- id=274, 569.12625pt x 387.4475pt>
+ id=265, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/flux/flux_prediction_syst-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -1421,7 +1464,7 @@ atics/flux/flux_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/flux/flux_covariance_matrix-eps-converted-to.pd
-f, id=291, 569.12625pt x 387.4475pt>
+f, id=283, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/flux/flux_covariance_matrix-eps-converted-
 to.pdf Graphic file (type pdf)
 
@@ -1445,7 +1488,7 @@ systematics/flux/flux_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/flux/flux_shape_covariance_matrix-eps-converted
--to.pdf, id=292, 569.12625pt x 387.4475pt>
+-to.pdf, id=284, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/flux/flux_shape_covariance_matrix-eps-conv
 erted-to.pdf Graphic file (type pdf)
 
@@ -1474,7 +1517,7 @@ tematics/flux/flux_efficiency_variation.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/flux/flux_efficiency_variation-eps-converted-to
-.pdf, id=293, 569.12625pt x 387.4475pt>
+.pdf, id=285, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/flux/flux_efficiency_variation-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
@@ -1503,7 +1546,7 @@ ics/xsec/xsec_prediction_syst.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-to.pdf,
- id=298, 569.12625pt x 387.4475pt>
+ id=290, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -1527,7 +1570,7 @@ atics/xsec/xsec_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/xsec_covariance_matrix-eps-converted-to.pd
-f, id=304, 569.12625pt x 387.4475pt>
+f, id=296, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/xsec_covariance_matrix-eps-converted-
 to.pdf Graphic file (type pdf)
 
@@ -1551,7 +1594,7 @@ systematics/xsec/xsec_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/xsec_shape_covariance_matrix-eps-converted
--to.pdf, id=305, 569.12625pt x 387.4475pt>
+-to.pdf, id=297, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/xsec_shape_covariance_matrix-eps-conv
 erted-to.pdf Graphic file (type pdf)
 
@@ -1580,7 +1623,7 @@ tematics/xsec/xsec_efficiency_variation.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/xsec_efficiency_variation-eps-converted-to
-.pdf, id=307, 569.12625pt x 387.4475pt>
+.pdf, id=299, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/xsec_efficiency_variation-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
@@ -1604,7 +1647,7 @@ sec/pbxsec_pf_ratio.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf, id=3
-12, 569.12625pt x 387.4475pt>
+04, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
@@ -1627,7 +1670,7 @@ sec/pbxsec_eb_ratio.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf, id=3
-13, 569.12625pt x 387.4475pt>
+05, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
@@ -1655,7 +1698,7 @@ tematics/xsec/pb_xsec_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/pb_xsec_covariance_matrix-eps-converted-to
-.pdf, id=314, 569.12625pt x 387.4475pt>
+.pdf, id=306, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/pb_xsec_covariance_matrix-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
@@ -1679,7 +1722,7 @@ nt/systematics/xsec/pb_xsec_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix-eps-conver
-ted-to.pdf, id=315, 569.12625pt x 387.4475pt>
+ted-to.pdf, id=307, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -1759,7 +1802,7 @@ tics/xsec/fsi_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted-to.pdf
-, id=450, 569.12625pt x 387.4475pt>
+, id=442, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -1783,7 +1826,7 @@ ystematics/xsec/fsi_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps-converted-
-to.pdf, id=451, 569.12625pt x 387.4475pt>
+to.pdf, id=443, 569.12625pt x 387.4475pt>
 File: images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps-conve
 rted-to.pdf Graphic file (type pdf)
 
@@ -1807,7 +1850,7 @@ input line 250.
 
 
 <images/measurement/systematics/detector/threshold/layer_efficiency_cosmics_dat
-a.pdf, id=458, 290.17308pt x 207.07172pt>
+a.pdf, id=450, 290.17308pt x 207.07172pt>
 File: images/measurement/systematics/detector/threshold/layer_efficiency_cosmic
 s_data.pdf Graphic file (type pdf)
 
@@ -1847,7 +1890,7 @@ asurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU-eps
--converted-to.pdf, id=494, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=486, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PE
 U-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1872,7 +1915,7 @@ ix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/threshold/ecal_threshold_covariance_ma
-trix-eps-converted-to.pdf, id=497, 569.12625pt x 386.44376pt>
+trix-eps-converted-to.pdf, id=489, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/threshold/ecal_threshold_covarian
 ce_matrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1897,7 +1940,7 @@ ariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/threshold/ecal_threshold_shape_covaria
-nce_matrix-eps-converted-to.pdf, id=498, 569.12625pt x 386.44376pt>
+nce_matrix-eps-converted-to.pdf, id=490, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/threshold/ecal_threshold_shape_co
 variance_matrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1913,8 +1956,8 @@ Overfull \hbox (13.1703pt too wide) in paragraph at lines 274--276
  []
 
 
-<images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf, id=5
-00, 569.12625pt x 385.44pt>
+<images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf, id=4
+92, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf 
 Graphic file (type pdf)
 
@@ -1924,7 +1967,7 @@ ge_Cosmics_TLB.pdf used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
 
 <images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics_TLB.
-pdf, id=501, 569.12625pt x 385.44pt>
+pdf, id=493, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics
 _TLB.pdf Graphic file (type pdf)
 
@@ -1968,7 +2011,7 @@ measurement/systematics/detector/charge/ecal_charge_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/charge/ecal_charge_covariance_matrix-e
-ps-converted-to.pdf, id=631, 569.12625pt x 386.44376pt>
+ps-converted-to.pdf, id=623, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/charge/ecal_charge_covariance_mat
 rix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1993,7 +2036,7 @@ ix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/charge/ecal_charge_shape_covariance_ma
-trix-eps-converted-to.pdf, id=632, 569.12625pt x 386.44376pt>
+trix-eps-converted-to.pdf, id=624, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/charge/ecal_charge_shape_covarian
 ce_matrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2022,7 +2065,7 @@ s/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel
--eps-converted-to.pdf, id=633, 569.12625pt x 385.44pt>
+-eps-converted-to.pdf, id=625, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_b
 arrel-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2046,7 +2089,7 @@ asurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds-eps
--converted-to.pdf, id=634, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=626, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_d
 s-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2076,7 +2119,7 @@ barrel.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_
-barrel-eps-converted-to.pdf, id=639, 569.12625pt x 385.44pt>
+barrel-eps-converted-to.pdf, id=631, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/noise/noise_mc_estimate_data_esti
 mate_barrel-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2101,7 +2144,7 @@ ps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_
-ds-eps-converted-to.pdf, id=640, 569.12625pt x 385.44pt>
+ds-eps-converted-to.pdf, id=632, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/noise/noise_mc_estimate_data_esti
 mate_ds-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2130,7 +2173,7 @@ asurement/systematics/detector/noise/ecal_noise_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/ecal_noise_covariance_matrix-eps
--converted-to.pdf, id=642, 569.12625pt x 386.44376pt>
+-converted-to.pdf, id=634, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/noise/ecal_noise_covariance_matri
 x-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2155,7 +2198,7 @@ ps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/noise/ecal_noise_shape_covariance_matr
-ix-eps-converted-to.pdf, id=643, 569.12625pt x 386.44376pt>
+ix-eps-converted-to.pdf, id=635, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/noise/ecal_noise_shape_covariance
 _matrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2222,7 +2265,7 @@ rement/systematics/detector/mass/MassCov_DSECal_AllElements.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-eps-co
-nverted-to.pdf, id=769, 569.12625pt x 386.44376pt>
+nverted-to.pdf, id=761, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-e
 ps-converted-to.pdf Graphic file (type pdf)
 
@@ -2246,7 +2289,7 @@ tematics/detector/mass/TotalMass_DSECal.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-converted-to
-.pdf, id=770, 569.12625pt x 386.44376pt>
+.pdf, id=762, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
@@ -2271,7 +2314,7 @@ ts.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElem
-ents-eps-converted-to.pdf, id=771, 569.12625pt x 386.44376pt>
+ents-eps-converted-to.pdf, id=763, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_TopBottomECal_Reduce
 dElements-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2295,7 +2338,7 @@ tics/detector/mass/MassCov_SideECal_ReducedElements-eps-converted-to.pdf images
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements-
-eps-converted-to.pdf, id=772, 569.12625pt x 386.44376pt>
+eps-converted-to.pdf, id=764, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElem
 ents-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2319,7 +2362,7 @@ easurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements-ep
-s-converted-to.pdf, id=773, 569.12625pt x 386.44376pt>
+s-converted-to.pdf, id=765, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElemen
 ts-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2344,7 +2387,7 @@ urement/systematics/detector/mass/ecal_mass_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-eps-c
-onverted-to.pdf, id=783, 569.12625pt x 386.44376pt>
+onverted-to.pdf, id=775, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-
 eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2368,7 +2411,7 @@ s/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix
--eps-converted-to.pdf, id=784, 569.12625pt x 386.44376pt>
+-eps-converted-to.pdf, id=776, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_m
 atrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2430,7 +2473,7 @@ urement/systematics/detector/oofv/ecal_oofv_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-eps-c
-onverted-to.pdf, id=869, 569.12625pt x 386.44376pt>
+onverted-to.pdf, id=860, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-
 eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2454,7 +2497,7 @@ s/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix
--eps-converted-to.pdf, id=870, 569.12625pt x 386.44376pt>
+-eps-converted-to.pdf, id=861, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_m
 atrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2497,7 +2540,7 @@ urement/systematics/detector/bug/ecal_hough_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix-eps-c
-onverted-to.pdf, id=872, 569.12625pt x 386.44376pt>
+onverted-to.pdf, id=863, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix-
 eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2521,7 +2564,7 @@ s/measurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix
--eps-converted-to.pdf, id=873, 569.12625pt x 386.44376pt>
+-eps-converted-to.pdf, id=864, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_m
 atrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2554,7 +2597,7 @@ nt/systematics/detector/fgd/fgd_systematics_nevents.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps-conver
-ted-to.pdf, id=884, 569.12625pt x 385.44pt>
+ted-to.pdf, id=876, 569.12625pt x 385.44pt>
 File: images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -2578,7 +2621,7 @@ urement/systematics/detector/total/detector_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/total/detector_covariance_matrix-eps-c
-onverted-to.pdf, id=886, 569.12625pt x 386.44376pt>
+onverted-to.pdf, id=878, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/total/detector_covariance_matrix-
 eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2602,7 +2645,7 @@ s/measurement/systematics/detector/total/detector_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/detector/total/detector_shape_covariance_matrix
--eps-converted-to.pdf, id=887, 569.12625pt x 386.44376pt>
+-eps-converted-to.pdf, id=879, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/detector/total/detector_shape_covariance_m
 atrix-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2631,7 +2674,7 @@ ematics/total/total_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/total/total_covariance_matrix-eps-converted-to.
-pdf, id=889, 569.12625pt x 386.44376pt>
+pdf, id=881, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/total/total_covariance_matrix-eps-converte
 d-to.pdf Graphic file (type pdf)
 
@@ -2655,7 +2698,7 @@ t/systematics/total/total_shape_covariance_matrix.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/total/total_shape_covariance_matrix-eps-convert
-ed-to.pdf, id=890, 569.12625pt x 386.44376pt>
+ed-to.pdf, id=882, 569.12625pt x 386.44376pt>
 File: images/measurement/systematics/total/total_shape_covariance_matrix-eps-co
 nverted-to.pdf Graphic file (type pdf)
 
@@ -2696,7 +2739,7 @@ ment/systematics/genie/ProngStack_Barrel_Selected_GENIE.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-eps-conv
-erted-to.pdf, id=895, 569.12625pt x 474.77374pt>
+erted-to.pdf, id=887, 569.12625pt x 474.77374pt>
 File: images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -2720,7 +2763,7 @@ tics/genie/ProngStack_DS_Selected_GENIE-eps-converted-to.pdf images/measurement
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE-eps-converte
-d-to.pdf, id=896, 569.12625pt x 473.77pt>
+d-to.pdf, id=888, 569.12625pt x 473.77pt>
 File: images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -2813,7 +2856,7 @@ nt/validation/machinery/rateFitVal_RPbFit_ParamSet1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-conver
-ted-to.pdf, id=1055, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1047, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -2837,7 +2880,7 @@ ent/validation/machinery/rateFitVal_RPbPull_ParamSet1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1-eps-conve
-rted-to.pdf, id=1056, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1048, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -2866,7 +2909,7 @@ ent/validation/machinery/rateFitVal_FitVals_ParamSet1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1-eps-conve
-rted-to.pdf, id=1057, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1049, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -2890,7 +2933,7 @@ ment/validation/machinery/rateFitVal_FitPulls_ParamSet1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1-eps-conv
-erted-to.pdf, id=1058, 569.12625pt x 385.44pt>
+erted-to.pdf, id=1050, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -2919,7 +2962,7 @@ ent/validation/machinery/rateFitVal_FitVals_ParamSet2.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-conve
-rted-to.pdf, id=1065, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1057, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -2943,7 +2986,7 @@ ment/validation/machinery/rateFitVal_FitPulls_ParamSet2.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-eps-conv
-erted-to.pdf, id=1066, 569.12625pt x 385.44pt>
+erted-to.pdf, id=1058, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -2972,7 +3015,7 @@ ent/validation/machinery/rateFitVal_FitVals_ParamSet3.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3-eps-conve
-rted-to.pdf, id=1067, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1059, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -2996,7 +3039,7 @@ ment/validation/machinery/rateFitVal_FitPulls_ParamSet3.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3-eps-conv
-erted-to.pdf, id=1068, 569.12625pt x 385.44pt>
+erted-to.pdf, id=1060, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -3025,7 +3068,7 @@ ent/validation/machinery/rateFitVal_FitVals_ParamSet4.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4-eps-conve
-rted-to.pdf, id=1069, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1061, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -3049,7 +3092,7 @@ ment/validation/machinery/rateFitVal_FitPulls_ParamSet4.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps-conv
-erted-to.pdf, id=1070, 569.12625pt x 385.44pt>
+erted-to.pdf, id=1062, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -3078,7 +3121,7 @@ ent/validation/machinery/rateFitVal_FitVals_ParamSet5.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5-eps-conve
-rted-to.pdf, id=1071, 569.12625pt x 385.44pt>
+rted-to.pdf, id=1063, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -3102,7 +3145,7 @@ ment/validation/machinery/rateFitVal_FitPulls_ParamSet5.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5-eps-conv
-erted-to.pdf, id=1072, 569.12625pt x 385.44pt>
+erted-to.pdf, id=1064, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5-eps
 -converted-to.pdf Graphic file (type pdf)
 
@@ -3131,7 +3174,7 @@ s/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse
--eps-converted-to.pdf, id=1073, 569.12625pt x 385.44pt>
+-eps-converted-to.pdf, id=1065, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoRe
 verse-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3156,7 +3199,7 @@ es/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoReverse.eps
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoRevers
-e-eps-converted-to.pdf, id=1074, 569.12625pt x 385.44pt>
+e-eps-converted-to.pdf, id=1066, 569.12625pt x 385.44pt>
 File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoR
 everse-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3210,7 +3253,7 @@ es/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFit.eps
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFi
-t-eps-converted-to.pdf, id=1184, 569.12625pt x 385.44pt>
+t-eps-converted-to.pdf, id=1175, 569.12625pt x 385.44pt>
 File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_
 PreFit-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3235,7 +3278,7 @@ ps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostF
-it-eps-converted-to.pdf, id=1191, 569.12625pt x 385.44pt>
+it-eps-converted-to.pdf, id=1182, 569.12625pt x 385.44pt>
 File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_
 PostFit-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3260,7 +3303,7 @@ ReWeighted_PostFit.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeig
-hted_PostFit-eps-converted-to.pdf, id=1196, 569.12625pt x 385.44pt>
+hted_PostFit-eps-converted-to.pdf, id=1187, 569.12625pt x 385.44pt>
 File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataR
 eWeighted_PostFit-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3321,7 +3364,7 @@ TemplatesWithSystematics_T2KData_PreFit-eps-converted-to.pdf images/measurement
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-converte
-d-to.pdf, id=1249, 569.12625pt x 385.44pt>
+d-to.pdf, id=1241, 569.12625pt x 385.44pt>
 File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -3345,7 +3388,7 @@ t/data/MCTemplatesWithSystematics_T2KData_PostFit.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit-eps-convert
-ed-to.pdf, id=1250, 569.12625pt x 385.44pt>
+ed-to.pdf, id=1242, 569.12625pt x 385.44pt>
 File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit-eps-co
 nverted-to.pdf Graphic file (type pdf)
 
@@ -3366,7 +3409,7 @@ i2_par0-eps-converted-to.pdf images/measurement/data/Chi2_par0.eps>
 (epstopdf)             \includegraphics on input line 814.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/data/Chi2_par0-eps-converted-to.pdf, id=1251, 569.12625pt x
+<images/measurement/data/Chi2_par0-eps-converted-to.pdf, id=1243, 569.12625pt x
  385.44pt>
 File: images/measurement/data/Chi2_par0-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -3386,7 +3429,7 @@ i2_par1-eps-converted-to.pdf images/measurement/data/Chi2_par1.eps>
 (epstopdf)             \includegraphics on input line 818.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/data/Chi2_par1-eps-converted-to.pdf, id=1252, 569.12625pt x
+<images/measurement/data/Chi2_par1-eps-converted-to.pdf, id=1244, 569.12625pt x
  385.44pt>
 File: images/measurement/data/Chi2_par1-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -3406,7 +3449,7 @@ i2_par2-eps-converted-to.pdf images/measurement/data/Chi2_par2.eps>
 (epstopdf)             \includegraphics on input line 821.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/data/Chi2_par2-eps-converted-to.pdf, id=1253, 569.12625pt x
+<images/measurement/data/Chi2_par2-eps-converted-to.pdf, id=1245, 569.12625pt x
  385.44pt>
 File: images/measurement/data/Chi2_par2-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -3428,7 +3471,7 @@ ionMatrix.eps>
 (epstopdf)             \includegraphics on input line 830.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf, id=1257, 
+<images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf, id=1249, 
 569.12625pt x 386.44376pt>
 File: images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -3453,7 +3496,7 @@ ages/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaN
-orm-eps-converted-to.pdf, id=1261, 569.12625pt x 385.44pt>
+orm-eps-converted-to.pdf, id=1253, 569.12625pt x 385.44pt>
 File: images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_
 AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3477,7 +3520,7 @@ measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm-e
-ps-converted-to.pdf, id=1262, 569.12625pt x 385.44pt>
+ps-converted-to.pdf, id=1254, 569.12625pt x 385.44pt>
 File: images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaN
 orm-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3507,7 +3550,7 @@ dules_AreaNorm.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseModule
-s_AreaNorm-eps-converted-to.pdf, id=1263, 569.12625pt x 385.44pt>
+s_AreaNorm-eps-converted-to.pdf, id=1255, 569.12625pt x 385.44pt>
 File: images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseM
 odules_AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3533,7 +3576,7 @@ Norm.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_Are
-aNorm-eps-converted-to.pdf, id=1264, 569.12625pt x 385.44pt>
+aNorm-eps-converted-to.pdf, id=1256, 569.12625pt x 385.44pt>
 File: images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModule
 s_AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3570,7 +3613,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-conver
-ted-to.pdf, id=1271, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1263, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3594,7 +3637,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-conver
-ted-to.pdf, id=1272, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1264, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3618,7 +3661,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-conver
-ted-to.pdf, id=1273, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1265, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3642,7 +3685,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-conver
-ted-to.pdf, id=1274, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1266, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3666,7 +3709,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-conver
-ted-to.pdf, id=1275, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1267, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3690,7 +3733,7 @@ nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-conver
-ted-to.pdf, id=1276, 569.12625pt x 385.44pt>
+ted-to.pdf, id=1268, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -3714,7 +3757,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse-eps
--converted-to.pdf, id=1277, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1269, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3738,7 +3781,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse-eps
--converted-to.pdf, id=1278, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1270, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3762,7 +3805,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse-eps
--converted-to.pdf, id=1279, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1271, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3786,7 +3829,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse-eps
--converted-to.pdf, id=1280, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1272, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3810,7 +3853,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse-eps
--converted-to.pdf, id=1281, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1273, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3834,7 +3877,7 @@ asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse-eps
--converted-to.pdf, id=1282, 569.12625pt x 385.44pt>
+-converted-to.pdf, id=1274, 569.12625pt x 385.44pt>
 File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBRevers
 e-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -3858,7 +3901,7 @@ NHits_CutLevelGT0_BLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf, id=
-1286, 569.12625pt x 385.44pt>
+1278, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3881,7 +3924,7 @@ NHits_CutLevelGT0_BRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf, id=
-1287, 569.12625pt x 385.44pt>
+1279, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3904,7 +3947,7 @@ NHits_CutLevelGT0_SLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf, id=
-1288, 569.12625pt x 385.44pt>
+1280, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3927,7 +3970,7 @@ NHits_CutLevelGT0_SRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf, id=
-1289, 569.12625pt x 385.44pt>
+1281, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3950,7 +3993,7 @@ NHits_CutLevelGT0_TLB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf, id=
-1290, 569.12625pt x 385.44pt>
+1282, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3973,7 +4016,7 @@ NHits_CutLevelGT0_TRB.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf, id=
-1291, 569.12625pt x 385.44pt>
+1283, 569.12625pt x 385.44pt>
 File: images/measurement/data/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -3997,7 +4040,7 @@ ages/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFudge
 Package epstopdf Info: Output file is already uptodate.
 
 <images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFu
-dge-eps-converted-to.pdf, id=1298, 569.12625pt x 385.44pt>
+dge-eps-converted-to.pdf, id=1290, 569.12625pt x 385.44pt>
 File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithEr
 rorFudge-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -4127,7 +4170,7 @@ n3c_flux-eps-converted-to.pdf images/measurement/xsec/run3c_flux.eps>
 (epstopdf)             \includegraphics on input line 989.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/measurement/xsec/run3c_flux-eps-converted-to.pdf, id=1651, 569.12625pt 
+<images/measurement/xsec/run3c_flux-eps-converted-to.pdf, id=1641, 569.12625pt 
 x 386.44376pt>
 File: images/measurement/xsec/run3c_flux-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -4417,10 +4460,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 26881 strings out of 493117
- 495334 string characters out of 6135433
- 751189 words of memory out of 5000000
- 29114 multiletter control sequences out of 15000+600000
+ 26878 strings out of 493117
+ 495303 string characters out of 6135433
+ 751291 words of memory out of 5000000
+ 29113 multiletter control sequences out of 15000+600000
  91962 words of font info for 376 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,22n,61p,2432b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4439,10 +4482,10 @@ ype1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/palatino/uplri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (92 pages, 1326758 bytes).
+Output written on thesis.pdf (90 pages, 1328136 bytes).
 PDF statistics:
- 2032 PDF objects out of 2073 (max. 8388607)
- 1630 compressed objects within 17 object streams
- 302 named destinations out of 1000 (max. 500000)
+ 2022 PDF objects out of 2073 (max. 8388607)
+ 1622 compressed objects within 17 object streams
+ 300 named destinations out of 1000 (max. 500000)
  47773 words of extra memory for PDF output out of 51595 (max. 10000000)
 
