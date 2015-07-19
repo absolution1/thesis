@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  17 JUL 2015 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  19 JUL 2015 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,7 +1021,14 @@ LaTeX Info: Redefining \CERN on input line 53.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `fig:ECalThresholdCovarianceMatrices' multiply defined.
+
+
+LaTeX Warning: Label `eqn:HitChargeRandomVariable' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1142,10 +1149,14 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 ]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 8.
- [3] [4
 
-]
-[5] [6
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+[3] [4
+
+] [5] [6
 
 ] [7] [8
 
@@ -1156,7 +1167,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 41
+Package tocbasic Info: character protrusion at toc deactivated on input line 44
 .
  (./thesis.toc)
 \tf@toc=\write6
@@ -1169,767 +1180,3040 @@ Processing 'mainmatter' comment.
 \openout3 = `comment.cut'.
 
  Comment 'mainmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./chap5.tex [1] [2
+Straight input of comment.cut. (./comment.cut (./chap8.tex [1] [2
 
 ]
 Chapter 1.
 
-LaTeX Warning: Reference `sec:ECalEventReconstruction' on page 3 undefined on i
-nput line 14.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@Oldnu' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@Oldmu' on input line 12.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 12.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 20.
-[3]
-Package epstopdf Info: Source file: <images/hough_transform/cartesian_line.eps>
 
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 4118 bytes
-(epstopdf)             Output file: <images/hough_transform/cartesian_line-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 5243 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
-tesian_line-eps-converted-to.pdf images/hough_transform/cartesian_line.eps>
-(epstopdf)             \includegraphics on input line 46.
-Package epstopdf Info: Output file is already uptodate.
+Underfull \vbox (badness 4556) has occurred while \output is active []
 
-<images/hough_transform/cartesian_line-eps-converted-to.pdf, id=178, 569.12625p
-t x 451.6875pt>
-File: images/hough_transform/cartesian_line-eps-converted-to.pdf Graphic file (
-type pdf)
+ [3]
 
-<use images/hough_transform/cartesian_line-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/cartesian_line-eps-converted-to
-.pdf used on input line 46.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 46.
-Package epstopdf Info: Source file: <images/hough_transform/parameter_point.eps
->
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 3680 bytes
-(epstopdf)             Output file: <images/hough_transform/parameter_point-eps
--converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:51:56
-(epstopdf)                    size: 4284 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/par
-ameter_point-eps-converted-to.pdf images/hough_transform/parameter_point.eps>
+LaTeX Warning: Reference `table:FinalEffPur' on page 4 undefined on input line 
+41.
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 4 undefine
+d on input line 44.
+
+
+LaTeX Warning: Reference `fig:EffPurSummedTopologiesBarrel' on page 4 undefined
+ on input line 44.
+
+
+LaTeX Warning: Reference `fig:NSignalEventsTruthNeutrinoEnergy' on page 4 undef
+ined on input line 44.
+
+Package epstopdf Info: Source file: <images/measurement/samples/NuEnergy_Reacti
+onCode_BottomLeft_Signal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 23766 bytes
+(epstopdf)             Output file: <images/measurement/samples/NuEnergy_Reacti
+onCode_BottomLeft_Signal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 12857 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/samples
+/NuEnergy_ReactionCode_BottomLeft_Signal-eps-converted-to.pdf images/measuremen
+t/samples/NuEnergy_ReactionCode_BottomLeft_Signal.eps>
 (epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/parameter_point-eps-converted-to.pdf, id=179, 569.12625
-pt x 451.6875pt>
-File: images/hough_transform/parameter_point-eps-converted-to.pdf Graphic file 
-(type pdf)
+<images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-convert
+ed-to.pdf, id=206, 569.12625pt x 451.6875pt>
+File: images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-co
+nverted-to.pdf Graphic file (type pdf)
 
-<use images/hough_transform/parameter_point-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/parameter_point-eps-converted-t
-o.pdf used on input line 47.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 48.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--54
-
- []
-
-[4 <./images/hough_transform/cartesian_line-eps-converted-to.pdf> <./images/hou
-gh_transform/parameter_point-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/hough_transform/cartesian_point.eps
->
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 3812 bytes
-(epstopdf)             Output file: <images/hough_transform/cartesian_point-eps
--converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 4439 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
-tesian_point-eps-converted-to.pdf images/hough_transform/cartesian_point.eps>
-(epstopdf)             \includegraphics on input line 79.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/cartesian_point-eps-converted-to.pdf, id=210, 569.12625
-pt x 451.6875pt>
-File: images/hough_transform/cartesian_point-eps-converted-to.pdf Graphic file 
-(type pdf)
-
-<use images/hough_transform/cartesian_point-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/cartesian_point-eps-converted-t
-o.pdf used on input line 79.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_transform/parameter_line.eps>
-
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 4132 bytes
-(epstopdf)             Output file: <images/hough_transform/parameter_line-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 5340 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/par
-ameter_line-eps-converted-to.pdf images/hough_transform/parameter_line.eps>
-(epstopdf)             \includegraphics on input line 80.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/parameter_line-eps-converted-to.pdf, id=211, 569.12625p
-t x 451.6875pt>
-File: images/hough_transform/parameter_line-eps-converted-to.pdf Graphic file (
-type pdf)
-
-<use images/hough_transform/parameter_line-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/parameter_line-eps-converted-to
-.pdf used on input line 80.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
-
- []
-
-[5 <./images/hough_transform/cartesian_point-eps-converted-to.pdf> <./images/ho
-ugh_transform/parameter_line-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/hough_transform/HT_example_cartesia
-n_space.eps>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 4233 bytes
-(epstopdf)             Output file: <images/hough_transform/HT_example_cartesia
-n_space-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 5897 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
-example_cartesian_space-eps-converted-to.pdf images/hough_transform/HT_example_
-cartesian_space.eps>
-(epstopdf)             \includegraphics on input line 115.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf, id=242
-, 569.12625pt x 451.6875pt>
-File: images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf Gr
-aphic file (type pdf)
-
-<use images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/HT_example_cartesian_space-eps-
-converted-to.pdf used on input line 115.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_transform/HT_example_paramete
-r_space.eps>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 3789 bytes
-(epstopdf)             Output file: <images/hough_transform/HT_example_paramete
-r_space-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 5157 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
-example_parameter_space-eps-converted-to.pdf images/hough_transform/HT_example_
-parameter_space.eps>
-(epstopdf)             \includegraphics on input line 116.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf, id=245
-, 569.12625pt x 451.6875pt>
-File: images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf Gr
-aphic file (type pdf)
-
-<use images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/HT_example_parameter_space-eps-
-converted-to.pdf used on input line 116.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--123
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf> 
-<./images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/hough_transform/HT_example_cartesia
-n_space_with_line.eps>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 4681 bytes
-(epstopdf)             Output file: <images/hough_transform/HT_example_cartesia
-n_space_with_line-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 6122 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
-example_cartesian_space_with_line-eps-converted-to.pdf images/hough_transform/H
-T_example_cartesian_space_with_line.eps>
-(epstopdf)             \includegraphics on input line 140.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/HT_example_cartesian_space_with_line-eps-converted-to.p
-df, id=284, 569.12625pt x 451.6875pt>
-File: images/hough_transform/HT_example_cartesian_space_with_line-eps-converted
--to.pdf Graphic file (type pdf)
-
-<use images/hough_transform/HT_example_cartesian_space_with_line-eps-converted-
-to.pdf>
-Package pdftex.def Info: images/hough_transform/HT_example_cartesian_space_with
-_line-eps-converted-to.pdf used on input line 140.
-(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./images/hough_transform/HT_example_cartesian_space_with_line-eps-converte
-d-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 156--161
-
- []
-
-Package epstopdf Info: Source file: <images/hough_transform/cartesian_parameter
-_redefinition.eps>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 3590 bytes
-(epstopdf)             Output file: <images/hough_transform/cartesian_parameter
-_redefinition-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 5136 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
-tesian_parameter_redefinition-eps-converted-to.pdf images/hough_transform/carte
-sian_parameter_redefinition.eps>
-(epstopdf)             \includegraphics on input line 164.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.pdf, 
-id=305, 569.12625pt x 451.6875pt>
-File: images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.
-pdf Graphic file (type pdf)
-
-<use images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.p
-df>
-Package pdftex.def Info: images/hough_transform/cartesian_parameter_redefinitio
-n-eps-converted-to.pdf used on input line 164.
-(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
-Package epstopdf Info: Source file: <images/hough_transform/binned_parameter_sp
-ace.eps>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 88966 bytes
-(epstopdf)             Output file: <images/hough_transform/binned_parameter_sp
-ace-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 23689 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/bin
-ned_parameter_space-eps-converted-to.pdf images/hough_transform/binned_paramete
-r_space.eps>
-(epstopdf)             \includegraphics on input line 179.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/binned_parameter_space-eps-converted-to.pdf, id=311, 56
-9.12625pt x 451.6875pt>
-File: images/hough_transform/binned_parameter_space-eps-converted-to.pdf Graphi
-c file (type pdf)
-
-<use images/hough_transform/binned_parameter_space-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/binned_parameter_space-eps-conv
-erted-to.pdf used on input line 179.
-(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--183
-
- []
-
-[8 <./images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.
-pdf>]
-Package epstopdf Info: Source file: <images/hough_transform/3StateInteraction_S
-ideLeftECal_NoReconstruction.eps>
-(epstopdf)                    date: 2015-05-13 21:23:14
-(epstopdf)                    size: 47050 bytes
-(epstopdf)             Output file: <images/hough_transform/3StateInteraction_S
-ideLeftECal_NoReconstruction-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:15
-(epstopdf)                    size: 15777 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/3St
-ateInteraction_SideLeftECal_NoReconstruction-eps-converted-to.pdf images/hough_
-transform/3StateInteraction_SideLeftECal_NoReconstruction.eps>
-(epstopdf)             \includegraphics on input line 191.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-eps-con
-verted-to.pdf, id=335, 764.8575pt x 502.87875pt>
-File: images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-ep
-s-converted-to.pdf Graphic file (type pdf)
-
-<use images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-eps
--converted-to.pdf>
-Package pdftex.def Info: images/hough_transform/3StateInteraction_SideLeftECal_
-NoReconstruction-eps-converted-to.pdf used on input line 191.
-(pdftex.def)             Requested size: 284.52756pt x 187.06743pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <./images/hough_transform/binned_parameter_space-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/ecal_hough_transform/ecal_grid_arra
-y.eps>
+<use images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-con
+verted-to.pdf>
+Package pdftex.def Info: images/measurement/samples/NuEnergy_ReactionCode_Botto
+mLeft_Signal-eps-converted-to.pdf used on input line 47.
+(pdftex.def)             Requested size: 227.62204pt x 180.65111pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 47.
+Package epstopdf Info: Source file: <images/measurement/samples/NuEnergy_Reacti
+onCode_BottomLeft_Reverse.eps>
 (epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 13968 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/ecal_grid_arra
-y-eps-converted-to.pdf>
+(epstopdf)                    size: 26400 bytes
+(epstopdf)             Output file: <images/measurement/samples/NuEnergy_Reacti
+onCode_BottomLeft_Reverse-eps-converted-to.pdf>
 (epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 21385 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/ecal_grid_array-eps-converted-to.pdf images/ecal_hough_transform/ecal_grid_ar
-ray.eps>
-(epstopdf)             \includegraphics on input line 220.
+(epstopdf)                    size: 13342 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/samples
+/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-converted-to.pdf images/measureme
+nt/samples/NuEnergy_ReactionCode_BottomLeft_Reverse.eps>
+(epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf, id=352, 569.
-12625pt x 132.495pt>
-File: images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf Graphic 
-file (type pdf)
-
-<use images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/ecal_grid_array-eps-conver
-ted-to.pdf used on input line 220.
-(pdftex.def)             Requested size: 199.16928pt x 46.36787pt.
-Package epstopdf Info: Source file: <images/ecal_hough_transform/single_ecal_ba
-r_hough_transform.eps>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 116210 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/single_ecal_ba
-r_hough_transform-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 29409 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/single_ecal_bar_hough_transform-eps-converted-to.pdf images/ecal_hough_transf
-orm/single_ecal_bar_hough_transform.eps>
-(epstopdf)             \includegraphics on input line 221.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-to.p
-df, id=353, 569.12625pt x 387.4475pt>
-File: images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted
--to.pdf Graphic file (type pdf)
-
-<use images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-
-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/single_ecal_bar_hough_tran
-sform-eps-converted-to.pdf used on input line 221.
-(pdftex.def)             Requested size: 199.16928pt x 135.59091pt.
-Package epstopdf Info: Source file: <images/ecal_hough_transform/ecal_cross_arr
-ay.eps>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 5610 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/ecal_cross_arr
-ay-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 8030 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/ecal_cross_array-eps-converted-to.pdf images/ecal_hough_transform/ecal_cross_
-array.eps>
-(epstopdf)             \includegraphics on input line 233.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf, id=361, 569
-.12625pt x 132.495pt>
-File: images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf Graphic
- file (type pdf)
-
-<use images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/ecal_cross_array-eps-conve
-rted-to.pdf used on input line 233.
-(pdftex.def)             Requested size: 199.16928pt x 46.36787pt.
-Package epstopdf Info: Source file: <images/ecal_hough_transform/single_ecal_ba
-r_hough_transform.eps>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 116210 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/single_ecal_ba
-r_hough_transform-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 29409 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/single_ecal_bar_hough_transform-eps-converted-to.pdf images/ecal_hough_transf
-orm/single_ecal_bar_hough_transform.eps>
-(epstopdf)             \includegraphics on input line 234.
-Package epstopdf Info: Output file is already uptodate.
-File: images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted
--to.pdf Graphic file (type pdf)
-
-<use images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-
-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/single_ecal_bar_hough_tran
-sform-eps-converted-to.pdf used on input line 234.
-(pdftex.def)             Requested size: 199.16928pt x 135.59091pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--254
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10 <./images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-
-eps-converted-to.pdf>] [11 <./images/ecal_hough_transform/ecal_grid_array-eps-c
-onverted-to.pdf> <./images/ecal_hough_transform/single_ecal_bar_hough_transform
--eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/ecal_hough_transform/FullParameterS
-pace_3StateInteraction.eps>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 1244220 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/FullParameterS
-pace_3StateInteraction-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 220439 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/FullParameterSpace_3StateInteraction-eps-converted-to.pdf images/ecal_hough_t
-ransform/FullParameterSpace_3StateInteraction.eps>
-(epstopdf)             \includegraphics on input line 266.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-converted
--to.pdf, id=397, 569.12625pt x 387.4475pt>
-File: images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conv
-erted-to.pdf Graphic file (type pdf)
-
-<use images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conve
-rted-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/FullParameterSpace_3StateI
-nteraction-eps-converted-to.pdf used on input line 266.
-(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--270
-
- []
-
-[12]
-Package epstopdf Info: Source file: <images/ecal_hough_transform/ReducedParamet
-erSpace_3StateInteraction.eps>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 558136 bytes
-(epstopdf)             Output file: <images/ecal_hough_transform/ReducedParamet
-erSpace_3StateInteraction-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:12
-(epstopdf)                    size: 103940 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
-m/ReducedParameterSpace_3StateInteraction-eps-converted-to.pdf images/ecal_houg
-h_transform/ReducedParameterSpace_3StateInteraction.eps>
-(epstopdf)             \includegraphics on input line 286.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-conver
-ted-to.pdf, id=410, 569.12625pt x 387.4475pt>
-File: images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-c
+<images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-conver
+ted-to.pdf, id=207, 569.12625pt x 451.6875pt>
+File: images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
-<use images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-co
+<use images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Reverse-eps-co
 nverted-to.pdf>
-Package pdftex.def Info: images/ecal_hough_transform/ReducedParameterSpace_3Sta
-teInteraction-eps-converted-to.pdf used on input line 286.
-(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+Package pdftex.def Info: images/measurement/samples/NuEnergy_ReactionCode_Botto
+mLeft_Reverse-eps-converted-to.pdf used on input line 48.
+(pdftex.def)             Requested size: 227.62204pt x 180.65111pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--290
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 47--49
+ [][][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 49.
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 4 undefine
+d on input line 54.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--290
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--290
+Underfull \hbox (badness 10000) in paragraph at lines 41--58
 
  []
 
-[13 <./images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf>]
-[14 <./images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-con
-verted-to.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 295.
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal-eps-c
+onverted-to.pdf> <./images/measurement/samples/NuEnergy_ReactionCode_BottomLeft
+_Reverse-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/rate_fit/MC_Templates_N
+ominal.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 13936 bytes
+(epstopdf)             Output file: <images/measurement/rate_fit/MC_Templates_N
+ominal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 9017 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/rate_fi
+t/MC_Templates_Nominal-eps-converted-to.pdf images/measurement/rate_fit/MC_Temp
+lates_Nominal.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf, id=250,
+ 569.12625pt x 387.4475pt>
+File: images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/rate_fit/MC_Templates_Nominal-eps-c
+onverted-to.pdf used on input line 77.
+(pdftex.def)             Requested size: 426.79134pt x 290.56125pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--84
+
+ []
+
+[6] [7 <./images/measurement/rate_fit/MC_Templates_Nominal-eps-converted-to.pdf
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
+
+ []
+
+[8]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 105.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
-[15 <./images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-
-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 302--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--309
-
- []
-
-[16]
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_QRatio_Separation.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 11107 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_QRatio_Separation-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 9197 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_QRatio_Separation-eps-converted-to.pdf images/hough_3d_
-matching/3DMatching_Barrel_2Track_QRatio_Separation.eps>
-(epstopdf)             \includegraphics on input line 316.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+Package epstopdf Info: Source file: <images/measurement/systematics/flux/flux_p
+rediction_syst.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 407905 bytes
+(epstopdf)             Output file: <images/measurement/systematics/flux/flux_p
+rediction_syst-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:52:51
+(epstopdf)                    size: 63542 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/flux/flux_prediction_syst-eps-converted-to.pdf images/measurement/systemat
+ics/flux/flux_prediction_syst.eps>
+(epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-conver
-ted-to.pdf, id=465, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-c
-onverted-to.pdf Graphic file (type pdf)
+<images/measurement/systematics/flux/flux_prediction_syst-eps-converted-to.pdf,
+ id=274, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/flux/flux_prediction_syst-eps-converted-to
+.pdf Graphic file (type pdf)
 
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-co
-nverted-to.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_QRat
-io_Separation-eps-converted-to.pdf used on input line 316.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_QRatio_PDF.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 8987 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_QRatio_PDF-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 6741 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_QRatio_PDF-eps-converted-to.pdf images/hough_3d_matchin
-g/3DMatching_Barrel_2Track_QRatio_PDF.eps>
-(epstopdf)             \includegraphics on input line 317.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converted-to.
-pdf, id=466, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converte
-d-to.pdf Graphic file (type pdf)
-
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converted
--to.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_QRat
-io_PDF-eps-converted-to.pdf used on input line 317.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DFL_Separation.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 10361 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DFL_Separation-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 10219 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_DFL_Separation-eps-converted-to.pdf images/hough_3d_mat
-ching/3DMatching_Barrel_2Track_DFL_Separation.eps>
-(epstopdf)             \includegraphics on input line 339.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-converted
--to.pdf, id=470, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-conv
-erted-to.pdf Graphic file (type pdf)
-
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-conve
-rted-to.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_
-Separation-eps-converted-to.pdf used on input line 339.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DFL_PDF.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 7875 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DFL_PDF-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 7318 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_DFL_PDF-eps-converted-to.pdf images/hough_3d_matching/3
-DMatching_Barrel_2Track_DFL_PDF.eps>
-(epstopdf)             \includegraphics on input line 340.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-to.pdf
-, id=471, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-t
-o.pdf Graphic file (type pdf)
-
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-to
-.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_
-PDF-eps-converted-to.pdf used on input line 340.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DLL_Separation.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 10317 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DLL_Separation-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 10120 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_DLL_Separation-eps-converted-to.pdf images/hough_3d_mat
-ching/3DMatching_Barrel_2Track_DLL_Separation.eps>
-(epstopdf)             \includegraphics on input line 362.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-converted
--to.pdf, id=474, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-conv
-erted-to.pdf Graphic file (type pdf)
-
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-conve
-rted-to.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_
-Separation-eps-converted-to.pdf used on input line 362.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-
-Underfull \hbox (badness 1275) in paragraph at lines 362--362
-[][]|$\OT1/zplm/m/n/10 ^^A[]$ \OT1/ppl/m/n/10 (+20) dis-tri-bu-tion (area nor-m
-alised).
- []
-
-Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DLL_PDF.eps>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 7820 bytes
-(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
-_2Track_DLL_PDF-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-13 21:23:13
-(epstopdf)                    size: 7187 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
-DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf images/hough_3d_matching/3
-DMatching_Barrel_2Track_DLL_PDF.eps>
-(epstopdf)             \includegraphics on input line 363.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf
-, id=475, 569.12625pt x 451.6875pt>
-File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-t
-o.pdf Graphic file (type pdf)
-
-<use images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to
-.pdf>
-Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_
-PDF-eps-converted-to.pdf used on input line 363.
-(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--383
-
- []
-
-
-Underfull \vbox (badness 6691) has occurred while \output is active []
-
- [17 <./images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps
--converted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_
-PDF-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `subsec:ECal3DHitReconstruction' on page 18 undefined 
-on input line 389.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--390
-
- []
-
-[18 <./images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-con
-verted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps
--converted-to.pdf>]
-<images/hough_3d_matching/MergedTrackEventDisplay.pdf, id=533, 327.13155pt x 24
-9.05016pt>
-File: images/hough_3d_matching/MergedTrackEventDisplay.pdf Graphic file (type p
-df)
- <use images/hough_3d_matching/MergedTrackEventDisplay.pdf>
-Package pdftex.def Info: images/hough_3d_matching/MergedTrackEventDisplay.pdf u
-sed on input line 396.
-(pdftex.def)             Requested size: 199.16928pt x 151.63155pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--406
-
- []
-
-[19 <./images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-con
-verted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps
--converted-to.pdf>]
+<use images/measurement/systematics/flux/flux_prediction_syst-eps-converted-to.
+pdf>
+Package pdftex.def Info: images/measurement/systematics/flux/flux_prediction_sy
+st-eps-converted-to.pdf used on input line 113.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+ [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./images/hough_3d_matching/MergedTrackEventDisplay.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Package epstopdf Info: Source file: <images/hough_validation/MuonAngularResolut
-ionDSECal.eps>
-(epstopdf)                    date: 2015-07-17 17:18:43
-(epstopdf)                    size: 17228 bytes
-(epstopdf)             Output file: <images/hough_validation/MuonAngularResolut
-ionDSECal-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-07-17 17:20:35
-(epstopdf)                    size: 13772 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/Mu
-onAngularResolutionDSECal-eps-converted-to.pdf images/hough_validation/MuonAngu
-larResolutionDSECal.eps>
-(epstopdf)             \includegraphics on input line 464.
+ [10 <./images/measurement/systematics/flux/flux_prediction_syst-eps-converted-
+to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/flux/flux_c
+ovariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 28008 bytes
+(epstopdf)             Output file: <images/measurement/systematics/flux/flux_c
+ovariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 11670 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/flux/flux_covariance_matrix-eps-converted-to.pdf images/measurement/system
+atics/flux/flux_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf, id=6
-09, 569.12625pt x 386.44376pt>
-File: images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf 
+<images/measurement/systematics/flux/flux_covariance_matrix-eps-converted-to.pd
+f, id=291, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/flux/flux_covariance_matrix-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/flux/flux_covariance_matrix-eps-converted-t
+o.pdf>
+Package pdftex.def Info: images/measurement/systematics/flux/flux_covariance_ma
+trix-eps-converted-to.pdf used on input line 135.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/flux/flux_s
+hape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 27990 bytes
+(epstopdf)             Output file: <images/measurement/systematics/flux/flux_s
+hape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 12550 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/flux/flux_shape_covariance_matrix-eps-converted-to.pdf images/measurement/
+systematics/flux/flux_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/flux/flux_shape_covariance_matrix-eps-converted
+-to.pdf, id=292, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/flux/flux_shape_covariance_matrix-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/flux/flux_shape_covariance_matrix-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/flux/flux_shape_covaria
+nce_matrix-eps-converted-to.pdf used on input line 136.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 135--137
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/flux/flux_e
+fficiency_variation.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 8768 bytes
+(epstopdf)             Output file: <images/measurement/systematics/flux/flux_e
+fficiency_variation-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 8009 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/flux/flux_efficiency_variation-eps-converted-to.pdf images/measurement/sys
+tematics/flux/flux_efficiency_variation.eps>
+(epstopdf)             \includegraphics on input line 145.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/flux/flux_efficiency_variation-eps-converted-to
+.pdf, id=293, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/flux/flux_efficiency_variation-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/flux/flux_efficiency_variation-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/flux/flux_efficiency_va
+riation-eps-converted-to.pdf used on input line 145.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--149
+
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/xsec_p
+rediction_syst.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 22310 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/xsec_p
+rediction_syst-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 11802 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/xsec_prediction_syst-eps-converted-to.pdf images/measurement/systemat
+ics/xsec/xsec_prediction_syst.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-to.pdf,
+ id=298, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-to
+.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-to.
+pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/xsec_prediction_sy
+st-eps-converted-to.pdf used on input line 155.
+(pdftex.def)             Requested size: 341.43306pt x 232.44664pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/xsec_c
+ovariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 27622 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/xsec_c
+ovariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 11455 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/xsec_covariance_matrix-eps-converted-to.pdf images/measurement/system
+atics/xsec/xsec_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/xsec_covariance_matrix-eps-converted-to.pd
+f, id=304, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/xsec_covariance_matrix-eps-converted-
+to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/xsec_covariance_matrix-eps-converted-t
+o.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/xsec_covariance_ma
+trix-eps-converted-to.pdf used on input line 164.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/xsec_s
+hape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 27397 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/xsec_s
+hape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 11547 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/xsec_shape_covariance_matrix-eps-converted-to.pdf images/measurement/
+systematics/xsec/xsec_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 165.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/xsec_shape_covariance_matrix-eps-converted
+-to.pdf, id=305, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/xsec_shape_covariance_matrix-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/xsec_shape_covariance_matrix-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/xsec_shape_covaria
+nce_matrix-eps-converted-to.pdf used on input line 165.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 164--166
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/xsec_e
+fficiency_variation.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 8393 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/xsec_e
+fficiency_variation-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 7935 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/xsec_efficiency_variation-eps-converted-to.pdf images/measurement/sys
+tematics/xsec/xsec_efficiency_variation.eps>
+(epstopdf)             \includegraphics on input line 174.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/xsec_efficiency_variation-eps-converted-to
+.pdf, id=307, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/xsec_efficiency_variation-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/xsec_efficiency_variation-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/xsec_efficiency_va
+riation-eps-converted-to.pdf used on input line 174.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/pbxsec
+_pf_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 10419 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/pbxsec
+_pf_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 10143 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf images/measurement/systematics/x
+sec/pbxsec_pf_ratio.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf, id=3
+12, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
-<use images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf>
-Package pdftex.def Info: images/hough_validation/MuonAngularResolutionDSECal-ep
-s-converted-to.pdf used on input line 464.
-(pdftex.def)             Requested size: 256.0748pt x 173.88629pt.
+<use images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/pbxsec_pf_ratio-ep
+s-converted-to.pdf used on input line 183.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/pbxsec
+_eb_ratio.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 11271 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/pbxsec
+_eb_ratio-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 10438 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf images/measurement/systematics/x
+sec/pbxsec_eb_ratio.eps>
+(epstopdf)             \includegraphics on input line 184.
+Package epstopdf Info: Output file is already uptodate.
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+<images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf, id=3
+13, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/pbxsec_eb_ratio-ep
+s-converted-to.pdf used on input line 184.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 183--185
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/pb_xse
+c_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 27156 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/pb_xse
+c_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 12450 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/pb_xsec_covariance_matrix-eps-converted-to.pdf images/measurement/sys
+tematics/xsec/pb_xsec_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 190.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/pb_xsec_covariance_matrix-eps-converted-to
+.pdf, id=314, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/pb_xsec_covariance_matrix-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/pb_xsec_covariance_matrix-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/pb_xsec_covariance
+_matrix-eps-converted-to.pdf used on input line 190.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/pb_xse
+c_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 28195 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/pb_xse
+c_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 12699 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/pb_xsec_shape_covariance_matrix-eps-converted-to.pdf images/measureme
+nt/systematics/xsec/pb_xsec_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix-eps-conver
+ted-to.pdf, id=315, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/pb_xsec_shape_covariance_matrix-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/pb_xsec_shape_cova
+riance_matrix-eps-converted-to.pdf used on input line 191.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 190--192
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--198
 
  []
 
 
-Underfull \vbox (badness 7030) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 151--198
 
- [22]))
-Processing 'backmatter' comment. [23 <./images/hough_validation/MuonAngularReso
-lutionDSECal-eps-converted-to.pdf>] [24
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--198
+
+ []
+
+
+Overfull \hbox (1.22067pt too wide) in paragraph at lines 151--198
+\OT1/ppl/m/n/12 (-20) As dis-cussed above, the re-weighting of el-e-ment spe-ci
+fic pa-ram-e-ters for events matched
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--198
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+[12 <./images/measurement/systematics/flux/flux_covariance_matrix-eps-converted
+-to.pdf> <./images/measurement/systematics/flux/flux_shape_covariance_matrix-ep
+s-converted-to.pdf> <./images/measurement/systematics/flux/flux_efficiency_vari
+ation-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 3323) has occurred while \output is active []
+
+ [14 <./images/measurement/systematics/xsec/xsec_prediction_syst-eps-converted-
+to.pdf> <./images/measurement/systematics/xsec/xsec_covariance_matrix-eps-conve
+rted-to.pdf> <./images/measurement/systematics/xsec/xsec_shape_covariance_matri
+x-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./images/measurement/systematics/xsec/xsec_efficiency_variation-eps-conve
+rted-to.pdf>] [16 <./images/measurement/systematics/xsec/pbxsec_pf_ratio-eps-co
+nverted-to.pdf> <./images/measurement/systematics/xsec/pbxsec_eb_ratio-eps-conv
+erted-to.pdf> <./images/measurement/systematics/xsec/pb_xsec_covariance_matrix-
+eps-converted-to.pdf> <./images/measurement/systematics/xsec/pb_xsec_shape_cova
+riance_matrix-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/fsi_co
+variance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 28080 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/fsi_co
+variance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 12637 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/fsi_covariance_matrix-eps-converted-to.pdf images/measurement/systema
+tics/xsec/fsi_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted-to.pdf
+, id=450, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted-to
+.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/fsi_covariance_mat
+rix-eps-converted-to.pdf used on input line 236.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/xsec/fsi_sh
+ape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 28446 bytes
+(epstopdf)             Output file: <images/measurement/systematics/xsec/fsi_sh
+ape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:11
+(epstopdf)                    size: 12563 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/xsec/fsi_shape_covariance_matrix-eps-converted-to.pdf images/measurement/s
+ystematics/xsec/fsi_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 237.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps-converted-
+to.pdf, id=451, 569.12625pt x 387.4475pt>
+File: images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps-conve
+rted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps-conver
+ted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/xsec/fsi_shape_covarian
+ce_matrix-eps-converted-to.pdf used on input line 237.
+(pdftex.def)             Requested size: 227.62204pt x 154.95851pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 236--238
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `chap:EnhancedECalReconstruction' on page 17 undefined
+ on input line 250.
+
+
+LaTeX Warning: Reference `sec:ECalEventReconstruction' on page 17 undefined on 
+input line 250.
+
+
+<images/measurement/systematics/detector/threshold/layer_efficiency_cosmics_dat
+a.pdf, id=458, 290.17308pt x 207.07172pt>
+File: images/measurement/systematics/detector/threshold/layer_efficiency_cosmic
+s_data.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/layer_efficiency_cosmics
+_data.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/laye
+r_efficiency_cosmics_data.pdf used on input line 256.
+(pdftex.def)             Requested size: 284.52756pt x 203.05211pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--260
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./images/measurement/systematics/xsec/fsi_covariance_matrix-eps-converted
+-to.pdf> <./images/measurement/systematics/xsec/fsi_shape_covariance_matrix-eps
+-converted-to.pdf>] [18]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/hit_charge_cosmic_MC_PEU.eps>
+(epstopdf)                    date: 2015-05-22 17:50:12
+(epstopdf)                    size: 8749 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/hit_charge_cosmic_MC_PEU-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:27:42
+(epstopdf)                    size: 8736 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/hit_charge_cosmic_MC_PEU-eps-converted-to.pdf images/me
+asurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU.eps>
+(epstopdf)             \includegraphics on input line 267.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU-eps
+-converted-to.pdf, id=494, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PE
+U-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/hit_charge_cosmic_MC_PEU
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/hit_
+charge_cosmic_MC_PEU-eps-converted-to.pdf used on input line 267.
+(pdftex.def)             Requested size: 284.52756pt x 192.70187pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 19:51:52
+(epstopdf)                    size: 29321 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:56:46
+(epstopdf)                    size: 15037 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/ecal_threshold_covariance_matrix-eps-converted-to.pdf i
+mages/measurement/systematics/detector/threshold/ecal_threshold_covariance_matr
+ix.eps>
+(epstopdf)             \includegraphics on input line 274.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/ecal_threshold_covariance_ma
+trix-eps-converted-to.pdf, id=497, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/threshold/ecal_threshold_covarian
+ce_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/ecal_threshold_covarianc
+e_matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/ecal
+_threshold_covariance_matrix-eps-converted-to.pdf used on input line 274.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 19:52:53
+(epstopdf)                    size: 29848 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/th
+reshold/ecal_threshold_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 19:56:48
+(epstopdf)                    size: 15755 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/threshold/ecal_threshold_shape_covariance_matrix-eps-converted-to
+.pdf images/measurement/systematics/detector/threshold/ecal_threshold_shape_cov
+ariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 275.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/threshold/ecal_threshold_shape_covaria
+nce_matrix-eps-converted-to.pdf, id=498, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/threshold/ecal_threshold_shape_co
+variance_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/threshold/ecal_threshold_shape_cov
+ariance_matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/threshold/ecal
+_threshold_shape_covariance_matrix-eps-converted-to.pdf used on input line 275.
+
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 274--276
+ [][][] 
+ []
+
+
+<images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf, id=5
+00, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf 
+Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/charge/HitChar
+ge_Cosmics_TLB.pdf used on input line 284.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+<images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics_TLB.
+pdf, id=501, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics
+_TLB.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics_
+TLB.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/charge/HitChar
+geCorrected_Cosmics_TLB.pdf used on input line 285.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 284--286
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--290
+
+ []
+
+[19] [20 <./images/measurement/systematics/detector/threshold/layer_efficiency_
+cosmics_data.pdf> <./images/measurement/systematics/detector/threshold/hit_char
+ge_cosmic_MC_PEU-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./images/measurement/systematics/detector/threshold/ecal_threshold_covari
+ance_matrix-eps-converted-to.pdf> <./images/measurement/systematics/detector/th
+reshold/ecal_threshold_shape_covariance_matrix-eps-converted-to.pdf>] [22 <./im
+ages/measurement/systematics/detector/charge/HitCharge_Cosmics_TLB.pdf> <./imag
+es/measurement/systematics/detector/charge/HitChargeCorrected_Cosmics_TLB.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ch
+arge/ecal_charge_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-02 22:15:19
+(epstopdf)                    size: 29787 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ch
+arge/ecal_charge_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-02 22:16:49
+(epstopdf)                    size: 15347 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/charge/ecal_charge_covariance_matrix-eps-converted-to.pdf images/
+measurement/systematics/detector/charge/ecal_charge_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 331.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/charge/ecal_charge_covariance_matrix-e
+ps-converted-to.pdf, id=631, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/charge/ecal_charge_covariance_mat
+rix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/charge/ecal_charge_covariance_matr
+ix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/charge/ecal_ch
+arge_covariance_matrix-eps-converted-to.pdf used on input line 331.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ch
+arge/ecal_charge_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-02 22:14:43
+(epstopdf)                    size: 29926 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ch
+arge/ecal_charge_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-02 22:16:52
+(epstopdf)                    size: 15394 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/charge/ecal_charge_shape_covariance_matrix-eps-converted-to.pdf i
+mages/measurement/systematics/detector/charge/ecal_charge_shape_covariance_matr
+ix.eps>
+(epstopdf)             \includegraphics on input line 332.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/charge/ecal_charge_shape_covariance_ma
+trix-eps-converted-to.pdf, id=632, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/charge/ecal_charge_shape_covarian
+ce_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/charge/ecal_charge_shape_covarianc
+e_matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/charge/ecal_ch
+arge_shape_covariance_matrix-eps-converted-to.pdf used on input line 332.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 331--333
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_mc_true_barrel.eps>
+(epstopdf)                    date: 2015-06-03 20:40:13
+(epstopdf)                    size: 10720 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_mc_true_barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 20:41:05
+(epstopdf)                    size: 8460 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/noise_mc_estimate_mc_true_barrel-eps-converted-to.pdf image
+s/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel.eps>
+(epstopdf)             \includegraphics on input line 344.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel
+-eps-converted-to.pdf, id=633, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_b
+arrel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ba
+rrel-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/noise_mc
+_estimate_mc_true_barrel-eps-converted-to.pdf used on input line 344.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_mc_true_ds.eps>
+(epstopdf)                    date: 2015-06-03 21:07:05
+(epstopdf)                    size: 10945 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_mc_true_ds-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 21:07:41
+(epstopdf)                    size: 8482 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/noise_mc_estimate_mc_true_ds-eps-converted-to.pdf images/me
+asurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds.eps>
+(epstopdf)             \includegraphics on input line 345.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds-eps
+-converted-to.pdf, id=634, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_d
+s-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/noise_mc
+_estimate_mc_true_ds-eps-converted-to.pdf used on input line 345.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 344--346
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_data_estimate_barrel.eps>
+(epstopdf)                    date: 2015-06-04 22:21:00
+(epstopdf)                    size: 10071 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_data_estimate_barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-04 22:37:32
+(epstopdf)                    size: 7845 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/noise_mc_estimate_data_estimate_barrel-eps-converted-to.pdf
+ images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_
+barrel.eps>
+(epstopdf)             \includegraphics on input line 352.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_
+barrel-eps-converted-to.pdf, id=639, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/noise/noise_mc_estimate_data_esti
+mate_barrel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/noise_mc_estimate_data_estim
+ate_barrel-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/noise_mc
+_estimate_data_estimate_barrel-eps-converted-to.pdf used on input line 352.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_data_estimate_ds.eps>
+(epstopdf)                    date: 2015-06-04 22:41:28
+(epstopdf)                    size: 9525 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/noise_mc_estimate_data_estimate_ds-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-04 22:41:44
+(epstopdf)                    size: 7917 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/noise_mc_estimate_data_estimate_ds-eps-converted-to.pdf ima
+ges/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_ds.e
+ps>
+(epstopdf)             \includegraphics on input line 353.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_
+ds-eps-converted-to.pdf, id=640, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/noise/noise_mc_estimate_data_esti
+mate_ds-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/noise_mc_estimate_data_estim
+ate_ds-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/noise_mc
+_estimate_data_estimate_ds-eps-converted-to.pdf used on input line 353.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 352--354
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/ecal_noise_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-05 12:12:45
+(epstopdf)                    size: 28708 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/ecal_noise_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-05 12:14:49
+(epstopdf)                    size: 15262 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/ecal_noise_covariance_matrix-eps-converted-to.pdf images/me
+asurement/systematics/detector/noise/ecal_noise_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 369.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/ecal_noise_covariance_matrix-eps
+-converted-to.pdf, id=642, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/noise/ecal_noise_covariance_matri
+x-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/ecal_noise_covariance_matrix
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/ecal_noi
+se_covariance_matrix-eps-converted-to.pdf used on input line 369.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/no
+ise/ecal_noise_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-05 12:12:17
+(epstopdf)                    size: 30178 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/no
+ise/ecal_noise_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-05 12:14:52
+(epstopdf)                    size: 15773 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/noise/ecal_noise_shape_covariance_matrix-eps-converted-to.pdf ima
+ges/measurement/systematics/detector/noise/ecal_noise_shape_covariance_matrix.e
+ps>
+(epstopdf)             \includegraphics on input line 370.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/noise/ecal_noise_shape_covariance_matr
+ix-eps-converted-to.pdf, id=643, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/noise/ecal_noise_shape_covariance
+_matrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/noise/ecal_noise_shape_covariance_
+matrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/noise/ecal_noi
+se_shape_covariance_matrix-eps-converted-to.pdf used on input line 370.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 369--371
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--393
+
+ []
+
+
+Underfull \vbox (badness 2050) has occurred while \output is active []
+
+ [23]
+[24 <./images/measurement/systematics/detector/charge/ecal_charge_covariance_ma
+trix-eps-converted-to.pdf> <./images/measurement/systematics/detector/charge/ec
+al_charge_shape_covariance_matrix-eps-converted-to.pdf>] [25 <./images/measurem
+ent/systematics/detector/noise/noise_mc_estimate_mc_true_barrel-eps-converted-t
+o.pdf> <./images/measurement/systematics/detector/noise/noise_mc_estimate_mc_tr
+ue_ds-eps-converted-to.pdf> <./images/measurement/systematics/detector/noise/no
+ise_mc_estimate_data_estimate_barrel-eps-converted-to.pdf> <./images/measuremen
+t/systematics/detector/noise/noise_mc_estimate_data_estimate_ds-eps-converted-t
+o.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26 <./images/measurement/systematics/detector/noise/ecal_noise_covariance_mat
+rix-eps-converted-to.pdf> <./images/measurement/systematics/detector/noise/ecal
+_noise_shape_covariance_matrix-eps-converted-to.pdf>] [27] [28]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/MassCov_DSECal_AllElements.eps>
+(epstopdf)                    date: 2015-05-15 08:41:51
+(epstopdf)                    size: 20151 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/MassCov_DSECal_AllElements-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 08:43:44
+(epstopdf)                    size: 12525 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/MassCov_DSECal_AllElements-eps-converted-to.pdf images/measu
+rement/systematics/detector/mass/MassCov_DSECal_AllElements.eps>
+(epstopdf)             \includegraphics on input line 446.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-eps-co
+nverted-to.pdf, id=769, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-ep
+s-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_D
+SECal_AllElements-eps-converted-to.pdf used on input line 446.
+(pdftex.def)             Requested size: 284.52756pt x 193.2037pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/TotalMass_DSECal.eps>
+(epstopdf)                    date: 2015-05-15 19:47:49
+(epstopdf)                    size: 15710 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/TotalMass_DSECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 19:49:34
+(epstopdf)                    size: 9829 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/TotalMass_DSECal-eps-converted-to.pdf images/measurement/sys
+tematics/detector/mass/TotalMass_DSECal.eps>
+(epstopdf)             \includegraphics on input line 452.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-converted-to
+.pdf, id=770, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-convert
+ed-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-converte
+d-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/TotalMass
+_DSECal-eps-converted-to.pdf used on input line 452.
+(pdftex.def)             Requested size: 284.52756pt x 193.2037pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/MassCov_TopBottomECal_ReducedElements.eps>
+(epstopdf)                    date: 2015-05-15 20:10:13
+(epstopdf)                    size: 18260 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/MassCov_TopBottomECal_ReducedElements-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 20:15:19
+(epstopdf)                    size: 11673 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/MassCov_TopBottomECal_ReducedElements-eps-converted-to.pdf i
+mages/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElemen
+ts.eps>
+(epstopdf)             \includegraphics on input line 459.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/MassCov_TopBottomECal_ReducedElem
+ents-eps-converted-to.pdf, id=771, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/MassCov_TopBottomECal_Reduce
+dElements-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/MassCov_TopBottomECal_Reduced
+Elements-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_T
+opBottomECal_ReducedElements-eps-converted-to.pdf used on input line 459.
+(pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/MassCov_SideECal_ReducedElements.eps>
+(epstopdf)                    date: 2015-05-15 20:10:37
+(epstopdf)                    size: 18362 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/MassCov_SideECal_ReducedElements-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 20:15:22
+(epstopdf)                    size: 11868 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/MassCov_SideECal_ReducedElements-eps-converted-to.pdf images
+/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements.eps>
+(epstopdf)             \includegraphics on input line 463.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElements-
+eps-converted-to.pdf, id=772, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedElem
+ents-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/MassCov_SideECal_ReducedEleme
+nts-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_S
+ideECal_ReducedElements-eps-converted-to.pdf used on input line 463.
+(pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/MassCov_DSECal_ReducedElements.eps>
+(epstopdf)                    date: 2015-05-15 20:11:04
+(epstopdf)                    size: 18876 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/MassCov_DSECal_ReducedElements-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 20:15:24
+(epstopdf)                    size: 11915 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/MassCov_DSECal_ReducedElements-eps-converted-to.pdf images/m
+easurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps>
+(epstopdf)             \includegraphics on input line 467.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements-ep
+s-converted-to.pdf, id=773, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElemen
+ts-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElement
+s-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/MassCov_D
+SECal_ReducedElements-eps-converted-to.pdf used on input line 467.
+(pdftex.def)             Requested size: 213.39566pt x 144.89836pt.
+ [29]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/ecal_mass_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-15 20:26:25
+(epstopdf)                    size: 28212 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/ecal_mass_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 20:28:23
+(epstopdf)                    size: 15151 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/ecal_mass_covariance_matrix-eps-converted-to.pdf images/meas
+urement/systematics/detector/mass/ecal_mass_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 477.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-eps-c
+onverted-to.pdf, id=783, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/ecal_mass
+_covariance_matrix-eps-converted-to.pdf used on input line 477.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/ma
+ss/ecal_mass_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-15 20:26:02
+(epstopdf)                    size: 28669 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/ma
+ss/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-15 20:28:25
+(epstopdf)                    size: 15295 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/mass/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf image
+s/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 478.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_matrix
+-eps-converted-to.pdf, id=784, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_m
+atrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/mass/ecal_mass_shape_covariance_ma
+trix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/mass/ecal_mass
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 478.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 477--479
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `fig:ProngStackSelected' on page 30 undefined on input
+ line 484.
+
+
+LaTeX Warning: Reference `fig:ProngStackSelected' on page 30 undefined on input
+ line 484.
+
+
+LaTeX Warning: Reference `fig:SelOOFVEventSurvivalBarrel' on page 30 undefined 
+on input line 484.
+
+
+LaTeX Warning: Reference `fig:SelOOFVEventSurvivalDS' on page 30 undefined on i
+nput line 484.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--485
+
+ []
+
+[30 <./images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements-
+eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./images/measurement/systematics/detector/mass/TotalMass_DSECal-eps-conve
+rted-to.pdf>] [32 <./images/measurement/systematics/detector/mass/MassCov_TopBo
+ttomECal_ReducedElements-eps-converted-to.pdf> <./images/measurement/systematic
+s/detector/mass/MassCov_SideECal_ReducedElements-eps-converted-to.pdf> <./image
+s/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements-eps-conv
+erted-to.pdf> <./images/measurement/systematics/detector/mass/ecal_mass_covaria
+nce_matrix-eps-converted-to.pdf> <./images/measurement/systematics/detector/mas
+s/ecal_mass_shape_covariance_matrix-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 16:12:03
+(epstopdf)                    size: 28158 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 16:18:19
+(epstopdf)                    size: 15086 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/oofv/ecal_oofv_covariance_matrix-eps-converted-to.pdf images/meas
+urement/systematics/detector/oofv/ecal_oofv_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 509.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-eps-c
+onverted-to.pdf, id=869, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/oofv/ecal_oofv
+_covariance_matrix-eps-converted-to.pdf used on input line 509.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-05-22 16:13:13
+(epstopdf)                    size: 29235 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/oo
+fv/ecal_oofv_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-22 16:18:22
+(epstopdf)                    size: 15429 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/oofv/ecal_oofv_shape_covariance_matrix-eps-converted-to.pdf image
+s/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 510.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_matrix
+-eps-converted-to.pdf, id=870, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_m
+atrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/oofv/ecal_oofv_shape_covariance_ma
+trix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/oofv/ecal_oofv
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 510.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 509--511
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `sec:ReconstructionValidation' on page 33 undefined on
+ input line 516.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--517
+
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/bu
+g/ecal_hough_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-02 23:41:57
+(epstopdf)                    size: 28342 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/bu
+g/ecal_hough_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-02 23:48:03
+(epstopdf)                    size: 14182 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/bug/ecal_hough_covariance_matrix-eps-converted-to.pdf images/meas
+urement/systematics/detector/bug/ecal_hough_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 523.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix-eps-c
+onverted-to.pdf, id=872, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/bug/ecal_hough
+_covariance_matrix-eps-converted-to.pdf used on input line 523.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/bu
+g/ecal_hough_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-02 23:42:34
+(epstopdf)                    size: 29993 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/bu
+g/ecal_hough_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-02 23:48:06
+(epstopdf)                    size: 15562 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/bug/ecal_hough_shape_covariance_matrix-eps-converted-to.pdf image
+s/measurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 524.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix
+-eps-converted-to.pdf, id=873, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_m
+atrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/bug/ecal_hough_shape_covariance_ma
+trix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/bug/ecal_hough
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 524.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 523--525
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/fg
+d/fgd_systematics_nevents.eps>
+(epstopdf)                    date: 2015-06-07 19:15:42
+(epstopdf)                    size: 9501 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/fg
+d/fgd_systematics_nevents-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 20:32:42
+(epstopdf)                    size: 9120 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/fgd/fgd_systematics_nevents-eps-converted-to.pdf images/measureme
+nt/systematics/detector/fgd/fgd_systematics_nevents.eps>
+(epstopdf)             \includegraphics on input line 533.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps-conver
+ted-to.pdf, id=884, 569.12625pt x 385.44pt>
+File: images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/fgd/fgd_system
+atics_nevents-eps-converted-to.pdf used on input line 533.
+(pdftex.def)             Requested size: 284.52756pt x 192.70187pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/to
+tal/detector_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-07 21:09:18
+(epstopdf)                    size: 28138 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/to
+tal/detector_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 21:12:07
+(epstopdf)                    size: 13967 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/total/detector_covariance_matrix-eps-converted-to.pdf images/meas
+urement/systematics/detector/total/detector_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 542.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/total/detector_covariance_matrix-eps-c
+onverted-to.pdf, id=886, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/total/detector_covariance_matrix-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/total/detector_covariance_matrix-e
+ps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/total/detector
+_covariance_matrix-eps-converted-to.pdf used on input line 542.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/detector/to
+tal/detector_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-07 21:10:06
+(epstopdf)                    size: 29530 bytes
+(epstopdf)             Output file: <images/measurement/systematics/detector/to
+tal/detector_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 21:12:09
+(epstopdf)                    size: 15230 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/detector/total/detector_shape_covariance_matrix-eps-converted-to.pdf image
+s/measurement/systematics/detector/total/detector_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 543.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/detector/total/detector_shape_covariance_matrix
+-eps-converted-to.pdf, id=887, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/detector/total/detector_shape_covariance_m
+atrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/detector/total/detector_shape_covariance_ma
+trix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/detector/total/detector
+_shape_covariance_matrix-eps-converted-to.pdf used on input line 543.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 542--544
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/systematics/total/total
+_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-07 21:31:25
+(epstopdf)                    size: 28368 bytes
+(epstopdf)             Output file: <images/measurement/systematics/total/total
+_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 21:33:52
+(epstopdf)                    size: 14198 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/total/total_covariance_matrix-eps-converted-to.pdf images/measurement/syst
+ematics/total/total_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 550.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/total/total_covariance_matrix-eps-converted-to.
+pdf, id=889, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/total/total_covariance_matrix-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/total/total_covariance_matrix-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/total/total_covariance_
+matrix-eps-converted-to.pdf used on input line 550.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/total/total
+_shape_covariance_matrix.eps>
+(epstopdf)                    date: 2015-06-07 21:31:48
+(epstopdf)                    size: 28679 bytes
+(epstopdf)             Output file: <images/measurement/systematics/total/total
+_shape_covariance_matrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 21:33:55
+(epstopdf)                    size: 15111 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/total/total_shape_covariance_matrix-eps-converted-to.pdf images/measuremen
+t/systematics/total/total_shape_covariance_matrix.eps>
+(epstopdf)             \includegraphics on input line 551.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/total/total_shape_covariance_matrix-eps-convert
+ed-to.pdf, id=890, 569.12625pt x 386.44376pt>
+File: images/measurement/systematics/total/total_shape_covariance_matrix-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/total/total_shape_covariance_matrix-eps-con
+verted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/total/total_shape_covar
+iance_matrix-eps-converted-to.pdf used on input line 551.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 550--552
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 34 undefin
+ed on input line 557.
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 34 undefin
+ed on input line 557.
+
+
+LaTeX Warning: Reference `subsec:SelectionPerformance' on page 34 undefined on 
+input line 560.
+
+Package epstopdf Info: Source file: <images/measurement/systematics/genie/Prong
+Stack_Barrel_Selected_GENIE.eps>
+(epstopdf)                    date: 2015-06-07 14:43:55
+(epstopdf)                    size: 16742 bytes
+(epstopdf)             Output file: <images/measurement/systematics/genie/Prong
+Stack_Barrel_Selected_GENIE-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 14:51:16
+(epstopdf)                    size: 11190 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/genie/ProngStack_Barrel_Selected_GENIE-eps-converted-to.pdf images/measure
+ment/systematics/genie/ProngStack_Barrel_Selected_GENIE.eps>
+(epstopdf)             \includegraphics on input line 563.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-eps-conv
+erted-to.pdf, id=895, 569.12625pt x 474.77374pt>
+File: images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/genie/ProngStack_Barrel
+_Selected_GENIE-eps-converted-to.pdf used on input line 563.
+(pdftex.def)             Requested size: 256.0748pt x 213.63171pt.
+Package epstopdf Info: Source file: <images/measurement/systematics/genie/Prong
+Stack_DS_Selected_GENIE.eps>
+(epstopdf)                    date: 2015-06-07 14:43:55
+(epstopdf)                    size: 16989 bytes
+(epstopdf)             Output file: <images/measurement/systematics/genie/Prong
+Stack_DS_Selected_GENIE-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-07 14:51:18
+(epstopdf)                    size: 11156 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/systema
+tics/genie/ProngStack_DS_Selected_GENIE-eps-converted-to.pdf images/measurement
+/systematics/genie/ProngStack_DS_Selected_GENIE.eps>
+(epstopdf)             \includegraphics on input line 564.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE-eps-converte
+d-to.pdf, id=896, 569.12625pt x 473.77pt>
+File: images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/measurement/systematics/genie/ProngStack_DS_Sel
+ected_GENIE-eps-converted-to.pdf used on input line 564.
+(pdftex.def)             Requested size: 256.0748pt x 213.18007pt.
+
+Overfull \hbox (70.07582pt too wide) in paragraph at lines 563--565
+ [][][] 
+ []
+
+
+Overfull \hbox (14.38947pt too wide) in paragraph at lines 569--575
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--590
+
+ []
+
+[34 <./images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix
+-eps-converted-to.pdf> <./images/measurement/systematics/detector/oofv/ecal_oof
+v_shape_covariance_matrix-eps-converted-to.pdf> <./images/measurement/systemati
+cs/detector/bug/ecal_hough_covariance_matrix-eps-converted-to.pdf> <./images/me
+asurement/systematics/detector/bug/ecal_hough_shape_covariance_matrix-eps-conve
+rted-to.pdf>]
+Underfull \vbox (badness 5578) has occurred while \output is active []
+
+ [35 <./images/measurement/systematics/detector/fgd/fgd_systematics_nevents-eps
+-converted-to.pdf>] [36 <./images/measurement/systematics/detector/total/detect
+or_covariance_matrix-eps-converted-to.pdf> <./images/measurement/systematics/de
+tector/total/detector_shape_covariance_matrix-eps-converted-to.pdf> <./images/m
+easurement/systematics/total/total_covariance_matrix-eps-converted-to.pdf> <./i
+mages/measurement/systematics/total/total_shape_covariance_matrix-eps-converted
+-to.pdf>]
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [37]
+[38 <./images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE-ep
+s-converted-to.pdf> <./images/measurement/systematics/genie/ProngStack_DS_Selec
+ted_GENIE-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 39 undefin
+ed on input line 591.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \hbox (badness 10000) in paragraph at lines 609--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--638
+
+ []
+
+[40]
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_RPbFit_ParamSet1.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 10100 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_RPbFit_ParamSet1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:16
+(epstopdf)                    size: 8298 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_RPbFit_ParamSet1-eps-converted-to.pdf images/measureme
+nt/validation/machinery/rateFitVal_RPbFit_ParamSet1.eps>
+(epstopdf)             \includegraphics on input line 645.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-conver
+ted-to.pdf, id=1055, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_RPb
+Fit_ParamSet1-eps-converted-to.pdf used on input line 645.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_RPbPull_ParamSet1.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 9289 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_RPbPull_ParamSet1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:18
+(epstopdf)                    size: 8191 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_RPbPull_ParamSet1-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_RPbPull_ParamSet1.eps>
+(epstopdf)             \includegraphics on input line 646.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1-eps-conve
+rted-to.pdf, id=1056, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_RPb
+Pull_ParamSet1-eps-converted-to.pdf used on input line 646.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 645--647
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet1.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5826 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:20
+(epstopdf)                    size: 6609 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet1-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_FitVals_ParamSet1.eps>
+(epstopdf)             \includegraphics on input line 652.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1-eps-conve
+rted-to.pdf, id=1057, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet1-eps-converted-to.pdf used on input line 652.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet1.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:22
+(epstopdf)                    size: 6536 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet1-eps-converted-to.pdf images/measure
+ment/validation/machinery/rateFitVal_FitPulls_ParamSet1.eps>
+(epstopdf)             \includegraphics on input line 653.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1-eps-conv
+erted-to.pdf, id=1058, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet1-eps-converted-to.pdf used on input line 653.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 652--654
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet2.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5997 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:25
+(epstopdf)                    size: 6666 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet2-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_FitVals_ParamSet2.eps>
+(epstopdf)             \includegraphics on input line 660.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-conve
+rted-to.pdf, id=1065, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet2-eps-converted-to.pdf used on input line 660.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet2.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:27
+(epstopdf)                    size: 6533 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet2-eps-converted-to.pdf images/measure
+ment/validation/machinery/rateFitVal_FitPulls_ParamSet2.eps>
+(epstopdf)             \includegraphics on input line 661.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-eps-conv
+erted-to.pdf, id=1066, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet2-eps-converted-to.pdf used on input line 661.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 660--662
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet3.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5857 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet3-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:30
+(epstopdf)                    size: 6655 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet3-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_FitVals_ParamSet3.eps>
+(epstopdf)             \includegraphics on input line 667.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3-eps-conve
+rted-to.pdf, id=1067, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet3-eps-converted-to.pdf used on input line 667.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet3.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet3-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:32
+(epstopdf)                    size: 6530 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet3-eps-converted-to.pdf images/measure
+ment/validation/machinery/rateFitVal_FitPulls_ParamSet3.eps>
+(epstopdf)             \includegraphics on input line 668.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3-eps-conv
+erted-to.pdf, id=1068, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet3-eps-converted-to.pdf used on input line 668.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 667--669
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet4.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 6033 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet4-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:34
+(epstopdf)                    size: 6667 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet4-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_FitVals_ParamSet4.eps>
+(epstopdf)             \includegraphics on input line 674.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4-eps-conve
+rted-to.pdf, id=1069, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet4-eps-converted-to.pdf used on input line 674.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet4.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet4-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:37
+(epstopdf)                    size: 6535 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet4-eps-converted-to.pdf images/measure
+ment/validation/machinery/rateFitVal_FitPulls_ParamSet4.eps>
+(epstopdf)             \includegraphics on input line 675.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps-conv
+erted-to.pdf, id=1070, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet4-eps-converted-to.pdf used on input line 675.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 674--676
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet5.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 6328 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:39
+(epstopdf)                    size: 6877 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet5-eps-converted-to.pdf images/measurem
+ent/validation/machinery/rateFitVal_FitVals_ParamSet5.eps>
+(epstopdf)             \includegraphics on input line 681.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5-eps-conve
+rted-to.pdf, id=1071, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet5-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet5-eps-converted-to.pdf used on input line 681.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet5.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet5-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:41
+(epstopdf)                    size: 6531 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet5-eps-converted-to.pdf images/measure
+ment/validation/machinery/rateFitVal_FitPulls_ParamSet5.eps>
+(epstopdf)             \includegraphics on input line 682.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5-eps-conv
+erted-to.pdf, id=1072, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet5-eps-
+converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet5-eps-converted-to.pdf used on input line 682.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 681--683
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet1_NoReverse.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5992 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitVals_ParamSet1_NoReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:44
+(epstopdf)                    size: 6657 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitVals_ParamSet1_NoReverse-eps-converted-to.pdf image
+s/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse.eps>
+(epstopdf)             \includegraphics on input line 688.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoReverse
+-eps-converted-to.pdf, id=1073, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoRe
+verse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoRev
+erse-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Vals_ParamSet1_NoReverse-eps-converted-to.pdf used on input line 688.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet1_NoReverse.eps>
+(epstopdf)                    date: 2015-06-12 12:03:44
+(epstopdf)                    size: 5914 bytes
+(epstopdf)             Output file: <images/measurement/validation/machinery/ra
+teFitVal_FitPulls_ParamSet1_NoReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 12:05:46
+(epstopdf)                    size: 6532 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/machinery/rateFitVal_FitPulls_ParamSet1_NoReverse-eps-converted-to.pdf imag
+es/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoReverse.eps
+>
+(epstopdf)             \includegraphics on input line 689.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoRevers
+e-eps-converted-to.pdf, id=1074, 569.12625pt x 385.44pt>
+File: images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoR
+everse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1_NoRe
+verse-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/machinery/rateFitVal_Fit
+Pulls_ParamSet1_NoReverse-eps-converted-to.pdf used on input line 689.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 688--690
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--696
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+[42 <./images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1-eps-
+converted-to.pdf> <./images/measurement/validation/machinery/rateFitVal_RPbPull
+_ParamSet1-eps-converted-to.pdf> <./images/measurement/validation/machinery/rat
+eFitVal_FitVals_ParamSet1-eps-converted-to.pdf> <./images/measurement/validatio
+n/machinery/rateFitVal_FitPulls_ParamSet1-eps-converted-to.pdf>] [43 <./images/
+measurement/validation/machinery/rateFitVal_FitVals_ParamSet2-eps-converted-to.
+pdf> <./images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2-e
+ps-converted-to.pdf> <./images/measurement/validation/machinery/rateFitVal_FitV
+als_ParamSet3-eps-converted-to.pdf> <./images/measurement/validation/machinery/
+rateFitVal_FitPulls_ParamSet3-eps-converted-to.pdf>] [44 <./images/measurement/
+validation/machinery/rateFitVal_FitVals_ParamSet4-eps-converted-to.pdf> <./imag
+es/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4-eps-converted
+-to.pdf> <./images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet
+5-eps-converted-to.pdf> <./images/measurement/validation/machinery/rateFitVal_F
+itPulls_ParamSet5-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieData_PreFit.eps>
+(epstopdf)                    date: 2015-06-12 14:47:59
+(epstopdf)                    size: 16622 bytes
+(epstopdf)             Output file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieData_PreFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 14:54:14
+(epstopdf)                    size: 10861 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/genie/MCTemplatesWithSystematics_GenieData_PreFit-eps-converted-to.pdf imag
+es/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFit.eps
+>
+(epstopdf)             \includegraphics on input line 705.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFi
+t-eps-converted-to.pdf, id=1184, 569.12625pt x 385.44pt>
+File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_
+PreFit-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_P
+reFit-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/genie/MCTemplatesWithSys
+tematics_GenieData_PreFit-eps-converted-to.pdf used on input line 705.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+Package epstopdf Info: Source file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieData_PostFit.eps>
+(epstopdf)                    date: 2015-06-12 20:42:57
+(epstopdf)                    size: 16458 bytes
+(epstopdf)             Output file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieData_PostFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-12 20:44:45
+(epstopdf)                    size: 10855 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/genie/MCTemplatesWithSystematics_GenieData_PostFit-eps-converted-to.pdf ima
+ges/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostFit.e
+ps>
+(epstopdf)             \includegraphics on input line 735.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostF
+it-eps-converted-to.pdf, id=1191, 569.12625pt x 385.44pt>
+File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_
+PostFit-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_P
+ostFit-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/genie/MCTemplatesWithSys
+tematics_GenieData_PostFit-eps-converted-to.pdf used on input line 735.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+Package epstopdf Info: Source file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieDataReWeighted_PostFit.eps>
+(epstopdf)                    date: 2015-06-13 19:28:28
+(epstopdf)                    size: 16457 bytes
+(epstopdf)             Output file: <images/measurement/validation/genie/MCTemp
+latesWithSystematics_GenieDataReWeighted_PostFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-13 19:30:12
+(epstopdf)                    size: 10847 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/validat
+ion/genie/MCTemplatesWithSystematics_GenieDataReWeighted_PostFit-eps-converted-
+to.pdf images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData
+ReWeighted_PostFit.eps>
+(epstopdf)             \includegraphics on input line 754.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeig
+hted_PostFit-eps-converted-to.pdf, id=1196, 569.12625pt x 385.44pt>
+File: images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataR
+eWeighted_PostFit-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataRe
+Weighted_PostFit-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/validation/genie/MCTemplatesWithSys
+tematics_GenieDataReWeighted_PostFit-eps-converted-to.pdf used on input line 75
+4.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--758
+
+ []
+
+[45 <./images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1_NoR
+everse-eps-converted-to.pdf> <./images/measurement/validation/machinery/rateFit
+Val_FitPulls_ParamSet1_NoReverse-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDat
+a_PreFit-eps-converted-to.pdf>] [47] [48 <./images/measurement/validation/genie
+/MCTemplatesWithSystematics_GenieData_PostFit-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 49 undefin
+ed on input line 761.
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 49 undefin
+ed on input line 764.
+
+Package epstopdf Info: Source file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PreFit.eps>
+(epstopdf)                    date: 2015-06-15 20:08:42
+(epstopdf)                    size: 16580 bytes
+(epstopdf)             Output file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PreFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-15 20:10:34
+(epstopdf)                    size: 10849 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/MC
+TemplatesWithSystematics_T2KData_PreFit-eps-converted-to.pdf images/measurement
+/data/MCTemplatesWithSystematics_T2KData_PreFit.eps>
+(epstopdf)             \includegraphics on input line 801.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-converte
+d-to.pdf, id=1249, 569.12625pt x 385.44pt>
+File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-con
+verted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-conv
+erted-to.pdf>
+Package pdftex.def Info: images/measurement/data/MCTemplatesWithSystematics_T2K
+Data_PreFit-eps-converted-to.pdf used on input line 801.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+Package epstopdf Info: Source file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PostFit.eps>
+(epstopdf)                    date: 2015-06-15 20:08:42
+(epstopdf)                    size: 16533 bytes
+(epstopdf)             Output file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PostFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-15 20:10:36
+(epstopdf)                    size: 10855 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/MC
+TemplatesWithSystematics_T2KData_PostFit-eps-converted-to.pdf images/measuremen
+t/data/MCTemplatesWithSystematics_T2KData_PostFit.eps>
+(epstopdf)             \includegraphics on input line 807.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit-eps-convert
+ed-to.pdf, id=1250, 569.12625pt x 385.44pt>
+File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit-eps-con
+verted-to.pdf>
+Package pdftex.def Info: images/measurement/data/MCTemplatesWithSystematics_T2K
+Data_PostFit-eps-converted-to.pdf used on input line 807.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+Package epstopdf Info: Source file: <images/measurement/data/Chi2_par0.eps>
+(epstopdf)                    date: 2015-06-19 11:33:27
+(epstopdf)                    size: 15814 bytes
+(epstopdf)             Output file: <images/measurement/data/Chi2_par0-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-06-19 11:42:29
+(epstopdf)                    size: 12066 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Ch
+i2_par0-eps-converted-to.pdf images/measurement/data/Chi2_par0.eps>
+(epstopdf)             \includegraphics on input line 814.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/Chi2_par0-eps-converted-to.pdf, id=1251, 569.12625pt x
+ 385.44pt>
+File: images/measurement/data/Chi2_par0-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use images/measurement/data/Chi2_par0-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/Chi2_par0-eps-converted-to.pdf
+ used on input line 814.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/Chi2_par1.eps>
+(epstopdf)                    date: 2015-06-19 11:33:27
+(epstopdf)                    size: 19564 bytes
+(epstopdf)             Output file: <images/measurement/data/Chi2_par1-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-06-19 11:46:53
+(epstopdf)                    size: 13712 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Ch
+i2_par1-eps-converted-to.pdf images/measurement/data/Chi2_par1.eps>
+(epstopdf)             \includegraphics on input line 818.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/Chi2_par1-eps-converted-to.pdf, id=1252, 569.12625pt x
+ 385.44pt>
+File: images/measurement/data/Chi2_par1-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use images/measurement/data/Chi2_par1-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/Chi2_par1-eps-converted-to.pdf
+ used on input line 818.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/Chi2_par2.eps>
+(epstopdf)                    date: 2015-06-19 11:33:27
+(epstopdf)                    size: 17630 bytes
+(epstopdf)             Output file: <images/measurement/data/Chi2_par2-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2015-06-19 11:46:55
+(epstopdf)                    size: 13686 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Ch
+i2_par2-eps-converted-to.pdf images/measurement/data/Chi2_par2.eps>
+(epstopdf)             \includegraphics on input line 821.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/Chi2_par2-eps-converted-to.pdf, id=1253, 569.12625pt x
+ 385.44pt>
+File: images/measurement/data/Chi2_par2-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use images/measurement/data/Chi2_par2-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/Chi2_par2-eps-converted-to.pdf
+ used on input line 821.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ShapeCorrelationMa
+trix.eps>
+(epstopdf)                    date: 2015-06-20 14:37:00
+(epstopdf)                    size: 29408 bytes
+(epstopdf)             Output file: <images/measurement/data/ShapeCorrelationMa
+trix-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 14:45:49
+(epstopdf)                    size: 15222 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Sh
+apeCorrelationMatrix-eps-converted-to.pdf images/measurement/data/ShapeCorrelat
+ionMatrix.eps>
+(epstopdf)             \includegraphics on input line 830.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf, id=1257, 
+569.12625pt x 386.44376pt>
+File: images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use images/measurement/data/ShapeCorrelationMatrix-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ShapeCorrelationMatrix-eps-con
+verted-to.pdf used on input line 830.
+(pdftex.def)             Requested size: 426.79134pt x 289.80852pt.
+Package epstopdf Info: Source file: <images/measurement/data/ECalInteractionMCT
+emplates_T2KData_BarrelModules_AreaNorm.eps>
+(epstopdf)                    date: 2015-06-20 18:45:00
+(epstopdf)                    size: 10838 bytes
+(epstopdf)             Output file: <images/measurement/data/ECalInteractionMCT
+emplates_T2KData_BarrelModules_AreaNorm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 18:45:15
+(epstopdf)                    size: 7447 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/EC
+alInteractionMCTemplates_T2KData_BarrelModules_AreaNorm-eps-converted-to.pdf im
+ages/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm
+.eps>
+(epstopdf)             \includegraphics on input line 837.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaN
+orm-eps-converted-to.pdf, id=1261, 569.12625pt x 385.44pt>
+File: images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_
+AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_A
+reaNorm-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ECalInteractionMCTemplates_T2K
+Data_BarrelModules_AreaNorm-eps-converted-to.pdf used on input line 837.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/data/BackgroundMCTempla
+tes_T2KData_BarrelModules_AreaNorm.eps>
+(epstopdf)                    date: 2015-06-20 18:45:00
+(epstopdf)                    size: 8072 bytes
+(epstopdf)             Output file: <images/measurement/data/BackgroundMCTempla
+tes_T2KData_BarrelModules_AreaNorm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 18:45:18
+(epstopdf)                    size: 6719 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Ba
+ckgroundMCTemplates_T2KData_BarrelModules_AreaNorm-eps-converted-to.pdf images/
+measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps>
+(epstopdf)             \includegraphics on input line 838.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm-e
+ps-converted-to.pdf, id=1262, 569.12625pt x 385.44pt>
+File: images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaN
+orm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNo
+rm-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/BackgroundMCTemplates_T2KData_
+BarrelModules_AreaNorm-eps-converted-to.pdf used on input line 838.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 837--839
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/measurement/data/ECalInteractionMCT
+emplates_T2KData_BarrelReverseModules_AreaNorm.eps>
+(epstopdf)                    date: 2015-06-20 18:45:00
+(epstopdf)                    size: 8957 bytes
+(epstopdf)             Output file: <images/measurement/data/ECalInteractionMCT
+emplates_T2KData_BarrelReverseModules_AreaNorm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 18:45:20
+(epstopdf)                    size: 7304 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/EC
+alInteractionMCTemplates_T2KData_BarrelReverseModules_AreaNorm-eps-converted-to
+.pdf images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseMo
+dules_AreaNorm.eps>
+(epstopdf)             \includegraphics on input line 844.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseModule
+s_AreaNorm-eps-converted-to.pdf, id=1263, 569.12625pt x 385.44pt>
+File: images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseM
+odules_AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseMo
+dules_AreaNorm-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ECalInteractionMCTemplates_T2K
+Data_BarrelReverseModules_AreaNorm-eps-converted-to.pdf used on input line 844.
+
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+Package epstopdf Info: Source file: <images/measurement/data/BackgroundMCTempla
+tes_T2KData_BarrelReverseModules_AreaNorm.eps>
+(epstopdf)                    date: 2015-06-20 18:45:00
+(epstopdf)                    size: 6777 bytes
+(epstopdf)             Output file: <images/measurement/data/BackgroundMCTempla
+tes_T2KData_BarrelReverseModules_AreaNorm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 18:45:23
+(epstopdf)                    size: 6456 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Ba
+ckgroundMCTemplates_T2KData_BarrelReverseModules_AreaNorm-eps-converted-to.pdf 
+images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_Area
+Norm.eps>
+(epstopdf)             \includegraphics on input line 845.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_Are
+aNorm-eps-converted-to.pdf, id=1264, 569.12625pt x 385.44pt>
+File: images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModule
+s_AreaNorm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules
+_AreaNorm-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/BackgroundMCTemplates_T2KData_
+BarrelReverseModules_AreaNorm-eps-converted-to.pdf used on input line 845.
+(pdftex.def)             Requested size: 227.62204pt x 154.15562pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 844--846
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 49 undefin
+ed on input line 849.
+
+
+LaTeX Warning: Reference `fig:ProngStackBarrelSelected' on page 49 undefined on
+ input line 849.
+
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BLB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:19
+(epstopdf)                    size: 29119 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 14:55:28
+(epstopdf)                    size: 13681 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB.eps>
+(epstopdf)             \includegraphics on input line 853.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-conver
+ted-to.pdf, id=1271, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_BLB-eps-converted-to.pdf used on input line 853.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BRB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:19
+(epstopdf)                    size: 28624 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 15:01:27
+(epstopdf)                    size: 13679 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB.eps>
+(epstopdf)             \includegraphics on input line 857.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-conver
+ted-to.pdf, id=1272, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_BRB-eps-converted-to.pdf used on input line 857.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SLB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 29605 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 15:01:29
+(epstopdf)                    size: 13787 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB.eps>
+(epstopdf)             \includegraphics on input line 861.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-conver
+ted-to.pdf, id=1273, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_SLB-eps-converted-to.pdf used on input line 861.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SRB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 29264 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 15:01:31
+(epstopdf)                    size: 13697 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB.eps>
+(epstopdf)             \includegraphics on input line 865.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-conver
+ted-to.pdf, id=1274, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_SRB-eps-converted-to.pdf used on input line 865.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TLB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 29943 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 15:01:34
+(epstopdf)                    size: 13911 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB.eps>
+(epstopdf)             \includegraphics on input line 869.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-conver
+ted-to.pdf, id=1275, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_TLB-eps-converted-to.pdf used on input line 869.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TRB.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 30240 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 15:01:37
+(epstopdf)                    size: 13898 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-converted-to.pdf images/measureme
+nt/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB.eps>
+(epstopdf)             \includegraphics on input line 873.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-conver
+ted-to.pdf, id=1276, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_TRB-eps-converted-to.pdf used on input line 873.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BLBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:19
+(epstopdf)                    size: 30276 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BLBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:45
+(epstopdf)                    size: 13885 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse.eps>
+(epstopdf)             \includegraphics on input line 881.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse-eps
+-converted-to.pdf, id=1277, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_BLBReverse-eps-converted-to.pdf used on input line 881.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BRBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:19
+(epstopdf)                    size: 29873 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_BRBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:48
+(epstopdf)                    size: 13834 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse.eps>
+(epstopdf)             \includegraphics on input line 885.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse-eps
+-converted-to.pdf, id=1278, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BRBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_BRBReverse-eps-converted-to.pdf used on input line 885.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SLBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 30581 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SLBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:50
+(epstopdf)                    size: 13908 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse.eps>
+(epstopdf)             \includegraphics on input line 889.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse-eps
+-converted-to.pdf, id=1279, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_SLBReverse-eps-converted-to.pdf used on input line 889.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SRBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 32404 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_SRBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:53
+(epstopdf)                    size: 14330 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse.eps>
+(epstopdf)             \includegraphics on input line 893.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse-eps
+-converted-to.pdf, id=1280, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_SRBReverse-eps-converted-to.pdf used on input line 893.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TLBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 31016 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TLBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:56
+(epstopdf)                    size: 14043 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse.eps>
+(epstopdf)             \includegraphics on input line 897.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse-eps
+-converted-to.pdf, id=1281, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TLBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_TLBReverse-eps-converted-to.pdf used on input line 897.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TRBReverse.eps>
+(epstopdf)                    date: 2015-06-19 23:30:20
+(epstopdf)                    size: 30635 bytes
+(epstopdf)             Output file: <images/measurement/data/NEventsVsNeutrinoE
+nergy_OtherMCTemplate_TRBReverse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 16:20:58
+(epstopdf)                    size: 13930 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/NE
+ventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse-eps-converted-to.pdf images/me
+asurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse.eps>
+(epstopdf)             \includegraphics on input line 901.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse-eps
+-converted-to.pdf, id=1282, 569.12625pt x 385.44pt>
+File: images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBRevers
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse
+-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/NEventsVsNeutrinoEnergy_OtherM
+CTemplate_TRBReverse-eps-converted-to.pdf used on input line 901.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_BLB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:43
+(epstopdf)                    size: 19117 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_BLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:10:54
+(epstopdf)                    size: 11631 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_BLB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_BLB.eps>
+(epstopdf)             \includegraphics on input line 912.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf, id=
+1286, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_BLB-e
+ps-converted-to.pdf used on input line 912.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_BRB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:43
+(epstopdf)                    size: 18850 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_BRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:10:56
+(epstopdf)                    size: 11630 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_BRB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_BRB.eps>
+(epstopdf)             \includegraphics on input line 916.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf, id=
+1287, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_BRB-e
+ps-converted-to.pdf used on input line 916.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_SLB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:44
+(epstopdf)                    size: 19134 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_SLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:10:59
+(epstopdf)                    size: 11642 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_SLB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_SLB.eps>
+(epstopdf)             \includegraphics on input line 920.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf, id=
+1288, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_SLB-e
+ps-converted-to.pdf used on input line 920.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_SRB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:44
+(epstopdf)                    size: 18606 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_SRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:11:01
+(epstopdf)                    size: 11540 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_SRB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_SRB.eps>
+(epstopdf)             \includegraphics on input line 924.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf, id=
+1289, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_SRB-e
+ps-converted-to.pdf used on input line 924.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_TLB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:44
+(epstopdf)                    size: 17991 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_TLB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:11:04
+(epstopdf)                    size: 11392 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_TLB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_TLB.eps>
+(epstopdf)             \includegraphics on input line 928.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf, id=
+1290, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_TLB-e
+ps-converted-to.pdf used on input line 928.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_TRB.eps>
+(epstopdf)                    date: 2015-07-18 21:52:44
+(epstopdf)                    size: 17770 bytes
+(epstopdf)             Output file: <images/measurement/data/ClusterNHits_CutLe
+velGT0_TRB-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-19 19:11:07
+(epstopdf)                    size: 11386 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/Cl
+usterNHits_CutLevelGT0_TRB-eps-converted-to.pdf images/measurement/data/Cluster
+NHits_CutLevelGT0_TRB.eps>
+(epstopdf)             \includegraphics on input line 932.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf, id=
+1291, 569.12625pt x 385.44pt>
+File: images/measurement/data/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/measurement/data/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/ClusterNHits_CutLevelGT0_TRB-e
+ps-converted-to.pdf used on input line 932.
+(pdftex.def)             Requested size: 213.39566pt x 144.52199pt.
+Package epstopdf Info: Source file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PostFit_WithErrorFudge.eps>
+(epstopdf)                    date: 2015-06-20 18:15:12
+(epstopdf)                    size: 16526 bytes
+(epstopdf)             Output file: <images/measurement/data/MCTemplatesWithSys
+tematics_T2KData_PostFit_WithErrorFudge-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-20 18:20:03
+(epstopdf)                    size: 10869 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/data/MC
+TemplatesWithSystematics_T2KData_PostFit_WithErrorFudge-eps-converted-to.pdf im
+ages/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFudge
+.eps>
+(epstopdf)             \includegraphics on input line 955.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFu
+dge-eps-converted-to.pdf, id=1298, 569.12625pt x 385.44pt>
+File: images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithEr
+rorFudge-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErr
+orFudge-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/data/MCTemplatesWithSystematics_T2K
+Data_PostFit_WithErrorFudge-eps-converted-to.pdf used on input line 955.
+(pdftex.def)             Requested size: 426.79134pt x 289.05576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--972
+
+ []
+
+[49 <./images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData
+ReWeighted_PostFit-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [52 <./images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit-eps-c
+onverted-to.pdf>] [53 <./images/measurement/data/MCTemplatesWithSystematics_T2K
+Data_PostFit-eps-converted-to.pdf>] [54 <./images/measurement/data/Chi2_par0-ep
+s-converted-to.pdf> <./images/measurement/data/Chi2_par1-eps-converted-to.pdf> 
+<./images/measurement/data/Chi2_par2-eps-converted-to.pdf>] [55 <./images/measu
+rement/data/ShapeCorrelationMatrix-eps-converted-to.pdf> <./images/measurement/
+data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm-eps-converted-to
+.pdf> <./images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_Ar
+eaNorm-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <./images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelRevers
+eModules_AreaNorm-eps-converted-to.pdf> <./images/measurement/data/BackgroundMC
+Templates_T2KData_BarrelReverseModules_AreaNorm-eps-converted-to.pdf>] [57 <./i
+mages/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLB-eps-converte
+d-to.pdf> <./images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BR
+B-eps-converted-to.pdf> <./images/measurement/data/NEventsVsNeutrinoEnergy_Othe
+rMCTemplate_SLB-eps-converted-to.pdf> <./images/measurement/data/NEventsVsNeutr
+inoEnergy_OtherMCTemplate_SRB-eps-converted-to.pdf> <./images/measurement/data/
+NEventsVsNeutrinoEnergy_OtherMCTemplate_TLB-eps-converted-to.pdf> <./images/mea
+surement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB-eps-converted-to.pdf>
+] [58 <./images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_BLBRev
+erse-eps-converted-to.pdf> <./images/measurement/data/NEventsVsNeutrinoEnergy_O
+therMCTemplate_BRBReverse-eps-converted-to.pdf> <./images/measurement/data/NEve
+ntsVsNeutrinoEnergy_OtherMCTemplate_SLBReverse-eps-converted-to.pdf> <./images/
+measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_SRBReverse-eps-convert
+ed-to.pdf> <./images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_T
+LBReverse-eps-converted-to.pdf> <./images/measurement/data/NEventsVsNeutrinoEne
+rgy_OtherMCTemplate_TRBReverse-eps-converted-to.pdf>] [59 <./images/measurement
+/data/ClusterNHits_CutLevelGT0_BLB-eps-converted-to.pdf> <./images/measurement/
+data/ClusterNHits_CutLevelGT0_BRB-eps-converted-to.pdf> <./images/measurement/d
+ata/ClusterNHits_CutLevelGT0_SLB-eps-converted-to.pdf> <./images/measurement/da
+ta/ClusterNHits_CutLevelGT0_SRB-eps-converted-to.pdf> <./images/measurement/dat
+a/ClusterNHits_CutLevelGT0_TLB-eps-converted-to.pdf> <./images/measurement/data
+/ClusterNHits_CutLevelGT0_TRB-eps-converted-to.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 973.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@Oldnu' on input line 973.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 973.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@Oldmu' on input line 973.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 973.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+[61 <./images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithE
+rrorFudge-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `chap:T2KExperiment' on page 62 undefined on input lin
+e 980.
+
+
+LaTeX Warning: Reference `chap:NeutrinoInteractionSelection' on page 62 undefin
+ed on input line 983.
+
+Package epstopdf Info: Source file: <images/measurement/xsec/run3c_flux.eps>
+(epstopdf)                    date: 2015-06-21 15:35:13
+(epstopdf)                    size: 8042 bytes
+(epstopdf)             Output file: <images/measurement/xsec/run3c_flux-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-06-21 15:50:25
+(epstopdf)                    size: 7610 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/measurement/xsec/ru
+n3c_flux-eps-converted-to.pdf images/measurement/xsec/run3c_flux.eps>
+(epstopdf)             \includegraphics on input line 989.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/measurement/xsec/run3c_flux-eps-converted-to.pdf, id=1651, 569.12625pt 
+x 386.44376pt>
+File: images/measurement/xsec/run3c_flux-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use images/measurement/xsec/run3c_flux-eps-converted-to.pdf>
+Package pdftex.def Info: images/measurement/xsec/run3c_flux-eps-converted-to.pd
+f used on input line 989.
+(pdftex.def)             Requested size: 426.79134pt x 289.80852pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--997
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--997
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 979--997
+
+ []
+
+[62]) (./chap9.tex [63 <./images/measurement/xsec/run3c_flux-eps-converted-to.p
+df>] [64
 
 ]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--27
+
+ []
+
+[65]
+
+LaTeX Warning: Reference `chap:Introduction' on page 66 undefined on input line
+ 30.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--37
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 43--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--56
+
+ []
+
+[67])) Processing 'backmatter' comment. [68]
 \openout3 = `comment.cut'.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [25] [26
+(./comment.cut (./backmatter.tex (./thesis.bbl [69
+
+
+] [70
 
 ]
 
@@ -1960,57 +4244,205 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 9.
 
-) [27] [28
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 13.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 17.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 21.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 25.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 29.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 33.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 37.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 42.
+
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 47.
+
+) [71] [72
 
 ] (./thesis.lof
-Underfull \vbox (badness 1895) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29])
+ [73]
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
+ [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
 
-[30] (./thesis.lot)
+[77] [78
+
+] (./thesis.lot
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79])
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-)) [31
-
-]
+))
+[80]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3FFB8BF9B16CB62C8956612D3370BBB6;1384.
+(rerunfilecheck)             Checksum: 00FA7C61525BD2983FDBFA789ED95FA6;1614.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 26045 strings out of 493117
- 452051 string characters out of 6135433
- 687323 words of memory out of 5000000
- 28600 multiletter control sequences out of 15000+600000
- 84506 words of font info for 333 fonts, out of 8000000 for 9000
+ 26881 strings out of 493117
+ 495334 string characters out of 6135433
+ 751189 words of memory out of 5000000
+ 29114 multiletter control sequences out of 15000+600000
+ 91962 words of font info for 376 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,14n,61p,1642b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,22n,61p,2432b,789s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (43 pages, 932764 bytes).
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
+w/palatino/uplri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (92 pages, 1326758 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 111 named destinations out of 1000 (max. 500000)
- 48920 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 2032 PDF objects out of 2073 (max. 8388607)
+ 1630 compressed objects within 17 object streams
+ 302 named destinations out of 1000 (max. 500000)
+ 47773 words of extra memory for PDF output out of 51595 (max. 10000000)
 

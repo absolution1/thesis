@@ -458,11 +458,24 @@ Note that no vertex formation beyond the pairwise crossings is calculated at thi
 Because of the large scope of the reconstruction and the limited time available for the presented analysis, the validation of the reconstruction was done in parallel to the rest of the analysis and is still an ongoing effort.  The validation that has been done can be split into two areas: validation of the performance of the algorithms purely using MC and comparisons of MC to data using control samples.
 \newline
 \newline
-So for, the main performance validation has investigated the angular resolution using the enhanced reconstruction (by L. Pickering).  This study calculated the angular resolution for different MC particle species fired into the side-left ECal for a range of entry angles.  For each MC event, the cosine of the angular separation between the true particle angle and the reconstructed angle was calculated, $\cos\theta^{\textrm{Sep}}$.  The values of $\cos\theta^{\textrm{Sep}}$ were then binned in a distribution.  An outward scan from the peak of the distribution was then performed to find where the height decreased to $68\%$ of the peak.  The value of $\theta^{\textrm{Sep}}$ and this point was taken as the angular resolution.  These results are shown in Fig.~\ref{fig:MuonAngularResolutionDSECal}.  Generally speaking, the found angular resolutions are very good.  For long trajectories (200~mm), the angular resolution is within 10$^\circ$.  It is only for short tracks (40~mm) that the angular resolution becomes large.
+The first performance validation investigated the angular resolution using the enhanced reconstruction (by L. Pickering).  This study calculated the angular resolution for MC muons fired into the side-left ECal for a range of entry angles.  For each MC event, the cosine of the angular separation between the true particle angle and the reconstructed angle was calculated, $\cos\theta^{\textrm{Sep}}$.  The values of $\cos\theta^{\textrm{Sep}}$ were then binned in a distribution.  An outward scan from the peak of the distribution was then performed to find where the height decreased to $68\%$ of the peak.  The value of $\theta^{\textrm{Sep}}$ and this point was taken as the angular resolution.  These results are shown in Fig.~\ref{fig:MuonAngularResolutionDSECal}.  Generally speaking, the found angular resolutions are very good.  For long trajectories (200~mm), the angular resolution is within 15$^\circ$.  It is only for short tracks (40~mm) that the angular resolution becomes large.
 \begin{figure}
   \centering
   \includegraphics[width=9cm]{images/hough_validation/MuonAngularResolutionDSECal}
   \caption{The angular resolution as a function of trajectory length in the DS-ECal when applying the enhanced reconstruction to muon MC.  The colour coding refers to the true entry angle range of the muons.}
   \label{fig:MuonAngularResolutionDSECal}
 \end{figure}
+\newline
+\newline
+The second performance validation studied the success of the 3D matching.  To do this, a sample of beam MC events in the ECals were processed through the enhanced reconstruction.  After completion, the 2D components of the 3D tracks were analysed and matched to the true particles which created them.  A match was counted as a success if both 2D components were matched to the same true particle.  These results are shown in table~\ref{table:PercentageCorrect3DMatching}, separated out by which track matching likelihood was used.  For the 1 and 2 track likelihood cases, the matching performs very well.  It is only in cases where the 3 track likelihood is used that the matching start to suffer slightly.  However, all of the correct matching rates are well above 50$\%$ which suggests that the 3D matching is performing adequetly. 
+\begin{table}
+  \begin{tabular}{c | c c c }
+   & 1 track likelihood & 2 track likelihood & 3 track likelihood \\ \hline \hline
+   $1^{\textrm{st}}$ track matched& 96$\%$ & 92$\%$ & 80$\%$ \\
+   $2^{\textrm{nd}}$ track matched&  & 89$\%$ & 79$\%$ \\
+   $3^{\textrm{rd}}$ track matched&  &  & 70$\%$ \\
+  \end{tabular}
+  \caption{The percentage number of correct matches in the 3D matching separated by which track matching likelihood was used.}
+  \label{table:PercentageCorrect3DMatching}
+\end{table}
 

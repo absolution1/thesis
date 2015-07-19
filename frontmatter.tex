@@ -5,17 +5,25 @@
 %% Abstract
 \begin{abstract}%[\smaller \thetitle\\ \vspace*{1cm} \smaller {\theauthor}]
   %\thispagestyle{empty}
-  To write
+  This thesis presents a study of using the Electromagnetic Calorimeters (ECals) of the Tokai-to-Kamioka (T2K) off-axis near detector (ND280) as a target to study neutrino interactions using data collected during T2K run 3C.
+  \newline
+  \newline
+  The analysis presented shows the development of a new set of reconstruction algorithms which are able to reconstruct multiple tracks which originate from the same neutrino interaction.  The output of this reconstruction is the used as the basis for a $\nu_\mu$ charged current inclusive selection in the ND280 ECals.  The selected events are then used in a simple $\chi^2$ fit to extract the T2K flux-averaged $\nu_\mu$ charged current inclusive cross-section on lead, which is measured as $\langle \sigma^{\textrm{CC}}_{\textrm{Pb}} \rangle_{\phi} = 8.13^{+1.33}_{-1.26} \times 10^{-39} \textrm{ cm}^2 \textrm{ nucleon}^{-1}$.
   \end{abstract}
 
 
 %% Declaration
 \begin{declaration}
-  This dissertation is the result of my own work, except where explicit
-  reference is made to the work of others, and has not been submitted
-  for another qualification to this or any other university. This
-  dissertation does not exceed the word limit for the respective Degree
-  Committee.
+The copyright of this thesis rests with the author and is made available under a Creative Commons Attribution Non-Commercial No Derivatives licence. Researchers are free to copy, distribute or transmit the thesis on the condition that they attribute it, that they do not use it for commercial purposes and that they do not alter, transform or build upon it. For any reuse or redistribution, researchers must make clear to others the licence terms of this work.
+\newline
+\newline
+The work presented in this thesis was made possible due to a large number of collaborators involved with and beyond the T2K experiment.  Citations have been used where possible to reference work not done by the author.  When this is not possible, the people responsible have been explicitly named.
+\newline
+\newline
+The main contributions by the author to this thesis have been the development of a new set of reconstruction algorithms for the ECal which allow neutrino interactions to be studied, development of the $\nu_\mu$ charged current inclusive selection, evaluation of the ECal detector systematics and implementation of the $\chi^2$ fit (the original idea for this fit was by M. Scott).
+\newline
+\newline
+The author has also made many contributions to the T2K experiment which have not been discussed in this thesis.  These contributions largely involved package management of the ECal reconstruction algorithms (ecalRecon) and the final analysis file producing software (oaAnalysis).
   \vspace*{1cm}
   \begin{flushright}
     Dominic Brailsford
@@ -25,7 +33,14 @@
 
 %% Acknowledgements
 \begin{acknowledgements}
-  Something about my supervisor \dots
+I would like to thank Dr. Asher Kaboth and Dr. Mark Scott for their enormous help during my time on the T2K experiment.  They both provided excellent guidance and patientlly answered a great many questions during my time and this analysis would not have progressed without their help.
+\newline
+\newline
+I would also like to thank my supervisor, Dr. Yoshi Uchida.  Your gentle nudges have aimed me in the correct direction numerous times and I can't help but think that my thesis would be a mess without your supervision.
+\newline
+\newline
+Thanks also go to Dr. Morgan Wascko.  The many times I had to quickly come to your office to discuss a problem have been such a huge help to me.
+
 \end{acknowledgements}
 
 
