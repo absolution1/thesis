@@ -38,10 +38,10 @@ For sample $j$ of the sample set $M$, $N^{\textrm{data}}_j$ and $N^{\textrm{pred
 where $n_{ij}$ is the number of events in template $i$ of sample $j$ and $R_{i}$ is the normalisation assigned to that template.  The normalisation parameters are free to float in the fit and so it  is in the normalisation parameters that the desired physical information is located.
 \section{Input samples to the fit}
 \label{sec:InputSamples}
-The DS-ECal provides the main signal sample which will be used to extract the cross-section.  As shown in table~\ref{table:FinalEffPur}, the selected sample in the DS-ECal has the highest purity and efficiency in the whole selection making the sample the natural choice to extract the cross-section.
+The DS ECal provides the main signal sample which will be used to extract the cross-section.  As shown in table~\ref{table:FinalEffPur}, the selected sample in the DS ECal has the highest purity and efficiency in the whole selection making the sample the natural choice to extract the cross-section.
 \newline
 \newline
-The method outlined above allows for the simultaneous constraint of physical parameters and the background contamination of a set of input samples.  The method works particularly well when the input samples do not share the same sensitivity to a particular background type.  For example, in ND280, each ECal module is exposed to a different beam intensity and energy spectrum and so is exposed to a unique amount of beam induced background.  Each ECal module can be thought of as a separate input sample which fits well with the method outlined above.  So, while the DS-ECal will provide the target in which the cross-section will be extracted, the barrel ECals are to also be included in the fit as a background constraint.  To further allow the barrel ECals to achieve this, an additional sample set of barrel ECal events are to be included.  This additional sample set, called the 'reverse' sample set,  comes from the same data set as the selected sample described in chapter~\ref{chap:NeutrinoInteractionSelection}.  However, the events in the reverse sample set are events which pass the fiducial volume cuts but fail any other cut.  An example of a selected sample compared with a reverse sample is shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeft}.  There are clear differences in the shape of the energy spectrum between Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal} and Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftReverse} which suggests that the selection is biased towards lower energy neutrino interactions, despite the flat efficiency curves shown in Fig.~\ref{fig:EffPurSummedTopologiesBarrel}. The apparent bias is actually an effect of higher energy interactions creating a surplus of reconstructed objects, most of which are cut away by the selection.  The shape of the true neutrino energy spectrum (see Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} for an example) is actually more like the selected sample shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal}.
+The method outlined above allows for the simultaneous constraint of physical parameters and the background contamination of a set of input samples.  The method works particularly well when the input samples do not share the same sensitivity to a particular background type.  For example, in ND280, each ECal module is exposed to a different beam intensity and energy spectrum and so is exposed to a unique amount of beam induced background.  Each ECal module can be thought of as a separate input sample which fits well with the method outlined above.  So, while the DS ECal will provide the target in which the cross-section will be extracted, the barrel ECals are to also be included in the fit as a background constraint.  To further allow the barrel ECals to achieve this, an additional sample set of barrel ECal events are to be included.  This additional sample set, called the 'reverse' sample set,  comes from the same data set as the selected sample described in chapter~\ref{chap:NeutrinoInteractionSelection}.  However, the events in the reverse sample set are events which pass the fiducial volume cuts but fail any other cut.  An example of a selected sample compared with a reverse sample is shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeft}.  There are clear differences in the shape of the energy spectrum between Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal} and Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftReverse} which suggests that the selection is biased towards lower energy neutrino interactions, despite the flat efficiency curves shown in Fig.~\ref{fig:EffPurSummedTopologiesBarrel}. The apparent bias is actually an effect of higher energy interactions creating a surplus of reconstructed objects, most of which are cut away by the selection.  The shape of the true neutrino energy spectrum (see Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} for an example) is actually more like the selected sample shown in Fig.~\ref{fig:NuEnergyReactionCodeBottomLeftSignal}.
 \begin{figure}%
   \centering
   \subfloat[Selected sample.]{\includegraphics[width=8cm]{images/measurement/samples/NuEnergy_ReactionCode_BottomLeft_Signal.eps} \label{fig:NuEnergyReactionCodeBottomLeftSignal}}
@@ -54,7 +54,7 @@ The method outlined above allows for the simultaneous constraint of physical par
 As described in chapter~\ref{chap:NeutrinoInteractionSelection}, the developed selection does not distinguish between lead and carbon interactions, partly because such events are indistinguishable from one another.  It is however desirable to separate the two categories out as the presented measurement purely involves lead.  As the ECal is not capable of simultaneously constraining the lead and carbon events by itself, an additional constraint is needed.  So, a sample of CC interactions on carbon occurring in the FGD are also included, which are taken from the official ND280 oscillation input analysis~\cite{CCIncSelFGDTN}.
 \newline
 \newline
-To summarise, there are many inputs samples to the measurement.  Specifically, there are 12 barrel ECal samples (6 selected and 6 reverse), the DS-ECal sample and the FGD sample which totals to 12 input samples.
+To summarise, there are many inputs samples to the measurement.  Specifically, there are 12 barrel ECal samples (6 selected and 6 reverse), the DS ECal sample and the FGD sample which totals to 12 input samples.
 
 In terms of statistics, $3.949\times 10^{20}$~POT worth of NEUT MC events are used for this measurement.
 
@@ -68,7 +68,7 @@ Now that the general method and the input samples have been introduced, the fit 
 where $n^{\textrm{X}}_i$ is the number of events in template X of sample $i$ and $R^{\textrm{X}}_i$ is the variable normalisation of that template.
 \newline
 \newline
-The rate fit allows $R^{\textrm{Pb}}_i$, $R^{\textrm{C}}_i$ and $R^{\textrm{other}}_i$ to vary with no prior constraint in an attempt to minimise the $\chi^{2}$ as defined in equation~\ref{eqn:Chi2Def}.  Once the minimum has been found, the fitted $R^{\textrm{Pb}}_i$ can then be used to extract the cross-section using the selected events in the DS-ECal.  
+The rate fit allows $R^{\textrm{Pb}}_i$, $R^{\textrm{C}}_i$ and $R^{\textrm{other}}_i$ to vary with no prior constraint in an attempt to minimise the $\chi^{2}$ as defined in equation~\ref{eqn:Chi2Def}.  Once the minimum has been found, the fitted $R^{\textrm{Pb}}_i$ can then be used to extract the cross-section using the selected events in the DS ECal.  
 \newline
 \newline
 The number of events in each input sample, broken down by the template contributions, is shown in Fig.~\ref{fig:NominalMCTemplates}.  As should be expected, the relative background contribution varies between each ECal module.
@@ -139,11 +139,11 @@ The extra factor on the RHS of equation~\ref{eqn:NVariedShapeOnlyDef} conserves 
 \end{figure}
 \newline
 \newline
-The effect of the flux systematic on the selection efficiency of lead interactions was also evaluated.  As the main target used in this analysis is the DS-ECal, the efficiency variation was evaluated for this detector only.  For each systematic throw described above, the selection efficiency was calculated and recorded.  By plotting the efficiency for each throw, the width of the efficiency distribution can be found which gives the efficiency uncertainty induced by the flux systematic.  This efficiency uncertainty was found to be 0.00097.  The lead selection efficiency in the DS-ECal is nominally 0.539, which implies a fractional change of 0.18$\%$, which is essentially negligible.
+The effect of the flux systematic on the selection efficiency of lead interactions was also evaluated.  As the main target used in this analysis is the DS ECal, the efficiency variation was evaluated for this detector only.  For each systematic throw described above, the selection efficiency was calculated and recorded.  By plotting the efficiency for each throw, the width of the efficiency distribution can be found which gives the efficiency uncertainty induced by the flux systematic.  This efficiency uncertainty was found to be 0.00097.  The lead selection efficiency in the DS ECal is nominally 0.539, which implies a fractional change of 0.18$\%$, which is essentially negligible.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of lead interactions in the DS-ECal caused by the flux systematic.}
+  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the flux systematic.}
   \label{fig:FluxEfficiencyVariation}
 \end{figure}
 \subsection{Cross-section systematic evaluation}
@@ -168,11 +168,11 @@ To propagate the effect of the cross-section systematic through the analysis, th
 \end{figure}
 \newline
 \newline
-As with the flux systematic, the uncertainty in the selection efficiency for lead interactions in the DS-ECal due to the cross-section model systematic was found by recording the efficiency for each throw.  The variation in the efficiency is shown in Fig.~\ref{fig:XSecEfficiencyVariation}.  The efficiency uncertainty was found to be 0.001 which corresponds to a 0.2$\%$ error which is, again, negligible.
+As with the flux systematic, the uncertainty in the selection efficiency for lead interactions in the DS ECal due to the cross-section model systematic was found by recording the efficiency for each throw.  The variation in the efficiency is shown in Fig.~\ref{fig:XSecEfficiencyVariation}.  The efficiency uncertainty was found to be 0.001 which corresponds to a 0.2$\%$ error which is, again, negligible.
 \begin{figure}[b!]
   \centering
   \includegraphics[width=10cm]{images/measurement/systematics/xsec/xsec_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of lead interactions in the DS-ECal caused by the cross-section model systematic.}
+  \caption{The variation in the selection efficiency of lead interactions in the DS ECal caused by the cross-section model systematic.}
   \label{fig:XSecEfficiencyVariation}
 \end{figure}
 \newline
@@ -338,11 +338,11 @@ where $N_{\textrm{prong}}$ is the number of hits contained on the prong.  Follow
 While the hit efficiency and charge systematic assessments are fairly all-encompassing in terms of ECal detector uncertainties, they can not address how the inherent noise in the ECal can affect the reconstruction and, by extension, the selected number of events in this analysis.  There is only a need to address a noise systematic uncertainty if the simulated noise rate in the Monte Carlo is different to what actually happens in the ECal.  
 \newline
 \newline
-To measure the noise rate, a control sample  of cosmic rays (for the barrel) and through-going muons (for the DS-ECal) were passed through the reconstruction.  Before the clustering stages were initiated, the number of hits in the relevant ECal module were recorded.  Then, after the reconstruction chain was completed, the number of hits which formed the final reconstructed objects were also counted.  The difference between these two numbers forms the noise hit estimate.  To test this estimator, the true number of noise hits in the Monte Carlo were also counted.
+To measure the noise rate, a control sample  of cosmic rays (for the barrel) and through-going muons (for the DS ECal) were passed through the reconstruction.  Before the clustering stages were initiated, the number of hits in the relevant ECal module were recorded.  Then, after the reconstruction chain was completed, the number of hits which formed the final reconstructed objects were also counted.  The difference between these two numbers forms the noise hit estimate.  To test this estimator, the true number of noise hits in the Monte Carlo were also counted.
 \begin{figure}%
   \centering
   \subfloat[Cosmic control sample in the barrel ECals.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_barrel.eps} \label{fig:ECalNoiseMCEstimateMCTrueBarrel}}
-  \subfloat[Through-going muon control sample in the DS-ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds.eps} \label{fig:ECalNoiseMCEstimateMCTrueDS}}
+  \subfloat[Through-going muon control sample in the DS ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_mc_true_ds.eps} \label{fig:ECalNoiseMCEstimateMCTrueDS}}
   \caption{The estimation of the number of noise hits (solid blue line) and the number of true noise hits (solid red line) per event in Monte Carlo.  The coloured dashed lines are the Gaussian fits to the respective distributions.}
   \label{fig:ECalNoiseMCEstimateMCTrue}
 \end{figure}
@@ -350,7 +350,7 @@ The results of this test are shown in Fig.~\ref{fig:ECalNoiseMCEstimateMCTrue}. 
 \begin{figure}%
   \centering
   \subfloat[Cosmic control sample in the barrel ECals.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_barrel.eps} \label{fig:ECalNoiseMCEstimateDataEstimateBarrel}}
-  \subfloat[Through-going muon control sample in the DS-ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_ds.eps} \label{fig:ECalNoiseMCEstimateDataEstimateDS}}
+  \subfloat[Through-going muon control sample in the DS ECal.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/noise_mc_estimate_data_estimate_ds.eps} \label{fig:ECalNoiseMCEstimateDataEstimateDS}}
   \caption{The estimation of the number of noise hits in Monte Carlo (solid blue line) and data (solid black line) per event.  The coloured dashed lines are the Gaussian fits to the respective distributions.}
   \label{fig:ECalNoiseMCEstimateDataEstimate}
 \end{figure}
@@ -363,7 +363,7 @@ The results of this test are shown in Fig.~\ref{fig:ECalNoiseMCEstimateMCTrue}. 
   \caption{Summary of the study to estimate the number of noise hits per event in the ECals.}
   \label{table:NoiseRateSummary}
 \end{table}
-It is clear that there are differences between the noise levels in data and Monte Carlo.  So, to propagate the effect of this systematic uncertainty, elecSim was retuned to produce the data-like noise levels in both the barrel and DS-ECal.  The systematic sample was then passed through the modified elecSim and all pieces of the software chain downstream.  After this, the selection was applied to the modified sample.  This sample was then compared to nominal and the difference was used to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalNoiseCovarianceMatrices}.
+It is clear that there are differences between the noise levels in data and Monte Carlo.  So, to propagate the effect of this systematic uncertainty, elecSim was retuned to produce the data-like noise levels in both the barrel and DS ECal.  The systematic sample was then passed through the modified elecSim and all pieces of the software chain downstream.  After this, the selection was applied to the modified sample.  This sample was then compared to nominal and the difference was used to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalNoiseCovarianceMatrices}.
 \begin{figure}%
   \centering
   \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/noise/ecal_noise_covariance_matrix.eps} \label{fig:ECalNoiseShapeNormCovarianceMatrix}}
@@ -373,11 +373,11 @@ It is clear that there are differences between the noise levels in data and Mont
 \end{figure}
 \newline
 \newline
-The ECal model used in the simulation was based on the as built drawings and so should be an accurate model.  However, the components of each ECal module do have associated uncertainties which are not, and can not easily be, taken into account in the simulation, but could easily cause a systematic difference between data and Monte Carlo.  For example, if the DS-ECal lead absorbers were thicker in the simulated model, one should expect to see a relative deficit of beam triggered events in the DS-ECal collected data.  Provided that the component dimensions, compositions and uncertainties are known, toy Monte Carlo can be used to construct a set of toy ECal modules which model the variation in the module mass.  This can be expanded further, to construct a covariance matrix for the total mass of each contributing element.  This covariance matrix can then be used to re-weight the events, based on target element, in the Monte Carlo sample to model the effect of the ECal mass systematic.  
+The ECal model used in the simulation was based on the as built drawings and so should be an accurate model.  However, the components of each ECal module do have associated uncertainties which are not, and can not easily be, taken into account in the simulation, but could easily cause a systematic difference between data and Monte Carlo.  For example, if the DS ECal lead absorbers were thicker in the simulated model, one should expect to see a relative deficit of beam triggered events in the DS ECal collected data.  Provided that the component dimensions, compositions and uncertainties are known, toy Monte Carlo can be used to construct a set of toy ECal modules which model the variation in the module mass.  This can be expanded further, to construct a covariance matrix for the total mass of each contributing element.  This covariance matrix can then be used to re-weight the events, based on target element, in the Monte Carlo sample to model the effect of the ECal mass systematic.  
 \newline
 \newline
 The ECal module designs are split into three types: side, top/bottom and DS.  It is only necessary to generate a mass covariance matrix for each of the three types.  All values used for the component dimensions/uncertainties are taken from~\cite{1748-0221-8-10-P10019}.  Precise component dimensions are only quoted for the components in the active regions of each module, namely the lead absorbers, the scintillator bars and the wavelength-shifting fibres.  So, only these components are considered in the toy Monte Carlo study.  
-%A summary of the components are shown in table~\ref{table:SideECalComponents}, table~\ref{table:TopBottomECalComponents} and table~\ref{table:DSECalComponents} for the side, top/bottom and DS-ECal designs respectively.
+%A summary of the components are shown in table~\ref{table:SideECalComponents}, table~\ref{table:TopBottomECalComponents} and table~\ref{table:DSECalComponents} for the side, top/bottom and DS ECal designs respectively.
 \begin{table}[t!]
   \begin{tabular}{ c c c c }
      & Top/Bottom & Side & DS \\ \hline \hline
@@ -440,17 +440,17 @@ The information used to constructed the WLS fibres is shown in table~\ref{table:
 
 \subsubsection{ECal mass covariance}
 \label{subsubsec:ECalMassCovariance}
-Toy simulation was used to construct each component described in the above sections.  Each component was repeatedly built and was subsequently used to construct an ECal module.  The contributing mass of each element to the toy ECal module was then recorded.  10,000 toy ECal modules were constructed for each type, totalling 30,000 constructed modules.  The recorded contributing elemental mass for each construction was used to build up a mass covariance matrix using equation.~\ref{eqn:CovarianceMatrixElementDef} and equation.~\ref{eqn:NVariedDef}, an example of which is shown in Fig.~\ref{fig:MassCovDSECalAllElements} for the DS-ECal.  Unfortunately, it was found that the covariance matrices for all three module types were singular, which is of immediate concern as the matrices need to be Cholesky decomposed as part of the systematic uncertainty evaluation.  It was found that the singular nature of the covariance matrices was caused by the contributing elements which have small covariance values (both on and off diagonal) and the problem could be solved by not considering some of them in the covariance matrix.  The three problematic elements are carbon, nitrogen and hydrogen.  Both nitrogen and hydrogen only constitute a relatively small amount of the mass and an example of this is shown in Fig.~\ref{fig:TotalMassDSECal} which shows the mass of the 10,000 toy DS-ECal modules, with and without nitrogen and hydrogen.  There is a 2.45$\%$ difference between the two constructions which is small but not necessarily negligible.  While ideally the hydrogen and nitrogen terms should be included in the systematic evaluation, due to time constraints and that all covariance terms involving them were very small, it was decided that they would be excluded from the covariance matrix.  With the extra elements excluded, a non-singular covariance matrix for each module type could be constructed, all of which are shown in Fig.~\ref{fig:MassCovECalReducedElements}.
+Toy simulation was used to construct each component described in the above sections.  Each component was repeatedly built and was subsequently used to construct an ECal module.  The contributing mass of each element to the toy ECal module was then recorded.  10,000 toy ECal modules were constructed for each type, totalling 30,000 constructed modules.  The recorded contributing elemental mass for each construction was used to build up a mass covariance matrix using equation.~\ref{eqn:CovarianceMatrixElementDef} and equation.~\ref{eqn:NVariedDef}, an example of which is shown in Fig.~\ref{fig:MassCovDSECalAllElements} for the DS ECal.  Unfortunately, it was found that the covariance matrices for all three module types were singular, which is of immediate concern as the matrices need to be Cholesky decomposed as part of the systematic uncertainty evaluation.  It was found that the singular nature of the covariance matrices was caused by the contributing elements which have small covariance values (both on and off diagonal) and the problem could be solved by not considering some of them in the covariance matrix.  The three problematic elements are carbon, nitrogen and hydrogen.  Both nitrogen and hydrogen only constitute a relatively small amount of the mass and an example of this is shown in Fig.~\ref{fig:TotalMassDSECal} which shows the mass of the 10,000 toy DS ECal modules, with and without nitrogen and hydrogen.  There is a 2.45$\%$ difference between the two constructions which is small but not necessarily negligible.  While ideally the hydrogen and nitrogen terms should be included in the systematic evaluation, due to time constraints and that all covariance terms involving them were very small, it was decided that they would be excluded from the covariance matrix.  With the extra elements excluded, a non-singular covariance matrix for each module type could be constructed, all of which are shown in Fig.~\ref{fig:MassCovECalReducedElements}.
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_AllElements.eps}
-  \caption{The covariance matrix for the mass of the contributing elements in the DS-ECal, with all contributing elements considered.}
+  \caption{The covariance matrix for the mass of the contributing elements in the DS ECal, with all contributing elements considered.}
   \label{fig:MassCovDSECalAllElements}
 \end{figure}
 \begin{figure}[b!]
   \centering
   \includegraphics[width=10cm]{images/measurement/systematics/detector/mass/TotalMass_DSECal.eps}
-  \caption{The total mass of the DS-ECal active volume with (black) and without (blue) nitrogen and hydrogen as contributing elements.  The smooth lines are the Gaussian fits to the distributions.  Using the Gaussian mean and width as the mass central value and uncertainty respectively, the DS-ECal active mass with (without) hydrogen and nitrogen is $4060\pm20$~kg ($3960\pm20$~kg).}
+  \caption{The total mass of the DS ECal active volume with (black) and without (blue) nitrogen and hydrogen as contributing elements.  The smooth lines are the Gaussian fits to the distributions.  Using the Gaussian mean and width as the mass central value and uncertainty respectively, the DS ECal active mass with (without) hydrogen and nitrogen is $4060\pm20$~kg ($3960\pm20$~kg).}
   \label{fig:TotalMassDSECal}
 \end{figure}
 \begin{figure}
@@ -464,14 +464,14 @@ Toy simulation was used to construct each component described in the above secti
 
 \end{minipage}\par\medskip
 \centering
- \subfloat[DS-ECal.]{\label{fig:MassCovDSECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps}}
+ \subfloat[DS ECal.]{\label{fig:MassCovDSECalReducedElements}\includegraphics[width=7.5cm]{images/measurement/systematics/detector/mass/MassCov_DSECal_ReducedElements.eps}}
 
 \caption{The fractional covariance matrix for the mass of each contributing element to an ECal module (hydrogen and nitrogen omitted).}
 \label{fig:MassCovECalReducedElements}
 \end{figure}
 \subsubsection{Propagation of the mass systematic uncertainty}
 \label{subsubsec:ECalMassSystematicPropagation}
-The covariance matrices shown in Fig.~\ref{fig:MassCovECalReducedElements} were then used to generate systematic throws, in the same manner as the flux systematic uncertainty evaluation.  For the input into each systematic throw i.e. one run through of the selected Monte Carlo events, a set of event weights were generated for each of the seven ECal modules using the above mass covariance matrices.  Every neutrino interaction in the ECal active volume was weighted according to its target element.  As with the other systematic uncertainty evaluations, 1,000 systematic throws were generated and the subsequent covariance matrices were constructed which are shown in Fig.~\ref{fig:ECalMassCovarianceMatrices}.  The maximum uncertainty, which was for the DS-ECal events, was found to be $0.39\%$. 
+The covariance matrices shown in Fig.~\ref{fig:MassCovECalReducedElements} were then used to generate systematic throws, in the same manner as the flux systematic uncertainty evaluation.  For the input into each systematic throw i.e. one run through of the selected Monte Carlo events, a set of event weights were generated for each of the seven ECal modules using the above mass covariance matrices.  Every neutrino interaction in the ECal active volume was weighted according to its target element.  As with the other systematic uncertainty evaluations, 1,000 systematic throws were generated and the subsequent covariance matrices were constructed which are shown in Fig.~\ref{fig:ECalMassCovarianceMatrices}.  The maximum uncertainty, which was for the DS ECal events, was found to be $0.39\%$. 
 \begin{figure}%
   \centering
   \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/mass/ecal_mass_covariance_matrix.eps} \label{fig:ECalMassShapeNormCovarianceMatrix}}
@@ -503,7 +503,7 @@ The FGD cosmic control samples were used for this study, which are events with c
 \end{table}
 \newline
 \newline
-To propagate the effect of the systematic uncertainty, a similar approach to the flux systematic uncertainty propagation.  However, as the OOFV systematic uncertainty is a pair of single numbers rather than a covariance matrix, only two event weights (one for the barrel ECal and one for the DS-ECal) were generated per systematic throw.  The event weights were used to reweight only the OOFV events in the sample and the subsequent sample covariance matrices were constructed, which are shown in Fig.~\ref{fig:ECalOOFVCovarianceMatrices}.  The largest uncertainty is in the bottom-left reverse sample and is 1.82$\%$.
+To propagate the effect of the systematic uncertainty, a similar approach to the flux systematic uncertainty propagation.  However, as the OOFV systematic uncertainty is a pair of single numbers rather than a covariance matrix, only two event weights (one for the barrel ECal and one for the DS ECal) were generated per systematic throw.  The event weights were used to reweight only the OOFV events in the sample and the subsequent sample covariance matrices were constructed, which are shown in Fig.~\ref{fig:ECalOOFVCovarianceMatrices}.  The largest uncertainty is in the bottom-left reverse sample and is 1.82$\%$.
 \begin{figure}[t!]
   \centering
   \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/oofv/ecal_oofv_covariance_matrix.eps} \label{fig:ECalOOFVShapeNormCovarianceMatrix}}
@@ -513,7 +513,7 @@ To propagate the effect of the systematic uncertainty, a similar approach to the
 \end{figure}
 \newline
 \newline
-As described in section~\ref{sec:ReconstructionValidation}, a significant data/MC difference was found in the DS-ECal reconstructed events when looking at the through-going muon control sample.  The 2D reconstructed track quality check required that tracks contained no layer gaps.  There was an unforeseen hit inefficiency in the DS-ECal which was not modelled in MC, which would cause tracks to be rejected because of the quality check.  This effect is shown in Fig [INSERT FIGURE].
+As described in section~\ref{sec:ReconstructionValidation}, a significant data/MC difference was found in the DS ECal reconstructed events when looking at the through-going muon control sample.  The 2D reconstructed track quality check required that tracks contained no layer gaps.  There was an unforeseen hit inefficiency in the DS ECal which was not modelled in MC, which would cause tracks to be rejected because of the quality check.  This effect is shown in Fig [INSERT FIGURE].
 \begin{equation}
 INSERT FIGURE
 \end{equation}
@@ -561,7 +561,7 @@ The selected events distributions, separated into the prong topologies, are show
 \begin{figure}
   \centering
   \subfloat[Barrel ECals.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_Barrel_Selected_GENIE.eps} \label{fig:ProngStackBarrelSelectedGENIE}}
-  \subfloat[DS-ECal.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE.eps} \label{fig:ProngStackDSSelectedGENIE}}
+  \subfloat[DS ECal.]{\includegraphics[width=9cm]{images/measurement/systematics/genie/ProngStack_DS_Selected_GENIE.eps} \label{fig:ProngStackDSSelectedGENIE}}
   \caption{The number of selected events in the GENIE-based Monte Carlo sample, separated out into the prong topologies.  Each event is categorised by the associated truth information from the simulation.}
   \label{fig:ProngStackSelectedGENIE}
 \end{figure}
@@ -586,14 +586,14 @@ The selected events distributions, separated into the prong topologies, are show
 \end{table}
 \newline
 \newline
-Overall, there are differences in the selection efficiencies between NEUT and GENIE, particularly for the DS-ECal.  However, when combining the topologies and including the events below reconstruction threshold, the efficiency differences are somewhat minor.  As described at the start of this chapter, the DS-ECal will form the primary target and so it is the DS-ECal efficiency which is the most important.  The DS-ECal efficiency uncertainty is simply defined as the difference between the NEUT and GENIE efficiencies, which is $53.0\% - 49.9\% = 3.1\%$.  This error as a fraction of the nominal uncertainty is $5.85\%$.
+Overall, there are differences in the selection efficiencies between NEUT and GENIE, particularly for the DS ECal.  However, when combining the topologies and including the events below reconstruction threshold, the efficiency differences are somewhat minor.  As described at the start of this chapter, the DS ECal will form the primary target and so it is the DS ECal efficiency which is the most important.  The DS ECal efficiency uncertainty is simply defined as the difference between the NEUT and GENIE efficiencies, which is $53.0\% - 49.9\% = 3.1\%$.  This error as a fraction of the nominal uncertainty is $5.85\%$.
 \subsection{The measured cross-section uncertainty}
 Using all of the information described in chapter~\ref{chap:NeutrinoInteractionSelection} and chapter~\ref{chap:CrossSectionMeasurement}, the $\nu_\mu$ CC-inclusive cross-section on lead will be calculated as
 \begin{equation}
 \label{eq:CrossSection}
 \sigma^{\textrm{CC}}_{\textrm{Pb}} = \frac{R_{\textrm{Pb}}N^{\textrm{MC}}_{\textrm{Pb}}\eta_{\textrm{Pb}}}{T_{\textrm{Pb}}\Phi^{\textrm{MC}}\epsilon_{\textrm{Pb}}},
 \end{equation}
-where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS-ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS-ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS-ECal selection.  The shape covariance matrix (shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertainties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS-ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quoted as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
+where $R_{\textrm{Pb}}$ is the Pb normalisation returned from the rate fit, $N^{\textrm{MC}}_{\textrm{Pb}}$ is the number of selected events in the DS ECal, $T_{\textrm{Pb}}$ is the number of Pb nuclei present in the DS ECal, $\Phi^{\textrm{MC}}$ is the total flux used to create the MC and $\eta_{\textrm{Pb}}$ and $\epsilon_{\textrm{Pb}}$ are the purity and efficiency of the DS ECal selection.  The shape covariance matrix (shown in Fig.~\ref{fig:TotalShapeCovarianceMatrix}) will be used as an input to the fit.  This covariance matrix includes uncertainties on the flux and (partly) on the number of Pb nuclei.  Therefore, the error on $R_{\textrm{Pb}}$ will provide the error from the shape systematic uncertainties which means it is only necessary to include a couple of extra uncertainties on the actual measurement of the cross-section.  It is necessary to include the normalisation uncertainty on the number of selected DS ECal events.  This value, taken from Fig.~\ref{fig:TotalCovarianceMatrix} is $11.1\%$.  The error on the efficiency, as discussed above, is $5.85\%$. Despite having investigated systematic differences in the ECal mass, the simulation does not include antimony in the absorber sheets.  The absorber sheets are quoted as having a $0.2\%$ uncertainty on the antimony doping~\cite{1748-0221-8-10-P10019} which also needs to be included in the final uncertainty.  Combining all of this information, the final uncertainty on the measured cross-section will be
 \begin{equation}
 \label{eq:CrossSectionUncertainty}
 \sigma_{\sigma^{\textrm{CC}}_{\textrm{Pb}}} = \sigma_{R_{\textrm{Pb}}} \pm 12.5\%,
@@ -708,7 +708,7 @@ The same GENIE sampled used in section~\ref{sec:SystematicUncertainties} was pas
 \end{figure}
 \newline
 \newline
-Before the NEUT MC templates were actually fit to the genie fake data, it was necessary to calculate what the fit should be predicting.  To calculate what the true GENIE to NEUT cross-section ratios are, the truth information provided by the MC simulation was used.  For both the GENIE and NEUT samples, the number of true interactions in the DS-ECal were recorded, including the target element.  These numbers were weighted to the same POT and the ratio taken.  These values are shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}.  
+Before the NEUT MC templates were actually fit to the genie fake data, it was necessary to calculate what the fit should be predicting.  To calculate what the true GENIE to NEUT cross-section ratios are, the truth information provided by the MC simulation was used.  For both the GENIE and NEUT samples, the number of true interactions in the DS ECal were recorded, including the target element.  These numbers were weighted to the same POT and the ratio taken.  These values are shown in table~\ref{table:GENIEToNEUTTrueCrossSectioRatio}.  
 \begin{table}
   \begin{tabular}{c c }
     $\frac{\sigma^{\textrm{Pb}}_{\textrm{GENIE}}}{\sigma^{\textrm{Pb}}_{\textrm{NEUT}}}$ &$\frac{\sigma^{\textrm{C}}_{\textrm{GENIE}}}{\sigma^{\textrm{C}}_{\textrm{NEUT}}}$\\ \hline \hline
@@ -771,7 +771,7 @@ The data quality checks and the event selection described in chapter~\ref{chap:N
    Bottom left ECal & 65169 & 65448 \\
    Side left ECal & 68031 & 66095 \\
    Top left ECal & 32760 & 33470 \\
-   DS-ECal & 35420 & 34372 \\
+   DS ECal & 35420 & 34372 \\
    Bottom right ECal (Reverse) & 72112 & 70885 \\
    Side right ECal (Reverse) & 61159 & 64445 \\
    Top right ECal (Reverse) & 35997 & 36191 \\
@@ -972,15 +972,15 @@ The output of the fitter is more reassuring.  The reduced $\chi^2$, while still 
 
 \section{The $\nu_\mu$ charged current inclusive cross-section on lead}
 \label{sec:PbCrossSection}
-Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS-ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainty, which is the same percentage uncertainty value for the CC inclusive cross-section, was found to be
+Using the fitted value of $R^{\textrm{Pb}}$, the cross-section can be calculated using equation~\ref{eq:CrossSection} and event information from the DS ECal.  As described in section~\ref{sec:SystematicUncertainties}, the errors on $R^{\textrm{Pb}}$ returned from the fitter provides the shape systematic uncertainties.  To calculate the full error, the extra error shown in equation~\ref{eq:CrossSectionUncertainty} (12.5$\%)$ can be added in quadrature with the shape-only errors for $R^{\textrm{Pb}}$.  Following this route, the value of $R^{\textrm{Pb}}$ and its percentage uncertainty, which is the same percentage uncertainty value for the CC inclusive cross-section, was found to be
 \begin{equation}
 R^{\textrm{Pb}} = 1.10^{+16.4\%}_{-15.5\%}.
 \label{eq:RPbWithFullPercentageError}
 \end{equation}
-The dimensions and quantity of the lead absorbers in the DS-ECal are described in chapter~\ref{chap:T2KExperiment} and section~\ref{sec:SystematicUncertainties}.  Taking the density of lead to be 11.34~g/cm$^{3}$, the total mass of lead in the DS-ECal is 2661~kg.  The atomic mass of lead is $207.2\pm0.1$ atomic units~\cite{LeadAtomicUnits}, which infers there are $7.74\times10^{27}$ lead nuclei present in the Monte Carlo simulation of the DS-ECal.  The lack of antimony in the simulation has already been quantified in the final uncertainty above.
+The dimensions and quantity of the lead absorbers in the DS ECal are described in chapter~\ref{chap:T2KExperiment} and section~\ref{sec:SystematicUncertainties}.  Taking the density of lead to be 11.34~g/cm$^{3}$, the total mass of lead in the DS ECal is 2661~kg.  The atomic mass of lead is $207.2\pm0.1$ atomic units~\cite{LeadAtomicUnits}, which infers there are $7.74\times10^{27}$ lead nuclei present in the Monte Carlo simulation of the DS ECal.  The lack of antimony in the simulation has already been quantified in the final uncertainty above.
 \newline
 \newline
-The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} had a $53.0\%$ efficiency and $72.4\%$ purity for selecting charged-current neutrino interactions in the active volume of the DS-ECal.  Considering interactions on lead alone, the efficiency and purity are $53.8\%$ and $49.7\%$ respectively with 32427 reconstructed events selected when scaled to the collected data POT.
+The selection presented in chapter~\ref{chap:NeutrinoInteractionSelection} had a $53.0\%$ efficiency and $72.4\%$ purity for selecting charged-current neutrino interactions in the active volume of the DS ECal.  Considering interactions on lead alone, the efficiency and purity are $53.8\%$ and $49.7\%$ respectively with 32427 reconstructed events selected when scaled to the collected data POT.
 \newline
 \newline
 Fig.~\ref{fig:Run3CFlux} shows the simulated neutrino flux (per $10^{21}$~POT) for T2K run 3C.  
