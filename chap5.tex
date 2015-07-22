@@ -55,7 +55,7 @@ Now consider the 2D Cartesian space again.  Unlike before, we will define a sing
   c = -xm + y.
   \label{eq:2DLineParameter}
 \end{equation}
-Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the equation of a 2D line, however the parameters are $x$ and $y$ and the coordinates are $m$ and $c$.  Specifically, equation~\ref{eq:2DLineParameter} is represented by a line in the parameter space defined above.  The gradient of this line is 
+Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the equation of a 2D line\Yoshi{; however,}{was ``, however''; see \url{http://www.nationalpunctuationday.com/semicolon.html}} the parameters are $x$ and $y$ and the coordinates are $m$ and $c$.  Specifically, equation~\ref{eq:2DLineParameter} is represented by a line in the parameter space defined above.  The gradient of this line is 
 \begin{equation}
   x = \frac{\Delta c}{\Delta m}
   \label{eq:2DLineGradientParameterSpace}
@@ -254,7 +254,7 @@ An alternative is to model the ECal bar as a set of points arranged in a cross a
 
 \subsection{Parameter space generation}
 \label{subsec:ParameterSpaceGeneration}
-As we have addressed how to Hough transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry, however this is located in TPC 1 which would mean $\rho$ will usually be the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
+As we have addressed how to Hough transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry\Yoshi{; however,}{was ``, however''} this is located in TPC 1 which would mean $\rho$ will usually be the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
 \newline
 \newline
 The provided description of the Hough transform in all previous sections is strictly defined in 2D and so the ECal cluster should be split in such a way that this definition can be used.  Fortunately, a 3D ECal cluster is built up using the two 2D views that the scintillator layers provide.  So, it is relatively easy to split the 3D cluster into a pair of 2D clusters by collecting the cluster's hits into their respective 2D views.
