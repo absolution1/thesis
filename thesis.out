@@ -50,35 +50,37 @@
 \BOOKMARK [2][-]{subsection.5.2.7}{Track pairwise crossing reconstruction}{section.5.2}% 50
 \BOOKMARK [1][-]{section.5.3}{Output of the reconstruction}{chapter.5}% 51
 \BOOKMARK [1][-]{section.5.4}{Validation of the reconstruction}{chapter.5}% 52
-\BOOKMARK [0][-]{chapter.6}{Magnetic field simulation in ND280}{}% 53
-\BOOKMARK [1][-]{section.6.1}{Magnetic field model in the ND280 flux return}{chapter.6}% 54
-\BOOKMARK [1][-]{section.6.2}{Effect of magnetic field on the ECal}{chapter.6}% 55
-\BOOKMARK [0][-]{chapter.7}{Selection of neutrino interactions in the ECal}{}% 56
-\BOOKMARK [1][-]{section.7.1}{Signal definition}{chapter.7}% 57
-\BOOKMARK [1][-]{section.7.2}{Monte Carlo sample}{chapter.7}% 58
-\BOOKMARK [1][-]{section.7.3}{Vertex reconstruction}{chapter.7}% 59
-\BOOKMARK [1][-]{section.7.4}{Monte Carlo selection}{chapter.7}% 60
-\BOOKMARK [2][-]{subsection.7.4.1}{Selection cuts}{section.7.4}% 61
-\BOOKMARK [2][-]{subsection.7.4.2}{Performance of the selection}{section.7.4}% 62
-\BOOKMARK [0][-]{chapter.8}{Measurement of the \040charged current inclusive cross-section on Pb}{}% 63
-\BOOKMARK [1][-]{section.8.1}{Measurement method}{chapter.8}% 64
-\BOOKMARK [1][-]{section.8.2}{Input samples to the fit}{chapter.8}% 65
-\BOOKMARK [1][-]{section.8.3}{The ECal rate fit}{chapter.8}% 66
-\BOOKMARK [1][-]{section.8.4}{Systematic uncertainties}{chapter.8}% 67
-\BOOKMARK [2][-]{subsection.8.4.1}{Flux systematic evaluation}{section.8.4}% 68
-\BOOKMARK [2][-]{subsection.8.4.2}{Cross-section systematic evaluation}{section.8.4}% 69
-\BOOKMARK [2][-]{subsection.8.4.3}{ECal detector systematic evaluation}{section.8.4}% 70
-\BOOKMARK [2][-]{subsection.8.4.4}{FGD detector uncertainty evaluation}{section.8.4}% 71
-\BOOKMARK [2][-]{subsection.8.4.5}{The measured cross-section uncertainty}{section.8.4}% 72
-\BOOKMARK [1][-]{section.8.5}{Validation of method}{chapter.8}% 73
-\BOOKMARK [2][-]{subsection.8.5.1}{Validation of the fit machinery}{section.8.5}% 74
-\BOOKMARK [2][-]{subsection.8.5.2}{Physics validation of the fitter}{section.8.5}% 75
-\BOOKMARK [1][-]{section.8.6}{Applying the fit to ND280 data}{chapter.8}% 76
-\BOOKMARK [1][-]{section.8.7}{The \040charged current inclusive cross-section on lead}{chapter.8}% 77
-\BOOKMARK [0][-]{chapter.9}{Discussion and conclusions}{}% 78
-\BOOKMARK [1][-]{section.9.1}{Discussion}{chapter.9}% 79
-\BOOKMARK [1][-]{section.9.2}{Conclusions}{chapter.9}% 80
-\BOOKMARK [1][-]{section.9.3}{The future}{chapter.9}% 81
-\BOOKMARK [0][-]{appendix*.155}{Bibliography}{}% 82
-\BOOKMARK [0][-]{appendix*.156}{List of Figures}{}% 83
-\BOOKMARK [0][-]{appendix*.157}{List of Tables}{}% 84
+\BOOKMARK [2][-]{subsection.5.4.1}{Validation of algorithm performance}{section.5.4}% 53
+\BOOKMARK [2][-]{subsection.5.4.2}{Data motivated validation of the algorithms}{section.5.4}% 54
+\BOOKMARK [0][-]{chapter.6}{Magnetic field simulation in ND280}{}% 55
+\BOOKMARK [1][-]{section.6.1}{Magnetic field model in the ND280 flux return}{chapter.6}% 56
+\BOOKMARK [1][-]{section.6.2}{Effect of magnetic field on the ECal}{chapter.6}% 57
+\BOOKMARK [0][-]{chapter.7}{Selection of neutrino interactions in the ECal}{}% 58
+\BOOKMARK [1][-]{section.7.1}{Signal definition}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.2}{Monte Carlo sample}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.3}{Vertex reconstruction}{chapter.7}% 61
+\BOOKMARK [1][-]{section.7.4}{Monte Carlo selection}{chapter.7}% 62
+\BOOKMARK [2][-]{subsection.7.4.1}{Selection cuts}{section.7.4}% 63
+\BOOKMARK [2][-]{subsection.7.4.2}{Performance of the selection}{section.7.4}% 64
+\BOOKMARK [0][-]{chapter.8}{Measurement of the \040charged current inclusive cross-section on Pb}{}% 65
+\BOOKMARK [1][-]{section.8.1}{Measurement method}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.2}{Input samples to the fit}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.3}{The ECal rate fit}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.4}{Systematic uncertainties}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.4.1}{Flux systematic evaluation}{section.8.4}% 70
+\BOOKMARK [2][-]{subsection.8.4.2}{Cross-section systematic evaluation}{section.8.4}% 71
+\BOOKMARK [2][-]{subsection.8.4.3}{ECal detector systematic evaluation}{section.8.4}% 72
+\BOOKMARK [2][-]{subsection.8.4.4}{FGD detector uncertainty evaluation}{section.8.4}% 73
+\BOOKMARK [2][-]{subsection.8.4.5}{The measured cross-section uncertainty}{section.8.4}% 74
+\BOOKMARK [1][-]{section.8.5}{Validation of method}{chapter.8}% 75
+\BOOKMARK [2][-]{subsection.8.5.1}{Validation of the fit machinery}{section.8.5}% 76
+\BOOKMARK [2][-]{subsection.8.5.2}{Physics validation of the fitter}{section.8.5}% 77
+\BOOKMARK [1][-]{section.8.6}{Applying the fit to ND280 data}{chapter.8}% 78
+\BOOKMARK [1][-]{section.8.7}{The \040charged current inclusive cross-section on lead}{chapter.8}% 79
+\BOOKMARK [0][-]{chapter.9}{Discussion and conclusions}{}% 80
+\BOOKMARK [1][-]{section.9.1}{Discussion}{chapter.9}% 81
+\BOOKMARK [1][-]{section.9.2}{Conclusions}{chapter.9}% 82
+\BOOKMARK [1][-]{section.9.3}{The future}{chapter.9}% 83
+\BOOKMARK [0][-]{appendix*.158}{Bibliography}{}% 84
+\BOOKMARK [0][-]{appendix*.159}{List of Figures}{}% 85
+\BOOKMARK [0][-]{appendix*.160}{List of Tables}{}% 86

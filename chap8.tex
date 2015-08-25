@@ -516,11 +516,7 @@ To propagate the effect of the systematic uncertainty, a similar approach to the
 \end{figure}
 \newline
 \newline
-As described in section~\ref{sec:ReconstructionValidation}, a significant data/MC difference was found in the DS ECal reconstructed events when looking at the through-going muon control sample.  The 2D reconstructed track quality check required that tracks contained no layer gaps.  There was an unforeseen hit inefficiency in the DS ECal which was not modelled in MC, which would cause tracks to be rejected because of the quality check.  This effect is shown in Fig [INSERT FIGURE].
-\begin{equation}
-INSERT FIGURE
-\end{equation}
-Because this problem was found after significant progress had been made on the MC selection, it was decided that this bug would be treated as a systematic uncertainty in the analysis.  To assess this ad hoc systematic uncertainty, the quality check was relaxed to allow 2D tracks to skip one layer in a given view.  The reconstruction and selection was then applied to the sample and was compared to the nominal sample to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalHoughBugCovarianceMatrices}.
+As described in section~\ref{sec:ReconstructionValidation}, a significant data/MC difference was found in the DS ECal reconstructed events when looking at the through-going muon control sample.  The 2D reconstructed track quality check required that tracks contained no layer gaps.  There was an unforeseen hit inefficiency in the DS ECal which was not modelled in MC, which would cause tracks to be rejected because of the 2D track quality check (see section~\ref{subsec:DataMotivatedValidation}).  Because this problem was found after significant progress had been made on the MC selection, it was decided that this bug would be treated as a systematic uncertainty in the analysis.  To assess this ad hoc systematic uncertainty, the quality check was relaxed to allow 2D tracks to skip one layer in a given view.  The reconstruction and selection was then applied to the sample and was compared to the nominal sample to construct the covariance matrices, which are shown in Fig.~\ref{fig:ECalHoughBugCovarianceMatrices}.
 \begin{figure}[b!]
   \centering
   \subfloat[Shape+normalisation.]{\includegraphics[width=8cm]{images/measurement/systematics/detector/bug/ecal_hough_covariance_matrix.eps} \label{fig:ECalHoughBugShapeNormCovarianceMatrix}}

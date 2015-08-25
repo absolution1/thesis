@@ -456,8 +456,8 @@ Note that no vertex formation beyond the pairwise crossings is calculated at thi
 \section{Validation of the reconstruction}
 \label{sec:ReconstructionValidation}
 Because of the large scope of the reconstruction and the limited time available for the presented analysis, the validation of the reconstruction was done in parallel to the rest of the analysis and is still an ongoing effort.  The validation that has been done can be split into two areas: validation of the performance of the algorithms purely using MC and comparisons of MC to data using control samples.
-\newline
-\newline
+\subsection{Validation of algorithm performance}
+\label{subsec:ValidationOfAlgorithmPerformance}
 The first performance validation investigated the angular resolution using the enhanced reconstruction (by L. Pickering).  This study calculated the angular resolution for MC muons fired into the side-left ECal for a range of entry angles.  For each MC event, the cosine of the angular separation between the true particle angle and the reconstructed angle was calculated, $\cos\theta^{\textrm{Sep}}$.  The values of $\cos\theta^{\textrm{Sep}}$ were then binned in a distribution.  An outward scan from the peak of the distribution was then performed to find where the height decreased to $68\%$ of the peak.  The value of $\theta^{\textrm{Sep}}$ and this point was taken as the angular resolution.  These results are shown in Fig.~\ref{fig:MuonAngularResolutionDSECal}.  Generally speaking, the found angular resolutions are very good.  For long trajectories (200~mm), the angular resolution is within 15$^\circ$.  It is only for short tracks (40~mm) that the angular resolution becomes large.
 \begin{figure}
   \centering
@@ -479,3 +479,41 @@ The second performance validation studied the success of the 3D matching.  To do
   \label{table:PercentageCorrect3DMatching}
 \end{table}
 
+\subsection{Data motivated validation of the algorithms}
+\label{subsec:DataMotivatedValidation}
+As described above, the validation is still an ongoing effort and, so far, all of the data motivated validation has been done by L. Pickering.  At time of writing, validation events  measured in ND280 can be split into two groups:
+\begin{enumerate}
+\item \textbf{FGD collinear cosmics (named fgdcol):} A sample of clean FGD-triggered cosmic events which are scaled to have an equal distribution of angles.
+\item \textbf{Through-going basket muons (named bskmu):} A sample of clean beam-triggered events which solely contain a muon depositing energy in TPC2, TPC3 and the DS ECal.
+\end{enumerate}
+The fgdcol sample will naturally contain a good sample of barrel ECal events whilst having only a limited number of DS ECal events whereas the reverse is true for the bskmu sample.  So, it follows that the fgdcol and bskmu samples should be used to separately assess the reconstruction in the barrel ECal and DS ECal respectively. 
+\newline
+\newline
+Fig.~\ref{fig:TotalChargeDataValidation} shows the summed charge contained in all tracks reconstructed in each ECal cluster.  To clarify what this means, if a reconstructed ECal cluster contained three reconstructed tracks where tracks 1, 2 and 3 contain 20~MEU, 50~MEU and 30~MEU of charge respectively, that event would be registered as having 100~MEU of charge in the relevant distribution in Fig.~\ref{fig:TotalChargeDataValidation}.  Both the barrel ECal and DS ECal samples show a large discrepancy around the charge peak.  This offset can be explained as a hit-level charge discrepancy between data and Monte Carlo and is not caused by the reconstruction.  This discrepancy should, however, be considered during analysis of the systematic uncertainties.  Unfortunately, the DS ECal events in the bskmu sample (Fig.~\ref{fig:TotalChargebskmuDS}) shows an extra data excess in the 20~MEU to 30~MEU region which is just before the charge peak.  This data excess can not be explained by a relative hit inefficiency. 
+\begin{figure}%
+  \centering
+  \subfloat[Barrel ECal events in the fgdcol sample.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_fgdcol_Barrel.eps} \label{fig:TotalChargefgdcolBarrel}}
+  \subfloat[DS ECal events in the bskmu sample.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_bskmu_DSECal.eps} \label{fig:TotalChargebskmuDS}}
+  \caption{The summed charge contained on all tracks reconstructed in each ECal cluster.  The red histograms and black points are Monte Carlo and data respectively.}
+  \label{fig:TotalChargeDataValidation}
+\end{figure}
+\newline
+\newline
+Fig.~\ref{fig:TotalHitsDataValidation} shows the summed number of hits contained in all tracks reconstructed in each ECal cluster.  Generally speaking, the distributions in Fig.~\ref{fig:TotalHitsDataValidation} share similar features to those in Fig.~\ref{fig:TotalChargeDataValidation}.  Importantly, an excess of data events appears just before the peak in Fig.~\ref{fig:TotalHitsDataValidation}.  The fact that this excess also appears in Fig.~\ref{fig:TotalHitsDataValidation} strongly suggests that the issue is caused by the number of hits associated to the reco. tracks, rather than the deposited charge.  Further investigation of this discrepancy revealed that a mismodelled hit inefficiency, most likely due to dead DS ECal channels, was the issue.  One of the 2D track quality checks (see section~\ref{subsec:2DTrackQualityChecks}) requires that a 2D track candidate can not skip a layer in a given view which is problematic when considering dead channels.  
+\begin{figure}%
+  \centering
+  \subfloat[Barrel ECal events in the fgdcol sample.]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_fgdcol_Barrel.eps} \label{fig:TotalHitsfgdcolBarrel}}
+  \subfloat[DS ECal events in the bskmu sample.]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_bskmu_DSECal.eps} \label{fig:TotalHitsbskmuDS}}
+  \caption{The summed number of hits contained on all tracks reconstructed in each ECal cluster.  The red histograms and black points are Monte Carlo and data respectively.}
+  \label{fig:TotalHitsDataValidation}
+\end{figure}
+\newline
+\newline
+To test this hypothesis, this requirement was relaxed to allow a 2D track candidate to skip a single ECal layer and the Monte Carlo bskmu sample was re-processed.  The re-processed DS ECal events are shown in Fig.~\ref{fig:bskmuCorrectedDSDataValidation}.  As can clearly be seen, the data excess before the peak in the distributions has now gone.  Unfortunately, large scale processing and analysis of beam Monte Carlo events had already started by the time this issue was discovered and so it was unfeasible to include this bug fix in the analysis.  So, it was decided that this issue would be treated as an additional systematic uncertainty.  The collected data events were processed with this fix in place.
+\begin{figure}[b!]%
+  \centering
+  \subfloat[Summed charge contained on all tracks in each reco. ECal cluster.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_bskmuCorrected_DSECal.eps} \label{fig:TotalChargebskmuCorrectedDS}}
+  \subfloat[Summed number of hits contained on all tracks in each reco. ECal cluster..]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_bskmuCorrected_DSECal.eps} \label{fig:TotalHitsbskmuCorrectedDS}}
+  \caption{The number of DS ECal events in the bskmu sample after relaxing the 2D track quality check.  The red histograms and black points are the Monte Carlo and data respectively.}
+  \label{fig:bskmuCorrectedDSDataValidation}
+\end{figure}
