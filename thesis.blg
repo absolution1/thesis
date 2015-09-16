@@ -3,49 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: h-physrev.bst
 Database file #1: mythesis.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Warning--I didn't find a database entry for "fig:OAEffectFlux"
-Warning--empty author in CHORUS_XSEC
-Warning--empty year in Ferrari_fluka:a
-You've used 75 entries,
+Warning--I didn't find a database entry for "Z-PeakReferenceAtLEP"
+You've used 33 entries,
             1946 wiz_defined-function locations,
-            1108 strings with 98519 characters,
-and the built_in function-call counts, 15096 in all, are:
-= -- 1026
-> -- 732
-< -- 1
-+ -- 268
-- -- 149
-* -- 1169
-:= -- 1946
-add.period$ -- 75
-call.type$ -- 75
-change.case$ -- 3
+            841 strings with 39837 characters,
+and the built_in function-call counts, 6545 in all, are:
+= -- 450
+> -- 318
+< -- 0
++ -- 118
+- -- 64
+* -- 496
+:= -- 857
+add.period$ -- 33
+call.type$ -- 33
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 77
-duplicate$ -- 821
-empty$ -- 1538
-format.name$ -- 223
-if$ -- 3543
+cite$ -- 33
+duplicate$ -- 353
+empty$ -- 660
+format.name$ -- 97
+if$ -- 1531
 int.to.chr$ -- 0
-int.to.str$ -- 75
-missing$ -- 74
-newline$ -- 305
-num.names$ -- 74
-pop$ -- 340
+int.to.str$ -- 33
+missing$ -- 32
+newline$ -- 135
+num.names$ -- 33
+pop$ -- 151
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 724
+skip$ -- 308
 stack$ -- 0
-substring$ -- 867
-swap$ -- 219
-text.length$ -- 1
+substring$ -- 373
+swap$ -- 91
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 136
-width$ -- 77
-write$ -- 555
-(There were 3 warnings)
+warning$ -- 0
+while$ -- 58
+width$ -- 35
+write$ -- 251
+(There was 1 warning)
