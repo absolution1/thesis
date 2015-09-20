@@ -313,6 +313,7 @@ The first input to the likelihood is the ratio of the total deposited charge on 
 where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is the number of incorrectly matched tracks in bin $i$.  A discreet probability density distribution for $Q_{\textrm{ratio}}$ can then be formed by calculating $p_i$ for every bin.  The discreet probability density distribution is then interpolated with splines to create the final probability distribution.  An example of this for the two track, barrel case is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioPDF}.  When a matching candidate pair is being considered, the value of $Q_{\textrm{ratio}}$ is calculated and used in the spline to retrieve $\mathcal{L}_{Q_{\textrm{ratio}}}$.
 \begin{figure}%
   \centering
+\Yoshi{}{Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
   \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
   \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
   \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.}
@@ -335,6 +336,7 @@ where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is th
 \newline
 The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is the difference in the starting layer of each 2D track which forms the matching candidate pair, where starting layer refers to the layer closest to the ND280 tracker.  For 2D tracks which should be matched together, $\Delta_{\textrm{layer, first}}$ should be 1.  The separation ability of this variable for the two track, barrel is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation}.  The discreet probability density function was created using eqn.~\ref{eq:BinProbabilityPDF}.  It was not necessary to interpolate using splines as $\Delta_{\textrm{layer, first}}$ is itself discreet.  The probability density function for $\Delta_{\textrm{layer, first}}$ is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLPDF} for the two track, barrel case.  For each matching candidate pair, the value of $\Delta_{\textrm{layer, first}}$ is calculated and the corresponding $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$ is retrieved from the probability density function.
 \begin{figure}%
+\Yoshi{}{Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
   \centering
   \subfloat[$\Delta_{\textrm{layer, first}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
   \subfloat[$\Delta_{\textrm{layer, first}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDFLPDF}}
@@ -479,9 +481,9 @@ The second performance validation studied the success of the 3D matching.  To do
   \label{table:PercentageCorrect3DMatching}
 \end{table}
 
-\subsection{Data motivated validation of the algorithms}
+\subsection{Data-motivated validation of the algorithms}
 \label{subsec:DataMotivatedValidation}
-As described above, the validation is still an ongoing effort and, so far, all of the data motivated validation has been done by L. Pickering.  At time of writing, validation events  measured in ND280 can be split into two groups:
+As described above, the validation is still an ongoing effort and, so far, all of the data-motivated validation has been done by L. Pickering.  At time of writing, validation events  measured in ND280 can be split into two groups:
 \begin{enumerate}
 \item \textbf{FGD collinear cosmics (named fgdcol):} A sample of clean FGD-triggered cosmic events which are scaled to have an equal distribution of angles.
 \item \textbf{Through-going basket muons (named bskmu):} A sample of clean beam-triggered events which solely contain a muon depositing energy in TPC2, TPC3 and the DS ECal.
