@@ -29,7 +29,7 @@ For NCQE interactions, the incident neutrino remains after the interaction has o
 \nu_\mu p \rightarrow \nu_\mu p.
 \label{eq:NCQEInteractionProtonTarget}
 \end{equation}
-The two kinds of QE interaction are shown in Fig.~\ref{fig:QEFD}.
+The two kinds of QE interaction are shown in Fig.~\ref{fig:QEFD}\Yoshi{}{In the figure, the W isn't really a W$^+$; it could be going either way in time. You can only call it a W}.
 \begin{figure}%
   \centering
   \subfloat[CCQE.]{\includegraphics[width=8cm]{images/neutrino_interactions/CCQE_FD.eps} \label{fig:CCQEFD}}
@@ -65,12 +65,12 @@ where $X$ is the remnant of the nucleus after the interaction occurs.  An exampl
 \begin{figure}%
   \centering
   \includegraphics[width=8cm]{images/neutrino_interactions/CCDIS_FD.eps}
-  \caption{A Charged Current Deep Inelastic Scattering (CCDIS) interaction of a $\nu_\mu$ with a neutron. $X$ resembles the leftover nuclear remnant.}
+  \caption{A Charged Current Deep Inelastic Scattering (CCDIS) interaction of a $\nu_\mu$ with a neutron. $X$ \Yoshi{represents}{was `resembles'} the leftover nuclear remnant.}
   \label{fig:CCDISFG}
 \end{figure}
 \newline
 \newline
-While the value of a particular interaction cross-section should depend on the nuclear environment, it is possible to make comparisons of the measured cross-section per nucleon.  Fig.~\ref{fig:CrossSectionMeasurements} shows a comparison of $\nu_\mu$ CC cross-section measurements per nucleon from different experiments, all of which sample a different neutrino energy range.  There are large uncertainties for many of the cross-section measurements, particularly for the ones sampling the lower energy ranges.  The T2K beam energy is $\sim$700~MeV, which sits in the region of higher uncertainty.
+While the value of a particular interaction cross-section should depend on the nuclear environment, it is possible to make comparisons of the measured cross-section per nucleon.  Fig.~\ref{fig:CrossSectionMeasurements}\Yoshi{}{Make this figure bigger. Say something about the data points as well as the curves, and how up-to-date it is etc} shows a comparison of $\nu_\mu$ CC cross-section measurements per nucleon from different experiments, all of which sample a different neutrino energy range.  There are large uncertainties for many of the cross-section measurements, particularly for the ones sampling the lower energy ranges.  The T2K beam energy is $\sim$700~MeV, which sits in the region of higher uncertainty.
 \begin{figure}[b]%
   \centering
   \includegraphics[width=8cm]{images/neutrino_interactions/CrossSectionMeasurements.pdf}
@@ -100,7 +100,7 @@ As introduced above, consideration of nuclear effects in cross-section measureme
 The RFG can only model the effect of the nucleus on the initial neutrino interaction which creates the final states.  However, these final states are created within the nucleus and so additional interactions of the final states with the nucleus can occur.  The Final-State Interactions (FSI) can significantly alter the momentum and direction of the final-state particles.  As the final-state particles are used to infer neutrino properties, the FSI effects can alter the interpretation of the reconstructed events.  In simulation, variations of the cascade model are typically used.  This involves pushing the final-state particles through the nucleus in discreet steps and, at each step, probabilistically updating the particle properties.  If at any point a final-state particles knocks out another nucleon, the additional nucleon is also pushed through the nucleus in parallel.  The discreet stepping occurs until all relevant particles have escaped the nucleus.
 \newline
 \newline
-To test such cross-section models, including nuclear effects, it is necessary to compare prediction with collected data.  However, collected cross-section data for heavy nuclei is relatively sparse.  In the case of lead, only two experiments have performed cross-section measurements.  The first measurement was performed by the CHORUS~\cite{CHORUS_XSEC} experiment.  The CHORUS detector, exposed to the CERN SPS beam with a wide-band $\nu_\mu$ beam of 27~GeV average energy, measured a cross-section for lead, iron, marble and polyethylene.  However, because the absolute flux was not measured in the experiment, all of the cross-section measurements were normalised to a common constant.  Their results are summarised in Fig.~\ref{fig:CHORUSXSec}.
+To test such cross-section models, including nuclear effects, it is necessary to compare prediction with collected data.  However, collected cross-section data for heavy nuclei is relatively sparse.  In the case of lead, only two experiments have performed cross-section measurements.  The first measurement was performed by the CHORUS~\cite{CHORUS_XSEC} experiment.  The CHORUS detector, exposed to the CERN SPS beam with a wide-band $\nu_\mu$ beam of 27~GeV average energy, measured a cross-section for lead, iron, marble and polyethylene.  However, because the absolute flux was not measured in the experiment, all of the cross-section measurements were normalised to a common constant.  Their results are summarised in Fig.~\ref{fig:CHORUSXSec}\Yoshi{}{``data/prediction'' is confusing because it looks like the ratio of the two. Say which experiment is, and when the data was taken, in the caption, not just the body text}.
 \begin{figure}%
   \centering
   \includegraphics[width=8cm]{images/neutrino_interactions/CHORUS_XSec.pdf}
@@ -111,12 +111,12 @@ The second measurement was made by the MINER$\nu$A experiment~\cite{PhysRevLett.
 \begin{figure}%
   \centering
   \includegraphics[width=8cm]{images/neutrino_interactions/MINERvA_XSec.pdf}
-  \caption{Ratio of the measured $\nu_\mu$ CC inclusive cross-section on lead to plastic scintillator as a function of neutrino energy.  The error bars on the simulation (data) are statistical (systematic) uncertainties~\cite{PhysRevLett.112.231801}.}
+  \caption{Ratio of the measured $\nu_\mu$ CC inclusive cross-section on lead to plastic scintillator as a function of neutrino energy.  The error bars on the simulation (data) are statistical (systematic) uncertainties~\cite{PhysRevLett.112.231801}.\Yoshi{}{WHAT EXPERIMENT IS THIS? Your captions are generally lacking---they need to stand on their own, without the need for the reader to find the corresponding body text to figure out what a plot is about.}}
   \label{fig:MINERvAXSec}
 \end{figure}
 \newline
 \newline
-As neutrino oscillation physics enters the precision era, it is becoming increasingly important that our understanding of neutrino cross-sections is improved.  To achieve this goal, more cross-section measurements across a range of nuclear targets are needed.  This thesis presents a measurement of the $\nu_\mu$ CC inclusive cross-section on lead using the electromagnetic calorimeters contained in the near detector of the T2K experiment.  
+As neutrino oscillation physics enters the precision era\Yoshi{}{We entered the precision era quite a while ago---see KamLAND's mixing angle error!}, it is becoming increasingly important that our understanding of neutrino cross-sections is improved.  To achieve this goal, more cross-section measurements across a range of nuclear targets are needed.  This thesis presents a measurement of the $\nu_\mu$ CC inclusive cross-section on lead using the electromagnetic calorimeters contained in the near detector of the T2K experiment.  
 
 
 
