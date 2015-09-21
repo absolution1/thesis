@@ -1,13 +1,23 @@
-\BOOKMARK [0][-]{chapter.1}{The T2K Experiment}{}% 1
-\BOOKMARK [1][-]{section.1.1}{T2K beam}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Accelerator complex}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Neutrino beamline}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Off-axis beam}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Near detector complex}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Multi-Pixel Photon Counter}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{INGRID}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.3}{ND280}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.4}{The far detector}{section.1.2}% 10
-\BOOKMARK [0][-]{appendix*.10}{Bibliography}{}% 11
-\BOOKMARK [0][-]{appendix*.11}{List of Figures}{}% 12
-\BOOKMARK [0][-]{appendix*.12}{List of Tables}{}% 13
+\BOOKMARK [0][-]{chapter.1}{ND280 software and existing ECal event reconstruction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Monte Carlo production software}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Neutrino flux simulation}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Neutrino interaction simulation}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{ND280 detector simulation}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Detector response simulation}{section.1.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Real data processing software}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Main software chain}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.3.1}{Detector calibration}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.2}{Event reconstruction}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.3}{Data reduction and summarising}{section.1.3}% 11
+\BOOKMARK [1][-]{section.1.4}{ECal event reconstruction}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.4.1}{Hit preparation}{section.1.4}% 13
+\BOOKMARK [2][-]{subsection.1.4.2}{Basic clustering}{section.1.4}% 14
+\BOOKMARK [2][-]{subsection.1.4.3}{Cluster combination}{section.1.4}% 15
+\BOOKMARK [2][-]{subsection.1.4.4}{Cluster expansion}{section.1.4}% 16
+\BOOKMARK [2][-]{subsection.1.4.5}{3D cluster formation}{section.1.4}% 17
+\BOOKMARK [2][-]{subsection.1.4.6}{3D hit reconstruction}{section.1.4}% 18
+\BOOKMARK [2][-]{subsection.1.4.7}{Energy reconstruction}{section.1.4}% 19
+\BOOKMARK [2][-]{subsection.1.4.8}{Event classification}{section.1.4}% 20
+\BOOKMARK [0][-]{appendix*.2}{Bibliography}{}% 21
+\BOOKMARK [0][-]{appendix*.3}{List of Figures}{}% 22
+\BOOKMARK [0][-]{appendix*.4}{List of Tables}{}% 23
