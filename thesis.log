@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,7 +1118,7 @@ Processing 'mainmatter' comment.
 \openout3 = `comment.cut'.
 
  Comment 'mainmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./chap4.tex
+Straight input of comment.cut. (./comment.cut (./chap5.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 Package microtype Info: Loading generic settings for font family
@@ -1141,112 +1141,957 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
-
- []
+LaTeX Warning: Reference `sec:ECalEventReconstruction' on page 3 undefined on i
+nput line 3.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 8.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 9.
+[3]
+Package epstopdf Info: Source file: <images/hough_transform/cartesian_line.eps>
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--21
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 4118 bytes
+(epstopdf)             Output file: <images/hough_transform/cartesian_line-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 5243 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
+tesian_line-eps-converted-to.pdf images/hough_transform/cartesian_line.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/cartesian_line-eps-converted-to.pdf, id=113, 569.12625p
+t x 451.6875pt>
+File: images/hough_transform/cartesian_line-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use images/hough_transform/cartesian_line-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/cartesian_line-eps-converted-to
+.pdf used on input line 35.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 35.
+Package epstopdf Info: Source file: <images/hough_transform/parameter_point.eps
+>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 3680 bytes
+(epstopdf)             Output file: <images/hough_transform/parameter_point-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:51:56
+(epstopdf)                    size: 4284 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/par
+ameter_point-eps-converted-to.pdf images/hough_transform/parameter_point.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/parameter_point-eps-converted-to.pdf, id=114, 569.12625
+pt x 451.6875pt>
+File: images/hough_transform/parameter_point-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use images/hough_transform/parameter_point-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/parameter_point-eps-converted-t
+o.pdf used on input line 36.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 37.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--21
+Underfull \hbox (badness 10000) in paragraph at lines 15--43
 
  []
 
+[4 <./images/hough_transform/cartesian_line-eps-converted-to.pdf> <./images/hou
+gh_transform/parameter_point-eps-converted-to.pdf>]
+Package microtype Info: Loading generic settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package epstopdf Info: Source file: <images/hough_transform/cartesian_point.eps
+>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 3812 bytes
+(epstopdf)             Output file: <images/hough_transform/cartesian_point-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 4439 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
+tesian_point-eps-converted-to.pdf images/hough_transform/cartesian_point.eps>
+(epstopdf)             \includegraphics on input line 68.
+Package epstopdf Info: Output file is already uptodate.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--30
+<images/hough_transform/cartesian_point-eps-converted-to.pdf, id=147, 569.12625
+pt x 451.6875pt>
+File: images/hough_transform/cartesian_point-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use images/hough_transform/cartesian_point-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/cartesian_point-eps-converted-t
+o.pdf used on input line 68.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_transform/parameter_line.eps>
+
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 4132 bytes
+(epstopdf)             Output file: <images/hough_transform/parameter_line-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 5340 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/par
+ameter_line-eps-converted-to.pdf images/hough_transform/parameter_line.eps>
+(epstopdf)             \includegraphics on input line 69.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/parameter_line-eps-converted-to.pdf, id=148, 569.12625p
+t x 451.6875pt>
+File: images/hough_transform/parameter_line-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use images/hough_transform/parameter_line-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/parameter_line-eps-converted-to
+.pdf used on input line 69.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
 
  []
 
+[5 <./images/hough_transform/cartesian_point-eps-converted-to.pdf> <./images/ho
+ugh_transform/parameter_line-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/hough_transform/HT_example_cartesia
+n_space.eps>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 4233 bytes
+(epstopdf)             Output file: <images/hough_transform/HT_example_cartesia
+n_space-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 5897 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
+example_cartesian_space-eps-converted-to.pdf images/hough_transform/HT_example_
+cartesian_space.eps>
+(epstopdf)             \includegraphics on input line 104.
+Package epstopdf Info: Output file is already uptodate.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--30
+<images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf, id=182
+, 569.12625pt x 451.6875pt>
+File: images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/HT_example_cartesian_space-eps-
+converted-to.pdf used on input line 104.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_transform/HT_example_paramete
+r_space.eps>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 3789 bytes
+(epstopdf)             Output file: <images/hough_transform/HT_example_paramete
+r_space-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 5157 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
+example_parameter_space-eps-converted-to.pdf images/hough_transform/HT_example_
+parameter_space.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf, id=185
+, 569.12625pt x 451.6875pt>
+File: images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/HT_example_parameter_space-eps-
+converted-to.pdf used on input line 105.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--112
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+ [6 <./images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf> 
+<./images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/hough_transform/HT_example_cartesia
+n_space_with_line.eps>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 4681 bytes
+(epstopdf)             Output file: <images/hough_transform/HT_example_cartesia
+n_space_with_line-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 6122 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/HT_
+example_cartesian_space_with_line-eps-converted-to.pdf images/hough_transform/H
+T_example_cartesian_space_with_line.eps>
+(epstopdf)             \includegraphics on input line 129.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/HT_example_cartesian_space_with_line-eps-converted-to.p
+df, id=224, 569.12625pt x 451.6875pt>
+File: images/hough_transform/HT_example_cartesian_space_with_line-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use images/hough_transform/HT_example_cartesian_space_with_line-eps-converted-
+to.pdf>
+Package pdftex.def Info: images/hough_transform/HT_example_cartesian_space_with
+_line-eps-converted-to.pdf used on input line 129.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./images/hough_transform/HT_example_cartesian_space_with_line-eps-converte
+d-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 145--150
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 53--66
+Package epstopdf Info: Source file: <images/hough_transform/cartesian_parameter
+_redefinition.eps>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 3590 bytes
+(epstopdf)             Output file: <images/hough_transform/cartesian_parameter
+_redefinition-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 5136 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/car
+tesian_parameter_redefinition-eps-converted-to.pdf images/hough_transform/carte
+sian_parameter_redefinition.eps>
+(epstopdf)             \includegraphics on input line 153.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.pdf, 
+id=244, 569.12625pt x 451.6875pt>
+File: images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.p
+df>
+Package pdftex.def Info: images/hough_transform/cartesian_parameter_redefinitio
+n-eps-converted-to.pdf used on input line 153.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+Package epstopdf Info: Source file: <images/hough_transform/binned_parameter_sp
+ace.eps>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 88966 bytes
+(epstopdf)             Output file: <images/hough_transform/binned_parameter_sp
+ace-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 23689 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/bin
+ned_parameter_space-eps-converted-to.pdf images/hough_transform/binned_paramete
+r_space.eps>
+(epstopdf)             \includegraphics on input line 168.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/binned_parameter_space-eps-converted-to.pdf, id=250, 56
+9.12625pt x 451.6875pt>
+File: images/hough_transform/binned_parameter_space-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use images/hough_transform/binned_parameter_space-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/binned_parameter_space-eps-conv
+erted-to.pdf used on input line 168.
+(pdftex.def)             Requested size: 256.0748pt x 203.2437pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--172
+
+ []
+
+[8 <./images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <images/hough_transform/3StateInteraction_S
+ideLeftECal_NoReconstruction.eps>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 47050 bytes
+(epstopdf)             Output file: <images/hough_transform/3StateInteraction_S
+ideLeftECal_NoReconstruction-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:15
+(epstopdf)                    size: 15777 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_transform/3St
+ateInteraction_SideLeftECal_NoReconstruction-eps-converted-to.pdf images/hough_
+transform/3StateInteraction_SideLeftECal_NoReconstruction.eps>
+(epstopdf)             \includegraphics on input line 180.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-eps-con
+verted-to.pdf, id=275, 764.8575pt x 502.87875pt>
+File: images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-eps
+-converted-to.pdf>
+Package pdftex.def Info: images/hough_transform/3StateInteraction_SideLeftECal_
+NoReconstruction-eps-converted-to.pdf used on input line 180.
+(pdftex.def)             Requested size: 284.52756pt x 187.06743pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./images/hough_transform/binned_parameter_space-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/ecal_hough_transform/ecal_grid_arra
+y.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 13968 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/ecal_grid_arra
+y-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 21385 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/ecal_grid_array-eps-converted-to.pdf images/ecal_hough_transform/ecal_grid_ar
+ray.eps>
+(epstopdf)             \includegraphics on input line 209.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf, id=292, 569.
+12625pt x 132.495pt>
+File: images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/ecal_grid_array-eps-conver
+ted-to.pdf used on input line 209.
+(pdftex.def)             Requested size: 199.16928pt x 46.36787pt.
+Package epstopdf Info: Source file: <images/ecal_hough_transform/single_ecal_ba
+r_hough_transform.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 116210 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/single_ecal_ba
+r_hough_transform-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 29409 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/single_ecal_bar_hough_transform-eps-converted-to.pdf images/ecal_hough_transf
+orm/single_ecal_bar_hough_transform.eps>
+(epstopdf)             \includegraphics on input line 210.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-to.p
+df, id=293, 569.12625pt x 387.4475pt>
+File: images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-
+to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/single_ecal_bar_hough_tran
+sform-eps-converted-to.pdf used on input line 210.
+(pdftex.def)             Requested size: 199.16928pt x 135.59091pt.
+Package epstopdf Info: Source file: <images/ecal_hough_transform/ecal_cross_arr
+ay.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 5610 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/ecal_cross_arr
+ay-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 8030 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/ecal_cross_array-eps-converted-to.pdf images/ecal_hough_transform/ecal_cross_
+array.eps>
+(epstopdf)             \includegraphics on input line 222.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf, id=301, 569
+.12625pt x 132.495pt>
+File: images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/ecal_cross_array-eps-conve
+rted-to.pdf used on input line 222.
+(pdftex.def)             Requested size: 199.16928pt x 46.36787pt.
+Package epstopdf Info: Source file: <images/ecal_hough_transform/single_ecal_ba
+r_hough_transform.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 116210 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/single_ecal_ba
+r_hough_transform-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 29409 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/single_ecal_bar_hough_transform-eps-converted-to.pdf images/ecal_hough_transf
+orm/single_ecal_bar_hough_transform.eps>
+(epstopdf)             \includegraphics on input line 223.
+Package epstopdf Info: Output file is already uptodate.
+File: images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted
+-to.pdf Graphic file (type pdf)
+
+<use images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-
+to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/single_ecal_bar_hough_tran
+sform-eps-converted-to.pdf used on input line 223.
+(pdftex.def)             Requested size: 199.16928pt x 135.59091pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--66
+Underfull \hbox (badness 10000) in paragraph at lines 187--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--66
+Underfull \hbox (badness 10000) in paragraph at lines 187--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--66
+Underfull \hbox (badness 10000) in paragraph at lines 187--243
 
  []
 
-[7] [8]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 89.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-
+eps-converted-to.pdf>] [11 <./images/ecal_hough_transform/ecal_grid_array-eps-c
+onverted-to.pdf> <./images/ecal_hough_transform/single_ecal_bar_hough_transform
+-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/ecal_hough_transform/FullParameterS
+pace_3StateInteraction.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 1244220 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/FullParameterS
+pace_3StateInteraction-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 220439 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/FullParameterSpace_3StateInteraction-eps-converted-to.pdf images/ecal_hough_t
+ransform/FullParameterSpace_3StateInteraction.eps>
+(epstopdf)             \includegraphics on input line 255.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-converted
+-to.pdf, id=339, 569.12625pt x 387.4475pt>
+File: images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/FullParameterSpace_3StateI
+nteraction-eps-converted-to.pdf used on input line 255.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--259
+
+ []
+
+[12]
+Package epstopdf Info: Source file: <images/ecal_hough_transform/ReducedParamet
+erSpace_3StateInteraction.eps>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 558136 bytes
+(epstopdf)             Output file: <images/ecal_hough_transform/ReducedParamet
+erSpace_3StateInteraction-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:12
+(epstopdf)                    size: 103940 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ecal_hough_transfor
+m/ReducedParameterSpace_3StateInteraction-eps-converted-to.pdf images/ecal_houg
+h_transform/ReducedParameterSpace_3StateInteraction.eps>
+(epstopdf)             \includegraphics on input line 275.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-conver
+ted-to.pdf, id=353, 569.12625pt x 387.4475pt>
+File: images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/ecal_hough_transform/ReducedParameterSpace_3Sta
+teInteraction-eps-converted-to.pdf used on input line 275.
+(pdftex.def)             Requested size: 284.52756pt x 193.70554pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--279
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf>] [14
+ <./images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conver
+ted-to.pdf>]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 284.
+
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
+ [15 <./images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps
+-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 291--298
 
-Underfull \vbox (badness 2617) has occurred while \output is active []
+ []
 
- [9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--298
+
+ []
+
+[16]
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_QRatio_Separation.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 11107 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_QRatio_Separation-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 9197 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_QRatio_Separation-eps-converted-to.pdf images/hough_3d_
+matching/3DMatching_Barrel_2Track_QRatio_Separation.eps>
+(epstopdf)             \includegraphics on input line 306.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-conver
+ted-to.pdf, id=407, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-c
+onverted-to.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-co
+nverted-to.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_QRat
+io_Separation-eps-converted-to.pdf used on input line 306.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_QRatio_PDF.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 8987 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_QRatio_PDF-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 6741 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_QRatio_PDF-eps-converted-to.pdf images/hough_3d_matchin
+g/3DMatching_Barrel_2Track_QRatio_PDF.eps>
+(epstopdf)             \includegraphics on input line 307.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converted-to.
+pdf, id=408, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converte
+d-to.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converted
+-to.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_QRat
+io_PDF-eps-converted-to.pdf used on input line 307.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DFL_Separation.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 10361 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DFL_Separation-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 10219 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_DFL_Separation-eps-converted-to.pdf images/hough_3d_mat
+ching/3DMatching_Barrel_2Track_DFL_Separation.eps>
+(epstopdf)             \includegraphics on input line 330.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-converted
+-to.pdf, id=415, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_
+Separation-eps-converted-to.pdf used on input line 330.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DFL_PDF.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 7875 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DFL_PDF-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 7318 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_DFL_PDF-eps-converted-to.pdf images/hough_3d_matching/3
+DMatching_Barrel_2Track_DFL_PDF.eps>
+(epstopdf)             \includegraphics on input line 331.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-to.pdf
+, id=416, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-to
+.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_
+PDF-eps-converted-to.pdf used on input line 331.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DLL_Separation.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 10317 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DLL_Separation-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 10120 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_DLL_Separation-eps-converted-to.pdf images/hough_3d_mat
+ching/3DMatching_Barrel_2Track_DLL_Separation.eps>
+(epstopdf)             \includegraphics on input line 353.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-converted
+-to.pdf, id=419, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-conv
+erted-to.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-conve
+rted-to.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_
+Separation-eps-converted-to.pdf used on input line 353.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+
+Underfull \hbox (badness 1275) in paragraph at lines 353--353
+[][]|$\OT1/zplm/m/n/10 ^^A[]$ \OT1/ppl/m/n/10 (+20) dis-tri-bu-tion (area nor-m
+alised).
+ []
+
+Package epstopdf Info: Source file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DLL_PDF.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 7820 bytes
+(epstopdf)             Output file: <images/hough_3d_matching/3DMatching_Barrel
+_2Track_DLL_PDF-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 7187 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_3d_matching/3
+DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf images/hough_3d_matching/3
+DMatching_Barrel_2Track_DLL_PDF.eps>
+(epstopdf)             \includegraphics on input line 354.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf
+, id=420, 569.12625pt x 451.6875pt>
+File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to
+.pdf>
+Package pdftex.def Info: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_
+PDF-eps-converted-to.pdf used on input line 354.
+(pdftex.def)             Requested size: 199.16928pt x 158.07231pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--374
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+ [17]
+[18 <./images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-
+converted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_P
+DF-eps-converted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_D
+FL_Separation-eps-converted-to.pdf> <./images/hough_3d_matching/3DMatching_Barr
+el_2Track_DFL_PDF-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `subsec:ECal3DHitReconstruction' on page 19 undefined 
+on input line 380.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--381
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 141--145
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-co
+nverted-to.pdf> <./images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-ep
+s-converted-to.pdf>]
+<images/hough_3d_matching/MergedTrackEventDisplay.pdf, id=511, 327.13155pt x 24
+9.05016pt>
+File: images/hough_3d_matching/MergedTrackEventDisplay.pdf Graphic file (type p
+df)
+ <use images/hough_3d_matching/MergedTrackEventDisplay.pdf>
+Package pdftex.def Info: images/hough_3d_matching/MergedTrackEventDisplay.pdf u
+sed on input line 387.
+(pdftex.def)             Requested size: 199.16928pt x 151.63155pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--397
 
  []
 
 
-Underfull \vbox (badness 2856) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 384--397
 
- [12]
-<images/software/ecal_trshval.pdf, id=189, 585.38701pt x 421.575pt>
-File: images/software/ecal_trshval.pdf Graphic file (type pdf)
+ []
 
-<use images/software/ecal_trshval.pdf>
-Package pdftex.def Info: images/software/ecal_trshval.pdf used on input line 15
-6.
-(pdftex.def)             Requested size: 312.9803pt x 225.39565pt.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 157.
-)) Processing 'backmatter' comment.
-[13] [14 <./images/software/ecal_trshval.pdf>]
+[20 <./images/hough_3d_matching/MergedTrackEventDisplay.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Package epstopdf Info: Source file: <images/hough_validation/MuonAngularResolut
+ionDSECal.eps>
+(epstopdf)                    date: 2015-07-17 17:18:43
+(epstopdf)                    size: 17228 bytes
+(epstopdf)             Output file: <images/hough_validation/MuonAngularResolut
+ionDSECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-07-17 17:20:35
+(epstopdf)                    size: 13772 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/Mu
+onAngularResolutionDSECal-eps-converted-to.pdf images/hough_validation/MuonAngu
+larResolutionDSECal.eps>
+(epstopdf)             \includegraphics on input line 455.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf, id=5
+62, 569.12625pt x 386.44376pt>
+File: images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_validation/MuonAngularResolutionDSECal-ep
+s-converted-to.pdf used on input line 455.
+(pdftex.def)             Requested size: 256.0748pt x 173.88629pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--472
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pd
+f>]
+Overfull \hbox (6.3957pt too wide) in paragraph at lines 478--479
+[]\OT1/ppl/b/n/12 Through-going bas-ket muons (named bskmu): \OT1/ppl/m/n/12 (-
+20) A sam-ple of clean beam-triggered
+ []
+
+Package epstopdf Info: Source file: <images/hough_validation/TotalCharge_fgdcol
+_Barrel.eps>
+(epstopdf)                    date: 2015-08-25 20:48:58
+(epstopdf)                    size: 17774 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalCharge_fgdcol
+_Barrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 20:49:09
+(epstopdf)                    size: 16306 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talCharge_fgdcol_Barrel-eps-converted-to.pdf images/hough_validation/TotalCharg
+e_fgdcol_Barrel.eps>
+(epstopdf)             \includegraphics on input line 486.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf, id=589
+, 569.12625pt x 386.44376pt>
+File: images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_validation/TotalCharge_fgdcol_Barrel-eps-
+converted-to.pdf used on input line 486.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/hough_validation/TotalCharge_bskmu_
+DSECal.eps>
+(epstopdf)                    date: 2015-08-25 20:49:00
+(epstopdf)                    size: 15946 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalCharge_bskmu_
+DSECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 20:49:11
+(epstopdf)                    size: 15167 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talCharge_bskmu_DSECal-eps-converted-to.pdf images/hough_validation/TotalCharge
+_bskmu_DSECal.eps>
+(epstopdf)             \includegraphics on input line 487.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf, id=590,
+ 569.12625pt x 386.44376pt>
+File: images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_validation/TotalCharge_bskmu_DSECal-eps-c
+onverted-to.pdf used on input line 487.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 486--488
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/hough_validation/TotalHits_fgdcol_B
+arrel.eps>
+(epstopdf)                    date: 2015-08-25 21:01:50
+(epstopdf)                    size: 14271 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalHits_fgdcol_B
+arrel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 21:01:58
+(epstopdf)                    size: 11444 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talHits_fgdcol_Barrel-eps-converted-to.pdf images/hough_validation/TotalHits_fg
+dcol_Barrel.eps>
+(epstopdf)             \includegraphics on input line 496.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf, id=597, 
+569.12625pt x 386.44376pt>
+File: images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_validation/TotalHits_fgdcol_Barrel-eps-co
+nverted-to.pdf used on input line 496.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/hough_validation/TotalHits_bskmu_DS
+ECal.eps>
+(epstopdf)                    date: 2015-08-25 20:59:43
+(epstopdf)                    size: 14274 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalHits_bskmu_DS
+ECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 21:02:00
+(epstopdf)                    size: 10779 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talHits_bskmu_DSECal-eps-converted-to.pdf images/hough_validation/TotalHits_bsk
+mu_DSECal.eps>
+(epstopdf)             \includegraphics on input line 497.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf, id=598, 5
+69.12625pt x 386.44376pt>
+File: images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf>
+Package pdftex.def Info: images/hough_validation/TotalHits_bskmu_DSECal-eps-con
+verted-to.pdf used on input line 497.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 496--498
+ [][][] 
+ []
+
+Package epstopdf Info: Source file: <images/hough_validation/TotalCharge_bskmuC
+orrected_DSECal.eps>
+(epstopdf)                    date: 2015-08-25 21:33:44
+(epstopdf)                    size: 16285 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalCharge_bskmuC
+orrected_DSECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 21:48:55
+(epstopdf)                    size: 15167 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talCharge_bskmuCorrected_DSECal-eps-converted-to.pdf images/hough_validation/To
+talCharge_bskmuCorrected_DSECal.eps>
+(epstopdf)             \includegraphics on input line 506.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-to.pdf
+, id=600, 569.12625pt x 386.44376pt>
+File: images/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use images/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-to
+.pdf>
+Package pdftex.def Info: images/hough_validation/TotalCharge_bskmuCorrected_DSE
+Cal-eps-converted-to.pdf used on input line 506.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+Package epstopdf Info: Source file: <images/hough_validation/TotalHits_bskmuCor
+rected_DSECal.eps>
+(epstopdf)                    date: 2015-08-25 21:33:44
+(epstopdf)                    size: 13021 bytes
+(epstopdf)             Output file: <images/hough_validation/TotalHits_bskmuCor
+rected_DSECal-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-25 21:49:35
+(epstopdf)                    size: 10377 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/hough_validation/To
+talHits_bskmuCorrected_DSECal-eps-converted-to.pdf images/hough_validation/Tota
+lHits_bskmuCorrected_DSECal.eps>
+(epstopdf)             \includegraphics on input line 507.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.pdf, 
+id=601, 569.12625pt x 386.44376pt>
+File: images/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.
+pdf Graphic file (type pdf)
+
+<use images/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.p
+df>
+Package pdftex.def Info: images/hough_validation/TotalHits_bskmuCorrected_DSECa
+l-eps-converted-to.pdf used on input line 507.
+(pdftex.def)             Requested size: 227.62204pt x 154.55707pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 506--508
+ [][][] 
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 480--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--15
+
+ []
+
+[25] [26 <./images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.
+pdf> <./images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf>]
+) Processing 'backmatter' comment. [27 <./images/hough_validation/TotalHits_fgd
+col_Barrel-eps-converted-to.pdf> <./images/hough_validation/TotalHits_bskmu_DSE
+Cal-eps-converted-to.pdf> <./images/hough_validation/TotalCharge_bskmuCorrected
+_DSECal-eps-converted-to.pdf> <./images/hough_validation/TotalHits_bskmuCorrect
+ed_DSECal-eps-converted-to.pdf>] [28
+
+
+]
 \openout3 = `comment.cut'.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [15
-
-
-] [16
+(./comment.cut (./backmatter.tex (./thesis.bbl [29] [30
 
 ]
 
@@ -1261,7 +2106,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 6.
+(scrbook)              by `\normalfont \bfseries ' on input line 5.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1275,169 +2120,65 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 21.
+(scrbook)              by `\normalfont \bfseries ' on input line 9.
 
+) [31] [32
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 25.
+] (./thesis.lof
+Underfull \vbox (badness 1895) has occurred while \output is active []
 
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 29.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 33.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 37.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 41.
-
-Missing character: There is no Ã in font pplr7t!
-Missing character: There is no ¶ in font pplr7t!
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 45.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 50.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 55.
-
-) [17] [18
-
-] (./thesis.lof)
+ [33])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [19] [20
 
-] (./thesis.lot)
+[34] (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-)) [21]
+)) [35
+
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A2A6512D8A5D6B38A5282AC1D180E30C;1664.
+(rerunfilecheck)             Checksum: B91127BFE388621DAAF15F8E1BF7A1E1;1570.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 25634 strings out of 493117
- 438589 string characters out of 6135433
- 678964 words of memory out of 5000000
- 28344 multiletter control sequences out of 15000+600000
- 58944 words of font info for 245 fonts, out of 8000000 for 9000
+ 26010 strings out of 493117
+ 452897 string characters out of 6135433
+ 690880 words of memory out of 5000000
+ 28553 multiletter control sequences out of 15000+600000
+ 71171 words of font info for 304 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,13n,61p,1908b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
+ 67i,14n,61p,1642b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
 
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (21 pages, 169361 bytes).
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (35 pages, 998505 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 35530 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 38214 words of extra memory for PDF output out of 42996 (max. 10000000)
 

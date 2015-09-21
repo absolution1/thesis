@@ -17,19 +17,6 @@ where $y$ and $x$ are used as coordinates, $m$ is the gradient of the line and $
 \newline
 \newline
 Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D Cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in Cartesian space is represented by a single point in parameter space. 
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_transform/cartesian_line}
-%    \caption{Line in 2D cartesian space.}
-%    \label{fig:2DCartesianLine}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_transform/parameter_point}
-%      \caption{Point in 2D parameter space.}
-%      \label{fig:2DParameterPoint}
-%    \end{minipage}
-%\end{figure}
 \begin{figure}%
   \centering
   \subfloat[Line in 2D Cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
@@ -44,7 +31,7 @@ Now consider the 2D Cartesian space again.  Unlike before, we will define a sing
   c = -xm + y.
   \label{eq:2DLineParameter}
 \end{equation}
-Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the equation of a 2D line\Yoshi{; however,}{was ``, however''; see \url{http://www.nationalpunctuationday.com/semicolon.html}} the parameters are $x$ and $y$ and the coordinates are $m$ and $c$.  Specifically, equation~\ref{eq:2DLineParameter} is represented by a line in the parameter space defined above.  The gradient of this line is 
+Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the equation of a 2D line\Yoshi{; however,}{ADDRESSED - was ``, however''; see \url{http://www.nationalpunctuationday.com/semicolon.html}} the parameters are $x$ and $y$ and the coordinates are $m$ and $c$.  Specifically, equation~\ref{eq:2DLineParameter} is represented by a line in the parameter space defined above.  The gradient of this line is 
 \begin{equation}
   x = \frac{\Delta c}{\Delta m}
   \label{eq:2DLineGradientParameterSpace}
@@ -243,7 +230,7 @@ An alternative is to model the ECal bar as a set of points arranged in a cross a
 
 \subsection{Parameter space generation}
 \label{subsec:ParameterSpaceGeneration}
-As we have addressed how to Hough transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry\Yoshi{; however,}{was ``, however''} this is located in TPC 1 which would mean $\rho$ will usually be the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
+As we have addressed how to Hough transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry\Yoshi{; however,}{ADDRESSED - was ``, however''} this is located in TPC 1 which would mean $\rho$ will usually be the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
 \newline
 \newline
 The provided description of the Hough transform in all previous sections is strictly defined in 2D and so the ECal cluster should be split in such a way that this definition can be used.  Fortunately, a 3D ECal cluster is built up using the two 2D views that the scintillator layers provide.  So, it is relatively easy to split the 3D cluster into a pair of 2D clusters by collecting the cluster's hits into their respective 2D views.
@@ -303,8 +290,8 @@ where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is th
 \begin{figure}%
   \centering
 \Yoshi{}{Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
-  \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
-  \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
+  \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  The two distributions peak at different values of $Q_{\textrm{ratio}}$, which implies $Q_{\textrm{ratio}}$ provides good separation of the correctly and incorrectly matched events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
+  \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
   \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.}
   \label{fig:QRatio}
 \end{figure}
