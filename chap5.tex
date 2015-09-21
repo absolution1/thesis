@@ -1,14 +1,3 @@
-%\begin{sidewaysfigure}
-%  \begin{center}
-%  \includegraphics[width=0.8\textheight]{lhcb-detector-cross-section}
-%  \caption[Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane]%
-%    {Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane.}
-%  \label{fig:LHCbCrossSection}
-%  \end{center}
-%\end{sidewaysfigure}
-
-
-
 \chapter{Enhanced ECal reconstruction}
 \label{chap:EnhancedECalReconstruction}
 The current implementation of the ECal reconstruction software was designed to reconstruct particles which originate from the ND280 tracker and enter the ECal.  As section~\ref{sec:ECalEventReconstruction} shows, this was realised by only considering reconstructed ECal clusters under the single track-like or shower-like hypothesis.  It should be evident that a neutrino interaction occurring within the ECal does not well fit this topology.  While it is true that there is some power in the current reconstruction to distinguish a neutrino interaction from an entering track or shower, there is little feature information available.  How many final state particles propagated from the interaction?  How much visible energy was deposited by each of the particles?  Where in the ECal did the interaction occur?  These basic questions can not be trivially answered when using the current reconstruction.  To maximise the ability of distinguishing ECal neutrino interactions from entering backgrounds, the reconstruction must be revisited.
