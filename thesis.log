@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  17 SEP 2015 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,9 +1118,9 @@ Processing 'mainmatter' comment.
 \openout3 = `comment.cut'.
 
  Comment 'mainmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./chap1.tex
+Straight input of comment.cut. (./comment.cut (./chap2.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1139,100 +1139,203 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.32 \end{equation}
-                    [1]
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 16.
+[3]
+Package epstopdf Info: Source file: <images/neutrino_interactions/CCQE_FD.eps>
+(epstopdf)                    date: 2015-09-21 12:30:03
+(epstopdf)                    size: 143197 bytes
+(epstopdf)             Output file: <images/neutrino_interactions/CCQE_FD-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-09-21 12:32:55
+(epstopdf)                    size: 6913 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
+ns/CCQE_FD-eps-converted-to.pdf images/neutrino_interactions/CCQE_FD.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf, id=60, 695.59875pt 
+x 561.09625pt>
+File: images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CCQE_FD-eps-converted-to.
+pdf used on input line 35.
+(pdftex.def)             Requested size: 227.62204pt x 183.60411pt.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 35.
+Package epstopdf Info: Source file: <images/neutrino_interactions/NCQE_FD.eps>
+(epstopdf)                    date: 2015-07-03 14:24:46
+(epstopdf)                    size: 128904 bytes
+(epstopdf)             Output file: <images/neutrino_interactions/NCQE_FD-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2015-07-03 14:25:01
+(epstopdf)                    size: 5927 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
+ns/NCQE_FD-eps-converted-to.pdf images/neutrino_interactions/NCQE_FD.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf, id=61, 695.59875pt 
+x 559.08875pt>
+File: images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf>
+Package pdftex.def Info: images/neutrino_interactions/NCQE_FD-eps-converted-to.
+pdf used on input line 36.
+(pdftex.def)             Requested size: 227.62204pt x 182.9472pt.
+
+Overfull \hbox (13.1703pt too wide) in paragraph at lines 35--37
+ [][][] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 37.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--81
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+
+ []
+
+Package epstopdf Info: Source file: <images/neutrino_interactions/CCRES_FD.eps>
+
+(epstopdf)                    date: 2015-09-21 12:30:43
+(epstopdf)                    size: 159016 bytes
+(epstopdf)             Output file: <images/neutrino_interactions/CCRES_FD-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-09-21 12:32:56
+(epstopdf)                    size: 8871 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
+ns/CCRES_FD-eps-converted-to.pdf images/neutrino_interactions/CCRES_FD.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf, id=63, 842.14626pt
+ x 567.11874pt>
+File: images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CCRES_FD-eps-converted-to
+.pdf used on input line 53.
+(pdftex.def)             Requested size: 227.62204pt x 153.27986pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--60
+
+ []
+
+[4] [5 <./images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf> <./images/
+neutrino_interactions/NCQE_FD-eps-converted-to.pdf> <./images/neutrino_interact
+ions/CCRES_FD-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/neutrino_interactions/CCDIS_FD.eps>
+
+(epstopdf)                    date: 2015-09-21 12:31:05
+(epstopdf)                    size: 143081 bytes
+(epstopdf)             Output file: <images/neutrino_interactions/CCDIS_FD-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-09-21 12:32:58
+(epstopdf)                    size: 6806 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
+ns/CCDIS_FD-eps-converted-to.pdf images/neutrino_interactions/CCDIS_FD.eps>
+(epstopdf)             \includegraphics on input line 67.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf, id=112, 695.59875p
+t x 561.09625pt>
+File: images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CCDIS_FD-eps-converted-to
+.pdf used on input line 67.
+(pdftex.def)             Requested size: 227.62204pt x 183.60411pt.
+
+<images/neutrino_interactions/CrossSectionMeasurements.pdf, id=117, 212.96342pt
+ x 156.663pt>
+File: images/neutrino_interactions/CrossSectionMeasurements.pdf Graphic file (t
+ype pdf)
+ <use images/neutrino_interactions/CrossSectionMeasurements.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CrossSectionMeasurements.
+pdf used on input line 76.
+(pdftex.def)             Requested size: 341.43306pt x 251.19896pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--81
+Underfull \hbox (badness 10000) in paragraph at lines 63--83
+
+ []
+
+[6 <./images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf>]
+<images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf, id=147, 339.2
+697pt x 130.23326pt>
+File: images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf Graphic f
+ile (type pdf)
+
+<use images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CCQECrossSectionMiniBooNE
+NOMAD.pdf used on input line 90.
+(pdftex.def)             Requested size: 341.43306pt x 131.06953pt.
+ [7 <./images/neutrino_interactions/CrossSectionMeasurements.pdf>]
+<images/neutrino_interactions/CHORUS_XSec.pdf, id=235, 218.92912pt x 219.07346p
+t>
+File: images/neutrino_interactions/CHORUS_XSec.pdf Graphic file (type pdf)
+ <use images/neutrino_interactions/CHORUS_XSec.pdf>
+Package pdftex.def Info: images/neutrino_interactions/CHORUS_XSec.pdf used on i
+nput line 106.
+(pdftex.def)             Requested size: 227.62204pt x 227.77753pt.
+
+<images/neutrino_interactions/MINERvA_XSec.pdf, id=242, 114.15308pt x 76.30678p
+t>
+File: images/neutrino_interactions/MINERvA_XSec.pdf Graphic file (type pdf)
+ <use images/neutrino_interactions/MINERvA_XSec.pdf>
+Package pdftex.def Info: images/neutrino_interactions/MINERvA_XSec.pdf used on 
+input line 113.
+(pdftex.def)             Requested size: 284.52756pt x 190.24132pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--81
+Underfull \hbox (badness 10000) in paragraph at lines 97--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--81
+Underfull \hbox (badness 10000) in paragraph at lines 97--120
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.81 
-      [2]
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [3]
-<images/introduction/mass_hierarchy.pdf, id=149, 375.48508pt x 271.79478pt>
-File: images/introduction/mass_hierarchy.pdf Graphic file (type pdf)
-
-<use images/introduction/mass_hierarchy.pdf>
-Package pdftex.def Info: images/introduction/mass_hierarchy.pdf used on input l
-ine 93.
-(pdftex.def)             Requested size: 284.52756pt x 205.96068pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--106
-
- []
-
-[4]
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 4531) has occurred while \output is active []
-
- [6 <./images/introduction/mass_hierarchy.pdf>])) Processing 'backmatter' comme
-nt. [7]
-[8
-
-
-]
+[8 <./images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf>]))
+Processing 'backmatter' comment. [9] [10 <./images/neutrino_interactions/CHORUS
+_XSec.pdf> <./images/neutrino_interactions/MINERvA_XSec.pdf>]
 \openout3 = `comment.cut'.
 
- Comment 'backmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./backmatter.tex (./thesis.bbl
-[9] [10
+
+Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
+(./comment.cut (./backmatter.tex (./thesis.bbl [11
+
+
+] [12
 
 ]
+
+Class scrbook Warning: Usage of deprecated font command `\bf'!
+(scrbook)              You should note, that in 1994 font command `\bf' has
+(scrbook)              been defined for compatiblitiy to Script 2.0 only.
+(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrbook)              shouldn't use such commands any longer and within
+(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrbook)              See `fntguide.pdf' for more information about
+(scrbook)              recommended font commands.
+(scrbook)              Note also, that KOMA-Script will remove the definition
+(scrbook)              of `\bf' anytime until release of about version 3.20.
+(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrbook)              by `\normalfont \bfseries ' on input line 5.
+
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              You should note, that in 1994 font command `\bf' has
@@ -1301,7 +1404,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 25.
+(scrbook)              by `\normalfont \bfseries ' on input line 26.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1315,7 +1418,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 29.
+(scrbook)              by `\normalfont \bfseries ' on input line 31.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1329,7 +1432,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 33.
+(scrbook)              by `\normalfont \bfseries ' on input line 35.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1343,7 +1446,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 37.
+(scrbook)              by `\normalfont \bfseries ' on input line 39.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1357,7 +1460,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 41.
+(scrbook)              by `\normalfont \bfseries ' on input line 43.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1371,7 +1474,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 45.
+(scrbook)              by `\normalfont \bfseries ' on input line 47.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1385,7 +1488,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 49.
+(scrbook)              by `\normalfont \bfseries ' on input line 50.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1399,7 +1502,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 53.
+(scrbook)              by `\normalfont \bfseries ' on input line 54.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1413,7 +1516,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 57.
+(scrbook)              by `\normalfont \bfseries ' on input line 58.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1427,247 +1530,89 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 61.
+(scrbook)              by `\normalfont \bfseries ' on input line 63.
+
+) [13] [14
+
+] (./thesis.lof
+Overfull \hbox (45.12256pt too wide) in paragraph at lines 10--10
+ [][] [][][]\OT1/ppl/m/n/12 (-20) The CCQE cross-sections mea-sured by the Mini
+-BooNE (2010) [[][]7[][]], LSND (2002) [[][]9[][]] 
+ []
 
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 65.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 69.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 73.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 77.
-
-
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
- [11]
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 81.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 97.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 101.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 105.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 109.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 117.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 121.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 125.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 129.
-
-) [12] (./thesis.lof)
+ [15])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [13
 
-] [14
-
-] (./thesis.lot)
+[16] (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-)) [15]
+)) [17
+
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C85D79D9F82399F213C77CBCFD6B226D;323.
+(rerunfilecheck)             Checksum: 2B787D1706AB0531054027979697F141;397.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 25640 strings out of 493117
- 438832 string characters out of 6135433
- 690762 words of memory out of 5000000
- 28339 multiletter control sequences out of 15000+600000
- 64261 words of font info for 244 fonts, out of 8000000 for 9000
+ 25670 strings out of 493117
+ 440096 string characters out of 6135433
+ 683621 words of memory out of 5000000
+ 28338 multiletter control sequences out of 15000+600000
+ 62338 words of font info for 269 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,18n,61p,1721b,772s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+ 67i,13n,61p,1433b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
-t, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
 
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
-ype1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (17 pages, 158357 bytes).
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpaz
+o/fplmr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fpl
+mri.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (17 pages, 1226700 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 36930 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 944 PDF objects out of 1000 (max. 8388607)
+ 734 compressed objects within 8 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 34917 words of extra memory for PDF output out of 35830 (max. 10000000)
 
