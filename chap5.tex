@@ -37,19 +37,6 @@ Despite the manipulation, equation~\ref{eq:2DLineParameter} still resembles the 
   \label{eq:2DLineGradientParameterSpace}
 \end{equation}
 and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig:2DParameterLine}.  As before, it is important to clearly state what has been shown; a point in Cartesian space is represented by a line in parameter space.
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_transform/cartesian_point}
-%    \caption{Point in 2D cartesian space.}
-%    \label{fig:2DCartesianPoint}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_transform/parameter_line}
-%      \caption{Line in 2D parameter space.}
-%      \label{fig:2DParameterLine}
-%    \end{minipage}
-%\end{figure}
 \begin{figure}%
   \centering
   \subfloat[Point in 2D Cartesian space.]{\includegraphics[width=7cm]{images/hough_transform/cartesian_point} \label{fig:2DCartesianPoint}}
@@ -73,19 +60,6 @@ We will now return to the Cartesian space for an example of how the Hough transf
   \end{split}
   \label{eq:HTExampleCartesianPoints}
 \end{equation}
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space}
-%    \caption{The three cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.  The colour coding matches that of Fig.~\ref{fig:HTExampleParameterSpace}.}
-%    \label{fig:HTExampleCartesianSpace}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space}
-%      \caption{The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The same colour coding as Fig.~\ref{fig:HTExampleCartesianSpace} is used.}
-%      \label{fig:HTExampleParameterSpace}
-%    \end{minipage}
-%\end{figure}
 \begin{figure}%
   \centering
   \subfloat[The three Cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints}.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}}
@@ -178,19 +152,6 @@ There are now two steps to consider.  Firstly, how should the points be arranged
 \newline
 \newline
 Assuming that every bin of the parameter space will have a 1$^\circ\times$1 mm area, an obvious choice would be to use a rectangular grid of points with 1 mm spacing superimposed over the 2D cross-section of an ECal bar.  The total number of points used to model the ECal bar is 451.  To Hough transform the ECal bar, every point in the grid array can be Hough transformed individually with care taken to ensure that each $\theta-\rho$ bin is filled exactly once.  The result is illustrated in Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  The finite size of the ECal bar is evident by the finite size of the resultant parameter line.
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps}
-%    \caption{Grid representation of an ECal bar.}
-%    \label{fig:ECalBarGridRepresentation}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
-%      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarGridRepresentation}.}
-%      \label{fig:ECalBarHoughTransformGridRepresentation}
-%    \end{minipage}
-%\end{figure}
 \begin{figure}%
   \centering
   \subfloat[Grid representation of an ECal bar.]{\includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps} \label{fig:ECalBarGridRepresentation}}
@@ -211,22 +172,6 @@ An alternative is to model the ECal bar as a set of points arranged in a cross a
   \caption{The cross representation of an ECal bar and its representation in parameter space.}
   \label{fig:ECalBarCrossRepresentationAndHoughTransform}
 \end{figure}
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/ecal_hough_transform/ecal_cross_array.eps}
-%    \caption{Cross representation of an ECal bar.}
-%    \label{fig:ECalBarCrossRepresentation}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps}
-%      \caption{Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.}
-%      \label{fig:ECalBarHoughTransformCrossRepresentation}
-%    \end{minipage}
-%\end{figure}
-%\subsection{ECal bar Hough transform}
-%\label{subsec:ECalBarHoughTransform}
-%Hough transform the points on the cross
 
 \subsection{Parameter space generation}
 \label{subsec:ParameterSpaceGeneration}
@@ -295,19 +240,6 @@ where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is th
   \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.}
   \label{fig:QRatio}
 \end{figure}
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps}
-%    \caption{$Q_{\textrm{ratio}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-%    \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps}
-%      \caption{$Q_{\textrm{ratio}}$ probability density distribution in the barrel ECal for the two track case.}
-%      \label{fig:3DMatchingBarrel2TrackQRatioPDF}
-%    \end{minipage}
-%\end{figure}
 \newline
 \newline
 The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is the difference in the starting layer of each 2D track which forms the matching candidate pair, where starting layer refers to the layer closest to the ND280 tracker.  For 2D tracks which should be matched together, $\Delta_{\textrm{layer, first}}$ should be 1.  The separation ability of this variable for the two track, barrel is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation}.  The discreet probability density function was created using eqn.~\ref{eq:BinProbabilityPDF}.  It was not necessary to interpolate using splines as $\Delta_{\textrm{layer, first}}$ is itself discreet.  The probability density function for $\Delta_{\textrm{layer, first}}$ is shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLPDF} for the two track, barrel case.  For each matching candidate pair, the value of $\Delta_{\textrm{layer, first}}$ is calculated and the corresponding $\mathcal{L}_{\Delta_{\textrm{layer, first}}}$ is retrieved from the probability density function.
@@ -319,19 +251,6 @@ The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is 
   \caption{$\Delta_{\textrm{layer, first}}$ and its probability density distribution in the barrel ECal for the two track case.}
   \label{fig:DFL}
 \end{figure}
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps}
-%    \caption{$\Delta_{\textrm{layer, first}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-%    \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps}
-%      \caption{$\Delta_{\textrm{layer,first}}$ probability density distribution in the barrel ECal for the two track case.}
-%      \label{fig:3DMatchingBarrel2TrackDFLPDF}
-%    \end{minipage}
-%\end{figure}
 \newline
 \newline
 The third and final input to the likelihood, called $\Delta_{\textrm{layer, last}}$, is the difference in the ending layer of each 2D track which forms the matching candidate pair, where the ending layer refers to the layer furthest from the ND280 tracker.  Functionally, how this function is used is essentially identical to $\Delta_{\textrm{layer, last}}$ so it will not be described in detail.  The separation ability of this variable and its corresponding probability density function for the two track, barrel case are shown in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} and Fig.~\ref{fig:3DMatchingBarrel2TrackDLLPDF} respectively.
@@ -342,19 +261,6 @@ The third and final input to the likelihood, called $\Delta_{\textrm{layer, last
   \caption{$\Delta_{\textrm{layer, last}}$ and its probability density distribution in the barrel ECal for the two track case.}
   \label{fig:DLL}
 \end{figure}
-%\begin{figure}
-%  \centering
-%  \parbox{7cm}{
-%    \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps}
-%    \caption{$\Delta_{\textrm{layer, last}}$ distribution in the barrel ECal for the two track case.  The blue distribution refers to matching pairs which were matched to the same true particle.  Both distributions are unit normalised.}
-%    \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
-%    \qquad
-%    \begin{minipage}{7cm}
-%      \includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps}
-%      \caption{$\Delta_{\textrm{layer,last}}$ probability density distribution in the barrel ECal for the two track case.}
-%      \label{fig:3DMatchingBarrel2TrackDLLPDF}
-%    \end{minipage}
-%\end{figure}
 \newline
 \newline
 The matching likelihood, $\mathcal{L}$, for a matching candidate pair is then
@@ -364,7 +270,7 @@ The matching likelihood, $\mathcal{L}$, for a matching candidate pair is then
 As described above, $\mathcal{L}$ is calculated for every matching candidate pair and the pair which maximise $\mathcal{L}$ is selected as a match and removed from the pool.  The process is then repeated until no more matches can be made.
 \newline
 \newline
-3D tracks have now been formed, but the associated directions and positions of those tracks still need to be calculated.  The track fitting process for the newly formed 3D tracks is very similar to that described in section~\ref{subsec:ECal3DHitReconstruction}.  The tracks are briefly separated into their constituent 2D views and a charge-weighted average position of each layer is calculated using the track's constituent hits.  Then, the hits in the opposing view are used to estimate the 3rd coordinate of a given layer using a least-squares fit.  After all of the coordinates have been estimated, a full 3D least-squares fit of the positions in each layer is performed to estimate the 3D track's direction and position in that ECal layer.
+3D tracks have now been formed, but the associated directions and positions of those tracks still need to be calculated.  The track fitting process for the newly formed 3D tracks is very similar to that described in section~\ref{subsec:ECal3DHitReconstruction}.  The tracks are briefly separated into their constituent 2D views and a charge-weighted average position of each layer is calculated using the track's constituent hits.  Then, the hits in the opposing view are used to estimate the third coordinate of a given layer using a least-squares fit.  After all of the coordinates have been estimated, a full 3D least-squares fit of the positions in each layer is performed to estimate the 3D track's direction and position in that ECal layer.
 
 \subsection{Track splitting}
 \label{subsec:TrackSplitting}
@@ -487,7 +393,7 @@ Fig.~\ref{fig:TotalHitsDataValidation} shows the summed number of hits contained
 \end{figure}
 \newline
 \newline
-To test this hypothesis, this requirement was relaxed to allow a 2D track candidate to skip a single ECal layer and the Monte Carlo bskmu sample was re-processed.  The re-processed DS ECal events are shown in Fig.~\ref{fig:bskmuCorrectedDSDataValidation}.  As can clearly be seen, the data excess before the peak in the distributions has now gone.  Unfortunately, large scale processing and analysis of beam Monte Carlo events had already started by the time this issue was discovered and so it was unfeasible to include this bug fix in the analysis.  So, it was decided that this issue would be treated as an additional systematic uncertainty.  The collected data events were processed with this fix in place.
+To test this hypothesis, this requirement was relaxed to allow a 2D track candidate to skip a single ECal layer and the Monte Carlo bskmu sample was re-processed.  The re-processed DS ECal events are shown in Fig.~\ref{fig:bskmuCorrectedDSDataValidation}.  As can clearly be seen, the data excess before the peak in the distributions has now gone.  Unfortunately, large scale processing and analysis of beam Monte Carlo events had already started by the time this issue was discovered and so it was infeasible to include this bug fix in the analysis.  So, it was decided that this issue would be treated as an additional systematic uncertainty.  The collected data events were processed with this fix in place.
 \begin{figure}[b!]%
   \centering
   \subfloat[Summed charge contained on all tracks in each reconstructed ECal cluster.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_bskmuCorrected_DSECal.eps} \label{fig:TotalChargebskmuCorrectedDS}}
