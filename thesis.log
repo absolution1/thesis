@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,7 +1118,7 @@ Processing 'mainmatter' comment.
 \openout3 = `comment.cut'.
 
  Comment 'mainmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./chap2.tex
+Straight input of comment.cut. (./comment.cut (./chap3.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
 Package microtype Info: Loading generic settings for font family
@@ -1140,186 +1140,213 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 16.
-[3]
-Package epstopdf Info: Source file: <images/neutrino_interactions/CCQE_FD.eps>
-(epstopdf)                    date: 2015-09-21 12:30:03
-(epstopdf)                    size: 143197 bytes
-(epstopdf)             Output file: <images/neutrino_interactions/CCQE_FD-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2015-09-21 12:32:55
-(epstopdf)                    size: 6913 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
-ns/CCQE_FD-eps-converted-to.pdf images/neutrino_interactions/CCQE_FD.eps>
-(epstopdf)             \includegraphics on input line 35.
-Package epstopdf Info: Output file is already uptodate.
+<images/t2k/t2k_schematic.pdf, id=69, 350.10799pt x 85.921pt>
+File: images/t2k/t2k_schematic.pdf Graphic file (type pdf)
 
-<images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf, id=60, 695.59875pt 
-x 561.09625pt>
-File: images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf Graphic file (t
-ype pdf)
- <use images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CCQE_FD-eps-converted-to.
-pdf used on input line 35.
-(pdftex.def)             Requested size: 227.62204pt x 183.60411pt.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 35.
-Package epstopdf Info: Source file: <images/neutrino_interactions/NCQE_FD.eps>
-(epstopdf)                    date: 2015-07-03 14:24:46
-(epstopdf)                    size: 128904 bytes
-(epstopdf)             Output file: <images/neutrino_interactions/NCQE_FD-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2015-07-03 14:25:01
-(epstopdf)                    size: 5927 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
-ns/NCQE_FD-eps-converted-to.pdf images/neutrino_interactions/NCQE_FD.eps>
-(epstopdf)             \includegraphics on input line 36.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf, id=61, 695.59875pt 
-x 559.08875pt>
-File: images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf Graphic file (t
-ype pdf)
- <use images/neutrino_interactions/NCQE_FD-eps-converted-to.pdf>
-Package pdftex.def Info: images/neutrino_interactions/NCQE_FD-eps-converted-to.
-pdf used on input line 36.
-(pdftex.def)             Requested size: 227.62204pt x 182.9472pt.
-
-Overfull \hbox (13.1703pt too wide) in paragraph at lines 35--37
- [][][] 
- []
-
+<use images/t2k/t2k_schematic.pdf>
+Package pdftex.def Info: images/t2k/t2k_schematic.pdf used on input line 16.
+(pdftex.def)             Requested size: 284.52756pt x 69.829pt.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 37.
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--43
-
- []
-
-Package epstopdf Info: Source file: <images/neutrino_interactions/CCRES_FD.eps>
-
-(epstopdf)                    date: 2015-09-21 12:30:43
-(epstopdf)                    size: 159016 bytes
-(epstopdf)             Output file: <images/neutrino_interactions/CCRES_FD-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2015-09-21 12:32:56
-(epstopdf)                    size: 8871 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
-ns/CCRES_FD-eps-converted-to.pdf images/neutrino_interactions/CCRES_FD.eps>
-(epstopdf)             \includegraphics on input line 53.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 17.
+Package epstopdf Info: Source file: <images/t2k/nue_appearance_Theta13Delta_con
+tour.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 27439 bytes
+(epstopdf)             Output file: <images/t2k/nue_appearance_Theta13Delta_con
+tour-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 15551 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/t2k/nue_appearance_
+Theta13Delta_contour-eps-converted-to.pdf images/t2k/nue_appearance_Theta13Delt
+a_contour.eps>
+(epstopdf)             \includegraphics on input line 26.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf, id=63, 842.14626pt
- x 567.11874pt>
-File: images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf Graphic file (
-type pdf)
+<images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf, id=76, 56
+9.12625pt x 670.505pt>
+File: images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf Graph
+ic file (type pdf)
 
-<use images/neutrino_interactions/CCRES_FD-eps-converted-to.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CCRES_FD-eps-converted-to
-.pdf used on input line 53.
-(pdftex.def)             Requested size: 227.62204pt x 153.27986pt.
+<use images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf>
+Package pdftex.def Info: images/t2k/nue_appearance_Theta13Delta_contour-eps-con
+verted-to.pdf used on input line 26.
+(pdftex.def)             Requested size: 213.39566pt x 251.40807pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--60
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
+ [3 <./images/t2k/t2k_schematic.pdf>]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 36.
 
-[4] [5 <./images/neutrino_interactions/CCQE_FD-eps-converted-to.pdf> <./images/
-neutrino_interactions/NCQE_FD-eps-converted-to.pdf> <./images/neutrino_interact
-ions/CCRES_FD-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <images/neutrino_interactions/CCDIS_FD.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(epstopdf)                    date: 2015-09-21 12:31:05
-(epstopdf)                    size: 143081 bytes
-(epstopdf)             Output file: <images/neutrino_interactions/CCDIS_FD-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2015-09-21 12:32:58
-(epstopdf)                    size: 6806 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/neutrino_interactio
-ns/CCDIS_FD-eps-converted-to.pdf images/neutrino_interactions/CCDIS_FD.eps>
-(epstopdf)             \includegraphics on input line 67.
-Package epstopdf Info: Output file is already uptodate.
+ [4 <./images/t2k/nue_appearance_Theta13Delta_contour-eps-converted-to.pdf>]
+<images/t2k/neutrino_beamline.pdf, id=114, 838.33202pt x 301.928pt>
+File: images/t2k/neutrino_beamline.pdf Graphic file (type pdf)
 
-<images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf, id=112, 695.59875p
-t x 561.09625pt>
-File: images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf Graphic file (
-type pdf)
+<use images/t2k/neutrino_beamline.pdf>
+Package pdftex.def Info: images/t2k/neutrino_beamline.pdf used on input line 45
+.
+(pdftex.def)             Requested size: 426.79134pt x 153.70941pt.
 
-<use images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CCDIS_FD-eps-converted-to
-.pdf used on input line 67.
-(pdftex.def)             Requested size: 227.62204pt x 183.60411pt.
+<images/t2k/pot_history.png, id=120, 1401.235pt x 775.89874pt>
+File: images/t2k/pot_history.png Graphic file (type png)
 
-<images/neutrino_interactions/CrossSectionMeasurements.pdf, id=117, 212.96342pt
- x 156.663pt>
-File: images/neutrino_interactions/CrossSectionMeasurements.pdf Graphic file (t
-ype pdf)
- <use images/neutrino_interactions/CrossSectionMeasurements.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CrossSectionMeasurements.
-pdf used on input line 76.
-(pdftex.def)             Requested size: 341.43306pt x 251.19896pt.
+<use images/t2k/pot_history.png>
+Package pdftex.def Info: images/t2k/pot_history.png used on input line 56.
+(pdftex.def)             Requested size: 426.79134pt x 236.3232pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--83
-
+Overfull \hbox (1.588pt too wide) in paragraph at lines 50--62
+\OT1/ppl/m/n/12 (-20) The neu-trino beam-line (NU) is split into a pri-mary and
+ sec-ondary beam-line, a schematic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--83
+Underfull \hbox (badness 10000) in paragraph at lines 50--62
 
  []
 
-[6 <./images/neutrino_interactions/CCDIS_FD-eps-converted-to.pdf>]
-<images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf, id=147, 339.2
-697pt x 130.23326pt>
-File: images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf Graphic f
-ile (type pdf)
+[5 <./images/t2k/neutrino_beamline.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CCQECrossSectionMiniBooNE
-NOMAD.pdf used on input line 90.
-(pdftex.def)             Requested size: 341.43306pt x 131.06953pt.
- [7 <./images/neutrino_interactions/CrossSectionMeasurements.pdf>]
-<images/neutrino_interactions/CHORUS_XSec.pdf, id=235, 218.92912pt x 219.07346p
-t>
-File: images/neutrino_interactions/CHORUS_XSec.pdf Graphic file (type pdf)
- <use images/neutrino_interactions/CHORUS_XSec.pdf>
-Package pdftex.def Info: images/neutrino_interactions/CHORUS_XSec.pdf used on i
-nput line 106.
-(pdftex.def)             Requested size: 227.62204pt x 227.77753pt.
+ [6]
 
-<images/neutrino_interactions/MINERvA_XSec.pdf, id=242, 114.15308pt x 76.30678p
-t>
-File: images/neutrino_interactions/MINERvA_XSec.pdf Graphic file (type pdf)
- <use images/neutrino_interactions/MINERvA_XSec.pdf>
-Package pdftex.def Info: images/neutrino_interactions/MINERvA_XSec.pdf used on 
-input line 113.
-(pdftex.def)             Requested size: 284.52756pt x 190.24132pt.
+LaTeX Warning: Citation `fig:OAEffectFlux' on page 7 undefined on input line 65
+.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--120
+<images/t2k/oaeffect_flux.pdf, id=136, 569.12625pt x 594.22pt>
+File: images/t2k/oaeffect_flux.pdf Graphic file (type pdf)
+
+<use images/t2k/oaeffect_flux.pdf>
+Package pdftex.def Info: images/t2k/oaeffect_flux.pdf used on input line 68.
+(pdftex.def)             Requested size: 199.16928pt x 207.95291pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./images/t2k/pot_history.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+
+ []
+
+[8 <./images/t2k/oaeffect_flux.pdf>]
+<images/t2k/INGRID.pdf, id=198, 176.6941pt x 187.29855pt>
+File: images/t2k/INGRID.pdf Graphic file (type pdf)
+
+<use images/t2k/INGRID.pdf>
+Package pdftex.def Info: images/t2k/INGRID.pdf used on input line 91.
+(pdftex.def)             Requested size: 170.71652pt x 180.96773pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--120
+Underfull \hbox (badness 10000) in paragraph at lines 88--101
+
+ []
+
+[9 <./images/t2k/INGRID.pdf>]
+<images/t2k/ND280Schematic.pdf, id=247, 244.94102pt x 220.31871pt>
+File: images/t2k/ND280Schematic.pdf Graphic file (type pdf)
+
+<use images/t2k/ND280Schematic.pdf>
+Package pdftex.def Info: images/t2k/ND280Schematic.pdf used on input line 108.
+(pdftex.def)             Requested size: 256.0748pt x 230.33292pt.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 114.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 114.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--115
+
+ []
+
+[10 <./images/t2k/ND280Schematic.pdf>]
+
+LaTeX Warning: Command \O invalid in math mode on input line 119.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 119.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 119.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--120
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
 
  []
 
-[8 <./images/neutrino_interactions/CCQECrossSectionMiniBooNENOMAD.pdf>]))
-Processing 'backmatter' comment. [9] [10 <./images/neutrino_interactions/CHORUS
-_XSec.pdf> <./images/neutrino_interactions/MINERvA_XSec.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--168
+
+ []
+
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 173.
+
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 173.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 174.
+
+[14] <images/t2k/SK_PID.pdf, id=334, 477.1087pt x 185.38731pt>
+File: images/t2k/SK_PID.pdf Graphic file (type pdf)
+
+<use images/t2k/SK_PID.pdf>
+Package pdftex.def Info: images/t2k/SK_PID.pdf used on input line 189.
+(pdftex.def)             Requested size: 256.0748pt x 99.50229pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 180--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--15
+
+ []
+
+[15]) Processing 'backmatter' comment. [16 <./images/t2k/SK_PID.pdf>]
 \openout3 = `comment.cut'.
 
 
 Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut (./backmatter.tex (./thesis.bbl [11
+(./comment.cut (./backmatter.tex (./thesis.bbl [17
 
 
-] [12
+] [18
 
 ]
 
@@ -1334,7 +1361,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 5.
+(scrbook)              by `\normalfont \bfseries ' on input line 6.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1348,7 +1375,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 9.
+(scrbook)              by `\normalfont \bfseries ' on input line 11.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1362,7 +1389,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 13.
+(scrbook)              by `\normalfont \bfseries ' on input line 15.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1376,7 +1403,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 17.
+(scrbook)              by `\normalfont \bfseries ' on input line 19.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1390,7 +1417,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 21.
+(scrbook)              by `\normalfont \bfseries ' on input line 23.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1404,7 +1431,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 26.
+(scrbook)              by `\normalfont \bfseries ' on input line 27.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1418,7 +1445,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 31.
+(scrbook)              by `\normalfont \bfseries ' on input line 32.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1432,7 +1459,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 35.
+(scrbook)              by `\normalfont \bfseries ' on input line 38.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1446,7 +1473,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 39.
+(scrbook)              by `\normalfont \bfseries ' on input line 44.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1460,35 +1487,7 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 43.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 47.
-
-
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 50.
+(scrbook)              by `\normalfont \bfseries ' on input line 49.
 
 
 Class scrbook Warning: Usage of deprecated font command `\bf'!
@@ -1516,103 +1515,62 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              Note also, that KOMA-Script will remove the definition
 (scrbook)              of `\bf' anytime until release of about version 3.20.
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 58.
+(scrbook)              by `\normalfont \bfseries ' on input line 64.
 
+) [19] [20
 
-Class scrbook Warning: Usage of deprecated font command `\bf'!
-(scrbook)              You should note, that in 1994 font command `\bf' has
-(scrbook)              been defined for compatiblitiy to Script 2.0 only.
-(scrbook)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrbook)              shouldn't use such commands any longer and within
-(scrbook)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrbook)              See `fntguide.pdf' for more information about
-(scrbook)              recommended font commands.
-(scrbook)              Note also, that KOMA-Script will remove the definition
-(scrbook)              of `\bf' anytime until release of about version 3.20.
-(scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrbook)              by `\normalfont \bfseries ' on input line 63.
-
-) [13] [14
-
-] (./thesis.lof
-Overfull \hbox (45.12256pt too wide) in paragraph at lines 10--10
- [][] [][][]\OT1/ppl/m/n/12 (-20) The CCQE cross-sections mea-sured by the Mini
--BooNE (2010) [[][]7[][]], LSND (2002) [[][]9[][]] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15])
+] (./thesis.lof)
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
+ [21] [22
 
-[16] (./thesis.lot)
+] (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-)) [17
-
-]
+)) [23]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2B787D1706AB0531054027979697F141;397.
+(rerunfilecheck)             Checksum: D1E79FE595F5944AC8DD7D2A06B8CFC5;806.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 25670 strings out of 493117
- 440096 string characters out of 6135433
- 683621 words of memory out of 5000000
- 28338 multiletter control sequences out of 15000+600000
- 62338 words of font info for 269 fonts, out of 8000000 for 9000
+ 25698 strings out of 493117
+ 440017 string characters out of 6135433
+ 690204 words of memory out of 5000000
+ 28388 multiletter control sequences out of 15000+600000
+ 63598 words of font info for 263 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,13n,61p,1433b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpaz
-o/fplmr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fpl
-mri.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (17 pages, 1226700 bytes).
+ 67i,13n,61p,3038b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/pal
+atino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/u
+plr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (23 pages, 3605657 bytes).
 PDF statistics:
- 944 PDF objects out of 1000 (max. 8388607)
- 734 compressed objects within 8 object streams
- 68 named destinations out of 1000 (max. 500000)
- 34917 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 528 PDF objects out of 1000 (max. 8388607)
+ 411 compressed objects within 5 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 37533 words of extra memory for PDF output out of 42996 (max. 10000000)
 
