@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.13)  21 SEP 2015 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1162,7 +1162,7 @@ tesian_line-eps-converted-to.pdf images/hough_transform/cartesian_line.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/cartesian_line-eps-converted-to.pdf, id=113, 569.12625p
+<images/hough_transform/cartesian_line-eps-converted-to.pdf, id=125, 569.12625p
 t x 451.6875pt>
 File: images/hough_transform/cartesian_line-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1186,7 +1186,7 @@ ameter_point-eps-converted-to.pdf images/hough_transform/parameter_point.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/parameter_point-eps-converted-to.pdf, id=114, 569.12625
+<images/hough_transform/parameter_point-eps-converted-to.pdf, id=126, 569.12625
 pt x 451.6875pt>
 File: images/hough_transform/parameter_point-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1226,7 +1226,7 @@ tesian_point-eps-converted-to.pdf images/hough_transform/cartesian_point.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/cartesian_point-eps-converted-to.pdf, id=147, 569.12625
+<images/hough_transform/cartesian_point-eps-converted-to.pdf, id=159, 569.12625
 pt x 451.6875pt>
 File: images/hough_transform/cartesian_point-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1248,7 +1248,7 @@ ameter_line-eps-converted-to.pdf images/hough_transform/parameter_line.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/parameter_line-eps-converted-to.pdf, id=148, 569.12625p
+<images/hough_transform/parameter_line-eps-converted-to.pdf, id=160, 569.12625p
 t x 451.6875pt>
 File: images/hough_transform/parameter_line-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -1278,7 +1278,7 @@ cartesian_space.eps>
 (epstopdf)             \includegraphics on input line 65.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf, id=182
+<images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf, id=194
 , 569.12625pt x 451.6875pt>
 File: images/hough_transform/HT_example_cartesian_space-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1301,7 +1301,7 @@ parameter_space.eps>
 (epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf, id=185
+<images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf, id=197
 , 569.12625pt x 451.6875pt>
 File: images/hough_transform/HT_example_parameter_space-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1335,7 +1335,7 @@ T_example_cartesian_space_with_line.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_transform/HT_example_cartesian_space_with_line-eps-converted-to.p
-df, id=224, 569.12625pt x 451.6875pt>
+df, id=236, 569.12625pt x 451.6875pt>
 File: images/hough_transform/HT_example_cartesian_space_with_line-eps-converted
 -to.pdf Graphic file (type pdf)
 
@@ -1368,7 +1368,7 @@ sian_parameter_redefinition.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.pdf, 
-id=244, 569.12625pt x 451.6875pt>
+id=256, 569.12625pt x 451.6875pt>
 File: images/hough_transform/cartesian_parameter_redefinition-eps-converted-to.
 pdf Graphic file (type pdf)
 
@@ -1391,7 +1391,7 @@ r_space.eps>
 (epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_transform/binned_parameter_space-eps-converted-to.pdf, id=250, 56
+<images/hough_transform/binned_parameter_space-eps-converted-to.pdf, id=262, 56
 9.12625pt x 451.6875pt>
 File: images/hough_transform/binned_parameter_space-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -1422,7 +1422,7 @@ transform/3StateInteraction_SideLeftECal_NoReconstruction.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-eps-con
-verted-to.pdf, id=275, 764.8575pt x 502.87875pt>
+verted-to.pdf, id=287, 764.8575pt x 502.87875pt>
 File: images/hough_transform/3StateInteraction_SideLeftECal_NoReconstruction-ep
 s-converted-to.pdf Graphic file (type pdf)
 
@@ -1449,7 +1449,7 @@ ray.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf, id=292, 569.
+<images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf, id=304, 569.
 12625pt x 132.495pt>
 File: images/ecal_hough_transform/ecal_grid_array-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1473,7 +1473,7 @@ orm/single_ecal_bar_hough_transform.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted-to.p
-df, id=293, 569.12625pt x 387.4475pt>
+df, id=305, 569.12625pt x 387.4475pt>
 File: images/ecal_hough_transform/single_ecal_bar_hough_transform-eps-converted
 -to.pdf Graphic file (type pdf)
 
@@ -1496,7 +1496,7 @@ array.eps>
 (epstopdf)             \includegraphics on input line 170.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf, id=301, 569
+<images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf, id=313, 569
 .12625pt x 132.495pt>
 File: images/ecal_hough_transform/ecal_cross_array-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1568,7 +1568,7 @@ ransform/FullParameterSpace_3StateInteraction.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-converted
--to.pdf, id=339, 569.12625pt x 387.4475pt>
+-to.pdf, id=351, 569.12625pt x 387.4475pt>
 File: images/ecal_hough_transform/FullParameterSpace_3StateInteraction-eps-conv
 erted-to.pdf Graphic file (type pdf)
 
@@ -1603,7 +1603,7 @@ h_transform/ReducedParameterSpace_3StateInteraction.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-conver
-ted-to.pdf, id=353, 569.12625pt x 387.4475pt>
+ted-to.pdf, id=365, 569.12625pt x 387.4475pt>
 File: images/ecal_hough_transform/ReducedParameterSpace_3StateInteraction-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -1667,7 +1667,7 @@ matching/3DMatching_Barrel_2Track_QRatio_Separation.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-conver
-ted-to.pdf, id=407, 569.12625pt x 451.6875pt>
+ted-to.pdf, id=419, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -1691,7 +1691,7 @@ g/3DMatching_Barrel_2Track_QRatio_PDF.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converted-to.
-pdf, id=408, 569.12625pt x 451.6875pt>
+pdf, id=420, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF-eps-converte
 d-to.pdf Graphic file (type pdf)
 
@@ -1715,7 +1715,7 @@ ching/3DMatching_Barrel_2Track_DFL_Separation.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-converted
--to.pdf, id=415, 569.12625pt x 451.6875pt>
+-to.pdf, id=427, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation-eps-conv
 erted-to.pdf Graphic file (type pdf)
 
@@ -1739,7 +1739,7 @@ DMatching_Barrel_2Track_DFL_PDF.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-to.pdf
-, id=416, 569.12625pt x 451.6875pt>
+, id=428, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -1763,7 +1763,7 @@ ching/3DMatching_Barrel_2Track_DLL_Separation.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-converted
--to.pdf, id=421, 569.12625pt x 451.6875pt>
+-to.pdf, id=433, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation-eps-conv
 erted-to.pdf Graphic file (type pdf)
 
@@ -1793,7 +1793,7 @@ DMatching_Barrel_2Track_DLL_PDF.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf
-, id=422, 569.12625pt x 451.6875pt>
+, id=434, 569.12625pt x 451.6875pt>
 File: images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -1840,7 +1840,7 @@ rack_DFL_Separation-eps-converted-to.pdf> <./images/hough_3d_matching/3DMatchin
 g_Barrel_2Track_DFL_PDF-eps-converted-to.pdf>] [20 <./images/hough_3d_matching/
 3DMatching_Barrel_2Track_DLL_Separation-eps-converted-to.pdf> <./images/hough_3
 d_matching/3DMatching_Barrel_2Track_DLL_PDF-eps-converted-to.pdf>]
-<images/hough_3d_matching/MergedTrackEventDisplay.pdf, id=519, 327.13155pt x 24
+<images/hough_3d_matching/MergedTrackEventDisplay.pdf, id=531, 327.13155pt x 24
 9.05016pt>
 File: images/hough_3d_matching/MergedTrackEventDisplay.pdf Graphic file (type p
 df)
@@ -1880,7 +1880,7 @@ larResolutionDSECal.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf, id=5
-71, 569.12625pt x 386.44376pt>
+83, 569.12625pt x 386.44376pt>
 File: images/hough_validation/MuonAngularResolutionDSECal-eps-converted-to.pdf 
 Graphic file (type pdf)
 
@@ -1920,7 +1920,7 @@ e_fgdcol_Barrel.eps>
 (epstopdf)             \includegraphics on input line 379.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf, id=598
+<images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf, id=610
 , 569.12625pt x 386.44376pt>
 File: images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1943,7 +1943,7 @@ _bskmu_DSECal.eps>
 (epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf, id=599,
+<images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf, id=611,
  569.12625pt x 386.44376pt>
 File: images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1971,7 +1971,7 @@ dcol_Barrel.eps>
 (epstopdf)             \includegraphics on input line 389.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf, id=606, 
+<images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf, id=618, 
 569.12625pt x 386.44376pt>
 File: images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1994,7 +1994,7 @@ mu_DSECal.eps>
 (epstopdf)             \includegraphics on input line 390.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf, id=607, 5
+<images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf, id=619, 5
 69.12625pt x 386.44376pt>
 File: images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2023,7 +2023,7 @@ talCharge_bskmuCorrected_DSECal.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-to.pdf
-, id=609, 569.12625pt x 386.44376pt>
+, id=621, 569.12625pt x 386.44376pt>
 File: images/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -2047,7 +2047,7 @@ lHits_bskmuCorrected_DSECal.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.pdf, 
-id=610, 569.12625pt x 386.44376pt>
+id=622, 569.12625pt x 386.44376pt>
 File: images/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.
 pdf Graphic file (type pdf)
 
@@ -2061,36 +2061,229 @@ Overfull \hbox (13.1703pt too wide) in paragraph at lines 399--401
  [][][] 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 373--15
+) (./chap6.tex
+Underfull \hbox (badness 10000) in paragraph at lines 373--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--15
+Underfull \hbox (badness 10000) in paragraph at lines 373--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--15
+Underfull \hbox (badness 10000) in paragraph at lines 373--9
 
  []
 
 [26] [27 <./images/hough_validation/TotalCharge_fgdcol_Barrel-eps-converted-to.
 pdf> <./images/hough_validation/TotalCharge_bskmu_DSECal-eps-converted-to.pdf>]
-) Processing 'backmatter' comment. [28 <./images/hough_validation/TotalHits_fgd
-col_Barrel-eps-converted-to.pdf> <./images/hough_validation/TotalHits_bskmu_DSE
-Cal-eps-converted-to.pdf> <./images/hough_validation/TotalCharge_bskmuCorrected
-_DSECal-eps-converted-to.pdf> <./images/hough_validation/TotalHits_bskmuCorrect
-ed_DSECal-eps-converted-to.pdf>]
+[28 <./images/hough_validation/TotalHits_fgdcol_Barrel-eps-converted-to.pdf> <.
+/images/hough_validation/TotalHits_bskmu_DSECal-eps-converted-to.pdf> <./images
+/hough_validation/TotalCharge_bskmuCorrected_DSECal-eps-converted-to.pdf> <./im
+ages/hough_validation/TotalHits_bskmuCorrected_DSECal-eps-converted-to.pdf>]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--18
+
+ []
+
+Package epstopdf Info: Source file: <images/magnetic_field/ND280FluxReturn.eps>
+
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 35155 bytes
+(epstopdf)             Output file: <images/magnetic_field/ND280FluxReturn-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 27686 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/ND28
+0FluxReturn-eps-converted-to.pdf images/magnetic_field/ND280FluxReturn.eps>
+(epstopdf)             \includegraphics on input line 25.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/ND280FluxReturn-eps-converted-to.pdf, id=693, 345.29pt x
+ 362.35374pt>
+File: images/magnetic_field/ND280FluxReturn-eps-converted-to.pdf Graphic file (
+type pdf)
+ <use images/magnetic_field/ND280FluxReturn-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/ND280FluxReturn-eps-converted-to
+.pdf used on input line 25.
+(pdftex.def)             Requested size: 256.0748pt x 268.73471pt.
+
+Underfull \vbox (badness 1609) has occurred while \output is active []
+
+ [29
+
+]
+[30 <./images/magnetic_field/ND280FluxReturn-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/magnetic_field/BFieldDiagram.eps>
+(epstopdf)                    date: 2015-05-13 21:23:13
+(epstopdf)                    size: 21279 bytes
+(epstopdf)             Output file: <images/magnetic_field/BFieldDiagram-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 7854 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/BFie
+ldDiagram-eps-converted-to.pdf images/magnetic_field/BFieldDiagram.eps>
+(epstopdf)             \includegraphics on input line 44.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/BFieldDiagram-eps-converted-to.pdf, id=722, 794.97pt x 5
+13.92pt>
+File: images/magnetic_field/BFieldDiagram-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use images/magnetic_field/BFieldDiagram-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/BFieldDiagram-eps-converted-to.p
+df used on input line 44.
+(pdftex.def)             Requested size: 256.0748pt x 165.54776pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--49
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./images/magnetic_field/BFieldDiagram-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
+
+ []
+
+Package epstopdf Info: Source file: <images/magnetic_field/NHits_BLB_NoField.ep
+s>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 187615 bytes
+(epstopdf)             Output file: <images/magnetic_field/NHits_BLB_NoField-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 61966 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/NHit
+s_BLB_NoField-eps-converted-to.pdf images/magnetic_field/NHits_BLB_NoField.eps>
+
+(epstopdf)             \includegraphics on input line 78.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/NHits_BLB_NoField-eps-converted-to.pdf, id=745, 694.595p
+t x 450.68375pt>
+File: images/magnetic_field/NHits_BLB_NoField-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use images/magnetic_field/NHits_BLB_NoField-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/NHits_BLB_NoField-eps-converted-
+to.pdf used on input line 78.
+(pdftex.def)             Requested size: 256.0748pt x 166.15895pt.
+Package epstopdf Info: Source file: <images/magnetic_field/TMR_BLB_NoField.eps>
+
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 440634 bytes
+(epstopdf)             Output file: <images/magnetic_field/TMR_BLB_NoField-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 145248 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/TMR_
+BLB_NoField-eps-converted-to.pdf images/magnetic_field/TMR_BLB_NoField.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/TMR_BLB_NoField-eps-converted-to.pdf, id=746, 1104.125pt
+ x 833.1125pt>
+File: images/magnetic_field/TMR_BLB_NoField-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use images/magnetic_field/TMR_BLB_NoField-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/TMR_BLB_NoField-eps-converted-to
+.pdf used on input line 79.
+(pdftex.def)             Requested size: 227.62204pt x 171.74258pt.
+
+Overfull \hbox (38.62306pt too wide) in paragraph at lines 78--80
+ [][][] 
+ []
+
+
+LaTeX Warning: Reference `subsec:ECalParticleIdentification' on page 32 undefin
+ed on input line 84.
+
+Package epstopdf Info: Source file: <images/magnetic_field/NHits_BLB_WithField.
+eps>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 399712 bytes
+(epstopdf)             Output file: <images/magnetic_field/NHits_BLB_WithField-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 249670 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/NHit
+s_BLB_WithField-eps-converted-to.pdf images/magnetic_field/NHits_BLB_WithField.
+eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/NHits_BLB_WithField-eps-converted-to.pdf, id=750, 1100.1
+1pt x 833.1125pt>
+File: images/magnetic_field/NHits_BLB_WithField-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use images/magnetic_field/NHits_BLB_WithField-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/NHits_BLB_WithField-eps-converte
+d-to.pdf used on input line 90.
+(pdftex.def)             Requested size: 227.62204pt x 172.3782pt.
+Package epstopdf Info: Source file: <images/magnetic_field/TMR_BLB_WithField.ep
+s>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 430258 bytes
+(epstopdf)             Output file: <images/magnetic_field/TMR_BLB_WithField-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2015-05-13 21:23:14
+(epstopdf)                    size: 277053 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/magnetic_field/TMR_
+BLB_WithField-eps-converted-to.pdf images/magnetic_field/TMR_BLB_WithField.eps>
+
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/magnetic_field/TMR_BLB_WithField-eps-converted-to.pdf, id=751, 1100.11p
+t x 833.1125pt>
+File: images/magnetic_field/TMR_BLB_WithField-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use images/magnetic_field/TMR_BLB_WithField-eps-converted-to.pdf>
+Package pdftex.def Info: images/magnetic_field/TMR_BLB_WithField-eps-converted-
+to.pdf used on input line 91.
+(pdftex.def)             Requested size: 227.62204pt x 172.3782pt.
+
+Overfull \hbox (10.1703pt too wide) in paragraph at lines 90--92
+ [][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--99
+
+ []
+
+[32] [33 <./images/magnetic_field/NHits_BLB_NoField-eps-converted-to.pdf> <./im
+ages/magnetic_field/TMR_BLB_NoField-eps-converted-to.pdf>]))
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+ [34 <./images/magnetic_field/NHits_BLB_WithField-eps-converted-to.pdf> <./imag
+es/magnetic_field/TMR_BLB_WithField-eps-converted-to.pdf>]
+Processing 'backmatter' comment. [35] [36
+
+
+]
 \openout3 = `comment.cut'.
 
- Comment 'backmatter' writing to comment.cut.
-Straight input of comment.cut. (./comment.cut (./backmatter.tex (./thesis.bbl
-[29
 
-
-] [30
+Comment 'backmatter' writing to comment.cut. Straight input of comment.cut.
+(./comment.cut (./backmatter.tex (./thesis.bbl [37] [38
 
 ]
 
@@ -2121,30 +2314,33 @@ Class scrbook Warning: Usage of deprecated font command `\bf'!
 (scrbook)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrbook)              by `\normalfont \bfseries ' on input line 9.
 
-) [31] [32
+) [39] [40
 
 ] (./thesis.lof
 Underfull \vbox (badness 1895) has occurred while \output is active []
 
- [33])
+ [41])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
 
-[34] (./thesis.lot)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+[43] [44
+
+] (./thesis.lot)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-)) [35
-
-]
+)) [45]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B91127BFE388621DAAF15F8E1BF7A1E1;1570.
+(rerunfilecheck)             Checksum: 7E11F7202197F261F7E65D90AB5AD1CC;1815.
 
 
 LaTeX Warning: There were undefined references.
@@ -2152,13 +2348,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
  ) 
 Here is how much of TeX's memory you used:
- 26010 strings out of 493117
- 452894 string characters out of 6135433
- 690880 words of memory out of 5000000
- 28553 multiletter control sequences out of 15000+600000
- 71171 words of font info for 304 fonts, out of 8000000 for 9000
+ 26125 strings out of 493117
+ 455836 string characters out of 6135433
+ 695125 words of memory out of 5000000
+ 28605 multiletter control sequences out of 15000+600000
+ 71916 words of font info for 314 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,14n,61p,1642b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,20n,61p,1702b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2174,10 +2370,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
 mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (35 pages, 999607 bytes).
+Output written on thesis.pdf (45 pages, 1775455 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 651 compressed objects within 7 object streams
- 120 named destinations out of 1000 (max. 500000)
- 38214 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 979 PDF objects out of 1000 (max. 8388607)
+ 789 compressed objects within 8 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 38268 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -237,7 +237,7 @@ where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is th
 \Yoshi{}{ADDRESSED - Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
   \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  The two distributions peak at different values of $Q_{\textrm{ratio}}$, which implies $Q_{\textrm{ratio}}$ provides good separation of the correctly and incorrectly matched events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
   \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
-  \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:QRatio}
 \end{figure}
 \newline
@@ -248,7 +248,7 @@ The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is 
   \centering
   \subfloat[$\Delta_{\textrm{layer, first}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  While both distributions peak in the same place, the peak for the correct matches distribution is much sharper, indicating a good level of separation between the correctly and incorrectly matches events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
   \subfloat[$\Delta_{\textrm{layer, first}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDFLPDF}}
-  \caption{$\Delta_{\textrm{layer, first}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \caption{$\Delta_{\textrm{layer, first}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:DFL}
 \end{figure}
 \newline
@@ -258,7 +258,7 @@ The third and final input to the likelihood, called $\Delta_{\textrm{layer, last
   \centering
   \subfloat[$\Delta_{\textrm{layer, last}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  While both distributions peak in the same place, the peak for the correct matches distribution is much sharper, indicating a good level of separation between the correctly and incorrectly matches events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
   \subfloat[$\Delta_{\textrm{layer, last}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDLLPDF}}
-  \caption{$\Delta_{\textrm{layer, last}}$ and its probability density distribution in the barrel ECal for the two track case.}
+  \caption{$\Delta_{\textrm{layer, last}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:DLL}
 \end{figure}
 \newline
@@ -267,7 +267,7 @@ The matching likelihood, $\mathcal{L}$, for a matching candidate pair is then
 \begin{equation}
   \mathcal{L} = \mathcal{L}_{Q_{\textrm{ratio}}} \times \mathcal{L}_{\Delta_{\textrm{layer, first}}} \times \mathcal{L}_{\Delta_{\textrm{layer, last}}}.
 \end{equation}
-As described above, $\mathcal{L}$ is calculated for every matching candidate pair and the pair which maximise $\mathcal{L}$ is selected as a match and removed from the pool.  The process is then repeated until no more matches can be made.
+As described bove, $\mathcal{L}$ is calculated for every matching candidate pair and the pair which maximise $\mathcal{L}$ is selected as a match and removed from the pool.  The process is then repeated until no more matches can be made.
 \newline
 \newline
 3D tracks have now been formed, but the associated directions and positions of those tracks still need to be calculated.  The track fitting process for the newly formed 3D tracks is very similar to that described in section~\ref{subsec:ECal3DHitReconstruction}.  The tracks are briefly separated into their constituent 2D views and a charge-weighted average position of each layer is calculated using the track's constituent hits.  Then, the hits in the opposing view are used to estimate the third coordinate of a given layer using a least-squares fit.  After all of the coordinates have been estimated, a full 3D least-squares fit of the positions in each layer is performed to estimate the 3D track's direction and position in that ECal layer.
