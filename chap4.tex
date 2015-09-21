@@ -27,12 +27,18 @@ The main interactions modes at T2K energies are quasi-elastic scattering (CCQE),
 \newline
 \newline
 After the initial interactions, the final step is to simulate the final state interactions within the nucleus.  Each particle involved in the interaction is pushed through the nucleus in discreet steps with the probability of a final state interaction being calculated at each step.  If an interaction occurs, the final states of that interaction are also included in the subsequent steps.  This interactive procedure models the particle cascade until all the final states have reached the nucleus boundary.  At this point, all final state particles are recorded along with all of the information that created those particles.  This information is stored in a vector file and passed on to the ND280 detector MC package which handles the detector's response to these final state particles.
+\newline
+\newline
+While the above description provides a general overview of the NEUT simulation, the above only describes simulation of NEUT events within the ND280 detector itself.  In reality, many interactions occur in the pit which surround the near detector, some of which have final state muons which enter ND280.  So, a separate NEUT-based simulation of neutrino interactions from the T2K beam in the ND280 pit and the surrounding substrate are also generated.  This kind simulation will be referred to as sand MC (because the interaction target is largely sand in the surrounding pit) from now on.
 \subsection{ND280 detector simulation}
 \label{subsec:ND280DetectorSimulation}
 The simulation of the final state particles in ND280 is handled by nd280mc which is based on GEANT4~\cite{Agostinelli2003250} and ROOT.  The neutrino interaction vector files are taken as input and used as seeds in the detector simulation.  The neutrino vector inputs are not organised according to the J-PARC beam bunch structure so the detector simulation first groups the interactions into spills.  The beam intensity to be simulated is used to define how many interactions occur in a spill with Poisson fluctuations applied to that number.  The timing of the beam bunch structure is then used to group the interactions into bunches. 
 \newline
 \newline
 nd280mc constructs a ROOT geometry of ND280 based on the design specifications of its subdetectors and then propagates the particles given to it by the neutrino generator through the geometry, simulating energy deposition, scattering and particle decay during propagation.
+\newline
+\newline
+The sand MC is largely treated the same at this point; the surrounding pit geometry (and ND280) is constructed in nd280mc and the corresponding sand MC vectors provide the final state particles which are propagated by geant4 through the geometry.  After this point, the sand MC is treated identically to the beam MC described above.
 
 \subsection{Detector response simulation}
 \label{subsec:DetectorResponseSimulation}
