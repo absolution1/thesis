@@ -1,139 +1,57 @@
 \begin{thebibliography}{10}
 
-\bibitem{PauliOpenLetter}
-W.~Pauli,
-\newblock Open letter to the {Gauverein} meeting in {Tubingen}, 1930.
+\bibitem{Brun199781}
+R.~Brun and F.~Rademakers,
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 389}, 81
+   (1997),
+\newblock New Computing Techniques in Physics Research V.
 
-\bibitem{Cowan20071956}
-C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire,
-\newblock Science {\bf 124}, 103 (1956).
+\bibitem{Ferrari_fluka:a}
+A.~Ferrari {\em et~al.},
+\newblock Fluka: a multi-particle transport code,
+\newblock in {\em CERN 2005-10 (2005), INFN/TC 05/11, SLAC-R-773}.
 
-\bibitem{PhysRevLett.9.36}
-G.~Danby {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 9}, 36 (1962).
+\bibitem{Brun:1987ma}
+R.~Brun, F.~Bruyant, M.~Maire, A.~McPherson, and P.~Zanarini,
+\newblock (1987).
 
-\bibitem{Kodama2001218}
-K.~Kodama {\em et~al.},
-\newblock Physics Letters B {\bf 504}, 218  (2001).
+\bibitem{PhysRevC.84.034604}
+N.~Abgrall {\em et~al.},
+\newblock Phys. Rev. C {\bf 84}, 034604 (2011).
 
-\bibitem{PhysRevLett.81.1562}
-Y.~Fukuda {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 81}, 1562 (1998).
+\bibitem{Hayato2002171}
+Y.~Hayato,
+\newblock Nuclear Physics B - Proceedings Supplements {\bf 112}, 171  (2002).
 
-\bibitem{PhysRevLett.87.071301}
-Q.~R. Ahmad {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 87}, 071301 (2001).
+\bibitem{Miller2002223}
+G.~A. Miller,
+\newblock Nuclear Physics B - Proceedings Supplements {\bf 112}, 223  (2002).
 
-\bibitem{PhysRevLett.90.021802}
-K.~Eguchi {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 90}, 021802 (2003).
+\bibitem{Benhar1994493}
+O.~Benhar, A.~Fabrocini, S.~Fantoni, and I.~Sick,
+\newblock Nuclear Physics A {\bf 579}, 493  (1994).
 
-\bibitem{Maki01111962}
-Z.~Maki, M.~Nakagawa, and S.~Sakata,
-\newblock Progress of Theoretical Physics {\bf 28}, 870 (1962).
+\bibitem{LlewellynSmith1972261}
+C.~L. Smith,
+\newblock Physics Reports {\bf 3}, 261  (1972).
 
-\bibitem{Pontecorvo}
-B.~Pontecorvo,
-\newblock JETP Lett. {\bf 33}, 549 (1957).
+\bibitem{Rein198179}
+D.~Rein and L.~M. Sehgal,
+\newblock Annals of Physics {\bf 133}, 79  (1981).
 
-\bibitem{PhysRevD.17.2369}
-L.~Wolfenstein,
-\newblock Phys. Rev. D {\bf 17}, 2369 (1978).
+\bibitem{1126-6708-2006-05-026}
+T.~Sjöstrand, S.~Mrenna, and P.~Skands,
+\newblock Journal of High Energy Physics {\bf 2006}, 026 (2006).
 
-\bibitem{Mikheev:1986gs}
-S.~Mikheev and A.~Y. Smirnov,
-\newblock Sov.J.Nucl.Phys. {\bf 42}, 913 (1985).
+\bibitem{Agostinelli2003250}
+S.~Agostinelli {\em et~al.},
+\newblock Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment {\bf 506},
+  250  (2003).
 
-\bibitem{Agashe:2014kda}
-Particle Data Group, K.~Olive {\em et~al.},
-\newblock Chin.Phys. {\bf C38}, 090001 (2014).
-
-\bibitem{Abe201366}
-Y.~Abe {\em et~al.},
-\newblock Physics Letters B {\bf 723}, 66  (2013).
-
-\bibitem{PhysRevLett.108.171803}
-F.~P. An {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 108}, 171803 (2012).
-
-\bibitem{PhysRevLett.108.191802}
-J.~K. Ahn {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 108}, 191802 (2012).
-
-\bibitem{0004-637X-496-1-505}
-B.~T. Cleveland {\em et~al.},
-\newblock The Astrophysical Journal {\bf 496}, 505 (1998).
-
-\bibitem{PhysRevC.80.015807}
-J.~N. Abdurashitov {\em et~al.},
-\newblock Phys. Rev. C {\bf 80}, 015807 (2009).
-
-\bibitem{PhysRevD.74.072003}
-M.~H. Ahn {\em et~al.},
-\newblock Phys. Rev. D {\bf 74}, 072003 (2006).
-
-\bibitem{PhysRevLett.97.191801}
-D.~G. Michael {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 97}, 191801 (2006).
-
-\bibitem{PhysRevLett.112.061802}
-(T2K Collaboration), K.~Abe {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 112}, 061802 (2014).
-
-\bibitem{Ayres:2004js}
-NOvA, D.~Ayres {\em et~al.},
-\newblock (2004), hep-ex/0503053.
-
-\bibitem{Abe:2014oxa}
-Hyper-Kamiokande Working Group, K.~Abe {\em et~al.},
-\newblock (2014), 1412.4673.
-
-\bibitem{Adams:2013qkq}
-LBNE, C.~Adams {\em et~al.},
-\newblock (2013), 1307.7335.
-
-\bibitem{Qian20151}
-X.~Qian and P.~Vogel,
-\newblock Progress in Particle and Nuclear Physics {\bf 83}, 1  (2015).
-
-\bibitem{Weinheimer2002141}
-C.~Weinheimer,
-\newblock Progress in Particle and Nuclear Physics {\bf 48}, 141  (2002).
-
-\bibitem{PhysRevLett.109.032505}
-M.~Auger {\em et~al.},
-\newblock Phys. Rev. Lett. {\bf 109}, 032505 (2012).
-
-\bibitem{1742-6596-375-4-042012}
-A.~Barabash and the SuperNemo~Collaboration,
-\newblock Journal of Physics: Conference Series {\bf 375}, 042012 (2012).
-
-\bibitem{Chen:2008un}
-SNO+, M.~C. Chen,
-\newblock (2008), 0810.3694.
-
-\bibitem{ShortBaseLineAnomaly}
-J.~Fan and P.~Langacker,
-\newblock Journal of High Energy Physics {\bf 2012} (2012).
-
-\bibitem{Aguilar:2001ty}
-LSND, A.~Aguilar-Arevalo {\em et~al.},
-\newblock Phys.Rev. {\bf D64}, 112007 (2001), hep-ex/0104049.
-
-\bibitem{Z-PeakReferenceAtLEP}
-T.~A. C. D. C. L. C. O. C. S. C. L. E. W. G.~S. Electroweak and H.~F. Groups,
-\newblock Physics Reports {\bf 427}, 257  (2006).
-
-\bibitem{Aguilar-Arevalo:2013pmq}
-MiniBooNE, A.~Aguilar-Arevalo {\em et~al.},
-\newblock Phys.Rev.Lett. {\bf 110}, 161801 (2013), 1207.4809.
-
-\bibitem{2011arXiv1110.1604I}
-C.~M. {Ignarra},
-\newblock ArXiv e-prints  (2011), 1110.1604.
-
-\bibitem{Adams:2013uaa}
-LArTPC, C.~Adams {\em et~al.},
-\newblock (2013), 1309.7987.
+\bibitem{1748-0221-8-10-P10019}
+D.~Allan {\em et~al.},
+\newblock Journal of Instrumentation {\bf 8}, P10019 (2013).
 
 \end{thebibliography}
