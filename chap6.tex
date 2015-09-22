@@ -1,6 +1,6 @@
 \chapter{Magnetic field simulation in ND280}
 \label{chap:MagneticFieldSimulation}
-ND280 is housed in the \Yoshi{former}{it isn't the UA1 magnet any more!} UA1 magnet which provides a \Yoshi{0.18}{It's not a 0.2 T field any more!}~T magnetic field through the basket.  The purpose of this magnetic field is to aid particle \Yoshi{identification}{was identifcation} \Yoshi{and momentum measurements}{not just PID} in ND280's TPCs.  This magnetic field is accurately modelled in nd80mc by a constant 0.18 T magnetic field in the basket.  The ND280 analyses, which are inputs to the oscillation analyses, search for a TPC track matched to an FGD track so, in a first iteration of these analyses, the magnetic field model is sufficient for its purpose.
+ND280 is housed in the \Yoshi{former}{it isn't the UA1 magnet any more!} UA1 magnet which provides a \Yoshi{0.18}{It's not a 0.2 T field any more!}~T magnetic field through the Tracker.  The purpose of this magnetic field is to aid particle \Yoshi{identification}{was identifcation} \Yoshi{and momentum measurements}{not just PID} in ND280's TPCs.  This magnetic field is accurately modelled in nd80mc by a constant 0.18 T magnetic field in the Tracker.  The ND280 analyses, which are inputs to the oscillation analyses, search for a TPC track matched to an FGD track so, in a first iteration of these analyses, the magnetic field model is sufficient for its purpose.
 \newline
 \newline
 However, a significant part of the UA1 magnet is the iron based, magnetic flux return yoke which helps to tightly contain the magnetic field outside of the Tracker region.  As a result, there is a significant magnetic field contained within the magnetic flux return yoke during operation.  This magnetic field in the flux return yoke is not modelled in nd280mc.  For the first iterations of the ND280 oscillation input analyses, this approximation was valid.  However, as the ND280 analyses become more mature, and non-Tracker based analyses are started, this approximation is no longer sufficient.  Hence the magnetic field model in the simulation needs revising.
@@ -16,35 +16,35 @@ However, a significant part of the UA1 magnet is the iron based, magnetic flux r
   \caption{Graphical display of the X-Y ND280 cross-section.}
   \label{fig:ND280FluxReturn}
 \end{figure}
-A simple model for the magnetic field in the flux return can be found by making two assumptions.  Firstly, the flux return yoke consists mostly of iron which has a much higher magnetic permeability than the air surrounding it.  Therefore, it can be assumed that any magnetic flux passing through the ND280 basket is solely transported back around by the return yoke (no flux passes through the atmosphere in the pit).  It follows that
+A simple model for the magnetic field in the flux return can be found by making two assumptions.  Firstly, the flux return yoke consists mostly of iron which has a much higher magnetic permeability than the air surrounding it.  Therefore, it can be assumed that any magnetic flux passing through the ND280 Tracker is solely transported back around by the return yoke (no flux passes through the atmosphere in the pit).  It follows that
 \begin{equation}
   \phi_{\textrm{b}} = \phi_{\textrm{r}},
   \label{eqn:BFluxConservation}
 \end{equation}
-where $\phi_{\textrm{b}}$ is the magnetic flux passing through the Tracker and $\phi_{\textrm{r}}$ is the magnetic flux passing through the return yoke.  The second assumption regards the shape of the ND280 basket and flux return yoke.  The X-Y cross-section of ND280, as shown in Fig.~\ref{fig:ND280FluxReturn}, can be modelled as two distinct parts: the flux return yoke and everything contained within.  It is clear from Fig.~\ref{fig:ND280FluxReturn} that both areas are \Yoshi{rectangular}{retangular} so the system can be modelled as a smaller rectangle (the basket) contained within a larger rectangle (the return yoke).  Using this assumption and Eq.~\ref{eqn:BFluxConservation}, the magnetic field strength passing through the return yoke, $B_{r}$, is
+where $\phi_{\textrm{b}}$ is the magnetic flux passing through the Tracker and $\phi_{\textrm{r}}$ is the magnetic flux passing through the return yoke.  The second assumption regards the shape of the ND280 Tracker and flux return yoke.  The X-Y cross-section of ND280, as shown in Fig.~\ref{fig:ND280FluxReturn}, can be modelled as two distinct parts: the flux return yoke and everything contained within.  It is clear from Fig.~\ref{fig:ND280FluxReturn} that both areas are \Yoshi{rectangular}{retangular} so the system can be modelled as a smaller rectangle (the Tracker) contained within a larger rectangle (the return yoke).  Using this assumption and Eq.~\ref{eqn:BFluxConservation}, the magnetic field strength passing through the return yoke, $B_{r}$, is
 \begin{equation}
   B_{\textrm{r}} = \frac{B_{\textrm{b}}A_{\textrm{b}}}{A_{\textrm{r}} - A_{\textrm{b}}},
   \label{eqn:FluxReturnBField}
 \end{equation}
-where $B_{\textrm{b}}$ is the strength of the magnetic field passing through the basket, $A_{\textrm{b}}$ is the cross-sectional area of the basket region and $A_{\textrm{r}}$ is the cross-sectional area of the flux return yoke if the flux return yoke was not hollow.
+where $B_{\textrm{b}}$ is the strength of the magnetic field passing through the Tracker, $A_{\textrm{b}}$ is the cross-sectional area of the Tracker region and $A_{\textrm{r}}$ is the cross-sectional area of the flux return yoke if the flux return yoke was not hollow.
 \newline
 \newline
 \begin{figure}
   \centering
   \includegraphics[width=9cm]{images/magnetic_field/BFieldDiagram}
-  \caption{Simple model of the magnetic field in the basket and flux return region.  The flux return yoke has been separated into ten sections: four vertical B field sections, four corner B field sections and two horizontal B field sections.  The height of the basket region, $h$, is also shown.}
+  \caption{Simple model of the magnetic field in the Tracker and flux return region.  The flux return yoke has been separated into ten sections: four vertical B field sections, four corner B field sections and two horizontal B field sections.  The height of the Tracker region, $h$, is also shown.}
   \label{fig:BFieldDiagram}
 \end{figure}
-Eq.~\ref{eqn:FluxReturnBField} is sufficient to model the strength of the magnetic field in the flux return yoke, yet Eq.~\ref{eqn:FluxReturnBField} conveys no information about the direction of the magnetic field.  However, the direction can be estimated by separating the flux return into ten sections as shown in Fig.~\ref{fig:BFieldDiagram}.  The sections are: four vertical sections where the magnetic field enters and exits the flux return region, two horizontal sections where the magnetic field in the flux return is anti-parallel to the magnetic field in the basket and four corner sections where the magnetic field transitions between the horizontal and vertical sections.  The coordinate system used is the same as the one shown on the left hand side of Fig.~\ref{fig:BFieldDiagram} which defines the $x$-axis as being parallel to the magnetic field in the basket region and the $y$-axis as the vertical.  \Yoshi{By invoking the usual vector notation $\hat{\imath}$ and $\hat{\jmath}$ (where $\hat{\imath}$ and $\hat{\jmath}$ are parallel to the positive $x$-axis and $y$-axis respectively), the magnetic field in the basket is defined as}{ADDRESSED - need to define stuff properly}
+Eq.~\ref{eqn:FluxReturnBField} is sufficient to model the strength of the magnetic field in the flux return yoke, yet Eq.~\ref{eqn:FluxReturnBField} conveys no information about the direction of the magnetic field.  However, the direction can be estimated by separating the flux return into ten sections as shown in Fig.~\ref{fig:BFieldDiagram}.  The sections are: four vertical sections where the magnetic field enters and exits the flux return region, two horizontal sections where the magnetic field in the flux return is anti-parallel to the magnetic field in the Tracker and four corner sections where the magnetic field transitions between the horizontal and vertical sections.  The coordinate system used is the same as the one shown on the left hand side of Fig.~\ref{fig:BFieldDiagram} which defines the $x$-axis as being parallel to the magnetic field in the Tracker region and the $y$-axis as the vertical.  \Yoshi{By invoking the usual vector notation $\hat{\imath}$ and $\hat{\jmath}$ (where $\hat{\imath}$ and $\hat{\jmath}$ are parallel to the positive $x$-axis and $y$-axis respectively), the magnetic field in the Tracker is defined as}{ADDRESSED - need to define stuff properly}
 \begin{equation}
   \overrightarrow{B_{\textrm{b}}} = {B_{\textrm{b}}}\hat{\imath}.
-  \label{eqn:BasketBFieldVector}
+  \label{eqn:TrackerBFieldVector}
 \end{equation}
-The first magnetic field section in the flux return to be defined is the B field in the horizontal sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramHorizontalSection}.  The magnetic field here should be anti-parallel to the magnetic field in the basket, regardless of which horizontal section is being considered.  Using equation~\ref{eqn:BasketBFieldVector}, it follows that the magnetic field in the horizontal section of the flux return is
+The first magnetic field section in the flux return to be defined is the B field in the horizontal sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramHorizontalSection}.  The magnetic field here should be anti-parallel to the magnetic field in the Tracker, regardless of which horizontal section is being considered.  Using equation~\ref{eqn:TrackerBFieldVector}, it follows that the magnetic field in the horizontal section of the flux return is
 \begin{figure}
   \centering
   \includegraphics[width=9cm]{images/magnetic_field/BFieldDiagramHorizontalSection}
-  \caption{A horizontal section of the flux return with its corresponding magnetic field lines (blue).  The corner sections, vertical sections and the basket are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
+  \caption{A horizontal section of the flux return with its corresponding magnetic field lines (blue).  The corner sections, vertical sections and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
   \label{fig:BFieldDiagramHorizontalSection}
 \end{figure}
 \begin{equation}
@@ -55,21 +55,21 @@ The next magnetic field section in the flux return to define is the B field in t
 \begin{figure}
   \centering
   \includegraphics[width=5cm]{images/magnetic_field/BFieldDiagramVerticalSection}
-  \caption{A vertical section of the flux return with its corresponding magnetic field lines (blue).  In this vertical section, the magnetic field has exited the Tracker and is travelling vertically upwards through the flux return. A corner section, another vertical section and the basket are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
+  \caption{A vertical section of the flux return with its corresponding magnetic field lines (blue).  In this vertical section, the magnetic field has exited the Tracker and is travelling vertically upwards through the flux return. A corner section, another vertical section and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
   \label{fig:BFieldDiagramVerticalSection}
 \end{figure}
 \begin{equation}
   \overrightarrow{B}^{\textrm{V}}_{\textrm{r}} = \frac{y}{h/2}{B_{\textrm{r}}}\hat{\jmath},
   \label{eqn:VerticalReturnBFieldVector}
 \end{equation}
-where $h$ is the height of the ND280 basket and $y$ is the height at which the magnetic field is being evaluated in the ND280 coordinate system.  
+where $h$ is the height of the ND280 Tracker and $y$ is the height at which the magnetic field is being evaluated in the ND280 coordinate system.  
 \newline
 \newline
-Finally, In the corner sections of the flux return, the magnetic field is defined to be straight, constant in strength and at 45$^\circ$ to the horizontal and vertical sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramCornerSection}.  As with the vertical sections, the magnetic field direction is dependent on which corner section is being considered.  For the corner section where the entering magnetic field has left the vertical section in which the field was travelling vertically upwards, away from the basket (the same corner section as shown in Fig.~\ref{fig:BFieldDiagramCornerSection}), the magnetic field vector is
+Finally, In the corner sections of the flux return, the magnetic field is defined to be straight, constant in strength and at 45$^\circ$ to the horizontal and vertical sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramCornerSection}.  As with the vertical sections, the magnetic field direction is dependent on which corner section is being considered.  For the corner section where the entering magnetic field has left the vertical section in which the field was travelling vertically upwards, away from the Tracker (the same corner section as shown in Fig.~\ref{fig:BFieldDiagramCornerSection}), the magnetic field vector is
 \begin{figure}
   \centering
   \includegraphics[width=5cm]{images/magnetic_field/BFieldDiagramCornerSection}
-  \caption{A corner section of the flux return with its corresponding magnetic field lines (blue).  In this corner section, the magnetic field has entered from a vertical section in which is the field was travelling vertically upwards, away from the basket.. A vertical section, a horizontal section and the basket are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
+  \caption{A corner section of the flux return with its corresponding magnetic field lines (blue).  In this corner section, the magnetic field has entered from a vertical section in which is the field was travelling vertically upwards, away from the Tracker. A vertical section, a horizontal section and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
   \label{fig:BFieldDiagramCornerSection}
 \end{figure}
 \begin{equation}
