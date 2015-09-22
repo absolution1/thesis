@@ -16,9 +16,13 @@
 \BOOKMARK [1][-]{section.1.4}{Validation of the reconstruction}{chapter.1}% 16
 \BOOKMARK [2][-]{subsection.1.4.1}{Validation of algorithm performance}{section.1.4}% 17
 \BOOKMARK [2][-]{subsection.1.4.2}{Data-motivated validation of the algorithms}{section.1.4}% 18
-\BOOKMARK [0][-]{chapter.2}{Magnetic field simulation in ND280}{}% 19
-\BOOKMARK [1][-]{section.2.1}{Magnetic field model in the ND280 flux return}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.2}{Effect of magnetic field on the ECal}{chapter.2}% 21
-\BOOKMARK [0][-]{appendix*.28}{Bibliography}{}% 22
-\BOOKMARK [0][-]{appendix*.29}{List of Figures}{}% 23
-\BOOKMARK [0][-]{appendix*.30}{List of Tables}{}% 24
+\BOOKMARK [0][-]{chapter.2}{Selection of neutrino interactions in the ECal}{}% 19
+\BOOKMARK [1][-]{section.2.1}{Signal definition}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.2}{Monte Carlo sample}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.3}{Vertex reconstruction}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.4}{Monte Carlo selection}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.4.1}{Selection cuts}{section.2.4}% 24
+\BOOKMARK [2][-]{subsection.2.4.2}{Performance of the selection}{section.2.4}% 25
+\BOOKMARK [0][-]{appendix*.68}{Bibliography}{}% 26
+\BOOKMARK [0][-]{appendix*.69}{List of Figures}{}% 27
+\BOOKMARK [0][-]{appendix*.70}{List of Tables}{}% 28
