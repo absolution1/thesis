@@ -305,7 +305,7 @@ where $\mu_{\textrm{Data}}^Q$ and $\mu_{\textrm{MC}}^Q$ are the mean of the data
    Side-left & -0.315 & 0.85 & 0.55 \\
    DS & -0.472 & 0.87 & 0.46 \\
   \end{tabular}
-  \caption{Summary of the lead absorbers for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \caption{Summary of the lead absorbers for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
   \label{table:HitChargeFitValues}
 \end{table}
 However, due to time constraints, it was only possible to use said values to over-correct and over-smear the MC.  In terms of the individual hits, this meant using $\Delta^{Q}$ and $\sigma_{\textrm{Data}}^Q$ for the top-left ECal to apply a correction and smearing to the hit charges, regardless of which module the hit occurred in.  The top-left ECal module was chosen because it  has the largest value of $\Delta^{Q}$.  The adjusted hit charge is
@@ -390,7 +390,7 @@ The ECal module designs are split into three types: side, top/bottom and DS.  It
   Height (mm) & $1.75\pm0.1$ & $1.75\pm0.1$ & $1.75\pm0.1$ \\
   Sb doping & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ & $2.0\pm0.2\%$ \\
   \end{tabular}
-  \caption{Summary of the lead absorbers for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \caption{Summary of the lead absorbers for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
   \label{table:LeadAbsorberDimensions}
 \end{table}
 
@@ -417,7 +417,7 @@ The information used to construct the toy scintillator bars is summarised in tab
   Coating thickness (mm) & $0.25\pm0.13$ & $0.25\pm0.13$ & $0.25\pm0.13$ \\
   Coating composition (CH:TiO$_2$) & 85:15 & 85:15 & 85:15 \\
   \end{tabular}
-  \caption{Summary of the scintillator bars for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \caption{Summary of the scintillator bars for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
   \label{table:ScintillatorBarDimensions}
 \end{table}
 
@@ -436,7 +436,7 @@ The information used to constructed the WLS fibres is shown in table~\ref{table:
   Composition & CH & CH & CH \\
 
   \end{tabular}
-  \caption{Summary of the WLSfibres for the ND280 tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \caption{Summary of the WLSfibres for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
   \label{table:WLSFibreDimensions}
 \end{table}
 
@@ -526,7 +526,7 @@ As described in section~\ref{sec:ReconstructionValidation}, a significant data/M
 \end{figure}
 \subsection{FGD detector uncertainty evaluation}
 \label{subsec:FGDDetectorSystematics}
-The systematic uncertainties associated with the FGD are described extensively in~\cite{CCIncSelFGDTN}.  In recent times, there has been a significant push to develop a framework in which to analyse and propagate systematic uncertainties associated with ND280 analyses, which is called the PSYCHE framework.  Even though outer detector analyses have not been incorporated into PSYCHE, this is not true for tracker analyses and so PSYCHE could be partly utilised in this analysis.  The design of PSYCHE allows the user to enable/disable relevant systematic uncertainties and then simultaneously propagate them through an analysis.  PSYCHE was set up to apply the FGD detector systematics and produce 1000 throws, in which every systematic uncertainty was simultaneously applied.  The output, in the form of a distribution of a varied number of selected CC events in the FGD, was then used to define the systematic uncertainty.  This distribution is shown in Fig.~\ref{fig:FGDSystematicsNEvents}.  The Gaussian fit to the thrown number of events implies that the number of FGD events is $(1.069\pm0.022)\times10^5$ events i.e. a $2.01\%$ uncertainty.  However, the number of nominal selected events is $1.054\times10^5$ and so the shift in the number of events suggests an additional $1.41\%$ error.  Combining these in quadrature, the FGD detector systematic uncertainty was found to be $2.51\%$.  This error purely relates to the number of CC events in the FGD and so does not correlate with any of the events in the ECal.
+The systematic uncertainties associated with the FGD are described extensively in~\cite{CCIncSelFGDTN}.  In recent times, there has been a significant push to develop a framework in which to analyse and propagate systematic uncertainties associated with ND280 analyses, which is called the PSYCHE framework.  Even though outer detector analyses have not been incorporated into PSYCHE, this is not true for Tracker analyses and so PSYCHE could be partly utilised in this analysis.  The design of PSYCHE allows the user to enable/disable relevant systematic uncertainties and then simultaneously propagate them through an analysis.  PSYCHE was set up to apply the FGD detector systematics and produce 1000 throws, in which every systematic uncertainty was simultaneously applied.  The output, in the form of a distribution of a varied number of selected CC events in the FGD, was then used to define the systematic uncertainty.  This distribution is shown in Fig.~\ref{fig:FGDSystematicsNEvents}.  The Gaussian fit to the thrown number of events implies that the number of FGD events is $(1.069\pm0.022)\times10^5$ events i.e. a $2.01\%$ uncertainty.  However, the number of nominal selected events is $1.054\times10^5$ and so the shift in the number of events suggests an additional $1.41\%$ error.  Combining these in quadrature, the FGD detector systematic uncertainty was found to be $2.51\%$.  This error purely relates to the number of CC events in the FGD and so does not correlate with any of the events in the ECal.
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{images/measurement/systematics/detector/fgd/fgd_systematics_nevents.eps}
@@ -845,7 +845,7 @@ The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KData
   \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel-reverse ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.}
   \label{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm}
 \end{figure}
-As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction templates in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the other template (Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}).  This finding suggests that it is the composition of the other template that is the cause of the fit failure.  The other template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background which is the primary event category which falls into the other template.  The number of events in the other template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively where the distributions have been separated into the true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 tracker which is the only place where the neutrino flux has been studied in great detail. 
+As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction templates in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the other template (Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}).  This finding suggests that it is the composition of the other template that is the cause of the fit failure.  The other template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background which is the primary event category which falls into the other template.  The number of events in the other template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively where the distributions have been separated into the true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 Tracker which is the only place where the neutrino flux has been studied in great detail. 
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
