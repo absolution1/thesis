@@ -1,14 +1,3 @@
-%\begin{sidewaysfigure}
-%  \begin{center}
-%  \includegraphics[width=0.8\textheight]{lhcb-detector-cross-section}
-%  \caption[Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane]%
-%    {Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane.}
-%  \label{fig:LHCbCrossSection}
-%  \end{center}
-%\end{sidewaysfigure}
-
-
-
 \chapter{Measurement of the $\nu_\mu$ charged current inclusive cross-section on Pb}
 \label{chap:CrossSectionMeasurement}
 This chapter presents the measurement of the $\nu_\mu$ CC inclusive cross-section on Pb using the ND280 ECals.  This chapter details the measurement method, the samples used in the measurement, the assessment of the systematic uncertainties, validation of the measurement method and finally the measurement itself.
@@ -54,12 +43,11 @@ The method outlined above allows for the simultaneous constraint of physical par
 As described in chapter~\ref{chap:NeutrinoInteractionSelection}, the developed selection does not distinguish between lead and carbon interactions, partly because such events are indistinguishable from one another.  It is\Yoshi{, however,}{ADDRESSED - } desirable to separate the two categories out\Yoshi{,}{ADDRESSED - comma} as the presented measurement purely involves lead.  As the ECal is not capable of simultaneously constraining the lead and carbon events by itself, an additional constraint is needed.  \Yoshi{Therefore}{ADDRESSED - was So}, a sample of CC interactions on carbon occurring in the FGD are also included, which are taken from the official ND280 oscillation input analysis~\cite{CCIncSelFGDTN}.
 \newline
 \newline
-To summarise, there are many inputs samples to the measurement.  Specifically, there are \Yoshi{12 barrel ECal samples (6 selected and 6 reverse), the DS ECal sample and the FGD sample which totals to 14 input samples}{ADDRESSED - This adds up to 14 doesn't it?}.\Yoshi{}{ADDRESSED - I would also state the rough number of data and MC stats you expect in each sample---otherwise the ``samples'' sound very abstract. Something like ``The smallest sample among the ECALs is expected to contain approximately FIXME,000 real data events.''}.  To give a rough handle on the level of statistics, the DS ECal sample, which will provide the primary interaction target events, is expected to contain 35000~events 
+To summarise, there are many inputs samples to the measurement.  Specifically, there are \Yoshi{12 barrel ECal samples (6 selected and 6 reverse), the DS ECal sample and the FGD sample which totals to 14 input samples}{ADDRESSED - This adds up to 14 doesn't it?}.\Yoshi{}{ADDRESSED - I would also state the rough number of data and MC stats you expect in each sample---otherwise the ``samples'' sound very abstract. Something like ``The smallest sample among the ECALs is expected to contain approximately FIXME,000 real data events.''}  To get an idea on the level of statistics, the DS ECal sample, which will provide the primary interaction target events, is expected to contain 35000~events 
 \newline
 \newline
 \Yoshi{Monte Carlo-simulated data of $3.949\times 10^{20}$~POT worth of NEUT events, which corresponds to 3 times the real data used}
 {ADDRESSED - was ``In terms of statistics, $3.949\times 10^{20}$~POT worth of NEUT MC events'', but this seems a bit colloquial} are used for this measurement.
-\Yoshi{}{ADDRESSED - You may also want to put this at the beginning of the section, if all plots use this amount of MC stats.}
 
 \section{The ECal rate fit}
 \label{sec:ECalRateFit}
@@ -100,7 +88,7 @@ The ND280 event simulation \Yoshi{can be}{ADDRESSED - ``is essentially'' is unne
 The actual assessment of a systematic uncertainty can be broken down into two areas: identification of a systematic error source and the propagation of that systematic error source through the analysis.  The identification stage is typically handled by \Yoshi{an official T2K working group}{ADDRESSED - a respective working group} or by an analyser \Yoshi{making use of }{ADDRESSED - with} \Yoshi{data taken outside of the analysis signal region}{ADDRESSED - I would reword ``external sources''} (e.g. control samples).  The propagation of the systematic error source has no strict recipe but it typically involves variation of the identified systematic uncertainty and then either a reweighting of events is applied or the analysis chain is re-run.  The systematic uncertainty treatment used in this analysis uses a \Yoshi{combination of these methods}{ADDRESSED - mixture of the above}.
 \newline
 \newline
-To propagate \Yoshi{effects of the systematic uncertainties,}{ADDRESSED - was systematic uncertainty effect,} a Monte Carlo sample akin to the prediction sample set used in the fit is required.  \Yoshi{Therefore,}{ADDRESSED - So,} a $2.5\times10^{19}$ POT sub sample of beam and \Yoshi{sand Monte Carlo (see section~\ref{sec:MonteCarloSample} for definition)}{ADDRESSED - ``sand Monte Carlo'' is about as jargony as expressions come! Introduce it somewhere before this, and refer the reader there here} is used for this purpose.  All sample systematic covariance matrices are presented as fractional covariance matrices between each of the different detector samples.  For the barrel samples, the selected samples are labelled by their respective module name\Yoshi{,}{ADDRESSED - comma} and the reverse barrel samples (background\Yoshi{-}{ADDRESSED - compound adjective}enriched samples) are labelled with their module name and \Yoshi{`}{ADDRESSED - not '}reverse'.  The assessment of each systematic source is presented individually, resulting in a fractional covariance matrix for that source.  The final systematic covariance matrix is then found by summing all of the individual covariance matrices.
+To propagate \Yoshi{effects of the systematic uncertainties,}{ADDRESSED - was systematic uncertainty effect,} a Monte Carlo sample akin to the prediction sample set used in the fit is required.  \Yoshi{Therefore,}{ADDRESSED - So,} a $2.5\times10^{19}$ POT sub sample of beam and \Yoshi{sand Monte Carlo (see section~\ref{subsec:NeutrinoFluxSimulation} for definition)}{ADDRESSED - ``sand Monte Carlo'' is about as jargony as expressions come! Introduce it somewhere before this, and refer the reader there here} is used for this purpose.  All sample systematic covariance matrices are presented as fractional covariance matrices between each of the different detector samples.  For the barrel samples, the selected samples are labelled by their respective module name\Yoshi{,}{ADDRESSED - comma} and the reverse barrel samples (background\Yoshi{-}{ADDRESSED - compound adjective}enriched samples) are labelled with their module name and \Yoshi{`}{ADDRESSED - not '}reverse'.  The assessment of each systematic source is presented individually, resulting in a fractional covariance matrix for that source.  The final systematic covariance matrix is then found by summing all of the individual covariance matrices.
 \subsection{Flux systematic evaluation}
 \label{subsec:FluxSystematic}
 The neutrino flux is one of the core components of the ND280 event simulation and any uncertainties associated with the flux have a direct impact on the measured ND280 event rates.  The associated flux uncertainties can be broken down into four categories\Yoshi{~\cite{PhysRevD.87.012001}}{ADDRESSED - Can this be referenced to one of the beam-related papers?}:
@@ -436,7 +424,7 @@ The information used to constructed the WLS fibres is shown in table~\ref{table:
   Composition & CH & CH & CH \\
 
   \end{tabular}
-  \caption{Summary of the WLSfibres for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
+  \caption{Summary of the WLS fibres for the ND280 Tracker ECals~\cite{1748-0221-8-10-P10019}.}
   \label{table:WLSFibreDimensions}
 \end{table}
 
