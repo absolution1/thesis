@@ -1,6 +1,17 @@
+%\begin{sidewaysfigure}
+%  \begin{center}
+%  \includegraphics[width=0.8\textheight]{lhcb-detector-cross-section}
+%  \caption[Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane]%
+%    {Cross-section view of \LHCb, cut in the non-bending $y$--$z$ plane.}
+%  \label{fig:LHCbCrossSection}
+%  \end{center}
+%\end{sidewaysfigure}
+
+
+
 \chapter{Selection of neutrino interactions in the ECal}
 \label{chap:NeutrinoInteractionSelection}
-This analysis presents a measurement of the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 \Yoshi{Tracker}{ADDRESSED - I would say that ``Tracker'' is a proper noun, the name of the detector, so it should be capitalised throughout. The detector name is then ``Tracker ECal''} ECals.  To make such a measurement, a sample of neutrino interaction vertices within the ECal must be found.  The selection of events is based on the enhanced reconstruction outlined in chapter~\ref{chap:EnhancedECalReconstruction}, which was specifically designed to \Yoshi{be sensitive to}{ADDRESSED - introduce} track multiplicity.  As a result of this method, vertices in the ECal are naturally separated into topologies defined by the number of reconstructed tracks.  Any selection development should take advantage of this situation and tailor cuts to be specific to each topology, which should result in a higher overall sample purity.  The 3D track matching aspect of the reconstruction was only tuned to handle up to three tracks simultaneously.  However, this analysis aims to measure a CC-inclusive cross-section so it should not be biased against any neutrino energy range.  \Yoshi{There is a deep connection between the number of reconstructed tracks and the energy of the neutrino that created them.  The number of reconstructed tracks should correlate with the number of final state particles involved with the neutrino interaction and the number of final state particles correlates with the energy of the interacting neutrinos.  Therefore it is important to not reject events based solely on the number of reconstructed tracks}{ADDRESSED - state the implied connection between number of prongs and neutrino energy}.  Bearing this information in mind, the selection should separate out the events into the following topologies:
+This analysis presents a measurement of the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 \Yoshi{tracker}{I would say that ``Tracker'' is a proper noun, the name of the detector, so it should be capitalised throughout. The detector name is then ``Tracker ECal''} ECals.  To make such a measurement, a sample of neutrino interaction vertices within the ECal must be found.  The selection of events is based on the enhanced reconstruction outlined in chapter~\ref{chap:EnhancedECalReconstruction}, which was specifically designed to \Yoshi{be sensitive to}{introduce} track multiplicity.  As a result of this method, vertices in the ECal are naturally separated into topologies defined by the number of reconstructed tracks.  Any selection development should take advantage of this situation and tailor cuts to be specific to each topology, which should result in a higher overall sample purity.  The 3D track matching aspect of the reconstruction was only tuned to handle up to three tracks simultaneously.  However, this analysis aims to measure a CC-inclusive cross-section so should not be biased against any neutrino energy range\Yoshi{}{state the implied connection between number of prongs and neutrino energy}.  Bearing this information in mind, the selection should separate out the events into the following topologies:
 \begin{itemize}
   \item 1 prong topology
   \item 2 prong topology
@@ -10,11 +21,11 @@ This analysis presents a measurement of the CC inclusive interaction cross-secti
 The definition of a prong is a reconstructed track associated with a reconstructed vertex.
 \newline
 \newline
-However, as described in section~\ref{sec:ReconOutput}, the output of the enhanced reconstruction has been kept generic and is not specifically tailored to this task.  The reconstruction outputs a set of clusters which contain a set of 3D tracks and every pairwise crossing that said tracks make.  While it is true that in some situations the reconstruction will accurately represent a vertex ``out of the box''---e.g., when only two tracks are reconstructed in the cluster---there will be many situations where extra reconstruction steps are needed before any further selection can take place.  \Yoshi{Hence}{ADDRESSED - I wouldn't start a sentence with ``So,''---it seems like spoken English to me. I'd say ``Hence'' with no comma} the structure of this chapter is as follows: the definition of signal is described first along with the sample used to develop the selection, followed by a discussion of the vertex reconstruction.  After the final reconstruction steps have been discussed, a full discussion of the neutrino selection follows.
+However, as described in section~\ref{sec:ReconOutput}, the output of the enhanced reconstruction has been kept generic and is not specifically tailored to this task.  The reconstruction outputs a set of clusters which contain a set of 3D tracks and every pairwise crossing that said tracks make.  While it is true that in some situations the reconstruction will accurately represent a vertex ``out of the box''---e.g., when only two tracks are reconstructed in the cluster---there will be many situations where extra reconstruction steps are needed before any further selection can take place.  \Yoshi{So,}{I wouldn't start a sentence with ``So,''---it seems like spoken English to me. I'd say ``Hence'' with no comma} the structure of this chapter is as follows: the definition of signal is described first along with the sample used to develop the selection, followed by a discussion of the vertex reconstruction.  After the final reconstruction steps have been discussed, a full discussion of the neutrino selection follows.
 
 \section{Signal definition}
 \label{sec:SignalDefinition}
-The measurement \Yoshi{that is the intended outcome}{ADDRESSED - ``measurement of this analysis''} of this analysis is the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 Tracker ECals.  The active volume of the ECal consists of layers of plastic scintillator and lead absorbers.  Neutrino interactions that occur in the lead absorbers are indistinguishable from those that occur in the plastic scintillator.  Because of this fact, the selection does not attempt to separate the two cases out.  So, the strict signal definition used by this selection  is as follows:
+The measurement \Yoshi{that is the intended outcome}{``measurement of this analysis''} of this analysis is the CC inclusive interaction cross-section of $\nu_\mu$ with lead nuclei using the ND280 tracker ECals.  The active volume of the ECal consists of layers of plastic scintillator and lead absorbers.  Neutrino interactions that occur in the lead absorbers are indistinguishable from those that occur in the plastic scintillator.  Because of this fact, the selection does not attempt to separate the two cases out.  So, the strict signal definition used by this selection  is as follows:
 \begin{itemize}
   \item Interacting neutrino is flavour $\nu_\mu$
   \item Interaction type is charged current
@@ -24,10 +35,10 @@ The active volume is defined by the ROOT geometry used in the simulation.  Speci
 
 \section{Monte Carlo sample}
 \label{sec:MonteCarloSample}
-NEUT was used to generate a neutrino beam sample of Monte Carlo events which corresponds to $3.949\times10^{20}$ POT.  All of this sample was generated using a simulated beam power of 178 kW which is the average beam power used for Run III.  At this intensity, there are an expected 9.46 neutrino interactions per eight bunch spill in ND280.  So, there will be approximately one interaction per bunch across the entire \Yoshi{}{ADDRESSED - was `of'} ND280, meaning the chance of pileup is small. 
+NEUT was used to generate a neutrino beam sample of Monte Carlo events which corresponds to $3.949\times10^{20}$ POT.  All of this sample was generated using a simulated beam power of 178 kW which is the average beam power used for Run III.  At this intensity, there are an expected 9.46 neutrino interactions per eight bunch spill in ND280.  So, there will be approximately one interaction per bunch across the entire \Yoshi{}{was `of'} ND280, meaning the chance of pileup is small. 
 \newline
 \newline
-The sample \Yoshi{described}{ADDRESSED} above only simulated neutrino interactions within ND280 (including the \Yoshi{outermost}{ADDRESSED - was `surrounding'} magnet).  However, we expect many interactions in the surrounding pit (referred to as ``sand interactions'' from now on) to have final states which enter ND280.  So, NEUT was used to generate an additional sample of sand interactions (hereafter referred to as sand Monte Carlo) which corresponds to $3.708\times10^{20}$\Yoshi{~POT}{ADDRESSED}.  There is roughly a 6$\%$ difference in the POT of the beam and sand Monte Carlo.  As the sand Monte Carlo has a sufficiently high level of statistics, scaling the smaller sample to match the larger is acceptable.
+The sample \Yoshi{described}{} above only simulated neutrino interactions within ND280 (including the \Yoshi{outermost}{was `surrounding'} magnet).  However, we expect many interactions in the surrounding pit (referred to as ``sand interactions'' from now on) to have final states which enter ND280.  So, NEUT was used to generate an additional sample of sand interactions (hereafter referred to as sand Monte Carlo) which corresponds to $3.708\times10^{20}$\Yoshi{~POT}{}.  There is roughly a 6$\%$ difference in the POT of the beam and sand Monte Carlo.  As the sand Monte Carlo has a sufficiently high level of statistics, scaling the smaller sample to match the larger is acceptable.
 \newline
 \newline
 \begin{table}
@@ -43,18 +54,19 @@ The sample \Yoshi{described}{ADDRESSED} above only simulated neutrino interactio
     \hline
     Total & 1420677 \\
   \end{tabular}
-  \caption{The number of signal events in the NEUT-based beam Monte Carlo sample separated by ECal module.}
+  \caption{The number of signal events in the Monte Carlo sample separated by ECal module.}
   \label{table:NSignalEventsTruth}
 \end{table}
-The number of signal interactions from the Monte Carlo sample is shown in table~\ref{table:NSignalEventsTruth}, separated into the ECal module they occurred in.  The number of signal interactions is also shown as a function of neutrino energy for the bottom-left, top-right and DS ECals in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy}.  Clearly, there are an extremely high number of signal events in the sample, which means this analysis is in no way statistically limited.  As an example, consider a selection with a 1$\%$ signal efficiency in the DS ECal.  Assuming $100\%$ selected sample purity, the number of selected events would be 1341 which correspond to a statistical error of 2.73$\%$.  Even in this extreme situation, the statistical error is borderline negligible.  It should be clear that any statistical error is this analysis is approximately $0\%$.
+The number of signal interactions from the Monte Carlo sample is shown in table~\ref{table:NSignalEventsTruth}, separated into the ECal module they occurred in.  The number of signal interactions is also shown as a function of neutrino energy for the bottom-left, top-right and DS ECals in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy}.  Clearly, there are an extremely high number of signal events in the sample, which means this analysis is in no way statistically limited.  As an example, consider a selection with a 1$\%$ signal efficiency in the DS ECal.  Assuming $100\%$ selected sample purity, the number of selected events would be 1341 which correspond to a statistical error of 2.73$\%$.  Even in this extreme situation, the statistical error is borderline negligible\Yoshi{}{``no way'' statistically limited and ``borderline negligible'' are rather colloquial ways of saying this, and this argument is a little woolly. How can 2.7\% be approximately 0\%, without some mention of the systematic errors and data statistics that you expect?}.  It should be clear that any statistical error is this analysis is approximately $0\%$.
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/signal_definition/NSignalEventsNeutrinoEnergy.eps}
-  \caption{The number of signal events in the NEUT-based beam Monte Carlo sample as a function of neutrino energy in the bottom-left (red), top-right (blue) and DS (black) ECals.  The bottom-left ECal sees the most signal events and at a higher neutrino energy which is caused by the off-axis effect.}
+  \caption{The number of signal events as a function of neutrino energy in the bottom-left (red), top-right (blue) and DS (black) ECals.}
   \label{fig:NSignalEventsTruthNeutrinoEnergy}
 \end{figure}
 \section{Vertex reconstruction}
 \label{sec:VertexReconstruction}
+\Yoshi{}{I think it would help to have a couple of sentences that clearly gives an outline of what you are going to described. I jumps straight into details, without a giving the reader any idea of the algorithm that is to be described---it is quite a long section. Breaking it up into subsections might help too}
 The output of the enhanced reconstruction already supplies most of the necessary information to reconstruct vertices in the ECal.  As a reminder, the reconstruction outputs a set of ECal clusters which contain the following:
 \begin{itemize}
   \item A set of 3D reconstructed tracks
@@ -65,7 +77,7 @@ The reconstruction makes no quality checks on the 3D tracks in each cluster.  So
 \newline
 \begin{figure}%
   \centering
-  \subfloat[No track rejection.  There is a build-up of reconstructed tracks which are at right angles to the simulated particle that created them.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
+  \subfloat[No track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
   \subfloat[With track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationWithRejection}\label{fig:AngularSeparationWithRejection}}
   \caption{Angular separation of the reconstructed tracks in an ECal cluster with the beam-simulated particle that created them.  The black, red and green histograms are the tracks that were reconstructed first, second and third respectively.  All histograms are area normalised.}
   \label{fig:TrackRejectionAngularSeparation}
@@ -73,27 +85,27 @@ The reconstruction makes no quality checks on the 3D tracks in each cluster.  So
 There are two categories of bad track reconstruction.  The first is where the 3D matching matches two 2D tracks which do not have sufficient information to fully model a 3D track.  Specifically, one of the 2D tracks involved in the matching only uses one ECal layer.  As the 3D track reconstruction requires information from both ECal views, tracks which fall into this category do not supply enough information to reconstruct a good quality track.  The second category is where the 3D matching produces a grossly incorrect match.  The matcher is designed to continually match 2D tracks together until no more 2D tracks are left in the matching pool.  So, there are situations where the last possible match made is in no way suitable.  This situation is easily identified by matched 2D tracks which do not overlap.  For example, one of the 2D tracks uses layers 16, 18 and 20 and the other 2D track uses layers 1 and 3.  By removing these two types of tracks from the cluster, the 90$^\circ$ build up in the angular separation distribution is suppressed, as shown in Fig.~\ref{fig:AngularSeparationWithRejection}.  By removing these categories of tracks, approximately 22$\%$ of tracks are rejected.
 \newline
 \newline
-The final states of a neutrino interaction originate from the same point in space.  So, assuming that the reconstructed tracks represent the final states, the reconstructed tracks should most closely cross at the point of interaction.  As stated above, one of the outputs of the reconstruction are the pairwise crossings of the constituent tracks in the ECal cluster.  Using the above assumptions,  the pairwise crossings should be in close proximity to one another when the reconstructed tracks represent the final states of an interaction.  This idea promotes a relatively simple method of vertex reconstruction: attempt to cluster the pairwise crossings together if the pairwise crossings are in close proximity.  To quantitatively define this proximity, the quality of the pairwise crossing also has to be considered.
+The final states of a neutrino interaction originate from the same point in space.  So, assuming that the reconstructed tracks represent the final states, the reconstructed tracks should most closely cross at the point of interaction.  As stated above, one of the outputs of the reconstruction are the pairwise crossings of the constituent tracks in the ECal cluster.  Using the above assumptions,  the pairwise crossings should be in close proximity to one another when the reconstructed tracks represent the final states of an interaction.  This idea promotes\Yoshi{}{is ``promotes'' the right word?} a relatively simple method of vertex reconstruction: attempt to cluster the pairwise crossings together if the pairwise crossings are in close proximity.  To quantitatively define this proximity, the quality of the pairwise crossing also has to be considered.
 \newline 
 \newline
 As with the 3D tracks, the reconstruction does not perform any quality checks on the pairwise crossings of the tracks.  As the reconstruction will always find a crossing location for a pair of 3D tracks, some of the pairwise crossings will not represent anything physical.  The quality definition chosen is simple: pairwise crossings are defined as bad if the crossing location is far away from either of the tracks it is associated with.  However, the distance definition is not trivial to define and should be closely correlated with the vertex reconstruction method.  For example, a two track vertex would provide very little constraint on the distance which defines a bad crossing, whereas a three track vertex may provide a bad crossing distance constraint which is too strict and destroys the majority two track vertices. 
 \newline
 \newline
-The above discussion promotes two parameters which will govern the vertex reconstruction: the required proximity of two crossings to be clustered together, $d_c$, and the distance of a crossing from its constituents tracks to be classified as bad quality, $d_q$.  To quantify these values, a sample of reconstructed events matched to interactions in the ECals are used which are taken from beam Monte Carlo.  The reconstruction (the pairwise crossing rejection and clustering) is repeatedly run over the sample for different values of the $d_c$ and $d_q$ to find the optimum values.  To define the optimum value, a figure of merit is necessary.  After running the reconstruction for a given $d_c$ and $d_q$, the number vertices are separated into one, two and three track vertices and the true neutrino interactions which created the reconstructed vertices are associated.  A reconstructed vertex is tagged as correctly reconstructed if it contains the same number of reconstructed tracks as the number of charged final states in the associated neutrino interaction.  By defining the number of correctly reconstructed one, two and three track vertices as $N_1$, $N_2$ and $N_3$ respectively, the figure of merit, $\phi^{\textrm{vertices}}$, is
+The above discussion promotes\Yoshi{}{is ``promotes'' the right word?} two parameters which will govern the vertex reconstruction: the required proximity of two crossings to be clustered together, $d_c$, and the distance of a crossing from its constituents tracks to be classified as bad quality, $d_q$.  To quantify these values, a sample of reconstructed events matched to interactions in the ECals are used which are taken from beam Monte Carlo.  The reconstruction (the pairwise crossing rejection and clustering) is repeatedly run over the sample for different values of the $d_c$ and $d_q$ to find the optimum values.  To define the optimum value, a figure of merit is necessary.  After running the reconstruction for a given $d_c$ and $d_q$, the number vertices are separated into one, two and three track vertices and the true neutrino interactions which created the reconstructed vertices are associated.  A reconstructed vertex is tagged as correctly reconstructed if it contains the same number of reconstructed tracks as the number of charged final states in the associated neutrino interaction.  By defining the number of correctly reconstructed one, two and three track vertices as $N_1$, $N_2$ and $N_3$ respectively, the figure of merit, $\phi^{\textrm{vertices}}$, is
 \begin{equation}
   \phi^{\textrm{vertices}} = N_1N_2N_3.
-\end{equation}
+\end{equation}\Yoshi{}{I don't get this figure of merit, but as long as the examiners agree with you, that is fine....}
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/vertex_recon/FOM_2D}
-  \caption{Values of $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space.  The colour corresponds to the magnitude of $\phi^{\textrm{vertices}}$.  The distribution plateaus rather than peaks, suggesting that there are no preferred values of $d_q$ and $d_c$, only disfavoured ones.}
+  \caption{Values of $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space.  The colour corresponds to the magnitude of $\phi^{\textrm{vertices}}$.}
   \label{fig:VertexReconFOM}
 \end{figure}
 \begin{figure}
   \centering
   \subfloat[$d_q$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dq_marginalize} \label{fig:dqMarginalize}}
   \subfloat[$d_c$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dc_marginalize} \label{fig:dcMarginalize}}
-  \caption{$\phi^{\textrm{vertices}}$ vs the marginalised vertex reconstruction parameters.  The same plateau effect shown in Fig.~\ref{fig:VertexReconFOM} can be seen here.  The ideal values for both reconstruction parameters are the ones which get as close to the sharp drop in $\phi^{\textrm{vertices}}$ as possible.}
+  \caption{$\phi^{\textrm{vertices}}$ vs the marginalised vertex reconstruction parameters.}
   \label{fig:VertexReconMarginalizedDistributions}
 \end{figure}
 By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$,$d_c$) space, information about the preferred values of $d_q$ and $d_c$ can be found.  This space is shown in Fig.~\ref{fig:VertexReconFOM}.  It is clear from Fig.~\ref{fig:VertexReconFOM} that there is no clear maximum, but rather a plateau of  $\phi^{\textrm{vertices}}$ for $d_q$ and $d_c$ greater than 140 mm.  So, marginalised distributions of $d_q$ and $d_c$ can be produced to find where $\phi^{\textrm{vertices}}$ approaches zero which are shown in Fig.~\ref{fig:dqMarginalize} and Fig.~\ref{fig:dcMarginalize} respectively.  The values chosen are shown in table~\ref{table:VertexReconParameters}. 
@@ -169,7 +181,7 @@ can be built up.  By defining equation~\ref{eqn:VertexReconMatrix} as
   \underline{\underline{A}} \vec{P} = \vec{B},
   \label{eqn:VertexReconMatrixSimple}
 \end{equation}
-where $\underline{\underline{A}}$ is the matrix on the left hand side of equation~\ref{eqn:VertexReconMatrix} and $\vec{B}$ is the vector on the right hand side of equation~\ref{eqn:VertexReconMatrix}.  $\vec{P}$ is finally
+where $\underline{\underline{A}}$ is the matrix on the left hand side of equation~\ref{eqn:VertexReconMatrix} and $\vec{B}$ is the vector on the right hand side\Yoshi{}{was ``of equation~\ref{eqn:VertexReconMatrix}}.  $\vec{P}$ is finally
 \begin{equation}
   \vec{P} = \underline{\underline{A}}^{-1} \vec{B}.
   \label{eqn:VertexReconMatrixSolution}
@@ -196,7 +208,7 @@ The first merging condition identified is the cosine of the opening angle, $\cos
 \begin{figure}[!t]
   \centering
   \includegraphics[width=10cm]{images/selection/vertex_recon/merging_candidates_cos_theta}
-  \caption{The cosine of the angle subtended by the merging candidates, bounded between 0 and 1. The correct matches and incorrect matches are the blue and red histograms respectively.  There is a clear build-up of events which are correctly matched as $\cos\theta \to 1$.}
+  \caption{The cosine of the angle subtended by the merging candidates, bounded between 0 and 1. The correct matches and incorrect matches are the blue and red histograms respectively.}
   \label{fig:TrackMergingConditionCosTheta}
 \end{figure}
 \newline
@@ -213,15 +225,15 @@ The distance ratio distribution is shown Fig.~\ref{fig:TrackMergingConditionDist
   \centering
   \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio.eps} \label{fig:TrackMergingConditionDistanceRatioNoCut}}
   \subfloat[For $\cos\theta > 0.8$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.eps} \label{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}}
-  \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.  When no cuts are applied, the distance ratio shows little separation between the correctly matched and incorrectly matched events.  However, after demanding $\cos\theta > 0.8$, the incorrectly matched peak significantly flattens without altering the correctly matched peak.}
+  \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.}
   \label{fig:TrackMergingConditionDistanceRatio}
 \end{figure}
 To illustrate this dependency, two distributions are shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} which both show the distance ratio vs the cosine of the opening angle.  Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch} only shows the correct matches and Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch} only shows the incorrect matches.  While it is true that there is a pileup of both correct matches and incorrect matches for low values of the distance ratio, the opening angle separates the two categories out.  Specifically, the correct matches pileup occurs as $\cos\theta \rightarrow 1$ and the incorrect matches pileup occurs as $\cos\theta \rightarrow 0$.  To further illustrate this point, a new distance ratio distribution is shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, but with a $\cos\theta > 0.8$ guess cut applied.  Comparing the distributions shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioNoCut} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, the effect of the $\cos\theta$ cut can clearly be seen.  The original pileup of incorrect matches seen in Fig.~\ref{fig:TrackMergingConditionDistanceRatioNoCut} is now gone, leaving an essentially flat incorrect matches distribution in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} while leaving the correct matches structure intact.  
 \begin{figure}[b!]
   \centering
-  \subfloat[Correct matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
-  \subfloat[Incorrect matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
-  \caption{The distance ratio vs the cosine of the opening angle for track merging candidates.  This 2D space significantly separates out the correctly matched and incorrectly matches events.}
+  \subfloat[Correct matches only]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
+  \subfloat[Incorrect matches only]{\includegraphics[width=9cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
+  \caption{The distance ratio vs the cosine of the opening angle for track merging candidates.}
   \label{fig:TrackMergingConditionDistanceRatioVsCosTheta}
 \end{figure}
 \newline
@@ -230,7 +242,7 @@ By utilising both the distance ratio and $\cos\theta$ simultaneously, a better d
 \begin{figure}[!b]
   \centering
   \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingTuningFOM}
-  \caption{Values of the tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, in distance ratio cut vs $\cos\theta$ cut space.  The peak of this distribution is very broad, suggesting a range of preferred values for the distance ratio and $\cos\theta$ cuts.}
+  \caption{Values of the tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, in distance ratio cut vs $\cos\theta$ cut space.}
   \label{fig:TrackMergingTuningFOM}
 \end{figure}
 The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are shown in Fig.~\ref{fig:TrackMergingTuningFOM}.  As was found in the tuning of the vertex clustering parameters, there is no clear maximum value of the tuning metric, but rather a plateau.  So, as was done in the vertex clustering tuning, marginalised distributions of tuning metric in distance ratio cut space and $\cos\theta$ cut space can be produced to find the optimum cut values. 
@@ -238,7 +250,7 @@ The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are sho
   \centering
   \subfloat[$\cos \theta$]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM.eps} \label{fig:TrackMergingCosThetaMarginalize}}
   \subfloat[Distance ratio]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps} \label{fig:TrackMergingDistanceRatioMarginalize}}
-  \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.  There is a clear but somewhat broad maximum of $\phi^{\textrm{merge}}$ in $\cos\theta$ space whereas there is only a plateau in distance ratio space.}
+  \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.}
   \label{fig:TrackMergingMarginalizedDistributions}
 \end{figure}
 The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be fairly close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
@@ -248,7 +260,7 @@ While the $\cos\theta$ condition is clearly a powerful discriminator, there is a
 \begin{figure}
   \centering
   \includegraphics[width=6cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
-  \caption{Schematic showing the degeneracy of two merging candidate topologies which would pass the $\cos\theta$ cut.  The arrows represent reconstructed tracks and $\theta$ is the opening angle measured between those tracks.}
+  \caption{Schematic showing the degeneracy of two merging candidate topologies which would pass the $\cos\theta$ cut.  The arrows represent reconstructed tracks and $\theta$ is the opening angle measured between the tracks.}
   \label{fig:TrackMergingCosThetaDegeneracySchematic}
 \end{figure}
 \begin{figure}
@@ -261,7 +273,7 @@ While the $\cos\theta$ condition is clearly a powerful discriminator, there is a
   \centering
   \subfloat[No cuts applied.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
   \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
-  \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.  After applying the $\cos\theta$ and distance ratio cuts, the swing parameter distribution becomes bimodal, signifying that the swing parameter has separated out the two merging candidate topologies shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.}
+  \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.}
   \label{fig:TrackMergingSwing}
 \end{figure}
 \begin{table}[b!]
@@ -283,10 +295,10 @@ All of the merging conditions have now been identified and the associated cut va
 %Data flags
 
 \section{Monte Carlo selection}
-As briefly described at the start of this chapter, the selection separates the reconstructed ECal events into a set of topologies, where each topology is defined by a number of associated prongs.  In addition to this separation, the geometrical differences between the barrel and DS ECal suggest a further event separation.  The DS ECal lies perpendicular to the beam face.  So, particles from neutrino interactions will typically travel at right angles to the DS ECal face.  Conversely, all of the barrel ECal lie parallel to the beam axis which means neutrino interaction products will generally pass along the barrel scintillator planes.  This motivates a separate selection for the barrel and DS ECal.  This essentially means that there are eight individual selections to be made and tuned (1,2,3 and 4+ prong topologies in the barrel and 1,2,3 and 4+ prong topologies in the DS ECal).  Clearly, this approach can very quickly become complicated.  To mitigate this, similar discriminators are used for each topology.  As the reconstruction was only tuned for three reconstructed tracks, the 4+ prong topology will use exactly the same cuts as the 3 prong topology.
+As briefly described at the start of this chapter, the selection separates the reconstructed ECal events into a set of topologies, where each topology is defined by a number of associated prongs.  In addition to this separation, the geometrical differences between the barrel and DS ECal suggest a further event separation.  The DS ECal lies perpendicular to the beam\Yoshi{}{ face}.  So, particles from neutrino interactions will typically travel at right angles to the DS ECal face.  Conversely, all of the barrel ECals lie parallel to the beam axis which means neutrino interaction products will generally pass along the barrel scintillator planes.  This motivates a separate selection for the barrel and DS ECal.  This essentially means that there are eight individual selections to be made and tuned (1,2,3 and 4+ prong topologies in the barrel and 1,2,3 and 4+ prong topologies in the DS ECal).  Clearly, this approach can very quickly become complicated.  To mitigate this, similar discriminators are used for each topology.  As the reconstruction was only tuned for three reconstructed tracks, the 4+ prong topology will use exactly the same cuts as the 3 prong topology.
 \newline
 \newline
-Care must be taken when defining what a reconstructed vertex is.  For the 2,3 and 4+ prong topologies, it is fairly simple, the reconstructed vertex is as described in section~\ref{sec:VertexReconstruction}, but it is not possible to fit for a vertex position when dealing with a single prong.  In fact, there is actually little that can be done about this.  So, beam kinematics are assumed and the 'vertex' for a single prong is the most upstream end of said prong.
+Care must be taken when defining what a reconstructed vertex is.  For the 2,3 and 4+ prong topologies, it is fairly simple\Yoshi{:}{was `,'} the reconstructed vertex is as described in section~\ref{sec:VertexReconstruction}, but it is not possible to fit for a vertex position when dealing with a single prong.  In fact, there is \Yoshi{}{was `actually'} little that can be done about this.  So, beam kinematics are assumed and the 'vertex' for a single prong is the most upstream end of said prong.
 \newline
 \newline
 The definition of signal has already been described in section~\ref{sec:SignalDefinition}.  However, how the reconstructed events map to the signal interactions also needs discussion.  The selection takes place at the reconstructed vertex level but there is not a clear 1:1 map of reconstructed vertices to signal interactions.  Consider a signal interaction in an ECal module in which the final state particles are involved in one or more secondary interactions.  The most likely outcome of this is the reconstruction of two or more vertices: one for the neutrino interaction and one or more for the secondary interactions.  By interrogating the associated truth information, each vertex will be matched to the same signal neutrino.  It is wholly incorrect to classify each vertex as a reconstruction of a signal event as this will lead to a gross overestimate of the signal rate.  To alleviate this,  a reconstructed vertex is only tagged as coming from a signal interaction if it obeys the following conditions:
@@ -300,9 +312,9 @@ Any reconstructed vertices which pass the first condition but fail the second ar
 To illustrate the benefit of separating events into specific prong topologies, Fig.~\ref{fig:ProngStackAll} shows the truth makeup of events seen in the ECal after applying the reconstruction separation.  It is important to note that only the vertex reconstruction and track merging has been applied to the sample at this point.  There is a clear difference in the level of backgrounds seen in each topology e.g. the ECal OOFV background is almost exclusively contained in the one prong topology.  By applying such a separation and then focusing cuts on each topology, the overall event purity should be higher. 
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
+  \subfloat[Barrel ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
-  \caption{The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The number of reconstructed events and the background contamination strongly depends on the number of reconstructed prongs.  This effect indicates that selection development should be tailored towards each prong topology individually.}
+  \caption{The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies.  Each event is categorised by the associated truth information from the simulation.}
   \label{fig:ProngStackAll}
 \end{figure}
 \subsection{Selection cuts}
@@ -316,19 +328,19 @@ where $\epsilon_i$ and $\eta_i$ are the selection efficiency and purity of prong
 
 \subsubsection{Fiducial volume cut}
 \label{subsubsec:FVCut}
-The first cut, the fiducial volume cut, removes most of the ECal OOFV backgrounds in the Monte Carlo sample.  This is achieved by defining some outer veto region in which occurring vertices are rejected.  There are two items to bear in mind when defining what the fiducial volumes are.  Firstly, the off-axis configuration causes each ECal to be exposed to a different energy and particle rate.  A good example of this was shown in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} which shows a higher event rate, but also a higher peak energy of interactions, in the bottom-left ECal than in the top-right ECal.  So, the optimised fiducial volume of one ECal need not be the same as another ECal module.  Separately to this, Fig.~\ref{fig:ProngStackAll} shows that the ECal OOFV is almost completely contained in the 1 prong topology bin.  This means that a separate fiducial volume definition should be used for the 1 prong topology (it is sufficient for the 2,3 and 4+ prong topologies to use the same fiducial volume definition).
+The first cut, the fiducial volume cut, removes most of the ECal OOFV backgrounds in the Monte Carlo sample.  This is achieved by defining some outer veto region in which occurring vertices are rejected.  There are two items to bear in mind when defining what the fiducial volumes are.  Firstly, the off-axis configuration causes each ECal to be exposed to a different energy and particle rate.  A good example of this was shown in Fig.~\ref{fig:NSignalEventsTruthNeutrinoEnergy} which shows a higher event rate, but also a higher peak energy of interactions, in the bottom-left ECal than in the top-right ECal.  So, the optimised fiducial volume of one ECal need not be the same as another ECal module.  Separately to this, Fig.~\ref{fig:ProngStackAll} shows that the ECal OOFV is almost completely contained in the 1 prong topology bin.  This means that a separate fiducial volume definition should be used for the 1 prong topology (it is sufficient for the 2, 3 and 4+ prong topologies to use the same fiducial volume definition).
 \newline
 \newline
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/mc_selection/FV_BLB_1Prong_NegY.eps}
-  \caption{$\phi_1^{\textrm{selection}}$ as a function of the distance from the $-y$ face (bottom face) of the bottom-left barrel ECal for the 1 prong topology.  There is a clear maximum of $\phi_1^{\textrm{selection}}$ which indicates that there is a preferred minimum distance of 1 prong vertices from the $-y$ face.}
+  \caption{$\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.}
   \label{fig:FVBLB1ProngNegY}
 \end{figure}
 The fiducial volume for a prong topology/ECal module is defined in terms of the distance from each face of the module.  So, there are six numbers which define the fiducial volume:  the distance from the $\pm x$,$\pm y$ and $\pm z$ faces of a module.  If the distance of a vertex from each ECal face is further than what the fiducial volume defines, the event passes the cut, otherwise it is rejected.  To tune these values,  each fiducial volume value was systematically increased from 0 mm to 600 mm in 1~mm increments.  At each increment the number of passing/rejected events was recorded and $\phi_i^{\textrm{selection}}$ calculated.  The fiducial volume value which maximises $\phi_i^{\textrm{selection}}$ is accepted as the optimised value.  An example of the variation in $\phi_i^{\textrm{selection}}$ is shown in Fig.~\ref{fig:FVBLB1ProngNegY} which shows $\phi_i^{\textrm{selection}}$ as a function of the distance from the $-y$ face of the bottom-left barrel ECal for the 1 prong topology.  There is a clear maximum found which shows the process is effective in finding an optimum distance from the ECal face.
 \newline
 \newline
-The found fiducial volumes for each ECal module for the 1 prong topology are shown in table~\ref{table:FV1Prong}.  While all of the ECal face cuts have some discriminatory power, those which cut out according to layer number reject the most background events.  Those cuts are the $\pm y$ cuts for the bottom/top barrel ECal, the $\pm x$ cuts for the side ECals and the $\pm z$ cuts for the DS ECal.  In the barrel ECal, the inner and outer two layers are removed by the fiducial volume cut and in the DS ECal, the inner and outer three layers are removed.
+The found fiducial volumes for each ECal module for the 1 prong topology are shown in table~\ref{table:FV1Prong}.  While all of the ECal face cuts have some discriminatory power, those which cut out according to layer number reject the most background events.  Those cuts are the $\pm y$ cuts for the bottom/top barrel ECals, the $\pm x$ cuts for the side ECals and the $\pm z$ cuts for the DS ECal.  In the barrel ECals, the inner and outer two layers are removed by the fiducial volume cut and in the DS ECal, the inner and outer three layers are removed.
 \begin{table}[t!]
   \begin{tabular}{ c c c c c c c }
      & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
@@ -340,7 +352,7 @@ The found fiducial volumes for each ECal module for the 1 prong topology are sho
     Top-left & 21 & 34 & 29 & 31 & 207 & 28 \\
     Downstream & 29 & 29 & 29 & 30 & 41 & 43  \\
   \end{tabular}
-  \caption{The fiducial volume definitions for each ECal module for the 1 prong topology.  The strongest cuts are for the $\pm y$ ECal faces (barrel modules only) which rejects 1 prong vertices which occur in the inner or outer two layers.  For the DS ECal, the $\pm z$ face cut is the strongest which rejects 1 prong vertices which occur in the inner or outer three layers.}
+  \caption{The fiducial volume definitions for each ECal module for the 1 prong topology.}
   \label{table:FV1Prong}
 \end{table}
 As described above, the same fiducial volumes are used for the 2,3 and 4+ prong topologies.  So, to tune the fiducial volume cuts, the topologies are temporarily combined and the combined sample is used to tune the cuts.  Those fiducial volume cuts are shown in table~\ref{table:FV2+Prong}.  There are clear differences between the fiducial volumes shown in table~\ref{table:FV1Prong} and table~\ref{table:FV2+Prong}.  The cuts suggested by the 2,3 and 4+ prong topology tunings are not as strict as those suggested by the 1 prong topology.  This should be expected, as ECal OOFV backgrounds reconstructed as 2,3 or 4+ prong vertices will most likely not have their vertex reconstructed near the faces of an ECal module.  The one exception to this is the downstream face of each ECal module.  It is clear from table~\ref{table:FV1Prong}, that the 2,3 and 4+ prong topologies suggest a stricter downstream face cut ($+z$ cut) than the 1 prong topology.  The reason for this strict cut is due to the nature of the neutrino beam.  J-PARC's neutrino beam is (almost) parallel with the $+z$ axis defined by the ND280 coordinate system.  Because of the very forward nature of the beam, any final state particles from ECal neutrino interactions are most likely to travel downstream.  So, any subsequent secondary interactions, which are tagged as background, will also occur downstream.  The $+z$ face cut attempts to remove these.
@@ -355,7 +367,7 @@ As described above, the same fiducial volumes are used for the 2,3 and 4+ prong 
     Top-left & 11 & 0 & 0 & 7 & 4 & 45 \\
     Downstream & 13 & 9 & 13 & 4 & 0 & 64  \\
   \end{tabular}
-  \caption{The fiducial volume definitions for each ECal module for the 2,3 and 4+ prong topologies.  The only strong cuts for the 2+ prong topologies are the $+z$ ECal face cuts (all modules).  The power of the $+z$ face cuts is due to secondary interactions having a preference for occurring downstream of the neutrino interactions, leading to background-tagged, reconstructed vertices positioned towards the $+z$ of each ECal module.}
+  \caption{The fiducial volume definitions for each ECal module for the 2,3 and 4+ prong topologies.}
   \label{table:FV2+Prong}
 \end{table}
 \subsubsection{Visible energy cut}
@@ -495,7 +507,7 @@ Despite the best efforts of the track merging, not all curving trajectories have
 \newline
 \begin{figure}[b!]
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
+  \subfloat[Barrel ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
   \subfloat[DS ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
   \caption{The opening angle subtended by the constituents prongs for the 2 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel2OpeningAngle}
@@ -504,13 +516,13 @@ The signal and background separation provided by the subtended opening angle for
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel.eps}
-  \caption{$\phi_2^{\textrm{selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.  There is a clear maximum of $\phi_2^{\textrm{selection}}$, indicating a preferred cut on the opening angle.}
+  \caption{$\phi_2^{\textrm{selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.}
   \label{fig:Sel2OpeningAngleBarrelFOM}
 \end{figure}
 Similar information should be available for the higher prong topologies.  However it is not as trivial to define an opening angle in such situations.  The chosen variable for the 3 prong topology is the summed opening angle for every pairwise combination of the constituent prongs.  The signal and background separation for this summed opening angle is shown in Fig.~\ref{fig:Sel3OpeningAngle}.  The cut development process used here was identical to the one used for the 2 prong topology.  The study suggested that events should only be selected if their summed opening angle is greater than 81$^\circ$ for the barrel ECal and 49$^\circ$ for the DS ECal. 
 \begin{figure}%
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
+  \subfloat[Barrel ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
   \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel3OpeningAngle}
@@ -553,7 +565,7 @@ Now that the cuts have been identified, their performance can be assessed.  To d
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_Barrel.eps}}
 \end{minipage}\par\medskip
-\caption{Event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.  The rejection of background events by each cut can be clearly seen.}
+\caption{Event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
 \label{fig:SelEventSurvivalBarrel}
 \end{figure}
 \begin{figure}
@@ -573,12 +585,12 @@ Now that the cuts have been identified, their performance can be assessed.  To d
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4EventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/CutSurvival_4Prong_DS.eps}}
 \end{minipage}\par\medskip
-\caption{Event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.  The rejection of background events by each cut can be clearly seen.}
+\caption{Event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
 \label{fig:SelEventSurvivalDS}
 \end{figure}
 \newline
 \newline
-While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} shows that the cuts are successfully rejecting background while retaining signal, it is not clear what particle species are rejected.  It is important to check this so that the developed selection is understood.  The background type which is rejected at the highest rate is the ECal OOFV background so it is sufficient to study the particle composition of this to understand the selection's ability to reject particles.  The particle type is defined by looking at which simulated particles contributed to the ECal cluster as whole.  The particle which deposited the highest amount of energy is accepted as the one which created the ECal cluster.  The ECal OOFV event survival as a function of the cuts is shown in Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} for the barrel and DS ECal respectively.  For each prong topology, the ECal OOFV events are separated into the main particle types which constitute the ECal OOFV background.  It is clear that the cuts are rejecting the particle species that one would expect them to reject.  For example, the fiducial volume cut in the 1 prong topology almost exclusively rejects entering MIPs.  The visible energy and $\Delta N$ cuts worth together as an effective particle shower tagger to reject $e^\pm$ and $\gamma$ particles.  The opening angle and entering background cuts work as an additional MIP rejector in cases where the track merging was unsuccessful.  The composition of the ECal OOFV background has interesting features, regardless of the cuts applied.  Specifically, the particle species varies to a great degree between each prong topology.  For example, the 1 prong and 2 prong topologies in the barrel ECal (Fig.~\ref{fig:Sel1OOFVEventSurvivalBarrel} and Fig.~\ref{fig:Sel2OOFVEventSurvivalBarrel}) see a muon dominated ECal OOFV background.  Whereas, the 3 prong and 4+ prong topologies see a very different background which is $\pi^\pm$ dominated.  The natural separation provided by the topologies should allow investigation of a specific particle species if required by any future analyser.
+While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS} shows that the cuts are successfully rejecting background while retaining signal, it is not clear what particle species are rejected.  It is important to check this so that the developed selection is understood.  The background type which is rejected at the highest rate is the ECal OOFV background so it is sufficient to study the particle composition of this to understand the selection's ability to reject particles.  The particle type is defined by looking at which simulated particles contributed to the ECal cluster as whole.  The particle which deposited the highest amount of energy is accepted as the one which created the ECal cluster.  The ECal OOFV event survival as a function of the cuts is shown in Fig.~\ref{fig:SelOOFVEventSurvivalBarrel} and Fig.~\ref{fig:SelOOFVEventSurvivalDS} for the barrel and DS ECal respectively.  For each prong topology, the ECal OOFV events are separated into the main particle types which constitute the ECal OOFV background.  It is clear that the cuts are rejecting the particle species that one would expect them to reject.  For example, the fiducial volume cut in the 1 prong topology almost exclusively rejects entering MIPs.  The visible energy and $\Delta N$ cuts worth together as an effective particle shower tagger to reject $e^\pm$ and $\gamma$ particles.  The opening angle and entering background cuts work as an additional MIP rejector in cases where the track merging was unsuccessful.  The composition of the ECal OOFV background has interesting features, regardless of the cuts applied.  Specifically, the particle species varies to a great degree between each prong topology.  For example, the 1 prong and 2 prong topologies in the barrel ECals (Fig.~\ref{fig:Sel1OOFVEventSurvivalBarrel} and Fig.~\ref{fig:Sel2OOFVEventSurvivalBarrel}) see a muon dominated ECal OOFV background.  Whereas, the 3 prong and 4+ prong topologies see a very different background which is $\pi^\pm$ dominated.  The natural separation provided by the topologies should allow investigation of a specific particle species if required by any future analyser.
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
@@ -596,7 +608,7 @@ While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_Barrel.eps}}
 \end{minipage}\par\medskip
-\caption{ECal OOFV event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.  It is clear that each cut rejects a specific set of particle types.  For example, the FV cuts strongly reject the track-like particles whereas the visible energy and $\Delta N$ cuts reject shower-like particles.}
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the barrel ECal.  Each bin refers to the number of events after a cut has been applied.}
 \label{fig:SelOOFVEventSurvivalBarrel}
 \end{figure}
 \begin{figure}
@@ -616,12 +628,12 @@ While Fig.~\ref{fig:SelEventSurvivalBarrel} and Fig.~\ref{fig:SelEventSurvivalDS
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4OOFVEventSurvivalDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/OOFVCutSurvival_4Prong_DS.eps}}
 \end{minipage}\par\medskip
-\caption{ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.  The cuts shown behave in a similar manner to those in the barrel ECal (see Fig.~\ref{fig:SelOOFVEventSurvivalBarrel}).}
+\caption{ECal OOFV event survival as a function of the cuts for all topologies in the DS ECal.  Each bin refers to the number of events after a cut has been applied.}
 \label{fig:SelOOFVEventSurvivalDS}
 \end{figure}
 \newline
 \newline
-The selection efficiency and purity as a function of the cuts are shown for the barrel ECal and DS ECal in Fig.~\ref{fig:SelEffPurCutLevelBarrel} and Fig.~\ref{fig:SelEffPurCutLevelDS} respectively.  Every cut which is relevant to a prong topology has an expected effect, the purity of the sample increases while the efficiency decreases.  What is not so clear from the distributions is whether the tuning metric, $\phi^{\textrm{selection}}$, increases as a function of the cuts.  So, $\phi^{\textrm{selection}}$ is shown in a similar manner for the barrel and DS ECal in Fig.~\ref{fig:SelFOMCutLevelBarrel} and Fig.~\ref{fig:SelFOMCutLevelDS} respectively.  The tuning metric optimisation in both the barrel and DS ECal shows some interesting features.  Firstly, in the barrel, it is clear that for the 1 prong and 2 prong topologies, every applied cut shows a clearly increasing $\phi^{\textrm{selection}}$.  Unfortunately, this is not the case for the 3 prong and 4+ prong topologies.  Specifically, the entering background cut degrades the value of $\phi^{\textrm{selection}}$.  This is most obvious in the 4+ prong topology\Yoshi{; however,}{ADDRESSED - was ``, however''} it has already been stated that this topology is effectively an overflow bin and is being included more for completeness.  What is perhaps more concerning is the degradation of $\phi^{\textrm{selection}}$ in the 3 prong topology.  Fortunately, the decrease in $\phi^{\textrm{selection}}$ is small when the entering background cut is applied and the change is well within error.  It is important to bear in mind that $\phi^{\textrm{selection}}$ is used as a tuning guide and small deviations from the optimisation process are allowed.  So, it was decided that the entering background cut would remain in place for both the 3 prong and 4+ prong topologies.  The $\phi^{\textrm{selection}}$ distribution in the DS ECal shows some similar and some different features to that of the barrel.  As with the barrel ECal case, $\phi^{\textrm{selection}}$ clearly increases as a function of the cuts for the 1 prong and 2 prong topologies.  Unlike the barrel ECal, there is also an increase in $\phi^{\textrm{selection}}$ when applying the entering background cut to the 3 and 4+ prong topologies.  However, there is a minor decrease in $\phi^{\textrm{selection}}$ when selecting the most upstream vertex.  It is not wholly surprising that this is the case as the DS ECal is the most downstream detector in ND280.  Such a cut can easily cause a bias where events in the barrel are generally preferred because of their extent in the global $Z$ direction.  Fortunately, this effect is very minor and also well within error.  
+The selection efficiency and purity as a function of the cuts are shown for the barrel ECal and DS ECal in Fig.~\ref{fig:SelEffPurCutLevelBarrel} and Fig.~\ref{fig:SelEffPurCutLevelDS} respectively.  Every cut which is relevant to a prong topology has an expected effect, the purity of the sample increases while the efficiency decreases.  What is not so clear from the distributions is whether the tuning metric, $\phi^{\textrm{selection}}$, increases as a function of the cuts.  So, $\phi^{\textrm{selection}}$ is shown in a similar manner for the barrel and DS ECal in Fig.~\ref{fig:SelFOMCutLevelBarrel} and Fig.~\ref{fig:SelFOMCutLevelDS} respectively.  The tuning metric optimisation in both the barrel and DS ECal shows some interesting features.  Firstly, in the barrel, it is clear that for the 1 prong and 2 prong topologies, every applied cut shows a clearly increasing $\phi^{\textrm{selection}}$.  Unfortunately, this is not the case for the 3 prong and 4+ prong topologies.  Specifically, the entering background cut degrades the value of $\phi^{\textrm{selection}}$.  This is most obvious in the 4+ prong topology\Yoshi{; however,}{was ``, however''} it has already been stated that this topology is effectively an overflow bin and is being included more for completeness.  What is perhaps more concerning is the degradation of $\phi^{\textrm{selection}}$ in the 3 prong topology.  Fortunately, the decrease in $\phi^{\textrm{selection}}$ is small when the entering background cut is applied and the change is well within error.  It is important to bear in mind that $\phi^{\textrm{selection}}$ is used as a tuning guide and small deviations from the optimisation process are allowed.  So, it was decided that the entering background cut would remain in place for both the 3 prong and 4+ prong topologies.  The $\phi^{\textrm{selection}}$ distribution in the DS ECal shows some similar and some different features to that of the barrel.  As with the barrel ECal case, $\phi^{\textrm{selection}}$ clearly increases as a function of the cuts for the 1 prong and 2 prong topologies.  Unlike the barrel ECal, there is also an increase in $\phi^{\textrm{selection}}$ when applying the entering background cut to the 3 and 4+ prong topologies.  However, there is a minor decrease in $\phi^{\textrm{selection}}$ when selecting the most upstream vertex.  It is not wholly surprising that this is the case as the DS ECal is the most downstream detector in ND280.  Such a cut can easily cause a bias where events in the barrel are generally preferred because of their extent in the global $Z$ direction.  Fortunately, this effect is very minor and also well within error.  
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
@@ -639,7 +651,7 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_Barrel.eps}}
 \end{minipage}\par\medskip
-\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the barrel ECal.  Each bin refers to the efficiency and purity after a cut has been applied.  The cuts generally degrade the selection efficiency and increase the selection purity.  It is clear that strength of of all cuts are not equal.}
+\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the barrel ECal.  Each bin refers to the efficiency and purity after a cut has been applied.}
 \label{fig:SelEffPurCutLevelBarrel}
 \end{figure}
 \begin{figure}
@@ -659,7 +671,7 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4EffPurCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_CutLevel_4Prong_DS.eps}}
 \end{minipage}\par\medskip
-\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the DS ECal.  Each bin refers to the efficiency and purity after a cut has been applied.  The distributions suggest the cuts behave in a similar manner to those in the barrel ECal (see Fig.~\ref{fig:SelEffPurCutLevelBarrel}).}
+\caption{The selection efficiency (black) and purity (red) as a function of the cuts in the DS ECal.  Each bin refers to the efficiency and purity after a cut has been applied.}
 \label{fig:SelEffPurCutLevelDS}
 \end{figure}
 \begin{figure}
@@ -679,7 +691,7 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4FOMCutLevelBarrel}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_4Prong_Barrel.eps}}
 \end{minipage}\par\medskip
-\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the barrel ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.  Generally, each cut increases $\phi^{\textrm{selection}}$ with the exception of the 4+ prong topology.  However, it should be noted that the selection was not tuned for this topology.}
+\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the barrel ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.}
 \label{fig:SelFOMCutLevelBarrel}
 \end{figure}
 \begin{figure}
@@ -699,7 +711,7 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 \centering
 \subfloat[4+ prong topology.]{\label{fig:Sel4FOMCutLevelDS}\includegraphics[width=7.5cm]{images/selection/selection_performance/FOM_CutLevel_4Prong_DS.eps}}
 \end{minipage}\par\medskip
-\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the DS ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.  Unlike the barrel ECal (see Fig.~\ref{fig:SelFOMCutLevelBarrel}), the cuts do have a positive effect on the 4+ prong topology.}
+\caption{$\phi^{\textrm{selection}}$ as a function of the cuts in the DS ECal.  Each bin refers to the value of $\phi^{\textrm{selection}}$ after a cut has been applied.}
 \label{fig:SelFOMCutLevelDS}
 \end{figure}
 \newline
@@ -707,18 +719,18 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 The cross-section measurement presented in this analysis in an inclusive measurement.  This means that the neutrino interaction cross-section needs to be measured without bias across the J-PARC beam energy range.  All of the performance checks presented so far have only assessed each prong topology individually.  So, the final check is to assess how the selection performs after combining the topologies together.  The selection efficiency and purity after combining the topologies is shown in Fig.~\ref{fig:EffPurSummedTopologies}.  For both the barrel ECal and DS ECal, there is a clear dependence of the purity on the neutrino energy.  However, this should be expected.  It is clear that the purity decreases as the neutrino energy increases which can be explained by the self-shielding effect of the ECal.  In the low energy regime, the ECal OOFV background is suppressed because there is insufficient energy to either penetrate the ECal or deposit enough energy to allow cluster reconstruction.  As the background energy increases, the suppression is lifted, resulting in a decrease in the selection purity.  The key piece of information shown in Fig.~\ref{fig:EffPurSummedTopologies} is the selection efficiency.  As described above, it is of vital importance that the selection does not introduce a bias which measures one energy regime more than another.  The flatness of the efficiency distributions for both the barrel ECal and DS ECal shows this is not the case which means the selection presented here would be suitable for a CC-inclusive measurement.
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
+  \subfloat[Barrel ECals.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_DS.eps} \label{fig:EffPurSummedTopologiesDS}}
-  \caption{The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.  The selection efficiency is largely flat for both the barrel ECal and DS ECal showing the selections are not biased towards any particular energy range.  This is not the case for the selection purities but this can be explained by lower energy backgrounds having less penetrating power, resulting in a higher purity for lower neutrino energies.}
+  \caption{The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.}
   \label{fig:EffPurSummedTopologies}
 \end{figure}
 \newline
 \newline
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
+  \subfloat[Barrel ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_Selected.eps} \label{fig:ProngStackDSSelected}}
-  \caption{The number of selected events in the Monte Carlo sample, separated out into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The effect of the developed selection can be clearly seen in all prong topologies; each topology is now signal dominated.}
+  \caption{The number of selected events in the Monte Carlo sample, separated out into the prong topologies.  Each event is categorised by the associated truth information from the simulation.}
   \label{fig:ProngStackSelected}
 \end{figure}
 The number of selected events for each prong topology is shown in Fig.~\ref{fig:ProngStackSelected}, with each topology broken down by truth categories.  For both the barrel and DS ECal, signal events dominate each prong topology.  The most impure topology for both detectors is the 1 prong topology.  This is primarily due to having an insufficient number of prongs to really benefit from what the reconstruction can provide.  Despite this, it is clear that the selection results in a pure sample of events.  
