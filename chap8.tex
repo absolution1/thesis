@@ -73,7 +73,7 @@ The number of events in each input sample, broken down by the template contribut
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/rate_fit/MC_Templates_Nominal.eps}
-  \caption{The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.\Yoshi{}{ADDRESSED - Should really put the legend in the plot itself. Also say that ``ECal'' is omitted in all but the DS and FGD sample names}.  "ECal" has been omitted in all but the DS ECal and FGD sample names.  Not only does the event rate vary significantly between each sample, but the composition of those events also significantly varies.}
+  \caption{The number of events in each input sample separated into the lead (black), carbon (red) and other (blue) templates.  "ECal" has been omitted in all but the DS ECal and FGD sample names.  Not only does the event rate vary significantly between each sample, but the composition of those events also significantly varies.}
   \label{fig:NominalMCTemplates}
 \end{figure}
 \newline
@@ -141,7 +141,7 @@ The effect of the flux systematic on the selection efficiency of $\nu_\mu$ CC in
 \begin{figure}
   \centering
   \includegraphics[width=12cm]{images/measurement/systematics/flux/flux_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of $\nu_\mu$ CC interactions on lead in the DS ECal caused by the neutrino flux systematic.  The width of the distribution is $0.18\%$ of the size of the nominal efficiency value (0.539), showing the uncertainty is negligible.}
+  \caption{The variation in the selection efficiency of $\nu_\mu$ CC interactions on lead in the DS ECal caused by the neutrino flux systematic.  The width of the distribution is $0.18\%$ of the size of the nominal efficiency value (0.539).}
   \label{fig:FluxEfficiencyVariation}
 \end{figure}
 \subsection{Cross-section systematic evaluation}
@@ -170,7 +170,7 @@ As with the flux systematic, the uncertainty in the selection efficiency of $\nu
 \begin{figure}[b!]
   \centering
   \includegraphics[width=10cm]{images/measurement/systematics/xsec/xsec_efficiency_variation.eps}
-  \caption{The variation in the selection efficiency of $\nu_\mu$ CC interactions on lead in the DS ECal caused by the cross-section model systematic.  The width of the distributions is $0.2$ of the size of the nominal efficiency (0.539), showing the uncertainty is negligible.}
+  \caption{The variation in the selection efficiency of $\nu_\mu$ CC interactions on lead in the DS ECal caused by the cross-section model systematic.  The width of the distributions is $0.2$ of the size of the nominal efficiency (0.539).}
   \label{fig:XSecEfficiencyVariation}
 \end{figure}
 \newline
@@ -638,14 +638,14 @@ where $R^{\textrm{X Fit}}_{\imath}$ and $\sigma^{\textrm{X Fit}}_{\imath}$ are t
   \centering
   \subfloat[The returned parameter for each throw.  The fitted Gaussian has a mean of 1.00 and a width of 0.04.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbFit_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbFit}}
   \subfloat[The parameter pull for each throw.  The fitted Gaussian has a mean of 0.01 and a width of 0.96.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_RPbPull_ParamSet1.eps} \label{fig:RateFitValParamSet1RPbPull}}
-  \caption{Distributions of $R^{\textrm{Pb}}$ related information returned from the fitter for the 10,000 fake data throws.  The red dashed lines are Gaussian fits to the distributions.}
+  \caption{Distributions of $R^{\textrm{Pb}}$ related information returned from the fitter for the 10,000 fake data throws.  The red dashed lines are Gaussian fits to the distributions.  The distributions show that the fitter is correctly returning the value of $R^{\textrm{Pb}}$ and is unbiased.}
   \label{fig:RateFitValParamSet1RPb}
 \end{figure}
 \begin{figure}%
   \centering
   \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet1.eps} \label{fig:RateFitValsParamSet1}}
   \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet1.eps} \label{fig:RateFitPullsParamSet1}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 1.}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 1.  For all parameters, the fitter returns the correct values and is unbiased.}
   \label{fig:RateFitValParamSet1}
 \end{figure}
 The performance of the fit for all of the normalisations in normalisation set 1 are shown in Fig.~\ref{fig:RateFitValParamSet1}.  In each case, the fitter returns the correct normalisation and the pull characteristics suggest the fit returns the correct error and is unbiased.  The performance of the fit for normalisation sets 2, 3, 4 and 5 are shown in Fig.~\ref{fig:RateFitValParamSet2}, Fig.~\ref{fig:RateFitValParamSet3}, Fig.~\ref{fig:RateFitValParamSet4} and Fig.~\ref{fig:RateFitValParamSet5} respectively.  Generally speaking, the fitter performs well for all of the situations.  It is clear that the output is sensible even when extreme situations are presented (normalisation set 2) as well as when minor shifts are applied to all three parameters (normalisation set 3).  Even in un-physical situations the fitter returns the input correctly (normalisation set 5).  It is only when a template is removed (normalisation set 4) that the fitter becomes biased.  However, as Fig.~\ref{fig:RateFitPullsParamSet4} shows, the bias is minor.
@@ -653,21 +653,21 @@ The performance of the fit for all of the normalisations in normalisation set 1 
   \centering
   \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet2.eps} \label{fig:RateFitValsParamSet2}}
   \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet2.eps} \label{fig:RateFitPullsParamSet2}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 2.}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 2.  For all parameters, the fitter returns the correct values and is unbiased.}
   \label{fig:RateFitValParamSet2}
 \end{figure}
 \begin{figure}%
   \centering
   \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet3.eps} \label{fig:RateFitValsParamSet3}}
   \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet3.eps} \label{fig:RateFitPullsParamSet3}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 3.}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 3.  For all parameters, the fitter returns the correct values and is unbiased.}
   \label{fig:RateFitValParamSet3}
 \end{figure}
 \begin{figure}%
   \centering
   \subfloat[The mean fitted values for each normalisation parameter (black) compared with the input normalisation values (red).]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitVals_ParamSet4.eps} \label{fig:RateFitValsParamSet4}}
   \subfloat[The means (black) and widths (blue) of the pull distributions after fitting with a Gaussian.]{\includegraphics[width=8cm]{images/measurement/validation/machinery/rateFitVal_FitPulls_ParamSet4.eps} \label{fig:RateFitPullsParamSet4}}
-  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 4.}
+  \caption{Performance of the fit for the 10,000 fake data sets when using normalisation set 4.  Despite correct errors being returned, the fitter is returning slightly biased values of the fit parameters.  It is important to note that normalisation set 4 completely removes the carbon template and even in this extreme situation, the bias on the fitted parameters is small.}
   \label{fig:RateFitValParamSet4}
 \end{figure}
 \begin{figure}%
@@ -697,7 +697,7 @@ The same GENIE sample used in section~\ref{sec:SystematicUncertainties} was pass
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PreFit.eps}
-  \caption{The pre-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \caption{The pre-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.  In all of the ECal selected bins (the first 7 bins) there is a systematic deficit of GENIE events.  This effect is not seen in the reverse samples, because the reverse samples contain a significant fraction of sand muons which are taken from the NEUT Monte Carlo.}
   \label{fig:MCTemplatesWithSystematicsGenieDataPreFit}
 \end{figure}
 \newline
@@ -727,7 +727,7 @@ The MC templates and fake data shown in Fig.~\ref{fig:MCTemplatesWithSystematics
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.  To account for the original deficit of events in the first 7 bins, the fitter raises their normalisation.  But, to account for the correlations, the reverse sample bins have to have their normalisations lowered, causing a NEUT MC deficit.}
   \label{fig:MCTemplatesWithSystematicsGenieDataPostFit}
 \end{figure}
 \newline
@@ -746,7 +746,7 @@ The values returned from the fit do not agree with the true values when consider
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/validation/genie/MCTemplatesWithSystematics_GenieDataReWeighted_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with GENIE fake data which has a re-weighted FGD sample.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the GENIE fake data.  The post-fit total normalisation of the MC is comparable to that of the original fit shown in Fig.~\ref{fig:MCTemplatesWithSystematicsGenieDataPostFit}.  However, because the pre-fit MC normalisation of the FGD has been lowered, the fitter was able to make less extreme alterations to the lead and carbon normalisations.}
   \label{fig:MCTemplatesWithSystematicsGenieDataReWeightdPostFit}
 \end{figure}
 
@@ -793,13 +793,13 @@ The samples were then passed to the fitter described in section~\ref{sec:ECalRat
 \begin{figure}[b!]
   \centering
   \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PreFit.eps}
-  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \caption{The pre-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.  While there is generally agreement between the MC and data within shape-only errors, there are shape differences between the data and MC, the most notable occur when transitioning between the bottom and side modules (e.g. bottom-right to side-right).}
   \label{fig:MCTemplatesWithSystematicsT2KDataPreFit}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic uncertainty on the number of NEUT MC events.  The black points are the T2K data.  To correct for the shape differences between the data and MC, the fitter has applied extreme variation to the sample normalisations.}
   \label{fig:MCTemplatesWithSystematicsT2KDataPostFit}
 \end{figure}
 \begin{figure}
@@ -822,7 +822,7 @@ It should be clear from Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} 
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/data/ShapeCorrelationMatrix.eps}
-  \caption{The shape-only correlation matrix for the samples used in the fit.}
+  \caption{The shape-only correlation matrix for the samples used in the fit.  There is a large degree of (anti-)correlation between all samples.  This gives the fitter less freedom to change the normalisations of the MC samples.}
   \label{fig:ShapeCorrelationMatrix}
 \end{figure}
 The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} can help to illuminate the underlying issue.  An area normalised comparison of a sub-set of the MC templates with the run 3C data is shown in Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm} for the barrel samples and Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm} for the barrel-reverse samples.  
@@ -947,7 +947,7 @@ Under normal circumstances, the background modelling needs extra study.  However
 \begin{figure}
   \centering
   \includegraphics[width=15cm]{images/measurement/data/MCTemplatesWithSystematics_T2KData_PostFit_WithErrorFudge.eps}
-  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data when including the ad hoc uncertainty shown in table~\ref{table:NSelToNRevRatio}.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic and ad hoc uncertainties on the number of NEUT MC events.  The black points are the T2K data.}
+  \caption{The post-fit number of NEUT Monte Carlo events compared with T2K data when including the ad hoc uncertainty shown in table~\ref{table:NSelToNRevRatio}.  The red, blue and green histograms are the lead, carbon and other NEUT MC templates.  The brown error bars represent the shape-only systematic and ad hoc uncertainties on the number of NEUT MC events.  The black points are the T2K data.  The inflated errors has reduced the level of correlations, allowing the fitter to make finer changes to the MC normalisation.}
   \label{fig:MCTemplatesWithSystematicsT2KDataPostFitWithFudge}
 \end{figure}
 \begin{table}
