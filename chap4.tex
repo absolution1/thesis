@@ -86,7 +86,7 @@ As mentioned in section~\ref{subsec:EventReconstruction}, part of the reconstruc
 \label{subsec:ECalHitPerparation}
 The initial ECal reconstruction stage takes the hits outputted by the calibration stage and prepares them for the downstream algorithms.  The ECal hits arrive with timestamps but are not separated according to the bunch structure.  So, the hits are ordered in time and then grouped into buckets where a new bucket starts when a greater than 50~ns gap appears between two time-adjacent hits.  A second filter is then applied to arrange the hits according to the sensor they occurred on.  For double ended bars with both sensors activated, the time of the hit is re-estimated by averaging the timestamp of the two sensors.  The two hits are then merged to form a single hit.
 \newline
-It is then necessary to apply extra calibrations to the charges of the hits.  The effect of light attenuation along the WLS fibre is corrected for and a scaling is applied to convert the charge into MIP equivalent units (MEU)\YoshiFinal{}{Can you briefly explain what an MEU is, and reference it? It isn't standard terminlogy}.
+It is then necessary to apply extra calibrations to the charges of the hits.  The effect of light attenuation along the WLS fibre is corrected for and a scaling is applied to convert the charge into MIP equivalent units (MEU)\YoshiFinal{ where 1~MEU is the most probable value of charge deposited by a Minimally-Ionising Particle (MIP).}{ADDRESSED - Can you briefly explain what an MEU is, and reference it? It isn't standard terminlogy}.
 
 \subsection{Basic clustering}
 \label{subsec:ECalBasicClustering}
