@@ -850,24 +850,24 @@ It should be clear from Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPostFit} 
   \caption{The shape-only correlation matrix for the samples used in the fit.  There is a large degree of (anti-)correlation between all samples.  This gives the fitter less freedom to change the normalisations of the MC samples.}
   \label{fig:ShapeCorrelationMatrix}
 \end{figure}
-The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} can help to illuminate the underlying issue.  An area normalised comparison of a sub-set of the MC templates with the run 3C data is shown in Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm} for the barrel samples and Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm} for the barrel-reverse samples.  
+The pre-fit information shown in Fig.~\ref{fig:MCTemplatesWithSystematicsT2KDataPreFit} can help to illuminate the underlying issue.  An area-normalised comparison of a sub-set of the MC templates with the run 3C data is shown in Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm} for the barrel samples and Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm} for the barrel-reverse samples.  
 \begin{figure}%
   \centering
   \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm}}
   \hspace{1em}
-  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm}}
-  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.  There is significant disagreement in the shape of the other template with the data.}
+  \subfloat[The \textit{other} template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm}}
+  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and \textit{other} templates respectively.  There is significant disagreement in the shape of the \textit{other} template with the data.}
   \label{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm}
 \end{figure}
 \begin{figure}%
   \centering
   \subfloat[The ECal interaction templates.]{\includegraphics[width=8cm]{images/measurement/data/ECalInteractionMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
   \hspace{1em}
-  \subfloat[The other template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
-  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel-reverse ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and other templates respectively.  Similarly to Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm}, there is disagreement in the shape of the other templates with the data.}
+  \subfloat[The \textit{other} template.]{\includegraphics[width=8cm]{images/measurement/data/BackgroundMCTemplates_T2KData_BarrelReverseModules_AreaNorm.eps} \label{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}}
+  \caption{An area-normalised comparison of a sub-set of the MC templates with data for the barrel-reverse ECal samples.  The coloured histograms and data points are the MC Templates and data respectively.  The red, blue and green histograms are the lead, carbon and \textit{other} templates respectively.  Similarly to Fig.~\ref{fig:SubsetMCTemplatesT2KDataBarrelModulesAreaNorm}, there is disagreement in the shape of the \textit{other} templates with the data.}
   \label{fig:SubsetMCTemplatesT2KDataBarrelReverseModulesAreaNorm}
 \end{figure}
-As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction templates in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the other template (Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}).  This finding suggests that it is the composition of the other template that is the cause of the fit failure.  The other template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background which is the primary event category which falls into the other template.  The number of events in the other template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively where the distributions have been separated into the true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 Tracker which is the only place where the neutrino flux has been studied in great detail. 
+As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelReverseModulesAreaNorm} show, the shape of the ECal interaction templates in both the barrel and barrel-reverse samples generally follow the data shape.  This is not the case for the shape of the \textit{other} template (Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig.~\ref{fig:BackgroundMCTemplatesT2KDataBarrelReverseModulesAreaNorm}).  This finding suggests that it is the composition of the \textit{other} template that is the cause of the fit failure.  The \textit{other} template contains all events which are not CC-carbon or CC-lead interactions.  As was found in chapter~\ref{chap:NeutrinoInteractionSelection} and shown in Fig.~\ref{fig:ProngStackBarrelSelected}, the dominant background is the ECal OOFV background which is the primary event category which falls into the \textit{other} template.  The number of events in the \textit{other} template as a function of true neutrino energy is shown in Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel} and Fig.~\ref{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse} for the barrel and barrel-reverse samples respectively where the distributions have been separated into the true neutrino interaction location.  In all cases, entering backgrounds which originate from the magnet and sand are the dominant contributor.  These events sit in a region far away from the ND280 Tracker which is the only place where the neutrino flux has been studied in great detail. 
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
@@ -893,7 +893,7 @@ As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig
 \centering
   \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRB}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRB.eps}}
 \end{minipage}\par\medskip
-\caption{The number of events in the other template as a function of true neutrino energy for the barrel ECal samples.  The distributions are broken down by true neutrino interaction location.  For all distributions, the dominating location is either the magnet or the sand in the surrounding pit.}
+\caption{The number of events in the \textit{other} template as a function of true neutrino energy for the barrel ECal samples.  The distributions are broken down by true neutrino interaction location.  For all distributions, the dominating location is either the magnet or the sand in the surrounding pit.}
 \label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrel}
 \end{figure}
 \begin{figure}
@@ -921,7 +921,7 @@ As Fig.~\ref{fig:ECalInteractionMCTemplatesT2KDataBarrelModulesAreaNorm} and Fig
 \centering
   \subfloat[Top right ECal.]{\label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateTRBReverse}\includegraphics[width=7.5cm]{images/measurement/data/NEventsVsNeutrinoEnergy_OtherMCTemplate_TRBReverse.eps}}
 \end{minipage}\par\medskip
-\caption{The number of events in the other template as a function of true neutrino energy for the barrel reverse ECal samples.  The distributions are broken down by true neutrino interaction location.  For all distributions, the dominating location is either the magnet or the sand in the surrounding pit.}
+\caption{The number of events in the \textit{other} template as a function of true neutrino energy for the barrel reverse ECal samples.  The distributions are broken down by true neutrino interaction location.  For all distributions, the dominating location is either the magnet or the sand in the surrounding pit.}
 \label{fig:NEventsVsNeutrinoEnergyOtherMCTemplateBarrelReverse}
 \end{figure}
 \newline
