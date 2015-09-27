@@ -70,9 +70,9 @@ The reconstruction makes no quality checks on the 3D tracks in each cluster.  So
 \newline
 \begin{figure}%
   \centering
-  \subfloat[No track rejection.  There is a build-up of reconstructed tracks which are at right angles to the simulated particle that created them.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
+  \subfloat[No track rejection.  There is a build-up of reconstructed tracks which are at right angles to the simulated particle that created them.]{\includegraphics[width=7.5cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
   \hspace{1em}
-  \subfloat[With track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationWithRejection}\label{fig:AngularSeparationWithRejection}}
+  \subfloat[With track rejection.]{\includegraphics[width=7.5cm]{images/selection/track_rejection/AngularSeparationWithRejection}\label{fig:AngularSeparationWithRejection}}
   \caption{Angular separation of the reconstructed tracks in an ECal cluster with the beam-simulated particle that created them.  The black, red and green histograms are the tracks that were reconstructed first, second and third respectively.  All histograms are area normalised.}
   \label{fig:TrackRejectionAngularSeparation}
 \end{figure}
@@ -93,20 +93,20 @@ The above discussion suggests that two parameters should govern the vertex recon
 \end{equation}
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{images/selection/vertex_recon/FOM_2D}
+  \includegraphics[width=11.5cm]{images/selection/vertex_recon/FOM_2D}
   \caption{Values of $\phi^{\textrm{vertices}}$ in ($d_q$, $d_c$) space.  The colour corresponds to the magnitude of $\phi^{\textrm{vertices}}$.  The distribution plateaus rather than peaks, suggesting that there are no preferred values of $d_q$ and $d_c$, only disfavoured ones.}
   \label{fig:VertexReconFOM}
 \end{figure}
 \begin{figure}
   \centering
-  \subfloat[$d_q$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dq_marginalize} \label{fig:dqMarginalize}}
+  \subfloat[$d_q$]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/dq_marginalize} \label{fig:dqMarginalize}}
   \hspace{1em}
-  \subfloat[$d_c$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dc_marginalize} \label{fig:dcMarginalize}}
+  \subfloat[$d_c$]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/dc_marginalize} \label{fig:dcMarginalize}}
   \caption{$\phi^{\textrm{vertices}}$ vs the marginalised vertex reconstruction parameters.  The same plateau effect shown in Fig.~\ref{fig:VertexReconFOM} can be seen here.  The ideal values for both reconstruction parameters are the ones which get as close to the sharp drop in $\phi^{\textrm{vertices}}$ as possible.}
   \label{fig:VertexReconMarginalizedDistributions}
 \end{figure}
 By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$, $d_c$) space, information about the preferred values of $d_q$ and $d_c$ can be found.  This space is shown in Fig.~\ref{fig:VertexReconFOM}.  It is clear from Fig.~\ref{fig:VertexReconFOM} that there is no clear maximum, but rather a plateau of  $\phi^{\textrm{vertices}}$ for $d_q$ and $d_c$ greater than 140 mm.  So, marginalised distributions of $d_q$ and $d_c$ can be produced to find where $\phi^{\textrm{vertices}}$ approaches zero which are shown in Fig.~\ref{fig:dqMarginalize} and Fig.~\ref{fig:dcMarginalize} respectively.  The values chosen are shown in table~\ref{table:VertexReconParameters}. 
-\begin{table}[t!]
+\begin{table}[b!]
   \begin{tabular}{ c c }
     $\phi_d$ & $\phi_c$ \\ \hline \hline
     $<$ 140 mm & $<$ 200 mm \\
@@ -115,9 +115,9 @@ By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$, $d_c$) space, information a
   \label{table:VertexReconParameters}
 \end{table}
 The reconstruction now assesses the quality of the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was suggested by X. Lu.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
-  \includegraphics[width=8cm]{images/selection/vertex_recon/vertex_vector_diagram}
+  \includegraphics[width=9cm]{images/selection/vertex_recon/vertex_vector_diagram}
   \caption{Example of the vertex position, $\vec{P}$ for three lines: $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$. $|\vec{r}_1|$, $|\vec{r}_2|$ and $|\vec{r}_3|$ are the perpendicular distances of $\vec{l}_1$, $\vec{l}_2$ and $\vec{l}_3$ to $\vec{P}$ respectively.}
   \label{fig:VertexVectorDiagram}
 \end{figure}
@@ -213,69 +213,69 @@ The first merging condition identified is the cosine of the opening angle, $\cos
 \newline
 \newline
 The second merging condition identified, called 'distance ratio', measures the ratio of the distance between the two constituent tracks' closest points, $d^{\textrm{small}}$ to the distance between their furthest points, $d^{\textrm{large}}$.  An example of how $d^{\textrm{small}}$ and $d^{\textrm{large}}$ are calculated is shown in Fig.~\ref{fig:DistanceRatioEventDisplay}.    
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
-  \includegraphics[width=10cm]{images/selection/vertex_recon/distance_ratio_event_display}
+  \includegraphics[width=9cm]{images/selection/vertex_recon/distance_ratio_event_display}
   \caption{Example event display showing how the parameters of the distance ratio are calculated.  The distance ratio is defined as $d^{\textrm{small}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
   \label{fig:DistanceRatioEventDisplay}
 \end{figure}
 The distance ratio distribution is shown Fig.~\ref{fig:TrackMergingConditionDistanceRatioNoCut}.  While it may seem that there is very little discrimination power present in the distance ratio distribution, there is an underlying dependency between the distance ratio and the opening angle subtended by the constituent tracks, which has already been identified as a merging condition.
-\begin{figure}
+\begin{figure}[b!]
   \centering
-  \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio.eps} \label{fig:TrackMergingConditionDistanceRatioNoCut}}
+  \subfloat[No cuts applied.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/merging_candidates_distance_ratio.eps} \label{fig:TrackMergingConditionDistanceRatioNoCut}}
   \hspace{1em}
-  \subfloat[For $\cos\theta > 0.8$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.eps} \label{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}}
+  \subfloat[For $\cos\theta > 0.8$.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.eps} \label{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}}
   \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.  When no cuts are applied, the distance ratio shows little separation between the correctly matched and incorrectly matched events.  However, after demanding $\cos\theta > 0.8$, the incorrectly matched peak significantly flattens without altering the correctly matched peak.}
   \label{fig:TrackMergingConditionDistanceRatio}
 \end{figure}
 To illustrate this dependency, two distributions are shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} which both show the distance ratio vs the cosine of the opening angle.  Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch} only shows the correct matches and Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch} only shows the incorrect matches.  While it is true that there is a pileup of both correct matches and incorrect matches for low values of the distance ratio, the opening angle separates the two categories out.  Specifically, the correct matches pileup occurs as $\cos\theta \rightarrow 1$ and the incorrect matches pileup occurs as $\cos\theta \rightarrow 0$.  To further illustrate this point, a new distance ratio distribution is shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, but with a $\cos\theta > 0.8$ guess cut applied.  Comparing the distributions shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioNoCut} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}, the effect of the $\cos\theta$ cut can clearly be seen.  The original pileup of incorrect matches seen in Fig.~\ref{fig:TrackMergingConditionDistanceRatioNoCut} is now gone, leaving an essentially flat incorrect matches distribution in Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} while leaving the correct matches structure intact.  
-\begin{figure}[b!]
+\begin{figure}[t!]
   \centering
-  \subfloat[Correct matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
+  \subfloat[Correct matches only.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
   \hspace{1em}
-  \subfloat[Incorrect matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
+  \subfloat[Incorrect matches only.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
   \caption{The distance ratio vs the cosine of the opening angle for track merging candidates.  This 2D space significantly separates out the correctly matched and incorrectly matches events.}
   \label{fig:TrackMergingConditionDistanceRatioVsCosTheta}
 \end{figure}
 \newline
 \newline
 By utilising both the distance ratio and $\cos\theta$ simultaneously, a better degree of separation can be found.  However care must be taken when tuning the distance ratio and $\cos\theta$ cuts to ensure optimal separation of signal and background is achieved.  It is clear from Fig.~\ref{fig:TrackMergingConditionCosTheta} and Fig.~\ref{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta} that the correct matches pileup for low values of the distance ratio and high values of $\cos\theta$.  So events should only be tagged for merging when they have a distance ratio value lower than some threshold and a $\cos\theta$ value higher than some other threshold. To find these cut values, the track merging reconstruction was run multiple times, using different values of the thresholds for each run.  To take the dependency shown in Fig.~\ref{fig:TrackMergingConditionDistanceRatioVsCosTheta} into account, a square grid search in distance ratio and $\cos\theta$ space was used to find optimum cut values.  The tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, was used to find the optimum cut values.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
-  \includegraphics[width=10cm]{images/selection/vertex_recon/TrackMergingTuningFOM}
+  \includegraphics[width=11cm]{images/selection/vertex_recon/TrackMergingTuningFOM}
   \caption{Values of the tuning metric, as described in equation~\ref{eqn:TrackMergingTuningMetric}, in distance ratio cut vs $\cos\theta$ cut space.  The peak of this distribution is very broad, suggesting a range of preferred values for the distance ratio and $\cos\theta$ cuts.}
   \label{fig:TrackMergingTuningFOM}
 \end{figure}
 The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are shown in Fig.~\ref{fig:TrackMergingTuningFOM}.  As was found in the tuning of the vertex clustering parameters, there is no clear maximum value of the tuning metric, but rather a plateau.  So, as was done in the vertex clustering tuning, marginalised distributions of tuning metric in distance ratio cut space and $\cos\theta$ cut space can be produced to find the optimum cut values. 
-\begin{figure}
+\begin{figure}[b!]
   \centering
-  \subfloat[$\cos \theta$]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM.eps} \label{fig:TrackMergingCosThetaMarginalize}}
+  \subfloat[$\cos \theta$]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM.eps} \label{fig:TrackMergingCosThetaMarginalize}}
   \hspace{1em}
-  \subfloat[Distance ratio]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps} \label{fig:TrackMergingDistanceRatioMarginalize}}
+  \subfloat[Distance ratio]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps} \label{fig:TrackMergingDistanceRatioMarginalize}}
   \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.  There is a clear but somewhat broad maximum of $\phi^{\textrm{merge}}$ in $\cos\theta$ space whereas there is only a plateau in distance ratio space.}
   \label{fig:TrackMergingMarginalizedDistributions}
 \end{figure}
 The marginalised distributions for $\cos\theta$ and the distance ratio cuts are shown in Fig.~\ref{fig:TrackMergingCosThetaMarginalize} and Fig.~\ref{fig:TrackMergingDistanceRatioMarginalize} respectively.  In the case of the $\cos\theta$ cut there is a clearly preferred value, merging candidates should only be merged if $\cos\theta > 0.82$.  In the case of the distance ratio cut distribution, there is less of a clear maximum.  As the reconstruction is striving for quality over quantity, the cut value should be fairly close to the drop in $\phi^{\textrm{merge}}$.  It was decided that merging candidates should only be merged if the distance ratio is less than 0.32.
 \newline
 \newline
-While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specifically, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated is shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the topology on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bi-modal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
 \begin{figure}
   \centering
-  \includegraphics[width=6cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
+  \includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingCosThetaDegeneracySchematic.eps}
   \caption{Schematic showing the degeneracy of two merging candidate topologies which would pass the $\cos\theta$ cut.  The arrows represent reconstructed tracks and $\theta$ is the opening angle measured between those tracks.}
   \label{fig:TrackMergingCosThetaDegeneracySchematic}
 \end{figure}
+While the $\cos\theta$ condition is clearly a powerful discriminator, there is a topology degeneracy which $\cos\theta$ is not capable of separating, which is shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The diagram on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} is a representation of a signal event which is reconstructed as two tracks, whereas the diagram on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} represents a curving trajectory reconstructed as two tracks.  Importantly, the same opening angle is measured for both situations which is small enough that both topologies pass the $\cos\theta$ track merging condition.  To rectify this, an extra sanity check is needed when considering merging candidates.  So, the final merging condition identified, called 'swing', measures the rotation of one track relative to the other.  Specifically, the swing is the ratio of the longest track length, $l^{\textrm{long}}$, to $d^{\textrm{large}}$ (the same $d^{\textrm{large}}$ that was used in the distance ratio calculation).  An example of how these values are calculated is shown in Fig.~\ref{fig:TrackMergingEventDisplaySwing}.  Provided that the opening angle of a merging candidate is not near 90$^\circ$, the swing should be less than one for the topology on the left of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic} and should be greater than one for the topology on the right of Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.  The separation power of the swing parameter is shown in Fig.~\ref{fig:TrackMergingSwing}.  After applying the merging conditions discussed above, the swing parameter becomes bi-modal as shown in Fig.~\ref{fig:TrackMergingSwingOtherCutsApplied}.  The swing parameter is introduced purely as an extra sanity cut which is physically motivated and requires no tuning.  So, merging candidates are only merged if the measured swing is less than one.
 \begin{figure}
   \centering
-  \includegraphics[width=7cm]{images/selection/vertex_recon/track_merging_event_display_swing.eps}
+  \includegraphics[width=9cm]{images/selection/vertex_recon/track_merging_event_display_swing.eps}
   \caption{Example event display showing how the inputs to the swing parameter are calculated.  Swing is defined as $l^{\textrm{long}}/d^{\textrm{large}}$.  The blue lines are the two reconstructed tracks which form the merging candidate and the red square is the crossing location of those tracks.}
   \label{fig:TrackMergingEventDisplaySwing}
 \end{figure}
 \begin{figure}
   \centering
-  \subfloat[No cuts applied.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
+  \subfloat[No cuts applied.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
   \hspace{1em}
-  \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
+  \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=7.5cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
   \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.  After applying the $\cos\theta$ and distance ratio cuts, the swing parameter distribution becomes bimodal, signifying that the swing parameter has separated out the two merging candidate topologies shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.}
   \label{fig:TrackMergingSwing}
 \end{figure}
@@ -315,9 +315,9 @@ Any reconstructed vertices which pass the first condition but fail the second ar
 To illustrate the benefit of separating events into specific prong topologies, Fig.~\ref{fig:ProngStackAll} shows the truth makeup of events seen in the ECal after applying the reconstruction separation.  It is important to note that only the vertex reconstruction and track merging has been applied to the sample at this point.  There is a clear difference in the level of backgrounds seen in each topology e.g. the ECal OOFV background is almost exclusively contained in the one prong topology.  By applying such a separation and then focusing cuts on each topology, the overall event purity should be higher. 
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
+  \subfloat[Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
   \hspace{1em}
-  \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
+  \subfloat[DS ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
   \caption{The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The number of reconstructed events and the background contamination strongly depends on the number of reconstructed prongs.  This effect indicates that selection development should be tailored towards each prong topology individually.}
   \label{fig:ProngStackAll}
 \end{figure}
@@ -360,7 +360,7 @@ The found fiducial volumes for each ECal module for the 1 prong topology are sho
   \label{table:FV1Prong}
 \end{table}
 As described above, the same fiducial volumes are used for the \YoshiFinal{2, 3}{ADDRESSED - was `2,3': you need spaces after commas} and 4+ prong topologies.  So, to tune the fiducial volume cuts, the topologies are temporarily combined and the combined sample is used to tune the cuts.  Those fiducial volume cuts are shown in table~\ref{table:FV2+Prong}.  There are clear differences between the fiducial volumes shown in table~\ref{table:FV1Prong} and table~\ref{table:FV2+Prong}.  The cuts suggested by the \YoshiFinal{2, 3}{ADDRESSED - was `2,3': you need spaces after commas} and 4+ prong topology tunings are not as strict as those suggested by the 1 prong topology.  This should be expected, as ECal OOFV backgrounds reconstructed as \YoshiFinal{2, 3}{ADDRESSED - was `2,3': you need spaces after commas} or 4+ prong vertices will most likely not have their vertex reconstructed near the faces of an ECal module.  The one exception to this is the downstream face of each ECal module.  It is clear from table~\ref{table:FV1Prong}, that the \YoshiFinal{2, 3}{ADDRESSED - was `2,3': you need spaces after commas} and 4+ prong topologies suggest a stricter downstream face cut ($+z$ cut) than the 1 prong topology.  The reason for this strict cut is due to the nature of the neutrino beam.  J-PARC's neutrino beam is (almost) parallel with the $+z$ axis defined by the ND280 coordinate system.  Because of the very forward nature of the beam, any final state particles from ECal neutrino interactions are most likely to travel downstream.  So, any subsequent secondary interactions, which are tagged as background, will also occur downstream.  The $+z$ face cut attempts to remove these.
-\begin{table}[b!]
+\begin{table}[t!]
   \begin{tabular}{ c c c c c c c }
      & $-x$ (mm) & $+x$ (mm) & $-y$ (mm) & $+y$ (mm) & $-z$ (mm) & $+z$ (mm)  \\ \hline \hline
     Bottom-right & 19 & 9 & 16 & 0 & 3 & 39 \\
@@ -383,14 +383,14 @@ The signal and background distributions for the barrel ECal, 1 prong topology ar
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Signal events only.]{\label{fig:Sel1ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal.eps}}
+  \subfloat[Signal events only.]{\label{fig:Sel1ProngChargeVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_signal.eps}}
 \end{minipage}%
 \begin{minipage}{.5\linewidth}
 \centering
-\subfloat[Background events only.]{\label{fig:Sel1ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background.eps}}
+\subfloat[Background events only.]{\label{fig:Sel1ProngChargeVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_background.eps}}
 \end{minipage}\par\medskip
 \centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black lines portray the cut lines and the attached arrows show which side of the cut is selected.]{\label{fig:Sel1ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps}}
+\subfloat[Background/Signal ratio, truncated at 2.  The black lines portray the cut lines and the attached arrows show which side of the cut is selected.]{\label{fig:Sel1ProngChargeVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_1prong_barrel_ratio.eps}}
 \caption{Total prong charge vs the number of prong hits for barrel ECal events in the 1 prong topology.}
 \label{fig:Sel1ProngChargeVsProngNHits}
 \end{figure}
@@ -400,33 +400,33 @@ Fig.~\ref{fig:Sel2ProngChargeVsProngNHits} and Fig.~\ref{fig:Sel3ProngChargeVsPr
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Signal events only.]{\label{fig:Sel2ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal.eps}}
+  \subfloat[Signal events only.]{\label{fig:Sel2ProngChargeVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_signal.eps}}
 \end{minipage}%
 \begin{minipage}{.5\linewidth}
 \centering
-\subfloat[Background events only.]{\label{fig:Sel2ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background.eps}}
+\subfloat[Background events only.]{\label{fig:Sel2ProngChargeVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_background.eps}}
 \end{minipage}\par\medskip
 \centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps}}
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2ProngChargeVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_2prong_barrel_ratio.eps}}
 \caption{Total prong charge vs the number of prong hits for barrel ECal events in the 2 prong topology.}
 \label{fig:Sel2ProngChargeVsProngNHits}
 \end{figure}
-
 \begin{figure}
 \begin{minipage}{.5\linewidth}
   \centering
-  \subfloat[Signal events only.]{\label{fig:Sel3ProngChargeVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal.eps}}
+  \subfloat[Signal events only.]{\label{fig:Sel3ProngChargeVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_signal.eps}}
 \end{minipage}%
 \begin{minipage}{.5\linewidth}
 \centering
-\subfloat[Background events only.]{\label{fig:Sel3ProngChargeVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background.eps}}
+\subfloat[Background events only.]{\label{fig:Sel3ProngChargeVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_background.eps}}
 \end{minipage}\par\medskip
 \centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3ProngChargeVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps}}
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3ProngChargeVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/ProngChargeVsNHits_3prong_barrel_ratio.eps}}
 \caption{Total prong charge vs the number of prong hits for barrel ECal events in the 3 prong topology.}
 \label{fig:Sel3ProngChargeVsProngNHits}
 \end{figure}
-\begin{table}
+\newpage
+\begin{table}[t!]
   \begin{tabular}{ c l l }
     Prong topology & Barrel cuts (MEU) & DS cuts (MEU) \\ \hline \hline
     1 & $>-4.5N + 75$ & $>-3.4N + 62$ \\
@@ -448,7 +448,49 @@ The cut value really should depend on how many hits are associated to the consti
 \newline
 \newline
 So, an identical approach is used to define and tune the cut lines as was used in section~\ref{subsubsec:VisibleEnergyCut}.  The signal, background and background/signal ratio distributions for the 1, 2 and 3 prong topologies in the barrel ECal are shown in Fig.~\ref{fig:Sel1DeltaNHitsVsProngNHits}, Fig.~\ref{fig:Sel2DeltaNHitsVsProngNHits} and Fig.~\ref{fig:Sel3DeltaNHitsVsProngNHits} respectively.  The layout of the figures is the same as was shown for the visible energy cut.  In a similar manner to table~\ref{table:ProngChargeVsProngNHitsCuts}, the $\Delta N$ cut definitions are shown in table~\ref{table:DeltaNHitsVsProngNHitsCuts}.
-\begin{table}[!b]
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel1DeltaNHitsVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 1 prong topology.}
+\label{fig:Sel1DeltaNHitsVsProngNHits}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2DeltaNHitsVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 2 prong topology.}
+\label{fig:Sel2DeltaNHitsVsProngNHits}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Signal events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsSignal}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal.eps}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[Background events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsBackground}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background.eps}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3DeltaNHitsVsProngNHitsRatio}\includegraphics[width=8.0cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio.eps}}
+\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 3 prong topology.}
+\label{fig:Sel3DeltaNHitsVsProngNHits}
+\end{figure}
+\begin{table}[!t]
   \begin{tabular}{ c l l }
     Prong topology & Barrel cuts (no units) & DS cuts (no units) \\ \hline \hline
     1 & $<-0.2N + 16$ & $<1.2N + 3$ \\
@@ -459,51 +501,6 @@ So, an identical approach is used to define and tune the cut lines as was used i
   \label{table:DeltaNHitsVsProngNHitsCuts}
 \end{table}
 
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Signal events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_signal.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-\subfloat[Background events only.]{\label{fig:Sel1DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_background.eps}}
-\end{minipage}\par\medskip
-\centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel1DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_1Prong_Barrel_ratio.eps}}
-\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 1 prong topology.}
-\label{fig:Sel1DeltaNHitsVsProngNHits}
-\end{figure}
-
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Signal events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_signal.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-\subfloat[Background events only.]{\label{fig:Sel2DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_background.eps}}
-\end{minipage}\par\medskip
-\centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel2DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_2Prong_Barrel_ratio.eps}}
-\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 2 prong topology.}
-\label{fig:Sel2DeltaNHitsVsProngNHits}
-\end{figure}
-
-\begin{figure}
-\begin{minipage}{.5\linewidth}
-  \centering
-  \subfloat[Signal events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsSignal}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_signal.eps}}
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-\centering
-\subfloat[Background events only.]{\label{fig:Sel3DeltaNHitsVsProngNHitsBackground}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_background.eps}}
-\end{minipage}\par\medskip
-\centering
-\subfloat[Background/Signal ratio, truncated at 2.  The black line portrays the cut line and the attached arrow shows which side of the cut is selected.]{\label{fig:Sel3DeltaNHitsVsProngNHitsRatio}\includegraphics[width=7.5cm]{images/selection/mc_selection/DeltaNHitsVsNHits_3Prong_Barrel_ratio.eps}}
-\caption{$\Delta N$ vs the number of prong hits for barrel ECal events in the 3 prong topology.}
-\label{fig:Sel3DeltaNHitsVsProngNHits}
-\end{figure}
-
 \subsubsection{Opening angle}
 \label{subsubsec:OpeningAngle}
 Despite the best efforts of the track merging, not all curving trajectories have reconstructed tracks which are successfully merged.  So, there will be an inherent ECal OOFV contamination of the \YoshiFinal{2, 3}{ADDRESSED - was `2,3': you need spaces after commas} and 4+ prong topologies where the reconstruction has failed.  While future iterations of the analysis should revisit the reconstruction to combat this, it is sufficient to cut these background events out in the selection.  As was described in section~\ref{sec:VertexReconstruction}, a key signature of a curving trajectory is two prongs with a small opening angle.  This means that the opening angle can be used as a cut to remove such background events.  To define an opening angle, at least two tracks are required so, unfortunately, such a method can not be implemented for the 1 prong topology.
@@ -511,25 +508,25 @@ Despite the best efforts of the track merging, not all curving trajectories have
 \newline
 \begin{figure}[b!]
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
+  \subfloat[Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
   \hspace{1em}
-  \subfloat[DS ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
+  \subfloat[DS ECals.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
   \caption{The opening angle subtended by the constituents prongs for the 2 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel2OpeningAngle}
 \end{figure}
 The signal and background separation provided by the subtended opening angle for the 2 prong topology is shown in Fig.~\ref{fig:Sel2OpeningAngle}.  While the barrel ECal sees more separation power in the opening angle, it should be clear from Fig.~\ref{fig:Sel2OpeningAngleBarrel} and Fig.~\ref{fig:Sel2OpeningAngleDS} that events should only be selected if their opening angle is bigger than some threshold.  To find this threshold, a test cut was systematically varied between 0$^\circ$ and 90$^\circ$ in 1$^\circ$ increments.  At each increment, the number of events with an opening angle larger than the test cut was recorded and $\phi_2^{\textrm{selection}}$ subsequently calculated.  An example of the variation in $\phi_2^{\textrm{selection}}$ is shown in Fig.~\ref{fig:Sel2OpeningAngleBarrelFOM} for the barrel ECal.  A maximum in $\phi_2^{\textrm{selection}}$ is clearly found which shows that the opening angle is a good discriminator and that the method works.  By applying this method to 2 prong events, events are only selected if the subtended opening angle is greater than 34$^\circ$ for the barrel ECal or greater than 21$^\circ$ for the DS ECal.
 \begin{figure}
   \centering
-  \includegraphics[width=12cm]{images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel.eps}
+  \includegraphics[width=11cm]{images/selection/mc_selection/OpeningAngle_FOM_2Prong_Barrel.eps}
   \caption{$\phi_2^{\textrm{selection}}$ as a function of the opening angle cut for the 2 prong topology in the barrel ECal.  There is a clear maximum of $\phi_2^{\textrm{selection}}$, indicating a preferred cut on the opening angle.}
   \label{fig:Sel2OpeningAngleBarrelFOM}
 \end{figure}
 Similar information should be available for the higher prong topologies.  However it is not as trivial to define an opening angle in such situations.  The chosen variable for the 3 prong topology is the summed opening angle for every pairwise combination of the constituent prongs.  The signal and background separation for this summed opening angle is shown in Fig.~\ref{fig:Sel3OpeningAngle}.  The cut development process used here was identical to the one used for the 2 prong topology.  The study suggested that events should only be selected if their summed opening angle is greater than 81$^\circ$ for the barrel ECal and 49$^\circ$ for the DS ECal. 
 \begin{figure}%
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
+  \subfloat[Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
   \hspace{1em}
-  \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
+  \subfloat[DS ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
   \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel3OpeningAngle}
 \end{figure}
@@ -725,9 +722,9 @@ The selection efficiency and purity as a function of the cuts are shown for the 
 The cross-section measurement presented in this analysis in an inclusive measurement.  This means that the neutrino interaction cross-section needs to be measured without bias across the J-PARC beam energy range.  All of the performance checks presented so far have only assessed each prong topology individually.  So, the final check is to assess how the selection performs after combining the topologies together.  The selection efficiency and purity after combining the topologies is shown in Fig.~\ref{fig:EffPurSummedTopologies}.  For both the barrel ECal and DS ECal, there is a clear dependence of the purity on the neutrino energy.  However, this should be expected.  It is clear that the purity decreases as the neutrino energy increases which can be explained by the self-shielding effect of the ECal.  In the low energy regime, the ECal OOFV background is suppressed because there is insufficient energy to either penetrate the ECal or deposit enough energy to allow cluster reconstruction.  As the background energy increases, the suppression is lifted, resulting in a decrease in the selection purity.  The key piece of information shown in Fig.~\ref{fig:EffPurSummedTopologies} is the selection efficiency.  As described above, it is of vital importance that the selection does not introduce a bias which measures one energy regime more than another.  The flatness of the efficiency distributions for both the barrel ECal and DS ECal shows this is not the case which means the selection presented here would be suitable for a CC-inclusive measurement.
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
+  \subfloat[Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
   \hspace{1em}
-  \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_DS.eps} \label{fig:EffPurSummedTopologiesDS}}
+  \subfloat[DS ECal.]{\includegraphics[width=7.5cm]{images/selection/selection_performance/EffPur_SummedTopologies_DS.eps} \label{fig:EffPurSummedTopologiesDS}}
   \caption{The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.  The selection efficiency is largely flat for both the barrel ECal and DS ECal showing the selections are not biased towards any particular energy range.  This is not the case for the selection purities but this can be explained by lower energy backgrounds having less penetrating power, resulting in a higher purity for lower neutrino energies.}
   \label{fig:EffPurSummedTopologies}
 \end{figure}
@@ -735,9 +732,9 @@ The cross-section measurement presented in this analysis in an inclusive measure
 \newline
 \begin{figure}
   \centering
-  \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
+  \subfloat[Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
   \hspace{1em}
-  \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_Selected.eps} \label{fig:ProngStackDSSelected}}
+  \subfloat[DS ECal.]{\includegraphics[width=7.5cm]{images/selection/mc_selection/ProngStack_DS_Selected.eps} \label{fig:ProngStackDSSelected}}
   \caption{The number of selected events in the Monte Carlo sample, separated out into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The effect of the developed selection can be clearly seen in all prong topologies; each topology is now signal dominated.}
   \label{fig:ProngStackSelected}
 \end{figure}
@@ -746,7 +743,7 @@ The number of selected events for each prong topology is shown in Fig.~\ref{fig:
 \newline
 The selection efficiencies and purities for each prong topology are shown in table~\ref{table:SelEfficiency} and table~\ref{table:SelPurity} respectively.  The final purities and efficiencies are generally good.  
 %The only concern is the 1 prong topology efficiency in the barrel ECal which is notably lower than all other efficiencies.  The main reason for the low efficiency is the strict fiducial volumes defined for each ECal module.  Generally speaking, this low efficiency may cause a problem if there is a significant amount of signal migration from the 2 prong topology which is more efficient.  It is important to address this when assessing systematic uncertainties for the analysis.
-\begin{table}
+\begin{table}[b!]
   \begin{tabular}{ c c c c c }
     ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
     module & efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$) \\ \hline \hline
@@ -756,7 +753,7 @@ The selection efficiencies and purities for each prong topology are shown in tab
   \caption{The selection efficiencies for each prong topology and ECal module.}
   \label{table:SelEfficiency}
 \end{table}
-\begin{table}
+\begin{table}[b!]
   \begin{tabular}{ c c c c c }
     ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
     module & purity ($\%$)& purity ($\%$)& purity ($\%$)& purity ($\%$) \\ \hline \hline

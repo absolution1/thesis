@@ -31,7 +31,7 @@ where $B_{\textrm{b}}$ is the strength of the magnetic field passing through the
 \newline
 \begin{figure}
   \centering
-  \includegraphics[width=9cm]{images/magnetic_field/BFieldDiagram}
+  \includegraphics[width=15cm]{images/magnetic_field/BFieldDiagram}
   \caption{Simple model of the magnetic field (blue lines) in the Tracker (orange) and flux return (red) regions.  The flux return yoke has been separated into ten sections: four vertical B field sections, four corner B field sections and two horizontal B field sections.  The height of the Tracker region, $h$, is also shown.}
   \label{fig:BFieldDiagram}
 \end{figure}
@@ -41,9 +41,9 @@ Eq.~\ref{eqn:FluxReturnBField} is sufficient to model the strength of the magnet
   \label{eqn:TrackerBFieldVector}
 \end{equation}
 The first magnetic field section in the flux return to be defined is the B field in the horizontal sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramHorizontalSection}.  The magnetic field here should be anti-parallel to the magnetic field in the Tracker, regardless of which horizontal section is being considered.  Using equation~\ref{eqn:TrackerBFieldVector}, it follows that the magnetic field in the horizontal section of the flux return is
-\begin{figure}
+\begin{figure}[t!]
   \centering
-  \includegraphics[width=9cm]{images/magnetic_field/BFieldDiagramHorizontalSection}
+  \includegraphics[width=12cm]{images/magnetic_field/BFieldDiagramHorizontalSection}
   \caption{A horizontal section of the flux return with its corresponding magnetic field lines (blue).  The corner sections, vertical sections and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
   \label{fig:BFieldDiagramHorizontalSection}
 \end{figure}
@@ -52,7 +52,7 @@ The first magnetic field section in the flux return to be defined is the B field
   \label{eqn:HorizontalReturnBFieldVector}
 \end{equation}
 The next magnetic field section in the flux return to define is the B field in the vertical section, an example of which is shown in Fig.~\ref{fig:BFieldDiagramVerticalSection}. The field model for the vertical section should take into account that the strength of the magnetic field is not constant, but smoothly change in strength from the point that it enters vertical section until it leaves it\Yoshi{}{ADDRESSED - (removed mention of corner section here) What is the corner section? And reaching it from which direction?}.  The direction of the field depends on which vertical section is under consideration.  For the section where\Yoshi{}{ADDRESSED - can this be explained graphically? It's hard to follow what you mean. It's not absolutely needed, but it would make it easier for the reader...} the magnetic field is exiting the Tracker and moving upwards, as shown in Fig.~\ref{fig:BFieldDiagramVerticalSection}, the relevant vector is
-\begin{figure}
+\begin{figure}[t!]
   \centering
   \includegraphics[width=5cm]{images/magnetic_field/BFieldDiagramVerticalSection}
   \caption{A vertical section of the flux return with its corresponding magnetic field lines (blue).  In this vertical section, the magnetic field has exited the Tracker and is travelling vertically upwards through the flux return. A corner section, another vertical section and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
@@ -66,7 +66,7 @@ where $h$ is the height of the ND280 Tracker and $y$ is the height at which the 
 \newline
 \newline
 Finally, In the corner sections of the flux return, the magnetic field is defined to be straight, constant in strength and at 45$^\circ$ to the horizontal and vertical sections, an example of which is shown in Fig.~\ref{fig:BFieldDiagramCornerSection}.  As with the vertical sections, the magnetic field direction is dependent on which corner section is being considered.  For the corner section where the entering magnetic field has left the vertical section in which the field was travelling vertically upwards, away from the Tracker (the same corner section as shown in Fig.~\ref{fig:BFieldDiagramCornerSection}), the magnetic field vector is
-\begin{figure}
+\begin{figure}[b!]
   \centering
   \includegraphics[width=5cm]{images/magnetic_field/BFieldDiagramCornerSection}
   \caption{A corner section of the flux return with its corresponding magnetic field lines (blue).  In this corner section, the magnetic field has entered from a vertical section in which is the field was travelling vertically upwards, away from the Tracker. A vertical section, a horizontal section and the Tracker are also visible.  This figure is a zoomed in cut-out of Fig.~\ref{fig:BFieldDiagram}.}
@@ -85,9 +85,9 @@ The magnetic field in the other corner sections are then 45$^\circ$ rotations of
 %This simple model of the magnetic field in the flux return has now been implemented in nd280mc.  Thus, any simulated charged-particles trajectory in the region surrounding the ECals (like muons entering from the pit region) will be altered by the new field.
 \begin{figure}%
   \centering
-  \subfloat[Number of hits in the reconstructed cluster.  There is a significant data excess for clusters which contain between 10 and 30 hits.]{\includegraphics[width=9cm]{images/magnetic_field/NHits_BLB_NoField} \label{fig:NHitsBLBNoField}}
-  \hspace{1em}
-  \subfloat[The truncated max ratio of the reconstructed cluster.  There is a significant data excess for reconstructed clusters with an associated truncated max ratio between 0.2 and 0.6.]{\includegraphics[width=8cm]{images/magnetic_field/TMR_BLB_NoField}\label{fig:TMRBLBNoField}}
+  \subfloat[Number of hits in the reconstructed cluster.  There is a significant data excess for clusters which contain between 10 and 30 hits.]{\includegraphics[width=8.0cm]{images/magnetic_field/NHits_BLB_NoField} \label{fig:NHitsBLBNoField}}
+  \hspace{1ex}
+  \subfloat[The truncated max ratio of the reconstructed cluster.  There is a significant data excess for reconstructed clusters with an associated truncated max ratio between 0.2 and 0.6.]{\includegraphics[width=7.0cm]{images/magnetic_field/TMR_BLB_NoField}\label{fig:TMRBLBNoField}}
 
   \caption{Comparisons of data and Monte Carlo in the bottom-left barrel ECal for previous software productions.  The red and pink histograms are Monte Carlo simulation of T2K beam neutrinos incident on ND280 and the surrounding pit respectively.  The blue data points are collected data from run 3C.  Both of the plots are POT normalized.  The data excesses shown are especially significant because they occur in the highest population regions.}
   \label{fig:BLBNoField}
@@ -98,9 +98,9 @@ It was found in previous iterations of ND280 analyses that there were significan
 As ND280 is off-axis relative to the T2K beam, there is an increase in the neutrino flux in the flux return yoke and surrounding pit regions below the bottom ECals.  This means that any charged final states in this region would generally have to propagate through the flux return yoke.  If a magnetic field is present in this region, as there would be during data taking, the trajectory of such particles would be bent upwards towards the ND280 Tracker region, causing an increase in the event rate in the bottom ECals.  If the magnetic field in this region is missing, the above statement does not hold and a relative deficit of events would be seen which describes the situation seen in Fig.~\ref{fig:BLBNoField}.
 \begin{figure}[bottom]%
   \centering
-  \subfloat[Number of hits in the reconstructed cluster.  The data excess seen in Fig.~\ref{fig:NHitsBLBNoField} has become a Monte Carlo excess (approximately $10\%$).  A similar Monte Carlo excess is seen in other ND280 subdetectors.]{\includegraphics[width=8cm]{images/magnetic_field/NHits_BLB_WithField} \label{fig:NHitsBLBWithField}}
+  \subfloat[Number of hits in the reconstructed cluster.  The data excess seen in Fig.~\ref{fig:NHitsBLBNoField} has become a Monte Carlo excess (approximately $10\%$).  A similar Monte Carlo excess is seen in other ND280 subdetectors.]{\includegraphics[width=7.5cm]{images/magnetic_field/NHits_BLB_WithField} \label{fig:NHitsBLBWithField}}
   \hspace{1em}
-  \subfloat[The truncated max ratio of the reconstructed cluster.  The data excess seen in Fig.~\ref{fig:TMRBLBNoField} has become a Monte Carlo excess which is much smaller in magnitude.]{\includegraphics[width=8cm]{images/magnetic_field/TMR_BLB_WithField}\label{fig:TMRBLBWithField}}
+  \subfloat[The truncated max ratio of the reconstructed cluster.  The data excess seen in Fig.~\ref{fig:TMRBLBNoField} has become a Monte Carlo excess which is much smaller in magnitude.]{\includegraphics[width=7.5cm]{images/magnetic_field/TMR_BLB_WithField}\label{fig:TMRBLBWithField}}
   \caption{Comparisons of data and Monte Carlo in the bottom-left barrel ECal with the magnetic field model described in section~\ref{sec:MagneticFieldModel} implemented.  The red and pink histograms are Monte Carlo simulation of T2K beam neutrinos incident on ND280 and the surrounding pit respectively.  The blue data points are collected data from run 3C.  Both of the plots are POT normalized.  Comparing the shown distributions with those in Fig.~\ref{fig:BLBNoField}, the effect of the simple magnetic field model is clearly visible.}
   \label{fig:BLBWithField}
 \end{figure}
