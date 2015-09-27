@@ -16,7 +16,7 @@ Consider a straight line formed in a 2D Cartesian space as shown in Fig.~\ref{fi
 where $y$ and $x$ are used as coordinates, $m$ is the gradient of the line and $c$ is the intercept location of the line with the $y$ axis.  While it is not necessary to analyse this simple shape in great detail, it is important to note that $m$ and $c$ are the only parameters necessary to completely describe the line.  
 \newline
 \newline
-Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D Cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$,$c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in Cartesian space is represented by a single point in parameter space. 
+Now consider a new 2D space where the axes are defined by $m$ and $c$, rather than $x$ and $y$ (hereafter referred to as the parameter space).  As this parameter space is described by the parameters of a general 2D Cartesian line, there is an underlying symmetry between the two spaces.  The parameters of the 2D line shown in Fig.~\ref{fig:2DCartesianLine} can be used to form a pair of coordinates ($m$, $c$) in the parameter space as shown in Fig.~\ref{fig:2DParameterPoint}.  It is important here to state clearly the general result; a straight line in Cartesian space is represented by a single point in parameter space. 
 \begin{figure}%
   \centering
   \subfloat[Line in 2D Cartesian space.  The line is defined by its intercept with the $y$-axis, $c$, and its gradient, $\Delta y/\Delta x = m$ (not shown).]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
@@ -26,7 +26,7 @@ Now consider a new 2D space where the axes are defined by $m$ and $c$, rather th
 \end{figure}
 \newline
 \newline
-Now consider the 2D Cartesian space again.  Unlike before, we will define a single point rather than a straight line. Such a point is traditionally described by a pair of coordinates ($x$,$y$).  However, an alternative description of the point is an infinite number of lines all of which pass through ($x$,$y$).  This is highlighted by Fig.~\ref{fig:2DCartesianPoint} where three lines of the infinite set are shown along with the point they represent.  As the infinite line set are used to describe a single point, all lines in the set must follow a pattern.  This relationship is revealed by simple algebraic manipulation of equation~\ref{eq:2DLineCartesean} to give
+Now consider the 2D Cartesian space again.  Unlike before, we will define a single point rather than a straight line. Such a point is traditionally described by a pair of coordinates ($x$, $y$).  However, an alternative description of the point is an infinite number of lines all of which pass through ($x$, $y$).  This is highlighted by Fig.~\ref{fig:2DCartesianPoint} where three lines of the infinite set are shown along with the point they represent.  As the infinite line set are used to describe a single point, all lines in the set must follow a pattern.  This relationship is revealed by simple algebraic manipulation of equation~\ref{eq:2DLineCartesean} to give
 \begin{equation}
   c = -xm + y.
   \label{eq:2DLineParameter}
@@ -63,7 +63,7 @@ We will now return to the Cartesian space for an example of how the Hough transf
 \begin{figure}%
   \centering
   \subfloat[The three Cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints} along with example lines from each point's infinite line set.  The coordinates of each point are also shown.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}}
-  \subfloat[The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The coordinates (2,4) define the point of intersection of the three lines.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space} \label{fig:HTExampleParameterSpace}}
+  \subfloat[The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The coordinates (2, 4) define the point of intersection of the three lines.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space} \label{fig:HTExampleParameterSpace}}
   \caption{The three points defined in equation~\ref{eq:HTExampleCartesianPoints} and their representation in the parameter space.  The colour coding matches the Cartesian points to their respective parameter lines.}
   \label{fig:HTExample}
 \end{figure}
@@ -78,7 +78,7 @@ The three points defined in equation~\ref{eq:HTExampleCartesianPoints} are shown
   \end{split}
   \label{eq:HTExampleParameterLines}
 \end{equation}
-The three parameter lines are shown in Fig.~\ref{fig:HTExampleParameterSpace}.  From Fig.~\ref{fig:HTExampleParameterSpace}, it is clear that the three parameter lines all cross at a common point with parameter space coordinates (2,4).  Using the results from section~\ref{subsec:LinePointDuality}, this common point in parameter space is represented by a line in Cartesian space.  In addition, as (2,4) is common to all three parameter lines, the Cartesian line represented by (2,4) must also pass through all three Cartesian points defined by equation ~\ref{eq:HTExampleCartesianPoints}.  This new Cartesian line is defined by
+The three parameter lines are shown in Fig.~\ref{fig:HTExampleParameterSpace}.  From Fig.~\ref{fig:HTExampleParameterSpace}, it is clear that the three parameter lines all cross at a common point with parameter space coordinates (2, 4).  Using the results from section~\ref{subsec:LinePointDuality}, this common point in parameter space is represented by a line in Cartesian space.  In addition, as (2, 4) is common to all three parameter lines, the Cartesian line represented by (2, 4) must also pass through all three Cartesian points defined by equation ~\ref{eq:HTExampleCartesianPoints}.  This new Cartesian line is defined by
 \begin{equation}
   y = 2x + 4
   \label{eq:HTExampleCartesianLine}
@@ -104,7 +104,7 @@ Using this new parameterisation, we must also define a new parameter space with 
   \rho = y\textrm{cos}\theta - x\textrm{sin}\theta.
   \label{eq:ParameterLineReparameterisation}
 \end{equation}
-By definition, the $\theta$ axis of the parameter space must be bounded to the interval [0,2$\pi$].  If the directionality of the line is meaningless to the analyser, then the interval can be restricted to [0,$\textrm{\pi}$].
+By definition, the $\theta$ axis of the parameter space must be bounded to the interval [0, 2$\pi$].  If the directionality of the line is meaningless to the analyser, then the interval can be restricted to [0, $\textrm{\pi}$].
 \newline
 \newline
 The disadvantage of this parameterisation is that parameter line generation now involves trigonometric calculations which can be computationally expensive.  However, this problem is small when compared to the unbounded complication of the traditional parameterisation.
@@ -192,10 +192,10 @@ We can now partly answer one of the problems raised in section~\ref{sec:ECalAppl
 
 \subsection{Parameter space analysis}
 \label{subsec:ParameterSpaceAnalysis}
-The full parameter space can look arbitrarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particle's trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$,$\rho$) coordinate of the found bin.
+The full parameter space can look arbitrarily complicated. However, it contains a vast amount of trajectory related information about the cluster.  Every $\theta-\rho$ bin of the parameter space describes a 2D track and the content value of said bin describes how many 2D ECal hits the track passes through.  As described in section~\ref{sec:ECalApplicationHoughTransform}, a particle's trajectory should be straight in the ECal which means that the particles path should be revealed by finding the most hits arranged in a line.  This hit arrangement can be found by finding the bin in the full parameter space with the highest value.  The track candidate parameters can the be found by fetching the ($\theta$, $\rho$) coordinate of the found bin.
 \newline
 \newline
-While the preferred bin can reveal how many hits the track candidate passed through, it contains no information about which hits were contributors.  However, this full parameter space was generated by summing the $N$ parameter spaces discussed in section~\ref{subsec:ParameterSpaceGeneration}.  So, the contributing hits can be readily found by looking at the same ($\theta$,$\rho$) bin in each of the $N$ parameter spaces and recording which have a non-zero value.  We now have the track candidate's parameters and its contributing hits which is enough to describe the 2D trajectory.
+While the preferred bin can reveal how many hits the track candidate passed through, it contains no information about which hits were contributors.  However, this full parameter space was generated by summing the $N$ parameter spaces discussed in section~\ref{subsec:ParameterSpaceGeneration}.  So, the contributing hits can be readily found by looking at the same ($\theta$, $\rho$) bin in each of the $N$ parameter spaces and recording which have a non-zero value.  We now have the track candidate's parameters and its contributing hits which is enough to describe the 2D trajectory.
 \newline
 \newline
 A new search now needs to begin to find any other track candidates.  However, repeating the same search of the full parameter space will return the track candidate that has already been found.  To find the next track candidate, the presence of the previous track candidate must be removed.  So, a reduced parameter space must be generated. The previous step found which of the $N$ parameter lines contributed to the previous track candidate.  So, this new parameter space can be formed by subtracting the contributing parameter lines from the full space.  An example of this is shown in Fig.~\ref{fig:ReducedParameterSpace3StateInteraction} where the reduced parameter space was formed by subtracting the contributing parameter lines to the highest bin in Fig.~\ref{fig:FullParameterSpace3StateInteraction}.  The next track candidate can then be found by searching for the highest content bin of this reduced parameter space and said bin's contributing parameter lines. 
