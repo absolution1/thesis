@@ -181,7 +181,7 @@ nameptr #1 >
 if$
 t "others" =
 etal or
-{ " {\em et~al.}" * }
+{ " {et~al.}" * }
 { " and " * t * }
 if$
 }
@@ -466,11 +466,11 @@ FUNCTION {format.crossref.editor}
 { editor #1 "{vv~}{ll}" format.name$
 editor num.names$ duplicate$
 #2 >
-{ pop$ " {\em et~al.}" * }
+{ pop$ " {et~al.}" * }
 { #2 <
 'skip$
 { editor #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-{ " {\em et~al.}" * }
+{ " {et~al.}" * }
 { " and " * editor #2 "{vv~}{ll}" format.name$ * }
 if$
 }
@@ -530,6 +530,8 @@ FUNCTION {article}
 { output.bibitem
 collaboration output
 format.authors "author" output.check
+new.block
+format.btitle "title" output.check
 new.block
 crossref missing$
 { journal field.or.null
