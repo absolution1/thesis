@@ -94,14 +94,14 @@ and is shown in Fig.~\ref{fig:HTExampleCartesianSpaceWithLine} with the original
 
 \subsection{Redefinition of parameters}
 \label{subsec:ParameterRedefinition}
-Unfortunately, a complication in computation arises when $m\rightarrow\infty$.  However, this complication can be removed by redefining the line parameters such that one is bounded.  An alternative 2D line parameterisation is to specify a line in terms of the angle it makes with the $x$ axis, $\theta$, and the perpendicular distance of the line from the origin, $\rho$, as illustrated in Fig.~\ref{fig:CartesianParameterRedefinition}.  The functional form of the Cartesian line becomes 
+Unfortunately, a complication in computation arises when $m\rightarrow\infty$.  However, this complication can be removed by redefining the line parameters such that \YoshiFinal{one is bounded}{not sure what this means}.  An alternative 2D line parameterisation is to specify a line in terms of the angle it makes with the $x$ axis, $\theta$, and the perpendicular distance of the line from the origin, $\rho$, as illustrated in Fig.~\ref{fig:CartesianParameterRedefinition}.  The functional form of the Cartesian line becomes 
 \begin{equation}
-  y = x\textrm{tan}\theta + \frac{\rho}{\textrm{cos}\theta}.
+  y = x\tan\theta + \frac{\rho}{\cos\theta}.
   \label{eq:CartesianLineReparameterisation}
 \end{equation}
 Using this new parameterisation, we must also define a new parameter space with axes $\theta$ and $\rho$.  Using equation~\ref{eq:CartesianLineReparameterisation}, a line in this new parameter space is defined by
 \begin{equation}
-  \rho = y\textrm{cos}\theta - x\textrm{sin}\theta.
+  \rho = y\cos\theta - x\sin\theta.
   \label{eq:ParameterLineReparameterisation}
 \end{equation}
 By definition, the $\theta$ axis of the parameter space must be bounded to the interval [0, 2$\pi$].  If the directionality of the line is meaningless to the analyser, then the interval can be restricted to [0, $\textrm{\pi}$].
