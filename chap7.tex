@@ -71,6 +71,7 @@ The reconstruction makes no quality checks on the 3D tracks in each cluster.  So
 \begin{figure}%
   \centering
   \subfloat[No track rejection.  There is a build-up of reconstructed tracks which are at right angles to the simulated particle that created them.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationNoRejection} \label{fig:AngularSeparationNoRejection}}
+  \hspace{1em}
   \subfloat[With track rejection.]{\includegraphics[width=9cm]{images/selection/track_rejection/AngularSeparationWithRejection}\label{fig:AngularSeparationWithRejection}}
   \caption{Angular separation of the reconstructed tracks in an ECal cluster with the beam-simulated particle that created them.  The black, red and green histograms are the tracks that were reconstructed first, second and third respectively.  All histograms are area normalised.}
   \label{fig:TrackRejectionAngularSeparation}
@@ -99,6 +100,7 @@ The above discussion suggests that two parameters should govern the vertex recon
 \begin{figure}
   \centering
   \subfloat[$d_q$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dq_marginalize} \label{fig:dqMarginalize}}
+  \hspace{1em}
   \subfloat[$d_c$]{\includegraphics[width=9cm]{images/selection/vertex_recon/dc_marginalize} \label{fig:dcMarginalize}}
   \caption{$\phi^{\textrm{vertices}}$ vs the marginalised vertex reconstruction parameters.  The same plateau effect shown in Fig.~\ref{fig:VertexReconFOM} can be seen here.  The ideal values for both reconstruction parameters are the ones which get as close to the sharp drop in $\phi^{\textrm{vertices}}$ as possible.}
   \label{fig:VertexReconMarginalizedDistributions}
@@ -221,6 +223,7 @@ The distance ratio distribution is shown Fig.~\ref{fig:TrackMergingConditionDist
 \begin{figure}
   \centering
   \subfloat[No cuts applied.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio.eps} \label{fig:TrackMergingConditionDistanceRatioNoCut}}
+  \hspace{1em}
   \subfloat[For $\cos\theta > 0.8$.]{\includegraphics[width=9cm]{images/selection/vertex_recon/merging_candidates_distance_ratio_CosThetaGuessCut.eps} \label{fig:TrackMergingConditionDistanceRatioGuessCutCosTheta}}
   \caption{The distance ratio of the merging candidates.  The correct and incorrect matches are the blue and red histograms respectively.  When no cuts are applied, the distance ratio shows little separation between the correctly matched and incorrectly matched events.  However, after demanding $\cos\theta > 0.8$, the incorrectly matched peak significantly flattens without altering the correctly matched peak.}
   \label{fig:TrackMergingConditionDistanceRatio}
@@ -229,6 +232,7 @@ To illustrate this dependency, two distributions are shown in Fig.~\ref{fig:Trac
 \begin{figure}[b!]
   \centering
   \subfloat[Correct matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/correct_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaCorrectMatch}}
+  \hspace{1em}
   \subfloat[Incorrect matches only.]{\includegraphics[width=9cm]{images/selection/vertex_recon/incorrect_merging_candidates_distance_ratio_vs_cos_theta.eps} \label{fig:TrackMergingConditionDistanceRatioVsCosThetaIncorrectMatch}}
   \caption{The distance ratio vs the cosine of the opening angle for track merging candidates.  This 2D space significantly separates out the correctly matched and incorrectly matches events.}
   \label{fig:TrackMergingConditionDistanceRatioVsCosTheta}
@@ -246,6 +250,7 @@ The tuning metric values in distance ratio cut vs $\cos\theta$ cut space are sho
 \begin{figure}
   \centering
   \subfloat[$\cos \theta$]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedCosThetaFOM.eps} \label{fig:TrackMergingCosThetaMarginalize}}
+  \hspace{1em}
   \subfloat[Distance ratio]{\includegraphics[width=9cm]{images/selection/vertex_recon/TrackMergingMarginalisedDistanceRatioFOM.eps} \label{fig:TrackMergingDistanceRatioMarginalize}}
   \caption{$\phi^{\textrm{merge}}$ vs the track merging conditions.  There is a clear but somewhat broad maximum of $\phi^{\textrm{merge}}$ in $\cos\theta$ space whereas there is only a plateau in distance ratio space.}
   \label{fig:TrackMergingMarginalizedDistributions}
@@ -269,6 +274,7 @@ While the $\cos\theta$ condition is clearly a powerful discriminator, there is a
 \begin{figure}
   \centering
   \subfloat[No cuts applied.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing.eps} \label{fig:TrackMergingSwingNoCuts}}
+  \hspace{1em}
   \subfloat[For $\cos\theta > 0.82$ and distance ratio $< 0.32$.]{\includegraphics[width=7cm]{images/selection/vertex_recon/merging_candidates_swing_OtherCutsApplied.eps} \label{fig:TrackMergingSwingOtherCutsApplied}}
   \caption{The number of merging candidates as a function of the swing parameter.  The correct matches and incorrect matches are the blue and red histograms respectively.  After applying the $\cos\theta$ and distance ratio cuts, the swing parameter distribution becomes bimodal, signifying that the swing parameter has separated out the two merging candidate topologies shown in Fig.~\ref{fig:TrackMergingCosThetaDegeneracySchematic}.}
   \label{fig:TrackMergingSwing}
@@ -310,6 +316,7 @@ To illustrate the benefit of separating events into specific prong topologies, F
 \begin{figure}
   \centering
   \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_All.eps} \label{fig:ProngStackBarrelAll}}
+  \hspace{1em}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_All.eps} \label{fig:ProngStackDSAll}}
   \caption{The number of reconstructed events in the Monte Carlo sample, separated into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The number of reconstructed events and the background contamination strongly depends on the number of reconstructed prongs.  This effect indicates that selection development should be tailored towards each prong topology individually.}
   \label{fig:ProngStackAll}
@@ -505,6 +512,7 @@ Despite the best efforts of the track merging, not all curving trajectories have
 \begin{figure}[b!]
   \centering
   \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_Barrel.eps} \label{fig:Sel2OpeningAngleBarrel}}
+  \hspace{1em}
   \subfloat[DS ECals.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_2Prong_DS.eps}\label{fig:Sel2OpeningAngleDS}}
   \caption{The opening angle subtended by the constituents prongs for the 2 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel2OpeningAngle}
@@ -520,6 +528,7 @@ Similar information should be available for the higher prong topologies.  Howeve
 \begin{figure}%
   \centering
   \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_Barrel.eps} \label{fig:Sel3OpeningAngleBarrel}}
+  \hspace{1em}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/OpeningAngle_3Prong_DS.eps}\label{fig:Sel3OpeningAngleDS}}
   \caption{The summed opening angle subtended by every pairwise combination of the constituents prongs for the 3 prong topology.  Signal and background events are the blue and red histograms respectively.}
   \label{fig:Sel3OpeningAngle}
@@ -717,6 +726,7 @@ The cross-section measurement presented in this analysis in an inclusive measure
 \begin{figure}
   \centering
   \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_Barrel.eps} \label{fig:EffPurSummedTopologiesBarrel}}
+  \hspace{1em}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/selection_performance/EffPur_SummedTopologies_DS.eps} \label{fig:EffPurSummedTopologiesDS}}
   \caption{The selection efficiency (black) and purity (red) for the combined prong topologies as a function of neutrino energy.  The selection efficiency is largely flat for both the barrel ECal and DS ECal showing the selections are not biased towards any particular energy range.  This is not the case for the selection purities but this can be explained by lower energy backgrounds having less penetrating power, resulting in a higher purity for lower neutrino energies.}
   \label{fig:EffPurSummedTopologies}
@@ -726,6 +736,7 @@ The cross-section measurement presented in this analysis in an inclusive measure
 \begin{figure}
   \centering
   \subfloat[Barrel ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_Barrel_Selected.eps} \label{fig:ProngStackBarrelSelected}}
+  \hspace{1em}
   \subfloat[DS ECal.]{\includegraphics[width=8cm]{images/selection/mc_selection/ProngStack_DS_Selected.eps} \label{fig:ProngStackDSSelected}}
   \caption{The number of selected events in the Monte Carlo sample, separated out into the prong topologies.  Each event is categorised by the associated truth information from the simulation.  The effect of the developed selection can be clearly seen in all prong topologies; each topology is now signal dominated.}
   \label{fig:ProngStackSelected}

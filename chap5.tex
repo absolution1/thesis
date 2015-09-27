@@ -20,6 +20,7 @@ Now consider a new 2D space where the axes are defined by $m$ and $c$, rather th
 \begin{figure}%
   \centering
   \subfloat[Line in 2D Cartesian space.  The line is defined by its intercept with the $y$-axis, $c$, and its gradient, $\Delta y/\Delta x = m$ (not shown).]{\includegraphics[width=7cm]{images/hough_transform/cartesian_line} \label{fig:2DCartesianLine}}
+  \hspace{1em}
   \subfloat[Point representation of the line defined in Fig.~\ref{fig:2DCartesianLine} in 2D parameter space.  Because the line is solely defined by its intercept, $c$, and its gradient, $m$, the line is defined as a point in this parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_point} \label{fig:2DParameterPoint}}
   \caption{Representations of a 2D line in Cartesian space.}
   \label{fig:2DCartesianLineAndParameterPoint}
@@ -40,6 +41,7 @@ and the intercept of the line with the $c$ axis is $y$ as shown in Fig.~\ref{fig
 \begin{figure}%
   \centering
   \subfloat[Point in 2D Cartesian space.  The point can be defined as an infinite set of lines, all of which cross at said point (three example lines are shown).]{\includegraphics[width=7cm]{images/hough_transform/cartesian_point} \label{fig:2DCartesianPoint}}
+  \hspace{1em}
   \subfloat[Line representation of the point defined in Fig.~\ref{fig:2DCartesianPoint} in 2D parameter space.  The infinite set of lines which represent the point in Fig.~\ref{fig:2DCartesianPoint} follow a relation, $c=-xm+y$, which itself is a line in the parameter space.]{\includegraphics[width=7cm]{images/hough_transform/parameter_line} \label{fig:2DParameterLine}}
   \caption{Representations of a 2D point in Cartesian space.}
   \label{fig:2DCartesianPointAndParameterLine}
@@ -62,7 +64,8 @@ We will now return to the Cartesian space for an example of how the Hough transf
 \end{equation}
 \begin{figure}%
   \centering
-  \subfloat[The three Cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints} along with example lines from each point's infinite line set.  The coordinates of each point are also shown.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}} \hspace{1em}
+  \subfloat[The three Cartesian points defined in equation~\ref{eq:HTExampleCartesianPoints} along with example lines from each point's infinite line set.  The coordinates of each point are also shown.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_cartesian_space} \label{fig:HTExampleCartesianSpace}} 
+  \hspace{1em}
   \subfloat[The three parameter lines defined in equation~\ref{eq:HTExampleParameterLines}.  The coordinates (2, 4) define the point of intersection of the three lines.]{\includegraphics[width=7cm]{images/hough_transform/HT_example_parameter_space} \label{fig:HTExampleParameterSpace}}
   \caption{The three points defined in equation~\ref{eq:HTExampleCartesianPoints} and their representation in the parameter space.  The colour coding matches the Cartesian points to their respective parameter lines.}
   \label{fig:HTExample}
@@ -155,6 +158,7 @@ Assuming that every bin of the parameter space will have a 1$^\circ\times$1 mm a
 \begin{figure}%
   \centering
   \subfloat[Grid representation of an ECal bar.]{\includegraphics[width=7cm]{images/ecal_hough_transform/ecal_grid_array.eps} \label{fig:ECalBarGridRepresentation}}
+  \hspace{1em}
   \subfloat[Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarGridRepresentation}.]{\includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps} \label{fig:ECalBarHoughTransformGridRepresentation}}
   \caption{The grid representation of an ECal bar and its representation in parameter space.}
   \label{fig:ECalBarGridRepresentationAndHoughTransform}
@@ -164,10 +168,11 @@ Assuming that every bin of the parameter space will have a 1$^\circ\times$1 mm a
 While the generated parameter line accurately represents every line which passes through the ECal bar, there are two problems with this approach.  Firstly, the large number of points to be Hough-transformed is very large which results in a long CPU time.  Secondly, there is a very high number of redundant calculations involved in the parameter line generation.  Consider an exactly vertical line which passes through one of the points in the grid array.  This line also passes through 10 other points in the same column of the grid.  This means that when the parameter line is being generated, this vertical line is calculated 11 times for each column.  Bearing this in mind, there are many points along the parameter line which are repeatedly calculated and provide no extra information.  This would mean that any algorithm which uses this approach would be very CPU inefficient.
 \newline
 \newline
-An alternative is to model the ECal bar as a set of points arranged in a cross as shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.  Assuming that the spacing between the points on each line of the cross is infinitesimal, any line which passes through the ECal bar would also have to pass through one of the points in the configuration.  As the parameter space is discrete, the spacing between the points need not be infinitesimal but only small enough to ensure that no gaps appear in the parameter line.  Using 45 points on each line of the cross, the ECal bar can be Hough-transformed by Hough-transforming each point in the cross configuration. An example of this result is shown in Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} using the same ECal bar used to generate Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  Clearly, Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation} and Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} are identical showing that the cross model achieves the same result as the grid model.  Comparing the two, the cross model uses a 90 point representation whereas the grid model uses a 451 point representation.  This should mean that an algorithm utilising the cross model would be a factor of five faster than one using a grid model.
+An alternative is to model the ECal bar as a set of points arranged in a cross as shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.  Assuming that the spacing between the points on each line of the cross is infinitesimal, any line which passes through the ECal bar would also have to pass through one of the points in the configuration.  As the parameter space is discrete, the spacing between the points need not be infinitesimal but only small enough to ensure that no gaps appear in the parameter line.  Using 45 points on each line of the cross, the ECal bar can be Hough-transformed by \YoshiFinal{Hough-}{was `Hough': There can be too many Houghs in a sentence}transforming each point in the cross configuration. An example of this result is shown in Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} using the same ECal bar used to generate Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation}.  Clearly, Fig.~\ref{fig:ECalBarHoughTransformGridRepresentation} and Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation} are identical showing that the cross model achieves the same result as the grid model.  Comparing the two, the cross model uses a 90 point representation whereas the grid model uses a 451 point representation.  This should mean that an algorithm utilising the cross model would be a factor of five faster than one using a grid model.
 \begin{figure}%
   \centering
   \subfloat[Cross representation of an ECal bar.]{\includegraphics[width=7cm]{images/ecal_hough_transform/ecal_cross_array.eps} \label{fig:ECalBarCrossRepresentation}}
+  \hspace{1em}
   \subfloat[Single ECal bar Hough transform using the point configuration shown in Fig.~\ref{fig:ECalBarCrossRepresentation}.]{\includegraphics[width=7cm]{images/ecal_hough_transform/single_ecal_bar_hough_transform.eps} \label{fig:ECalBarHoughTransformCrossRepresentation}}
   \caption{The cross representation of an ECal bar and its representation in parameter space.}
   \label{fig:ECalBarCrossRepresentationAndHoughTransform}
@@ -175,13 +180,13 @@ An alternative is to model the ECal bar as a set of points arranged in a cross a
 
 \subsection{Parameter space generation}
 \label{subsec:ParameterSpaceGeneration}
-As we have addressed how to Hough transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry\Yoshi{; however,}{ADDRESSED - was ``, however''} this is located in TPC 1 which would mean $\rho$ will usually be the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
+As we have addressed how to Hough-transform an ECal bar, we are now in suitable position to generate the full parameter space for an ECal cluster.  As described in section~\ref{subsec:ParameterRedefinition}, the parameterisation of the 2D lines requires some point in space to act as the origin.  It is possible to use the origin defined by the global ND280 geometry\Yoshi{; however,}{ADDRESSED - was ``, however''} this is located in TPC 1 which would mean $\rho$ will usually be \YoshiFinal{of}{} the order of metres.  It is more convenient to define an origin in the vicinity of the ECal cluster being reconstructed.  A simple option is to use the charge-weighted centre of the ECal cluster as the origin of the Hough transform.  This location is simple to calculate and generally keeps $\rho$ small.
 \newline
 \newline
 The provided description of the Hough transform in all previous sections is strictly defined in 2D and so the ECal cluster should be split in such a way that this definition can be used.  Fortunately, a 3D ECal cluster is built up using the two 2D views that the scintillator layers provide.  So, it is relatively easy to split the 3D cluster into a pair of 2D clusters by collecting the cluster's hits into their respective 2D views.
 \newline
 \newline
-We can now partly answer one of the problems raised in section~\ref{sec:ECalApplicationHoughTransform} which is how to handle the track multiplicity aspect of the reconstruction?  This is partly addressed by generating $N$ parameter spaces with the same $\theta$-$\rho$ bin configuration where $N$ is the number of hits in the 2D cluster.  Each of the $N$ parameter spaces will hold one parameter line generated by one of the 2D hits (in a similar fashion to Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation}).  The final parameter space can then be generated by adding together each of the $N$ parameter spaces.  The parameter space of the 2D cluster in Fig~\ref{fig:3StateInteractionNoReconstruction} is shown in Fig.~\ref{fig:FullParameterSpace3StateInteraction}.
+We can now partly answer one of the problems raised in section~\ref{sec:ECalApplicationHoughTransform} which is how to handle the track multiplicity aspect of the reconstruction\YoshiFinal{.}{was `?', but it isn't actually a question} This is partly addressed by generating $N$ parameter spaces with the same $\theta$-$\rho$ bin configuration where $N$ is the number of hits in the 2D cluster.  Each of the $N$ parameter spaces will hold one parameter line generated by one of the 2D hits (in a similar fashion to Fig.~\ref{fig:ECalBarHoughTransformCrossRepresentation}).  The final parameter space can then be generated by adding together each of the $N$ parameter spaces.  The parameter space of the 2D cluster in Fig~\ref{fig:3StateInteractionNoReconstruction} is shown in Fig.~\ref{fig:FullParameterSpace3StateInteraction}.
 \begin{figure}
   \centering
   \includegraphics[width=10cm]{images/ecal_hough_transform/FullParameterSpace_3StateInteraction.eps}
@@ -236,6 +241,7 @@ where $s_i$ is the number of correctly matched tracks in bin $i$ and $b_i$ is th
   \centering
 \Yoshi{}{ADDRESSED - Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
   \subfloat[$Q_{\textrm{ratio}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  The two distributions peak at different values of $Q_{\textrm{ratio}}$, which implies $Q_{\textrm{ratio}}$ provides good separation of the correctly and incorrectly matched events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_Separation.eps} \label{fig:3DMatchingBarrel2TrackQRatioSeparation}}
+  \hspace{1em}
   \subfloat[$Q_{\textrm{ratio}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackQRatioSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_QRatio_PDF.eps} \label{fig:3DMatchingBarrel2TrackQRatioPDF}}
   \caption{$Q_{\textrm{ratio}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:QRatio}
@@ -247,6 +253,7 @@ The second input to the likelihood, called $\Delta_{\textrm{layer, first}}$, is 
 \Yoshi{}{Say what the reader should take away from these plots. The reader should not have to go to the body text to figure this out.}
   \centering
   \subfloat[$\Delta_{\textrm{layer, first}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  While both distributions peak in the same place, the peak for the correct matches distribution is much sharper, indicating a good level of separation between the correctly and incorrectly matches events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDFLSeparation}}
+  \hspace{1em}
   \subfloat[$\Delta_{\textrm{layer, first}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackDFLSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DFL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDFLPDF}}
   \caption{$\Delta_{\textrm{layer, first}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:DFL}
@@ -257,6 +264,7 @@ The third and final input to the likelihood, called $\Delta_{\textrm{layer, last
 \begin{figure}%
   \centering
   \subfloat[$\Delta_{\textrm{layer, last}}$ distribution (area normalised).  The blue and red distributions refers to matching pairs which were matched to the same true particle and different true particles respectively.  While both distributions peak in the same place, the peak for the correct matches distribution is much sharper, indicating a good level of separation between the correctly and incorrectly matches events.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_Separation.eps} \label{fig:3DMatchingBarrel2TrackDLLSeparation}}
+  \hspace{1em}
   \subfloat[$\Delta_{\textrm{layer, last}}$ probability density distribution.  The peak of the distribution aligns well with the correct matches peak in Fig.~\ref{fig:3DMatchingBarrel2TrackDLLSeparation} which aides in maximising the number of correct matches made.]{\includegraphics[width=7cm]{images/hough_3d_matching/3DMatching_Barrel_2Track_DLL_PDF.eps} \label{fig:3DMatchingBarrel2TrackDLLPDF}}
   \caption{$\Delta_{\textrm{layer, last}}$ and its probability density distribution in the barrel ECal for the two track case.  NEUT-based simulation of ND280 beam events were used to produce the distributions.}
   \label{fig:DLL}
@@ -376,8 +384,9 @@ The fgdcol sample will naturally contain a good sample of barrel ECal events whi
 Fig.~\ref{fig:TotalChargeDataValidation} shows the summed charge contained in all tracks reconstructed in each ECal cluster.  To clarify what this means, if a reconstructed ECal cluster contained three reconstructed tracks where tracks 1, 2 and 3 contain 20~MEU, 50~MEU and 30~MEU of charge respectively, that event would be registered as having 100~MEU of charge in the relevant distribution in Fig.~\ref{fig:TotalChargeDataValidation}.  Both the barrel ECal and DS ECal samples show a large discrepancy around the charge peak.  This offset can be explained as a hit-level charge discrepancy between data and Monte Carlo and is not caused by the reconstruction.  This discrepancy should, however, be considered during analysis of the systematic uncertainties.  Unfortunately, the DS ECal events in the bskmu sample (Fig.~\ref{fig:TotalChargebskmuDS}) shows an extra data excess in the 20~MEU to 30~MEU region which is just before the charge peak.  This data excess can not be explained by a relative hit inefficiency. 
 \begin{figure}%
   \centering
-  \subfloat[Barrel ECal events in the fgdcol sample.  The data peak is offset to the Monte Carlo peak, indicating an unmodelled dead channel issue.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_fgdcol_Barrel.eps} \label{fig:TotalChargefgdcolBarrel}}
-  \subfloat[DS ECal events in the bskmu sample.  The data peak is offset to the Monte Carlo peak, indicating an unmodelled dead channel issue.  There is also a significant data excess before the peak of the distributions.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_bskmu_DSECal.eps} \label{fig:TotalChargebskmuDS}}
+  \subfloat[Barrel ECal events in the fgdcol sample.  The data peak is offset to the Monte Carlo peak, indicating an unmodelled dead channel issue.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalCharge_fgdcol_Barrel.eps} \label{fig:TotalChargefgdcolBarrel}}
+  \hspace{1em}
+  \subfloat[DS ECal events in the bskmu sample.  The data peak is offset to the Monte Carlo peak, indicating an unmodelled dead channel issue.  There is also a significant data excess before the peak of the distributions.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalCharge_bskmu_DSECal.eps} \label{fig:TotalChargebskmuDS}}
   \caption{The summed charge contained on all tracks reconstructed in each ECal cluster.  The red histograms and black points are Monte Carlo and data respectively.}
   \label{fig:TotalChargeDataValidation}
 \end{figure}
@@ -386,8 +395,9 @@ Fig.~\ref{fig:TotalChargeDataValidation} shows the summed charge contained in al
 Fig.~\ref{fig:TotalHitsDataValidation} shows the summed number of hits contained in all tracks reconstructed in each ECal cluster.  Generally speaking, the distributions in Fig.~\ref{fig:TotalHitsDataValidation} share similar features to those in Fig.~\ref{fig:TotalChargeDataValidation}.  Importantly, an excess of data events appears just before the peak in Fig.~\ref{fig:TotalHitsDataValidation}.  The fact that this excess also appears in Fig.~\ref{fig:TotalHitsDataValidation} strongly suggests that the issue is caused by the number of hits associated to the reconstructed tracks, rather than the deposited charge.  Further investigation of this discrepancy revealed that a mismodelled hit inefficiency, most likely due to dead DS ECal channels, was the issue.  One of the 2D track quality checks (see section~\ref{subsec:2DTrackQualityChecks}) requires that a 2D track candidate can not skip a layer in a given view which is problematic when considering dead channels.  
 \begin{figure}%
   \centering
-  \subfloat[Barrel ECal events in the fgdcol sample.  The only significant discrepancy is the offset of the data peak relative to the Monte Carlo peak, suggesting an unmodelled dead channel issue.]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_fgdcol_Barrel.eps} \label{fig:TotalHitsfgdcolBarrel}}
-  \subfloat[DS ECal events in the bskmu sample.  There is a significant data excess before the peak in the distributions.]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_bskmu_DSECal.eps} \label{fig:TotalHitsbskmuDS}}
+  \subfloat[Barrel ECal events in the fgdcol sample.  The only significant discrepancy is the offset of the data peak relative to the Monte Carlo peak, suggesting an unmodelled dead channel issue.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalHits_fgdcol_Barrel.eps} \label{fig:TotalHitsfgdcolBarrel}}
+  \hspace{1em}
+  \subfloat[DS ECal events in the bskmu sample.  There is a significant data excess before the peak in the distributions.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalHits_bskmu_DSECal.eps} \label{fig:TotalHitsbskmuDS}}
   \caption{The summed number of hits contained on all tracks reconstructed in each ECal cluster.  The red histograms and black points are Monte Carlo and data respectively.}
   \label{fig:TotalHitsDataValidation}
 \end{figure}
@@ -396,8 +406,9 @@ Fig.~\ref{fig:TotalHitsDataValidation} shows the summed number of hits contained
 To test this hypothesis, this requirement was relaxed to allow a 2D track candidate to skip a single ECal layer and the Monte Carlo bskmu sample was re-processed.  The re-processed DS ECal events are shown in Fig.~\ref{fig:bskmuCorrectedDSDataValidation}.  As can clearly be seen, the data excess before the peak in the distributions has now gone.  Unfortunately, large scale processing and analysis of beam Monte Carlo events had already started by the time this issue was discovered and so it was infeasible to include this bug fix in the analysis.  So, it was decided that this issue would be treated as an additional systematic uncertainty.  The collected data events were processed with this fix in place.
 \begin{figure}[b!]%
   \centering
-  \subfloat[Summed charge contained on all tracks in each reconstructed ECal cluster.]{\includegraphics[width=8cm]{images/hough_validation/TotalCharge_bskmuCorrected_DSECal.eps} \label{fig:TotalChargebskmuCorrectedDS}}
-  \subfloat[Summed number of hits contained on all tracks in each reconstructed ECal cluster.]{\includegraphics[width=8cm]{images/hough_validation/TotalHits_bskmuCorrected_DSECal.eps} \label{fig:TotalHitsbskmuCorrectedDS}}
+  \subfloat[Summed charge contained on all tracks in each reconstructed ECal cluster.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalCharge_bskmuCorrected_DSECal.eps} \label{fig:TotalChargebskmuCorrectedDS}}
+  \hspace{1em}
+  \subfloat[Summed number of hits contained on all tracks in each reconstructed ECal cluster.]{\includegraphics[width=7.5cm]{images/hough_validation/TotalHits_bskmuCorrected_DSECal.eps} \label{fig:TotalHitsbskmuCorrectedDS}}
   \caption{The number of DS ECal events in the bskmu sample after relaxing the 2D track quality check.  The red histograms and black points are the Monte Carlo and data respectively.  The track quality fix has corrected the data excesses in both distributions, leaving only the offset between the data and Monte Carlo peaks.}
   \label{fig:bskmuCorrectedDSDataValidation}
 \end{figure}
