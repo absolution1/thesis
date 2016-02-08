@@ -87,25 +87,25 @@ To estimate the number of photo-electrons produced in an MPPC, The readout charg
 \end{figure}
 \newline
 \newline
-The time of the signal read by the MPPC is charge dependent and so it relies on the above corrections.  However, there are extra steps needed to get an accurate estimate of the timestamp. \DomTC{When a signal is sent from the MPPC to a TFB, the TRIP-t discriminator sets the timestamp after the charging capacitor passes a defined threshold.  The charge on a capacitor $Q$ is a function of its capacitance $C$ and the voltage $V$ and is defined as
+The time of the signal read by the MPPC is charge dependent and so it relies on the above corrections.  However, there are extra steps needed to get an accurate estimate of the timestamp. \DomTC{When a signal is sent from the MPPC to a TFB, the Trip-T discriminator sets the timestamp after the charging capacitor passes a defined threshold.  The charge on a capacitor $Q$ is a function of its capacitance $C$ and the voltage $V$ and is defined as
 \begin{equation}
   Q = CV.
 \end{equation}
-The collected charge on the capacitor passes the TRIP-t discriminator threshold $Q_{\textrm{Th}}$ after time $t_{\textrm{Th}}$.  $Q_{\textrm{Th}}$~\cite{ND280CalibTN} is defined as
+The collected charge on the capacitor passes the Trip-T discriminator threshold $Q_{\textrm{Th}}$ after time $t_{\textrm{Th}}$.  $Q_{\textrm{Th}}$~\cite{ND280CalibTN} is defined as
 \begin{equation}
 Q_{\textrm{Th}} = CV_0\big(1- e^{\frac{t_{\textrm{Th}}}{\tau}}\big).
 \label{eqn:CapacitorChargeVsTime}
 \end{equation}
-where $\tau$ is the decay constant.  Consider three identical capacitors held at different voltages which correspond to final charge values $Q1$, $Q2$ and $Q3$ where $Q1 < Q2 < Q3$.  Fig.~\ref{fig:CapacitorChargingTime} shows the time it takes for each of the hypothetical capacitors to reach their final charge.  The black dashed line in Fig~\ref{fig:CapacitorChargingTime} represents the threshold imposed by a TRIP-t discriminator.  As can be clearly seen from the figure, the time taken to pass the threshold depends on the final charge value of the capacitor.  This effect is called the electronics time-walk effect and requires correction.
+where $\tau$ is the decay constant.  Consider three identical capacitors held at different voltages which correspond to final charge values $Q1$, $Q2$ and $Q3$ where $Q1 < Q2 < Q3$.  Fig.~\ref{fig:CapacitorChargingTime} shows the time it takes for each of the hypothetical capacitors to reach their final charge.  The black dashed line in Fig~\ref{fig:CapacitorChargingTime} represents the threshold imposed by a Trip-T discriminator.  As can be clearly seen from the figure, the time taken to pass the threshold depends on the final charge value of the capacitor.  This effect is called the electronics time-walk effect and requires correction.
 \begin{figure}[t!]
   \centering
   \includegraphics[width=11cm]{images/software/Capacitor_Charging_Time.pdf}
-  \caption{Charge as a function of time for three identical capacitor with different final charging values~\cite{ND280CalibTN}.  The black dashed line represents the threshold imposed by a TRIP-t discriminator.  A capacitor which has a higher final charge value passes the threshold faster than a capacitor with a lower final charge value.}
+  \caption{Charge as a function of time for three identical capacitor with different final charging values~\cite{ND280CalibTN}.  The black dashed line represents the threshold imposed by a Trip-T discriminator.  A capacitor which has a higher final charge value passes the threshold faster than a capacitor with a lower final charge value.}
   \label{fig:CapacitorChargingTime}
 \end{figure}
 \newline
 \newline
-Charge Injection (CI) runs are taken in the ECal to assess and correct the electronics time-walk effect.  Each CI run produces several cycle of CI.  For each cycle, a well known charge is injected into the TRIP-t channels and the average timestamp is recorded.  Afterwords, the input charge is increased and the next CI cycle starts.  It is then necessary to fit the collected CI data to correct for the time-walk.  To understand the fitting function, it is first necessary to re-arrange equation~\ref{eqn:CapacitorChargeVsTime} such that
+Charge Injection (CI) runs are taken in the ECal to assess and correct the electronics time-walk effect.  Each CI run produces several cycle of CI.  For each cycle, a well known charge is injected into the Trip-T channels and the average timestamp is recorded.  Afterwords, the input charge is increased and the next CI cycle starts.  It is then necessary to fit the collected CI data to correct for the time-walk.  To understand the fitting function, it is first necessary to re-arrange equation~\ref{eqn:CapacitorChargeVsTime} such that
 \begin{equation}
 t_{\textrm{Th}} = -\tau \textrm{ln}\big(1-\frac{Q_{\textrm{Th}}}{Q}\big).
 \label{eqn:ThresholdTimeVsCharge}
