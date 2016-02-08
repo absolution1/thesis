@@ -34,8 +34,8 @@
 %\DeclareRobustCommand{\YoshiFinal}[2]{{\color[RGB]{111,0,158}{{#1}\footnote{\color[RGB]{111,0,158}#2}}}} % full words of wisdom version
 \DeclareRobustCommand{\DomTC}[2]{{\color[RGB]{111,0,158}{{#1}}}} % believe everything I say version
 
-
-
+%Declare better paragraph which starts a new line after the title
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\\mbox{}\\}
 
 
 %% You can set the line spacing this way
@@ -75,13 +75,12 @@
 \begin{mainmatter}
 
 %Set the section numbering to 3 layers deep
-\setcounter{secnumdepth}{3}
-
+\setcounter{secnumdepth}{5}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
   %\input{chap1}
   %\input{chap2}
-  \input{chap3}
-  %\input{chap4}
+  %\input{chap3}
+  \input{chap4}
   %\input{chap5}
   %\input{chap6}
   %\input{chap7}
