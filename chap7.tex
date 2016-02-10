@@ -53,6 +53,77 @@ The number of signal interactions from the Monte Carlo sample is shown in table~
   \caption{The number of signal events in the NEUT-based beam Monte Carlo sample as a function of neutrino energy in the bottom-left (red), top-right (blue) and DS (black) ECals.  The bottom-left ECal sees the most signal events and at a higher neutrino energy which is caused by the off-axis effect.}
   \label{fig:NSignalEventsTruthNeutrinoEnergy}
 \end{figure}
+\section{Background particles}
+\label{sec:BackgroundParticles}
+\DomTC{For any selection process to be successful, it must be able to identify the signal particles of interest while simultaneously rejecting background particles.  To make this possible, it is necessary to have a solid understanding of the background particle flavour and provenance.  In the ECal, the backgrounds can be separated into two topologies.  The first is the intrinsic background which are based on neutrino interactions in the ECal which are not defined as signal e.g. $\nu_e$ interactions.  As the reconstruction stands, this topology is difficult to reject, largely because the reconstruction has not progressed to the point where particle identification can be reliably used to tag the final state particles.  As will be shown, this background topology will be reduced at a similar rate to the signal-loss during selection development.  The second background topology concerns particles which are produced in another area of the geometry, but enter the ECal volume.  This background topology will be referred to as the ECal Out Of Fiducial Volume (OOFV) background from now on.  It is especially important to understand the ECal OOFV background as it dominates the reconstructed events seen in the ECal.  To tailor a selection to reject such a topology, it is necessary to understand its characteristics.  Fig.~\ref{fig:EnteringBackgroundTruthECal} shows the number of ECal OOFV background particles, separated into particle species as a function of their momentum at point of ECal entry.  At all points, muons are the dominant background.  However, this, dominance is in no way uniform.  For example, in the lowest momentum regime, photons are the second largest dominant contributor, while at the momentum peak charged pions are the second largest contributor.  It should be expected that the muon background and photon background will create reconstructed clusters with a very different shape and charge deposition.  This promotes the idea of developing separate cuts which are tailored towards each particles species in the ECal OOFV background.}.  
+\begin{figure}%
+  \centering
+  \subfloat[The Barrel ECal.]{\includegraphics[width=7.5cm]{images/selection/backgrounds/EnteringBackground_Truth_BarrelECal.pdf} \label{fig:EnteringBackgroundTruthBarrelECal}}
+  \hspace{1em}
+  \subfloat[The DS ECal.]{\includegraphics[width=7.5cm]{images/selection/backgrounds/EnteringBackground_Truth_DSECal.pdf}\label{fig:EnteringBackgroundTruthDSECal}}
+  \caption{The number of background particles, separated out into particles species, as a function of their momentum at point of entry into the ECal.}
+  \label{fig:EnteringBackgroundTruthECal}
+\end{figure}
+\newline
+\newline
+\DomTC{It is also important to consider where the background particles originate.  The barrel and DS ECals occupy very different areas of the geomtry and are not exposed to the same level of neutrino flux.  Fig.~\ref{fig:EntryMomentumInitSubDetBarrelECal} and Fig.~\ref{fig:EntryMomentumInitSubDetDSECal} show the ECal entrance momentum of the entering background Vs. the point of creation of the OOFV background for the barrel ECal and DS ECal respectively.  It is clear from the plots that the creation point of the entering background is very different for the barrel and DS ECal.  For are particle species in the barrel ECal, the dominant creation region is the magnet and surrounding pit.  This should be expected as all of the barrel ECal is surrounded by the magnetic flux return yoke.  However, in the DS ECal case, there is significantly more variation in which ND280 regions contribute to the DS ECal OOFV background.  Notably, there is a significant contribution from the downstream region of the tracker (FGD~2 and TPC~3).  Such differences promote the idea of separating the barrel ECal and DS ECal in the selection process}.
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[$\mu^{\pm}$.]{\label{fig:EntryMomentumInitSubDetBarrelECalMuon}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Muon.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Protons.]{\label{fig:EntryMomentumInitSubDetBarrelECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Proton.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[$\pi^{\pm}$.]{\label{fig:EntryMomentumInitSubDetBarrelECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Pion.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[$e^{\pm}$.]{\label{fig:EntryMomentumInitSubDetBarrelECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Electron.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Photons.]{\label{fig:EntryMomentumInitSubDetBarrelECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Gamma.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+%  \subfloat[Top right ECal.]{\label{fig:ClusterNHitsCutLevelGT0TRB}\includegraphics[width=7.5cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_BarrelECal_Muon.pdf}}
+\end{minipage}\par\medskip
+\caption{The entry momentum of particles entering the barrel ECal Vs. the point of creation of the particles.  For all ranges of entance momentum, the dominant point of provenance for all particles is from the magnet and pit regions.}
+\label{fig:EntryMomentumInitSubDetBarrelECal}
+\end{figure}
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[$\mu^{\pm}$.]{\label{fig:EntryMomentumInitSubDetDSECalMuon}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Muon.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Protons.]{\label{fig:EntryMomentumInitSubDetDSECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Proton.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[$\pi^{\pm}$.]{\label{fig:EntryMomentumInitSubDetDSECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Pion.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+  \subfloat[$e^{\pm}$.]{\label{fig:EntryMomentumInitSubDetDSECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Electron.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+  \centering
+  \subfloat[Photons.]{\label{fig:EntryMomentumInitSubDetDSECal}\includegraphics[width=8.0cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Gamma.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+%  \subfloat[Top right ECal.]{\label{fig:ClusterNHitsCutLevelGT0TRB}\includegraphics[width=7.5cm]{images/selection/backgrounds/EntryMomentum_InitSubDet_DSECal_Muon.pdf}}
+\end{minipage}\par\medskip
+\caption{The entry momentum of particles entering the DS ECal Vs. the point of creation of the particles.  Unlike the barrel ECal case(Fig.~\ref{fig:EntryMomentumInitSubDetBarrelECal}), the creation point of the particles is more varied and includes significant contributions from the downstream end of the tracker (FGD~2 and TPC~3).}
+\label{fig:EntryMomentumInitSubDetDSECal}
+\end{figure}
+
 \section{Vertex reconstruction}
 \label{sec:VertexReconstruction}
 \Yoshi{The following section outlines the algorithm developed to reconstruct vertices in the ECal using the enhanced reconstruction described in chapter~\ref{chap:EnhancedECalReconstruction}.  The core of the reconstruction in a nearest neighbour algorithm which clusters together tracks based on their pairwise crossing locations.  Because the output of the enhanced reconstruction was kept generic, it is necessary to first reject poorly reconstructed tracks and the spurious pairwise crossing locations that the tracks form.}{I think it would help to have a couple of sentences that clearly gives an outline of what you are going to described. I jumps straight into details, without a giving the reader any idea of the algorithm that is to be described---it is quite a long section. Breaking it up into subsections might help too}
