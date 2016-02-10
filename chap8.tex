@@ -250,8 +250,7 @@ The analysis presented makes heavy use of a computational model of the ND280 ECa
 \newline
 \newline
 The implemented selections uses the enhanced reconstruction, outlined in chapter~\ref{chap:EnhancedECalReconstruction}.  The enhanced reconstruction depends on a set of clustering algorithms which are outlined in section~\ref{sec:ECalEventReconstruction} and those clustering algorithms depend on the hit scintillator bars themselves.  Following this trail back, it can be argued that the vast majority of the ECal detector systematics can be covered by assessing the ability of the ECal to reconstruct individual hits.  Specifically, the vast majority of the ECal's systematic uncertainties can be assessed by investigating the hit efficiency of the scintillator bars.  
-\newline
-\newline
+\subsubsection{The hit efficiency of the ECal scintillator bars}
 The aim of this study is to quantify the relative ECal hit inefficiency of collected data when compared to MC and use that information to invoke a similar ECal hit inefficiency in the MC.  The effect of the hit inefficiency can then be propagated through the reconstruction and analysis to study its effect on the number of selected events.  Fig.~\ref{fig:LayerEfficiencyCosmicData} shows the layer-by-layer efficiency of the ND280 ECals, measured using cosmic data~\cite{1748-0221-8-10-P10019}.  Cosmic rays, which are largely composed of MIPs, are typically through going and only hit one bar per layer.  So, the efficiencies shown in Fig.~\ref{fig:LayerEfficiencyCosmicData}, can be used as a proxy for the hit efficiency of the scintillator bars.  Fig.~\ref{fig:LayerEfficiencyCosmicData} contains almost all of the necessary information required to study this systematic uncertainty with the only missing information being the hit efficiency of the MC ECal.  Due to time constraints, it was necessary to make a couple of conservative assumptions:
 \begin{figure}[t!]
   \centering
@@ -278,8 +277,7 @@ The distribution is cut off at 5.5~PEU as this is a minimum threshold for output
   \caption{The sample fractional covariance induced by the ECal hit inefficiency.}
   \label{fig:ECalThresholdCovarianceMatrices}
 \end{figure}
-\newline
-\newline
+\subsubsection{The charge resolution of the ECal scintillator bars}
 The hit efficiency systematic uncertainty actually covers several areas of uncertainty.  Firstly, it addresses how a change in the core input to the reconstruction changes its output and so, by extension, addresses the efficiency of the reconstruction.  However, because the inefficiency is invoked by removing low charge hits, it also addresses how low charge hits, which could migrate below the minimum reconstruction threshold, could affect the analysis.  Because treatment of the charge by the hit efficiency systematic is partially covered, it is only necessary to additionally address how variation in the charge of the already reconstructed objects could alter the number of objects which pass the selection cuts.  To assess this, a well understood side-band sample is needed such that the hit charge in MC and data can be compared.  Any shift or smearing of the charge in data, relative to Monte Carlo must then be added to the reconstructed objects, which can then be passed through the selection, allowing the covariance matrices to be constructed.  To study the variation in the hit charge, a sample of cosmic MC and data was used.  The two samples were passed through the enhanced reconstruction and the charge of the hits associated to the reconstructed events were then analysed.  An example of the reconstructed hit charges is shown in Fig.~\ref{fig:HitChargeNominalCosmicsTLB}.  
 \begin{figure}%
   \centering
@@ -336,8 +334,7 @@ where $N_{\textrm{prong}}$ is the number of hits contained on the prong.  Follow
   \caption{The sample fractional covariance induced by the ECal charge uncertainties.}
   \label{fig:ECalChargeCovarianceMatrices}
 \end{figure}
-\newline
-\newline
+\subsubsection{Inherent noise in the ECal}
 While the hit efficiency and charge systematic assessments are fairly all-encompassing in terms of ECal detector uncertainties, they can not address how the inherent noise in the ECal can affect the reconstruction and, by extension, the selected number of events in this analysis.  There is only a need to address a noise systematic uncertainty if the simulated noise rate in the Monte Carlo is different to what actually happens in the ECal.  
 \newline
 \newline
@@ -378,8 +375,7 @@ It is clear that there are differences between the noise levels in data and Mont
   \caption{The sample fractional covariance induced by the ECal noise uncertainties.}
   \label{fig:ECalNoiseCovarianceMatrices}
 \end{figure}
-\newline
-\newline
+\subsubsection{The mass of the ECal active volume}
 The ECal model used in the simulation was based on the as built drawings and so should be an accurate model.  However, the components of each ECal module do have associated uncertainties which are not, and can not easily be, taken into account in the simulation, but could easily cause a systematic difference between data and Monte Carlo.  For example, if the DS ECal lead absorbers were thicker in the simulated model, one should expect to see a relative deficit of beam triggered events in the DS ECal collected data.  Provided that the component dimensions, compositions and uncertainties are known, toy Monte Carlo can be used to construct a set of toy ECal modules which model the variation in the module mass.  This can be expanded further, to construct a covariance matrix for the total mass of each contributing element.  This covariance matrix can then be used to re-weight the events, based on target element, in the Monte Carlo sample to model the effect of the ECal mass systematic.  
 \newline
 \newline
@@ -400,11 +396,11 @@ The ECal module designs are split into three types: side, top/bottom and DS.  It
 
 
 %The following discusses the construction of the side toy ECal modules.  The choices made and the process followed were the same for all three designs.  
-\subsubsection{The lead absorbers}
+\myparagraph{The lead absorbers}
 \label{subsubsec:ECalMassLeadAbsorbers}
 Reference~\cite{1748-0221-8-10-P10019} provided a clear description of the composition of the lead absorbers for the ECal module designs, which are summarised in table~\ref{table:LeadAbsorberDimensions}.  All component uncertainties (both dimension and composition) were given as symmetric errors.  To construct an ECal lead layer, each layer dimension was randomly taken from a Gaussian with a mean equal to the quoted dimension and a width equal to the dimension uncertainty.  After the layer volume was defined, the Sb contamination was calculated, also using a Gaussian throw, but using the quoted Sb contamination and its uncertainty as the Gaussian's mean and width.  The described information could then be used to retrieve the mass of the Pb and Sb in an ECal lead layer.
 
-\subsubsection{The scintillator bars}
+\myparagraph{The scintillator bars}
 \label{subsubsec:ECalMassSctintillatorBars}
 The information used to construct the toy scintillator bars is summarised in table~\ref{table:ScintillatorBarDimensions}, most of which was found in reference~\cite{1748-0221-8-10-P10019}.  The length of the bars were quoted with symmetric uncertainties (like the lead absorbers), so the length was treated in the same way as the lead absorber dimensions.  The hole and coating dimensions were also treated in the same manner.  However, the width and height were quoted with asymmetric errors and so could not be treated in the same way.  Only a negative uncertainty was quoted, which meant the width and height uncertainties could be treated in a somewhat similar manner, but with random numbers being drawn from a half-Gaussian.  The bar composition was reported as polystyrene doped with $1\%$~PPO (C$_{15}$H$_{11}$NO) and $0.03\%$~POPOP.  For the toy bar construction, the POPOP was considered negligible and so was not included.  The result was that the toy bar composition (excluding the coating) was 99$\%$~CH and 1$\%$~C$_{15}$H$_{11}$NO by mass.  Unfortunately, the full composition of the TiO$_2$ coating was not extensively described.  However, a similar systematic study has already been undertaken for the FGD~\cite{FGDMassTN} which included an investigation of the coating composition.  A representative for the Fermilab facility which extruded the scintillator bars reported that the final composition of the coating was 15$\%$ rutile-form TiO$_2$ and 85$\%$ CH with other contributing compounds considered negligible.  This information was also included in the modelling.  The collected information could then be used to retrieve the contributing mass of each element in a scintillator bar.
 \begin{table}[t!]
@@ -426,7 +422,7 @@ The information used to construct the toy scintillator bars is summarised in tab
 \end{table}
 
 
-\subsubsection{The WLS fibres}
+\myparagraph{The WLS fibres}
 \label{subsubsec:ECalMassWLSFibres}
 The information used to constructed the WLS fibres is shown in table~\ref{table:WLSFibreDimensions}.  As with the other toy components, reference~\cite{1748-0221-8-10-P10019} provided most of the necessary information for the construction and could be largely treated using the same methods as above.  The major difference is that the WLS fibre diameter had an asymmetric error in which both components were not zero.  So, two toy Gaussians were constructed to draw from (one representing each uncertainty) and a random number was first drawn from a uniform distribution to decide which Gaussian would be used.  Very little information was provided about the composition of the WLS fibre\Yoshi{; however,}{ADDRESSED - was ``, however''} the mass study in the FGD~\cite{FGDMassTN} assumed the WLS fibre was composed entirely of scintillator, so the same assumption was used for this study.  As with the other components, the provided information could then be used to retrieve the contributing mass of the elements in the WLS fibres.
 \begin{table}
@@ -445,7 +441,7 @@ The information used to constructed the WLS fibres is shown in table~\ref{table:
 \end{table}
 
 
-\subsubsection{ECal mass covariance}
+\myparagraph{ECal mass covariance}
 \label{subsubsec:ECalMassCovariance}
 Toy simulation was used to construct each component described in the above sections.  Each component was repeatedly built and was subsequently used to construct an ECal module.  The contributing mass of each element to the toy ECal module was then recorded.  10,000 toy ECal modules were constructed for each type, totalling 30,000 constructed modules.  The recorded contributing elemental mass for each construction was used to build up a mass covariance matrix using equation.~\ref{eqn:CovarianceMatrixElementDef} and equation.~\ref{eqn:NVariedDef}, an example of which is shown in Fig.~\ref{fig:MassCovDSECalAllElements} for the DS ECal.  Unfortunately, it was found that the covariance matrices for all three module types were singular, which is of immediate concern as the matrices need to be \YoshiFinal{Cholesky-decomposed}{ADDRESSED - was `Cholesky decomposed'} as part of the systematic uncertainty evaluation.  It was found that the singular nature of the covariance matrices was caused by the contributing elements which have small covariance values (both on and off diagonal) and the problem could be solved by not considering some of them in the covariance matrix.  The three problematic elements are carbon, nitrogen and hydrogen.  Both nitrogen and hydrogen only constitute a relatively small amount of the mass and an example of this is shown in Fig.~\ref{fig:TotalMassDSECal} which shows the mass of the 10,000 toy DS ECal modules, with and without nitrogen and hydrogen.  There is a 2.45$\%$ difference between the two constructions which is small but not necessarily negligible.  While ideally the hydrogen and nitrogen terms should be included in the systematic evaluation, due to time constraints and that all covariance terms involving them were very small, it was decided that they would be excluded from the covariance matrix.  With the extra elements excluded, a non-singular covariance matrix for each module type could be constructed, all of which are shown in Fig.~\ref{fig:MassCovECalReducedElements}.
 \begin{figure}
@@ -474,7 +470,7 @@ Toy simulation was used to construct each component described in the above secti
 \caption{The fractional covariance matrices for the mass of each contributing element to an ECal module (hydrogen and nitrogen omitted).}
 \label{fig:MassCovECalReducedElements}
 \end{figure}
-\subsubsection{Propagation of the mass systematic uncertainty}
+\myparagraph{Propagation of the ECal mass systematic uncertainty}
 \label{subsubsec:ECalMassSystematicPropagation}
 The covariance matrices shown in Fig.~\ref{fig:MassCovECalReducedElements} were then used to generate systematic throws, in the same manner as the flux systematic uncertainty evaluation.  For the input into each systematic throw i.e. one run through of the selected Monte Carlo events, a set of event weights were generated for each of the seven ECal modules using the above mass covariance matrices.  Every neutrino interaction in the ECal active volume was weighted according to its target element.  As with the other systematic uncertainty evaluations, 1,000 systematic throws were generated and the subsequent covariance matrices were constructed which are shown in Fig.~\ref{fig:ECalMassCovarianceMatrices}.  The maximum uncertainty, which was for the DS ECal events, was found to be $0.39\%$. 
 \begin{figure}%
