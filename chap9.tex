@@ -29,7 +29,7 @@ Unfortunately, there were unforeseen discrepancies between data and MC which cau
 
 \section{The future}
 \label{sec:TheFuture}
-The highest priority for future iterations of this analysis should be an in depth analysis of the problematic background events shown in Fig.~\ref{fig:ClusterNHitsCutLevelGT0}.  There are a few routes to take with such events but the general aim should be to either cut the events away in the selection and/or make improvements to the simulation itself.
+The highest priority for future iterations of this analysis should be an in depth analysis of the problematic background events shown in Fig.~\ref{fig:ClusterNHitsCutLevelGT0}.  \DomTC{The ideal approach would be to study this unforeseen background in great detail.  It should then be possible to improve the ND280 simulation to more accurately model this background or enhance the selection cuts to remove the background from the analysis}.
 \newline
 \newline
 There is an immense amount of scope for the reconstruction algorithms.  While the Hough transform has shown itself to be a very powerful method of reconstruction, analysis of the generated parameter space is actually very rudimentary.  As a reminder, the current method looks for the maxima in the parameter space which actually represent the 2D lines that pass through the most hits.  This analysis method needs improvement.  For example, the hits which are selected as constituents of the track are removed from the parameter space which means any subsequent track candidate does not have that information available.  A more advanced method of hit masking would allow hit sharing between tracks to take place.  

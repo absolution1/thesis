@@ -32,7 +32,11 @@
 %\DeclareRobustCommand{\YoshiFinal}[2]{{{}}} % ignore me completely version
 \DeclareRobustCommand{\YoshiFinal}[2]{{#1}} % believe everything I say version
 %\DeclareRobustCommand{\YoshiFinal}[2]{{\color[RGB]{111,0,158}{{#1}\footnote{\color[RGB]{111,0,158}#2}}}} % full words of wisdom version
-\DeclareRobustCommand{\DomTC}[2]{{\color[RGB]{111,0,158}{{#1}}}} % believe everything I say version
+%\DeclareRobustCommand{\DomTC}[1]{{\color[RGB]{111,0,158}{{#1}}}} % believe everything I say version
+\DeclareRobustCommand{\DomTC}[1]{\textcolor{red}{#1}} % believe everything I say version
+
+%\DeclareRobustCommand{\DomTC}[1]{{#1}} % believe everything I say version
+
 
 %Declare better paragraph which starts a new line after the title
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\\mbox{}\\}
