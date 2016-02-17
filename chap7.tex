@@ -191,7 +191,7 @@ By mapping out $\phi^{\textrm{vertices}}$ in ($d_q$, $d_c$) space, information a
   \caption{Parameters for the vertex reconstruction in the ECal.}
   \label{table:VertexReconParameters}
 \end{table}
-The reconstruction now assesses the quality of the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was suggested by X. Lu.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
+The reconstruction now assesses the quality of the crossings and then attempts to cluster the good quality crossings together to form vertex candidates.  The final step is to use the constituent tracks of each vertex candidate in a fit to estimate the position of the vertex.  The following method was suggested by X. Lu~\cite{XLuComm}.  The position of the vertex, $\vec{P}$, is defined such that the sum of the squares of the distance of each track to $\vec{P}$ is minimised.  An example setup of this is shown in Fig.~\ref{fig:VertexVectorDiagram} for three constituent tracks.  By defining the square of the distance of a line, $l_i$, to $\vec{P}$ as $|\vec{r}_i|^2$, the function to minimise is
 \begin{figure}[!t]
   \centering
   \includegraphics[width=9cm]{images/selection/vertex_recon/vertex_vector_diagram}
@@ -836,7 +836,7 @@ The number of selected events for each prong topology is shown in Fig.~\ref{fig:
 \newline
 The selection efficiencies and purities for each prong topology are shown in table~\ref{table:SelEfficiency} and table~\ref{table:SelPurity} respectively.  The final purities and efficiencies are generally good.  
 %The only concern is the 1 prong topology efficiency in the barrel ECal which is notably lower than all other efficiencies.  The main reason for the low efficiency is the strict fiducial volumes defined for each ECal module.  Generally speaking, this low efficiency may cause a problem if there is a significant amount of signal migration from the 2 prong topology which is more efficient.  It is important to address this when assessing systematic uncertainties for the analysis.
-\begin{table}[b!]
+\begin{table}[t!]
   \begin{tabular}{ c c c c c }
     ECal & 1 prong topology & 2 prong topology & 3 prong topology & 4+ prong topology \\
     module & efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$)& efficiency ($\%$) \\ \hline \hline
@@ -856,7 +856,6 @@ The selection efficiencies and purities for each prong topology are shown in tab
   \caption{The selection purities for each prong topology and ECal module.}
   \label{table:SelPurity}
 \end{table}
-\newline
 \newline
 The selection efficiency is defined to be 100$\%$ when no cuts have been made.  There are inevitably signal events which are not reconstructed, primarily because the energy is below reconstruction threshold.  It is non-trivial to include these events in an efficiency calculations for a specific prong topology, but it is also unnecessary to do this as the prong topologies are to be summed for the CC-inclusive cross-section measurement.  So, the topology combined efficiency and purity are presented in table~\ref{table:FinalEffPur}.  It is these numbers, along with the sample itself, which are the final output of the Monte Carlo selection.
 \begin{table}
